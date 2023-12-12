@@ -56,6 +56,7 @@
   "hop.nvim": { "branch": "v2", "commit": "90db1b2c61b820e230599a04fedcd2679e64bd07" },
   "hover.nvim": { "branch": "main", "commit": "0a0dd1baf1bb9415e3358207b6ab35747fb5f3ba" },
   "hoversplit.nvim": { "branch": "main", "commit": "c7c6b5596fed3287a3b20dbe772c8211a99cebc7" },
+  "img-clip.nvim": { "branch": "main", "commit": "2607a07ad006ba97d3614412c96275cfc0622ad1" },
   "inc-rename.nvim": { "branch": "main", "commit": "a48c7cec5c4f00d7438dce5fadb55f4d715ef9f2" },
   "indent-blankline.nvim": { "branch": "master", "commit": "dbd90bb689ff10d21fee6792eb8928f0584b5860" },
   "iswap.nvim": { "branch": "master", "commit": "6b77e8a2235aebbc6d2df150d0c780200f0cefa2" },
