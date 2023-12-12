@@ -27,7 +27,8 @@ local M = {
   softtabstop = indent,
   expandtab = true,
   list = true,
-  virtualedit = all,
+  virtualedit = "all",
+  exrc = true,
 }
 
 return M
