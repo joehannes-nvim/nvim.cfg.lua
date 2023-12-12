@@ -1,5 +1,8 @@
 return {
-  { "Olical/aniseed" },
+  {
+    "Olical/nfnl",
+    ft = "fennel"
+  },
   {
     "folke/neodev.nvim",
     opts = {},
