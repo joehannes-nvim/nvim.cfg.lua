@@ -182,6 +182,21 @@ return {
     end,
   },
   {
+    "HakonHarnes/img-clip.nvim",
+    cmd = "PasteImage",
+    opts = {
+      -- add options here
+      -- or leave it empty to use the default settings
+    },
+    keys = {
+      -- suggested keymap
+      { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste clipboard image" },
+    },
+    config = function()
+      require('plugins.config.pasteimg').setup()
+    end
+  },
+  {
     "folke/which-key.nvim",
     config = function() require("which-key").setup() end,
   }
