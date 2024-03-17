@@ -1,0 +1,48 @@
+.TH redis\-cli
+.PP
+.RS
+Opens a connection to a Redis server.
+More information: \[la]https://redis.io/topics/rediscli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to the local server:
+.RE
+.PP
+\fB\fCredis\-cli\fR
+.RS
+.IP \(bu 2
+Connect to a remote server on the default port (6379):
+.RE
+.PP
+\fB\fCredis\-cli \-h {{host}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server specifying a port number:
+.RE
+.PP
+\fB\fCredis\-cli \-h {{host}} \-p {{port}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server specifying a URI:
+.RE
+.PP
+\fB\fCredis\-cli \-u {{uri}}\fR
+.RS
+.IP \(bu 2
+Specify a password:
+.RE
+.PP
+\fB\fCredis\-cli \-a {{password}}\fR
+.RS
+.IP \(bu 2
+Execute Redis command:
+.RE
+.PP
+\fB\fCredis\-cli {{redis_command}}\fR
+.RS
+.IP \(bu 2
+Connect to the local cluster:
+.RE
+.PP
+\fB\fCredis\-cli \-c\fR

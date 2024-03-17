@@ -1,0 +1,36 @@
+.TH gdb
+.PP
+.RS
+The GNU Debugger.
+More information: \[la]https://www.gnu.org/software/gdb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Debug an executable:
+.RE
+.PP
+\fB\fCgdb {{executable}}\fR
+.RS
+.IP \(bu 2
+Attach a process to gdb:
+.RE
+.PP
+\fB\fCgdb \-p {{procID}}\fR
+.RS
+.IP \(bu 2
+Debug with a core file:
+.RE
+.PP
+\fB\fCgdb \-c {{core}} {{executable}}\fR
+.RS
+.IP \(bu 2
+Execute given GDB commands upon start:
+.RE
+.PP
+\fB\fCgdb \-ex "{{commands}}" {{executable}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCgdb\fR and pass arguments to the executable:
+.RE
+.PP
+\fB\fCgdb \-\-args {{executable}} {{argument1}} {{argument2}}\fR

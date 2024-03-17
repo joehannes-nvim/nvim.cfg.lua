@@ -1,0 +1,31 @@
+.TH troff
+.PP
+.RS
+Typesetting processor for the groff (GNU Troff) document formatting system.
+See also \fB\fCgroff\fR\&.
+More information: \[la]https://manned.org/troff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format output for a PostScript printer, saving the output to a file:
+.RE
+.PP
+\fB\fCtroff {{path/to/input.roff}} | grops > {{path/to/output.ps}}\fR
+.RS
+.IP \(bu 2
+Format output for a PostScript printer using the [me] macro package, saving the output to a file:
+.RE
+.PP
+\fB\fCtroff \-{{me}} {{path/to/input.roff}} | grops > {{path/to/output.ps}}\fR
+.RS
+.IP \(bu 2
+Format output as [a]SCII text using the [man] macro package:
+.RE
+.PP
+\fB\fCtroff \-T {{ascii}} \-{{man}} {{path/to/input.roff}} | grotty\fR
+.RS
+.IP \(bu 2
+Format output as a [pdf] file, saving the output to a file:
+.RE
+.PP
+\fB\fCtroff \-T {{pdf}} {{path/to/input.roff}} | gropdf > {{path/to/output.pdf}}\fR

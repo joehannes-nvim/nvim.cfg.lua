@@ -1,0 +1,42 @@
+.TH singularity
+.PP
+.RS
+Manage Singularity containers and images.
+More information: \[la]https://singularity-docs.readthedocs.io/en/latest/#commands\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a remote image from Sylabs Cloud:
+.RE
+.PP
+\fB\fCsingularity pull \-\-name {{image.sif}} {{library://godlovedc/funny/lolcow:latest}}\fR
+.RS
+.IP \(bu 2
+Rebuild a remote image using the latest Singularity image format:
+.RE
+.PP
+\fB\fCsingularity build {{image.sif}} {{docker://godlovedc/lolcow}}\fR
+.RS
+.IP \(bu 2
+Start a container from an image and get a shell inside it:
+.RE
+.PP
+\fB\fCsingularity shell {{image.sif}}\fR
+.RS
+.IP \(bu 2
+Start a container from an image and run a command:
+.RE
+.PP
+\fB\fCsingularity exec {{image.sif}} {{command}}\fR
+.RS
+.IP \(bu 2
+Start a container from an image and execute the internal runscript:
+.RE
+.PP
+\fB\fCsingularity run {{image.sif}}\fR
+.RS
+.IP \(bu 2
+Build a singularity image from a recipe file:
+.RE
+.PP
+\fB\fCsudo singularity build {{image.sif}} {{recipe}}\fR

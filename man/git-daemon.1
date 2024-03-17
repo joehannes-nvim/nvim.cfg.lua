@@ -1,0 +1,24 @@
+.TH git daemon
+.PP
+.RS
+A really simple server for Git repositories.
+More information: \[la]https://git-scm.com/docs/git-daemon\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch a Git daemon with a whitelisted set of directories:
+.RE
+.PP
+\fB\fCgit daemon \-\-export\-all {{path/to/directory1}} {{path/to/directory2}}\fR
+.RS
+.IP \(bu 2
+Launch a Git daemon with a specific base directory and allow pulling from all sub\-directories that look like Git repositories:
+.RE
+.PP
+\fB\fCgit daemon \-\-base\-path={{path/to/directory}} \-\-export\-all \-\-reuseaddr\fR
+.RS
+.IP \(bu 2
+Launch a Git daemon for the specified directory, verbosely printing log messages and allowing Git clients to write to it:
+.RE
+.PP
+\fB\fCgit daemon {{path/to/directory}} \-\-enable=receive\-pack \-\-informative\-errors \-\-verbose\fR

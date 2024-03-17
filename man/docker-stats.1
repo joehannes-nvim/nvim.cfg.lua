@@ -1,0 +1,36 @@
+.TH docker stats
+.PP
+.RS
+Display a live stream of resource usage statistics for containers.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/stats/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a live stream for the statistics of all running containers:
+.RE
+.PP
+\fB\fCdocker stats\fR
+.RS
+.IP \(bu 2
+Display a live stream of statistics for a space\-separated list of containers:
+.RE
+.PP
+\fB\fCdocker stats {{container_name}}\fR
+.RS
+.IP \(bu 2
+Change the columns format to display container's CPU usage percentage:
+.RE
+.PP
+\fB\fCdocker stats \-\-format "{{.Name}}:\\t{{.CPUPerc}}"\fR
+.RS
+.IP \(bu 2
+Display statistics for all containers (both running and stopped):
+.RE
+.PP
+\fB\fCdocker stats \-\-all\fR
+.RS
+.IP \(bu 2
+Disable streaming stats and only pull the current stats:
+.RE
+.PP
+\fB\fCdocker stats \-\-no\-stream\fR

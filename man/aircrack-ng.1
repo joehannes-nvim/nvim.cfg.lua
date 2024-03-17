@@ -1,0 +1,25 @@
+.TH aircrack\-ng
+.PP
+.RS
+Crack WEP and WPA/WPA2 keys from handshake in captured packets.
+Part of Aircrack\-ng network software suite.
+More information: \[la]https://www.aircrack-ng.org/doku.php?id=aircrack-ng\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Crack key from capture file using [w]ordlist:
+.RE
+.PP
+\fB\fCaircrack\-ng \-w {{path/to/wordlist.txt}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Crack key from capture file using [w]ordlist and the access point's [e]ssid:
+.RE
+.PP
+\fB\fCaircrack\-ng \-w {{path/to/wordlist.txt}} \-e {{essid}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Crack key from capture file using [w]ordlist and the access point's MAC address:
+.RE
+.PP
+\fB\fCaircrack\-ng \-w {{path/to/wordlist.txt}} \-\-bssid {{mac}} {{path/to/capture.cap}}\fR

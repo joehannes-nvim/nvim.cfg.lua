@@ -1,0 +1,42 @@
+.TH pssh
+.PP
+.RS
+Parallel SSH program.
+More information: \[la]https://manned.org/pssh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a command on two hosts, and print its output on each server inline:
+.RE
+.PP
+\fB\fCpssh \-i \-H "{{host1}} {{host2}}" {{hostname \-i}}\fR
+.RS
+.IP \(bu 2
+Run a command and save the output to separate files:
+.RE
+.PP
+\fB\fCpssh \-H {{host1}} \-H {{host2}} \-o {{path/to/output_dir}} {{hostname \-i}}\fR
+.RS
+.IP \(bu 2
+Run a command on multiple hosts, specified in a new\-line separated file:
+.RE
+.PP
+\fB\fCpssh \-i \-h {{path/to/hosts_file}} {{hostname \-i}}\fR
+.RS
+.IP \(bu 2
+Run a command as root (this asks for the root password):
+.RE
+.PP
+\fB\fCpssh \-i \-h {{path/to/hosts_file}} \-A \-l {{root_username}} {{hostname \-i}}\fR
+.RS
+.IP \(bu 2
+Run a command with extra SSH arguments:
+.RE
+.PP
+\fB\fCpssh \-i \-h {{path/to/hosts_file}} \-x "{{\-O VisualHostKey=yes}}" {{hostname \-i}}\fR
+.RS
+.IP \(bu 2
+Run a command limiting the number of parallel connections to 10:
+.RE
+.PP
+\fB\fCpssh \-i \-h {{path/to/hosts_file}} \-p {{10}} '{{cd dir; ./script.sh; exit}}'\fR

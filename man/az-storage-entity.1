@@ -1,0 +1,37 @@
+.TH az storage entity
+.PP
+.RS
+Manage Azure Table storage entities.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage/entity\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Insert an entity into a table:
+.RE
+.PP
+\fB\fCaz storage entity insert \-\-entity {{space_separated_key_value_pairs}} \-\-table\-name {{table_name}} \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}}\fR
+.RS
+.IP \(bu 2
+Delete an existing entity from a table:
+.RE
+.PP
+\fB\fCaz storage entity delete \-\-partition\-key {{partition_key}} \-\-row\-key {{row_key}} \-\-table\-name {{table_name}} \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}}\fR
+.RS
+.IP \(bu 2
+Update an existing entity by merging its properties:
+.RE
+.PP
+\fB\fCaz storage entity merge \-\-entity {{space_separated_key_value_pairs}} \-\-table\-name {{table_name}} \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}}\fR
+.RS
+.IP \(bu 2
+List entities which satisfy a query:
+.RE
+.PP
+\fB\fCaz storage entity query \-\-filter {{query_filter}} \-\-table\-name {{table_name}} \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}}\fR
+.RS
+.IP \(bu 2
+Get an entity from the specified table:
+.RE
+.PP
+\fB\fCaz storage entity show \-\-partition\-key {{partition_key}} \-\-row\-key {{row_key}} \-\-table\-name {{table_name}} \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}}\fR

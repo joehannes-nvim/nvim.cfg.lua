@@ -1,0 +1,36 @@
+.TH ledger
+.PP
+.RS
+Ledger is a powerful, double\-entry accounting system that is accessed from the UNIX command\-line.
+More information: \[la]https://www.ledger-cli.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a balance report showing totals:
+.RE
+.PP
+\fB\fCledger balance \-\-file {{path/to/ledger.journal}}\fR
+.RS
+.IP \(bu 2
+List all postings in Expenses ordered by amount:
+.RE
+.PP
+\fB\fCledger register {{expenses}} \-\-sorted {{amount}}\fR
+.RS
+.IP \(bu 2
+Print total Expenses other than Drinks and Food:
+.RE
+.PP
+\fB\fCledger balance {{Expenses}} and not ({{Drinks}} or {{Food}})\fR
+.RS
+.IP \(bu 2
+Print a budget report:
+.RE
+.PP
+\fB\fCledger budget\fR
+.RS
+.IP \(bu 2
+Print summary information about all the postings:
+.RE
+.PP
+\fB\fCledger stats\fR

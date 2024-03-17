@@ -1,0 +1,49 @@
+.TH git bug
+.PP
+.RS
+A distributed bug tracker that uses git's internal storage, so no files are added in your project.
+You may submit your problems to the same git remote you use to interact with others, much like commits and branches.
+More information: \[la]https://github.com/MichaelMure/git-bug/blob/master/doc/md/git-bug.md\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new identity:
+.RE
+.PP
+\fB\fCgit bug user create\fR
+.RS
+.IP \(bu 2
+Create a new bug:
+.RE
+.PP
+\fB\fCgit bug add\fR
+.RS
+.IP \(bu 2
+You can push your new entry to a remote:
+.RE
+.PP
+\fB\fCgit bug push\fR
+.RS
+.IP \(bu 2
+You can pull for updates:
+.RE
+.PP
+\fB\fCgit bug pull\fR
+.RS
+.IP \(bu 2
+List existing bugs:
+.RE
+.PP
+\fB\fCgit bug ls\fR
+.RS
+.IP \(bu 2
+Filter and sort bugs using a query:
+.RE
+.PP
+\fB\fCgit bug ls "{{status}}:{{open}} {{sort}}:{{edit}}"\fR
+.RS
+.IP \(bu 2
+Search for bugs by text content:
+.RE
+.PP
+\fB\fCgit bug ls "{{search_query}}" baz\fR

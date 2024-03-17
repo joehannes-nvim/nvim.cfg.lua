@@ -1,0 +1,30 @@
+.TH salt
+.PP
+.RS
+Execute commands and assert state on remote salt minions.
+More information: \[la]https://docs.saltstack.com/ref/cli/salt.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List connected minions:
+.RE
+.PP
+\fB\fCsalt '*' test.ping\fR
+.RS
+.IP \(bu 2
+Execute a highstate on all connected minions:
+.RE
+.PP
+\fB\fCsalt '*' state.highstate\fR
+.RS
+.IP \(bu 2
+Upgrade packages using the OS package manager (apt, yum, brew) on a subset of minions:
+.RE
+.PP
+\fB\fCsalt '*.example.com' pkg.upgrade\fR
+.RS
+.IP \(bu 2
+Execute an arbitrary command on a particular minion:
+.RE
+.PP
+\fB\fCsalt '{{minion_id}}' cmd.run "ls "\fR

@@ -1,0 +1,25 @@
+.TH ppmtv
+.PP
+.RS
+Make a PPM Image look like taken from an American TV.
+Dim every other row of image data down by the specified dim factor (a number between 0 and 1).
+More information: \[la]https://netpbm.sourceforge.net/doc/ppmtv.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Give the PPM image an American TV appearance:
+.RE
+.PP
+\fB\fCppmtv {{dim_factor}} {{path/to/file.ppm}} > {{path/to/output.ppm}}\fR
+.RS
+.IP \(bu 2
+Suppress all informational messages:
+.RE
+.PP
+\fB\fCppmtv \-quiet\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCppmtv \-version\fR

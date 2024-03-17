@@ -1,0 +1,48 @@
+.TH zgrep
+.PP
+.RS
+Grep text patterns from files within compressed file (equivalent to grep \-Z).
+More information: \[la]https://manned.org/zgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Grep a pattern in a compressed file (case\-sensitive):
+.RE
+.PP
+\fB\fCzgrep {{pattern}} {{path/to/compressed/file}}\fR
+.RS
+.IP \(bu 2
+Grep a pattern in a compressed file (case\-insensitive):
+.RE
+.PP
+\fB\fCzgrep \-i {{pattern}} {{path/to/compressed/file}}\fR
+.RS
+.IP \(bu 2
+Output count of lines containing matched pattern in a compressed file:
+.RE
+.PP
+\fB\fCzgrep \-c {{pattern}} {{path/to/compressed/file}}\fR
+.RS
+.IP \(bu 2
+Display the lines which don’t have the pattern present (Invert the search function):
+.RE
+.PP
+\fB\fCzgrep \-v {{pattern}} {{path/to/compressed/file}}\fR
+.RS
+.IP \(bu 2
+Grep a compressed file for multiple patterns:
+.RE
+.PP
+\fB\fCzgrep \-e "{{pattern_1}}" \-e "{{pattern_2}}" {{path/to/compressed/file}}\fR
+.RS
+.IP \(bu 2
+Use extended regular expressions (supporting \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR):
+.RE
+.PP
+\fB\fCzgrep \-E {{regular_expression}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print 3 lines of [C]ontext around, [B]efore, or [A]fter each match:
+.RE
+.PP
+\fB\fCzgrep \-{{C|B|A}} {{3}} {{pattern}} {{path/to/compressed/file}}\fR

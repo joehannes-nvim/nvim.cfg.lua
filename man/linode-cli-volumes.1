@@ -1,0 +1,43 @@
+.TH linode\-cli volumes
+.PP
+.RS
+Manage Linode Volumes.
+See also: \fB\fClinode\-cli\fR\&.
+More information: \[la]https://www.linode.com/docs/products/tools/cli/guides/block-storage-volumes/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List current Volumnes:
+.RE
+.PP
+\fB\fClinode\-cli volumes list\fR
+.RS
+.IP \(bu 2
+Create a new Volume and attach it to a specific Linode:
+.RE
+.PP
+\fB\fClinode\-cli volumes create \-\-label {{volume_label}} \-\-size {{size_in_GB}} \-\-linode\-id {{linode_id}}\fR
+.RS
+.IP \(bu 2
+Attach a Volume to a specific Linode:
+.RE
+.PP
+\fB\fClinode\-cli volumes attach {{volume_id}} \-\-linode\-id {{linode_id}}\fR
+.RS
+.IP \(bu 2
+Detach a Volume from a Linode:
+.RE
+.PP
+\fB\fClinode\-cli volumes detach {{volume_id}}\fR
+.RS
+.IP \(bu 2
+Resize a Volume (Note: size can only be increased):
+.RE
+.PP
+\fB\fClinode\-cli volumes resize {{volume_id}} \-\-size {{new_size_in_GB}}\fR
+.RS
+.IP \(bu 2
+Delete a Volume:
+.RE
+.PP
+\fB\fClinode\-cli volumes delete {{volume_id}}\fR

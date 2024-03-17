@@ -1,0 +1,55 @@
+.TH cargo rustc
+.PP
+.RS
+Compile a Rust package. Similar to \fB\fCcargo build\fR, but you can pass extra options to the compiler.
+See \fB\fCrustc \-\-help\fR for all available options.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-rustc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the package and pass options to \fB\fCrustc\fR:
+.RE
+.PP
+\fB\fCcargo rustc \-\- {{rustc_options}}\fR
+.RS
+.IP \(bu 2
+Build artifacts in release mode, with optimizations:
+.RE
+.PP
+\fB\fCcargo rustc \-\-release\fR
+.RS
+.IP \(bu 2
+Compile with architecture\-specific optimizations for the current CPU:
+.RE
+.PP
+\fB\fCcargo rustc \-\-release \-\- \-C target\-cpu=native\fR
+.RS
+.IP \(bu 2
+Compile with speed optimizations:
+.RE
+.PP
+\fB\fCcargo rustc \-\- \-C opt\-level {{1|2|3}}\fR
+.RS
+.IP \(bu 2
+Compile with [s]ize optimizations (\fB\fCz\fR also turns off loop vectorization):
+.RE
+.PP
+\fB\fCcargo rustc \-\- \-C opt\-level {{s|z}}\fR
+.RS
+.IP \(bu 2
+Check if your package uses unsafe code:
+.RE
+.PP
+\fB\fCcargo rustc \-\-lib \-\- \-D unsafe\-code\fR
+.RS
+.IP \(bu 2
+Build a specific package:
+.RE
+.PP
+\fB\fCcargo rustc \-\-package {{package}}\fR
+.RS
+.IP \(bu 2
+Build only the specified binary:
+.RE
+.PP
+\fB\fCcargo \-\-bin {{name}}\fR

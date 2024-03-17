@@ -1,0 +1,43 @@
+.TH fdroid
+.PP
+.RS
+F\-Droid build tool.
+F\-Droid is an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform.
+More information: \[la]https://f-droid.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a specific app:
+.RE
+.PP
+\fB\fCfdroid build {{app_id}}\fR
+.RS
+.IP \(bu 2
+Build a specific app in a build server VM:
+.RE
+.PP
+\fB\fCfdroid build {{app_id}} \-\-server\fR
+.RS
+.IP \(bu 2
+Publish the app to the local repository:
+.RE
+.PP
+\fB\fCfdroid publish {{app_id}}\fR
+.RS
+.IP \(bu 2
+Install the app on every connected device:
+.RE
+.PP
+\fB\fCfdroid install {{app_id}}\fR
+.RS
+.IP \(bu 2
+Check if the metadata is formatted correctly:
+.RE
+.PP
+\fB\fCfdroid lint \-\-format {{app_id}}\fR
+.RS
+.IP \(bu 2
+Fix the formatting automatically (if possible):
+.RE
+.PP
+\fB\fCfdroid rewritemeta {{app_id}}\fR

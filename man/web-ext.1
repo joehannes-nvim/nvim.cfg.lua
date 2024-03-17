@@ -1,0 +1,54 @@
+.TH web\-ext
+.PP
+.RS
+A command\-line tool for managing web extension development.
+More information: \[la]https://github.com/mozilla/web-ext\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run the web extension in the current directory in Firefox:
+.RE
+.PP
+\fB\fCweb\-ext run\fR
+.RS
+.IP \(bu 2
+Run a web extension from a specific directory in Firefox:
+.RE
+.PP
+\fB\fCweb\-ext run \-\-source\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display verbose execution output:
+.RE
+.PP
+\fB\fCweb\-ext run \-\-verbose\fR
+.RS
+.IP \(bu 2
+Run a web extension in Firefox Android:
+.RE
+.PP
+\fB\fCweb\-ext run \-\-target firefox\-android\fR
+.RS
+.IP \(bu 2
+Lint the manifest and source files for errors:
+.RE
+.PP
+\fB\fCweb\-ext lint\fR
+.RS
+.IP \(bu 2
+Build and package the extension:
+.RE
+.PP
+\fB\fCweb\-ext build\fR
+.RS
+.IP \(bu 2
+Display verbose build output:
+.RE
+.PP
+\fB\fCweb\-ext build \-\-verbose\fR
+.RS
+.IP \(bu 2
+Sign a package for self\-hosting:
+.RE
+.PP
+\fB\fCweb\-ext sign \-\-api\-key {{api_key}} \-\-api\-secret {{api_secret}}\fR

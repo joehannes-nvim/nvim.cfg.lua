@@ -1,0 +1,48 @@
+.TH Chezmoi
+.PP
+.RS
+A multi\-machine dotfile manager, written in Go.
+More information: \[la]https://chezmoi.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize chezmoi on your machine:
+.RE
+.PP
+\fB\fCchezmoi init\fR
+.RS
+.IP \(bu 2
+Tell chezmoi to manage a dotfile:
+.RE
+.PP
+\fB\fCchezmoi add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Edit the source state of a tracked dotfile:
+.RE
+.PP
+\fB\fCchezmoi edit {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+See changes chezmoi would make:
+.RE
+.PP
+\fB\fCchezmoi diff\fR
+.RS
+.IP \(bu 2
+Apply the changes:
+.RE
+.PP
+\fB\fCchezmoi \-v apply\fR
+.RS
+.IP \(bu 2
+Set chezmoi up on another machine by downloading existing dotfiles from a Git repository:
+.RE
+.PP
+\fB\fCchezmoi init {{https://example.com/path/to/repository.git}}\fR
+.RS
+.IP \(bu 2
+Fetch the latest changes from a remote repository:
+.RE
+.PP
+\fB\fCchezmoi update\fR

@@ -1,0 +1,30 @@
+.TH unison
+.PP
+.RS
+Bidirectional file synchronisation tool.
+More information: \[la]https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sync two directories (creates log first time these two directories are synchronized):
+.RE
+.PP
+\fB\fCunison {{path/to/directory_1}} {{path/to/directory_2}}\fR
+.RS
+.IP \(bu 2
+Automatically accept the (non\-conflicting) defaults:
+.RE
+.PP
+\fB\fCunison {{path/to/directory_1}} {{path/to/directory_2}} \-auto\fR
+.RS
+.IP \(bu 2
+Ignore some files using a pattern:
+.RE
+.PP
+\fB\fCunison {{path/to/directory_1}} {{path/to/directory_2}} \-ignore {{pattern}}\fR
+.RS
+.IP \(bu 2
+Show documentation:
+.RE
+.PP
+\fB\fCunison \-doc {{topics}}\fR

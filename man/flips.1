@@ -1,0 +1,24 @@
+.TH flips
+.PP
+.RS
+Create and apply patches for IPS and BPS files.
+More information: \[la]https://github.com/Alcaro/Flips\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Flips to create and apply patches interactively:
+.RE
+.PP
+\fB\fCflips\fR
+.RS
+.IP \(bu 2
+Apply a patch and create a new ROM file:
+.RE
+.PP
+\fB\fCflips \-\-apply {{patch.bps}} {{rom.smc}} {{hack.smc}}\fR
+.RS
+.IP \(bu 2
+Create a patch from two ROMs:
+.RE
+.PP
+\fB\fCflips \-\-create {{rom.smc}} {{hack.smc}} {{patch.bps}}\fR

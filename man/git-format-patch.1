@@ -1,0 +1,25 @@
+.TH git format\-patch
+.PP
+.RS
+Prepare .patch files. Useful when emailing commits elsewhere.
+See also \fB\fCgit am\fR, which can apply generated .patch files.
+More information: \[la]https://git-scm.com/docs/git-format-patch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an auto\-named \fB\fC\&.patch\fR file for all the unpushed commits:
+.RE
+.PP
+\fB\fCgit format\-patch {{origin}}\fR
+.RS
+.IP \(bu 2
+Write a \fB\fC\&.patch\fR file for all the commits between 2 revisions to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgit format\-patch {{revision_1}}..{{revision_2}}\fR
+.RS
+.IP \(bu 2
+Write a \fB\fC\&.patch\fR file for the 3 latest commits:
+.RE
+.PP
+\fB\fCgit format\-patch \-{{3}}\fR

@@ -1,0 +1,36 @@
+.TH hadolint
+.PP
+.RS
+Dockerfile linter.
+More information: \[la]https://github.com/hadolint/hadolint\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lint a Dockerfile:
+.RE
+.PP
+\fB\fChadolint {{path/to/Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Lint a Dockerfile, displaying the output in JSON format:
+.RE
+.PP
+\fB\fChadolint \-\-format {{json}} {{path/to/Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Lint a Dockerfile, displaying the output in a specific format:
+.RE
+.PP
+\fB\fChadolint \-\-format {{tty|json|checkstyle|codeclimate|codacy}} {{path/to/Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Lint a Dockerfile ignoring specific rules:
+.RE
+.PP
+\fB\fChadolint \-\-ignore {{DL3006}} \-\-ignore {{DL3008}} {{path/to/Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Lint multiple Dockerfiles using specific trusted registries:
+.RE
+.PP
+\fB\fChadolint \-\-trusted\-registry {{docker.io}} \-\-trusted\-registry {{example.com}}:{{5000}} {{path/to/Dockerfile}} {{path/to/another/Dockerfile}}\fR

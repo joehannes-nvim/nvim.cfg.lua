@@ -1,0 +1,54 @@
+.TH docker volume
+.PP
+.RS
+Manage Docker volumes.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/volume/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a volume:
+.RE
+.PP
+\fB\fCdocker volume create {{volume_name}}\fR
+.RS
+.IP \(bu 2
+Create a volume with a specific label:
+.RE
+.PP
+\fB\fCdocker volume create \-\-label {{label}} {{volume_name}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCtmpfs\fR volume a size of 100 MiB and an uid of 1000:
+.RE
+.PP
+\fB\fCdocker volume create \-\-opt {{type}}={{tmpfs}} \-\-opt {{device}}={{tmpfs}} \-\-opt {{o}}={{size=100m,uid=1000}} {{volume_name}}\fR
+.RS
+.IP \(bu 2
+List all volumes:
+.RE
+.PP
+\fB\fCdocker volume ls\fR
+.RS
+.IP \(bu 2
+Remove a volume:
+.RE
+.PP
+\fB\fCdocker volume rm {{volume_name}}\fR
+.RS
+.IP \(bu 2
+Display information about a volume:
+.RE
+.PP
+\fB\fCdocker volume inspect {{volume_name}}\fR
+.RS
+.IP \(bu 2
+Remove all unused local volumes:
+.RE
+.PP
+\fB\fCdocker volume prune\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCdocker volume {{subcommand}} \-\-help\fR

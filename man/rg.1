@@ -1,0 +1,55 @@
+.TH rg
+.PP
+.RS
+Ripgrep is a recursive line\-oriented search tool.
+Aims to be a faster alternative to \fB\fCgrep\fR\&.
+More information: \[la]https://github.com/BurntSushi/ripgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively search the current directory for a regular expression:
+.RE
+.PP
+\fB\fCrg {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Search for regular expressions recursively in the current directory, including hidden files and files listed in \fB\fC\&.gitignore\fR:
+.RE
+.PP
+\fB\fCrg \-\-no\-ignore \-\-hidden {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Search for a regular expression only in a subset of directories:
+.RE
+.PP
+\fB\fCrg {{regular_expression}} {{set_of_subdirs}}\fR
+.RS
+.IP \(bu 2
+Search for a regular expression in files matching a glob (e.g. \fB\fCREADME.*\fR):
+.RE
+.PP
+\fB\fCrg {{regular_expression}} \-\-glob {{glob}}\fR
+.RS
+.IP \(bu 2
+Search for filenames that match a regular expression:
+.RE
+.PP
+\fB\fCrg \-\-files | rg {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Only list matched files (useful when piping to other commands):
+.RE
+.PP
+\fB\fCrg \-\-files\-with\-matches {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Show lines that do not match the given regular expression:
+.RE
+.PP
+\fB\fCrg \-\-invert\-match {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Search a literal string pattern:
+.RE
+.PP
+\fB\fCrg \-\-fixed\-strings \-\- {{string}}\fR

@@ -1,0 +1,31 @@
+.TH catimg
+.PP
+.RS
+Image printing in the terminal.
+See also: \fB\fCpixterm\fR, \fB\fCchafa\fR\&.
+More information: \[la]https://github.com/posva/catimg\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a JPEG, PNG, or GIF to the terminal:
+.RE
+.PP
+\fB\fCcatimg {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Double the [r]esolution of an image:
+.RE
+.PP
+\fB\fCcatimg \-r 2 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Disable 24\-bit color for better [t]erminal support:
+.RE
+.PP
+\fB\fCcatimg \-t {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Specify a custom [w]idth or [H]eight:
+.RE
+.PP
+\fB\fCcatimg {{\-w|\-H}} {{40}} {{path/to/file}}\fR

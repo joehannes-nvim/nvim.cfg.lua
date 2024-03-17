@@ -1,0 +1,18 @@
+.TH cargo fetch
+.PP
+.RS
+Fetch dependencies of a package from the network.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-fetch.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fetch dependencies specified in \fB\fCCargo.lock\fR (for all targets):
+.RE
+.PP
+\fB\fCcargo fetch\fR
+.RS
+.IP \(bu 2
+Fetch dependencies for the specified target:
+.RE
+.PP
+\fB\fCcargo fetch \-\-target {{target_triple}}\fR

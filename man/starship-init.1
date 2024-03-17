@@ -1,0 +1,30 @@
+.TH starship init
+.PP
+.RS
+Print shell integration code for starship.
+More information: \[la]https://starship.rs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the subcommand help:
+.RE
+.PP
+\fB\fCstarship init \-\-help\fR
+.RS
+.IP \(bu 2
+Print the starship integration code for the specified shell:
+.RE
+.PP
+\fB\fCstarship init {{bash|elvish|fish|ion|powershell|tcsh|zsh}}\fR
+.RS
+.IP \(bu 2
+Append the \fB\fCstarship\fR integration code to \fB\fC~/.bashrc\fR:
+.RE
+.PP
+\fB\fCstarship init {{bash}} >> {{~/.bashrc}}\fR
+.RS
+.IP \(bu 2
+Append the \fB\fCstarship\fR integration code to \fB\fC~/.zshrc\fR:
+.RE
+.PP
+\fB\fCstarship init {{zsh}} >> {{~/.zshrc}}\fR

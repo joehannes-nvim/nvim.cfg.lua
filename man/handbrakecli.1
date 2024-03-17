@@ -1,0 +1,42 @@
+.TH handbrakecli
+.PP
+.RS
+Command\-line interface to the HandBrake video conversion and DVD ripping tool.
+More information: \[la]https://handbrake.fr/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a video file to MKV (AAC 160kbit audio and x264 CRF20 video):
+.RE
+.PP
+\fB\fChandbrakecli \-\-input {{input.avi}} \-\-output {{output.mkv}} \-\-encoder x264 \-\-quality 20 \-\-ab 160\fR
+.RS
+.IP \(bu 2
+Resize a video file to 320x240:
+.RE
+.PP
+\fB\fChandbrakecli \-\-input {{input.mp4}} \-\-output {{output.mp4}} \-\-width 320 \-\-height 240\fR
+.RS
+.IP \(bu 2
+List available presets:
+.RE
+.PP
+\fB\fChandbrakecli \-\-preset\-list\fR
+.RS
+.IP \(bu 2
+Convert an AVI video to MP4 using the Android preset:
+.RE
+.PP
+\fB\fChandbrakecli \-\-preset="Android" \-\-input {{input.ext}} \-\-output {{output.mp4}}\fR
+.RS
+.IP \(bu 2
+Print the content of a DVD, getting the CSS keys in the process:
+.RE
+.PP
+\fB\fChandbrakecli \-\-input {{/dev/sr0}} \-\-title 0\fR
+.RS
+.IP \(bu 2
+Rip the first track of a DVD in the specified device. Audiotracks and subtitle languages are specified as lists:
+.RE
+.PP
+\fB\fChandbrakecli \-\-input {{/dev/sr0}} \-\-title 1 \-\-output {{out.mkv}} \-\-format av_mkv \-\-encoder x264 \-\-subtitle {{1,4,5}} \-\-audio {{1,2}} \-\-aencoder copy \-\-quality {{23}}\fR

@@ -1,0 +1,42 @@
+.TH carp
+.PP
+.RS
+REPL and build tool for Carp.
+More information: \[la]https://carp-lang.github.io/carp-docs/Manual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCcarp\fR
+.RS
+.IP \(bu 2
+Start a REPL with a custom prompt:
+.RE
+.PP
+\fB\fCcarp \-\-prompt "{{> }}"\fR
+.RS
+.IP \(bu 2
+Build a \fB\fCcarp\fR file:
+.RE
+.PP
+\fB\fCcarp \-b {{path/to/file.carp}}\fR
+.RS
+.IP \(bu 2
+Build and run a file:
+.RE
+.PP
+\fB\fCcarp \-x {{path/to/file.carp}}\fR
+.RS
+.IP \(bu 2
+Build a file with optimizations enabled:
+.RE
+.PP
+\fB\fCcarp \-b \-\-optimize {{path/to/file.carp}}\fR
+.RS
+.IP \(bu 2
+Transpile a file to C code:
+.RE
+.PP
+\fB\fCcarp \-\-generate\-only {{path/to/file.carp}}\fR

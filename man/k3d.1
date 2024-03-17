@@ -1,0 +1,36 @@
+.TH k3d
+.PP
+.RS
+A wrapper to easily create k3s clusters inside Docker.
+More information: \[la]https://k3d.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a cluster:
+.RE
+.PP
+\fB\fCk3d cluster create {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Delete a cluster:
+.RE
+.PP
+\fB\fCk3d cluster delete {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Create a new containerized k3s node:
+.RE
+.PP
+\fB\fCk3d node create {{node_name}}\fR
+.RS
+.IP \(bu 2
+Import an image from Docker into a k3d cluster:
+.RE
+.PP
+\fB\fCk3d image import {{image_name}} \-\-cluster {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Create a new registry:
+.RE
+.PP
+\fB\fCk3d registry create {{registry_name}}\fR

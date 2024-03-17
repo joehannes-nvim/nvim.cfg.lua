@@ -1,0 +1,36 @@
+.TH logger
+.PP
+.RS
+Add messages to syslog (/var/log/syslog).
+More information: \[la]https://manned.org/logger\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log a message to syslog:
+.RE
+.PP
+\fB\fClogger {{message}}\fR
+.RS
+.IP \(bu 2
+Take input from \fB\fCstdin\fR and log to syslog:
+.RE
+.PP
+\fB\fCecho {{log_entry}} | logger\fR
+.RS
+.IP \(bu 2
+Send the output to a remote syslog server running at a given port. Default port is 514:
+.RE
+.PP
+\fB\fCecho {{log_entry}} | logger \-\-server {{hostname}} \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Use a specific tag for every line logged. Default is the name of logged in user:
+.RE
+.PP
+\fB\fCecho {{log_entry}} | logger \-\-tag {{tag}}\fR
+.RS
+.IP \(bu 2
+Log messages with a given priority. Default is \fB\fCuser.notice\fR\&. See \fB\fCman logger\fR for all priority options:
+.RE
+.PP
+\fB\fCecho {{log_entry}} | logger \-\-priority {{user.warning}}\fR

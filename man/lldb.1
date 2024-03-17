@@ -1,0 +1,24 @@
+.TH lldb
+.PP
+.RS
+The LLVM Low\-Level Debugger.
+More information: \[la]https://lldb.llvm.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Debug an executable:
+.RE
+.PP
+\fB\fClldb {{executable}}\fR
+.RS
+.IP \(bu 2
+Attach \fB\fClldb\fR to a running process with a given PID:
+.RE
+.PP
+\fB\fClldb \-p {{pid}}\fR
+.RS
+.IP \(bu 2
+Wait for a new process to launch with a given name, and attach to it:
+.RE
+.PP
+\fB\fClldb \-w \-n {{process_name}}\fR

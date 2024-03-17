@@ -1,0 +1,30 @@
+.TH javac
+.PP
+.RS
+Java application compiler.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/javac.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a \fB\fC\&.java\fR file:
+.RE
+.PP
+\fB\fCjavac {{file.java}}\fR
+.RS
+.IP \(bu 2
+Compile several \fB\fC\&.java\fR files:
+.RE
+.PP
+\fB\fCjavac {{file1.java}} {{file2.java}} {{file3.java}}\fR
+.RS
+.IP \(bu 2
+Compile all \fB\fC\&.java\fR files in current directory:
+.RE
+.PP
+\fB\fCjavac {{*.java}}\fR
+.RS
+.IP \(bu 2
+Compile a \fB\fC\&.java\fR file and place the resulting class file in a specific directory:
+.RE
+.PP
+\fB\fCjavac \-d {{path/to/directory}} {{file.java}}\fR

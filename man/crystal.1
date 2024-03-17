@@ -1,0 +1,54 @@
+.TH crystal
+.PP
+.RS
+Tool for managing Crystal source code.
+More information: \[la]https://crystal-lang.org/reference/using_the_compiler\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a Crystal file:
+.RE
+.PP
+\fB\fCcrystal {{path/to/file.cr}}\fR
+.RS
+.IP \(bu 2
+Compile a file and all dependencies to a single executable:
+.RE
+.PP
+\fB\fCcrystal build {{path/to/file.cr}}\fR
+.RS
+.IP \(bu 2
+Read Crystal source code from the command line or \fB\fCstdin\fR, and execute it:
+.RE
+.PP
+\fB\fCcrystal eval '{{code}}'\fR
+.RS
+.IP \(bu 2
+Generate API documentation from inline docstrings in Crystal files:
+.RE
+.PP
+\fB\fCcrystal docs\fR
+.RS
+.IP \(bu 2
+Compile and run a Crystal specification suite:
+.RE
+.PP
+\fB\fCcrystal spec\fR
+.RS
+.IP \(bu 2
+Start a local interactive server for testing the language:
+.RE
+.PP
+\fB\fCcrystal play\fR
+.RS
+.IP \(bu 2
+Create a project directory for a Crystal application:
+.RE
+.PP
+\fB\fCcrystal init app {{application_name}}\fR
+.RS
+.IP \(bu 2
+Display all help options:
+.RE
+.PP
+\fB\fCcrystal help\fR

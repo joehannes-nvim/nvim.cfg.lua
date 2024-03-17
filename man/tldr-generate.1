@@ -1,0 +1,24 @@
+.TH tlmgr generate
+.PP
+.RS
+Remake configuration files from information stored locally.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remake the configuration file storing into a specific location:
+.RE
+.PP
+\fB\fCtlmgr generate \-\-dest {{output_file}}\fR
+.RS
+.IP \(bu 2
+Remake the configuration file using a local configuration file:
+.RE
+.PP
+\fB\fCtlmgr generate \-\-localcfg {{local_configuration_file}}\fR
+.RS
+.IP \(bu 2
+Run necessary programs after rebuilding configuration files:
+.RE
+.PP
+\fB\fCtlmgr generate \-\-rebuild\-sys\fR

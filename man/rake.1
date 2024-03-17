@@ -1,0 +1,37 @@
+.TH rake
+.PP
+.RS
+A Make\-like program for Ruby.
+Tasks for \fB\fCrake\fR are specified in a Rakefile.
+More information: \[la]https://ruby.github.io/rake\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run the \fB\fCdefault\fR Rakefile task:
+.RE
+.PP
+\fB\fCrake\fR
+.RS
+.IP \(bu 2
+Run a specific task:
+.RE
+.PP
+\fB\fCrake {{task}}\fR
+.RS
+.IP \(bu 2
+Execute \fB\fCn\fR jobs at a time in parallel (number of CPU cores + 4 by default):
+.RE
+.PP
+\fB\fCrake \-\-jobs {{n}}\fR
+.RS
+.IP \(bu 2
+Use a specific Rakefile:
+.RE
+.PP
+\fB\fCrake \-\-rakefile {{path/to/Rakefile}}\fR
+.RS
+.IP \(bu 2
+Execute \fB\fCrake\fR from another directory:
+.RE
+.PP
+\fB\fCrake \-\-directory {{path/to/directory}}\fR

@@ -1,0 +1,42 @@
+.TH licensor
+.PP
+.RS
+Write licenses to \fB\fCstdout\fR\&.
+More information: \[la]https://github.com/raftario/licensor\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Write the MIT license to a file named \fB\fCLICENSE\fR:
+.RE
+.PP
+\fB\fClicensor {{MIT}} > {{LICENSE}}\fR
+.RS
+.IP \(bu 2
+Write the MIT license with a [p]laceholder copyright notice to a file named \fB\fCLICENSE\fR:
+.RE
+.PP
+\fB\fClicensor \-p {{MIT}} > {{LICENSE}}\fR
+.RS
+.IP \(bu 2
+Specify a copyright holder named Bobby Tables:
+.RE
+.PP
+\fB\fClicensor {{MIT}} {{"Bobby Tables"}} > {{LICENSE}}\fR
+.RS
+.IP \(bu 2
+Specify licence exceptions with a WITH expression:
+.RE
+.PP
+\fB\fClicensor "{{Apache\-2.0 WITH LLVM\-exception}}" > {{LICENSE}}\fR
+.RS
+.IP \(bu 2
+List all available licenses:
+.RE
+.PP
+\fB\fClicensor \-\-licenses\fR
+.RS
+.IP \(bu 2
+List all available exceptions:
+.RE
+.PP
+\fB\fClicensor \-\-exceptions\fR

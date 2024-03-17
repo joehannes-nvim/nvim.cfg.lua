@@ -1,0 +1,54 @@
+.TH drill
+.PP
+.RS
+Perform various DNS queries.
+More information: \[la]https://manned.org/drill\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records):
+.RE
+.PP
+\fB\fCdrill {{example.com}}\fR
+.RS
+.IP \(bu 2
+Lookup the mail 
+.BR server (s) 
+associated with a given domain name (MX record):
+.RE
+.PP
+\fB\fCdrill mx {{example.com}}\fR
+.RS
+.IP \(bu 2
+Get all types of records for a given domain name:
+.RE
+.PP
+\fB\fCdrill any {{example.com}}\fR
+.RS
+.IP \(bu 2
+Specify an alternate DNS server to query:
+.RE
+.PP
+\fB\fCdrill {{example.com}} @{{8.8.8.8}}\fR
+.RS
+.IP \(bu 2
+Perform a reverse DNS lookup on an IP address (PTR record):
+.RE
+.PP
+\fB\fCdrill \-x {{8.8.8.8}}\fR
+.RS
+.IP \(bu 2
+Perform DNSSEC trace from root servers down to a domain name:
+.RE
+.PP
+\fB\fCdrill \-TD {{example.com}}\fR
+.RS
+.IP \(bu 2
+Show DNSKEY 
+.BR record (s) 
+for a domain name:
+.RE
+.PP
+\fB\fCdrill \-s dnskey {{example.com}}\fR

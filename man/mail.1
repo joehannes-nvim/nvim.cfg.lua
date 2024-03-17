@@ -1,0 +1,25 @@
+.TH mail
+.PP
+.RS
+The command operates on the user's mailbox if no argument is given.
+To send an email the message body is built from \fB\fCstdin\fR\&.
+More information: \[la]https://manned.org/mail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a typed email message. The command\-line below continues after pressing Enter key. Input CC email\-id (optional) press Enter key. Input message text (can be multiline). Press Ctrl\-D key to complete the message text:
+.RE
+.PP
+\fB\fCmail \-\-subject="{{subject line}}" {{to_user@example.com}}\fR
+.RS
+.IP \(bu 2
+Send an email that contains file content:
+.RE
+.PP
+\fB\fCmail \-\-subject="{{$HOSTNAME filename.txt}}" {{to_user@example.com}} < {{path/to/filename.txt}}\fR
+.RS
+.IP \(bu 2
+Send a \fB\fCtar.gz\fR file as an attachment:
+.RE
+.PP
+\fB\fCtar cvzf \- {{path/to/directory1 path/to/directory2}} | uuencode {{data.tar.gz}} | mail \-\-subject="{{subject_line}}" {{to_user@example.com}}\fR

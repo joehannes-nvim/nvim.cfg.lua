@@ -1,0 +1,36 @@
+.TH Exclamation mark
+.PP
+.RS
+Bash builtin to substitute with a command found in history.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#Event-Designators\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Substitute with the previous command and run it with sudo:
+.RE
+.PP
+\fB\fCsudo !!\fR
+.RS
+.IP \(bu 2
+Substitute with a command based on its line number found with \fB\fChistory\fR:
+.RE
+.PP
+\fB\fC!{{number}}\fR
+.RS
+.IP \(bu 2
+Substitute with a command that was used a specified number of lines back:
+.RE
+.PP
+\fB\fC!\-{{number}}\fR
+.RS
+.IP \(bu 2
+Substitute with the most recent command that starts with \fB\fCstring\fR:
+.RE
+.PP
+\fB\fC!{{string}}\fR
+.RS
+.IP \(bu 2
+Substitute with the arguments of the latest command:
+.RE
+.PP
+\fB\fC{{command}} !*\fR

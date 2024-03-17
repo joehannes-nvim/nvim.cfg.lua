@@ -1,0 +1,25 @@
+.TH git verify\-tag
+.PP
+.RS
+Check for GPG verification of tags.
+If a tag wasn't signed, an error will occur.
+More information: \[la]https://git-scm.com/docs/git-verify-tag\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check tags for a GPG signature:
+.RE
+.PP
+\fB\fCgit verify\-tag {{tag1 optional_tag2 ...}}\fR
+.RS
+.IP \(bu 2
+Check tags for a GPG signature and show details for each tag:
+.RE
+.PP
+\fB\fCgit verify\-tag {{tag1 optional_tag2 ...}} \-\-verbose\fR
+.RS
+.IP \(bu 2
+Check tags for a GPG signature and print the raw details:
+.RE
+.PP
+\fB\fCgit verify\-tag {{tag1 optional_tag2 ...}} \-\-raw\fR

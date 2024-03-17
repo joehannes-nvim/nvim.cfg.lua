@@ -1,0 +1,30 @@
+.TH duf
+.PP
+.RS
+Disk Usage/Free Utility.
+More information: \[la]https://github.com/muesli/duf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List accessible devices:
+.RE
+.PP
+\fB\fCduf\fR
+.RS
+.IP \(bu 2
+List everything (such as pseudo, duplicate or inaccessible file systems):
+.RE
+.PP
+\fB\fCduf \-\-all\fR
+.RS
+.IP \(bu 2
+Only show specified devices or mount points:
+.RE
+.PP
+\fB\fCduf {{path/to/directory1 path/to/directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Sort the output by a specified criteria:
+.RE
+.PP
+\fB\fCduf \-\-sort {{size|used|avail|usage}}\fR

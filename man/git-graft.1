@@ -1,0 +1,13 @@
+.TH git graft
+.PP
+.RS
+Merge commits from a specific branch into another branch and delete the source branch.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-graft\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Merge all commits not present on the target branch from the source branch to target branch, and delete the source branch:
+.RE
+.PP
+\fB\fCgit graft {{source_branch}} {{target_branch}}\fR

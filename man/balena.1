@@ -1,0 +1,36 @@
+.TH balena
+.PP
+.RS
+Interact with the balenaCloud, openBalena and the balena API.
+More information: \[la]https://www.balena.io/docs/reference/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to the balenaCloud account:
+.RE
+.PP
+\fB\fCbalena login\fR
+.RS
+.IP \(bu 2
+Create a balenaCloud or openBalena application:
+.RE
+.PP
+\fB\fCbalena app create {{app_name}}\fR
+.RS
+.IP \(bu 2
+List all balenaCloud or openBalena applications within the account:
+.RE
+.PP
+\fB\fCbalena apps\fR
+.RS
+.IP \(bu 2
+List all devices associated with the balenaCloud or openBalena account:
+.RE
+.PP
+\fB\fCbalena devices\fR
+.RS
+.IP \(bu 2
+Flash a balenaOS image to a local drive:
+.RE
+.PP
+\fB\fCbalena local flash {{path/to/balenaos.img}} \-\-drive {{drive_location}}\fR

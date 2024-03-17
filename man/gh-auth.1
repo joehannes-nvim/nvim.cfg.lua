@@ -1,0 +1,48 @@
+.TH gh auth
+.PP
+.RS
+Authenticate with a GitHub host.
+More information: \[la]https://cli.github.com/manual/gh_auth\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in with interactive prompt:
+.RE
+.PP
+\fB\fCgh auth login\fR
+.RS
+.IP \(bu 2
+Log in with a token from \fB\fCstdin\fR (created in \[la]https://github.com/settings/tokens\[ra]):
+.RE
+.PP
+\fB\fCecho {{your_token}} | gh auth login \-\-with\-token\fR
+.RS
+.IP \(bu 2
+Check if you are logged in:
+.RE
+.PP
+\fB\fCgh auth status\fR
+.RS
+.IP \(bu 2
+Log out:
+.RE
+.PP
+\fB\fCgh auth logout\fR
+.RS
+.IP \(bu 2
+Log in with a specific GitHub Enterprise Server:
+.RE
+.PP
+\fB\fCgh auth login \-\-hostname {{github.example.com}}\fR
+.RS
+.IP \(bu 2
+Refresh the session to ensure authentication credentials have the correct minimum scopes (removes additional scopes requested previously):
+.RE
+.PP
+\fB\fCgh auth refresh\fR
+.RS
+.IP \(bu 2
+Expand the permission scopes:
+.RE
+.PP
+\fB\fCgh auth refresh \-\-scopes {{repo,admin:repo_hook,admin:org,admin:public_key,admin:org_hook,...}}\fR

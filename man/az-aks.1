@@ -1,0 +1,37 @@
+.TH az aks
+.PP
+.RS
+Manage Azure Kubernetes Service (AKS) clusters.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/aks\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List AKS clusters:
+.RE
+.PP
+\fB\fCaz aks list \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Create a new AKS cluster:
+.RE
+.PP
+\fB\fCaz aks create \-\-resource\-group {{resource_group}} \-\-name {{name}} \-\-node\-count {{count}} \-\-node\-vm\-size {{size}}\fR
+.RS
+.IP \(bu 2
+Delete an AKS cluster:
+.RE
+.PP
+\fB\fCaz aks delete \-\-resource\-group {{resource_group}} \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Get the access credentials for an AKS cluster:
+.RE
+.PP
+\fB\fCaz aks get\-credentials \-\-resource\-group {{resource_group}} \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Get the upgrade versions available for an AKS cluster:
+.RE
+.PP
+\fB\fCaz aks get\-upgrades \-\-resource\-group {{resource_group}} \-\-name {{name}}\fR

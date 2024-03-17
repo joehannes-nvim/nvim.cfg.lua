@@ -1,0 +1,42 @@
+.TH heroku
+.PP
+.RS
+Create and manage Heroku apps.
+More information: \[la]https://www.heroku.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to your Heroku account:
+.RE
+.PP
+\fB\fCheroku login\fR
+.RS
+.IP \(bu 2
+Create a Heroku app:
+.RE
+.PP
+\fB\fCheroku create\fR
+.RS
+.IP \(bu 2
+Show logs for an app:
+.RE
+.PP
+\fB\fCheroku logs \-\-app {{app_name}}\fR
+.RS
+.IP \(bu 2
+Run a one\-off process inside a dyno (Heroku virtual machine):
+.RE
+.PP
+\fB\fCheroku run {{process_name}} \-\-app {{app_name}}\fR
+.RS
+.IP \(bu 2
+List dynos (Heroku virtual machines) for an app:
+.RE
+.PP
+\fB\fCheroku ps \-\-app {{app_name}}\fR
+.RS
+.IP \(bu 2
+Permanently destroy an app:
+.RE
+.PP
+\fB\fCheroku destroy \-\-app {{app_name}}\fR

@@ -1,0 +1,25 @@
+.TH makensis
+.PP
+.RS
+Cross\-platform compiler for NSIS installers.
+It compiles a NSIS script into a Windows installer executable.
+More information: \[la]https://nsis.sourceforge.io/Docs/Chapter3.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a NSIS script:
+.RE
+.PP
+\fB\fCmakensis {{path/to/file.nsi}}\fR
+.RS
+.IP \(bu 2
+Compile a NSIS script in strict mode (treat warnings as errors):
+.RE
+.PP
+\fB\fCmakensis \-WX {{path/to/file.nsi}}\fR
+.RS
+.IP \(bu 2
+Print help for a specific command:
+.RE
+.PP
+\fB\fCmakensis \-CMDHELP {{command}}\fR

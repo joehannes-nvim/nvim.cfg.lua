@@ -1,0 +1,54 @@
+.TH aws ecr
+.PP
+.RS
+Push, pull, and manage container images.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authenticate Docker with the default registry (username is AWS):
+.RE
+.PP
+\fB\fCaws ecr get\-login\-password \-\-region {{region}} | {{docker login}} \-\-username AWS \-\-password\-stdin {{aws_account_id}}.dkr.ecr.{{region}}.amazonaws.com\fR
+.RS
+.IP \(bu 2
+Create a repository:
+.RE
+.PP
+\fB\fCaws ecr create\-repository \-\-repository\-name {{repository}} \-\-image\-scanning\-configuration scanOnPush={{true|false}} \-\-region {{region}}\fR
+.RS
+.IP \(bu 2
+Tag a local image for ECR:
+.RE
+.PP
+\fB\fCdocker tag {{container_name}}:{{tag}} {{aws_account_id}}.dkr.ecr.{{region}}.amazonaws.com/{{container_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Push an image to a repository:
+.RE
+.PP
+\fB\fCdocker push {{aws_account_id}}.dkr.ecr.{{region}}.amazonaws.com/{{container_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Pull an image from a repository:
+.RE
+.PP
+\fB\fCdocker pull {{aws_account_id}}.dkr.ecr.{{region}}.amazonaws.com/{{container_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Delete an image from a repository:
+.RE
+.PP
+\fB\fCaws ecr batch\-delete\-image \-\-repository\-name {{repository}} \-\-image\-ids imageTag={{latest}}\fR
+.RS
+.IP \(bu 2
+Delete a repository:
+.RE
+.PP
+\fB\fCaws ecr delete\-repository \-\-repository\-name {{repository}} \-\-force\fR
+.RS
+.IP \(bu 2
+List images within a repository:
+.RE
+.PP
+\fB\fCaws ecr list\-images \-\-repository\-name {{repository}}\fR

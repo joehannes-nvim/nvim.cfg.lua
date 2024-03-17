@@ -1,0 +1,54 @@
+.TH docker run
+.PP
+.RS
+Run a command in a new Docker container.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/run/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run command in a new container from a tagged image:
+.RE
+.PP
+\fB\fCdocker run {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container in background and display its ID:
+.RE
+.PP
+\fB\fCdocker run \-\-detach {{image}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a one\-off container in interactive mode and pseudo\-TTY:
+.RE
+.PP
+\fB\fCdocker run \-\-rm \-\-interactive \-\-tty {{image}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with passed environment variables:
+.RE
+.PP
+\fB\fCdocker run \-\-env '{{variable}}={{value}}' \-\-env {{variable}} {{image}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with bind mounted volumes:
+.RE
+.PP
+\fB\fCdocker run \-\-volume {{/path/to/host_path}}:{{/path/to/container_path}} {{image}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with published ports:
+.RE
+.PP
+\fB\fCdocker run \-\-publish {{host_port}}:{{container_port}} {{image}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container overwriting the entrypoint of the image:
+.RE
+.PP
+\fB\fCdocker run \-\-entrypoint {{command}} {{image}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container connecting it to a network:
+.RE
+.PP
+\fB\fCdocker run \-\-network {{network}} {{image}}\fR

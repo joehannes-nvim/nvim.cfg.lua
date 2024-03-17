@@ -1,0 +1,49 @@
+.TH gcalcli
+.PP
+.RS
+Command\-line tool to interact with Google Calendar.
+Requests Google API authorization upon first launch.
+More information: \[la]https://github.com/insanum/gcalcli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List your events for all your calendars over the next 7 days:
+.RE
+.PP
+\fB\fCgcalcli agenda\fR
+.RS
+.IP \(bu 2
+Show events starting from or between specific dates (also takes relative dates e.g. "tomorrow"):
+.RE
+.PP
+\fB\fCgcalcli agenda {{mm/dd}} [{{mm/dd}}]\fR
+.RS
+.IP \(bu 2
+List events from a specific calendar:
+.RE
+.PP
+\fB\fCgcalcli \-\-calendar {{calendar_name}} agenda\fR
+.RS
+.IP \(bu 2
+Display an ASCII calendar of events by week:
+.RE
+.PP
+\fB\fCgcalcli calw\fR
+.RS
+.IP \(bu 2
+Display an ASCII calendar of events for a month:
+.RE
+.PP
+\fB\fCgcalcli calm\fR
+.RS
+.IP \(bu 2
+Quick\-add an event to your calendar:
+.RE
+.PP
+\fB\fCgcalcli \-\-calendar {{calendar_name}} quick "{{mm/dd}} {{HH:MM}} {{event_name}}"\fR
+.RS
+.IP \(bu 2
+Add an event to calendar. Triggers interactive prompt:
+.RE
+.PP
+\fB\fCgcalcli \-\-calendar "{{calendar_name}}" add\fR

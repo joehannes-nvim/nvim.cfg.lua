@@ -1,0 +1,55 @@
+.TH xxh
+.PP
+.RS
+Bring your shell with all of your customizations through SSH sessions.
+Note: xxh does not install anything into system directories on the target machine; removing \fB\fC~/.xxh\fR will clear all traces of xxh on the target machine.
+More information: \[la]https://github.com/xxh/xxh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a host and run the current shell:
+.RE
+.PP
+\fB\fCxxh "{{host}}"\fR
+.RS
+.IP \(bu 2
+Install the current shell into the target machine without prompting:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++install\fR
+.RS
+.IP \(bu 2
+Run the specified shell on the target machine:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++shell {{xonsh|zsh|fish|bash|osquery}}\fR
+.RS
+.IP \(bu 2
+Use a specific xxh configuration directory on the target machine:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++host\-xxh\-home {{~/.xxh}}\fR
+.RS
+.IP \(bu 2
+Use the specified configuration file on the host machine:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++xxh\-config {{~/.config/xxh/config.xxhc}}\fR
+.RS
+.IP \(bu 2
+Specify a password to use for the SSH connection:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++password "{{password}}"\fR
+.RS
+.IP \(bu 2
+Install an xxh package on the target machine:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++install\-xxh\-packages {{package}}\fR
+.RS
+.IP \(bu 2
+Set an environment variable for the shell process on the target machine:
+.RE
+.PP
+\fB\fCxxh "{{host}}" ++env {{name}}={{value}}\fR

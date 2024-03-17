@@ -1,0 +1,30 @@
+.TH chars
+.PP
+.RS
+Display names and codes for various ASCII and Unicode characters and code points.
+More information: \[la]https://github.com/antifuchs/chars\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Look up a character by its value:
+.RE
+.PP
+\fB\fCchars '{{ß}}'\fR
+.RS
+.IP \(bu 2
+Look up a character by its Unicode code point:
+.RE
+.PP
+\fB\fCchars {{U+1F63C}}\fR
+.RS
+.IP \(bu 2
+Look up possible characters given an ambiguous code point:
+.RE
+.PP
+\fB\fCchars {{10}}\fR
+.RS
+.IP \(bu 2
+Look up a control character:
+.RE
+.PP
+\fB\fCchars "{{^C}}"\fR

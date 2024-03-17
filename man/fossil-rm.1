@@ -1,0 +1,25 @@
+.TH fossil rm
+.PP
+.RS
+Remove files or directories from Fossil version control.
+See also \fB\fCfossil forget\fR\&.
+More information: \[la]https://fossil-scm.org/home/help/rm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove a file or directory from Fossil version control:
+.RE
+.PP
+\fB\fCfossil rm {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Remove a file or directory from Fossil version control, and also delete it from the disk:
+.RE
+.PP
+\fB\fCfossil rm \-\-hard {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Re\-add all previously removed and uncommitted files to Fossil version control:
+.RE
+.PP
+\fB\fCfossil rm \-\-reset\fR

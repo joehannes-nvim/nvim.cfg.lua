@@ -1,0 +1,55 @@
+.TH lsd
+.PP
+.RS
+List directory contents.
+The next generation \fB\fCls\fR command, written in Rust.
+More information: \[la]https://github.com/Peltoche/lsd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List files and directories, one per line:
+.RE
+.PP
+\fB\fClsd \-1\fR
+.RS
+.IP \(bu 2
+List all files and directories, including hidden ones, in the current directory:
+.RE
+.PP
+\fB\fClsd \-a\fR
+.RS
+.IP \(bu 2
+List all files and directories with trailing \fB\fC/\fR added to directory names:
+.RE
+.PP
+\fB\fClsd \-F\fR
+.RS
+.IP \(bu 2
+List all files and directories in long format (permissions, ownership, size, and modification date):
+.RE
+.PP
+\fB\fClsd \-la\fR
+.RS
+.IP \(bu 2
+List all files and directories in long format with size displayed using human\-readable units (KiB, MiB, GiB):
+.RE
+.PP
+\fB\fClsd \-lh\fR
+.RS
+.IP \(bu 2
+List all files and directories in long format, sorted by size (descending):
+.RE
+.PP
+\fB\fClsd \-lS\fR
+.RS
+.IP \(bu 2
+List all files and directories in long format, sorted by modification date (oldest first):
+.RE
+.PP
+\fB\fClsd \-ltr\fR
+.RS
+.IP \(bu 2
+Only list directories:
+.RE
+.PP
+\fB\fClsd \-d {{*/}}\fR

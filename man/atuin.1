@@ -1,0 +1,43 @@
+.TH atuin
+.PP
+.RS
+Store your shell history in a searchable database.
+Optionally sync your encrypted history between machines.
+More information: \[la]https://atuin.sh/docs/overview/introduction/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install atuin into your shell:
+.RE
+.PP
+\fB\fCeval "$(atuin init {{bash|zsh|fish}})"\fR
+.RS
+.IP \(bu 2
+Import history from the shell default history file:
+.RE
+.PP
+\fB\fCatuin import auto\fR
+.RS
+.IP \(bu 2
+Search shell history for a specific command:
+.RE
+.PP
+\fB\fCatuin search {{command}}\fR
+.RS
+.IP \(bu 2
+Register an account on the default sync server:
+.RE
+.PP
+\fB\fCatuin register \-u {{username}} \-e {{email}} \-p {{password}}\fR
+.RS
+.IP \(bu 2
+Login to the default sync server:
+.RE
+.PP
+\fB\fCatuin login \-u {{username}} \-p {{password}}\fR
+.RS
+.IP \(bu 2
+Sync history with the sync server:
+.RE
+.PP
+\fB\fCatuin sync\fR

@@ -1,0 +1,30 @@
+.TH dexdump
+.PP
+.RS
+Display information about Android DEX files.
+More information: \[la]https://manned.org/dexdump\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract classes and methods from an APK file:
+.RE
+.PP
+\fB\fCdexdump {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Display header information of DEX files contained in an APK file:
+.RE
+.PP
+\fB\fCdexdump \-f {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Display the dis\-assembled output of executable sections:
+.RE
+.PP
+\fB\fCdexdump \-d {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Output results to a file:
+.RE
+.PP
+\fB\fCdexdump \-o {{path/to/file}} {{path/to/file.apk}}\fR

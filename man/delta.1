@@ -1,0 +1,48 @@
+.TH delta
+.PP
+.RS
+A viewer for Git and diff output.
+More information: \[la]https://github.com/dandavison/delta\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare files or directories:
+.RE
+.PP
+\fB\fCdelta {{path/to/old_file_or_directory}} {{path/to/new_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Compare files or directories, showing the line numbers:
+.RE
+.PP
+\fB\fCdelta \-\-line\-numbers {{path/to/old_file_or_directory}} {{path/to/new_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Compare files or directories, showing the differences side by side:
+.RE
+.PP
+\fB\fCdelta \-\-side\-by\-side {{path/to/old_file_or_directory}} {{path/to/new_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Compare files or directories, ignoring any Git configuration settings:
+.RE
+.PP
+\fB\fCdelta \-\-no\-gitconfig {{path/to/old_file_or_directory}} {{path/to/new_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Compare, rendering commit hashes, file names, and line numbers as hyperlinks, according to the hyperlink spec for terminal emulators:
+.RE
+.PP
+\fB\fCdelta \-\-hyperlinks {{path/to/old_file_or_directory}} {{path/to/new_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Display the current settings:
+.RE
+.PP
+\fB\fCdelta \-\-show\-config\fR
+.RS
+.IP \(bu 2
+Display supported languages and associated file extensions:
+.RE
+.PP
+\fB\fCdelta \-\-list\-languages\fR

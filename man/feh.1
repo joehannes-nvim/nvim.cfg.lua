@@ -1,0 +1,48 @@
+.TH feh
+.PP
+.RS
+Lightweight image viewing utility.
+More information: \[la]https://feh.finalrewind.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View images locally or using a URL:
+.RE
+.PP
+\fB\fCfeh {{path/to/images}}\fR
+.RS
+.IP \(bu 2
+View images recursively:
+.RE
+.PP
+\fB\fCfeh \-\-recursive {{path/to/images}}\fR
+.RS
+.IP \(bu 2
+View images without window borders:
+.RE
+.PP
+\fB\fCfeh \-\-borderless {{path/to/images}}\fR
+.RS
+.IP \(bu 2
+Exit after the last image:
+.RE
+.PP
+\fB\fCfeh \-\-cycle\-once {{path/to/images}}\fR
+.RS
+.IP \(bu 2
+Set the slideshow cycle delay:
+.RE
+.PP
+\fB\fCfeh \-\-slideshow\-delay {{seconds}} {{path/to/images}}\fR
+.RS
+.IP \(bu 2
+Set your wallpaper (centered, filled, maximized, scaled or tiled):
+.RE
+.PP
+\fB\fCfeh \-\-bg\-{{center|fill|max|scale|tile}} {{path/to/image}}\fR
+.RS
+.IP \(bu 2
+Create a montage of all images within a directory. Outputs as a new image:
+.RE
+.PP
+\fB\fCfeh \-\-montage \-\-thumb\-height {{150}} \-\-thumb\-width {{150}} \-\-index\-info "{{%nn%wx%h}}" \-\-output {{path/to/montage_image.png}}\fR

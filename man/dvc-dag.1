@@ -1,0 +1,26 @@
+.TH dvc dag
+.PP
+.RS
+Visualize the 
+.BR pipeline (s) 
+defined in \fB\fCdvc.yaml\fR\&.
+More information: \[la]https://dvc.org/doc/command-reference/dag\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Visualize the entire pipeline:
+.RE
+.PP
+\fB\fCdvc dag\fR
+.RS
+.IP \(bu 2
+Visualize the pipeline stages up to a specified target stage:
+.RE
+.PP
+\fB\fCdvc dag {{target}}\fR
+.RS
+.IP \(bu 2
+Export the pipeline in the dot format:
+.RE
+.PP
+\fB\fCdvc dag \-\-dot > {{path/to/pipeline.dot}}\fR

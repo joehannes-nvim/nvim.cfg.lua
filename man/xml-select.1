@@ -1,0 +1,37 @@
+.TH xml select
+.PP
+.RS
+Select from XML documents using XPATHs.
+Tip: use \fB\fCxml elements\fR to display the XPATHs of an XML document.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Select all elements matching "XPATH1" and print the value of their sub\-element "XPATH2":
+.RE
+.PP
+\fB\fCxml select \-\-template \-\-match "{{XPATH1}}" \-\-value\-of "{{XPATH2}}" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Match "XPATH1" and print the value of "XPATH2" as text with new\-lines:
+.RE
+.PP
+\fB\fCxml select \-\-text \-\-template \-\-match "{{XPATH1}}" \-\-value\-of "{{XPATH2}}" \-\-nl {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Count the elements of "XPATH1":
+.RE
+.PP
+\fB\fCxml select \-\-template \-\-value\-of "count({{XPATH1}})" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Count all nodes in one or more XML documents:
+.RE
+.PP
+\fB\fCxml select \-\-text \-\-template \-\-inp\-name \-\-output " " \-\-value\-of "count(node())" \-\-nl {{path/to/input1.xml|URI}} {{path/to/input2.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCselect\fR subcommand:
+.RE
+.PP
+\fB\fCxml select \-\-help\fR

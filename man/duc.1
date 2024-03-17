@@ -1,0 +1,42 @@
+.TH duc
+.PP
+.RS
+Duc is a collection of tools for indexing, inspecting and visualizing disk usage. Duc maintains a database of accumulated sizes of directories of the file system, allowing queries this database, or create fancy graphs to show where data is.
+More information: \[la]https://duc.zevv.nl/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Index the /usr directory, writing to the default database location ~/.duc.db:
+.RE
+.PP
+\fB\fCduc index {{/usr}}\fR
+.RS
+.IP \(bu 2
+List all files and directories under /usr/local, showing relative file sizes in a [g]raph:
+.RE
+.PP
+\fB\fCduc ls \-Fg {{/usr/local}}\fR
+.RS
+.IP \(bu 2
+List all files and directories under /usr/local using treeview recursively:
+.RE
+.PP
+\fB\fCduc ls \-Fg \-R {{/usr/local}}\fR
+.RS
+.IP \(bu 2
+Start the graphical interface to explore the file system using sunburst graphs:
+.RE
+.PP
+\fB\fCduc gui {{/usr}}\fR
+.RS
+.IP \(bu 2
+Run the ncurses console interface to explore the file system:
+.RE
+.PP
+\fB\fCduc ui {{/usr}}\fR
+.RS
+.IP \(bu 2
+Dump database info:
+.RE
+.PP
+\fB\fCduc info\fR

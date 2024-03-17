@@ -1,0 +1,54 @@
+.TH git clone
+.PP
+.RS
+Clone an existing repository.
+More information: \[la]https://git-scm.com/docs/git-clone\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone an existing repository into a new directory (the default directory is the repository name):
+.RE
+.PP
+\fB\fCgit clone {{remote_repository_location}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository and its submodules:
+.RE
+.PP
+\fB\fCgit clone \-\-recursive {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone only the \fB\fC\&.git\fR directory of an existing repository:
+.RE
+.PP
+\fB\fCgit clone \-\-no\-checkout {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone a local repository:
+.RE
+.PP
+\fB\fCgit clone \-\-local {{path/to/local/repository}}\fR
+.RS
+.IP \(bu 2
+Clone quietly:
+.RE
+.PP
+\fB\fCgit clone \-\-quiet {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository only fetching the 10 most recent commits on the default branch (useful to save time):
+.RE
+.PP
+\fB\fCgit clone \-\-depth {{10}} {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository only fetching a specific branch:
+.RE
+.PP
+\fB\fCgit clone \-\-branch {{name}} \-\-single\-branch {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository using a specific SSH command:
+.RE
+.PP
+\fB\fCgit clone \-\-config core.sshCommand="{{ssh \-i path/to/private_ssh_key}}" {{remote_repository_location}}\fR

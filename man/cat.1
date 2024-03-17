@@ -1,0 +1,36 @@
+.TH cat
+.PP
+.RS
+Print and concatenate files.
+More information: \[la]https://www.gnu.org/software/coreutils/cat\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the contents of a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Concatenate several files into an output file:
+.RE
+.PP
+\fB\fCcat {{path/to/file1 path/to/file2 ...}} > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Append several files to an output file:
+.RE
+.PP
+\fB\fCcat {{path/to/file1 path/to/file2 ...}} >> {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Copy the contents of a file into an output file without buffering:
+.RE
+.PP
+\fB\fCcat \-u {{/dev/tty12}} > {{/dev/tty13}}\fR
+.RS
+.IP \(bu 2
+Write \fB\fCstdin\fR to a file:
+.RE
+.PP
+\fB\fCcat \- > {{path/to/file}}\fR

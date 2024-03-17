@@ -1,0 +1,30 @@
+.TH basenc
+.PP
+.RS
+Encode or decode file or \fB\fCstdin\fR using a specified encoding, to \fB\fCstdout\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/basenc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encode a file with base64 encoding:
+.RE
+.PP
+\fB\fCbasenc \-\-base64 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decode a file with base64 encoding:
+.RE
+.PP
+\fB\fCbasenc \-\-decode \-\-base64 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Encode from \fB\fCstdin\fR with base32 encoding with 42 columns:
+.RE
+.PP
+\fB\fC{{command}} | basenc \-\-base32 \-w42\fR
+.RS
+.IP \(bu 2
+Encode from \fB\fCstdin\fR with base32 encoding:
+.RE
+.PP
+\fB\fC{{command}} | basenc \-\-base32\fR

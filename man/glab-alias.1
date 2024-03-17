@@ -1,0 +1,36 @@
+.TH glab alias
+.PP
+.RS
+Manage GitLab CLI command aliases.
+More information: \[la]https://glab.readthedocs.io/en/latest/alias\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the subcommand help:
+.RE
+.PP
+\fB\fCglab alias\fR
+.RS
+.IP \(bu 2
+List all the aliases \fB\fCglab\fR is configured to use:
+.RE
+.PP
+\fB\fCglab alias list\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCglab\fR subcommand alias:
+.RE
+.PP
+\fB\fCglab alias set {{mrv}} '{{mr view}}'\fR
+.RS
+.IP \(bu 2
+Set a shell command as a \fB\fCglab\fR subcommand:
+.RE
+.PP
+\fB\fCglab alias set \-\-shell {{alias_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Delete a command shortcut:
+.RE
+.PP
+\fB\fCglab alias delete {{alias_name}}\fR

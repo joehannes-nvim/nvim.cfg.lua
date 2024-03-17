@@ -1,0 +1,45 @@
+.TH unzip
+.PP
+.RS
+Extract files/directories from ZIP archives.
+See also: \fB\fCzip\fR\&.
+More information: \[la]https://manned.org/unzip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract all files/directories from specific archives into the current directory:
+.RE
+.PP
+\fB\fCunzip {{path/to/archive1.zip path/to/archive2.zip ...}}\fR
+.RS
+.IP \(bu 2
+Extract files/directories from archives to a specific path:
+.RE
+.PP
+\fB\fCunzip {{path/to/archive1.zip path/to/archive2.zip ...}} \-d {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Extract files/directories from archives to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCunzip \-c {{path/to/archive1.zip path/to/archive2.zip ...}}\fR
+.RS
+.IP \(bu 2
+Extract the contents of the 
+.BR file (s) 
+to \fB\fCstdout\fR alongside the extracted file names:
+.RE
+.PP
+\fB\fCunzip \-O {{gbk}} {{path/to/archive1.zip path/to/archive2.zip ...}}\fR
+.RS
+.IP \(bu 2
+List the contents of a specific archive without extracting them:
+.RE
+.PP
+\fB\fCunzip \-l {{path/to/archive.zip}}\fR
+.RS
+.IP \(bu 2
+Extract a specific file from an archive:
+.RE
+.PP
+\fB\fCunzip \-j {{path/to/archive.zip}} {{path/to/file_in_archive1 path/to/file_in_archive2 ...}}\fR

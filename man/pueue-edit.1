@@ -1,0 +1,24 @@
+.TH pueue edit
+.PP
+.RS
+Edit the command or path of a stashed or queued task.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Edit a task, see \fB\fCpueue status\fR to get the task ID:
+.RE
+.PP
+\fB\fCpueue edit {{task_id}}\fR
+.RS
+.IP \(bu 2
+Edit the path from which a task is executed:
+.RE
+.PP
+\fB\fCpueue edit {{task_id}} \-\-path\fR
+.RS
+.IP \(bu 2
+Edit a command with the specified editor:
+.RE
+.PP
+\fB\fCEDITOR={{nano}} pueue edit {{task_id}}\fR

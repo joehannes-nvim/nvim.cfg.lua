@@ -1,0 +1,30 @@
+.TH guile
+.PP
+.RS
+Guile Scheme interpreter.
+More information: \[la]https://www.gnu.org/software/guile\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCguile\fR
+.RS
+.IP \(bu 2
+Execute the script in a given Scheme file:
+.RE
+.PP
+\fB\fCguile {{script.scm}}\fR
+.RS
+.IP \(bu 2
+Execute a Scheme expression:
+.RE
+.PP
+\fB\fCguile \-c "{{expression}}"\fR
+.RS
+.IP \(bu 2
+Listen on a port or a Unix domain socket (the default is port 37146) for remote REPL connections:
+.RE
+.PP
+\fB\fCguile \-\-listen={{port_or_socket}}\fR

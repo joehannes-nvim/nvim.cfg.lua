@@ -1,0 +1,54 @@
+.TH vf
+.PP
+.RS
+VirtualFish is a fish shell tool for managing Python virtual environments.
+More information: \[la]https://virtualfish.readthedocs.io/en/latest/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a virtual environment:
+.RE
+.PP
+\fB\fCvf new {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Create a virtual environment for a specific Python version:
+.RE
+.PP
+\fB\fCvf new \-\-python {{/usr/local/bin/python3.8}} {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Activate and use the specified virtual environment:
+.RE
+.PP
+\fB\fCvf activate {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Connect the current virtualenv to the current directory, so that it is activated automatically as soon as you enter it (and deactivated as soon as you leave):
+.RE
+.PP
+\fB\fCvf connect\fR
+.RS
+.IP \(bu 2
+Deactivate the current virtual environment:
+.RE
+.PP
+\fB\fCvf deactivate\fR
+.RS
+.IP \(bu 2
+List all virtual environments:
+.RE
+.PP
+\fB\fCvf ls\fR
+.RS
+.IP \(bu 2
+Remove a virtual environment:
+.RE
+.PP
+\fB\fCvf rm {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCvf help\fR

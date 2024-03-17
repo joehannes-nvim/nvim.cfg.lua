@@ -1,0 +1,36 @@
+.TH trans
+.PP
+.RS
+Translate Shell is a command\-line translator.
+More information: \[la]https://github.com/soimort/translate-shell\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Translate a word (language is detected automatically):
+.RE
+.PP
+\fB\fCtrans "{{word_or_sentence_to_translate}}"\fR
+.RS
+.IP \(bu 2
+Get a brief translation:
+.RE
+.PP
+\fB\fCtrans \-\-brief "{{word_or_sentence_to_translate}}"\fR
+.RS
+.IP \(bu 2
+Translate a word into french:
+.RE
+.PP
+\fB\fCtrans :{{fr}} {{word}}\fR
+.RS
+.IP \(bu 2
+Translate a word from German to English:
+.RE
+.PP
+\fB\fCtrans {{de}}:{{en}} {{Schmetterling}}\fR
+.RS
+.IP \(bu 2
+Behave like a dictionary to get the meaning of a word:
+.RE
+.PP
+\fB\fCtrans \-d {{word}}\fR

@@ -1,0 +1,36 @@
+.TH glab repo
+.PP
+.RS
+Work with GitLab repositories.
+More information: \[la]https://glab.readthedocs.io/en/latest/repo/index.html#synopsis\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new repository (if the repository name is not set, the default name will be the name of the current directory):
+.RE
+.PP
+\fB\fCglab repo create {{name}}\fR
+.RS
+.IP \(bu 2
+Clone a repository:
+.RE
+.PP
+\fB\fCglab repo clone {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+Fork and clone a repository:
+.RE
+.PP
+\fB\fCglab repo fork {{owner}}/{{repository}} \-\-clone\fR
+.RS
+.IP \(bu 2
+View a repository in the default web browser:
+.RE
+.PP
+\fB\fCglab repo view {{owner}}/{{repository}} \-\-web\fR
+.RS
+.IP \(bu 2
+Search some repositories in the GitLab instance:
+.RE
+.PP
+\fB\fCglab repo search \-s {{search_string}}\fR

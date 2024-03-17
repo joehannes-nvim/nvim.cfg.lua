@@ -1,0 +1,42 @@
+.TH aws s3
+.PP
+.RS
+CLI for AWS S3 \- provides storage through web services interfaces.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show files in a bucket:
+.RE
+.PP
+\fB\fCaws s3 ls {{bucket_name}}\fR
+.RS
+.IP \(bu 2
+Sync files and directories from local to bucket:
+.RE
+.PP
+\fB\fCaws s3 sync {{path/to/files}} s3://{{bucket_name}}\fR
+.RS
+.IP \(bu 2
+Sync files and directories from bucket to local:
+.RE
+.PP
+\fB\fCaws s3 sync s3://{{bucket_name}} {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Sync files and directories with exclusions:
+.RE
+.PP
+\fB\fCaws s3 sync {{path/to/files}} s3://{{bucket_name}} \-\-exclude {{path/to/file}} \-\-exclude {{path/to/directory}}/*\fR
+.RS
+.IP \(bu 2
+Remove file from bucket:
+.RE
+.PP
+\fB\fCaws s3 rm s3://{{bucket}}/{{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Preview changes only:
+.RE
+.PP
+\fB\fCaws s3 {{any_command}} \-\-dryrun\fR

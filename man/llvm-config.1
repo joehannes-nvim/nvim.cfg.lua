@@ -1,0 +1,25 @@
+.TH llvm\-config
+.PP
+.RS
+Get various configuration information needed to compile programs which use LLVM.
+Typically called from build systems, like in Makefiles or configure scripts.
+More information: \[la]https://llvm.org/docs/CommandGuide/llvm-config.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile and link an LLVM based program:
+.RE
+.PP
+\fB\fCclang++ $(llvm\-config \-\-cxxflags \-\-ldflags \-\-libs) \-\-output {{path/to/output_executable}} {{path/to/source.cc}}\fR
+.RS
+.IP \(bu 2
+Print the \fB\fCPREFIX\fR of your LLVM installation:
+.RE
+.PP
+\fB\fCllvm\-config \-\-prefix\fR
+.RS
+.IP \(bu 2
+Print all targets supported by your LLVM build:
+.RE
+.PP
+\fB\fCllvm\-config \-\-targets\-built\fR

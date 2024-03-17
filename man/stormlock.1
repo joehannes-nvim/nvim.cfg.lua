@@ -1,0 +1,30 @@
+.TH Stormlock
+.PP
+.RS
+Centralized locking system.
+More information: \[la]https://github.com/tmccombs/stormlock\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Acquire a lease for resource:
+.RE
+.PP
+\fB\fCstormlock acquire {{resource}}\fR
+.RS
+.IP \(bu 2
+Release the given lease for the given resource:
+.RE
+.PP
+\fB\fCstormlock release {{resource}} {{lease_id}}\fR
+.RS
+.IP \(bu 2
+Show information on the current lease for a resource, if any:
+.RE
+.PP
+\fB\fCstormlock current {{resource}}\fR
+.RS
+.IP \(bu 2
+Test if a lease for given resource is currently active:
+.RE
+.PP
+\fB\fCstormlock is\-held {{resource}} {{lease_id}}\fR

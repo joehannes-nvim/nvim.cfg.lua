@@ -1,0 +1,36 @@
+.TH lilypond
+.PP
+.RS
+Typeset music and/or produce MIDI from file.
+More information: \[la]https://lilypond.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a lilypond file into a PDF:
+.RE
+.PP
+\fB\fClilypond {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compile into the specified format:
+.RE
+.PP
+\fB\fClilypond \-\-formats={{format_dump}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compile the specified file, suppressing progress updates:
+.RE
+.PP
+\fB\fClilypond \-s {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compile the specified file, and also specify the output filename:
+.RE
+.PP
+\fB\fClilypond \-\-output={{path/to/output_file}} {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Show the current version of lilypond:
+.RE
+.PP
+\fB\fClilypond \-\-version\fR

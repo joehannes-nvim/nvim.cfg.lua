@@ -1,0 +1,24 @@
+.TH git mailinfo
+.PP
+.RS
+Extract patch and authorship information from a single email message.
+More information: \[la]https://git-scm.com/docs/git-mailinfo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract the patch and author data from an email message:
+.RE
+.PP
+\fB\fCgit mailinfo {{message|patch}}\fR
+.RS
+.IP \(bu 2
+Extract but remove leading and trailing whitespace:
+.RE
+.PP
+\fB\fCgit mailinfo \-k {{message|patch}}\fR
+.RS
+.IP \(bu 2
+Remove everything from the body before a scissors line (e.g. "\-\->* \-\-") and retrieve the message or patch:
+.RE
+.PP
+\fB\fCgit mailinfo \-\-scissors {{message|patch}}\fR

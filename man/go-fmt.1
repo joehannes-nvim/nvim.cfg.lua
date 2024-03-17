@@ -1,0 +1,37 @@
+.TH go fmt
+.PP
+.RS
+Format Go source files.
+Prints the filenames that are changed.
+More information: \[la]https://pkg.go.dev/cmd/go#hdr-Gofmt__reformat__package_sources\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format Go source files in the current directory:
+.RE
+.PP
+\fB\fCgo fmt\fR
+.RS
+.IP \(bu 2
+Format a specific Go package in your import path (\fB\fC$GOPATH/src\fR):
+.RE
+.PP
+\fB\fCgo fmt {{path/to/package}}\fR
+.RS
+.IP \(bu 2
+Format the package in the current directory and all subdirectories (note the \fB\fC\&...\fR):
+.RE
+.PP
+\fB\fCgo fmt {{./...}}\fR
+.RS
+.IP \(bu 2
+Print what format commands would've been run, without modifying anything:
+.RE
+.PP
+\fB\fCgo fmt \-n\fR
+.RS
+.IP \(bu 2
+Print which format commands are run as they are run:
+.RE
+.PP
+\fB\fCgo fmt \-x\fR

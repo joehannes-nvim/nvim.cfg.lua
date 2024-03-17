@@ -1,0 +1,44 @@
+.TH resolvconf
+.PP
+.RS
+Manage nameserver information.
+Acts as an intermediary between programs that supply nameserver information and applications that use this information.
+This tldr documents Debian's implementation of resolvconf.
+More information: \[la]https://manpages.ubuntu.com/manpages/resolvconf.8.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add or override the IFACE.PROG record and run the update scripts if updating is enabled:
+.RE
+.PP
+\fB\fCresolvconf \-a {{IFACE.PROG}}\fR
+.RS
+.IP \(bu 2
+Delete the IFACE.PROG record and run the update scripts if updating is enabled:
+.RE
+.PP
+\fB\fCresolvconf \-d {{IFACR.PROG}}\fR
+.RS
+.IP \(bu 2
+Just run the update scripts if updating is enabled:
+.RE
+.PP
+\fB\fCresolvconf \-u\fR
+.RS
+.IP \(bu 2
+Set the flag indicating whether \fB\fCresolvconf\fR should run update scripts when invoked with \fB\fC\-a\fR, \fB\fC\-d\fR or \fB\fC\-u\fR:
+.RE
+.PP
+\fB\fCresolvconf \-\-enable\-updates\fR
+.RS
+.IP \(bu 2
+Clear the flag indicating whether to run updates:
+.RE
+.PP
+\fB\fCresolvconf \-\-disable\-updates\fR
+.RS
+.IP \(bu 2
+Check whether updates are enabled:
+.RE
+.PP
+\fB\fCresolvconf \-\-updates\-are\-enabled\fR

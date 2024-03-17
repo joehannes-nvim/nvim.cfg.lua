@@ -1,0 +1,24 @@
+.TH git range\-diff
+.PP
+.RS
+Compare two commit ranges (e.g. two versions of a branch).
+More information: \[la]https://git-scm.com/docs/git-range-diff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Diff the changes of two individual commits:
+.RE
+.PP
+\fB\fCgit range\-diff {{commit_1}}^! {{commit_2}}^!\fR
+.RS
+.IP \(bu 2
+Diff the changes of ours and theirs from their common ancestor, e.g. after an interactive rebase:
+.RE
+.PP
+\fB\fCgit range\-diff {{theirs}}...{{ours}}\fR
+.RS
+.IP \(bu 2
+Diff the changes of two commit ranges, e.g. to check whether conflicts have been resolved appropriately when rebasing commits from \fB\fCbase1\fR to \fB\fCbase2\fR:
+.RE
+.PP
+\fB\fCgit range\-diff {{base1}}..{{rev1}} {{base2}}..{{rev2}}\fR

@@ -1,0 +1,24 @@
+.TH git bugreport
+.PP
+.RS
+Captures debug information from the system and user, generating a text file to aid in the reporting of a bug in Git.
+More information: \[la]https://git-scm.com/docs/git-bugreport\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new bug report file in the current directory:
+.RE
+.PP
+\fB\fCgit bugreport\fR
+.RS
+.IP \(bu 2
+Create a new bug report file in the specified directory, creating it if it does not exist:
+.RE
+.PP
+\fB\fCgit bugreport \-\-output\-directory {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Create a new bug report file with the specified filename suffix in \fB\fCstrftime\fR format:
+.RE
+.PP
+\fB\fCgit bugreport \-\-suffix {{%m%d%y}}\fR

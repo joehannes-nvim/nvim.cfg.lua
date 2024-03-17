@@ -1,0 +1,43 @@
+.TH gitsome
+.PP
+.RS
+A terminal\-based interface for GitHub, accessed via the \fB\fCgh\fR command.
+It also provides menu\-style autocomplete suggestions for \fB\fCgit\fR commands.
+More information: \[la]https://github.com/donnemartin/gitsome\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enter the gitsome shell (optional), to enable autocompletion and interactive help for Git (and gh) commands:
+.RE
+.PP
+\fB\fCgitsome\fR
+.RS
+.IP \(bu 2
+Setup GitHub integration with the current account:
+.RE
+.PP
+\fB\fCgh configure\fR
+.RS
+.IP \(bu 2
+List notifications for the current account (as would be seen in \[la]https://github.com/notifications\[ra]):
+.RE
+.PP
+\fB\fCgh notifications\fR
+.RS
+.IP \(bu 2
+List the current account's starred repos, filtered by a given search string:
+.RE
+.PP
+\fB\fCgh starred "{{python 3}}"\fR
+.RS
+.IP \(bu 2
+View the recent activity feed of a given GitHub repository:
+.RE
+.PP
+\fB\fCgh feed {{tldr\-pages/tldr}}\fR
+.RS
+.IP \(bu 2
+View the recent activity feed for a given GitHub user, using the default pager (e.g. \fB\fCless\fR):
+.RE
+.PP
+\fB\fCgh feed {{torvalds}} \-p\fR

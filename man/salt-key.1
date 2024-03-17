@@ -1,0 +1,31 @@
+.TH salt\-key
+.PP
+.RS
+Manages salt minion keys on the salt master.
+Needs to be run on the salt master, likely as root or with sudo.
+More information: \[la]https://docs.saltstack.com/ref/cli/salt-key.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all accepted, unaccepted and rejected minion keys:
+.RE
+.PP
+\fB\fCsalt\-key \-L\fR
+.RS
+.IP \(bu 2
+Accept a minion key by name:
+.RE
+.PP
+\fB\fCsalt\-key \-a {{MINION_ID}}\fR
+.RS
+.IP \(bu 2
+Reject a minion key by name:
+.RE
+.PP
+\fB\fCsalt\-key \-r {{MINION_ID}}\fR
+.RS
+.IP \(bu 2
+Print fingerprints of all public keys:
+.RE
+.PP
+\fB\fCsalt\-key \-F\fR

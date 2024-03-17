@@ -1,0 +1,30 @@
+.TH fossil commit
+.PP
+.RS
+Commit files to a Fossil repository.
+More information: \[la]https://fossil-scm.org/home/help/commit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new version containing all the changes in the current checkout; user will be prompted for a comment:
+.RE
+.PP
+\fB\fCfossil commit\fR
+.RS
+.IP \(bu 2
+Create a new version containing all the changes in the current checkout, using the specified comment:
+.RE
+.PP
+\fB\fCfossil commit \-\-comment "{{comment}}"\fR
+.RS
+.IP \(bu 2
+Create a new version containing all the changes in the current checkout with a comment read from a specific file:
+.RE
+.PP
+\fB\fCfossil commit \-\-message\-file {{path/to/commit_message_file}}\fR
+.RS
+.IP \(bu 2
+Create a new version containing changes from the specified files; user will be prompted for a comment:
+.RE
+.PP
+\fB\fCfossil commit {{path/to/file1}} {{path/to/file2}}\fR

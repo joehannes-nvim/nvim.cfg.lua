@@ -1,0 +1,31 @@
+.TH az storage container
+.PP
+.RS
+Manage blob storage containers in Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage/container\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a container in a storage account:
+.RE
+.PP
+\fB\fCaz storage container create \-\-account\-name {{storage_account_name}} \-\-name {{container_name}} \-\-public\-access {{access_level}} \-\-fail\-on\-exist\fR
+.RS
+.IP \(bu 2
+Generate a shared access signature for the container:
+.RE
+.PP
+\fB\fCaz storage container generate\-sas \-\-account\-name {{storage_account_name}} \-\-name {{container_name}} \-\-permissions {{sas_permissions}} \-\-expiry {{expiry_date}} \-\-https\-only\fR
+.RS
+.IP \(bu 2
+List containers in a storage account:
+.RE
+.PP
+\fB\fCaz storage container list \-\-account\-name {{storage_account_name}} \-\-prefix {{filter_prefix}}\fR
+.RS
+.IP \(bu 2
+Mark the specified container for deletion:
+.RE
+.PP
+\fB\fCaz storage container delete \-\-account\-name {{storage_account_name}} \-\-name {{container_name}} \-\-fail\-not\-exist\fR

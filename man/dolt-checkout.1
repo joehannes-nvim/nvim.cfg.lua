@@ -1,0 +1,30 @@
+.TH dolt checkout
+.PP
+.RS
+Checkout the work tree or tables to a specific branch or commit.
+More information: \[la]https://github.com/dolthub/dolt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Switch to a branch:
+.RE
+.PP
+\fB\fCdolt checkout {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Revert unstaged changes to a table:
+.RE
+.PP
+\fB\fCdolt checkout {{table}}\fR
+.RS
+.IP \(bu 2
+Create new branch and switch to it:
+.RE
+.PP
+\fB\fCdolt checkout \-b {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create new branch based on a specified commit and switch to it:
+.RE
+.PP
+\fB\fCdolt checkout \-b {{branch_name}} {{commit}}\fR

@@ -1,0 +1,36 @@
+.TH jmtpfs
+.PP
+.RS
+FUSE\-based filesystem for accessing MTP devices.
+More information: \[la]https://manned.org/jmtpfs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Mount an MTP device to a directory:
+.RE
+.PP
+\fB\fCjmtpfs {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Set mount options:
+.RE
+.PP
+\fB\fCjmtpfs \-o {{allow_other,auto_unmount}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List available MTP devices:
+.RE
+.PP
+\fB\fCjmtpfs \-\-listDevices\fR
+.RS
+.IP \(bu 2
+If multiple devices are present, mount a specific device:
+.RE
+.PP
+\fB\fCjmtpfs \-device={{bus_id}},{{device_id}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Unmount MTP device:
+.RE
+.PP
+\fB\fCfusermount \-u {{path/to/directory}}\fR

@@ -1,0 +1,36 @@
+.TH gcc
+.PP
+.RS
+Preprocess and compile C and C++ source files, then assemble and link them together.
+More information: \[la]https://gcc.gnu.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile multiple source files into an executable:
+.RE
+.PP
+\fB\fCgcc {{path/to/source1.c path/to/source2.c ...}} \-o {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Show common warnings, debug symbols in output, and optimize without affecting debugging:
+.RE
+.PP
+\fB\fCgcc {{path/to/source.c}} \-Wall \-g \-Og \-o {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Include libraries from a different path:
+.RE
+.PP
+\fB\fCgcc {{path/to/source.c}} \-o {{path/to/output_executable}} \-I{{path/to/header}} \-L{{path/to/library}} \-l{{library_name}}\fR
+.RS
+.IP \(bu 2
+Compile source code into Assembler instructions:
+.RE
+.PP
+\fB\fCgcc \-S {{path/to/source.c}}\fR
+.RS
+.IP \(bu 2
+Compile source code into an object file without linking:
+.RE
+.PP
+\fB\fCgcc \-c {{path/to/source.c}}\fR

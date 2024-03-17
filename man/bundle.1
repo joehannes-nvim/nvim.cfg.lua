@@ -1,0 +1,58 @@
+.TH bundle
+.PP
+.RS
+Dependency manager for the Ruby programming language.
+More information: \[la]https://bundler.io/man/bundle.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install all gems defined in the \fB\fCGemfile\fR expected in the working directory:
+.RE
+.PP
+\fB\fCbundle install\fR
+.RS
+.IP \(bu 2
+Execute a command in the context of the current bundle:
+.RE
+.PP
+\fB\fCbundle exec {{command}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Update all gems by the rules defined in the \fB\fCGemfile\fR and regenerate \fB\fCGemfile.lock\fR:
+.RE
+.PP
+\fB\fCbundle update\fR
+.RS
+.IP \(bu 2
+Update one or more specific 
+.BR gem (s) 
+defined in the \fB\fCGemfile\fR:
+.RE
+.PP
+\fB\fCbundle update {{gem_name}} {{gem_name}}\fR
+.RS
+.IP \(bu 2
+Update one or more specific 
+.BR gems (s) 
+defined in the \fB\fCGemfile\fR but only to the next patch version:
+.RE
+.PP
+\fB\fCbundle update \-\-patch {{gem_name}} {{gem_name}}\fR
+.RS
+.IP \(bu 2
+Update all gems within the given group in the \fB\fCGemfile\fR:
+.RE
+.PP
+\fB\fCbundle update \-\-group {{development}}\fR
+.RS
+.IP \(bu 2
+List installed gems in the \fB\fCGemfile\fR with newer versions available:
+.RE
+.PP
+\fB\fCbundle outdated\fR
+.RS
+.IP \(bu 2
+Create a new gem skeleton:
+.RE
+.PP
+\fB\fCbundle gem {{gem_name}}\fR

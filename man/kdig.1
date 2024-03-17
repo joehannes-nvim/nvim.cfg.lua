@@ -1,0 +1,42 @@
+.TH kdig
+.PP
+.RS
+Advanced DNS lookup utility.
+More information: \[la]https://www.knot-dns.cz/docs/latest/html/man_kdig.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records):
+.RE
+.PP
+\fB\fCkdig {{example.com}}\fR
+.RS
+.IP \(bu 2
+Specify a specific DNS server to query (e.g. Google DNS):
+.RE
+.PP
+\fB\fCkdig {{example.com}} @{{8.8.8.8}}\fR
+.RS
+.IP \(bu 2
+Query a specific DNS record type associated with a given domain name:
+.RE
+.PP
+\fB\fCkdig {{example.com}} {{A|AAAA|NS|SOA|DNSKEY|ANY}}\fR
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records) using DNS over TLS (DoT):
+.RE
+.PP
+\fB\fCkdig \-d @{{8.8.8.8}} +tls\-ca +tls\-host={{dns.google}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records) using DNS over HTTPS (DoH):
+.RE
+.PP
+\fB\fCkdig \-d @{{1.1.1.1}} +https +tls\-hostname={{1dot1dot1dot1.cloudflare\-dns.com}} {{example.com}}\fR

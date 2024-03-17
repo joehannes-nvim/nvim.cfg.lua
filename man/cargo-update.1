@@ -1,0 +1,30 @@
+.TH cargo update
+.PP
+.RS
+Update dependencies as recorded in \fB\fCCargo.lock\fR\&.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-update.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update dependencies in \fB\fCCargo.lock\fR to the latest possible version:
+.RE
+.PP
+\fB\fCcargo update\fR
+.RS
+.IP \(bu 2
+Display what would be updated, but don't actually write the lockfile:
+.RE
+.PP
+\fB\fCcargo update \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Update only the specified dependencies:
+.RE
+.PP
+\fB\fCcargo update \-\-package {{dependency1}} \-\-package {{dependency2}} \-\-package {{dependency3}}\fR
+.RS
+.IP \(bu 2
+Set a specific dependency to a specific version:
+.RE
+.PP
+\fB\fCcargo update \-\-package {{dependency}} \-\-precise {{1.2.3}}\fR

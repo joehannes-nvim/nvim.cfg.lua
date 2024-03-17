@@ -1,0 +1,36 @@
+.TH redis\-server
+.PP
+.RS
+Persistent key\-value database.
+More information: \[la]https://redis.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Redis server, using the default port (6379), and write logs to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCredis\-server\fR
+.RS
+.IP \(bu 2
+Start Redis server, using the default port, as a background process:
+.RE
+.PP
+\fB\fCredis\-server \-\-daemonize yes\fR
+.RS
+.IP \(bu 2
+Start Redis server, using the specified port, as a background process:
+.RE
+.PP
+\fB\fCredis\-server \-\-port {{port}} \-\-daemonize yes\fR
+.RS
+.IP \(bu 2
+Start Redis server with a custom configuration file:
+.RE
+.PP
+\fB\fCredis\-server {{path/to/redis.conf}}\fR
+.RS
+.IP \(bu 2
+Start Redis server with verbose logging:
+.RE
+.PP
+\fB\fCredis\-server \-\-loglevel {{warning|notice|verbose|debug}}\fR

@@ -1,0 +1,18 @@
+.TH git update\-ref
+.PP
+.RS
+Git command for creating, updating, and deleting Git refs.
+More information: \[la]https://git-scm.com/docs/git-update-ref\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete a ref, useful for soft resetting the first commit:
+.RE
+.PP
+\fB\fCgit update\-ref \-d {{HEAD}}\fR
+.RS
+.IP \(bu 2
+Update ref with a message:
+.RE
+.PP
+\fB\fCgit update\-ref \-m {{message}} {{HEAD}} {{4e95e05}}\fR

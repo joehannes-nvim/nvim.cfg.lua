@@ -1,0 +1,31 @@
+.TH linode\-cli tickets
+.PP
+.RS
+Manage Linode Support Tickets.
+See also: \fB\fClinode\-cli\fR\&.
+More information: \[la]https://www.linode.com/docs/products/tools/cli/guides/account/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List your Support Tickets:
+.RE
+.PP
+\fB\fClinode\-cli tickets list\fR
+.RS
+.IP \(bu 2
+Open a new Ticket:
+.RE
+.PP
+\fB\fClinode\-cli tickets create \-\-summary "{{Summary or quick title for the Ticket}}" \-\-description "{{Detailed description of the issue}}"\fR
+.RS
+.IP \(bu 2
+List replies to a Ticket:
+.RE
+.PP
+\fB\fClinode\-cli tickets replies {{ticket_id}}\fR
+.RS
+.IP \(bu 2
+Reply to a specific Ticket:
+.RE
+.PP
+\fB\fClinode\-cli tickets reply {{ticket_id}} \-\-description "{{The content of your reply}}"\fR

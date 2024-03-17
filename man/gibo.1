@@ -1,0 +1,36 @@
+.TH gibo
+.PP
+.RS
+Fetch gitignore boilerplates.
+More information: \[la]https://github.com/simonwhitaker/gibo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available boilerplates:
+.RE
+.PP
+\fB\fCgibo list\fR
+.RS
+.IP \(bu 2
+Write a boilerplate to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgibo dump {{boilerplate}}\fR
+.RS
+.IP \(bu 2
+Write a boilerplate to .gitignore:
+.RE
+.PP
+\fB\fCgibo dump {{boilerplate}} >>{{.gitignore}}\fR
+.RS
+.IP \(bu 2
+Search for boilerplates containing a given string:
+.RE
+.PP
+\fB\fCgibo search {{string}}\fR
+.RS
+.IP \(bu 2
+Update available local boilerplates:
+.RE
+.PP
+\fB\fCgibo update\fR

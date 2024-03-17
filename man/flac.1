@@ -1,0 +1,30 @@
+.TH flac
+.PP
+.RS
+Encodes, decodes and tests FLAC files.
+More information: \[la]https://xiph.org/flac\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encode a WAV file to FLAC (this will create a FLAC file in the same location as the WAV file):
+.RE
+.PP
+\fB\fCflac {{path/to/file.wav}}\fR
+.RS
+.IP \(bu 2
+Encode a WAV file to FLAC, specifying the output file:
+.RE
+.PP
+\fB\fCflac \-o {{path/to/output.flac}} {{path/to/file.wav}}\fR
+.RS
+.IP \(bu 2
+Decode a FLAC file to WAV, specifying the output file:
+.RE
+.PP
+\fB\fCflac \-d \-o {{path/to/output.wav}} {{path/to/file.flac}}\fR
+.RS
+.IP \(bu 2
+Test a FLAC file for the correct encoding:
+.RE
+.PP
+\fB\fCflac \-t {{path/to/file.flac}}\fR

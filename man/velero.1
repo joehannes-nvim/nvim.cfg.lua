@@ -1,0 +1,36 @@
+.TH velero
+.PP
+.RS
+Backup and migrate Kubernetes applications and their persistent volumes.
+More information: \[la]https://github.com/heptio/velero\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a backup containing all resources:
+.RE
+.PP
+\fB\fCvelero backup create {{backup_name}}\fR
+.RS
+.IP \(bu 2
+List all backups:
+.RE
+.PP
+\fB\fCvelero backup get\fR
+.RS
+.IP \(bu 2
+Delete a backup:
+.RE
+.PP
+\fB\fCvelero backup delete {{backup_name}}\fR
+.RS
+.IP \(bu 2
+Create a weekly backup, each living for 90 days (2160 hours):
+.RE
+.PP
+\fB\fCvelero schedule create {{schedule_name}} \-\-schedules="{{@every 7d}}" \-\-ttl {{2160h0m0s}}\fR
+.RS
+.IP \(bu 2
+Create a restore from the latest successful backup triggered by specific schedule:
+.RE
+.PP
+\fB\fCvelero restore create \-\-from\-schedule {{schedule_name}}\fR

@@ -1,0 +1,48 @@
+.TH phploc
+.PP
+.RS
+A tool for quickly measuring the size and analyzing the structure of a PHP project.
+More information: \[la]https://github.com/sebastianbergmann/phploc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze a directory and print the result:
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Include only specific files from a comma\-separated list (globs are allowed):
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-names {{files}}\fR
+.RS
+.IP \(bu 2
+Exclude specific files from a comma\-separated list (globs are allowed):
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-names\-exclude {{files}}\fR
+.RS
+.IP \(bu 2
+Exclude a specific directory from analysis:
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-exclude {{path/to/exclude_directory}}\fR
+.RS
+.IP \(bu 2
+Log the results to a specific CSV file:
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-log\-csv {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Log the results to a specific XML file:
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-log\-xml {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Count PHPUnit test case classes and test methods:
+.RE
+.PP
+\fB\fCphploc {{path/to/directory}} \-\-count\-tests\fR

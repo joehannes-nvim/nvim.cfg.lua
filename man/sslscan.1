@@ -1,0 +1,24 @@
+.TH sslscan
+.PP
+.RS
+Check SSL/TLS protocols and ciphers supported by a server.
+More information: \[la]https://github.com/rbsec/sslscan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test a server on port 443:
+.RE
+.PP
+\fB\fCsslscan {{example.com}}\fR
+.RS
+.IP \(bu 2
+Test a specified port:
+.RE
+.PP
+\fB\fCsslscan {{example.com}}:{{465}}\fR
+.RS
+.IP \(bu 2
+Show certificate information:
+.RE
+.PP
+\fB\fCtestssl \-\-show\-certificate {{example.com}}\fR

@@ -1,0 +1,42 @@
+.TH cs fetch
+.PP
+.RS
+Fetch fetches the JARs of one or more dependencies.
+More information: \[la]https://get-coursier.io/docs/cli-fetch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fetch a specific version of a jar:
+.RE
+.PP
+\fB\fCcs fetch {{group_id}}:{{artifact_id}}:{{artifact_version}}\fR
+.RS
+.IP \(bu 2
+Fetch a package and evaluate the classpath corresponding to the selected package in an env var:
+.RE
+.PP
+\fB\fCCP="$(cs fetch \-\-classpath org.scalameta::scalafmt\-cli:latest.release)"\fR
+.RS
+.IP \(bu 2
+Fetch a source of a specific jar:
+.RE
+.PP
+\fB\fCcs fetch \-\-sources {{group_id}}:{{artifact_id}}:{{artifact_version}}\fR
+.RS
+.IP \(bu 2
+Fetch the javadoc jars:
+.RE
+.PP
+\fB\fCcs fetch \-\-javadoc {{group_id}}:{{artifact_id}}:{{artifact_version}}\fR
+.RS
+.IP \(bu 2
+Fetch dependency with javadoc jars and source jars:
+.RE
+.PP
+\fB\fCcs fetch \-\-default={{true}} \-\-sources \-\-javadoc {{group_id}}:{{artifact_id}}:{{artifact_version}}\fR
+.RS
+.IP \(bu 2
+Fetch jars coming from dependency files:
+.RE
+.PP
+\fB\fCcs fetch {{\-\-dependency\-file path/to/file1 \-\-dependency\-file path/to/file2 ...}}\fR

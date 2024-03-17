@@ -1,0 +1,44 @@
+.TH tmsu
+.PP
+.RS
+Simple command\-line tool for tagging files.
+More information: \[la]https://tmsu.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Tag a specific file with multiple tags:
+.RE
+.PP
+\fB\fCtmsu tag {{path/to/file.mp3}} {{music}} {{big\-jazz}} {{mp3}}\fR
+.RS
+.IP \(bu 2
+Tag multiple files:
+.RE
+.PP
+\fB\fCtmsu tag \-\-tags "{{music mp3}}" {{*.mp3}}\fR
+.RS
+.IP \(bu 2
+List tags of specified 
+.BR file (s):
+.RE
+.PP
+\fB\fCtmsu tags {{*.mp3}}\fR
+.RS
+.IP \(bu 2
+List files with specified 
+.BR tag (s):
+.RE
+.PP
+\fB\fCtmsu files {{big\-jazz}} {{music}}\fR
+.RS
+.IP \(bu 2
+List files with tags matching boolean expression:
+.RE
+.PP
+\fB\fCtmsu files "{{(year >= 1990 and year <= 2000)}} and {{grunge}}"\fR
+.RS
+.IP \(bu 2
+Mount tmsu virtual filesystem to an existing directory:
+.RE
+.PP
+\fB\fCtmsu mount {{path/to/directory}}\fR

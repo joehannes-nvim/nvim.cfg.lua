@@ -1,0 +1,30 @@
+.TH pdfjoin
+.PP
+.RS
+PDF merging utility based on pdfjam.
+More information: \[la]https://github.com/rrthomas/pdfjam-extras\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Merge two PDFs into one with the default suffix "joined":
+.RE
+.PP
+\fB\fCpdfjoin {{path/to/file1.pdf}} {{path/to/file2.pdf}}\fR
+.RS
+.IP \(bu 2
+Merge the first page of each given file together:
+.RE
+.PP
+\fB\fCpdfjoin {{path/to/file1.pdf path/to/file2.pdf ...}} {{1}} \-\-outfile {{output_file}}\fR
+.RS
+.IP \(bu 2
+Save pages 3 to 5 followed by page 1 to a new PDF with custom suffix:
+.RE
+.PP
+\fB\fCpdfjoin {{path/to/file.pdf}} {{3\-5,1}} \-\-suffix {{rearranged}}\fR
+.RS
+.IP \(bu 2
+Merge page subranges from two PDFs:
+.RE
+.PP
+\fB\fCpdfjoin {/path/to/file1.pdf}} {{2\-}} {{file2}} {{last\-3}} \-\-outfile {{output_file}}\fR

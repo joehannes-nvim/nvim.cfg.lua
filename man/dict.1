@@ -1,0 +1,36 @@
+.TH dict
+.PP
+.RS
+Command line dictionary using the DICT protocol.
+More information: \[la]https://github.com/cheusov/dictd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available databases:
+.RE
+.PP
+\fB\fCdict \-D\fR
+.RS
+.IP \(bu 2
+Get information about a database:
+.RE
+.PP
+\fB\fCdict \-i {{database_name}}\fR
+.RS
+.IP \(bu 2
+Look up a word in a specific database:
+.RE
+.PP
+\fB\fCdict \-d {{database_name}} {{word}}\fR
+.RS
+.IP \(bu 2
+Look up a word in all available databases:
+.RE
+.PP
+\fB\fCdict {{word}}\fR
+.RS
+.IP \(bu 2
+Show information about the DICT server:
+.RE
+.PP
+\fB\fCdict \-I\fR

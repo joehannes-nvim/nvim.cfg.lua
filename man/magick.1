@@ -1,0 +1,37 @@
+.TH magick
+.PP
+.RS
+Create, edit, compose, or convert between image formats.
+ImageMagick version 7+. See \fB\fCconvert\fR for versions 6 and below.
+More information: \[la]https://imagemagick.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert between image formats:
+.RE
+.PP
+\fB\fCmagick {{path/to/input_image.png}} {{path/to/output_image.jpg}}\fR
+.RS
+.IP \(bu 2
+Resize an image, making a new copy:
+.RE
+.PP
+\fB\fCmagick {{path/to/input_image.jpg}} \-resize {{100x100}} {{path/to/output_image.jpg}}\fR
+.RS
+.IP \(bu 2
+Create a GIF out of all JPG images in the current directory:
+.RE
+.PP
+\fB\fCmagick {{*.jpg}} {{path/to/images.gif}}\fR
+.RS
+.IP \(bu 2
+Create a checkerboard pattern:
+.RE
+.PP
+\fB\fCmagick \-size {{640x480}} pattern:checkerboard {{path/to/checkerboard.png}}\fR
+.RS
+.IP \(bu 2
+Create a PDF file out of all JPG images in the current directory:
+.RE
+.PP
+\fB\fCmagick {{*.jpg}} \-adjoin {{path/to/file.pdf}}\fR

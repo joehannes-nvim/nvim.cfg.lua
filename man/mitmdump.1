@@ -1,0 +1,25 @@
+.TH mitmdump
+.PP
+.RS
+View, record, and programmatically transform HTTP traffic.
+The command\-line counterpart to mitmproxy.
+More information: \[la]https://docs.mitmproxy.org/stable/overview-tools/#mitmdump\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a proxy and save all output to a file:
+.RE
+.PP
+\fB\fCmitmdump \-w {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Filter a saved traffic file to just POST requests:
+.RE
+.PP
+\fB\fCmitmdump \-nr {{input_filename}} \-w {{output_filename}} "{{~m post}}"\fR
+.RS
+.IP \(bu 2
+Replay a saved traffic file:
+.RE
+.PP
+\fB\fCmitmdump \-nc {{path/to/file}}\fR

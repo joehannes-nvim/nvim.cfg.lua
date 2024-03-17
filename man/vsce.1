@@ -1,0 +1,36 @@
+.TH vsce
+.PP
+.RS
+Extension manager for Visual Studio Code.
+More information: \[la]https://github.com/microsoft/vscode-vsce\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all the extensions created by a publisher:
+.RE
+.PP
+\fB\fCvsce list {{publisher}}\fR
+.RS
+.IP \(bu 2
+Publish an extension as major, minor or patch version:
+.RE
+.PP
+\fB\fCvsce publish {{major|minor|patch}}\fR
+.RS
+.IP \(bu 2
+Unpublish an extension:
+.RE
+.PP
+\fB\fCvsce unpublish {{extension_id}}\fR
+.RS
+.IP \(bu 2
+Package the current working directory as a \fB\fC\&.vsix\fR file:
+.RE
+.PP
+\fB\fCvsce package\fR
+.RS
+.IP \(bu 2
+Show the metadata associated with an extension:
+.RE
+.PP
+\fB\fCvsce show {{extension_id}}\fR

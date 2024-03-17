@@ -1,0 +1,48 @@
+.TH git remote
+.PP
+.RS
+Manage set of tracked repositories ("remotes").
+More information: \[la]https://git-scm.com/docs/git-remote\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show a list of existing remotes, their names and URL:
+.RE
+.PP
+\fB\fCgit remote \-v\fR
+.RS
+.IP \(bu 2
+Show information about a remote:
+.RE
+.PP
+\fB\fCgit remote show {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Add a remote:
+.RE
+.PP
+\fB\fCgit remote add {{remote_name}} {{remote_url}}\fR
+.RS
+.IP \(bu 2
+Change the URL of a remote (use \fB\fC\-\-add\fR to keep the existing URL):
+.RE
+.PP
+\fB\fCgit remote set\-url {{remote_name}} {{new_url}}\fR
+.RS
+.IP \(bu 2
+Show the URL of a remote:
+.RE
+.PP
+\fB\fCgit remote get\-url {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Remove a remote:
+.RE
+.PP
+\fB\fCgit remote remove {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Rename a remote:
+.RE
+.PP
+\fB\fCgit remote rename {{old_name}} {{new_name}}\fR

@@ -1,0 +1,55 @@
+.TH aws
+.PP
+.RS
+The official CLI tool for Amazon Web Services.
+Some subcommands such as \fB\fCaws s3\fR have their own usage documentation.
+More information: \[la]https://aws.amazon.com/cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Configure the AWS Command\-line:
+.RE
+.PP
+\fB\fCaws configure wizard\fR
+.RS
+.IP \(bu 2
+Configure the AWS Command\-line using SSO:
+.RE
+.PP
+\fB\fCaws configure sso\fR
+.RS
+.IP \(bu 2
+See help text for the AWS command:
+.RE
+.PP
+\fB\fCaws {{command}} help\fR
+.RS
+.IP \(bu 2
+Get the caller identity (used to troubleshoot permissions):
+.RE
+.PP
+\fB\fCaws sts get\-caller\-identity\fR
+.RS
+.IP \(bu 2
+List AWS resources in a region and output in YAML:
+.RE
+.PP
+\fB\fCaws dynamodb list\-tables \-\-region {{us\-east\-1}} \-\-output yaml\fR
+.RS
+.IP \(bu 2
+Use auto prompt to help with a command:
+.RE
+.PP
+\fB\fCaws iam create\-user \-\-cli\-auto\-prompt\fR
+.RS
+.IP \(bu 2
+Get an interactive wizard for an AWS resource:
+.RE
+.PP
+\fB\fCaws dynamodb wizard {{new_table}}\fR
+.RS
+.IP \(bu 2
+Generate a JSON CLI Skeleton (useful for infrastructure as code):
+.RE
+.PP
+\fB\fCaws dynamodb update\-table \-\-generate\-cli\-skeleton\fR

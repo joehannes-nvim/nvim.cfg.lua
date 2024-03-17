@@ -1,0 +1,25 @@
+.TH nop
+.PP
+.RS
+Check validity and pretty\-print graphs in canonical format.
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://www.graphviz.org/pdf/nop.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pretty\-print one or more graphs in canonical format:
+.RE
+.PP
+\fB\fCnop {{path/to/input1.gv}} {{path/to/input2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Check one or more graphs for validity, producing no output graph:
+.RE
+.PP
+\fB\fCnop \-p {{path/to/input1.gv}} {{path/to/input2.gv ...}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCnop\fR:
+.RE
+.PP
+\fB\fCnop \-?\fR

@@ -1,0 +1,30 @@
+.TH autopep8
+.PP
+.RS
+Format Python code according to the PEP 8 style guide.
+More information: \[la]https://github.com/hhatto/autopep8\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a file to \fB\fCstdout\fR, with a custom maximum line length:
+.RE
+.PP
+\fB\fCautopep8 {{path/to/file.py}} \-\-max\-line\-length {{length}}\fR
+.RS
+.IP \(bu 2
+Format a file, displaying a diff of the changes:
+.RE
+.PP
+\fB\fCautopep8 \-\-diff {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Format a file in\-place and save the changes:
+.RE
+.PP
+\fB\fCautopep8 \-\-in\-place {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Recursively format all files in a directory in\-place and save changes:
+.RE
+.PP
+\fB\fCautopep8 \-\-in\-place \-\-recursive {{path/to/directory}}\fR

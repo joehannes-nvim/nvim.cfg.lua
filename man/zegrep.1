@@ -1,0 +1,42 @@
+.TH zegrep
+.PP
+.RS
+Find extended regular expression patterns in compressed files using \fB\fCegrep\fR\&.
+More information: \[la]https://www.unix.com/man-page/freebsd/1/zegrep/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for extended regular expressions (supporting \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR) in a compressed file (case\-sensitive):
+.RE
+.PP
+\fB\fCzegrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for extended regular expressions (supporting \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR) in a compressed file (case\-insensitive):
+.RE
+.PP
+\fB\fCzegrep \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCzegrep \-\-invert\-match "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCzegrep \-\-with\-filename \-\-line\-number "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCzegrep \-\-only\-matching "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively search files in a compressed file for a pattern:
+.RE
+.PP
+\fB\fCzegrep \-\-recursive "{{search_pattern}}" {{path/to/file}}\fR

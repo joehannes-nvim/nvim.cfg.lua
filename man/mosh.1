@@ -1,0 +1,43 @@
+.TH mosh
+.PP
+.RS
+Mobile Shell (\fB\fCmosh\fR) is a robust and responsive replacement for SSH.
+\fB\fCmosh\fR persists connections to remote servers while roaming between networks.
+More information: \[la]https://mosh.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a remote server:
+.RE
+.PP
+\fB\fCmosh {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server with a specific identity (private key):
+.RE
+.PP
+\fB\fCmosh \-\-ssh="ssh \-i {{path/to/key_file}}" {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server using a specific port:
+.RE
+.PP
+\fB\fCmosh \-\-ssh="ssh \-p {{2222}}" {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Run a command on a remote server:
+.RE
+.PP
+\fB\fCmosh {{remote_host}} \-\- {{command \-with \-flags}}\fR
+.RS
+.IP \(bu 2
+Select Mosh UDP port (useful when \fB\fC{{remote_host}}\fR is behind a NAT):
+.RE
+.PP
+\fB\fCmosh \-p {{124}} {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Usage when \fB\fCmosh\-server\fR binary is outside standard path:
+.RE
+.PP
+\fB\fCmosh \-\-server={{path/to/bin/}}mosh\-server {{remote_host}}\fR

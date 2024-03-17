@@ -1,0 +1,48 @@
+.TH hg pull
+.PP
+.RS
+Pull changes from a specified repository to the local repository.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#pull\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pull from the "default" source path:
+.RE
+.PP
+\fB\fChg pull\fR
+.RS
+.IP \(bu 2
+Pull from a specified source repository:
+.RE
+.PP
+\fB\fChg pull {{path/to/source_repository}}\fR
+.RS
+.IP \(bu 2
+Update the local repository to the head of the remote:
+.RE
+.PP
+\fB\fChg pull \-\-update\fR
+.RS
+.IP \(bu 2
+Pull changes even when the remote repository is unrelated:
+.RE
+.PP
+\fB\fChg pull \-\-force\fR
+.RS
+.IP \(bu 2
+Specify a specific revision changeset to pull up to:
+.RE
+.PP
+\fB\fChg pull \-\-rev {{revision}}\fR
+.RS
+.IP \(bu 2
+Specify a specific branch to pull:
+.RE
+.PP
+\fB\fChg pull \-\-branch {{branch}}\fR
+.RS
+.IP \(bu 2
+Specify a specific bookmark to pull:
+.RE
+.PP
+\fB\fChg pull \-\-bookmark {{bookmark}}\fR

@@ -1,0 +1,30 @@
+.TH cryfs
+.PP
+.RS
+A cryptographic filesystem for the cloud.
+More information: \[la]https://www.cryfs.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Mount an encrypted filesystem. The initialization wizard will be started on the first execution:
+.RE
+.PP
+\fB\fCcryfs {{path/to/cipher_dir}} {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Unmount an encrypted filesystem:
+.RE
+.PP
+\fB\fCcryfs\-unmount {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Automatically unmount after ten minutes of inactivity:
+.RE
+.PP
+\fB\fCcryfs \-\-unmount\-idle {{10}} {{path/to/cipher_dir}} {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Show a list of supported ciphers:
+.RE
+.PP
+\fB\fCcryfs \-\-show\-ciphers\fR

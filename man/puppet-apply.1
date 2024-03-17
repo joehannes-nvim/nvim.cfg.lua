@@ -1,0 +1,24 @@
+.TH puppet apply
+.PP
+.RS
+Apply Puppet manifests locally.
+More information: \[la]https://puppet.com/docs/puppet/7/man/apply.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply a manifest:
+.RE
+.PP
+\fB\fCpuppet apply {{path/to/manifest}}\fR
+.RS
+.IP \(bu 2
+Execute puppet code:
+.RE
+.PP
+\fB\fCpuppet apply \-\-execute {{code}}\fR
+.RS
+.IP \(bu 2
+Use a specific module and hiera config file:
+.RE
+.PP
+\fB\fCpuppet apply \-\-modulepath {{path/to/directory}} \-\-hiera_config {{path/to/file}} {{path/to/manifest}}\fR

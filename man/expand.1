@@ -1,0 +1,36 @@
+.TH expand
+.PP
+.RS
+Convert tabs to spaces.
+More information: \[la]https://www.gnu.org/software/coreutils/expand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert tabs in each file to spaces, writing to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCexpand {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Convert tabs to spaces, reading from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCexpand\fR
+.RS
+.IP \(bu 2
+Do not convert tabs after non blanks:
+.RE
+.PP
+\fB\fCexpand \-i {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Have tabs a certain number of characters apart, not 8:
+.RE
+.PP
+\fB\fCexpand \-t={{number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use a comma separated list of explicit tab positions:
+.RE
+.PP
+\fB\fCexpand \-t={{1,4,6}}\fR

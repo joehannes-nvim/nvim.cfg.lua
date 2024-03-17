@@ -1,0 +1,48 @@
+.TH notmuch
+.PP
+.RS
+Command\-line based program for indexing, searching, reading, and tagging large collections of email messages.
+More information: \[la]https://notmuchmail.org/manpages/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Configure for first use:
+.RE
+.PP
+\fB\fCnotmuch setup\fR
+.RS
+.IP \(bu 2
+Add a tag for all messages matching a search term:
+.RE
+.PP
+\fB\fCnotmuch tag +{{custom_tag}} "{{search_term}}"\fR
+.RS
+.IP \(bu 2
+Remove a tag for all messages matching a search term:
+.RE
+.PP
+\fB\fCnotmuch tag \-{{custom_tag}} "{{search_term}}"\fR
+.RS
+.IP \(bu 2
+Count messages matching the given search term:
+.RE
+.PP
+\fB\fCnotmuch count \-\-output={{messages|threads}} "{{search_term}}"\fR
+.RS
+.IP \(bu 2
+Search for messages matching the given search term:
+.RE
+.PP
+\fB\fCnotmuch search \-\-format={{json|text}} \-\-output={{summary|threads|messages|files|tags}} "{{search_term}}"\fR
+.RS
+.IP \(bu 2
+Limit the number of search results to X:
+.RE
+.PP
+\fB\fCnotmuch search \-\-format={{json|text}} \-\-output={{summary|threads|messages|files|tags}} \-\-limit={{X}} "{{search_term}}"\fR
+.RS
+.IP \(bu 2
+Create a reply template for a set of messages:
+.RE
+.PP
+\fB\fCnotmuch reply \-\-format={{default|headers\-only}} \-\-reply\-to={{sender|all}} "{{search_term}}"\fR

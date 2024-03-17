@@ -1,0 +1,43 @@
+.TH nim
+.PP
+.RS
+The Nim compiler.
+Processes, compiles and links Nim language source files.
+More information: \[la]https://nim-lang.org/docs/nimc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a source file:
+.RE
+.PP
+\fB\fCnim compile {{path/to/file.nim}}\fR
+.RS
+.IP \(bu 2
+Compile and run a source file:
+.RE
+.PP
+\fB\fCnim compile \-r {{path/to/file.nim}}\fR
+.RS
+.IP \(bu 2
+Compile a source file with release optimizations enabled:
+.RE
+.PP
+\fB\fCnim compile \-d:release {{path/to/file.nim}}\fR
+.RS
+.IP \(bu 2
+Build a release binary optimized for low file size:
+.RE
+.PP
+\fB\fCnim compile \-d:release \-\-opt:size {{path/to/file.nim}}\fR
+.RS
+.IP \(bu 2
+Generate HTML documentation for a module (output will be placed in the current directory):
+.RE
+.PP
+\fB\fCnim doc {{path/to/file.nim}}\fR
+.RS
+.IP \(bu 2
+Check a file for syntax and semantics:
+.RE
+.PP
+\fB\fCnim check {{path/to/file.nim}}\fR

@@ -1,0 +1,18 @@
+.TH while
+.PP
+.RS
+Simple shell loop.
+More information: \[la]https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_04_09\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read \fB\fCstdin\fR and perform an action on every line:
+.RE
+.PP
+\fB\fCwhile read line; do echo "$line"; done\fR
+.RS
+.IP \(bu 2
+Execute a command forever once every second:
+.RE
+.PP
+\fB\fCwhile :; do {{command}}; sleep 1; done\fR

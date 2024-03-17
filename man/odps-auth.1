@@ -1,0 +1,49 @@
+.TH odps auth
+.PP
+.RS
+User authorities in ODPS (Open Data Processing Service).
+See also \fB\fCodps\fR\&.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a user to the current project:
+.RE
+.PP
+\fB\fCadd user {{username}};\fR
+.RS
+.IP \(bu 2
+Grant a set of authorities to a user:
+.RE
+.PP
+\fB\fCgrant {{action_list}} on {{object_type}} {{object_name}} to user {{username}};\fR
+.RS
+.IP \(bu 2
+Show authorities of a user:
+.RE
+.PP
+\fB\fCshow grants for {{username}};\fR
+.RS
+.IP \(bu 2
+Create a user role:
+.RE
+.PP
+\fB\fCcreate role {{role_name}};\fR
+.RS
+.IP \(bu 2
+Grant a set of authorities to a role:
+.RE
+.PP
+\fB\fCgrant {{action_list}} on {{object_type}} {{object_name}} to role {{role_name}};\fR
+.RS
+.IP \(bu 2
+Describe authorities of a role:
+.RE
+.PP
+\fB\fCdesc role {{role_name}};\fR
+.RS
+.IP \(bu 2
+Grant a role to a user:
+.RE
+.PP
+\fB\fCgrant {{role_name}} to {{username}};\fR

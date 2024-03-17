@@ -1,0 +1,54 @@
+.TH nextflow
+.PP
+.RS
+Tool for running computational pipelines. Mostly used for bioinformatics workflows.
+More information: \[la]https://www.nextflow.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a pipeline, use cached results from previous runs:
+.RE
+.PP
+\fB\fCnextflow run {{main.nf}} \-resume\fR
+.RS
+.IP \(bu 2
+Run a specific release of a remote workflow from GitHub:
+.RE
+.PP
+\fB\fCnextflow run {{user/repo}} \-revision {{release_tag}}\fR
+.RS
+.IP \(bu 2
+Run with a given work directory for intermediate files, save execution report:
+.RE
+.PP
+\fB\fCnextflow run {{workflow}} \-work\-dir {{path/to/directory}} \-with\-report {{report.html}}\fR
+.RS
+.IP \(bu 2
+Show details of previous runs in current directory:
+.RE
+.PP
+\fB\fCnextflow log\fR
+.RS
+.IP \(bu 2
+Remove cache and intermediate files for a specific run:
+.RE
+.PP
+\fB\fCnextflow clean \-force {{run_name}}\fR
+.RS
+.IP \(bu 2
+List all downloaded projects:
+.RE
+.PP
+\fB\fCnextflow list\fR
+.RS
+.IP \(bu 2
+Pull the latest version of a remote workflow from Bitbucket:
+.RE
+.PP
+\fB\fCnextflow pull {{user/repo}} \-hub bitbucket\fR
+.RS
+.IP \(bu 2
+Update Nextflow:
+.RE
+.PP
+\fB\fCnextflow self\-update\fR

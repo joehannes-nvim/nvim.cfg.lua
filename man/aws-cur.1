@@ -1,0 +1,24 @@
+.TH aws cur
+.PP
+.RS
+Create, query, and delete AWS usage report definitions.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cur/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an AWS cost and usage report definition from a JSON file:
+.RE
+.PP
+\fB\fCaws cur put\-report\-definition \-\-report\-definition file://{{path/to/report_definition.json}}\fR
+.RS
+.IP \(bu 2
+List usage report definitions defined for the logged in account:
+.RE
+.PP
+\fB\fCaws cur describe\-report\-definitions\fR
+.RS
+.IP \(bu 2
+Delete a usage report definition:
+.RE
+.PP
+\fB\fCaws cur \-\-region {{aws_region}} delete\-report\-definition \-\-report\-name {{report}}\fR

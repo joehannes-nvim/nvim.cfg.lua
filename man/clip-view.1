@@ -1,0 +1,49 @@
+.TH clip\-view
+.PP
+.RS
+Command Line Interface Pages render.
+Render for a TlDr\-like project with much a more extensive syntax and several render modes.
+More information: \[la]https://github.com/command-line-interface-pages/v2-tooling/tree/main/clip-view\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render specific local pages:
+.RE
+.PP
+\fB\fCclip\-view {{path/to/page1.clip path/to/page2.clip ...}}\fR
+.RS
+.IP \(bu 2
+Render specific remote pages:
+.RE
+.PP
+\fB\fCclip\-view {{page_name1 page_name2 ...}}\fR
+.RS
+.IP \(bu 2
+Render pages by a specific render:
+.RE
+.PP
+\fB\fCclip\-view \-\-render {{tldr|tldr\-colorful|docopt|docopt\-colorful}} {{page_name1 page_name2 ...}}\fR
+.RS
+.IP \(bu 2
+Render pages with a specific color theme:
+.RE
+.PP
+\fB\fCclip\-view \-\-theme {{path/to/local_theme.yaml|remote_theme_name}} {{page_name1 page_name2 ...}}\fR
+.RS
+.IP \(bu 2
+Clear a page or theme cache:
+.RE
+.PP
+\fB\fCclip\-view \-\-clear\-{{page|theme}}\-cache\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCclip\-view \-\-help\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCclip\-view \-\-version\fR

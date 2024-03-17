@@ -1,0 +1,31 @@
+.TH mysqldump
+.PP
+.RS
+Backups MySQL databases.
+See also \fB\fCmysql\fR for restoring databases.
+More information: \[la]https://dev.mysql.com/doc/refman/en/mysqldump.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a backup (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysqldump \-\-user {{user}} \-\-password {{database_name}} \-\-result\-file={{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Backup a specific table redirecting the output to a file (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysqldump \-\-user {{user}} \-\-password {{database_name}} {{table_name}} > {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Backup all databases redirecting the output to a file (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysqldump \-\-user {{user}} \-\-password \-\-all\-databases > {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Backup all databases from a remote host, redirecting the output to a file (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysqldump \-\-host={{ip_or_hostname}} \-\-user {{user}} \-\-password \-\-all\-databases > {{path/to/file.sql}}\fR

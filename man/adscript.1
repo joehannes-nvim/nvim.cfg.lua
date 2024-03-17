@@ -1,0 +1,30 @@
+.TH adscript
+.PP
+.RS
+Compiler for Adscript files.
+More information: \[la]https://github.com/Amplus2/Adscript\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a file to an object file:
+.RE
+.PP
+\fB\fCadscript \-\-output {{path/to/file.o}} {{path/to/input_file.adscript}}\fR
+.RS
+.IP \(bu 2
+Compile and link a file to a standalone executable:
+.RE
+.PP
+\fB\fCadscript \-\-executable \-\-output {{path/to/file}} {{path/to/input_file.adscript}}\fR
+.RS
+.IP \(bu 2
+Compile a file to LLVM IR instead of native machine code:
+.RE
+.PP
+\fB\fCadscript \-\-llvm\-ir \-\-output {{path/to/file.ll}} {{path/to/input_file.adscript}}\fR
+.RS
+.IP \(bu 2
+Cross\-compile a file to an object file for a foreign CPU architecture or operating system:
+.RE
+.PP
+\fB\fCadscript \-\-target\-triple {{i386\-linux\-elf}} \-\-output {{path/to/file.o}} {{path/to/input_file.adscript}}\fR

@@ -1,0 +1,54 @@
+.TH pio team
+.PP
+.RS
+Manage PlatformIO teams.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/team/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new team with the specified description:
+.RE
+.PP
+\fB\fCpio team create \-\-description {{description}} {{organization_name}}:{{team_name}}\fR
+.RS
+.IP \(bu 2
+Delete a team:
+.RE
+.PP
+\fB\fCpio team destroy {{organization_name}}:{{team_name}}\fR
+.RS
+.IP \(bu 2
+Add a new user to a team:
+.RE
+.PP
+\fB\fCpio team add {{organization_name}}:{{team_name}} {{username}}\fR
+.RS
+.IP \(bu 2
+Remove a user from a team:
+.RE
+.PP
+\fB\fCpio team remove {{organization_name}}:{{team_name}} {{username}}\fR
+.RS
+.IP \(bu 2
+List all teams that the user is part of and their members:
+.RE
+.PP
+\fB\fCpio team list\fR
+.RS
+.IP \(bu 2
+List all teams in an organization:
+.RE
+.PP
+\fB\fCpio team list {{organization_name}}\fR
+.RS
+.IP \(bu 2
+Rename a team:
+.RE
+.PP
+\fB\fCpio team update \-\-name {{new_team_name}} {{organization_name}}:{{team_name}}\fR
+.RS
+.IP \(bu 2
+Change the description of a team:
+.RE
+.PP
+\fB\fCpio team update \-\-description {{new_description}} {{organization_name}}:{{team_name}}\fR

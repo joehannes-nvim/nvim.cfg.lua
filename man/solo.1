@@ -1,0 +1,36 @@
+.TH solo
+.PP
+.RS
+Interact with Solo hardware security keys.
+More information: \[la]https://github.com/solokeys/solo-python\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List connected Solos:
+.RE
+.PP
+\fB\fCsolo ls\fR
+.RS
+.IP \(bu 2
+Update the currently connected Solo's firmware to the latest version:
+.RE
+.PP
+\fB\fCsolo key update\fR
+.RS
+.IP \(bu 2
+Blink the LED of a specific Solo:
+.RE
+.PP
+\fB\fCsolo key wink \-\-serial {{serial_number}}\fR
+.RS
+.IP \(bu 2
+Generate random bytes using the currently connected Solo's secure random number generator:
+.RE
+.PP
+\fB\fCsolo key rng raw\fR
+.RS
+.IP \(bu 2
+Monitor the serial output of a Solo:
+.RE
+.PP
+\fB\fCsolo monitor {{path/to/serial_port}}\fR

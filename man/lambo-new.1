@@ -1,0 +1,54 @@
+.TH lambo new
+.PP
+.RS
+A super\-powered \fB\fClaravel new\fR for Laravel and Valet.
+More information: \[la]https://github.com/tighten/lambo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Laravel application:
+.RE
+.PP
+\fB\fClambo new {{app_name}}\fR
+.RS
+.IP \(bu 2
+Install the application in a specific path:
+.RE
+.PP
+\fB\fClambo new \-\-path={{path/to/directory}} {{app_name}}\fR
+.RS
+.IP \(bu 2
+Include authentication scaffolding:
+.RE
+.PP
+\fB\fClambo new \-\-auth {{app_name}}\fR
+.RS
+.IP \(bu 2
+Include a specific frontend:
+.RE
+.PP
+\fB\fClambo new \-\-{{vue|bootstrap|react}} {{app_name}}\fR
+.RS
+.IP \(bu 2
+Install npm dependencies after the project has been created:
+.RE
+.PP
+\fB\fClambo new \-\-node {{app_name}}\fR
+.RS
+.IP \(bu 2
+Create a Valet site after the project has been created:
+.RE
+.PP
+\fB\fClambo new \-\-link {{app_name}}\fR
+.RS
+.IP \(bu 2
+Create a new MySQL database with the same name as the project:
+.RE
+.PP
+\fB\fClambo new \-\-create\-db \-\-dbuser={{user}} \-\-dbpassword={{password}} {{app_name}}\fR
+.RS
+.IP \(bu 2
+Open a specific editor after the project has been created:
+.RE
+.PP
+\fB\fClambo new \-\-editor="{{editor}}" {{app_name}}\fR

@@ -1,0 +1,43 @@
+.TH git effort
+.PP
+.RS
+Display how much activity a file has had, showing commits per file and "active days" i.e. total number of days that contributed to the file.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-effort\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display each file in the repository, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort\fR
+.RS
+.IP \(bu 2
+Display files modified by a specific number of commits or more, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort \-\-above {{5}}\fR
+.RS
+.IP \(bu 2
+Display files modified by a specific author, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort \-\- \-\-author="{{username}}"\fR
+.RS
+.IP \(bu 2
+Display files modified since a specific time/date, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort \-\- \-\-since="{{last month}}"\fR
+.RS
+.IP \(bu 2
+Display only the specified files or directories, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Display all files in a specific directory, showing commits and active days:
+.RE
+.PP
+\fB\fCgit effort {{path/to/directory/*}}\fR

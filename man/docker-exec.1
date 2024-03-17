@@ -1,0 +1,42 @@
+.TH docker exec
+.PP
+.RS
+Execute a command on an already running Docker container.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/exec/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enter an interactive shell session on an already\-running container:
+.RE
+.PP
+\fB\fCdocker exec \-\-interactive \-\-tty {{container_name}} {{/bin/bash}}\fR
+.RS
+.IP \(bu 2
+Run a command in the background (detached) on a running container:
+.RE
+.PP
+\fB\fCdocker exec \-\-detach {{container_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Select the working directory for a given command to execute into:
+.RE
+.PP
+\fB\fCdocker exec \-\-interactive \-tty \-\-workdir {{path/to/directory}} {{container_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run a command in background on existing container but keep \fB\fCstdin\fR open:
+.RE
+.PP
+\fB\fCdocker exec \-\-interactive \-\-detach {{container_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Set an environment variable in a running Bash session:
+.RE
+.PP
+\fB\fCdocker exec \-\-interactive \-\-tty \-\-env {{variable_name}}={{value}} {{container_name}} {{/bin/bash}}\fR
+.RS
+.IP \(bu 2
+Run a command as a specific user:
+.RE
+.PP
+\fB\fCdocker exec \-\-user {{user}} {{container_name}} {{command}}\fR

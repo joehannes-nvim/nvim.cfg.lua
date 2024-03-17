@@ -1,0 +1,48 @@
+.TH ag
+.PP
+.RS
+The Silver Searcher. Like ack, but aims to be faster.
+More information: \[la]https://github.com/ggreer/the_silver_searcher\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find files containing "foo", and print the line matches in context:
+.RE
+.PP
+\fB\fCag {{foo}}\fR
+.RS
+.IP \(bu 2
+Find files containing "foo" in a specific directory:
+.RE
+.PP
+\fB\fCag {{foo}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Find files containing "foo", but only list the filenames:
+.RE
+.PP
+\fB\fCag \-l {{foo}}\fR
+.RS
+.IP \(bu 2
+Find files containing "FOO" case\-insensitively, and print only the match, rather than the whole line:
+.RE
+.PP
+\fB\fCag \-i \-o {{FOO}}\fR
+.RS
+.IP \(bu 2
+Find "foo" in files with a name matching "bar":
+.RE
+.PP
+\fB\fCag {{foo}} \-G {{bar}}\fR
+.RS
+.IP \(bu 2
+Find files whose contents match a regular expression:
+.RE
+.PP
+\fB\fCag '{{^ba(r|z)$}}'\fR
+.RS
+.IP \(bu 2
+Find files with a name matching "foo":
+.RE
+.PP
+\fB\fCag \-g {{foo}}\fR

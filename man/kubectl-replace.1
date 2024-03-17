@@ -1,0 +1,24 @@
+.TH kubctl replace
+.PP
+.RS
+Replace a resource by file or \fB\fCstdin\fR\&.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#replace\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace the resource using the resource definition file:
+.RE
+.PP
+\fB\fCkubectl replace \-f {{path/to/file.yml}}\fR
+.RS
+.IP \(bu 2
+Replace the resource using the input passed into \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCkubectl replace \-f \-\fR
+.RS
+.IP \(bu 2
+Force replace, delete and then re\-create the resource:
+.RE
+.PP
+\fB\fCkubectl replace \-\-force \-f {{path/to/file.yml}}\fR

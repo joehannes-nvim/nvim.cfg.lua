@@ -1,0 +1,42 @@
+.TH dd
+.PP
+.RS
+Convert and copy a file.
+More information: \[la]https://www.gnu.org/software/coreutils/dd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Make a bootable USB drive from an isohybrid file (such like \fB\fCarchlinux\-xxx.iso\fR):
+.RE
+.PP
+\fB\fCdd if={{path/to/file.iso}} of=/dev/{{usb_drive}}\fR
+.RS
+.IP \(bu 2
+Clone a drive to another drive with 4 MiB block and ignore error:
+.RE
+.PP
+\fB\fCdd if=/dev/{{source_drive}} of=/dev/{{dest_drive}} bs={{4194304}} conv={{noerror}}\fR
+.RS
+.IP \(bu 2
+Generate a file of 100 random bytes by using kernel random driver:
+.RE
+.PP
+\fB\fCdd if=/dev/urandom of={{path/to/random_file}} bs={{100}} count={{1}}\fR
+.RS
+.IP \(bu 2
+Benchmark the write performance of a disk:
+.RE
+.PP
+\fB\fCdd if=/dev/zero of={{path/to/file_1GB}} bs={{1024}} count={{1000000}}\fR
+.RS
+.IP \(bu 2
+Generate a system backup into an IMG file:
+.RE
+.PP
+\fB\fCdd if={{/dev/drive_device}} of={{path/to/file.img}}\fR
+.RS
+.IP \(bu 2
+Restore a drive from an IMG file:
+.RE
+.PP
+\fB\fCdd if={{path/to/file.img}} of={{/dev/drive_device}}\fR

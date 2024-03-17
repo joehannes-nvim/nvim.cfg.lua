@@ -1,0 +1,24 @@
+.TH git pull
+.PP
+.RS
+Fetch branch from a remote repository and merge it to local repository.
+More information: \[la]https://git-scm.com/docs/git-pull\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download changes from default remote repository and merge it:
+.RE
+.PP
+\fB\fCgit pull\fR
+.RS
+.IP \(bu 2
+Download changes from default remote repository and use fast\-forward:
+.RE
+.PP
+\fB\fCgit pull \-\-rebase\fR
+.RS
+.IP \(bu 2
+Download changes from given remote repository and branch, then merge them into HEAD:
+.RE
+.PP
+\fB\fCgit pull {{remote_name}} {{branch}}\fR

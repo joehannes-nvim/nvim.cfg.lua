@@ -1,0 +1,48 @@
+.TH aws cloudformation
+.PP
+.RS
+Model, provision, and manage AWS and third\-party resources by treating infrastructure as code.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloudformation/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a stack from a template file:
+.RE
+.PP
+\fB\fCaws cloudformation create\-stack \-\-stack\-name {{stack\-name}} \-\-region {{region}} \-\-template\-body {{file://path/to/file.yml}} \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+Delete a stack:
+.RE
+.PP
+\fB\fCaws cloudformation delete\-stack \-\-stack\-name {{stack\-name}} \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+List all stacks:
+.RE
+.PP
+\fB\fCaws cloudformation list\-stacks \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+List all running stacks:
+.RE
+.PP
+\fB\fCaws cloudformation list\-stacks \-\-stack\-status\-filter CREATE_COMPLETE \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+Check the status of a stack:
+.RE
+.PP
+\fB\fCaws cloudformation describe\-stacks \-\-stack\-name {{stack\-id}} \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+Initiate drift detection for a stack:
+.RE
+.PP
+\fB\fCaws cloudformation detect\-stack\-drift \-\-stack\-name {{stack\-id}} \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+Check the drift status output of a stack using 'StackDriftDetectionId' from the previous command output:
+.RE
+.PP
+\fB\fCaws cloudformation describe\-stack\-resource\-drifts \-\-stack\-name {{stack\-drift\-detection\-id}} \-\-profile {{profile}}\fR

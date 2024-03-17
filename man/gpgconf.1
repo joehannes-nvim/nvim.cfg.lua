@@ -1,0 +1,36 @@
+.TH gpgconf
+.PP
+.RS
+Modify .gnupg home directories.
+More information: \[la]https://www.gnupg.org/documentation/manuals/gnupg/gpgconf.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all components:
+.RE
+.PP
+\fB\fCgpgconf \-\-list\-components\fR
+.RS
+.IP \(bu 2
+List the directories used by gpgconf:
+.RE
+.PP
+\fB\fCgpgconf \-\-list\-dirs\fR
+.RS
+.IP \(bu 2
+List all options of a component:
+.RE
+.PP
+\fB\fCgpgconf \-\-list\-options {{component}}\fR
+.RS
+.IP \(bu 2
+List programs and test whether they are runnable:
+.RE
+.PP
+\fB\fCgpgconf \-\-check\-programs\fR
+.RS
+.IP \(bu 2
+Reload a component:
+.RE
+.PP
+\fB\fCgpgconf \-\-reload {{component}}\fR

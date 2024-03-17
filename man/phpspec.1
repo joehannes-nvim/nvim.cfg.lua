@@ -1,0 +1,48 @@
+.TH phpspec
+.PP
+.RS
+A Behaviour Driven Development tool for PHP.
+More information: \[la]https://phpspec.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a specification for a class:
+.RE
+.PP
+\fB\fCphpspec describe {{class_name}}\fR
+.RS
+.IP \(bu 2
+Run all specifications in the "spec" directory:
+.RE
+.PP
+\fB\fCphpspec run\fR
+.RS
+.IP \(bu 2
+Run a single specification:
+.RE
+.PP
+\fB\fCphpspec run {{path/to/class_specification_file}}\fR
+.RS
+.IP \(bu 2
+Run specifications using a specific configuration file:
+.RE
+.PP
+\fB\fCphpspec run \-c {{path/to/configuration_file}}\fR
+.RS
+.IP \(bu 2
+Run specifications using a specific bootstrap file:
+.RE
+.PP
+\fB\fCphpspec run \-b {{path/to/bootstrap_file}}\fR
+.RS
+.IP \(bu 2
+Disable code generation prompts:
+.RE
+.PP
+\fB\fCphpspec run \-\-no\-code\-generation\fR
+.RS
+.IP \(bu 2
+Enable fake return values:
+.RE
+.PP
+\fB\fCphpspec run \-\-fake\fR

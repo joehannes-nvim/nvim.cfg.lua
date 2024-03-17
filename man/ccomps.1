@@ -1,0 +1,31 @@
+.TH ccomps
+.PP
+.RS
+Decompose graphs into their connected components.
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://graphviz.org/pdf/ccomps.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Decompose one or more graphs into their connected components:
+.RE
+.PP
+\fB\fCccomps {{path/to/input1.gv}} {{path/to/input2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Print the number of nodes, edges, and connected components in one or more graphs:
+.RE
+.PP
+\fB\fCccomps \-v \-s {{path/to/input1.gv}} {{path/to/input2.gv ...}}\fR
+.RS
+.IP \(bu 2
+Write each connected component to numbered filenames based on \fB\fCoutput.gv\fR:
+.RE
+.PP
+\fB\fCccomps \-x \-o {{path/to/output.gv}} {{path/to/input1.gv}} {{path/to/input2.gv ...}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCccomps\fR:
+.RE
+.PP
+\fB\fCccomps \-?\fR

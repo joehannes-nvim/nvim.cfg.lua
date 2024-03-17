@@ -1,0 +1,36 @@
+.TH cloc
+.PP
+.RS
+Count, and compute differences of, lines of source code and comments.
+More information: \[la]https://github.com/AlDanial/cloc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Count all the lines of code in a directory:
+.RE
+.PP
+\fB\fCcloc {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Count all the lines of code in a directory, displaying a progress bar during the counting process:
+.RE
+.PP
+\fB\fCcloc \-\-progress=1 {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Compare 2 directory structures and count the differences between them:
+.RE
+.PP
+\fB\fCcloc \-\-diff {{path/to/directory/one}} {{path/to/directory/two}}\fR
+.RS
+.IP \(bu 2
+Ignore files that are ignored by VCS, such as files specified in \fB\fC\&.gitignore\fR:
+.RE
+.PP
+\fB\fCcloc \-\-vcs git {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Count all the lines of code in a directory, displaying the results for each file instead of each language:
+.RE
+.PP
+\fB\fCcloc \-\-by\-file {{path/to/directory}}\fR

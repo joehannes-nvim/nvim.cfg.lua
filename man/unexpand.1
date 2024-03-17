@@ -1,0 +1,36 @@
+.TH unexpand
+.PP
+.RS
+Convert spaces to tabs.
+More information: \[la]https://www.gnu.org/software/coreutils/unexpand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert blanks in each file to tabs, writing to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCunexpand {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Convert blanks to tabs, reading from \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCunexpand\fR
+.RS
+.IP \(bu 2
+Convert all blanks, instead of just initial blanks:
+.RE
+.PP
+\fB\fCunexpand \-a {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Convert only leading sequences of blanks (overrides \-a):
+.RE
+.PP
+\fB\fCunexpand \-\-first\-only {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Have tabs a certain number of characters apart, not 8 (enables \-a):
+.RE
+.PP
+\fB\fCunexpand \-t {{number}} {{path/to/file}}\fR

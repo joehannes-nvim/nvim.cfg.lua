@@ -1,0 +1,24 @@
+.TH git rm
+.PP
+.RS
+Remove files from repository index and local filesystem.
+More information: \[la]https://git-scm.com/docs/git-rm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove file from repository index and filesystem:
+.RE
+.PP
+\fB\fCgit rm {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Remove directory:
+.RE
+.PP
+\fB\fCgit rm \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Remove file from repository index but keep it untouched locally:
+.RE
+.PP
+\fB\fCgit rm \-\-cached {{path/to/file}}\fR

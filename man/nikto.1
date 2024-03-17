@@ -1,0 +1,36 @@
+.TH nikto
+.PP
+.RS
+Web server scanner which performs tests against web servers for multiple items.
+More information: \[la]https://cirt.net/Nikto2\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform a basic Nikto scan against a target host:
+.RE
+.PP
+\fB\fCperl nikto.pl \-h {{192.168.0.1}}\fR
+.RS
+.IP \(bu 2
+Specify the port number when performing a basic scan:
+.RE
+.PP
+\fB\fCperl nikto.pl \-h {{192.168.0.1}} \-p {{443}}\fR
+.RS
+.IP \(bu 2
+Scan ports and protocols with full URL syntax:
+.RE
+.PP
+\fB\fCperl nikto.pl \-h {{https://192.168.0.1:443/}}\fR
+.RS
+.IP \(bu 2
+Scan multiple ports in the same scanning session:
+.RE
+.PP
+\fB\fCperl nikto.pl \-h {{192.168.0.1}} \-p {{80,88,443}}\fR
+.RS
+.IP \(bu 2
+Update to the latest plugins and databases:
+.RE
+.PP
+\fB\fCperl nikto.pl \-update\fR

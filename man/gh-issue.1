@@ -1,0 +1,48 @@
+.TH gh issue
+.PP
+.RS
+Manage GitHub issues.
+More information: \[la]https://cli.github.com/manual/gh_issue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a specific issue:
+.RE
+.PP
+\fB\fCgh issue view {{issue_number}}\fR
+.RS
+.IP \(bu 2
+Display a specific issue in the default web browser:
+.RE
+.PP
+\fB\fCgh issue view {{issue_number}} \-\-web\fR
+.RS
+.IP \(bu 2
+Create a new issue in the default web browser:
+.RE
+.PP
+\fB\fCgh issue create \-\-web\fR
+.RS
+.IP \(bu 2
+List the last 10 issues with the \fB\fCbug\fR label:
+.RE
+.PP
+\fB\fCgh issue list \-\-limit {{10}} \-\-label "{{bug}}"\fR
+.RS
+.IP \(bu 2
+List closed issues made by a specific user:
+.RE
+.PP
+\fB\fCgh issue list \-\-state closed \-\-author {{username}}\fR
+.RS
+.IP \(bu 2
+Display the status of issues relevant to the user, in a specific repository:
+.RE
+.PP
+\fB\fCgh issue status \-\-repo {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+Reopen a specific issue:
+.RE
+.PP
+\fB\fCgh issue reopen {{issue_number}}\fR

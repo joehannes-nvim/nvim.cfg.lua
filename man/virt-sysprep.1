@@ -1,0 +1,30 @@
+.TH virt\-sysprep
+.PP
+.RS
+Reset, unconfigure, or customize a virtual machine image.
+More information: \[la]https://manned.org/virt-sysprep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all supported operations (enabled operations are indicated with asterisks):
+.RE
+.PP
+\fB\fCvirt\-sysprep \-\-list\-operations\fR
+.RS
+.IP \(bu 2
+Run all enabled operations but don't actually apply the changes:
+.RE
+.PP
+\fB\fCvirt\-sysprep \-\-domain {{vm_name}} \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Run only the specified operations:
+.RE
+.PP
+\fB\fCvirt\-sysprep \-\-domain {{vm_name}} \-\-operations {{operation1,operation2,...}}\fR
+.RS
+.IP \(bu 2
+Generate a new \fB\fC/etc/machine\-id\fR file and enable customizations to be able to change the host name to avoid network conflicts:
+.RE
+.PP
+\fB\fCvirt\-sysprep \-\-domain {{vm_name}} \-\-enable {{customizations}} \-\-hostname {{host_name}} \-\-operation {{machine\-id}}\fR

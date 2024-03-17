@@ -1,0 +1,42 @@
+.TH glab release
+.PP
+.RS
+Manage GitLab releases.
+More information: \[la]https://glab.readthedocs.io/en/latest/release\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List releases in a Gitlab repository, limited to 30 items:
+.RE
+.PP
+\fB\fCglab release list\fR
+.RS
+.IP \(bu 2
+Display information about a specific release:
+.RE
+.PP
+\fB\fCglab release view {{tag}}\fR
+.RS
+.IP \(bu 2
+Create a new release:
+.RE
+.PP
+\fB\fCglab release create {{tag}}\fR
+.RS
+.IP \(bu 2
+Delete a specific release:
+.RE
+.PP
+\fB\fCglab release delete {{tag}}\fR
+.RS
+.IP \(bu 2
+Download assets from a specific release:
+.RE
+.PP
+\fB\fCglab release download {{tag}}\fR
+.RS
+.IP \(bu 2
+Upload assets to a specific release:
+.RE
+.PP
+\fB\fCglab release upload {{tag}} {{path/to/file1}} {{path/to/file2}}\fR

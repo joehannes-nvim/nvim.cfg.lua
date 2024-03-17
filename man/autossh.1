@@ -1,0 +1,43 @@
+.TH autossh
+.PP
+.RS
+Run, monitor and restart SSH connections.
+Auto\-reconnects to keep port forwarding tunnels up. Accepts all \fB\fCssh\fR flags.
+More information: \[la]https://www.harding.motd.ca/autossh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an SSH session, restarting when a monitoring port fails to return data:
+.RE
+.PP
+\fB\fCautossh \-M {{monitor_port}} "{{ssh_command}}"\fR
+.RS
+.IP \(bu 2
+Forward a local port to a remote one, restarting when necessary:
+.RE
+.PP
+\fB\fCautossh \-M {{monitor_port}} \-L {{local_port}}:localhost:{{remote_port}} {{user}}@{{host}}\fR
+.RS
+.IP \(bu 2
+Fork \fB\fCautossh\fR into the background before executing \fB\fCssh\fR and don't open a remote shell:
+.RE
+.PP
+\fB\fCautossh \-f \-M {{monitor_port}} \-N "{{ssh_command}}"\fR
+.RS
+.IP \(bu 2
+Run in the background, with no monitoring port, and instead send SSH keep\-alive packets every 10 seconds to detect failure:
+.RE
+.PP
+\fB\fCautossh \-f \-M 0 \-N \-o "ServerAliveInterval 10" \-o "ServerAliveCountMax 3" "{{ssh_command}}"\fR
+.RS
+.IP \(bu 2
+Run in the background, with no monitoring port and no remote shell, exiting if the port forward fails:
+.RE
+.PP
+\fB\fCautossh \-f \-M 0 \-N \-o "ServerAliveInterval 10" \-o "ServerAliveCountMax 3" \-o ExitOnForwardFailure=yes \-L {{local_port}}:localhost:{{remote_port}} {{user}}@{{host}}\fR
+.RS
+.IP \(bu 2
+Run in the background, logging \fB\fCautossh\fR debug output and \fB\fCssh\fR verbose output to files:
+.RE
+.PP
+\fB\fCAUTOSSH_DEBUG=1 AUTOSSH_LOGFILE={{path/to/autossh_log_file.log}} autossh \-f \-M {{monitor_port}} \-v \-E {{path/to/ssh_log_file.log}} {{ssh_command}}\fR

@@ -1,0 +1,24 @@
+.TH ctest
+.PP
+.RS
+CMake test driver program.
+More information: \[la]https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run all tests defined in the CMake project, executing 4 jobs at a time in parallel:
+.RE
+.PP
+\fB\fCctest \-j{{4}} \-\-output\-on\-failure\fR
+.RS
+.IP \(bu 2
+Show a list of available tests:
+.RE
+.PP
+\fB\fCctest \-N\fR
+.RS
+.IP \(bu 2
+Run a single test based on its name, or filter on a regular expression:
+.RE
+.PP
+\fB\fCctest \-\-output\-on\-failure \-R '^{{test_name}}$'\fR

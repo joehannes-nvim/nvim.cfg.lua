@@ -1,0 +1,55 @@
+.TH tailscale up
+.PP
+.RS
+Connects the client to the Tailscale network.
+In version 1.8 and above, command\-line arguments are stored and reused until they're overwritten or \fB\fC\-\-reset\fR is called.
+More information: \[la]https://tailscale.com/kb/admin/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to Tailscale:
+.RE
+.PP
+\fB\fCsudo tailscale up\fR
+.RS
+.IP \(bu 2
+Connect and offer the current machine to be an exit node for internet traffic:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-advertise\-exit\-node\fR
+.RS
+.IP \(bu 2
+Connect using a specific node for internet traffic:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-exit\-node={{exit_node_ip}}\fR
+.RS
+.IP \(bu 2
+Connect and block incoming connections to the current node:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-shields\-up\fR
+.RS
+.IP \(bu 2
+Connect and don't accept DNS configuration from the admin panel (defaults to \fB\fCtrue\fR):
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-accept\-dns={{false}}\fR
+.RS
+.IP \(bu 2
+Connect and configure Tailscale as a subnet router:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-advertise\-routes={{10.0.0.0/24}},{{10.0.1.0/24}}\fR
+.RS
+.IP \(bu 2
+Connect and accept subnet routes from Tailscale:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-accept\-routes\fR
+.RS
+.IP \(bu 2
+Reset unspecified settings to their default values and connect:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-reset\fR

@@ -1,0 +1,48 @@
+.TH git instaweb
+.PP
+.RS
+Helper to launch a GitWeb server.
+More information: \[la]https://git-scm.com/docs/git-instaweb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch a GitWeb server for the current Git repository:
+.RE
+.PP
+\fB\fCgit instaweb \-\-start\fR
+.RS
+.IP \(bu 2
+Listen only on localhost:
+.RE
+.PP
+\fB\fCgit instaweb \-\-start \-\-local\fR
+.RS
+.IP \(bu 2
+Listen on a specific port:
+.RE
+.PP
+\fB\fCgit instaweb \-\-start \-\-port {{1234}}\fR
+.RS
+.IP \(bu 2
+Use a specified HTTP daemon:
+.RE
+.PP
+\fB\fCgit instaweb \-\-start \-\-httpd {{lighttpd|apache2|mongoose|plackup|webrick}}\fR
+.RS
+.IP \(bu 2
+Also auto\-launch a web browser:
+.RE
+.PP
+\fB\fCgit instaweb \-\-start \-\-browser\fR
+.RS
+.IP \(bu 2
+Stop the currently running GitWeb server:
+.RE
+.PP
+\fB\fCgit instaweb \-\-stop\fR
+.RS
+.IP \(bu 2
+Restart the currently running GitWeb server:
+.RE
+.PP
+\fB\fCgit instaweb \-\-restart\fR

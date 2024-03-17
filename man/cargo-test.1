@@ -1,0 +1,42 @@
+.TH cargo test
+.PP
+.RS
+Execute the unit and integration tests of a Rust package.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-test.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Only run tests containing a specific string in their names:
+.RE
+.PP
+\fB\fCcargo test {{testname}}\fR
+.RS
+.IP \(bu 2
+Set the number of simultaneous running test cases:
+.RE
+.PP
+\fB\fCcargo test \-\- \-\-test\-threads {{count}}\fR
+.RS
+.IP \(bu 2
+Test artifacts in release mode, with optimizations:
+.RE
+.PP
+\fB\fCcargo test \-\-release\fR
+.RS
+.IP \(bu 2
+Test all packages in the workspace:
+.RE
+.PP
+\fB\fCcargo test \-\-workspace\fR
+.RS
+.IP \(bu 2
+Run tests for a specific package:
+.RE
+.PP
+\fB\fCcargo test \-\-package {{package}}\fR
+.RS
+.IP \(bu 2
+Run tests without hiding output from test executions:
+.RE
+.PP
+\fB\fCcargo test \-\- \-\-nocapture\fR

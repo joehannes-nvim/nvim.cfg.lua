@@ -1,0 +1,36 @@
+.TH groff
+.PP
+.RS
+GNU replacement for the \fB\fCtroff\fR and \fB\fCnroff\fR typesetting utilities.
+More information: \[la]https://www.gnu.org/software/groff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format output for a PostScript printer, saving the output to a file:
+.RE
+.PP
+\fB\fCgroff {{path/to/input.roff}} > {{path/to/output.ps}}\fR
+.RS
+.IP \(bu 2
+Render a man page using the ASCII output device, and display it using a pager:
+.RE
+.PP
+\fB\fCgroff \-man \-T ascii {{path/to/manpage.1}} | less \-\-RAW\-CONTROL\-CHARS\fR
+.RS
+.IP \(bu 2
+Render a man page into an HTML file:
+.RE
+.PP
+\fB\fCgroff \-man \-T html {{path/to/manpage.1}} > {{path/to/manpage.html}}\fR
+.RS
+.IP \(bu 2
+Typeset a roff file containing [t]ables and [p]ictures, using the [me] macro set, to PDF, saving the output:
+.RE
+.PP
+\fB\fCgroff {{\-t}} {{\-p}} \-{{me}} \-T {{pdf}} {{path/to/input.me}} > {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Run a \fB\fCgroff\fR command with preprocessor and macro options guessed by the \fB\fCgrog\fR utility:
+.RE
+.PP
+\fB\fCeval "$(grog \-T utf8 {{path/to/input.me}})"\fR

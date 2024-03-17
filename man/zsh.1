@@ -1,0 +1,55 @@
+.TH zsh
+.PP
+.RS
+Z SHell, a Bash\-compatible command\-line interpreter.
+See also: \fB\fCbash\fR, \fB\fChistexpand\fR\&.
+More information: \[la]https://www.zsh.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCzsh\fR
+.RS
+.IP \(bu 2
+Execute specific [c]ommands:
+.RE
+.PP
+\fB\fCzsh \-c "{{echo Hello world}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCzsh {{path/to/script.zsh}}\fR
+.RS
+.IP \(bu 2
+Check a specific script for syntax errors without executing it:
+.RE
+.PP
+\fB\fCzsh \-\-no\-exec {{path/to/script.zsh}}\fR
+.RS
+.IP \(bu 2
+Execute specific commands from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{echo Hello world}} | zsh\fR
+.RS
+.IP \(bu 2
+Execute a specific script, printing each command in the script before executing it:
+.RE
+.PP
+\fB\fCzsh \-\-xtrace {{path/to/script.zsh}}\fR
+.RS
+.IP \(bu 2
+Start an interactive shell session in verbose mode, printing each command before executing it:
+.RE
+.PP
+\fB\fCzsh \-\-verbose\fR
+.RS
+.IP \(bu 2
+Execute a specific command inside \fB\fCzsh\fR with disabled glob patterns:
+.RE
+.PP
+\fB\fCnoglob {{command}}\fR

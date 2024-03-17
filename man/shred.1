@@ -1,0 +1,30 @@
+.TH shred
+.PP
+.RS
+Overwrite files to securely delete data.
+More information: \[la]https://www.gnu.org/software/coreutils/shred\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Overwrite a file:
+.RE
+.PP
+\fB\fCshred {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Overwrite a file, leaving zeroes instead of random data:
+.RE
+.PP
+\fB\fCshred \-\-zero {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Overwrite a file 25 times:
+.RE
+.PP
+\fB\fCshred \-n25 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Overwrite a file and remove it:
+.RE
+.PP
+\fB\fCshred \-\-remove {{path/to/file}}\fR

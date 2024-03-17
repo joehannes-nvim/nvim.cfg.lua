@@ -1,0 +1,42 @@
+.TH nextclade
+.PP
+.RS
+Bioinformatics tool for virus genome alignment, clade assignment and qc checks.
+More information: \[la]https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a TSV report, auto\-downloading the latest [d]ataset:
+.RE
+.PP
+\fB\fCnextclade run \-d {{dataset_name}} {{path/to/fasta}} \-t {{path/to/output_tsv}}\fR
+.RS
+.IP \(bu 2
+List all available datasets:
+.RE
+.PP
+\fB\fCnextclade dataset list\fR
+.RS
+.IP \(bu 2
+Download the latest SARS\-CoV\-2 dataset:
+.RE
+.PP
+\fB\fCnextclade dataset get \-\-name sars\-cov\-2 \-\-output\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Use a downloaded [D]ataset, producing all [O]utputs:
+.RE
+.PP
+\fB\fCnextclade run \-D {{path/to/dataset_dir}} \-O {{path/to/output_dir}} {{path/to/dataset_dir/sequences.fasta}}\fR
+.RS
+.IP \(bu 2
+Run on multiple files:
+.RE
+.PP
+\fB\fCnextclade run \-d {{dataset_name}} \-t {{path/to/output_tsv}} \-\- {{path/to/input_fasta_1 path/to/input_fasta_2 ...}}\fR
+.RS
+.IP \(bu 2
+Try reverse complement if sequence does not align:
+.RE
+.PP
+\fB\fCnextclade run \-\-retry\-reverse\-complement \-d {{dataset_name}} \-t {{path/to/output_tsv}} {{path/to/input_fasta}}\fR

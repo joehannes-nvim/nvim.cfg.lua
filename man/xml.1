@@ -1,0 +1,43 @@
+.TH xml
+.PP
+.RS
+XMLStarlet Toolkit: Query, edit, check, convert and transform XML documents.
+This command also has documentation about its subcommands, e.g. \fB\fCxml validate\fR\&.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display general help, including the list of subcommands:
+.RE
+.PP
+\fB\fCxml \-\-help\fR
+.RS
+.IP \(bu 2
+Execute a subcommand with input from a file or URI, printing to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCxml {{subcommand}} {{options}} {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Execute a subcommand using \fB\fCstdin\fR and \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCxml {{subcommand}} {{options}}\fR
+.RS
+.IP \(bu 2
+Execute a subcommand with input from a file or URI and output to a file:
+.RE
+.PP
+\fB\fCxml {{subcommand}} {{options}} {{path/to/input.xml|URI}} > {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCxml {{subcommand}} \-\-help\fR
+.RS
+.IP \(bu 2
+Display the version of the XMLStarlet Toolkit:
+.RE
+.PP
+\fB\fCxml \-\-version\fR

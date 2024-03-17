@@ -1,0 +1,49 @@
+.TH linode\-cli nodebalancers
+.PP
+.RS
+Manage Linode NodeBalancers.
+See also: \fB\fClinode\-cli\fR\&.
+More information: \[la]https://www.linode.com/docs/products/tools/cli/guides/nodebalancers/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all NodeBalancers:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers list\fR
+.RS
+.IP \(bu 2
+Create a new NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers create \-\-region {{region}}\fR
+.RS
+.IP \(bu 2
+View details of a specific NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers view {{nodebalancer_id}}\fR
+.RS
+.IP \(bu 2
+Update an existing NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers update {{nodebalancer_id}} \-\-label {{new_label}}\fR
+.RS
+.IP \(bu 2
+Delete a NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers delete {{nodebalancer_id}}\fR
+.RS
+.IP \(bu 2
+List configurations for a NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers configs list {{nodebalancer_id}}\fR
+.RS
+.IP \(bu 2
+Add a new configuration to a NodeBalancer:
+.RE
+.PP
+\fB\fClinode\-cli nodebalancers configs create {{nodebalancer_id}} \-\-port {{port}} \-\-protocol {{protocol}}\fR

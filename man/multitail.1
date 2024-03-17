@@ -1,0 +1,30 @@
+.TH multitail
+.PP
+.RS
+Extension of tail.
+More information: \[la]https://manned.org/multitail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Tail all files matching a pattern in a single stream:
+.RE
+.PP
+\fB\fCmultitail \-Q 1 '{{pattern}}'\fR
+.RS
+.IP \(bu 2
+Tail all files in a directory in a single stream:
+.RE
+.PP
+\fB\fCmultitail \-Q 1 '{{path/to/directory}}/*'\fR
+.RS
+.IP \(bu 2
+Automatically add new files to a window:
+.RE
+.PP
+\fB\fCmultitail \-Q {{pattern}}\fR
+.RS
+.IP \(bu 2
+Show 5 logfiles while merging 2 and put them in 2 columns with only one in the left column:
+.RE
+.PP
+\fB\fCmultitail \-s 2 \-sn 1,3 {{mergefile}} \-I {{file1}} {{file2}} {{file3}} {{file4}}\fR

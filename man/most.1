@@ -1,0 +1,54 @@
+.TH most
+.PP
+.RS
+Open one or several files for interactive reading, allowing scrolling and search.
+More information: \[la]https://manned.org/most\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file:
+.RE
+.PP
+\fB\fCmost {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open several files:
+.RE
+.PP
+\fB\fCmost {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Open a file at the first occurrence of "string":
+.RE
+.PP
+\fB\fCmost {{path/to/file}} +/{{string}}\fR
+.RS
+.IP \(bu 2
+Move through opened files:
+.RE
+.PP
+\fB\fC:O n\fR
+.RS
+.IP \(bu 2
+Jump to the 100th line:
+.RE
+.PP
+\fB\fC{{100}}j\fR
+.RS
+.IP \(bu 2
+Edit current file:
+.RE
+.PP
+\fB\fCe\fR
+.RS
+.IP \(bu 2
+Split the current window in half:
+.RE
+.PP
+\fB\fC<CTRL\-x> o\fR
+.RS
+.IP \(bu 2
+Exit:
+.RE
+.PP
+\fB\fCQ\fR

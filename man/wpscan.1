@@ -1,0 +1,54 @@
+.TH wpscan
+.PP
+.RS
+WordPress vulnerability scanner.
+More information: \[la]https://github.com/wpscanteam/wpscan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update the vulnerability database:
+.RE
+.PP
+\fB\fCwpscan \-\-update\fR
+.RS
+.IP \(bu 2
+Scan a WordPress website:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}}\fR
+.RS
+.IP \(bu 2
+Scan a WordPress website, using random user agents and passive detection:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-stealthy\fR
+.RS
+.IP \(bu 2
+Scan a WordPress website, checking for vulnerable plugins and specifying the path to the \fB\fCwp\-content\fR directory:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-enumerate {{vp}} \-\-wp\-content\-dir {{remote/path/to/wp\-content}}\fR
+.RS
+.IP \(bu 2
+Scan a WordPress website through a proxy:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-proxy {{protocol://ip:port}} \-\-proxy\-auth {{username:password}}\fR
+.RS
+.IP \(bu 2
+Perform user identifiers enumeration on a WordPress website:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-enumerate {{u}}\fR
+.RS
+.IP \(bu 2
+Execute a password guessing attack on a WordPress website:
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-usernames {{username|path/to/usernames.txt}} \-\-passwords {{path/to/passwords.txt}} threads {{20}}\fR
+.RS
+.IP \(bu 2
+Scan a WordPress website, collecting vulnerability data from the WPVulnDB (\[la]https://wpvulndb.com/\[ra]):
+.RE
+.PP
+\fB\fCwpscan \-\-url {{url}} \-\-api\-token {{token}}\fR

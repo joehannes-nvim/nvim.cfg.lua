@@ -1,0 +1,30 @@
+.TH sn
+.PP
+.RS
+Mono StrongName utility for signing and verifying IL assemblies.
+More information: \[la]https://manned.org/sn\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a new StrongNaming key:
+.RE
+.PP
+\fB\fCsn \-k {{path/to/key.snk}}\fR
+.RS
+.IP \(bu 2
+Re\-sign an assembly with the specified private key:
+.RE
+.PP
+\fB\fCsn \-R {{path/to/assembly.dll}} {{path/to/key_pair.snk}}\fR
+.RS
+.IP \(bu 2
+Show the public key of the private key that was used to sign an assembly:
+.RE
+.PP
+\fB\fCsn \-T {{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+Extract the public key to a file:
+.RE
+.PP
+\fB\fCsn \-e {{path/to/assembly.dll}} {{path/to/output.pub}}\fR

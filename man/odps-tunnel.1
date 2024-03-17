@@ -1,0 +1,31 @@
+.TH odps tunnel
+.PP
+.RS
+Data tunnel in ODPS (Open Data Processing Service).
+See also \fB\fCodps\fR\&.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download table to local file:
+.RE
+.PP
+\fB\fCtunnel download {{table_name}} {{path/to/file}};\fR
+.RS
+.IP \(bu 2
+Upload local file to a table partition:
+.RE
+.PP
+\fB\fCtunnel upload {{path/to/file}} {{table_name}}/{{partition_spec}};\fR
+.RS
+.IP \(bu 2
+Upload table specifying field and record delimiters:
+.RE
+.PP
+\fB\fCtunnel upload {{path/to/file}} {{table_name}} \-fd {{field_delim}} \-rd {{record_delim}};\fR
+.RS
+.IP \(bu 2
+Upload table using multiple threads:
+.RE
+.PP
+\fB\fCtunnel upload {{path/to/file}} {{table_name}} \-threads {{num}};\fR

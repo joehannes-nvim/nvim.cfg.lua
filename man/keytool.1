@@ -1,0 +1,24 @@
+.TH keytool
+.PP
+.RS
+Keytool is a certificate management utility included with Java.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/keytool.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a keystore:
+.RE
+.PP
+\fB\fCkeytool \-genkeypair \-v \-keystore {{path/to/file.keystore}} \-alias {{key_name}}\fR
+.RS
+.IP \(bu 2
+Change a keystore password:
+.RE
+.PP
+\fB\fCkeytool \-storepasswd \-keystore {{path/to/file.keystore}}\fR
+.RS
+.IP \(bu 2
+Change a key's password inside a specific keystore:
+.RE
+.PP
+\fB\fCkeytool \-keypasswd \-alias {{key_name}} \-keystore {{path/to/file.keystore}}\fR

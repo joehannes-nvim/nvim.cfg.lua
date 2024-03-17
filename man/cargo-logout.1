@@ -1,0 +1,19 @@
+.TH cargo logout
+.PP
+.RS
+Remove an API token from the registry locally.
+The token is used to authenticate to a package registry. You can add it back using \fB\fCcargo login\fR\&.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-logout.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove an API token from the local credential storage (located in \fB\fC$CARGO_HOME/credentials.toml\fR):
+.RE
+.PP
+\fB\fCcargo logout\fR
+.RS
+.IP \(bu 2
+Specify the name of the registry to use (registry names can be defined in the config \- the default is \[la]https://crates.io\[ra]):
+.RE
+.PP
+\fB\fCcargo logout \-\-registry {{name}}\fR

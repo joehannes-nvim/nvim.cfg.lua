@@ -1,0 +1,43 @@
+.TH git magic
+.PP
+.RS
+Automate add, commit, and push routines.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-magic\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Commit changes with a generated message:
+.RE
+.PP
+\fB\fCgit magic\fR
+.RS
+.IP \(bu 2
+[a]dd untracked files and commit changes with a generated message:
+.RE
+.PP
+\fB\fCgit magic \-a\fR
+.RS
+.IP \(bu 2
+Commit changes with a custom [m]essage:
+.RE
+.PP
+\fB\fCgit magic \-m "{{custom_commit_message}}"\fR
+.RS
+.IP \(bu 2
+[e]dit the commit [m]essage before committing:
+.RE
+.PP
+\fB\fCgit magic \-em "{{custom_commit_message}}"\fR
+.RS
+.IP \(bu 2
+Commit changes and [p]ush to remote:
+.RE
+.PP
+\fB\fCgit magic \-p\fR
+.RS
+.IP \(bu 2
+Commit changes with a [f]orce [p]ush to remote:
+.RE
+.PP
+\fB\fCgit magic \-fp\fR

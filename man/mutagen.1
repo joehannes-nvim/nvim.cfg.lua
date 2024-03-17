@@ -1,0 +1,42 @@
+.TH mutagen
+.PP
+.RS
+Real\-time file synchronization and network forwarding tool.
+More information: \[la]https://mutagen.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a synchronization session between a local directory and a remote host:
+.RE
+.PP
+\fB\fCmutagen sync create \-\-name={{session_name}} {{/path/to/local/directory/}} {{user}}@{{host}}:{{/path/to/remote/directory/}}\fR
+.RS
+.IP \(bu 2
+Start a synchronization session between a local directory and a Docker container:
+.RE
+.PP
+\fB\fCmutagen sync create \-\-name={{session_name}} {{/path/to/local/directory/}} docker://{{user}}@{{container_name}}{{/path/to/remote/directory/}}\fR
+.RS
+.IP \(bu 2
+Stop a running session:
+.RE
+.PP
+\fB\fCmutagen sync terminate {{session_name}}\fR
+.RS
+.IP \(bu 2
+Start a project:
+.RE
+.PP
+\fB\fCmutagen project start\fR
+.RS
+.IP \(bu 2
+Stop a project:
+.RE
+.PP
+\fB\fCmutagen project terminate\fR
+.RS
+.IP \(bu 2
+List running sessions for the current project:
+.RE
+.PP
+\fB\fCmutagen project list\fR

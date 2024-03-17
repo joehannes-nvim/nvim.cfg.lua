@@ -1,0 +1,43 @@
+.TH go vet
+.PP
+.RS
+Check Go source code and report suspicious constructs (e.g. lint your Go source files).
+Go vet returns a non\-zero exit code if problems are found; returns a zero exit code if no problems are found.
+More information: \[la]https://pkg.go.dev/cmd/vet\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the Go package in the current directory:
+.RE
+.PP
+\fB\fCgo vet\fR
+.RS
+.IP \(bu 2
+Check the Go package in the specified path:
+.RE
+.PP
+\fB\fCgo vet {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+List available checks that can be run with go vet:
+.RE
+.PP
+\fB\fCgo tool vet help\fR
+.RS
+.IP \(bu 2
+View details and flags for a particular check:
+.RE
+.PP
+\fB\fCgo tool vet help {{check_name}}\fR
+.RS
+.IP \(bu 2
+Display offending lines plus N lines of surrounding context:
+.RE
+.PP
+\fB\fCgo vet \-c={{N}}\fR
+.RS
+.IP \(bu 2
+Output analysis and errors in JSON format:
+.RE
+.PP
+\fB\fCgo vet \-json\fR

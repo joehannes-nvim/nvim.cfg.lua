@@ -1,0 +1,30 @@
+.TH exec
+.PP
+.RS
+Replace the current process with another process.
+More information: \[la]https://linuxcommand.org/lc3_man_pages/exech.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace with the specified command using the current environment variables:
+.RE
+.PP
+\fB\fCexec {{command \-with \-flags}}\fR
+.RS
+.IP \(bu 2
+Replace with the specified command, clearing environment variables:
+.RE
+.PP
+\fB\fCexec \-c {{command \-with \-flags}}\fR
+.RS
+.IP \(bu 2
+Replace with the specified command and login using the default shell:
+.RE
+.PP
+\fB\fCexec \-l {{command \-with \-flags}}\fR
+.RS
+.IP \(bu 2
+Replace with the specified command and change the process name:
+.RE
+.PP
+\fB\fCexec \-a {{process_name}} {{command \-with \-flags}}\fR

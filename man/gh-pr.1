@@ -1,0 +1,55 @@
+.TH gh pr
+.PP
+.RS
+Manage GitHub pull requests.
+Some subcommands such as \fB\fCgh pr create\fR have their own usage documentation.
+More information: \[la]https://cli.github.com/manual/gh_pr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a pull request:
+.RE
+.PP
+\fB\fCgh pr create\fR
+.RS
+.IP \(bu 2
+Check out a specific pull request locally:
+.RE
+.PP
+\fB\fCgh pr checkout {{pr_number}}\fR
+.RS
+.IP \(bu 2
+View the changes made in the pull request for the current branch:
+.RE
+.PP
+\fB\fCgh pr diff\fR
+.RS
+.IP \(bu 2
+Approve the pull request for the current branch:
+.RE
+.PP
+\fB\fCgh pr review \-\-approve\fR
+.RS
+.IP \(bu 2
+Merge the pull request associated with the current branch interactively:
+.RE
+.PP
+\fB\fCgh pr merge\fR
+.RS
+.IP \(bu 2
+Edit a pull request interactively:
+.RE
+.PP
+\fB\fCgh pr edit\fR
+.RS
+.IP \(bu 2
+Edit the base branch of a pull request:
+.RE
+.PP
+\fB\fCgh pr edit \-\-base {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Check the status of the current repository's pull requests:
+.RE
+.PP
+\fB\fCgh pr status\fR

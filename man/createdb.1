@@ -1,0 +1,24 @@
+.TH createdb
+.PP
+.RS
+Create a PostgreSQL database.
+More information: \[la]https://www.postgresql.org/docs/current/app-createdb.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a database owned by the current user:
+.RE
+.PP
+\fB\fCcreatedb {{database_name}}\fR
+.RS
+.IP \(bu 2
+Create a database owned by a specific user with a description:
+.RE
+.PP
+\fB\fCcreatedb \-\-owner={{username}} {{database_name}} '{{description}}'\fR
+.RS
+.IP \(bu 2
+Create a database from a template:
+.RE
+.PP
+\fB\fCcreatedb \-\-template={{template_name}} {{database_name}}\fR

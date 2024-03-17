@@ -1,0 +1,30 @@
+.TH hledger
+.PP
+.RS
+A plain text accounting software for the command\-line.
+More information: \[la]https://hledger.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add transactions to your journal interactively:
+.RE
+.PP
+\fB\fChledger add\fR
+.RS
+.IP \(bu 2
+Show the account hierarchy, using a specific journal file:
+.RE
+.PP
+\fB\fChledger \-\-file {{path/to/file.journal}} accounts \-\-tree\fR
+.RS
+.IP \(bu 2
+Show a monthly income statement:
+.RE
+.PP
+\fB\fChledger incomestatement \-\-monthly \-\-depth 2\fR
+.RS
+.IP \(bu 2
+Print the amount of cash spent on food:
+.RE
+.PP
+\fB\fChledger print assets:cash | hledger \-f\- \-I balance expenses:food \-\-depth 2\fR

@@ -1,0 +1,48 @@
+.TH gh config
+.PP
+.RS
+Change configuration for GitHub cli.
+More information: \[la]https://cli.github.com/manual/gh_config\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display what Git protocol is being used:
+.RE
+.PP
+\fB\fCgh config get git_protocol\fR
+.RS
+.IP \(bu 2
+Set protocol to SSH:
+.RE
+.PP
+\fB\fCgh config set git_protocol {{ssh}}\fR
+.RS
+.IP \(bu 2
+Use \fB\fCdelta\fR in side\-by\-side mode as the default pager for all \fB\fCgh\fR commands:
+.RE
+.PP
+\fB\fCgh config set pager '{{delta \-\-side\-by\-side}}'\fR
+.RS
+.IP \(bu 2
+Set text editor to Vim:
+.RE
+.PP
+\fB\fCgh config set editor {{vim}}\fR
+.RS
+.IP \(bu 2
+Reset to default text editor:
+.RE
+.PP
+\fB\fCgh config set editor {{""}}\fR
+.RS
+.IP \(bu 2
+Disable interactive prompts:
+.RE
+.PP
+\fB\fCgh config set prompt {{disabled}}\fR
+.RS
+.IP \(bu 2
+Set a specific configuration value:
+.RE
+.PP
+\fB\fCgh config set {{key}} {{value}}\fR

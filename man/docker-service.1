@@ -1,0 +1,42 @@
+.TH docker service
+.PP
+.RS
+Manage the services on a docker daemon.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/service/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the services on a docker daemon:
+.RE
+.PP
+\fB\fCdocker service ls\fR
+.RS
+.IP \(bu 2
+Create a new service:
+.RE
+.PP
+\fB\fCdocker service create \-\-name {{service_name}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Display detailed information of a space\-separated list of services:
+.RE
+.PP
+\fB\fCdocker service inspect {{service_name|ID}}\fR
+.RS
+.IP \(bu 2
+List the tasks of a space\-separated list of services:
+.RE
+.PP
+\fB\fCdocker service ps {{service_name|ID}}\fR
+.RS
+.IP \(bu 2
+Scale to a specific number of replicas for a space\-separated list of services:
+.RE
+.PP
+\fB\fCdocker service scale {{service_name}}={{count_of_replicas}}\fR
+.RS
+.IP \(bu 2
+Remove a space\-separated list of services:
+.RE
+.PP
+\fB\fCdocker service rm {{service_name|ID}}\fR

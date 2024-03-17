@@ -1,0 +1,56 @@
+.TH sftp
+.PP
+.RS
+Secure File Transfer Program.
+Interactive program to copy files between hosts over SSH.
+For non\-interactive file transfers, see \fB\fCscp\fR or \fB\fCrsync\fR\&.
+More information: \[la]https://manned.org/sftp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a remote server and enter an interactive command mode:
+.RE
+.PP
+\fB\fCsftp {{remote_user}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect using an alternate port:
+.RE
+.PP
+\fB\fCsftp \-P {{remote_port}} {{remote_user}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect using a predefined host (in \fB\fC~/.ssh/config\fR):
+.RE
+.PP
+\fB\fCsftp {{host}}\fR
+.RS
+.IP \(bu 2
+Transfer remote file to the local system:
+.RE
+.PP
+\fB\fCget {{/path/remote_file}}\fR
+.RS
+.IP \(bu 2
+Transfer local file to the remote system:
+.RE
+.PP
+\fB\fCput {{/path/local_file}}\fR
+.RS
+.IP \(bu 2
+Transfer remote directory to the local system recursively (works with \fB\fCput\fR too):
+.RE
+.PP
+\fB\fCget \-R {{/path/remote_directory}}\fR
+.RS
+.IP \(bu 2
+Get list of files on local machine:
+.RE
+.PP
+\fB\fClls\fR
+.RS
+.IP \(bu 2
+Get list of files on remote machine:
+.RE
+.PP
+\fB\fCls\fR

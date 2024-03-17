@@ -1,0 +1,31 @@
+.TH virsh\-list
+.PP
+.RS
+List the ID, name, and state of virtual machines.
+See also: \fB\fCvirsh\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List information about running virtual machines:
+.RE
+.PP
+\fB\fCvirsh list\fR
+.RS
+.IP \(bu 2
+List information about virtual machines regardless of state:
+.RE
+.PP
+\fB\fCvirsh list \-\-all\fR
+.RS
+.IP \(bu 2
+List information about virtual machines with autostart either enabled or disabled:
+.RE
+.PP
+\fB\fCvirsh list \-\-all \-\-{{autostart|no\-autostart}}\fR
+.RS
+.IP \(bu 2
+List information about virtual machines either with or without snapshots:
+.RE
+.PP
+\fB\fCvirsh list \-\-all \-\-{{with\-snapshot|without\-snapshot}}\fR

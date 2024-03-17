@@ -1,0 +1,24 @@
+.TH ipsumdump
+.PP
+.RS
+Summarise TCP/IP dumps into a human and machine readable ASCII format.
+More information: \[la]https://manned.org/ipsumdump\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the source and destination IP addresses of all packets in a pcap file:
+.RE
+.PP
+\fB\fCipsumdump \-\-src \-\-dst {{path/to/file.pcap}}\fR
+.RS
+.IP \(bu 2
+Print the timestamps, source address, source port, destination address, destination port and protocol of all packets read from a given network interface:
+.RE
+.PP
+\fB\fCipsumdump \-\-interface {{eth0}} \-tsSdDp\fR
+.RS
+.IP \(bu 2
+Print the anonymised source address, anonymised destination address, and IP packet length of all packets in a pcap file:
+.RE
+.PP
+\fB\fCipsumdump \-\-src \-\-dst \-\-length \-\-anonymize {{path/to/file.pcap}}\fR

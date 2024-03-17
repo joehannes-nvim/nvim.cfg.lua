@@ -1,0 +1,54 @@
+.TH rbenv
+.PP
+.RS
+A tool to easily install Ruby versions and manage application environments.
+More information: \[la]https://github.com/rbenv/rbenv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a Ruby version:
+.RE
+.PP
+\fB\fCrbenv install {{version}}\fR
+.RS
+.IP \(bu 2
+Display a list of the latest stable versions for each Ruby:
+.RE
+.PP
+\fB\fCrbenv install \-\-list\fR
+.RS
+.IP \(bu 2
+Display a list of installed Ruby versions:
+.RE
+.PP
+\fB\fCrbenv versions\fR
+.RS
+.IP \(bu 2
+Use a specific Ruby version across the whole system:
+.RE
+.PP
+\fB\fCrbenv global {{version}}\fR
+.RS
+.IP \(bu 2
+Use a specific Ruby version for an application/project directory:
+.RE
+.PP
+\fB\fCrbenv local {{version}}\fR
+.RS
+.IP \(bu 2
+Display the currently selected Ruby version:
+.RE
+.PP
+\fB\fCrbenv version\fR
+.RS
+.IP \(bu 2
+Uninstall a Ruby version:
+.RE
+.PP
+\fB\fCrbenv uninstall {{version}}\fR
+.RS
+.IP \(bu 2
+Display all Ruby versions that contain the specified executable:
+.RE
+.PP
+\fB\fCrbenv whence {{executable}}\fR

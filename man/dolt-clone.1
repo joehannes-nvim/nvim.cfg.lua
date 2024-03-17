@@ -1,0 +1,48 @@
+.TH dolt clone
+.PP
+.RS
+Clone a repository into a new directory.
+More information: \[la]https://docs.dolthub.com/interfaces/cli#dolt-clone\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone an existing repository into a specific directory (defaults to the repository name):
+.RE
+.PP
+\fB\fCdolt clone {{repository_url}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository and add a specific remote (defaults to origin):
+.RE
+.PP
+\fB\fCdolt clone \-\-remote {{remote_name}} {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Clone an existing repository only fetching a specific branch (defaults to all branches):
+.RE
+.PP
+\fB\fCdolt clone \-\-branch {{branch_name}} {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Clone a repository, using an AWS region (uses the profile's default region if none is provided):
+.RE
+.PP
+\fB\fCdolt clone \-\-aws\-region {{region_name}} {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Clone a repository, using an AWS credentials file:
+.RE
+.PP
+\fB\fCdolt clone \-\-aws\-creds\-file {{credentials_file}} {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Clone a repository, using an AWS credentials profile (uses the default profile if none is provided):
+.RE
+.PP
+\fB\fCdolt clone \-\-aws\-creds\-profile {{profile_name}} {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Clone a repository, using an AWS credentials type:
+.RE
+.PP
+\fB\fCdolt clone \-\-aws\-creds\-type {{credentials_type}} {{repository_url}}\fR

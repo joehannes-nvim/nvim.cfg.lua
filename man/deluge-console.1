@@ -1,0 +1,54 @@
+.TH deluge\-console
+.PP
+.RS
+An interactive interface for the Deluge BitTorrent client.
+More information: \[la]https://deluge-torrent.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the interactive console interface:
+.RE
+.PP
+\fB\fCdeluge\-console\fR
+.RS
+.IP \(bu 2
+Connect to a Deluge daemon instance:
+.RE
+.PP
+\fB\fCconnect {{hostname}}:{{port}}\fR
+.RS
+.IP \(bu 2
+Add a torrent to the daemon:
+.RE
+.PP
+\fB\fCadd {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display information about all torrents:
+.RE
+.PP
+\fB\fCinfo\fR
+.RS
+.IP \(bu 2
+Display information about a specific torrent:
+.RE
+.PP
+\fB\fCinfo {{torrent_id}}\fR
+.RS
+.IP \(bu 2
+Pause a torrent:
+.RE
+.PP
+\fB\fCpause {{torrent_id}}\fR
+.RS
+.IP \(bu 2
+Resume a torrent:
+.RE
+.PP
+\fB\fCresume {{torrent_id}}\fR
+.RS
+.IP \(bu 2
+Remove a torrent from the daemon:
+.RE
+.PP
+\fB\fCrm {{torrent_id}}\fR

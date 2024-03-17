@@ -1,0 +1,24 @@
+.TH docker load
+.PP
+.RS
+Load Docker images from files or \fB\fCstdin\fR\&.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/load/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Load a Docker image from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCdocker load < {{path/to/image_file.tar}}\fR
+.RS
+.IP \(bu 2
+Load a Docker image from a specific file:
+.RE
+.PP
+\fB\fCdocker load \-\-input {{path/to/image_file.tar}}\fR
+.RS
+.IP \(bu 2
+Load a Docker image from a specific file in quiet mode:
+.RE
+.PP
+\fB\fCdocker load \-\-quiet \-\-input {{path/to/image_file.tar}}\fR

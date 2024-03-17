@@ -1,0 +1,42 @@
+.TH tlmgr option
+.PP
+.RS
+TeX Live settings manager.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all TeX Live settings:
+.RE
+.PP
+\fB\fCtlmgr option showall\fR
+.RS
+.IP \(bu 2
+List all currently set Tex Live settings:
+.RE
+.PP
+\fB\fCtlmgr option show\fR
+.RS
+.IP \(bu 2
+Print all TeX Live settings in JSON format:
+.RE
+.PP
+\fB\fCtlmgr option showall \-\-json\fR
+.RS
+.IP \(bu 2
+Show the value of a specific TeX Live setting:
+.RE
+.PP
+\fB\fCtlmgr option {{setting}}\fR
+.RS
+.IP \(bu 2
+Modify the value of a specific TeX Live setting:
+.RE
+.PP
+\fB\fCtlmgr option {{setting}} {{value}}\fR
+.RS
+.IP \(bu 2
+Set TeX Live to get future updates from the internet after installing from DVD:
+.RE
+.PP
+\fB\fCtlmgr option {{repository}} {{https://mirror.ctan.org/systems/texlive/tlnet}}\fR

@@ -1,0 +1,30 @@
+.TH cppclean
+.PP
+.RS
+Find unused code in C++ projects.
+More information: \[la]https://github.com/myint/cppclean\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run in a project's directory:
+.RE
+.PP
+\fB\fCcppclean {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Run on a project where the headers are in the \fB\fCinc1/\fR and \fB\fCinc2/\fR directories:
+.RE
+.PP
+\fB\fCcppclean {{path/to/project}} \-\-include\-path={{inc1}} \-\-include\-path={{inc2}}\fR
+.RS
+.IP \(bu 2
+Run on a specific file \fB\fCmain.cpp\fR:
+.RE
+.PP
+\fB\fCcppclean {{main.cpp}}\fR
+.RS
+.IP \(bu 2
+Run on the current directory, excluding the "build" directory:
+.RE
+.PP
+\fB\fCcppclean {{.}} \-\-exclude={{build}}\fR

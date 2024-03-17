@@ -1,0 +1,42 @@
+.TH Projucer
+.PP
+.RS
+A project manager for JUCE framework applications.
+More information: \[la]https://juce.com/discover/stories/projucer-manual#10.4-command-line-tools\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display information about a project:
+.RE
+.PP
+\fB\fCProjucer \-\-status {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Resave all files and resources in a project:
+.RE
+.PP
+\fB\fCProjucer \-\-resave {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Update the version number in a project:
+.RE
+.PP
+\fB\fCProjucer \-\-set\-version {{version_number}} {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Generate a JUCE project from a PIP file:
+.RE
+.PP
+\fB\fCProjucer \-\-create\-project\-from\-pip {{path/to/PIP}} {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Remove all JUCE\-style comments (\fB\fC//=====\fR, \fB\fC//\-\-\-\-\-\fR or \fB\fC///////\fR):
+.RE
+.PP
+\fB\fCProjucer \-\-tidy\-divider\-comments {{path/to/target_folder}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCProjucer \-\-help\fR

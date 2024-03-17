@@ -1,0 +1,24 @@
+.TH mkfile
+.PP
+.RS
+Create one or more empty files of any size.
+More information: \[la]https://manned.org/mkfile\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an empty file of 15 kilobytes:
+.RE
+.PP
+\fB\fCmkfile \-n {{15k}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create a file of a given size and unit (bytes, KB, MB, GB):
+.RE
+.PP
+\fB\fCmkfile \-n {{size}}{{b|k|m|g}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create two files of 4 megabytes each:
+.RE
+.PP
+\fB\fCmkfile \-n {{4m}} {{first_filename}} {{second_filename}}\fR

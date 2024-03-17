@@ -1,0 +1,49 @@
+.TH gladtex
+.PP
+.RS
+A LaTeX formula preprocessor for HTML files.
+It converts LaTeX formulas to images.
+More information: \[la]https://humenda.github.io/GladTeX/manpage.html/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert to html:
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}}\fR
+.RS
+.IP \(bu 2
+Save the converted file to a specific location:
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}} \-o {{path/to/output.html}}\fR
+.RS
+.IP \(bu 2
+Save the generated images to a specific [d]irectory:
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}} \-d {{path/to/image_output_directory}}\fR
+.RS
+.IP \(bu 2
+Set image [r]esolution (in dpi, default is 100):
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}} \-r {{resolution}}\fR
+.RS
+.IP \(bu 2
+[k]eep LaTeX files after conversion:
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}} \-k\fR
+.RS
+.IP \(bu 2
+Set [b]ackground and [f]oreground color of the images:
+.RE
+.PP
+\fB\fCgladtex {{path/to/input.htex}} \-b {{background_color}} \-f {{foreground_color}}\fR
+.RS
+.IP \(bu 2
+Convert Markdown to HTML using \fB\fCpandoc\fR and \fB\fCgladtex\fR:
+.RE
+.PP
+\fB\fCpandoc \-s \-t html \-\-gladtex {{path/to/input.md}} | gladtex \-o {{path/to/output.html}}\fR

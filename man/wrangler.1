@@ -1,0 +1,36 @@
+.TH wrangler
+.PP
+.RS
+Cloudflare Workers command\-line tool.
+More information: \[la]https://developers.cloudflare.com/workers/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a project with a skeleton configuration:
+.RE
+.PP
+\fB\fCwrangler init {{project_name}}\fR
+.RS
+.IP \(bu 2
+Authenticate with Cloudflare:
+.RE
+.PP
+\fB\fCwrangler login\fR
+.RS
+.IP \(bu 2
+Start a local development server:
+.RE
+.PP
+\fB\fCwrangler dev \-\-host {{hostname}}\fR
+.RS
+.IP \(bu 2
+Publish the worker script:
+.RE
+.PP
+\fB\fCwrangler publish\fR
+.RS
+.IP \(bu 2
+Aggregate logs from the production worker:
+.RE
+.PP
+\fB\fCwrangler tail\fR

@@ -1,0 +1,30 @@
+.TH mamba repoquery
+.PP
+.RS
+Efficiently query conda and mamba package repositories and package dependencies.
+More information: \[la]https://mamba.readthedocs.io/en/latest/user_guide/mamba.html#repoquery\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for all available versions of a particular package:
+.RE
+.PP
+\fB\fCmamba repoquery search {{package}}\fR
+.RS
+.IP \(bu 2
+Search for all packages satisfying specific constraints:
+.RE
+.PP
+\fB\fCmamba repoquery search {{sphinx<5}}\fR
+.RS
+.IP \(bu 2
+List the dependencies of a package installed in the currently activated environment, in a tree format:
+.RE
+.PP
+\fB\fCmamba repoquery depends \-\-tree {{scipy}}\fR
+.RS
+.IP \(bu 2
+Print packages in the current environment that require a particular package to be installed (i.e. inverse of \fB\fCdepends\fR):
+.RE
+.PP
+\fB\fCmamba repoquery whoneeds {{ipython}}\fR

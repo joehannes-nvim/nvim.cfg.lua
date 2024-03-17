@@ -1,0 +1,24 @@
+.TH security\-checker
+.PP
+.RS
+Check if a PHP application uses dependencies with known security vulnerabilities.
+More information: \[la]https://github.com/sensiolabs/security-checker\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Look for security issues in the project dependencies (based on the \fB\fCcomposer.lock\fR file in the current directory):
+.RE
+.PP
+\fB\fCsecurity\-checker security:check\fR
+.RS
+.IP \(bu 2
+Use a specific \fB\fCcomposer.lock\fR file:
+.RE
+.PP
+\fB\fCsecurity\-checker security:check {{path/to/composer.lock}}\fR
+.RS
+.IP \(bu 2
+Return results as a JSON object:
+.RE
+.PP
+\fB\fCsecurity\-checker security:check \-\-format=json\fR

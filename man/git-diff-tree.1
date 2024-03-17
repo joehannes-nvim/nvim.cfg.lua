@@ -1,0 +1,30 @@
+.TH git diff\-tree
+.PP
+.RS
+Compares the content and mode of blobs found via two tree objects.
+More information: \[la]https://git-scm.com/docs/git-diff-tree\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare two tree objects:
+.RE
+.PP
+\fB\fCgit diff\-tree {{tree\-ish1}} {{tree\-ish2}}\fR
+.RS
+.IP \(bu 2
+Show changes between two specific commits:
+.RE
+.PP
+\fB\fCgit diff\-tree \-r {{commit1}} {{commit2}}\fR
+.RS
+.IP \(bu 2
+Display changes in patch format:
+.RE
+.PP
+\fB\fCgit diff\-tree \-p {{tree\-ish1}} {{tree\-ish2}}\fR
+.RS
+.IP \(bu 2
+Filter changes by a specific path:
+.RE
+.PP
+\fB\fCgit diff\-tree {{tree\-ish1}} {{tree\-ish2}} \-\- {{path/to/file_or_directory}}\fR

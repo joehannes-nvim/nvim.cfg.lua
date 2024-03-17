@@ -1,0 +1,42 @@
+.TH grex
+.PP
+.RS
+Generate regular expressions.
+More information: \[la]https://github.com/pemistahl/grex\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a simple regular expression:
+.RE
+.PP
+\fB\fCgrex {{space_separated_strings}}\fR
+.RS
+.IP \(bu 2
+Generate a case\-insensitive regular expression:
+.RE
+.PP
+\fB\fCgrex \-i {{space_separated_strings}}\fR
+.RS
+.IP \(bu 2
+Replace digits with '\[rs]d':
+.RE
+.PP
+\fB\fCgrex \-d {{space_separated_strings}}\fR
+.RS
+.IP \(bu 2
+Replace Unicode word character with '\[rs]w':
+.RE
+.PP
+\fB\fCgrex \-w {{space_separated_strings}}\fR
+.RS
+.IP \(bu 2
+Replace spaces with '\[rs]s':
+.RE
+.PP
+\fB\fCgrex \-s {{space_separated_strings}}\fR
+.RS
+.IP \(bu 2
+Add {min, max} quantifier representation for repeating sub\-strings:
+.RE
+.PP
+\fB\fCgrex \-r {{space_separated_strings}}\fR

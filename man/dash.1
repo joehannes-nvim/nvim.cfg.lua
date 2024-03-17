@@ -1,0 +1,48 @@
+.TH dash
+.PP
+.RS
+Debian Almquist Shell, a modern, POSIX\-compliant implementation of \fB\fCsh\fR (not Bash\-compatible).
+More information: \[la]https://manned.org/dash\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCdash\fR
+.RS
+.IP \(bu 2
+Execute specific [c]ommands:
+.RE
+.PP
+\fB\fCdash \-c "{{echo 'dash is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCdash {{path/to/script.sh}}\fR
+.RS
+.IP \(bu 2
+Check a specific script for syntax errors:
+.RE
+.PP
+\fB\fCdash \-n {{path/to/script.sh}}\fR
+.RS
+.IP \(bu 2
+Execute a specific script while printing each command before executing it:
+.RE
+.PP
+\fB\fCdash \-x {{path/to/script.sh}}\fR
+.RS
+.IP \(bu 2
+Execute a specific script and stop at the first [e]rror:
+.RE
+.PP
+\fB\fCdash \-e {{path/to/script.sh}}\fR
+.RS
+.IP \(bu 2
+Execute specific commands from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{echo "echo 'dash is executed'"}} | dash\fR

@@ -1,0 +1,19 @@
+.TH rustup which
+.PP
+.RS
+Display which binary will be run for a given command managed by \fB\fCrustup\fR\&.
+Like \fB\fCwhich\fR, but searches a Rust toolchain instead of \fB\fC$PATH\fR\&.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the path to the binary in the default toolchain:
+.RE
+.PP
+\fB\fCrustup which {{command}}\fR
+.RS
+.IP \(bu 2
+Display the path to the binary in the specified toolchain (see \fB\fCrustup help toolchain\fR for more information):
+.RE
+.PP
+\fB\fCrustup which \-\-toolchain {{toolchain}} {{command}}\fR

@@ -1,0 +1,42 @@
+.TH exiv2
+.PP
+.RS
+Image metadata manipulation tool.
+More information: \[la]https://www.exiv2.org/manpage.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a summary of the image Exif metadata:
+.RE
+.PP
+\fB\fCexiv2 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print all metadata (Exif, IPTC, XMP) with interpreted values:
+.RE
+.PP
+\fB\fCexiv2 \-P kt {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print all metadata with raw values:
+.RE
+.PP
+\fB\fCexiv2 \-P kv {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Delete all metadata from an image:
+.RE
+.PP
+\fB\fCexiv2 \-d a {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Delete all metadata, preserving the file timestamp:
+.RE
+.PP
+\fB\fCexiv2 \-d a \-k {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Rename the file, prepending the date and time from metadata (not from the file timestamp):
+.RE
+.PP
+\fB\fCexiv2 \-r {{'%Y%m%d_%H%M%S_:basename:'}} {{path/to/file}}\fR

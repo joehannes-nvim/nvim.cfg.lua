@@ -1,0 +1,37 @@
+.TH uniq
+.PP
+.RS
+Output the unique lines from the given input or file.
+Since it does not detect repeated lines unless they are adjacent, we need to sort them first.
+More information: \[la]https://www.gnu.org/software/coreutils/uniq\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display each line once:
+.RE
+.PP
+\fB\fCsort {{path/to/file}} | uniq\fR
+.RS
+.IP \(bu 2
+Display only unique lines:
+.RE
+.PP
+\fB\fCsort {{path/to/file}} | uniq \-u\fR
+.RS
+.IP \(bu 2
+Display only duplicate lines:
+.RE
+.PP
+\fB\fCsort {{path/to/file}} | uniq \-d\fR
+.RS
+.IP \(bu 2
+Display number of occurrences of each line along with that line:
+.RE
+.PP
+\fB\fCsort {{path/to/file}} | uniq \-c\fR
+.RS
+.IP \(bu 2
+Display number of occurrences of each line, sorted by the most frequent:
+.RE
+.PP
+\fB\fCsort {{path/to/file}} | uniq \-c | sort \-nr\fR

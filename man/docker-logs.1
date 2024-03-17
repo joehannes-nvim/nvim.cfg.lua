@@ -1,0 +1,36 @@
+.TH docker logs
+.PP
+.RS
+Print container logs.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/logs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print logs from a container:
+.RE
+.PP
+\fB\fCdocker logs {{container_name}}\fR
+.RS
+.IP \(bu 2
+Print logs and follow them:
+.RE
+.PP
+\fB\fCdocker logs \-f {{container_name}}\fR
+.RS
+.IP \(bu 2
+Print last 5 lines:
+.RE
+.PP
+\fB\fCdocker logs {{container_name}} \-\-tail {{5}}\fR
+.RS
+.IP \(bu 2
+Print logs and append them with timestamps:
+.RE
+.PP
+\fB\fCdocker logs \-t {{container_name}}\fR
+.RS
+.IP \(bu 2
+Print logs from a certain point in time of container execution (i.e. 23m, 10s, 2013\-01\-02T13:23:37):
+.RE
+.PP
+\fB\fCdocker logs {{container_name}} \-\-until {{time}}\fR

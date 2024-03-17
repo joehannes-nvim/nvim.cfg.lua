@@ -1,0 +1,38 @@
+.TH inkmake
+.PP
+.RS
+GNU Makefile\-style SVG exporting using Inkscape's backend.
+More information: \[la]https://github.com/wader/inkmake\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Export an SVG file executing the specified Inkfile:
+.RE
+.PP
+\fB\fCinkmake {{path/to/Inkfile}}\fR
+.RS
+.IP \(bu 2
+Execute an Inkfile and show detailed information:
+.RE
+.PP
+\fB\fCinkmake \-\-verbose {{path/to/Inkfile}}\fR
+.RS
+.IP \(bu 2
+Execute an Inkfile, specifying SVG input 
+.BR file (s) 
+and an output file:
+.RE
+.PP
+\fB\fCinkmake \-\-svg {{path/to/file.svg}} \-\-out {{path/to/output_image}} {{path/to/Inkfile}}\fR
+.RS
+.IP \(bu 2
+Specify a custom Inkscape binary to use as the backend:
+.RE
+.PP
+\fB\fCinkmake \-\-inkscape {{/Applications/Inkscape.app/Contents/Resources/bin/inkscape}} {{path/to/Inkfile}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCinkmake \-\-help\fR

@@ -1,0 +1,42 @@
+.TH nx
+.PP
+.RS
+Manage \fB\fCnx\fR workspaces.
+More information: \[la]https://nx.dev/l/r/getting-started/nx-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a specific project:
+.RE
+.PP
+\fB\fCnx build {{project}}\fR
+.RS
+.IP \(bu 2
+Test a specific project:
+.RE
+.PP
+\fB\fCnx test {{project}}\fR
+.RS
+.IP \(bu 2
+Execute a target on a specific project:
+.RE
+.PP
+\fB\fCnx run {{project}}:{{target}}\fR
+.RS
+.IP \(bu 2
+Execute a target on multiple projects:
+.RE
+.PP
+\fB\fCnx run\-many \-\-target {{target}} \-\-projects {{project1}},{{project2}}\fR
+.RS
+.IP \(bu 2
+Execute a target on all projects in the workspace:
+.RE
+.PP
+\fB\fCnx run\-many \-\-target {{target}} \-\-all\fR
+.RS
+.IP \(bu 2
+Execute a target only on projects that have been changed:
+.RE
+.PP
+\fB\fCnx affected \-\-target {{target}}\fR

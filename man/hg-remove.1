@@ -1,0 +1,36 @@
+.TH hg remove
+.PP
+.RS
+Remove specified files from the staging area.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#remove\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove files or directories from the staging area:
+.RE
+.PP
+\fB\fChg remove {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Remove all staged files matching a specified pattern:
+.RE
+.PP
+\fB\fChg remove \-\-include {{pattern}}\fR
+.RS
+.IP \(bu 2
+Remove all staged files, excluding those that match a specified pattern:
+.RE
+.PP
+\fB\fChg remove \-\-exclude {{pattern}}\fR
+.RS
+.IP \(bu 2
+Recursively remove sub\-repositories:
+.RE
+.PP
+\fB\fChg remove \-\-subrepos\fR
+.RS
+.IP \(bu 2
+Remove files from the repository that have been physically removed:
+.RE
+.PP
+\fB\fChg remove \-\-after\fR

@@ -1,0 +1,30 @@
+.TH kosmorro
+.PP
+.RS
+Compute the ephemerides and the events for a given date, at a given position on Earth.
+More information: \[la]http://kosmorro.space\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get ephemerides for Paris, France:
+.RE
+.PP
+\fB\fCkosmorro \-\-latitude={{48.7996}} \-\-longitude={{2.3511}}\fR
+.RS
+.IP \(bu 2
+Get ephemerides for Paris, France, in the UTC+2 timezone:
+.RE
+.PP
+\fB\fCkosmorro \-\-latitude={{48.7996}} \-\-longitude={{2.3511}} \-\-timezone={{2}}\fR
+.RS
+.IP \(bu 2
+Get ephemerides for Paris, France, on June 9th, 2020:
+.RE
+.PP
+\fB\fCkosmorro \-\-latitude={{48.7996}} \-\-longitude={{2.3511}} \-\-date={{2020\-06\-09}}\fR
+.RS
+.IP \(bu 2
+Generate a PDF (note: TeXLive must be installed):
+.RE
+.PP
+\fB\fCkosmorro \-\-format={{pdf}} \-\-output={{path/to/file.pdf}}\fR

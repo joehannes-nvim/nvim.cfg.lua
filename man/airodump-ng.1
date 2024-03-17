@@ -1,0 +1,19 @@
+.TH airodump\-ng
+.PP
+.RS
+Capture packets and display information about wireless networks.
+Part of \fB\fCaircrack\-ng\fR\&.
+More information: \[la]https://www.aircrack-ng.org/doku.php?id=airodump-ng\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture packets and display information about a wireless network:
+.RE
+.PP
+\fB\fCsudo airodump\-ng {{interface}}\fR
+.RS
+.IP \(bu 2
+Capture packets and display information about a wireless network given the MAC address and channel, and save the output to a file:
+.RE
+.PP
+\fB\fCsudo airodump\-ng \-\-channel {{channel}} \-\-write {{path/to/file}} \-\-bssid {{mac}} {{interface}}\fR

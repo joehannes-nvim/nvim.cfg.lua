@@ -1,0 +1,55 @@
+.TH lmms
+.PP
+.RS
+Free, open source, cross\-platform digital audio workstation.
+Render a \fB\fC\&.mmp\fR or \fB\fC\&.mmpz\fR project file, dump a \fB\fC\&.mmpz\fR as XML, or start the GUI.
+More information: \[la]https://lmms.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the GUI:
+.RE
+.PP
+\fB\fClmms\fR
+.RS
+.IP \(bu 2
+Start the GUI and load external config:
+.RE
+.PP
+\fB\fClmms \-\-config {{path/to/config.xml}}\fR
+.RS
+.IP \(bu 2
+Start the GUI and import MIDI or Hydrogen file:
+.RE
+.PP
+\fB\fClmms \-\-import {{path/to/midi/or/hydrogen/file}}\fR
+.RS
+.IP \(bu 2
+Start the GUI with a specified window size:
+.RE
+.PP
+\fB\fClmms \-\-geometry {{x_size}}x{{y_size}}+{{x_offset}}+{{y_offset}}\fR
+.RS
+.IP \(bu 2
+Dump a \fB\fC\&.mmpz\fR file:
+.RE
+.PP
+\fB\fClmms dump {{path/to/mmpz/file.mmpz}}\fR
+.RS
+.IP \(bu 2
+Render a project file:
+.RE
+.PP
+\fB\fClmms render {{path/to/mmpz_or_mmp/file}}\fR
+.RS
+.IP \(bu 2
+Render the individual tracks of a project file:
+.RE
+.PP
+\fB\fClmms rendertracks {{path/to/mmpz_or_mmp/file}} {{path/to/dump/directory}}\fR
+.RS
+.IP \(bu 2
+Render with custom samplerate, format, and as a loop:
+.RE
+.PP
+\fB\fClmms render \-\-samplerate {{88200}} \-\-format {{ogg}} \-\-loop \-\-output {{path/to/output/file.ogg}}\fR

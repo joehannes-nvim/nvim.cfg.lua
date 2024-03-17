@@ -1,0 +1,36 @@
+.TH zola
+.PP
+.RS
+A static site generator in a single binary with everything built\-in.
+More information: \[la]https://www.getzola.org/documentation/getting-started/cli-usage/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create the directory structure used by Zola at the given directory:
+.RE
+.PP
+\fB\fCzola init {{my_site}}\fR
+.RS
+.IP \(bu 2
+Build the whole site in the \fB\fCpublic\fR directory after deleting it:
+.RE
+.PP
+\fB\fCzola build\fR
+.RS
+.IP \(bu 2
+Build the whole site into a different directory:
+.RE
+.PP
+\fB\fCzola build \-\-output\-dir {{path/to/output_directory/}}\fR
+.RS
+.IP \(bu 2
+Build and serve the site using a local server (default is \fB\fC127.0.0.1:1111\fR):
+.RE
+.PP
+\fB\fCzola serve\fR
+.RS
+.IP \(bu 2
+Build all pages just like the build command would, but without writing any of the results to disk:
+.RE
+.PP
+\fB\fCzola check\fR

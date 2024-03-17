@@ -1,0 +1,49 @@
+.TH cppcheck
+.PP
+.RS
+A static analysis tool for C/C++ code.
+Instead of syntax errors, it focuses on the types of bugs that compilers normally do not detect.
+More information: \[la]http://cppcheck.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively check the current directory, showing progress on the screen and logging error messages to a file:
+.RE
+.PP
+\fB\fCcppcheck . 2> cppcheck.log\fR
+.RS
+.IP \(bu 2
+Recursively check a given directory, and don't print progress messages:
+.RE
+.PP
+\fB\fCcppcheck \-\-quiet {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Check a given file, specifying which tests to perform (by default only errors are shown):
+.RE
+.PP
+\fB\fCcppcheck \-\-enable={{error|warning|style|performance|portability|information|all}} {{path/to/file.cpp}}\fR
+.RS
+.IP \(bu 2
+List available tests:
+.RE
+.PP
+\fB\fCcppcheck \-\-errorlist\fR
+.RS
+.IP \(bu 2
+Check a given file, ignoring specific tests:
+.RE
+.PP
+\fB\fCcppcheck \-\-suppress={{test_id1}} \-\-suppress={{test_id2}} {{path/to/file.cpp}}\fR
+.RS
+.IP \(bu 2
+Check the current directory, providing paths for include files located outside it (e.g. external libraries):
+.RE
+.PP
+\fB\fCcppcheck \-I {{include/directory_1}} \-I {{include/directory_2}} .\fR
+.RS
+.IP \(bu 2
+Check a Microsoft Visual Studio project (\fB\fC*.vcxproj\fR) or solution (\fB\fC*.sln\fR):
+.RE
+.PP
+\fB\fCcppcheck \-\-project={{path/to/project.sln}}\fR

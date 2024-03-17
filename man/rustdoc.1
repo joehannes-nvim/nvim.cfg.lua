@@ -1,0 +1,30 @@
+.TH rustdoc
+.PP
+.RS
+Generate documentation for a Rust crate.
+More information: \[la]https://doc.rust-lang.org/stable/rustdoc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate documentation from the crate's root:
+.RE
+.PP
+\fB\fCrustdoc {{src/lib.rs}}\fR
+.RS
+.IP \(bu 2
+Pass a name for the project:
+.RE
+.PP
+\fB\fCrustdoc {{src/lib.rs}} \-\-crate\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Generate documentation from Markdown files:
+.RE
+.PP
+\fB\fCrustdoc {{path/to/file.md}}\fR
+.RS
+.IP \(bu 2
+Specify the output directory:
+.RE
+.PP
+\fB\fCrustdoc {{src/lib.rs}} \-\-out\-dir {{path/to/output_directory}}\fR

@@ -1,0 +1,36 @@
+.TH distccd
+.PP
+.RS
+Server daemon for the distcc distributed compiler.
+More information: \[la]https://distcc.github.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a daemon with the default settings:
+.RE
+.PP
+\fB\fCdistccd \-\-daemon\fR
+.RS
+.IP \(bu 2
+Start a daemon, accepting connections from IPv4 private network ranges:
+.RE
+.PP
+\fB\fCdistccd \-\-daemon \-\-allow\-private\fR
+.RS
+.IP \(bu 2
+Start a daemon, accepting connections from a specific network address or address range:
+.RE
+.PP
+\fB\fCdistccd \-\-daemon \-\-allow {{ip_address|network_prefix}}\fR
+.RS
+.IP \(bu 2
+Start a daemon with a lowered priority that can run a maximum of 4 tasks at a time:
+.RE
+.PP
+\fB\fCdistccd \-\-daemon \-\-jobs {{4}} \-\-nice {{5}}\fR
+.RS
+.IP \(bu 2
+Start a daemon and register it via mDNS/DNS\-SD (Zeroconf):
+.RE
+.PP
+\fB\fCdistccd \-\-daemon \-\-zeroconf\fR

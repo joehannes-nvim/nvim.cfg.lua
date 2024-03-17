@@ -1,0 +1,24 @@
+.TH openssl genpkey
+.PP
+.RS
+OpenSSL command to generate asymmetric key pairs.
+More information: \[la]https://www.openssl.org/docs/manmaster/man1/openssl-genpkey.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an RSA private key of 2048 bits, saving it to a specific file:
+.RE
+.PP
+\fB\fCopenssl genpkey \-algorithm rsa \-pkeyopt rsa_keygen_bits:{{2048}} \-out {{filename.key}}\fR
+.RS
+.IP \(bu 2
+Generate an elliptic curve private key using the curve \fB\fCprime256v1\fR, saving it to a specific file:
+.RE
+.PP
+\fB\fCopenssl genpkey \-algorithm EC \-pkeyopt ec_paramgen_curve:{{prime256v1}} \-out {{filename.key}}\fR
+.RS
+.IP \(bu 2
+Generate an \fB\fCED25519\fR elliptic curve private key, saving it to a specific file:
+.RE
+.PP
+\fB\fCopenssl genpkey \-algorithm {{ED25519}} \-out {{filename.key}}\fR

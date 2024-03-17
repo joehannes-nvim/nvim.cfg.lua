@@ -1,0 +1,24 @@
+.TH doctl databases sql\-mode
+.PP
+.RS
+View and configure a MySQL database cluster’s global SQL modes.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/sql-mode/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases sql\-mode\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases sql\-mode {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Get a MySQL database cluster's SQL modes:
+.RE
+.PP
+\fB\fCdoctl databases sql\-mode get {{database_id}}\fR
+.RS
+.IP \(bu 2
+Overwrite a MySQL database cluster's SQL modes to the specified modes:
+.RE
+.PP
+\fB\fCdoctl databases sql\-mode set {{database_id}} {{sql_mode_1 sql_mode_2 ...}}\fR

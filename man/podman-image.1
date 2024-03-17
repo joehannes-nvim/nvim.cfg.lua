@@ -1,0 +1,31 @@
+.TH podman image
+.PP
+.RS
+Manage Docker images.
+See also \fB\fCpodman build\fR, \fB\fCpodman import\fR, and \fB\fCpodman pull\fR\&.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-image.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List local Docker images:
+.RE
+.PP
+\fB\fCpodman image ls\fR
+.RS
+.IP \(bu 2
+Delete unused local Docker images:
+.RE
+.PP
+\fB\fCpodman image prune\fR
+.RS
+.IP \(bu 2
+Delete all unused images (not just those without a tag):
+.RE
+.PP
+\fB\fCpodman image prune \-\-all\fR
+.RS
+.IP \(bu 2
+Show the history of a local Docker image:
+.RE
+.PP
+\fB\fCpodman image history {{image}}\fR

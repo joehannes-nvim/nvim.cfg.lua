@@ -1,0 +1,43 @@
+.TH latexmk
+.PP
+.RS
+Compile LaTeX source files into finished documents.
+Automatically does multiple runs when needed.
+More information: \[la]https://mg.readthedocs.io/latexmk.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a DVI (Device Independent file) document from every source:
+.RE
+.PP
+\fB\fClatexmk\fR
+.RS
+.IP \(bu 2
+Compile a DVI document from a specific source file:
+.RE
+.PP
+\fB\fClatexmk {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a PDF document:
+.RE
+.PP
+\fB\fClatexmk \-pdf {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Force the generation of a document even if there are errors:
+.RE
+.PP
+\fB\fClatexmk \-f {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Clean up temporary TEX files created for a specific TEX file:
+.RE
+.PP
+\fB\fClatexmk \-c {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Clean up all temporary TEX files in the current directory:
+.RE
+.PP
+\fB\fClatexmk \-c\fR

@@ -1,0 +1,54 @@
+.TH rclone
+.PP
+.RS
+Copy, synchronize or move files and directories to and from many cloud services.
+More information: \[la]https://rclone.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List contents of a directory on an rclone remote:
+.RE
+.PP
+\fB\fCrclone lsf {{remote_name}}:{{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Copy file or directory from local source to remote destination:
+.RE
+.PP
+\fB\fCrclone copy {{path/to/source_file_or_directory}} {{remote_name}}:{{path/to/destination_directory}}\fR
+.RS
+.IP \(bu 2
+Copy file or directory from remote source to local destination:
+.RE
+.PP
+\fB\fCrclone copy {{remote_name}}:{{path/to/source_file_or_directory}} {{path/to/destination_directory}}\fR
+.RS
+.IP \(bu 2
+Sync local source to remote destination, changing the destination only:
+.RE
+.PP
+\fB\fCrclone sync {{path/to/file_or_directory}} {{remote_name}}:{{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Move file or directory from local source to remote destination:
+.RE
+.PP
+\fB\fCrclone move {{path/to/file_or_directory}} {{remote_name}}:{{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Delete remote file or directory (use \fB\fC\-\-dry\-run\fR to test, remove it to actually delete):
+.RE
+.PP
+\fB\fCrclone \-\-dry\-run delete {{remote_name}}:{{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Mount rclone remote (experimental):
+.RE
+.PP
+\fB\fCrclone mount {{remote_name}}:{{path/to/directory}} {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Unmount rclone remote if CTRL\-C fails (experimental):
+.RE
+.PP
+\fB\fCfusermount \-u {{path/to/mount_point}}\fR

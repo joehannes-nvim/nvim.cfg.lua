@@ -1,0 +1,36 @@
+.TH stylua
+.PP
+.RS
+An opinionated Lua code formatter.
+More information: \[la]https://github.com/JohnnyMorganz/StyLua\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Auto\-format a file or an entire directory:
+.RE
+.PP
+\fB\fCstylua {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Check if a specific file has been formatted:
+.RE
+.PP
+\fB\fCstylua \-\-check {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Run with a specific configuration file:
+.RE
+.PP
+\fB\fCstylua \-\-config\-path {{path/to/config_file}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Format code from \fB\fCstdin\fR and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCstylua \- < {{path/to/file.lua}}\fR
+.RS
+.IP \(bu 2
+Format a file or directory using spaces and preferring single quotes:
+.RE
+.PP
+\fB\fCstylua \-\-indent\-type {{Spaces}} \-\-quote\-style {{AutoPreferSingle}} {{path/to/file_or_directory}}\fR

@@ -1,0 +1,24 @@
+.TH jstack
+.PP
+.RS
+Java stack trace tool.
+More information: \[la]https://manned.org/jstack\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print Java stack traces for all threads in a Java process:
+.RE
+.PP
+\fB\fCjstack {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Print mixed mode (Java/C++) stack traces for all threads in a Java process:
+.RE
+.PP
+\fB\fCjstack \-m {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Print stack traces from Java core dump:
+.RE
+.PP
+\fB\fCjstack {{/usr/bin/java}} {{file.core}}\fR

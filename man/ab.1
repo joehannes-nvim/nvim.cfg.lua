@@ -1,0 +1,36 @@
+.TH ab
+.PP
+.RS
+Apache HTTP server benchmarking tool.
+More information: \[la]https://httpd.apache.org/docs/current/programs/ab.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute 100 HTTP GET requests to a given URL:
+.RE
+.PP
+\fB\fCab \-n {{100}} {{url}}\fR
+.RS
+.IP \(bu 2
+Execute 100 HTTP GET requests, in concurrent batches of 10, to a URL:
+.RE
+.PP
+\fB\fCab \-n {{100}} \-c {{10}} {{url}}\fR
+.RS
+.IP \(bu 2
+Execute 100 HTTP POST requests to a URL, using a JSON payload from a file:
+.RE
+.PP
+\fB\fCab \-n {{100}} \-T {{application/json}} \-p {{path/to/file.json}} {{url}}\fR
+.RS
+.IP \(bu 2
+Use HTTP [K]eep Alive, i.e. perform multiple requests within one HTTP session:
+.RE
+.PP
+\fB\fCab \-k {{url}}\fR
+.RS
+.IP \(bu 2
+Set the maximum number of seconds to spend for benchmarking:
+.RE
+.PP
+\fB\fCab \-t {{60}} {{url}}\fR

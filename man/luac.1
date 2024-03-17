@@ -1,0 +1,18 @@
+.TH luac
+.PP
+.RS
+Lua bytecode compiler.
+More information: \[la]https://www.lua.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a Lua source file to Lua bytecode:
+.RE
+.PP
+\fB\fCluac \-o {{byte_code.luac}} {{source.lua}}\fR
+.RS
+.IP \(bu 2
+Do not include debug symbols in the output:
+.RE
+.PP
+\fB\fCluac \-s \-o {{byte_code.luac}} {{source.lua}}\fR

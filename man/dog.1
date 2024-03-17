@@ -1,0 +1,47 @@
+.TH dog
+.PP
+.RS
+DNS lookup utility.
+It has colorful output, supports DNS\-over\-TLS and DNS\-over\-HTTPS protocols, and can emit JSON.
+More information: \[la]https://dns.lookup.dog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records):
+.RE
+.PP
+\fB\fCdog {{example.com}}\fR
+.RS
+.IP \(bu 2
+Query the MX records type associated with a given domain name:
+.RE
+.PP
+\fB\fCdog {{example.com}} MX\fR
+.RS
+.IP \(bu 2
+Specify a specific DNS server to query (e.g. Cloudflare):
+.RE
+.PP
+\fB\fCdog {{example.com}} MX @{{1.1.1.1}}\fR
+.RS
+.IP \(bu 2
+Query over TCP rather than UDP:
+.RE
+.PP
+\fB\fCdog {{example.com}} MX @{{1.1.1.1}} \-\-tcp\fR
+.RS
+.IP \(bu 2
+Query the MX records type associated with a given domain name over TCP using explicit arguments:
+.RE
+.PP
+\fB\fCdog \-\-query {{example.com}} \-\-type MX \-\-nameserver {{1.1.1.1}} \-\-tcp\fR
+.RS
+.IP \(bu 2
+Lookup the 
+.BR IP (s) 
+associated with a hostname (A records) using DNS over HTTPS (DoH):
+.RE
+.PP
+\fB\fCdog {{example.com}} \-\-https @{{https://cloudflare\-dns.com/dns\-query}}\fR

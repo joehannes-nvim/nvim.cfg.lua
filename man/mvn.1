@@ -1,0 +1,55 @@
+.TH mvn
+.PP
+.RS
+Apache Maven.
+Tool for building and managing Java\-based projects.
+More information: \[la]https://maven.apache.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a project:
+.RE
+.PP
+\fB\fCmvn compile\fR
+.RS
+.IP \(bu 2
+Compile and package the compiled code in its distributable format, such as a \fB\fCjar\fR:
+.RE
+.PP
+\fB\fCmvn package\fR
+.RS
+.IP \(bu 2
+Compile and package, skipping unit tests:
+.RE
+.PP
+\fB\fCmvn package \-DskipTests\fR
+.RS
+.IP \(bu 2
+Install the built package in local maven repository. (This will invoke the compile and package commands too):
+.RE
+.PP
+\fB\fCmvn install\fR
+.RS
+.IP \(bu 2
+Delete build artifacts from the target directory:
+.RE
+.PP
+\fB\fCmvn clean\fR
+.RS
+.IP \(bu 2
+Do a clean and then invoke the package phase:
+.RE
+.PP
+\fB\fCmvn clean package\fR
+.RS
+.IP \(bu 2
+Clean and then package the code with a given build profile:
+.RE
+.PP
+\fB\fCmvn clean \-P {{profile}} package\fR
+.RS
+.IP \(bu 2
+Run a class with a main method:
+.RE
+.PP
+\fB\fCmvn exec:java \-Dexec.mainClass="{{com.example.Main}}" \-Dexec.args="{{argument1 argument2 ...}}"\fR

@@ -1,0 +1,36 @@
+.TH qutebrowser
+.PP
+.RS
+A keyboard\-driven, vim\-like browser based on PyQt5.
+More information: \[la]https://qutebrowser.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open qutebrowser with a specified storage directory:
+.RE
+.PP
+\fB\fCqutebrowser \-\-basedir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Open a qutebrowser instance with temporary settings:
+.RE
+.PP
+\fB\fCqutebrowser \-\-set {{content.geolocation}} {{true|false}}\fR
+.RS
+.IP \(bu 2
+Restore a named session of a qutebrowser instance:
+.RE
+.PP
+\fB\fCqutebrowser \-\-restore {{session_name}}\fR
+.RS
+.IP \(bu 2
+Launch qutebrowser, opening all URLs using the specified method:
+.RE
+.PP
+\fB\fCqutebrowser \-\-target {{auto|tab|tab\-bg|tab\-silent|tab\-bg\-silent|window|private\-window}}\fR
+.RS
+.IP \(bu 2
+Open qutebrowser with a temporary base directory and print logs to \fB\fCstdout\fR as JSON:
+.RE
+.PP
+\fB\fCqutebrowser \-\-temp\-basedir \-\-json\-logging\fR

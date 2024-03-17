@@ -1,0 +1,30 @@
+.TH doctl databases firewalls
+.PP
+.RS
+Manage firewalls for database clusters.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/firewalls\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases firewalls\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases firewalls {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Retrieve a list of firewall rules for a given database:
+.RE
+.PP
+\fB\fCdoctl databases firewalls list\fR
+.RS
+.IP \(bu 2
+Add a database firewall rule to a given database:
+.RE
+.PP
+\fB\fCdoctl databases firewalls append {{database_id}} \-\-rule {{droplet|k8s|ip_addr|tag|app}}:{{value}}\fR
+.RS
+.IP \(bu 2
+Remove a firewall rule for a given database:
+.RE
+.PP
+\fB\fCdoctl databases firewalls remove {{database_id}} {{rule_uuid}}\fR

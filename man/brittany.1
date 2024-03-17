@@ -1,0 +1,36 @@
+.TH brittany
+.PP
+.RS
+Pretty\-print Haskell source files.
+More information: \[la]https://github.com/lspitzner/brittany#readme\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a Haskell source file and print the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbrittany {{path/to/file.hs}}\fR
+.RS
+.IP \(bu 2
+Format all Haskell source files in the current directory in\-place:
+.RE
+.PP
+\fB\fCbrittany \-\-write\-mode=inplace {{*.hs}}\fR
+.RS
+.IP \(bu 2
+Check whether a Haskell source file needs changes and indicate the result through the programme's exit code:
+.RE
+.PP
+\fB\fCbrittany \-\-check\-mode {{path/to/file.hs}}\fR
+.RS
+.IP \(bu 2
+Format a Haskell source file using the specified amount of spaces per indentation level and line length:
+.RE
+.PP
+\fB\fCbrittany \-\-indent {{4}} \-\-columns {{100}} {{path/to/file.hs}}\fR
+.RS
+.IP \(bu 2
+Format a Haskell source file according to the style defined in the specified config file:
+.RE
+.PP
+\fB\fCbrittany \-\-config\-file {{path/to/config.yaml}} {{path/to/file.hs}}\fR

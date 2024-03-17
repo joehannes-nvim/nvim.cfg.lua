@@ -1,0 +1,54 @@
+.TH takeout
+.PP
+.RS
+A Docker\-based development\-only dependency manager.
+More information: \[la]https://github.com/tighten/takeout\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a list of available services:
+.RE
+.PP
+\fB\fCtakeout enable\fR
+.RS
+.IP \(bu 2
+Enable a specific service:
+.RE
+.PP
+\fB\fCtakeout enable {{name}}\fR
+.RS
+.IP \(bu 2
+Enable a specific service with the default parameters:
+.RE
+.PP
+\fB\fCtakeout enable \-\-default {{name}}\fR
+.RS
+.IP \(bu 2
+Display a list of enabled services:
+.RE
+.PP
+\fB\fCtakeout disable\fR
+.RS
+.IP \(bu 2
+Disable a specific service:
+.RE
+.PP
+\fB\fCtakeout disable {{name}}\fR
+.RS
+.IP \(bu 2
+Disable all services:
+.RE
+.PP
+\fB\fCtakeout disable \-\-all\fR
+.RS
+.IP \(bu 2
+Start a specific container:
+.RE
+.PP
+\fB\fCtakeout start {{container_id}}\fR
+.RS
+.IP \(bu 2
+Stop a specific container:
+.RE
+.PP
+\fB\fCtakeout stop {{container_id}}\fR

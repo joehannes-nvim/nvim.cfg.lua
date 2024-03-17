@@ -1,0 +1,42 @@
+.TH ocrmypdf
+.PP
+.RS
+Generate a searchable PDF or PDF/A from a scanned PDF or an image of text.
+More information: \[la]https://ocrmypdf.readthedocs.io/en/latest/cookbook.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new searchable PDF/A file from a scanned PDF or image file:
+.RE
+.PP
+\fB\fCocrmypdf {{path/to/input_file}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Replace a scanned PDF file with a searchable PDF file:
+.RE
+.PP
+\fB\fCocrmypdf {{path/to/file.pdf}} {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Skip pages of a mixed\-format input PDF file that already contain text:
+.RE
+.PP
+\fB\fCocrmypdf \-\-skip\-text {{path/to/input.pdf}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Clean, de\-skew, and rotate pages of a poor scan:
+.RE
+.PP
+\fB\fCocrmypdf \-\-clean \-\-deskew \-\-rotate\-pages {{path/to/input_file}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Set the metadata of the searchable PDF file:
+.RE
+.PP
+\fB\fCocrmypdf \-\-title "{{title}}" \-\-author "{{author}}" \-\-subject "{{subject}}" \-\-keywords "{{keyword; key phrase; ...}}" {{path/to/input_file}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCocrmypdf \-\-help\fR

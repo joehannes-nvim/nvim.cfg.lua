@@ -1,0 +1,30 @@
+.TH avrdude
+.PP
+.RS
+Driver program for Atmel AVR microcontrollers programming.
+More information: \[la]https://www.nongnu.org/avrdude/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read AVR microcontroller:
+.RE
+.PP
+\fB\fCavrdude \-p {{AVR_device}} \-c {{programmer}} \-U flash:r:{{file.hex}}:i\fR
+.RS
+.IP \(bu 2
+Write AVR microcontroller:
+.RE
+.PP
+\fB\fCavrdude \-p {{AVR_device}} \-c {{programmer}} \-U flash:w:{{file.hex}}\fR
+.RS
+.IP \(bu 2
+List available AVR devices:
+.RE
+.PP
+\fB\fCavrdude \-p \\?\fR
+.RS
+.IP \(bu 2
+List available AVR programmers:
+.RE
+.PP
+\fB\fCavrdude \-c \\?\fR

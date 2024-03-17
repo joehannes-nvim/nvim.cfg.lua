@@ -1,0 +1,54 @@
+.TH conda install
+.PP
+.RS
+Install packages into an existing conda environment.
+More information: \[la]https://docs.conda.io/projects/conda/en/latest/commands/install.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a single package into the currently active conda environment:
+.RE
+.PP
+\fB\fCconda install {{package}}\fR
+.RS
+.IP \(bu 2
+Install a single package into the currently active conda environment using channel conda\-forge:
+.RE
+.PP
+\fB\fCconda install \-c conda\-forge {{package}}\fR
+.RS
+.IP \(bu 2
+Install a single package into the currently active conda environment using channel conda\-forge and ignoring other channels:
+.RE
+.PP
+\fB\fCconda install \-c conda\-forge \-\-override\-channels {{package}}\fR
+.RS
+.IP \(bu 2
+Install multiple packages:
+.RE
+.PP
+\fB\fCconda install {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Install a specific version of a package:
+.RE
+.PP
+\fB\fCconda install {{package}}={{version}}\fR
+.RS
+.IP \(bu 2
+Install a package into a specific environment:
+.RE
+.PP
+\fB\fCconda install \-\-name {{environment}} {{package}}\fR
+.RS
+.IP \(bu 2
+Update a package in the current environment:
+.RE
+.PP
+\fB\fCconda install \-\-upgrade {{package}}\fR
+.RS
+.IP \(bu 2
+Install a package and agree to the transactions without prompting:
+.RE
+.PP
+\fB\fCconda install \-\-yes {{package}}\fR

@@ -1,0 +1,30 @@
+.TH lli
+.PP
+.RS
+Directly execute programs from LLVM bitcode.
+More information: \[la]https://www.llvm.org/docs/CommandGuide/lli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute a bitcode or IR file:
+.RE
+.PP
+\fB\fClli {{path/to/file.ll}}\fR
+.RS
+.IP \(bu 2
+Execute with command\-line arguments:
+.RE
+.PP
+\fB\fClli {{path/to/file.ll}} {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+Enable all optimizations:
+.RE
+.PP
+\fB\fClli \-O3 {{path/to/file.ll}}\fR
+.RS
+.IP \(bu 2
+Load a dynamic library before linking:
+.RE
+.PP
+\fB\fClli \-\-dlopen={{path/to/library.dll}} {{path/to/file.ll}}\fR

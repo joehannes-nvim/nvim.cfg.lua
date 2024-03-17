@@ -1,0 +1,24 @@
+.TH gdalwarp
+.PP
+.RS
+Image reprojection and warping utility.
+More information: \[la]https://gdal.org/programs/gdalwarp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Reproject a raster dataset:
+.RE
+.PP
+\fB\fCgdalwarp \-t_srs {{EPSG:4326}} {{path/to/input.tif}} {{path/to/output.tif}}\fR
+.RS
+.IP \(bu 2
+Crop a raster dataset by using specific coordinates:
+.RE
+.PP
+\fB\fCgdalwarp \-te {{min_x}} {{min_y}} {{max_x}} {{max_y}} \-te_srs {{EPSG:4326}} {{path/to/input.tif}} {{path/to/output.tif}}\fR
+.RS
+.IP \(bu 2
+Crop a raster dataset using a vector layer:
+.RE
+.PP
+\fB\fCgdalwarp \-cutline {{path/to/area_to_cut.geojson}} \-crop_to_cutline {{path/to/input.tif}} {{path/to/output.tif}}\fR

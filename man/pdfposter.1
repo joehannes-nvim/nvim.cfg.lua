@@ -1,0 +1,18 @@
+.TH pdfposter
+.PP
+.RS
+Convert a large\-sheeted PDF into multiple A4 pages for printing.
+More information: \[la]https://pdfposter.readthedocs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an A2 poster into 4 A4 pages:
+.RE
+.PP
+\fB\fCpdfposter \-\-poster\-size a2 {{input_file.pdf}} {{output_file.pdf}}\fR
+.RS
+.IP \(bu 2
+Scale an A4 poster to A3 and then generate 2 A4 pages:
+.RE
+.PP
+\fB\fCpdfposter \-\-scale 2 {{input_file.pdf}} {{output_file.pdf}}\fR

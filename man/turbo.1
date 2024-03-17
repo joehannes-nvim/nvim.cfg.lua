@@ -1,0 +1,55 @@
+.TH turbo
+.PP
+.RS
+High\-performance build system for JavaScript and TypeScript codebases.
+See also: \fB\fCnx\fR\&.
+More information: \[la]https://turborepo.org/docs/reference/command-line-reference\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in using the default web browser with a Vercel account:
+.RE
+.PP
+\fB\fCturbo login\fR
+.RS
+.IP \(bu 2
+Link the current directory to a Vercel organization and enable remote caching:
+.RE
+.PP
+\fB\fCturbo link\fR
+.RS
+.IP \(bu 2
+Build the current project:
+.RE
+.PP
+\fB\fCturbo run build\fR
+.RS
+.IP \(bu 2
+Run a task without concurrency:
+.RE
+.PP
+\fB\fCturbo run {{task_name}} \-\-concurrency={{1}}\fR
+.RS
+.IP \(bu 2
+Run a task ignoring cached artifacts and forcibly re\-execute all tasks:
+.RE
+.PP
+\fB\fCturbo run {{task_name}} \-\-force\fR
+.RS
+.IP \(bu 2
+Run a task in parallel across packages:
+.RE
+.PP
+\fB\fCturbo run {{task_name}} \-\-parallel \-\-no\-cache\fR
+.RS
+.IP \(bu 2
+Unlink the current directory from your Vercel organization and disable Remote Caching:
+.RE
+.PP
+\fB\fCturbo unlink\fR
+.RS
+.IP \(bu 2
+Generate a Dot graph of a specific task execution (the output file format can be controlled with the filename):
+.RE
+.PP
+\fB\fCturbo run {{task_name}} \-\-graph={{path/to/file}}.{{html|jpg|json|pdf|png|svg}}\fR

@@ -1,0 +1,24 @@
+.TH git column
+.PP
+.RS
+Display data in columns.
+More information: \[la]https://git-scm.com/docs/git-column\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format \fB\fCstdin\fR as multiple columns:
+.RE
+.PP
+\fB\fCls | git column \-\-mode={{column}}\fR
+.RS
+.IP \(bu 2
+Format \fB\fCstdin\fR as multiple columns with a maximum width of \fB\fC100\fR:
+.RE
+.PP
+\fB\fCls | git column \-\-mode=column \-\-width={{100}}\fR
+.RS
+.IP \(bu 2
+Format \fB\fCstdin\fR as multiple columns with a maximum padding of \fB\fC30\fR:
+.RE
+.PP
+\fB\fCls | git column \-\-mode=column \-\-padding={{30}}\fR

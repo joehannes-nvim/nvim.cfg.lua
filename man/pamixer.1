@@ -1,0 +1,48 @@
+.TH pamixer
+.PP
+.RS
+A simple command\-line mixer for PulseAudio.
+More information: \[la]https://github.com/cdemoulins/pamixer\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all sinks and sources with their corresponding IDs:
+.RE
+.PP
+\fB\fCpamixer \-\-list\-sinks \-\-list\-sources\fR
+.RS
+.IP \(bu 2
+Set the volume to 75% on the default sink:
+.RE
+.PP
+\fB\fCpamixer \-\-set\-volume {{75}}\fR
+.RS
+.IP \(bu 2
+Toggle mute on a sink other than the default:
+.RE
+.PP
+\fB\fCpamixer \-\-toggle\-mute \-\-sink {{ID}}\fR
+.RS
+.IP \(bu 2
+Increase the volume on default sink by 5%:
+.RE
+.PP
+\fB\fCpamixer \-\-increase {{5}}\fR
+.RS
+.IP \(bu 2
+Decrease the volume on a source by 5%:
+.RE
+.PP
+\fB\fCpamixer \-\-decrease {{5}} \-\-source {{ID}}\fR
+.RS
+.IP \(bu 2
+Use the allow boost option to increase, decrease, or set the volume above 100%:
+.RE
+.PP
+\fB\fCpamixer \-\-set\-volume {{105}} \-\-allow\-boost\fR
+.RS
+.IP \(bu 2
+Mute the default sink (use \fB\fC\-\-unmute\fR instead to unmute):
+.RE
+.PP
+\fB\fCpamixer \-\-mute\fR

@@ -1,0 +1,48 @@
+.TH pypy
+.PP
+.RS
+Fast and compliant alternative implementation of the Python language.
+More information: \[la]https://doc.pypy.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCpypy\fR
+.RS
+.IP \(bu 2
+Execute script in a given Python file:
+.RE
+.PP
+\fB\fCpypy {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Execute script as part of an interactive shell:
+.RE
+.PP
+\fB\fCpypy \-i {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Execute a Python expression:
+.RE
+.PP
+\fB\fCpypy \-c "{{expression}}"\fR
+.RS
+.IP \(bu 2
+Run library module as a script (terminates option list):
+.RE
+.PP
+\fB\fCpypy \-m {{module}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Install a package using pip:
+.RE
+.PP
+\fB\fCpypy \-m pip install {{package}}\fR
+.RS
+.IP \(bu 2
+Interactively debug a Python script:
+.RE
+.PP
+\fB\fCpypy \-m pdb {{path/to/file.py}}\fR

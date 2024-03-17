@@ -1,0 +1,18 @@
+.TH case
+.PP
+.RS
+Bash builtin construct for creating multi\-choice conditional statements.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#index-case\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Match a variable against string literals to decide which command to run:
+.RE
+.PP
+\fB\fCcase {{$tocount}} in {{words}}) {{wc \-w README}}; ;; {{lines}}) {{wc \-l README}}; ;; esac\fR
+.RS
+.IP \(bu 2
+Combine patterns with |, use * as a fallback pattern:
+.RE
+.PP
+\fB\fCcase {{$tocount}} in {{[wW]|words}}) {{wc \-w README}}; ;; {{[lL]|lines}}) {{wc \-l README}}; ;; *) {{echo "what?"}}; ;; esac\fR

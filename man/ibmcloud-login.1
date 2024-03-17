@@ -1,0 +1,42 @@
+.TH ibmcloud login
+.PP
+.RS
+Log in to the IBM Cloud.
+More information: \[la]https://cloud.ibm.com/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in by using an interactive prompt:
+.RE
+.PP
+\fB\fCibmcloud login\fR
+.RS
+.IP \(bu 2
+Log in to a specific API endpoint (default is \fB\fCcloud.ibm.com\fR):
+.RE
+.PP
+\fB\fCibmcloud login \-a {{api_endpoint}}\fR
+.RS
+.IP \(bu 2
+Log in by providing username, password and the targeted region as parameters:
+.RE
+.PP
+\fB\fCibmcloud login \-u {{username}} \-p {{password}} \-r {{us\-south}}\fR
+.RS
+.IP \(bu 2
+Log in with an API key, passing it as an argument:
+.RE
+.PP
+\fB\fCibmcloud login \-\-apikey {{api_key_string}}\fR
+.RS
+.IP \(bu 2
+Log in with an API key, passing it as a file:
+.RE
+.PP
+\fB\fCibmcloud login \-\-apikey @{{path/to/api_key_file}}\fR
+.RS
+.IP \(bu 2
+Log in with a federated ID (single sign\-on):
+.RE
+.PP
+\fB\fCibmcloud login \-\-sso\fR

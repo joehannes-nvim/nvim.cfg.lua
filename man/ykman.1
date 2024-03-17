@@ -1,0 +1,30 @@
+.TH ykman
+.PP
+.RS
+The YubiKey Manager can be used to configure all aspects of the YubiKey.
+More information: \[la]https://docs.yubico.com/software/yubikey/tools/ykman/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get information from YubiKey:
+.RE
+.PP
+\fB\fCykman info\fR
+.RS
+.IP \(bu 2
+Get information for a given application from YubiKey:
+.RE
+.PP
+\fB\fCykman {{fido|oath|openpgp|otp|piv}} info\fR
+.RS
+.IP \(bu 2
+Get a list of enabled applications over NFC from YubiKey:
+.RE
+.PP
+\fB\fCykman config nfc \-\-list\fR
+.RS
+.IP \(bu 2
+Enable application over USB on YubiKey:
+.RE
+.PP
+\fB\fCykman config usb \-\-enable {{OTP|U2F|FIDO2|OATH|PIV|OPENPGP|HSMAUTH}}\fR

@@ -1,0 +1,30 @@
+.TH live\-server
+.PP
+.RS
+A simple development HTTP server with live reload capability.
+More information: \[la]https://github.com/tapio/live-server\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Serve an \fB\fCindex.html\fR file and reload on changes:
+.RE
+.PP
+\fB\fClive\-server\fR
+.RS
+.IP \(bu 2
+Specify a port (default is 8080) from which to serve a file:
+.RE
+.PP
+\fB\fClive\-server \-\-port={{8081}}\fR
+.RS
+.IP \(bu 2
+Specify a given file to serve:
+.RE
+.PP
+\fB\fClive\-server \-\-open={{about.html}}\fR
+.RS
+.IP \(bu 2
+Proxy all requests for ROUTE to URL:
+.RE
+.PP
+\fB\fClive\-server \-\-proxy={{/}}:{{http:localhost:3000}}\fR

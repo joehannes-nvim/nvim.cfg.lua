@@ -1,0 +1,42 @@
+.TH waitress\-serve
+.PP
+.RS
+Pure Python WSGI HTTP Server.
+More information: \[la]https://docs.pylonsproject.org/projects/waitress/en/latest/runner.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a Python web app:
+.RE
+.PP
+\fB\fCwaitress\-serve {{import.path:wsgi_func}}\fR
+.RS
+.IP \(bu 2
+Listen on port 8080 on localhost:
+.RE
+.PP
+\fB\fCwaitress\-serve \-\-listen={{localhost}}:{{8080}} {{import.path:wsgi_func}}\fR
+.RS
+.IP \(bu 2
+Start waitress on a Unix socket:
+.RE
+.PP
+\fB\fCwaitress\-serve \-\-unix\-socket={{path/to/socket}} {{import.path:wsgi_func}}\fR
+.RS
+.IP \(bu 2
+Use 4 threads to process requests:
+.RE
+.PP
+\fB\fCwaitress\-serve \-\-threads={{4}} {{import.path:wsgifunc}}\fR
+.RS
+.IP \(bu 2
+Call a factory method that returns a WSGI object:
+.RE
+.PP
+\fB\fCwaitress\-serve \-\-call {{import.path.wsgi_factory}}\fR
+.RS
+.IP \(bu 2
+Set the URL scheme to HTTPS:
+.RE
+.PP
+\fB\fCwaitress\-serve \-\-url\-scheme={{https}} {{import.path:wsgi_func}}\fR

@@ -1,0 +1,37 @@
+.TH pueue start
+.PP
+.RS
+Resume operation of specific tasks or groups of tasks.
+See also: \fB\fCpueue pause\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Resume all tasks in the default group:
+.RE
+.PP
+\fB\fCpueue start\fR
+.RS
+.IP \(bu 2
+Resume a specific task:
+.RE
+.PP
+\fB\fCpueue start {{task_id}}\fR
+.RS
+.IP \(bu 2
+Resume multiple tasks at once:
+.RE
+.PP
+\fB\fCpueue start {{task_id}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Resume all tasks and start their children:
+.RE
+.PP
+\fB\fCpueue start \-\-all \-\-children\fR
+.RS
+.IP \(bu 2
+Resume all tasks in a specific group:
+.RE
+.PP
+\fB\fCpueue start group {{group_name}}\fR

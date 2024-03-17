@@ -1,0 +1,54 @@
+.TH find
+.PP
+.RS
+Find files or directories under the given directory tree, recursively.
+More information: \[la]https://manned.org/find\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find files by extension:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-name '{{*.ext}}'\fR
+.RS
+.IP \(bu 2
+Find files matching multiple path/name patterns:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-path '{{**/path/**/*.ext}}' \-or \-name '{{*pattern*}}'\fR
+.RS
+.IP \(bu 2
+Find directories matching a given name, in case\-insensitive mode:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-type d \-iname '{{*lib*}}'\fR
+.RS
+.IP \(bu 2
+Find files matching a given pattern, excluding specific paths:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-name '{{*.py}}' \-not \-path '{{*/site\-packages/*}}'\fR
+.RS
+.IP \(bu 2
+Find files matching a given size range, limiting the recursive depth to "1":
+.RE
+.PP
+\fB\fCfind {{root_path}} \-maxdepth 1 \-size {{+500k}} \-size {{\-10M}}\fR
+.RS
+.IP \(bu 2
+Run a command for each file (use \fB\fC{}\fR within the command to access the filename):
+.RE
+.PP
+\fB\fCfind {{root_path}} \-name '{{*.ext}}' \-exec {{wc \-l {} }}\\;\fR
+.RS
+.IP \(bu 2
+Find files modified in the last 7 days:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-daystart \-mtime \-{{7}}\fR
+.RS
+.IP \(bu 2
+Find empty (0 byte) files and delete them:
+.RE
+.PP
+\fB\fCfind {{root_path}} \-type {{f}} \-empty \-delete\fR

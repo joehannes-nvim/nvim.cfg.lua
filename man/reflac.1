@@ -1,0 +1,36 @@
+.TH reflac
+.PP
+.RS
+Recompress FLAC files in\-place while preserving metadata.
+More information: \[la]https://github.com/chungy/reflac\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recompress a directory of FLAC files:
+.RE
+.PP
+\fB\fCreflac {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Enable maximum compression (very slow):
+.RE
+.PP
+\fB\fCreflac \-\-best {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display filenames as they are processed:
+.RE
+.PP
+\fB\fCreflac \-\-verbose {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Recurse into subdirectories:
+.RE
+.PP
+\fB\fCreflac \-\-recursive {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Preserve file modification times:
+.RE
+.PP
+\fB\fCreflac \-\-preserve {{path/to/directory}}\fR

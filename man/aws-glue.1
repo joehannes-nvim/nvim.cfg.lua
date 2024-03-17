@@ -1,0 +1,43 @@
+.TH aws glue
+.PP
+.RS
+CLI for AWS Glue.
+Defines the public endpoint for the AWS Glue service.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/glue/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List jobs:
+.RE
+.PP
+\fB\fCaws glue list\-jobs\fR
+.RS
+.IP \(bu 2
+Start a job:
+.RE
+.PP
+\fB\fCaws glue start\-job\-run \-\-job\-name {{job_name}}\fR
+.RS
+.IP \(bu 2
+Start running a workflow:
+.RE
+.PP
+\fB\fCaws glue start\-workflow\-run \-\-name {{workflow_name}}\fR
+.RS
+.IP \(bu 2
+List triggers:
+.RE
+.PP
+\fB\fCaws glue list\-triggers\fR
+.RS
+.IP \(bu 2
+Start a trigger:
+.RE
+.PP
+\fB\fCaws glue start\-trigger \-\-name {{trigger_name}}\fR
+.RS
+.IP \(bu 2
+Create a dev endpoint:
+.RE
+.PP
+\fB\fCaws glue create\-dev\-endpoint \-\-endpoint\-name {{name}} \-\-role\-arn {{role_arn_used_by_endpoint}}\fR

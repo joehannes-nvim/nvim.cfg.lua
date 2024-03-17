@@ -1,0 +1,36 @@
+.TH pio check
+.PP
+.RS
+Perform a static analysis check on a PlatformIO project.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_check.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform a basic analysis check on the current project:
+.RE
+.PP
+\fB\fCpio check\fR
+.RS
+.IP \(bu 2
+Perform a basic analysis check on a specific project:
+.RE
+.PP
+\fB\fCpio check \-\-project\-dir {{project_dir}}\fR
+.RS
+.IP \(bu 2
+Perform an analysis check for a specific environment:
+.RE
+.PP
+\fB\fCpio check \-\-environment {{environment}}\fR
+.RS
+.IP \(bu 2
+Perform an analysis check and only report a specified defect severity type:
+.RE
+.PP
+\fB\fCpio check \-\-severity {{low|medium|high}}\fR
+.RS
+.IP \(bu 2
+Perform an analysis check and show detailed information when processing environments:
+.RE
+.PP
+\fB\fCpio check \-\-verbose\fR

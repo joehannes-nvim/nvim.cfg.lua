@@ -1,0 +1,31 @@
+.TH cmctl
+.PP
+.RS
+Manage cert\-manager resources inside your cluster.
+Check cert signing status, approve/deny requests, and issue new certificate requests.
+More information: \[la]https://cert-manager.io/docs/usage/cmctl/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check if the cert\-manager API is ready:
+.RE
+.PP
+\fB\fCcmctl check api\fR
+.RS
+.IP \(bu 2
+Check the status of a certificate:
+.RE
+.PP
+\fB\fCcmctl status certificate {{cert_name}}\fR
+.RS
+.IP \(bu 2
+Create a new certificate request based on an existing certificate:
+.RE
+.PP
+\fB\fCcmctl create certificaterequest my\-cr \-\-from\-certificate\-file {{cert.yaml}}\fR
+.RS
+.IP \(bu 2
+Create a new certificate request, fetch the signed certificate, and set a maximum wait time:
+.RE
+.PP
+\fB\fCcmctl create certificaterequest my\-cr \-\-from\-certificate\-file {{cert.yaml}} \-\-fetch\-certificate \-\-timeout {{20m}}\fR

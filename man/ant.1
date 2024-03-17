@@ -1,0 +1,38 @@
+.TH ant
+.PP
+.RS
+Apache Ant.
+Tool for building and managing Java\-based projects.
+More information: \[la]https://ant.apache.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a project with default build file \fB\fCbuild.xml\fR:
+.RE
+.PP
+\fB\fCant\fR
+.RS
+.IP \(bu 2
+Build a project using build file other than \fB\fCbuild.xml\fR:
+.RE
+.PP
+\fB\fCant \-f {{buildfile.xml}}\fR
+.RS
+.IP \(bu 2
+Print information on possible targets for this project:
+.RE
+.PP
+\fB\fCant \-p\fR
+.RS
+.IP \(bu 2
+Print debugging information:
+.RE
+.PP
+\fB\fCant \-d\fR
+.RS
+.IP \(bu 2
+Execute all targets that do not depend on fail 
+.BR target (s):
+.RE
+.PP
+\fB\fCant \-k\fR

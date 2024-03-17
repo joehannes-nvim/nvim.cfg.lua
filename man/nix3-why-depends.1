@@ -1,0 +1,18 @@
+.TH nix why\-depends
+.PP
+.RS
+Show why a package depends on another package.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-why-depends.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show why the currently running NixOS system requires a certain store path:
+.RE
+.PP
+\fB\fCnix why\-depends {{/run/current\-system}} {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+Show why a package from nixpkgs requires another package as a \fIbuild\-time\fP dependency:
+.RE
+.PP
+\fB\fCnix why\-depends \-\-derivation {{nixpkgs#dependent}} {{nixpkgs#dependency}}\fR

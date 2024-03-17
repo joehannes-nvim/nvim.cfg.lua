@@ -1,0 +1,37 @@
+.TH az tag
+.PP
+.RS
+Manage tags on a resource.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/tag\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a tag value:
+.RE
+.PP
+\fB\fCaz tag add\-value \-\-name {{tag_name}} \-\-value {{tag_value}}\fR
+.RS
+.IP \(bu 2
+Create a tag in the subscription:
+.RE
+.PP
+\fB\fCaz tag create \-\-name {{tag_name}}\fR
+.RS
+.IP \(bu 2
+Delete a tag from the subscription:
+.RE
+.PP
+\fB\fCaz tag delete \-\-name {{tag_name}}\fR
+.RS
+.IP \(bu 2
+List all tags on a subscription:
+.RE
+.PP
+\fB\fCaz tag list \-\-resource\-id /subscriptions/{{subscription_id}}\fR
+.RS
+.IP \(bu 2
+Delete a tag value for a specific tag name:
+.RE
+.PP
+\fB\fCaz tag remove\-value \-\-name {{tag_name}} \-\-value {{tag_value}}\fR

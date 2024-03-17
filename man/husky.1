@@ -1,0 +1,42 @@
+.TH husky
+.PP
+.RS
+Native Git hooks made easy.
+More information: \[la]https://typicode.github.io/husky\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install Husky in the current directory:
+.RE
+.PP
+\fB\fChusky install\fR
+.RS
+.IP \(bu 2
+Install Husky into a specific directory:
+.RE
+.PP
+\fB\fChusky install {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Set a specific command as a \fB\fCpre\-push\fR hook for Git:
+.RE
+.PP
+\fB\fChusky set {{.husky/pre\-push}} "{{command}} {{command_arguments}}"\fR
+.RS
+.IP \(bu 2
+Add a specific command to the current \fB\fCpre\-commit\fR hook:
+.RE
+.PP
+\fB\fChusky add {{.husky/pre\-commit}} "{{command}} {{command_arguments}}"\fR
+.RS
+.IP \(bu 2
+Uninstall Husky hooks from the current directory:
+.RE
+.PP
+\fB\fChusky uninstall\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fChusky\fR

@@ -1,0 +1,42 @@
+.TH sha1sum
+.PP
+.RS
+Calculate SHA1 cryptographic checksums.
+More information: \[la]https://www.gnu.org/software/coreutils/sha1sum\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate the SHA1 checksum for one or more files:
+.RE
+.PP
+\fB\fCsha1sum {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Calculate and save the list of SHA1 checksums to a file:
+.RE
+.PP
+\fB\fCsha1sum {{path/to/file1 path/to/file2 ...}} > {{path/to/file.sha1}}\fR
+.RS
+.IP \(bu 2
+Calculate a SHA1 checksum from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | sha1sum\fR
+.RS
+.IP \(bu 2
+Read a file of SHA1 sums and filenames and verify all files have matching checksums:
+.RE
+.PP
+\fB\fCsha1sum \-\-check {{path/to/file.sha1}}\fR
+.RS
+.IP \(bu 2
+Only show a message for missing files or when verification fails:
+.RE
+.PP
+\fB\fCsha1sum \-\-check \-\-quiet {{path/to/file.sha1}}\fR
+.RS
+.IP \(bu 2
+Only show a message when verification fails, ignoring missing files:
+.RE
+.PP
+\fB\fCsha1sum \-\-ignore\-missing \-\-check \-\-quiet {{path/to/file.sha1}}\fR

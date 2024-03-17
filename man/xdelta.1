@@ -1,0 +1,19 @@
+.TH xdelta
+.PP
+.RS
+Delta encoding utility.
+Often used for applying patches to binary files.
+More information: \[la]http://xdelta.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply a patch:
+.RE
+.PP
+\fB\fCxdelta \-d \-s {{path/to/input_file}} {{path/to/delta_file.xdelta}} {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Create a patch:
+.RE
+.PP
+\fB\fCxdelta \-e \-s {{path/to/old_file}} {{path/to/new_file}} {{path/to/output_file.xdelta}}\fR

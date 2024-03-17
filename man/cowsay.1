@@ -1,0 +1,42 @@
+.TH cowsay
+.PP
+.RS
+Print ASCII art (by default a cow) saying or thinking something.
+More information: \[la]https://github.com/tnalpgge/rank-amateur-cowsay\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print an ASCII cow saying "hello, world":
+.RE
+.PP
+\fB\fCcowsay "{{hello, world}}"\fR
+.RS
+.IP \(bu 2
+Print an ASCII cow saying text from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{{hello, world}}" | cowsay\fR
+.RS
+.IP \(bu 2
+List all available art types:
+.RE
+.PP
+\fB\fCcowsay \-l\fR
+.RS
+.IP \(bu 2
+Print the specified ASCII art saying "hello, world":
+.RE
+.PP
+\fB\fCcowsay \-f {{art}} "{{hello, world}}"\fR
+.RS
+.IP \(bu 2
+Print a dead thinking ASCII cow:
+.RE
+.PP
+\fB\fCcowthink \-d "{{I'm just a cow, not a great thinker...}}"\fR
+.RS
+.IP \(bu 2
+Print an ASCII cow with custom eyes saying "hello, world":
+.RE
+.PP
+\fB\fCcowsay \-e {{characters}} "{{hello, world}}"\fR

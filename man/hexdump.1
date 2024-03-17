@@ -1,0 +1,30 @@
+.TH hexdump
+.PP
+.RS
+An ASCII, decimal, hexadecimal, octal dump.
+More information: \[la]https://manned.org/hexdump\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the hexadecimal representation of a file, replacing duplicate lines by '*':
+.RE
+.PP
+\fB\fChexdump {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display the input offset in hexadecimal and its ASCII representation in two columns:
+.RE
+.PP
+\fB\fChexdump \-C {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display the hexadecimal representation of a file, but interpret only n bytes of the input:
+.RE
+.PP
+\fB\fChexdump \-C \-n{{number_of_bytes}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Don't replace duplicate lines with '*':
+.RE
+.PP
+\fB\fChexdump \-\-no\-squeezing {{path/to/file}}\fR

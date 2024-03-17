@@ -1,0 +1,24 @@
+.TH autoconf
+.PP
+.RS
+Generate configuration scripts to automatically configure software source code packages.
+More information: \[la]https://www.gnu.org/software/autoconf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a configuration script from \fB\fCconfigure.ac\fR (if present) or \fB\fCconfigure.in\fR and save this script to \fB\fCconfigure\fR:
+.RE
+.PP
+\fB\fCautoconf\fR
+.RS
+.IP \(bu 2
+Generate a configuration script from the specified template; output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCautoconf {{template\-file}}\fR
+.RS
+.IP \(bu 2
+Generate a configuration script from the specified template (even if the input file has not changed) and write the output to a file:
+.RE
+.PP
+\fB\fCautoconf \-\-force \-\-output={{outfile}} {{template\-file}}\fR

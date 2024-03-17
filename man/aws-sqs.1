@@ -1,0 +1,54 @@
+.TH aws sqs
+.PP
+.RS
+Create, delete, and send messages to queues for the AWS SQS service.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sqs/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all availables queues:
+.RE
+.PP
+\fB\fCaws sqs list\-queues\fR
+.RS
+.IP \(bu 2
+Display the URL of a specific queue:
+.RE
+.PP
+\fB\fCaws sqs get\-queue\-url \-\-queue\-name {{queue_name}}\fR
+.RS
+.IP \(bu 2
+Create a queue with specific attributes from a file in JSON format:
+.RE
+.PP
+\fB\fCaws sqs create\-queue \-\-queue\-name {{queue_name}} \-\-attributes {{file://path/to/attributes_file.json}}\fR
+.RS
+.IP \(bu 2
+Send a specific message to a queue:
+.RE
+.PP
+\fB\fCaws sqs send\-message \-\-queue\-url https://sqs.{{region}}.amazonaws.com/{{queue_name}} \-\-message\-body "{{message_body}}" \-\-delay\-seconds {{delay}} \-\-message\-attributes {{file://path/to/attributes_file.json}}\fR
+.RS
+.IP \(bu 2
+Delete the specified message from a queue:
+.RE
+.PP
+\fB\fCaws sqs delete\-message \-\-queue\-url {{https://queue_url}} \-\-receipt\-handle {{receipt_handle}}\fR
+.RS
+.IP \(bu 2
+Delete a specific queue:
+.RE
+.PP
+\fB\fCaws sqs delete\-queue \-\-queue\-url https://sqs.{{region}}.amazonaws.com/{{queue_name}}\fR
+.RS
+.IP \(bu 2
+Delete all messages from the specified queue:
+.RE
+.PP
+\fB\fCaws sqs purge\-queue \-\-queue\-url https://sqs.{{region}}.amazonaws.com/{{queue_name}}\fR
+.RS
+.IP \(bu 2
+Enable a specific AWS account to send messages to queue:
+.RE
+.PP
+\fB\fCaws sqs add\-permission \-\-queue\-url https://sqs.{{region}}.amazonaws.com/{{queue_name}} \-\-label {{permission_name}} \-\-aws\-account\-ids {{account_id}} \-\-actions SendMessage\fR

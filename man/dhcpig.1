@@ -1,0 +1,49 @@
+.TH dhcpig
+.PP
+.RS
+Initiates an advanced DHCP exhaustion attack and stress test.
+DHCPig needs to be run with root privileges.
+More information: \[la]https://github.com/kamorin/DHCPig\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Exhaust all of the available DHCP addresses using the specified interface:
+.RE
+.PP
+\fB\fCsudo ./pig.py {{eth0}}\fR
+.RS
+.IP \(bu 2
+Exhaust IPv6 addresses using eth1 interface:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-6 {{eth1}}\fR
+.RS
+.IP \(bu 2
+Send fuzzed/malformed data packets using the interface:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-\-fuzz {{eth1}}\fR
+.RS
+.IP \(bu 2
+Enable color output:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-c {{eth1}}\fR
+.RS
+.IP \(bu 2
+Enable minimal verbosity and color output:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-c \-\-verbosity=1 {{eth1}}\fR
+.RS
+.IP \(bu 2
+Set debug verbosity and scan network of neighboring devices using ARP packets:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-c \-\-verbosity=100 \-\-neighbors\-scan\-arp {{eth1}}\fR
+.RS
+.IP \(bu 2
+Enable printing lease information, attempt to scan and release all neighbor IP addresses:
+.RE
+.PP
+\fB\fCsudo ./pig.py \-\-neighbors\-scan\-arp \-r \-\-show\-options {{eth1}}\fR

@@ -1,0 +1,54 @@
+.TH streamlink
+.PP
+.RS
+Extracts streams from various services and pipes them into a video player of choice.
+More information: \[la]https://streamlink.github.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Attempt to extract streams from the URL specified, and if it's successful, print out a list of available streams to choose from:
+.RE
+.PP
+\fB\fCstreamlink {{example.com/stream}}\fR
+.RS
+.IP \(bu 2
+Open a stream with the specified quality:
+.RE
+.PP
+\fB\fCstreamlink {{example.com/stream}} {{720p60}}\fR
+.RS
+.IP \(bu 2
+Select the highest or lowest available quality:
+.RE
+.PP
+\fB\fCstreamlink {{example.com/stream}} {{best|worst}}\fR
+.RS
+.IP \(bu 2
+Specify which player to use to feed stream data to (VLC is used by default if found):
+.RE
+.PP
+\fB\fCstreamlink \-\-player={{mpv}} {{example.com/stream}} {{best}}\fR
+.RS
+.IP \(bu 2
+Specify the amount of time to skip from the beginning of the stream. For live streams, this is a negative offset from the end of the stream (rewind):
+.RE
+.PP
+\fB\fCstreamlink \-\-hls\-start\-offset {{[HH:]MM:SS}} {{example.com/stream}} {{best}}\fR
+.RS
+.IP \(bu 2
+Skip to the beginning of a live stream, or as far back as possible:
+.RE
+.PP
+\fB\fCstreamlink \-\-hls\-live\-restart {{example.com/stream}} {{best}}\fR
+.RS
+.IP \(bu 2
+Write stream data to a file instead of playing it:
+.RE
+.PP
+\fB\fCstreamlink \-\-output {{path/to/file.ts}} {{example.com/stream}} {{best}}\fR
+.RS
+.IP \(bu 2
+Open the stream in the player, while at the same time writing it to a file:
+.RE
+.PP
+\fB\fCstreamlink \-\-record {{path/to/file.ts}} {{example.com/stream}} {{best}}\fR

@@ -1,0 +1,30 @@
+.TH jtbl
+.PP
+.RS
+Utility to print JSON and JSON Lines data as a table in the terminal.
+More information: \[la]https://github.com/kellyjonbrazil/jtbl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a table from JSON or JSON Lines input:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jtbl\fR
+.RS
+.IP \(bu 2
+Print a table and specify the column width for wrapping:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jtbl \-\-cols={{width}}\fR
+.RS
+.IP \(bu 2
+Print a table and truncate rows instead of wrapping:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jtbl \-t\fR
+.RS
+.IP \(bu 2
+Print a table and don't wrap or truncate rows:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jtbl \-n\fR

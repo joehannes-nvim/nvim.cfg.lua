@@ -1,0 +1,54 @@
+.TH vagrant
+.PP
+.RS
+Manage lightweight, reproducible, and portable development environments.
+More information: \[la]https://www.vagrantup.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create Vagrantfile in current directory with the base Vagrant box:
+.RE
+.PP
+\fB\fCvagrant init\fR
+.RS
+.IP \(bu 2
+Create Vagrantfile with the Ubuntu 20.04 (Focal Fossa) box from HashiCorp Atlas:
+.RE
+.PP
+\fB\fCvagrant init ubuntu/focal64\fR
+.RS
+.IP \(bu 2
+Start and provision the vagrant environment:
+.RE
+.PP
+\fB\fCvagrant up\fR
+.RS
+.IP \(bu 2
+Suspend the machine:
+.RE
+.PP
+\fB\fCvagrant suspend\fR
+.RS
+.IP \(bu 2
+Halt the machine:
+.RE
+.PP
+\fB\fCvagrant halt\fR
+.RS
+.IP \(bu 2
+Connect to machine via SSH:
+.RE
+.PP
+\fB\fCvagrant ssh\fR
+.RS
+.IP \(bu 2
+Output the SSH configuration file of the running Vagrant machine:
+.RE
+.PP
+\fB\fCvagrant ssh\-config\fR
+.RS
+.IP \(bu 2
+List all local boxes:
+.RE
+.PP
+\fB\fCvagrant box list\fR

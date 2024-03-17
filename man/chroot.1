@@ -1,0 +1,18 @@
+.TH chroot
+.PP
+.RS
+Run command or interactive shell with special root directory.
+More information: \[la]https://www.gnu.org/software/coreutils/chroot\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run command as new root directory:
+.RE
+.PP
+\fB\fCchroot {{path/to/new/root}} {{command}}\fR
+.RS
+.IP \(bu 2
+Specify user and group (ID or name) to use:
+.RE
+.PP
+\fB\fCchroot \-\-userspec={{user:group}}\fR

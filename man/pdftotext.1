@@ -1,0 +1,36 @@
+.TH pdftotext
+.PP
+.RS
+Convert PDF files to plain text format.
+More information: \[la]https://www.xpdfreader.com/pdftotext-man.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert \fB\fCfilename.pdf\fR to plain text and print it to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCpdftotext {{filename.pdf}} \-\fR
+.RS
+.IP \(bu 2
+Convert \fB\fCfilename.pdf\fR to plain text and save it as \fB\fCfilename.txt\fR:
+.RE
+.PP
+\fB\fCpdftotext {{filename.pdf}}\fR
+.RS
+.IP \(bu 2
+Convert \fB\fCfilename.pdf\fR to plain text and preserve the layout:
+.RE
+.PP
+\fB\fCpdftotext \-layout {{filename.pdf}}\fR
+.RS
+.IP \(bu 2
+Convert \fB\fCinput.pdf\fR to plain text and save it as \fB\fCoutput.txt\fR:
+.RE
+.PP
+\fB\fCpdftotext {{input.pdf}} {{output.txt}}\fR
+.RS
+.IP \(bu 2
+Convert pages 2, 3 and 4 of \fB\fCinput.pdf\fR to plain text and save them as \fB\fCoutput.txt\fR:
+.RE
+.PP
+\fB\fCpdftotext \-f {{2}} \-l {{4}} {{input.pdf}} {{output.txt}}\fR

@@ -1,0 +1,48 @@
+.TH kate
+.PP
+.RS
+KDE's advanced text editor.
+More information: \[la]https://kate-editor.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open specific files:
+.RE
+.PP
+\fB\fCkate {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Open specific remote files:
+.RE
+.PP
+\fB\fCkate {{https://example.com/path/to/file1 https://example.com/path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Create a new editor instance even if one is already open:
+.RE
+.PP
+\fB\fCkate \-\-new\fR
+.RS
+.IP \(bu 2
+Open a file with the cursor at the specific line:
+.RE
+.PP
+\fB\fCkate \-\-line {{line_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file with the cursor at the specific line and column:
+.RE
+.PP
+\fB\fCkate \-\-line {{line_number}} \-\-column {{column_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create a file from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | kate \-\-stdin\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCkate \-\-help\fR

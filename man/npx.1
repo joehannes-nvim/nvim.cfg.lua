@@ -1,0 +1,36 @@
+.TH npx
+.PP
+.RS
+Execute binaries from \fB\fCnpm\fR packages.
+More information: \[la]https://github.com/npm/npx\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute the command from a local or remote \fB\fCnpm\fR package:
+.RE
+.PP
+\fB\fCnpx {{command}} {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+In case multiple commands with the same name exist, it is possible to explicitly specify the package:
+.RE
+.PP
+\fB\fCnpx \-\-package {{package}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run a command if it exists in the current path or in \fB\fCnode_modules/.bin\fR:
+.RE
+.PP
+\fB\fCnpx \-\-no\-install {{command}} {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+Execute a specific command suppressing any output from \fB\fCnpx\fR itself:
+.RE
+.PP
+\fB\fCnpx \-\-quiet {{command}} {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCnpx \-\-help\fR

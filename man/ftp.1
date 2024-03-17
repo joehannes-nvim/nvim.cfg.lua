@@ -1,0 +1,54 @@
+.TH ftp
+.PP
+.RS
+Tools to interact with a server via File Transfer Protocol.
+More information: \[la]https://manned.org/ftp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to an FTP server:
+.RE
+.PP
+\fB\fCftp {{ftp.example.com}}\fR
+.RS
+.IP \(bu 2
+Connect to an FTP server specifying its IP address and port:
+.RE
+.PP
+\fB\fCftp {{ip_address}} {{port}}\fR
+.RS
+.IP \(bu 2
+Switch to binary transfer mode (graphics, compressed files, etc):
+.RE
+.PP
+\fB\fCbinary\fR
+.RS
+.IP \(bu 2
+Transfer multiple files without prompting for confirmation on every file:
+.RE
+.PP
+\fB\fCprompt off\fR
+.RS
+.IP \(bu 2
+Download multiple files (glob expression):
+.RE
+.PP
+\fB\fCmget {{*.png}}\fR
+.RS
+.IP \(bu 2
+Upload multiple files (glob expression):
+.RE
+.PP
+\fB\fCmput {{*.zip}}\fR
+.RS
+.IP \(bu 2
+Delete multiple files on the remote server:
+.RE
+.PP
+\fB\fCmdelete {{*.txt}}\fR
+.RS
+.IP \(bu 2
+Rename a file on the remote server:
+.RE
+.PP
+\fB\fCrename {{original_filename}} {{new_filename}}\fR

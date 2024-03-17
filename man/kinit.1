@@ -1,0 +1,43 @@
+.TH kinit
+.PP
+.RS
+Authenticate a principal with a Kerberos server to gain and cache a ticket.
+Note: A Kerberos principal can be either a user, service, or application.
+More information: \[la]https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authenticate a user and obtain a ticket\-granting ticket:
+.RE
+.PP
+\fB\fCkinit {{username}}\fR
+.RS
+.IP \(bu 2
+Renew a ticket\-granting ticket:
+.RE
+.PP
+\fB\fCkinit \-R\fR
+.RS
+.IP \(bu 2
+Specify a lifetime for the ticket:
+.RE
+.PP
+\fB\fCkinit \-l {{5h}}\fR
+.RS
+.IP \(bu 2
+Specify a total renewable lifetime for the ticket:
+.RE
+.PP
+\fB\fCkinit \-r {{1w}}\fR
+.RS
+.IP \(bu 2
+Specify a different principal name to authenticate as:
+.RE
+.PP
+\fB\fCkinit \-p {{principal@REALM}}\fR
+.RS
+.IP \(bu 2
+Specify a different keytab file to authenticate with:
+.RE
+.PP
+\fB\fCkinit \-t {{path/to/keytab}}\fR

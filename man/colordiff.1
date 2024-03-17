@@ -1,0 +1,37 @@
+.TH colordiff
+.PP
+.RS
+A tool to colorize diff output.
+The Perl script colordiff is a wrapper for \fB\fCdiff\fR and produces the same output but with pretty syntax highlighting. Color schemes can be customized.
+More information: \[la]https://github.com/kimmel/colordiff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare files:
+.RE
+.PP
+\fB\fCcolordiff {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Output in two columns:
+.RE
+.PP
+\fB\fCcolordiff \-y {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Ignore case differences in file contents:
+.RE
+.PP
+\fB\fCcolordiff \-i {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Report when two files are the same:
+.RE
+.PP
+\fB\fCcolordiff \-s {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Ignore white spaces:
+.RE
+.PP
+\fB\fCcolordiff \-w {{file1}} {{file2}}\fR

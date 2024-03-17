@@ -1,0 +1,31 @@
+.TH Set\-NodeVersion
+.PP
+.RS
+Set the default Node.js version for \fB\fCps\-nvm\fR\&.
+Part of \fB\fCps\-nvm\fR and can only be run under PowerShell.
+More information: \[la]https://github.com/aaronpowell/ps-nvm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use a specific version of Node.js in the current PowerShell session:
+.RE
+.PP
+\fB\fCSet\-NodeVersion {{node_version}}\fR
+.RS
+.IP \(bu 2
+Use the latest installed Node.js version 20.x:
+.RE
+.PP
+\fB\fCSet\-NodeVersion ^20\fR
+.RS
+.IP \(bu 2
+Set the default Node.js version for the current user (only applies to future PowerShell sessions):
+.RE
+.PP
+\fB\fCSet\-NodeVersion {{node_version}} \-Persist User\fR
+.RS
+.IP \(bu 2
+Set the default Node.js version for all users (must be run as Administrator/root and only applies to future PowerShell sessions):
+.RE
+.PP
+\fB\fCSet\-NodeVersion {{node_version}} \-Persist Machine\fR

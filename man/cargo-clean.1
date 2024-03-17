@@ -1,0 +1,30 @@
+.TH cargo clean
+.PP
+.RS
+Remove generated artifacts in the \fB\fCtarget\fR directory.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-clean.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove the entire \fB\fCtarget\fR directory:
+.RE
+.PP
+\fB\fCcargo clean\fR
+.RS
+.IP \(bu 2
+Remove documentation artifacts (the \fB\fCtarget/doc\fR directory):
+.RE
+.PP
+\fB\fCcargo clean \-\-doc\fR
+.RS
+.IP \(bu 2
+Remove release artifacts (the \fB\fCtarget/release\fR directory):
+.RE
+.PP
+\fB\fCcargo clean \-\-release\fR
+.RS
+.IP \(bu 2
+Remove artifacts in the directory of the given profile (in this case, \fB\fCtarget/debug\fR):
+.RE
+.PP
+\fB\fCcargo clean \-\-profile {{dev}}\fR

@@ -1,0 +1,36 @@
+.TH snort
+.PP
+.RS
+Open\-source network intrusion detection system.
+More information: \[la]https://www.snort.org/#documents\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture packets with verbose output:
+.RE
+.PP
+\fB\fCsudo snort \-v \-i {{interface}}\fR
+.RS
+.IP \(bu 2
+Capture packets and dump application layer data with verbose output:
+.RE
+.PP
+\fB\fCsudo snort \-vd \-i {{interface}}\fR
+.RS
+.IP \(bu 2
+Capture packets and display link layer packet headers with verbose output:
+.RE
+.PP
+\fB\fCsudo snort \-ve \-i {{interface}}\fR
+.RS
+.IP \(bu 2
+Capture packets and save them in the specified directory:
+.RE
+.PP
+\fB\fCsudo snort \-i {{interface}} \-l {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Capture packets according to rules and save offending packets along with alerts:
+.RE
+.PP
+\fB\fCsudo snort \-i {{interface}} \-c {{path/to/rules.conf}} \-l {{path/to/directory}}\fR

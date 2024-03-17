@@ -1,0 +1,48 @@
+.TH mongodump
+.PP
+.RS
+Utility to export the contents of a MongoDB instance.
+More information: \[la]https://docs.mongodb.com/database-tools/mongodump/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a dump of all databases (this will place the files inside a directory called "dump"):
+.RE
+.PP
+\fB\fCmongodump\fR
+.RS
+.IP \(bu 2
+Specify an output location for the dump:
+.RE
+.PP
+\fB\fCmongodump \-\-out {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Create a dump of a given database:
+.RE
+.PP
+\fB\fCmongodump \-\-db {{database_name}}\fR
+.RS
+.IP \(bu 2
+Create a dump of a given collection within a given database:
+.RE
+.PP
+\fB\fCmongodump \-\-collection {{collection_name}} \-\-db {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a given host running on a given port, and create a dump:
+.RE
+.PP
+\fB\fCmongodump \-\-host {{host}} \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Create a dump of a given database with a given username; user will be prompted for password:
+.RE
+.PP
+\fB\fCmongodump \-\-username {{username}} {{database}} \-\-password\fR
+.RS
+.IP \(bu 2
+Create a dump from a specific instance; host, user, password and database will be defined in the connection string:
+.RE
+.PP
+\fB\fCmongodump \-\-uri {{connection_string}}\fR

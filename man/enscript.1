@@ -1,0 +1,36 @@
+.TH enscript
+.PP
+.RS
+Convert text files to PostScript, HTML, RTF, ANSI, and overstrikes.
+More information: \[la]https://www.gnu.org/software/enscript\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a PostScript file from a text file:
+.RE
+.PP
+\fB\fCenscript {{path/to/input_file}} \-\-output={{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Generate a file in a different language than PostScript:
+.RE
+.PP
+\fB\fCenscript {{path/to/input_file}} \-\-language={{html|rtf|...}} \-\-output={{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Generate a PostScript file with a landscape layout, splitting the page into columns (maximum 9):
+.RE
+.PP
+\fB\fCenscript {{path/to/input_file}} \-\-columns={{num}} \-\-landscape \-\-output={{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Display available syntax highlighting languages and file formats:
+.RE
+.PP
+\fB\fCenscript \-\-help\-highlight\fR
+.RS
+.IP \(bu 2
+Generate a PostScript file with syntax highlighting and color for a specified language:
+.RE
+.PP
+\fB\fCenscript {{path/to/input_file}} \-\-color=1 \-\-highlight={{language}} \-\-output={{path/to/output_file}}\fR

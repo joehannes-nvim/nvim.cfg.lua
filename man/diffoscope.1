@@ -1,0 +1,36 @@
+.TH diffoscope
+.PP
+.RS
+Compare files, archives, and directories.
+More information: \[la]https://diffoscope.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare two files:
+.RE
+.PP
+\fB\fCdiffoscope {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare two files without displaying a progress bar:
+.RE
+.PP
+\fB\fCdiffoscope \-\-no\-progress {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare two files and write an HTML\-report to a file (use \fB\fC\-\fR for \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCdiffoscope \-\-html {{path/to/outfile|\-}} {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare two directories excluding files with a name matching a specified pattern:
+.RE
+.PP
+\fB\fCdiffoscope \-\-exclude {{pattern}} {{path/to/directory1}} {{path/to/directory2}}\fR
+.RS
+.IP \(bu 2
+Compare two directories and control whether directory metadata is considered:
+.RE
+.PP
+\fB\fCdiffoscope \-\-exclude\-directory\-metadata {{auto|yes|no|recursive}} {{path/to/directory1}} {{path/to/directory2}}\fR

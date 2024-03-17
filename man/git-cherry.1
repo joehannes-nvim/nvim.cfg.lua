@@ -1,0 +1,24 @@
+.TH git cherry
+.PP
+.RS
+Find commits that have yet to be applied upstream.
+More information: \[la]https://git-scm.com/docs/git-cherry\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show commits (and their messages) with equivalent commits upstream:
+.RE
+.PP
+\fB\fCgit cherry \-v\fR
+.RS
+.IP \(bu 2
+Specify a different upstream and topic branch:
+.RE
+.PP
+\fB\fCgit cherry {{origin}} {{topic}}\fR
+.RS
+.IP \(bu 2
+Limit commits to those within a given limit:
+.RE
+.PP
+\fB\fCgit cherry {{origin}} {{topic}} {{base}}\fR

@@ -1,0 +1,36 @@
+.TH nbtscan
+.PP
+.RS
+Scan networks for NetBIOS name information.
+More information: \[la]https://github.com/resurrecting-open-source-projects/nbtscan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a network for NetBIOS names:
+.RE
+.PP
+\fB\fCnbtscan {{192.168.0.1/24}}\fR
+.RS
+.IP \(bu 2
+Scan a single IP address:
+.RE
+.PP
+\fB\fCnbtscan {{192.168.0.1}}\fR
+.RS
+.IP \(bu 2
+Display verbose output:
+.RE
+.PP
+\fB\fCnbtscan \-v {{192.168.0.1/24}}\fR
+.RS
+.IP \(bu 2
+Display output in \fB\fC/etc/hosts\fR format:
+.RE
+.PP
+\fB\fCnbtscan \-e {{192.168.0.1/24}}\fR
+.RS
+.IP \(bu 2
+Read IP addresses/networks to scan from a file:
+.RE
+.PP
+\fB\fCnbtscan \-f {{path/to/file.txt}}\fR

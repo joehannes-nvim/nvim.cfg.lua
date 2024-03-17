@@ -1,0 +1,31 @@
+.TH az config
+.PP
+.RS
+Manage Azure CLI configuration.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/config\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print all configurations:
+.RE
+.PP
+\fB\fCaz config get\fR
+.RS
+.IP \(bu 2
+Print configurations for a specific section:
+.RE
+.PP
+\fB\fCaz config get {{section_name}}\fR
+.RS
+.IP \(bu 2
+Set a configuration:
+.RE
+.PP
+\fB\fCaz config set {{configuration_name}}={{value}}\fR
+.RS
+.IP \(bu 2
+Unset a configuration:
+.RE
+.PP
+\fB\fCaz config unset {{configuration_name}}\fR

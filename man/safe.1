@@ -1,0 +1,54 @@
+.TH safe
+.PP
+.RS
+Interact with HashiCorp Vault.
+More information: \[la]https://github.com/starkandwayne/safe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a safe target:
+.RE
+.PP
+\fB\fCsafe target {{vault_addr}} {{target_name}}\fR
+.RS
+.IP \(bu 2
+Authenticate the CLI client against the Vault server, using an authentication token:
+.RE
+.PP
+\fB\fCsafe auth {{authentication_token}}\fR
+.RS
+.IP \(bu 2
+Print the environment variables describing the current target:
+.RE
+.PP
+\fB\fCsafe env\fR
+.RS
+.IP \(bu 2
+Display a tree hierarchy of all reachable keys for a given path:
+.RE
+.PP
+\fB\fCsafe tree {{path}}\fR
+.RS
+.IP \(bu 2
+Move a secret from one path to another:
+.RE
+.PP
+\fB\fCsafe move {{old/path/to/secret}} {{new/path/to/secret}}\fR
+.RS
+.IP \(bu 2
+Generate a new 2048\-bit SSH key\-pair and store it:
+.RE
+.PP
+\fB\fCsafe ssh {{2048}} {{path/to/secret}}\fR
+.RS
+.IP \(bu 2
+Set non\-sensitive keys for a secret:
+.RE
+.PP
+\fB\fCsafe set {{path/to/secret}} {{key}}={{value}}\fR
+.RS
+.IP \(bu 2
+Set auto\-generated password in a secret:
+.RE
+.PP
+\fB\fCsafe gen {{path/to/secret}} {{key}}\fR

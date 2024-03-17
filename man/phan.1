@@ -1,0 +1,48 @@
+.TH phan
+.PP
+.RS
+A static analysis tool for PHP.
+More information: \[la]https://github.com/phan/phan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a \fB\fC\&.phan/config.php\fR in the current directory:
+.RE
+.PP
+\fB\fCphan \-\-init\fR
+.RS
+.IP \(bu 2
+Generate a Phan configuration file using a specific level (1 being strictest to 5 being the least strict):
+.RE
+.PP
+\fB\fCphan \-\-init \-\-init\-level {{level}}\fR
+.RS
+.IP \(bu 2
+Analyze the current directory:
+.RE
+.PP
+\fB\fCphan\fR
+.RS
+.IP \(bu 2
+Analyze one or more directories:
+.RE
+.PP
+\fB\fCphan \-\-directory {{path/to/directory}} \-\-directory {{path/to/another_directory}}\fR
+.RS
+.IP \(bu 2
+Specify a config file (defaults to \fB\fC\&.phan/config.php\fR):
+.RE
+.PP
+\fB\fCphan \-\-config\-file {{path/to/config.php}}\fR
+.RS
+.IP \(bu 2
+Specify the output mode:
+.RE
+.PP
+\fB\fCphan \-\-output\-mode {{text|verbose|json|csv|codeclimate|checkstyle|pylint|html}}\fR
+.RS
+.IP \(bu 2
+Specify the number of parallel processes:
+.RE
+.PP
+\fB\fCphan \-\-processes {{number_of_processes}}\fR

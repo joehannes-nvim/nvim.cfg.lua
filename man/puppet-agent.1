@@ -1,0 +1,48 @@
+.TH puppet agent
+.PP
+.RS
+Retrieves the client configuration from a Puppet server and applies it to the local host.
+More information: \[la]https://puppet.com/docs/puppet/7/man/agent.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register a node at a Puppet server and apply the received catalog:
+.RE
+.PP
+\fB\fCpuppet agent \-\-test \-\-server {{puppetserver_fqdn}} \-\-serverport {{port}} \-\-waitforcert {{poll_time}}\fR
+.RS
+.IP \(bu 2
+Run the agent in the background (uses settings from \fB\fCpuppet.conf\fR):
+.RE
+.PP
+\fB\fCpuppet agent\fR
+.RS
+.IP \(bu 2
+Run the agent once in the foreground, then exit:
+.RE
+.PP
+\fB\fCpuppet agent \-\-test\fR
+.RS
+.IP \(bu 2
+Run the agent in dry\-mode:
+.RE
+.PP
+\fB\fCpuppet agent \-\-test \-\-noop\fR
+.RS
+.IP \(bu 2
+Log every resource being evaluated (even if nothing is being changed):
+.RE
+.PP
+\fB\fCpuppet agent \-\-test \-\-evaltrace\fR
+.RS
+.IP \(bu 2
+Disable the agent:
+.RE
+.PP
+\fB\fCpuppet agent \-\-disable "{{message}}"\fR
+.RS
+.IP \(bu 2
+Enable the agent:
+.RE
+.PP
+\fB\fCpuppet agent \-\-enable\fR

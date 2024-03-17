@@ -1,0 +1,36 @@
+.TH unar
+.PP
+.RS
+Extract contents from archive files.
+More information: \[la]https://manned.org/unar\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract an archive to the current directory:
+.RE
+.PP
+\fB\fCunar {{archive}}\fR
+.RS
+.IP \(bu 2
+Extract an archive to the specified directory:
+.RE
+.PP
+\fB\fCunar \-o {{path/to/directory}} {{archive}}\fR
+.RS
+.IP \(bu 2
+Force overwrite if files to be unpacked already exist:
+.RE
+.PP
+\fB\fCunar \-f {{archive}}\fR
+.RS
+.IP \(bu 2
+Force rename if files to be unpacked already exist:
+.RE
+.PP
+\fB\fCunar \-r {{archive}}\fR
+.RS
+.IP \(bu 2
+Force skip if files to be unpacked already exist:
+.RE
+.PP
+\fB\fCunar \-s {{archive}}\fR

@@ -1,0 +1,43 @@
+.TH serverless
+.PP
+.RS
+Toolkit for deploying and operating serverless architectures on AWS, Google Cloud, Azure and IBM OpenWhisk.
+Commands can be run either using the \fB\fCserverless\fR command or its alias, \fB\fCsls\fR\&.
+More information: \[la]https://serverless.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a serverless project:
+.RE
+.PP
+\fB\fCserverless create\fR
+.RS
+.IP \(bu 2
+Create a serverless project from a template:
+.RE
+.PP
+\fB\fCserverless create \-\-template {{template_name}}\fR
+.RS
+.IP \(bu 2
+Deploy to a cloud provider:
+.RE
+.PP
+\fB\fCserverless deploy\fR
+.RS
+.IP \(bu 2
+Display information about a serverless project:
+.RE
+.PP
+\fB\fCserverless info\fR
+.RS
+.IP \(bu 2
+Invoke a deployed function:
+.RE
+.PP
+\fB\fCserverless invoke \-f {{function_name}}\fR
+.RS
+.IP \(bu 2
+Follow the logs for a project:
+.RE
+.PP
+\fB\fCserverless logs \-t\fR

@@ -1,0 +1,30 @@
+.TH cmark
+.PP
+.RS
+Converts CommonMark Markdown formatted text to other formats.
+More information: \[la]https://github.com/commonmark/cmark\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render a CommonMark Markdown file to HTML:
+.RE
+.PP
+\fB\fCcmark \-\-to html {{filename.md}}\fR
+.RS
+.IP \(bu 2
+Convert data from \fB\fCstdin\fR to LaTeX:
+.RE
+.PP
+\fB\fCcmark \-\-to latex\fR
+.RS
+.IP \(bu 2
+Convert straight quotes to smart quotes:
+.RE
+.PP
+\fB\fCcmark \-\-smart \-\-to html {{filename.md}}\fR
+.RS
+.IP \(bu 2
+Validate UTF\-8 characters:
+.RE
+.PP
+\fB\fCcmark \-\-validate\-utf8 {{filename.md}}\fR

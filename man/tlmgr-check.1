@@ -1,0 +1,42 @@
+.TH tlmgr check
+.PP
+.RS
+Check the consistency of a TeX Live installation.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the consistency of the whole TeX Live installation:
+.RE
+.PP
+\fB\fCtlmgr check all\fR
+.RS
+.IP \(bu 2
+Check the consistency of the whole TeX Live information in verbose mode:
+.RE
+.PP
+\fB\fCtlmgr check all \-v\fR
+.RS
+.IP \(bu 2
+Check for missing dependencies:
+.RE
+.PP
+\fB\fCtlmgr check depends\fR
+.RS
+.IP \(bu 2
+Check if all TeX Live executables are present:
+.RE
+.PP
+\fB\fCtlmgr check executes\fR
+.RS
+.IP \(bu 2
+Check if all files listed in the local TLPDB are present:
+.RE
+.PP
+\fB\fCtlmgr check files\fR
+.RS
+.IP \(bu 2
+Check for duplicate filenames in the runfiles sections:
+.RE
+.PP
+\fB\fCtlmgr check runfiles\fR

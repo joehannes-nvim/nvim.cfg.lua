@@ -1,0 +1,42 @@
+.TH http\-server\-upload
+.PP
+.RS
+Zero\-configuration command\-line HTTP server which provides a lightweight interface to upload files.
+More information: \[la]https://github.com/crycode-de/http-server-upload\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an HTTP server on the default port to upload files to the current directory:
+.RE
+.PP
+\fB\fChttp\-server\-upload\fR
+.RS
+.IP \(bu 2
+Start an HTTP server with the specified maximum allowed file size for uploads in MiB (defaults to 200 MiB):
+.RE
+.PP
+\fB\fCMAX_FILE_SIZE={{size_in_megabytes}} http\-server\-upload\fR
+.RS
+.IP \(bu 2
+Start an HTTP server on a specific port to upload files to the current directory:
+.RE
+.PP
+\fB\fCPORT={{port}} http\-server\-upload\fR
+.RS
+.IP \(bu 2
+Start an HTTP server, storing the uploaded files in a specific directory:
+.RE
+.PP
+\fB\fCUPLOAD_DIR={{path/to/directory}} http\-server\-upload\fR
+.RS
+.IP \(bu 2
+Start an HTTP server using a specific directory to temporarily store files during the upload process:
+.RE
+.PP
+\fB\fCUPLOAD_TMP_DIR={{path/to/directory}} http\-server\-upload\fR
+.RS
+.IP \(bu 2
+Start an HTTP server accepting uploads with a specific token field in the HTTP post:
+.RE
+.PP
+\fB\fCTOKEN={{secret}} http\-server\-upload\fR

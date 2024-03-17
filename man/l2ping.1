@@ -1,0 +1,48 @@
+.TH l2ping
+.PP
+.RS
+Send an L2CAP echo request and receive an answer.
+More information: \[la]https://manned.org/l2ping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ping a Bluetooth device:
+.RE
+.PP
+\fB\fCsudo l2ping {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Reverse ping a Bluetooth device:
+.RE
+.PP
+\fB\fCsudo l2ping \-r {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Ping a Bluetooth device from a specified interface:
+.RE
+.PP
+\fB\fCsudo l2ping \-i {{hci0}} {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Ping Bluetooth device with a specified sized data package:
+.RE
+.PP
+\fB\fCsudo l2ping \-s {{byte_count}} {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Ping flood a Bluetooth device:
+.RE
+.PP
+\fB\fCsudo l2ping \-f {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Ping a Bluetooth device a specified amount of times:
+.RE
+.PP
+\fB\fCsudo l2ping \-c {{amount}} {{mac_address}}\fR
+.RS
+.IP \(bu 2
+Ping a Bluetooth device with a specified delay between requests:
+.RE
+.PP
+\fB\fCsudo l2ping \-d {{seconds}} {{mac_address}}\fR

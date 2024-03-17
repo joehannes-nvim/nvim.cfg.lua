@@ -1,0 +1,55 @@
+.TH conda
+.PP
+.RS
+Package, dependency and environment management for any programming language.
+Some subcommands such as \fB\fCconda create\fR have their own usage documentation.
+More information: \[la]https://github.com/conda/conda\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new environment, installing named packages into it:
+.RE
+.PP
+\fB\fCconda create \-\-name {{environment_name}} {{python=3.9 matplotlib}}\fR
+.RS
+.IP \(bu 2
+List all environments:
+.RE
+.PP
+\fB\fCconda info \-\-envs\fR
+.RS
+.IP \(bu 2
+Load an environment:
+.RE
+.PP
+\fB\fCconda activate {{environment_name}}\fR
+.RS
+.IP \(bu 2
+Unload an environment:
+.RE
+.PP
+\fB\fCconda deactivate\fR
+.RS
+.IP \(bu 2
+Delete an environment (remove all packages):
+.RE
+.PP
+\fB\fCconda remove \-\-name {{environment_name}} \-\-all\fR
+.RS
+.IP \(bu 2
+Install packages into the current environment:
+.RE
+.PP
+\fB\fCconda install {{python=3.4 numpy}}\fR
+.RS
+.IP \(bu 2
+List currently installed packages in current environment:
+.RE
+.PP
+\fB\fCconda list\fR
+.RS
+.IP \(bu 2
+Delete unused packages and caches:
+.RE
+.PP
+\fB\fCconda clean \-\-all\fR

@@ -1,0 +1,54 @@
+.TH csc
+.PP
+.RS
+The Microsoft C# Compiler.
+More information: \[la]https://learn.microsoft.com/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile one or more C# files to a CIL executable:
+.RE
+.PP
+\fB\fCcsc {{path/to/input_file_a.cs}} {{path/to/input_file_b.cs}}\fR
+.RS
+.IP \(bu 2
+Specify the output filename:
+.RE
+.PP
+\fB\fCcsc /out:{{path/to/filename}} {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Compile into a \fB\fC\&.dll\fR library instead of an executable:
+.RE
+.PP
+\fB\fCcsc /target:library {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Reference another assembly:
+.RE
+.PP
+\fB\fCcsc /reference:{{path/to/library.dll}} {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Embed a resource:
+.RE
+.PP
+\fB\fCcsc /resource:{{path/to/resource_file}} {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Automatically generate XML documentation:
+.RE
+.PP
+\fB\fCcsc /doc:{{path/to/output.xml}} {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Specify an icon:
+.RE
+.PP
+\fB\fCcsc /win32icon:{{path/to/icon.ico}} {{path/to/input_file.cs}}\fR
+.RS
+.IP \(bu 2
+Strongly\-name the resulting assembly with a keyfile:
+.RE
+.PP
+\fB\fCcsc /keyfile:{{path/to/keyfile}} {{path/to/input_file.cs}}\fR

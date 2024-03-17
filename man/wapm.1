@@ -1,0 +1,54 @@
+.TH wapm
+.PP
+.RS
+The WebAssembly package manager.
+More information: \[la]https://wapm.io/help/reference\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a new \fB\fCwapm.toml\fR file:
+.RE
+.PP
+\fB\fCwapm init\fR
+.RS
+.IP \(bu 2
+Download all the packages listed as dependencies in \fB\fCwapm.toml\fR:
+.RE
+.PP
+\fB\fCwapm install\fR
+.RS
+.IP \(bu 2
+Download a specific version of a package and add it to the list of dependencies in \fB\fCwapm.toml\fR:
+.RE
+.PP
+\fB\fCwapm install {{package}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Download a package and install it globally:
+.RE
+.PP
+\fB\fCwapm install \-\-global {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package and remove it from the list of dependencies in \fB\fCwapm.toml\fR:
+.RE
+.PP
+\fB\fCwapm uninstall {{package}}\fR
+.RS
+.IP \(bu 2
+Print a tree of locally installed dependencies:
+.RE
+.PP
+\fB\fCwapm list\fR
+.RS
+.IP \(bu 2
+List top\-level globally installed packages:
+.RE
+.PP
+\fB\fCwapm list \-\-global\fR
+.RS
+.IP \(bu 2
+Execute a package command using the Wasmer runtime:
+.RE
+.PP
+\fB\fCwapm run {{command_name}} {{arguments}}\fR

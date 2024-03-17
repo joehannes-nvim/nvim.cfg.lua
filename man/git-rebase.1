@@ -1,0 +1,55 @@
+.TH git rebase
+.PP
+.RS
+Reapply commits from one branch on top of another branch.
+Commonly used to "move" an entire branch to another base, creating copies of the commits in the new location.
+More information: \[la]https://git-scm.com/docs/git-rebase\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rebase the current branch on top of another specified branch:
+.RE
+.PP
+\fB\fCgit rebase {{new_base_branch}}\fR
+.RS
+.IP \(bu 2
+Start an interactive rebase, which allows the commits to be reordered, omitted, combined or modified:
+.RE
+.PP
+\fB\fCgit rebase \-i {{target_base_branch_or_commit_hash}}\fR
+.RS
+.IP \(bu 2
+Continue a rebase that was interrupted by a merge failure, after editing conflicting files:
+.RE
+.PP
+\fB\fCgit rebase \-\-continue\fR
+.RS
+.IP \(bu 2
+Continue a rebase that was paused due to merge conflicts, by skipping the conflicted commit:
+.RE
+.PP
+\fB\fCgit rebase \-\-skip\fR
+.RS
+.IP \(bu 2
+Abort a rebase in progress (e.g. if it is interrupted by a merge conflict):
+.RE
+.PP
+\fB\fCgit rebase \-\-abort\fR
+.RS
+.IP \(bu 2
+Move part of the current branch onto a new base, providing the old base to start from:
+.RE
+.PP
+\fB\fCgit rebase \-\-onto {{new_base}} {{old_base}}\fR
+.RS
+.IP \(bu 2
+Reapply the last 5 commits in\-place, stopping to allow them to be reordered, omitted, combined or modified:
+.RE
+.PP
+\fB\fCgit rebase \-i {{HEAD~5}}\fR
+.RS
+.IP \(bu 2
+Auto\-resolve any conflicts by favoring the working branch version (\fB\fCtheirs\fR keyword has reversed meaning in this case):
+.RE
+.PP
+\fB\fCgit rebase \-X theirs {{branch_name}}\fR

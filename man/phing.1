@@ -1,0 +1,54 @@
+.TH phing
+.PP
+.RS
+A PHP build tool based on Apache Ant.
+More information: \[la]https://www.phing.info\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform the default task in the \fB\fCbuild.xml\fR file:
+.RE
+.PP
+\fB\fCphing\fR
+.RS
+.IP \(bu 2
+Initialize a new build file:
+.RE
+.PP
+\fB\fCphing \-i {{path/to/build.xml}}\fR
+.RS
+.IP \(bu 2
+Perform a specific task:
+.RE
+.PP
+\fB\fCphing {{task_name}}\fR
+.RS
+.IP \(bu 2
+Specify a custom build file path:
+.RE
+.PP
+\fB\fCphing \-f {{path/to/build.xml}} {{task_name}}\fR
+.RS
+.IP \(bu 2
+Specify a log file to output to:
+.RE
+.PP
+\fB\fCphing \-b {{path/to/log_file}} {{task_name}}\fR
+.RS
+.IP \(bu 2
+Specify custom properties to use in the build:
+.RE
+.PP
+\fB\fCphing \-D{{property}}={{value}} {{task_name}}\fR
+.RS
+.IP \(bu 2
+Specify a custom listener class:
+.RE
+.PP
+\fB\fCphing \-listener {{class_name}} {{task_name}}\fR
+.RS
+.IP \(bu 2
+Build using verbose output:
+.RE
+.PP
+\fB\fCphing \-verbose {{task_name}}\fR

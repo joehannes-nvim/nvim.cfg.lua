@@ -1,0 +1,25 @@
+.TH calibre\-server
+.PP
+.RS
+A server application that can be used to distribute e\-books over a network.
+Note: e\-books must already be imported into the library using the GUI or the \fB\fCcalibredb\fR CLI.
+More information: \[la]https://manual.calibre-ebook.com/generated/en/calibre-server.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a server to distribute e\-books. Access at \[la]http://localhost:8080\[ra]:
+.RE
+.PP
+\fB\fCcalibre\-server\fR
+.RS
+.IP \(bu 2
+Start server on different port. Access at \[la]http://localhost:port\[ra]:
+.RE
+.PP
+\fB\fCcalibre\-server \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Password protect the server:
+.RE
+.PP
+\fB\fCcalibre\-server \-\-username {{username}} \-\-password {{password}}\fR

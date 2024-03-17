@@ -1,0 +1,43 @@
+.TH alias
+.PP
+.RS
+Creates aliases \-\- words that are replaced by a command string.
+Aliases expire with the current shell session unless defined in the shell's configuration file, e.g. \fB\fC~/.bashrc\fR\&.
+More information: \[la]https://tldp.org/LDP/abs/html/aliases.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all aliases:
+.RE
+.PP
+\fB\fCalias\fR
+.RS
+.IP \(bu 2
+Create a generic alias:
+.RE
+.PP
+\fB\fCalias {{word}}="{{command}}"\fR
+.RS
+.IP \(bu 2
+View the command associated to a given alias:
+.RE
+.PP
+\fB\fCalias {{word}}\fR
+.RS
+.IP \(bu 2
+Remove an aliased command:
+.RE
+.PP
+\fB\fCunalias {{word}}\fR
+.RS
+.IP \(bu 2
+Turn \fB\fCrm\fR into an interactive command:
+.RE
+.PP
+\fB\fCalias {{rm}}="{{rm \-\-interactive}}"\fR
+.RS
+.IP \(bu 2
+Create \fB\fCla\fR as a shortcut for \fB\fCls \-\-all\fR:
+.RE
+.PP
+\fB\fCalias {{la}}="{{ls \-\-all}}"\fR

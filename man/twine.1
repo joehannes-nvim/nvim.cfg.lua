@@ -1,0 +1,54 @@
+.TH twine
+.PP
+.RS
+Utility for publishing Python packages on PyPI.
+More information: \[la]https://twine.readthedocs.io/en/stable/#commands\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Upload to PyPI:
+.RE
+.PP
+\fB\fCtwine upload dist/*\fR
+.RS
+.IP \(bu 2
+Upload to the Test PyPI [r]epository to verify things look right:
+.RE
+.PP
+\fB\fCtwine upload \-r testpypi dist/*\fR
+.RS
+.IP \(bu 2
+Upload to PyPI with a specified [u]sername and [p]assword:
+.RE
+.PP
+\fB\fCtwine upload \-u {{username}} \-p {{password}} dist/*\fR
+.RS
+.IP \(bu 2
+Upload to an alternative repository URL:
+.RE
+.PP
+\fB\fCtwine upload \-\-repository\-url {{repository_url}} dist/*\fR
+.RS
+.IP \(bu 2
+Check that your distribution's long description should render correctly on PyPI:
+.RE
+.PP
+\fB\fCtwine check dist/*\fR
+.RS
+.IP \(bu 2
+Upload using a specific pypirc configuration file:
+.RE
+.PP
+\fB\fCtwine upload \-\-config\-file {{configuration_file}} dist/*\fR
+.RS
+.IP \(bu 2
+Continue uploading files if one already exists (only valid when uploading to PyPI):
+.RE
+.PP
+\fB\fCtwine upload \-\-skip\-existing dist/*\fR
+.RS
+.IP \(bu 2
+Upload to PyPI showing detailed information:
+.RE
+.PP
+\fB\fCtwine upload \-\-verbose dist/*\fR

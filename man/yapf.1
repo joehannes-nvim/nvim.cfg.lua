@@ -1,0 +1,24 @@
+.TH yapf
+.PP
+.RS
+Python style guide checker.
+More information: \[la]https://github.com/google/yapf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a diff of the changes that would be made, without making them (dry\-run):
+.RE
+.PP
+\fB\fCyapf \-\-diff {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Format the file in\-place and display a diff of the changes:
+.RE
+.PP
+\fB\fCyapf \-\-diff \-\-in\-place {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively format all Python files in a directory, concurrently:
+.RE
+.PP
+\fB\fCyapf \-\-recursive \-\-in\-place \-\-style {{pep8}} \-\-parallel {{path/to/directory}}\fR

@@ -1,0 +1,48 @@
+.TH monodis
+.PP
+.RS
+The Mono Common Intermediate Language (CIL) disassembler.
+More information: \[la]https://www.mono-project.com/docs/tools+libraries/tools/monodis/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Disassemble an assembly to textual CIL:
+.RE
+.PP
+\fB\fCmonodis {{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+Save the output to a file:
+.RE
+.PP
+\fB\fCmonodis \-\-output={{path/to/output.il}} {{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+Show information about an assembly:
+.RE
+.PP
+\fB\fCmonodis \-\-assembly {{path/to/assembly.dll}}\fR
+.RS
+.IP \(bu 2
+List the references of an assembly:
+.RE
+.PP
+\fB\fCmonodis \-\-assemblyref {{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+List all the methods in an assembly:
+.RE
+.PP
+\fB\fCmonodis \-\-method {{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+Show a list of resources embedded within an assembly:
+.RE
+.PP
+\fB\fCmonodis \-\-manifest {{path/to/assembly.dll}}\fR
+.RS
+.IP \(bu 2
+Extract all the embedded resources to the current directory:
+.RE
+.PP
+\fB\fCmonodis \-\-mresources {{path/to/assembly.dll}}\fR

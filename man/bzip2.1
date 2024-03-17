@@ -1,0 +1,48 @@
+.TH bzip2
+.PP
+.RS
+A block\-sorting file compressor.
+More information: \[la]https://manned.org/bzip2\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file:
+.RE
+.PP
+\fB\fCbzip2 {{path/to/file_to_compress}}\fR
+.RS
+.IP \(bu 2
+Decompress a file:
+.RE
+.PP
+\fB\fCbzip2 \-d {{path/to/compressed_file.bz2}}\fR
+.RS
+.IP \(bu 2
+Decompress a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbzip2 \-dc {{path/to/compressed_file.bz2}}\fR
+.RS
+.IP \(bu 2
+Test the integrity of each file inside the archive file:
+.RE
+.PP
+\fB\fCbzip2 \-\-test {{path/to/compressed_file.bz2}}\fR
+.RS
+.IP \(bu 2
+Show the compression ratio for each file processed with detailed information:
+.RE
+.PP
+\fB\fCbzip2 \-\-verbose {{path/to/compressed_files.bz2}}\fR
+.RS
+.IP \(bu 2
+Decompress a file overwriting existing files:
+.RE
+.PP
+\fB\fCbzip2 \-\-force {{path/to/compressed_file.bz2}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCbzip2 \-h\fR

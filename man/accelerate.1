@@ -1,0 +1,42 @@
+.TH Accelerate
+.PP
+.RS
+Accelerate is a library that enables the same PyTorch code to be run across any distributed configuration.
+More information: \[la]https://huggingface.co/docs/accelerate/index\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print environment information:
+.RE
+.PP
+\fB\fCaccelerate env\fR
+.RS
+.IP \(bu 2
+Interactively create a configuration file:
+.RE
+.PP
+\fB\fCaccelerate config\fR
+.RS
+.IP \(bu 2
+Print the estimated GPU memory cost of running a huggingface model with different data types:
+.RE
+.PP
+\fB\fCaccelerate estimate\-memory {{name/model}}\fR
+.RS
+.IP \(bu 2
+Test an Accelerate configuration file:
+.RE
+.PP
+\fB\fCaccelerate test \-\-config_file {{path/to/config.yaml}}\fR
+.RS
+.IP \(bu 2
+Run a model on CPU with Accelerate:
+.RE
+.PP
+\fB\fCaccelerate launch {{path/to/script.py}} {{\-\-cpu}}\fR
+.RS
+.IP \(bu 2
+Run a model on multi\-GPU with Accelerate, with 2 machines:
+.RE
+.PP
+\fB\fCaccelerate launch {{path/to/script.py}} \-\-multi_gpu \-\-num_machines {{2}}\fR

@@ -1,0 +1,25 @@
+.TH git sync
+.PP
+.RS
+Sync local branches with remote branches.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-sync\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sync the current local branch with its remote branch:
+.RE
+.PP
+\fB\fCgit sync\fR
+.RS
+.IP \(bu 2
+Sync the current local branch with the remote main branch:
+.RE
+.PP
+\fB\fCgit sync origin main\fR
+.RS
+.IP \(bu 2
+Sync without cleaning untracked files:
+.RE
+.PP
+\fB\fCgit sync \-s {{remote_name}} {{branch_name}}\fR

@@ -1,0 +1,30 @@
+.TH lualatex
+.PP
+.RS
+An extended version of TeX using Lua to compile.
+More information: \[la]https://manned.org/lualatex.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCtexlua\fR to act as a Lua interpreter:
+.RE
+.PP
+\fB\fClualatex\fR
+.RS
+.IP \(bu 2
+Compile a Tex file to PDF:
+.RE
+.PP
+\fB\fClualatex {{path/to/file.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a Tex file without error interruption:
+.RE
+.PP
+\fB\fClualatex \-interaction nonstopmode {{path/to/file.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a Tex file with a specific output file name:
+.RE
+.PP
+\fB\fClualatex \-jobname={{filename}} {{path/to/file.tex}}\fR

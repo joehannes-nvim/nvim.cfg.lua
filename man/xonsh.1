@@ -1,0 +1,43 @@
+.TH xonsh
+.PP
+.RS
+Python\-powered, cross\-platform, Unix\-gazing shell.
+Write and mix sh/Python code in Xonsh (pronounced conch).
+More information: \[la]https://xon.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCxonsh\fR
+.RS
+.IP \(bu 2
+Execute a single command and then exit:
+.RE
+.PP
+\fB\fCxonsh \-c "{{command}}"\fR
+.RS
+.IP \(bu 2
+Run commands from a script file and then exit:
+.RE
+.PP
+\fB\fCxonsh {{path/to/script_file.xonsh}}\fR
+.RS
+.IP \(bu 2
+Define environment variables for the shell process:
+.RE
+.PP
+\fB\fCxonsh \-D{{name1}}={{value1}} \-D{{name2}}={{value2}}\fR
+.RS
+.IP \(bu 2
+Load the specified \fB\fC\&.xonsh\fR or \fB\fC\&.json\fR configuration files:
+.RE
+.PP
+\fB\fCxonsh \-\-rc {{path/to/file1.xonsh}} {{path/to/file2.json}}\fR
+.RS
+.IP \(bu 2
+Skip loading the \fB\fC\&.xonshrc\fR configuration file:
+.RE
+.PP
+\fB\fCxonsh \-\-no\-rc\fR

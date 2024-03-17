@@ -1,0 +1,30 @@
+.TH kcadm.sh
+.PP
+.RS
+Perform administration tasks.
+More information: \[la]https://www.keycloak.org/docs/latest/server_admin/#admin-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an authenticated session:
+.RE
+.PP
+\fB\fCkcadm.sh config credentials \-\-server {{host}} \-\-realm {{realm_name}} \-\-user {{username}} \-\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Create a user:
+.RE
+.PP
+\fB\fCkcadm.sh create users \-s username={{username}} \-r {{realm_name}}\fR
+.RS
+.IP \(bu 2
+List all realms:
+.RE
+.PP
+\fB\fCkcadm.sh get realms\fR
+.RS
+.IP \(bu 2
+Update a realm with JSON config:
+.RE
+.PP
+\fB\fCkcadm.sh update realms/{{realm_name}} \-f {{path/to/file.json}}\fR

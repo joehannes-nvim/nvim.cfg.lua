@@ -1,0 +1,54 @@
+.TH podman run
+.PP
+.RS
+Run a command in a new Podman container.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-run.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run command in a new container from a tagged image:
+.RE
+.PP
+\fB\fCpodman run {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container in background and display its ID:
+.RE
+.PP
+\fB\fCpodman run \-\-detach {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a one\-off container in interactive mode and pseudo\-TTY:
+.RE
+.PP
+\fB\fCpodman run \-\-rm \-\-interactive \-\-tty {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with passed environment variables:
+.RE
+.PP
+\fB\fCpodman run \-\-env '{{variable}}={{value}}' \-\-env {{variable}} {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with bind mounted volumes:
+.RE
+.PP
+\fB\fCpodman run \-\-volume {{/path/to/host_path}}:{{/path/to/container_path}} {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container with published ports:
+.RE
+.PP
+\fB\fCpodman run \-\-publish {{host_port}}:{{container_port}} {{image:tag}} {{command}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container overwriting the entrypoint of the image:
+.RE
+.PP
+\fB\fCpodman run \-\-entrypoint {{command}} {{image:tag}}\fR
+.RS
+.IP \(bu 2
+Run command in a new container connecting it to a network:
+.RE
+.PP
+\fB\fCpodman run \-\-network {{network}} {{image:tag}}\fR

@@ -1,0 +1,54 @@
+.TH podman\-compose
+.PP
+.RS
+Run and manage Compose Specification container definition.
+More information: \[la]https://github.com/containers/podman-compose\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all running containers:
+.RE
+.PP
+\fB\fCpodman\-compose ps\fR
+.RS
+.IP \(bu 2
+Create and start all containers in the background using a local \fB\fCdocker\-compose.yml\fR:
+.RE
+.PP
+\fB\fCpodman\-compose up \-d\fR
+.RS
+.IP \(bu 2
+Start all containers, building if needed:
+.RE
+.PP
+\fB\fCpodman\-compose up \-\-build\fR
+.RS
+.IP \(bu 2
+Start all containers using an alternate compose file:
+.RE
+.PP
+\fB\fCpodman\-compose {{path/to/file}} up\fR
+.RS
+.IP \(bu 2
+Stop all running containers:
+.RE
+.PP
+\fB\fCpodman\-compose stop\fR
+.RS
+.IP \(bu 2
+Remove all containers, networks, and volumes:
+.RE
+.PP
+\fB\fCpodman\-compose down \-\-volumes\fR
+.RS
+.IP \(bu 2
+Follow logs for a container (omit all container names):
+.RE
+.PP
+\fB\fCpodman\-compose logs \-\-follow {{container_name}}\fR
+.RS
+.IP \(bu 2
+Run a one\-time command in a service with no ports mapped:
+.RE
+.PP
+\fB\fCpodman\-compose run {{service_name}} {{command}}\fR

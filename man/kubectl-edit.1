@@ -1,0 +1,36 @@
+.TH kubectl edit
+.PP
+.RS
+Edit Kubernetes resources.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#edit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Edit a pod:
+.RE
+.PP
+\fB\fCkubectl edit pod/{{pod_name}}\fR
+.RS
+.IP \(bu 2
+Edit a deployment:
+.RE
+.PP
+\fB\fCkubectl edit deployment/{{deployment_name}}\fR
+.RS
+.IP \(bu 2
+Edit a service:
+.RE
+.PP
+\fB\fCkubectl edit svc/{{service_name}}\fR
+.RS
+.IP \(bu 2
+Edit a resource using a specific editor:
+.RE
+.PP
+\fB\fCKUBE_EDITOR={{nano}} kubectl edit {{resource}}/{{resource_name}}\fR
+.RS
+.IP \(bu 2
+Edit a resource in JSON format:
+.RE
+.PP
+\fB\fCkubectl edit {{resource}}/{{resource_name}} \-\-output json\fR

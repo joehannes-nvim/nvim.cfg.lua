@@ -1,0 +1,30 @@
+.TH httping
+.PP
+.RS
+Measure the latency and throughput of a web server.
+More information: \[la]https://manned.org/httping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ping the specified URL:
+.RE
+.PP
+\fB\fChttping \-g {{url}}\fR
+.RS
+.IP \(bu 2
+Ping the web server on \fB\fChost\fR and \fB\fCport\fR:
+.RE
+.PP
+\fB\fChttping \-h {{host}} \-p {{port}}\fR
+.RS
+.IP \(bu 2
+Ping the web server on \fB\fChost\fR using a TLS connection:
+.RE
+.PP
+\fB\fChttping \-l \-g https://{{host}}\fR
+.RS
+.IP \(bu 2
+Ping the web server on \fB\fChost\fR using HTTP basic authentication:
+.RE
+.PP
+\fB\fChttping \-g http://{{host}} \-U {{username}} \-P {{password}}\fR

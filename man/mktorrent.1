@@ -1,0 +1,36 @@
+.TH mktorrent
+.PP
+.RS
+Create BitTorrent metainfo files.
+More information: \[la]https://github.com/Rudde/mktorrent\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a torrent with 2 KB as the piece size:
+.RE
+.PP
+\fB\fCmktorrent \-a {{tracker_announce_url}} \-l {{21}} \-o {{path/to/example.torrent}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a private torrent with a 2 KB piece size:
+.RE
+.PP
+\fB\fCmktorrent \-p \-a {{tracker_announce_url}} \-l {{21}} \-o {{path/to/example.torrent}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a torrent with a comment:
+.RE
+.PP
+\fB\fCmktorrent \-c "{{comment}}" \-a {{tracker_announce_url}} \-l {{21}} \-o {{path/to/example.torrent}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a torrent with multiple trackers:
+.RE
+.PP
+\fB\fCmktorrent \-a {{tracker_announce_url,tracker_announce_url_2}} \-l {{21}} \-o {{path/to/example.torrent}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a torrent with web seed URLs:
+.RE
+.PP
+\fB\fCmktorrent \-a {{tracker_announce_url}} \-w {{web_seed_url}} \-l {{21}} \-o {{path/to/example.torrent}} {{path/to/file_or_directory}}\fR

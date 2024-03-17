@@ -1,0 +1,55 @@
+.TH vt
+.PP
+.RS
+Command\-line interface for VirusTotal.
+API key from a VirusTotal account is required for this command.
+More information: \[la]https://github.com/VirusTotal/vt-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a specific file for viruses:
+.RE
+.PP
+\fB\fCvt scan file {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Scan a URL for viruses:
+.RE
+.PP
+\fB\fCvt scan url {{url}}\fR
+.RS
+.IP \(bu 2
+Display information from a specific analysis:
+.RE
+.PP
+\fB\fCvt analysis {{file_id|analysis_id}}\fR
+.RS
+.IP \(bu 2
+Download files in encrypted \fB\fC\&.zip\fR format (requires premium account):
+.RE
+.PP
+\fB\fCvt download {{file_id}} \-\-output {{path/to/directory}} \-\-zip \-\-zip\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Initialize or re\-initialize \fB\fCvt\fR to enter API key interactively:
+.RE
+.PP
+\fB\fCvt init\fR
+.RS
+.IP \(bu 2
+Display information about a domain:
+.RE
+.PP
+\fB\fCvt domain {{url}}\fR
+.RS
+.IP \(bu 2
+Display information for a specific URL:
+.RE
+.PP
+\fB\fCvt url {{url}}\fR
+.RS
+.IP \(bu 2
+Display information for a specific IP address:
+.RE
+.PP
+\fB\fCvt domain {{ip_address}}\fR

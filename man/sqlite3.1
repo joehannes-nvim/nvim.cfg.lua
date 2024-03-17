@@ -1,0 +1,24 @@
+.TH sqlite3
+.PP
+.RS
+The command\-line interface to SQLite 3, which is a self\-contained file\-based embedded SQL engine.
+More information: \[la]https://sqlite.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell with a new database:
+.RE
+.PP
+\fB\fCsqlite3\fR
+.RS
+.IP \(bu 2
+Open an interactive shell against an existing database:
+.RE
+.PP
+\fB\fCsqlite3 {{path/to/database.sqlite3}}\fR
+.RS
+.IP \(bu 2
+Execute an SQL statement against a database and then exit:
+.RE
+.PP
+\fB\fCsqlite3 {{path/to/database.sqlite3}} '{{SELECT * FROM some_table;}}'\fR

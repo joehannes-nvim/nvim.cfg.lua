@@ -1,0 +1,55 @@
+.TH curl
+.PP
+.RS
+Transfers data from or to a server.
+Supports most protocols, including HTTP, FTP, and POP3.
+More information: \[la]https://curl.se/docs/manpage.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download the contents of a URL to a file:
+.RE
+.PP
+\fB\fCcurl {{http://example.com}} \-\-output {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Download a file, saving the output under the filename indicated by the URL:
+.RE
+.PP
+\fB\fCcurl \-\-remote\-name {{http://example.com/filename}}\fR
+.RS
+.IP \(bu 2
+Download a file, following location redirects, and automatically continuing (resuming) a previous file transfer and return an error on server error:
+.RE
+.PP
+\fB\fCcurl \-\-fail \-\-remote\-name \-\-location \-\-continue\-at \- {{http://example.com/filename}}\fR
+.RS
+.IP \(bu 2
+Send form\-encoded data (POST request of type \fB\fCapplication/x\-www\-form\-urlencoded\fR). Use \fB\fC\-\-data @file_name\fR or \fB\fC\-\-data @'\-'\fR to read from STDIN:
+.RE
+.PP
+\fB\fCcurl \-\-data {{'name=bob'}} {{http://example.com/form}}\fR
+.RS
+.IP \(bu 2
+Send a request with an extra header, using a custom HTTP method:
+.RE
+.PP
+\fB\fCcurl \-\-header {{'X\-My\-Header: 123'}} \-\-request {{PUT}} {{http://example.com}}\fR
+.RS
+.IP \(bu 2
+Send data in JSON format, specifying the appropriate content\-type header:
+.RE
+.PP
+\fB\fCcurl \-\-data {{'{"name":"bob"}'}} \-\-header {{'Content\-Type: application/json'}} {{http://example.com/users/1234}}\fR
+.RS
+.IP \(bu 2
+Pass a username and password for server authentication:
+.RE
+.PP
+\fB\fCcurl \-\-user myusername:mypassword {{http://example.com}}\fR
+.RS
+.IP \(bu 2
+Pass client certificate and key for a resource, skipping certificate validation:
+.RE
+.PP
+\fB\fCcurl \-\-cert {{client.pem}} \-\-key {{key.pem}} \-\-insecure {{https://example.com}}\fR

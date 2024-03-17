@@ -1,0 +1,30 @@
+.TH go build
+.PP
+.RS
+Compile Go sources.
+More information: \[la]https://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a 'package main' file (output will be the filename without extension):
+.RE
+.PP
+\fB\fCgo build {{path/to/main.go}}\fR
+.RS
+.IP \(bu 2
+Compile, specifying the output filename:
+.RE
+.PP
+\fB\fCgo build \-o {{path/to/binary}} {{path/to/source.go}}\fR
+.RS
+.IP \(bu 2
+Compile a package:
+.RE
+.PP
+\fB\fCgo build \-o {{path/to/binary}} {{path/to/package}}\fR
+.RS
+.IP \(bu 2
+Compile a main package into an executable, enabling data race detection:
+.RE
+.PP
+\fB\fCgo build \-race \-o {{path/to/executable}} {{path/to/main/package}}\fR

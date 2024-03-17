@@ -1,0 +1,36 @@
+.TH xml validate
+.PP
+.RS
+Validate XML documents.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Validate one or more XML documents for well\-formedness only:
+.RE
+.PP
+\fB\fCxml validate {{path/to/input1.xml|URI}} {{input2.xml ...}}\fR
+.RS
+.IP \(bu 2
+Validate one or more XML documents against a Document Type Definition (DTD):
+.RE
+.PP
+\fB\fCxml validate \-\-dtd {{path/to/schema.dtd}} {{path/to/input1.xml|URI}} {{input2.xml ...}}\fR
+.RS
+.IP \(bu 2
+Validate one or more XML documents against an XML Schema Definition (XSD):
+.RE
+.PP
+\fB\fCxml validate \-\-xsd {{path/to/schema.xsd}} {{path/to/input1.xml|URI}} {{input2.xml ...}}\fR
+.RS
+.IP \(bu 2
+Validate one or more XML documents against a Relax NG schema (RNG):
+.RE
+.PP
+\fB\fCxml validate \-\-relaxng {{path/to/schema.rng}} {{path/to/input1.xml|URI}} {{input2.xml ...}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCvalidate\fR subcommand:
+.RE
+.PP
+\fB\fCxml validate \-\-help\fR

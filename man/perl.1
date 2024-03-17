@@ -1,0 +1,30 @@
+.TH perl
+.PP
+.RS
+The Perl 5 language interpreter.
+More information: \[la]https://www.perl.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print lines from \fB\fCstdin\fR [m/] matching regex1 and case insensitive [/i] regex2:
+.RE
+.PP
+\fB\fCperl \-n \-e 'print if m/{{regex1}}/ and m/{{regex2}}/i'\fR
+.RS
+.IP \(bu 2
+Say [\-E] first match group, using a regexp, ignoring space in regex [/x] :
+.RE
+.PP
+\fB\fCperl \-n \-E 'say $1 if m/{{before}} (  {{group_regex}}  ) {{after}}/x'\fR
+.RS
+.IP \(bu 2
+[\-i]n\-place, with backup, [s/] substitute all occurrence [/g] of regex with replacement:
+.RE
+.PP
+\fB\fCperl \-i'.bak' \-p \-e 's/{{regex}}/{{replacement}}/g' {{path/to/files}}\fR
+.RS
+.IP \(bu 2
+Use perl's inline documentation, some pages also available via man on linux:
+.RE
+.PP
+\fB\fCperldoc perlrun ; perldoc module ; perldoc \-f splice; perldoc \-q perlfaq1\fR

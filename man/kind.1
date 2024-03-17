@@ -1,0 +1,31 @@
+.TH kind
+.PP
+.RS
+Tool for running local Kubernetes clusters using Docker container "nodes".
+Designed for testing Kubernetes itself, but may be used for local development or continuous integration.
+More information: \[la]https://github.com/kubernetes-sigs/kind\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a local Kubernetes cluster:
+.RE
+.PP
+\fB\fCkind create cluster \-\-name {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Delete one or more clusters:
+.RE
+.PP
+\fB\fCkind delete clusters {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Get details about clusters, nodes, or the kubeconfig:
+.RE
+.PP
+\fB\fCkind get {{clusters|nodes|kubeconfig}}\fR
+.RS
+.IP \(bu 2
+Export the kubeconfig or the logs:
+.RE
+.PP
+\fB\fCkind export {{kubeconfig|logs}}\fR

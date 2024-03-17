@@ -1,0 +1,31 @@
+.TH transmission\-daemon
+.PP
+.RS
+Daemon controlled with \fB\fCtransmission\-remote\fR or its web interface.
+See also: \fB\fCtransmission\fR\&.
+More information: \[la]https://manned.org/transmission-daemon\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a headless \fB\fCtransmission\fR session:
+.RE
+.PP
+\fB\fCtransmission\-daemon\fR
+.RS
+.IP \(bu 2
+Start and watch a specific directory for new torrents:
+.RE
+.PP
+\fB\fCtransmission\-daemon \-\-watch\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Dump daemon settings in JSON format:
+.RE
+.PP
+\fB\fCtransmission\-daemon \-\-dump\-settings > {{path/to/file.json}}\fR
+.RS
+.IP \(bu 2
+Start with specific settings for the web interface:
+.RE
+.PP
+\fB\fCtransmission\-daemon \-\-auth \-\-username {{username}} \-\-password {{password}} \-\-port {{9091}} \-\-allowed {{127.0.0.1}}\fR

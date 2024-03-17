@@ -1,0 +1,24 @@
+.TH doctl compute droplet
+.PP
+.RS
+List, create, and delete virtual machines which are called droplets.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/compute/droplet/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a droplet:
+.RE
+.PP
+\fB\fCdoctl compute droplet create \-\-region {{region}} \-\-image {{os_image}} \-\-size {{vps_type}} {{droplet_name}}\fR
+.RS
+.IP \(bu 2
+Delete a droplet:
+.RE
+.PP
+\fB\fCdoctl compute droplet delete {{droplet_id|droplet_name}}\fR
+.RS
+.IP \(bu 2
+List droplets:
+.RE
+.PP
+\fB\fCdoctl compute droplet list\fR

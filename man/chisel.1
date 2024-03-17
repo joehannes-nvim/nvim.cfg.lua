@@ -1,0 +1,42 @@
+.TH chisel
+.PP
+.RS
+Create TCP tunnels. Includes both client and server.
+More information: \[la]https://github.com/jpillora/chisel\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a Chisel server:
+.RE
+.PP
+\fB\fCchisel server\fR
+.RS
+.IP \(bu 2
+Run a Chisel server listening to a specific port:
+.RE
+.PP
+\fB\fCchisel server \-p {{server_port}}\fR
+.RS
+.IP \(bu 2
+Run a chisel server that accepts authenticated connections using username and password:
+.RE
+.PP
+\fB\fCchisel server \-\-auth {{username}}:{{password}}\fR
+.RS
+.IP \(bu 2
+Connect to a Chisel server and tunnel a specific port to a remote server and port:
+.RE
+.PP
+\fB\fCchisel client {{server_ip}}:{{server_port}} {{local_port}}:{{remote_server}}:{{remote_port}}\fR
+.RS
+.IP \(bu 2
+Connect to a Chisel server and tunnel a specific host and port to a remote server and port:
+.RE
+.PP
+\fB\fCchisel client {{server_ip}}:{{server_port}} {{local_host}}:{{local_port}}:{{remote_server}}:{{remote_port}}\fR
+.RS
+.IP \(bu 2
+Connect to a Chisel server using username and password authentication:
+.RE
+.PP
+\fB\fCchisel client \-\-auth {{username}}:{{password}} {{server_ip}}:{{server_port}} {{local_port}}:{{remote_server}}:{{remote_port}}\fR

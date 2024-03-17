@@ -1,0 +1,42 @@
+.TH pageres
+.PP
+.RS
+Capture screenshots of websites in various resolutions.
+More information: \[la]https://github.com/sindresorhus/pageres-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Take multiple screenshots of multiple URLs at different resolutions:
+.RE
+.PP
+\fB\fCpageres {{https://example.com/}} {{https://example2.com/}} {{1366x768}} {{1600x900}}\fR
+.RS
+.IP \(bu 2
+Provide specific options for a URL, overriding global options:
+.RE
+.PP
+\fB\fCpageres [{{https://example.com/}} {{1366x768}} \-\-no\-crop] [{{https://example2.com/}} {{1024x768}}] \-\-crop\fR
+.RS
+.IP \(bu 2
+Provide a custom filename template:
+.RE
+.PP
+\fB\fCpageres {{https://example.com/}} {{1024x768}} \-\-filename={{'<%= date %> \- <%= url %>'}}\fR
+.RS
+.IP \(bu 2
+Capture a specific element on a page:
+.RE
+.PP
+\fB\fCpageres {{https://example.com/}} {{1366x768}} \-\-selector='{{.page\-header}}'\fR
+.RS
+.IP \(bu 2
+Hide a specific element:
+.RE
+.PP
+\fB\fCpageres {{https://example.com/}} {{1366x768}} \-\-hide='{{.page\-header}}'\fR
+.RS
+.IP \(bu 2
+Capture a screenshot of a local file:
+.RE
+.PP
+\fB\fCpageres {{local_file_path.html}} {{1366x768}}\fR

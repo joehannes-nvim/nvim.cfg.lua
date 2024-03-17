@@ -1,0 +1,54 @@
+.TH pngquant
+.PP
+.RS
+PNG converter and lossy image compressor.
+More information: \[la]https://pngquant.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a specific PNG as much as possible and write result to a new file:
+.RE
+.PP
+\fB\fCpngquant {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG and override original:
+.RE
+.PP
+\fB\fCpngquant \-\-ext .png \-\-force {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Try to compress a specific PNG with custom quality (skip if below the min value):
+.RE
+.PP
+\fB\fCpngquant \-\-quality {{0\-100}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG with the number of colors reduced to 64:
+.RE
+.PP
+\fB\fCpngquant {{64}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG and skip if the file is larger than the original:
+.RE
+.PP
+\fB\fCpngquant \-\-skip\-if\-larger {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG and remove metadata:
+.RE
+.PP
+\fB\fCpngquant \-\-strip {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG and save it to the given path:
+.RE
+.PP
+\fB\fCpngquant {{path/to/file.png}} \-\-output {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a specific PNG and show progress:
+.RE
+.PP
+\fB\fCpngquant \-\-verbose {{path/to/file.png}}\fR

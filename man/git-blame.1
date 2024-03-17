@@ -1,0 +1,30 @@
+.TH git blame
+.PP
+.RS
+Show commit hash and last author on each line of a file.
+More information: \[la]https://git-scm.com/docs/git-blame\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print file with author name and commit hash on each line:
+.RE
+.PP
+\fB\fCgit blame {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file with author email and commit hash on each line:
+.RE
+.PP
+\fB\fCgit blame \-e {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file with author name and commit hash on each line at a specific commit:
+.RE
+.PP
+\fB\fCgit blame {{commit}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file with author name and commit hash on each line before a specific commit:
+.RE
+.PP
+\fB\fCgit blame {{commit}}~ {{path/to/file}}\fR

@@ -1,0 +1,54 @@
+.TH docker container
+.PP
+.RS
+Manage Docker containers.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/container/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List currently running Docker containers:
+.RE
+.PP
+\fB\fCdocker container ls\fR
+.RS
+.IP \(bu 2
+Start one or more stopped containers:
+.RE
+.PP
+\fB\fCdocker container start {{container1_name}} {{container2_name}}\fR
+.RS
+.IP \(bu 2
+Kill one or more running containers:
+.RE
+.PP
+\fB\fCdocker container kill {{container_name}}\fR
+.RS
+.IP \(bu 2
+Stop one or more running containers:
+.RE
+.PP
+\fB\fCdocker container stop {{container_name}}\fR
+.RS
+.IP \(bu 2
+Pause all processes within one or more containers:
+.RE
+.PP
+\fB\fCdocker container pause {{container_name}}\fR
+.RS
+.IP \(bu 2
+Display detailed information on one or more containers:
+.RE
+.PP
+\fB\fCdocker container inspect {{container_name}}\fR
+.RS
+.IP \(bu 2
+Export a container's filesystem as a tar archive:
+.RE
+.PP
+\fB\fCdocker container export {{container_name}}\fR
+.RS
+.IP \(bu 2
+Create a new image from a container's changes:
+.RE
+.PP
+\fB\fCdocker container commit {{container_name}}\fR

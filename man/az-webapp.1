@@ -1,0 +1,31 @@
+.TH az webapp
+.PP
+.RS
+Manage Web Applications hosted in Azure Cloud Services.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/webapp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available runtimes for a web application:
+.RE
+.PP
+\fB\fCaz webapp list\-runtimes \-\-os\-type {{windows|linux}}\fR
+.RS
+.IP \(bu 2
+Create a web application:
+.RE
+.PP
+\fB\fCaz webapp up \-\-name {{name}} \-\-location {{location}} \-\-runtime {{runtime}}\fR
+.RS
+.IP \(bu 2
+List all web applications:
+.RE
+.PP
+\fB\fCaz webapp list\fR
+.RS
+.IP \(bu 2
+Delete a specific web application:
+.RE
+.PP
+\fB\fCaz webapp delete \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR

@@ -1,0 +1,31 @@
+.TH column
+.PP
+.RS
+Format \fB\fCstdin\fR or a file into multiple columns.
+Columns are filled before rows; the default separator is a whitespace.
+More information: \[la]https://manned.org/column\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format the output of a command for a 30 characters wide display:
+.RE
+.PP
+\fB\fCprintf "header1 header2\\nbar foo\\n" | column \-\-output\-width {{30}}\fR
+.RS
+.IP \(bu 2
+Split columns automatically and auto\-align them in a tabular format:
+.RE
+.PP
+\fB\fCprintf "header1 header2\\nbar foo\\n" | column \-\-table\fR
+.RS
+.IP \(bu 2
+Specify the column delimiter character for the \fB\fC\-\-table\fR option (e.g. "," for CSV) (defaults to whitespace):
+.RE
+.PP
+\fB\fCprintf "header1,header2\\nbar,foo\\n" | column \-\-table \-\-separator {{,}}\fR
+.RS
+.IP \(bu 2
+Fill rows before filling columns:
+.RE
+.PP
+\fB\fCprintf "header1\\nbar\\nfoobar\\n" | column \-\-output\-width {{30}} \-\-fillrows\fR

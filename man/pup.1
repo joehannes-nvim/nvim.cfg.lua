@@ -1,0 +1,42 @@
+.TH pup
+.PP
+.RS
+Command\-line HTML parsing tool.
+More information: \[la]https://github.com/ericchiang/pup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transform a raw HTML file into a cleaned, indented, and colored format:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup \-\-color\fR
+.RS
+.IP \(bu 2
+Filter HTML by element tag name:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup '{{tag}}'\fR
+.RS
+.IP \(bu 2
+Filter HTML by id:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup '{{div#id}}'\fR
+.RS
+.IP \(bu 2
+Filter HTML by attribute value:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup '{{input[type="text"]}}'\fR
+.RS
+.IP \(bu 2
+Print all text from the filtered HTML elements and their children:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup '{{div}} text{}'\fR
+.RS
+.IP \(bu 2
+Print HTML as JSON:
+.RE
+.PP
+\fB\fCcat {{index.html}} | pup '{{div}} json{}'\fR

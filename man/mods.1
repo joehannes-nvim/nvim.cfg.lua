@@ -1,0 +1,48 @@
+.TH mods
+.PP
+.RS
+AI for the command line, built for pipelines.
+More information: \[la]https://github.com/charmbracelet/mods\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ask a generic question:
+.RE
+.PP
+\fB\fCmods "{{write me a poem about platypuses}}"\fR
+.RS
+.IP \(bu 2
+Open settings in your \fB\fC$EDITOR\fR:
+.RE
+.PP
+\fB\fCmods \-\-settings\fR
+.RS
+.IP \(bu 2
+Ask for comments on your code, in markdown format:
+.RE
+.PP
+\fB\fCmods \-\-format "{{what are your thoughts on improving this code?}}" < {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Ask for help with your documentation, in markdown format:
+.RE
+.PP
+\fB\fCmods \-\-format "{{write a new section to this readme for a feature that sends you a free rabbit if you hit r}}" < {{README.md}}\fR
+.RS
+.IP \(bu 2
+Organize your videos, in markdown format:
+.RE
+.PP
+\fB\fCls {{path/to/videos}} | mods \-\-format "{{organize these by decade and summarize}}"\fR
+.RS
+.IP \(bu 2
+Read through raw HTML and summarize the contents, in markdown format:
+.RE
+.PP
+\fB\fCcurl "{{https://api.open\-meteo.com/v1/forecast?latitude=29.00&longitude=\-90.00&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m}}" | mods \-\-format "{{summarize this weather data for a human}}"\fR
+.RS
+.IP \(bu 2
+Display help and exit:
+.RE
+.PP
+\fB\fCmods \-\-help\fR

@@ -1,0 +1,48 @@
+.TH mlr
+.PP
+.RS
+Miller is like \fB\fCawk\fR, \fB\fCsed\fR, \fB\fCcut\fR, \fB\fCjoin\fR, and \fB\fCsort\fR for name\-indexed data such as CSV, TSV, and tabular JSON.
+More information: \[la]https://johnkerl.org/miller/doc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pretty\-print a CSV file in a tabular format:
+.RE
+.PP
+\fB\fCmlr \-\-icsv \-\-opprint cat {{example.csv}}\fR
+.RS
+.IP \(bu 2
+Receive JSON data and pretty print the output:
+.RE
+.PP
+\fB\fCecho '{"hello":"world"}' | mlr \-\-ijson \-\-opprint cat\fR
+.RS
+.IP \(bu 2
+Sort alphabetically on a field:
+.RE
+.PP
+\fB\fCmlr \-\-icsv \-\-opprint sort \-f {{field}} {{example.csv}}\fR
+.RS
+.IP \(bu 2
+Sort in descending numerical order on a field:
+.RE
+.PP
+\fB\fCmlr \-\-icsv \-\-opprint sort \-nr {{field}} {{example.csv}}\fR
+.RS
+.IP \(bu 2
+Convert CSV to JSON, performing calculations and display those calculations:
+.RE
+.PP
+\fB\fCmlr \-\-icsv \-\-ojson put '${{newField1}} = ${{oldFieldA}}/${{oldFieldB}}' {{example.csv}}\fR
+.RS
+.IP \(bu 2
+Receive JSON and format the output as vertical JSON:
+.RE
+.PP
+\fB\fCecho '{"hello":"world", "foo":"bar"}' | mlr \-\-ijson \-\-ojson \-\-jvstack cat\fR
+.RS
+.IP \(bu 2
+Filter lines of a compressed CSV file treating numbers as strings:
+.RE
+.PP
+\fB\fCmlr \-\-prepipe 'gunzip' \-\-csv filter \-S '${{fieldName}} =~ "{{regular_expression}}"' {{example.csv.gz}}\fR

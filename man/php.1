@@ -1,0 +1,54 @@
+.TH php
+.PP
+.RS
+PHP command\-line interface.
+More information: \[la]https://php.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Parse and execute a PHP script:
+.RE
+.PP
+\fB\fCphp {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Check syntax on (i.e. lint) a PHP script:
+.RE
+.PP
+\fB\fCphp \-l {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Run PHP interactively:
+.RE
+.PP
+\fB\fCphp \-a\fR
+.RS
+.IP \(bu 2
+Run PHP code (Notes: Don't use <? ?> tags; escape double quotes with backslash):
+.RE
+.PP
+\fB\fCphp \-r "{{code}}"\fR
+.RS
+.IP \(bu 2
+Start a PHP built\-in web server in the current directory:
+.RE
+.PP
+\fB\fCphp \-S {{host:port}}\fR
+.RS
+.IP \(bu 2
+Get a list of installed PHP extensions:
+.RE
+.PP
+\fB\fCphp \-m\fR
+.RS
+.IP \(bu 2
+Display information about the current PHP configuration:
+.RE
+.PP
+\fB\fCphp \-i\fR
+.RS
+.IP \(bu 2
+Display information about a specific function:
+.RE
+.PP
+\fB\fCphp \-\-rf {{function_name}}\fR

@@ -1,0 +1,42 @@
+.TH isisdl
+.PP
+.RS
+A downloading utility for ISIS of TU\-Berlin. Download all your files and videos from ISIS.
+More information: \[la]https://github.com/Emily3403/isisdl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the synchronization process:
+.RE
+.PP
+\fB\fCisisdl\fR
+.RS
+.IP \(bu 2
+Limit the download rate to 20 MiB/s and download with 5 threads:
+.RE
+.PP
+\fB\fCisisdl \-\-download\-rate {{20}} \-\-max\-num\-threads {{5}}\fR
+.RS
+.IP \(bu 2
+Run the initialization configuration wizard:
+.RE
+.PP
+\fB\fCisisdl \-\-init\fR
+.RS
+.IP \(bu 2
+Run the additional configuration wizard:
+.RE
+.PP
+\fB\fCisisdl \-\-config\fR
+.RS
+.IP \(bu 2
+Initiate a full synchronization of the database and compute the checksum of every file:
+.RE
+.PP
+\fB\fCisisdl \-\-sync\fR
+.RS
+.IP \(bu 2
+Start ffmpeg to compress downloaded videos:
+.RE
+.PP
+\fB\fCisisdl \-\-compress\fR

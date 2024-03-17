@@ -1,0 +1,36 @@
+.TH smartctl
+.PP
+.RS
+Monitor disk health including SMART data.
+More information: \[la]https://www.smartmontools.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display SMART health summary:
+.RE
+.PP
+\fB\fCsudo smartctl \-\-health {{/dev/sdX}}\fR
+.RS
+.IP \(bu 2
+Display device information:
+.RE
+.PP
+\fB\fCsudo smartctl \-\-info {{/dev/sdX}}\fR
+.RS
+.IP \(bu 2
+Start a short self\-test in the background:
+.RE
+.PP
+\fB\fCsudo smartctl \-\-test short {{/dev/sdX}}\fR
+.RS
+.IP \(bu 2
+Display current/last self\-test status and other SMART capabilities:
+.RE
+.PP
+\fB\fCsudo smartctl \-\-capabilities {{/dev/sdX}}\fR
+.RS
+.IP \(bu 2
+Display exhaustive SMART data:
+.RE
+.PP
+\fB\fCsudo smartctl \-\-all {{/dev/sdX}}\fR

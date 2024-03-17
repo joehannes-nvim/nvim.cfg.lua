@@ -1,0 +1,36 @@
+.TH mh_metric
+.PP
+.RS
+Calculate and enforce code metrics for MATLAB or Octave code.
+More information: \[la]https://misshit.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the code metrics for the specified files:
+.RE
+.PP
+\fB\fCmh_metric {{path/to/file1.m path/to/file2.m ...}}\fR
+.RS
+.IP \(bu 2
+Print the code metrics for the specified Octave files:
+.RE
+.PP
+\fB\fCmh_metric \-\-octave {{path/to/file1.m path/to/file2.m ...}}\fR
+.RS
+.IP \(bu 2
+Print the code metrics for the specified directory recursively:
+.RE
+.PP
+\fB\fCmh_metric {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Print the code metrics for the current directory:
+.RE
+.PP
+\fB\fCmh_metric\fR
+.RS
+.IP \(bu 2
+Print the code metrics report in HTML or JSON format:
+.RE
+.PP
+\fB\fCmh_metric \-\-{{html|json}} {{path/to/output_file}}\fR

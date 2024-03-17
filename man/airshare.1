@@ -1,0 +1,42 @@
+.TH airshare
+.PP
+.RS
+Transfer data between two machines in a local network.
+More information: \[la]https://airshare.rtfd.io/en/latest/cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Share files or directories:
+.RE
+.PP
+\fB\fCairshare {{code}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Receive a file:
+.RE
+.PP
+\fB\fCairshare {{code}}\fR
+.RS
+.IP \(bu 2
+Host a receiving server (use this to be able to upload files using the web interface):
+.RE
+.PP
+\fB\fCairshare \-\-upload {{code}}\fR
+.RS
+.IP \(bu 2
+Send files or directories to a receiving server:
+.RE
+.PP
+\fB\fCairshare \-\-upload {{code}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Send files whose paths have been copied to the clipboard:
+.RE
+.PP
+\fB\fCairshare \-\-file\-path {{code}}\fR
+.RS
+.IP \(bu 2
+Receive a file and copy it to the clipboard:
+.RE
+.PP
+\fB\fCairshare \-\-clip\-receive {{code}}\fR

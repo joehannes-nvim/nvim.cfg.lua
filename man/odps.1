@@ -1,0 +1,43 @@
+.TH odps
+.PP
+.RS
+Aliyun ODPS (Open Data Processing Service) command\-line tool.
+Some subcommands such as \fB\fCodps inst\fR have their own usage documentation.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the command\-line with a custom configuration file:
+.RE
+.PP
+\fB\fCodpscmd \-\-config={{odps_config.ini}}\fR
+.RS
+.IP \(bu 2
+Switch current project:
+.RE
+.PP
+\fB\fCuse {{project_name}};\fR
+.RS
+.IP \(bu 2
+Show tables in the current project:
+.RE
+.PP
+\fB\fCshow tables;\fR
+.RS
+.IP \(bu 2
+Describe a table:
+.RE
+.PP
+\fB\fCdesc {{table_name}};\fR
+.RS
+.IP \(bu 2
+Show table partitions:
+.RE
+.PP
+\fB\fCshow partitions {{table_name}};\fR
+.RS
+.IP \(bu 2
+Describe a partition:
+.RE
+.PP
+\fB\fCdesc {{table_name}} partition ({{partition_spec}});\fR

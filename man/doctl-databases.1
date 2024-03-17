@@ -1,0 +1,36 @@
+.TH doctl databases
+.PP
+.RS
+Manage your MySQL, Redis, PostgreSQL, and MongoDB database services.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Get details for a database cluster:
+.RE
+.PP
+\fB\fCdoctl databases get\fR
+.RS
+.IP \(bu 2
+List your database clusters:
+.RE
+.PP
+\fB\fCdoctl databases list\fR
+.RS
+.IP \(bu 2
+Create a database cluster:
+.RE
+.PP
+\fB\fCdoctl databases create {{database_name}}\fR
+.RS
+.IP \(bu 2
+Delete a cluster:
+.RE
+.PP
+\fB\fCdoctl databases delete {{database_id}}\fR

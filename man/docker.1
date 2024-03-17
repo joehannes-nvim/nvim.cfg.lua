@@ -1,0 +1,55 @@
+.TH docker
+.PP
+.RS
+Manage Docker containers and images.
+Some subcommands such as \fB\fCdocker run\fR have their own usage documentation.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all docker containers (running and stopped):
+.RE
+.PP
+\fB\fCdocker ps \-\-all\fR
+.RS
+.IP \(bu 2
+Start a container from an image, with a custom name:
+.RE
+.PP
+\fB\fCdocker run \-\-name {{container_name}} {{image}}\fR
+.RS
+.IP \(bu 2
+Start or stop an existing container:
+.RE
+.PP
+\fB\fCdocker {{start|stop}} {{container_name}}\fR
+.RS
+.IP \(bu 2
+Pull an image from a docker registry:
+.RE
+.PP
+\fB\fCdocker pull {{image}}\fR
+.RS
+.IP \(bu 2
+Display the list of already downloaded images:
+.RE
+.PP
+\fB\fCdocker images\fR
+.RS
+.IP \(bu 2
+Open a shell inside a running container:
+.RE
+.PP
+\fB\fCdocker exec \-it {{container_name}} {{sh}}\fR
+.RS
+.IP \(bu 2
+Remove a stopped container:
+.RE
+.PP
+\fB\fCdocker rm {{container_name}}\fR
+.RS
+.IP \(bu 2
+Fetch and follow the logs of a container:
+.RE
+.PP
+\fB\fCdocker logs \-f {{container_name}}\fR

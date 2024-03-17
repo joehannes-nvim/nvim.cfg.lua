@@ -1,0 +1,42 @@
+.TH meson
+.PP
+.RS
+SCons\-like build system that uses Python as a front\-end language and Ninja as a building backend.
+More information: \[la]https://mesonbuild.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a C project with a given name and version:
+.RE
+.PP
+\fB\fCmeson init \-\-language={{c}} \-\-name={{myproject}} \-\-version={{0.1}}\fR
+.RS
+.IP \(bu 2
+Configure the \fB\fCbuilddir\fR with default values:
+.RE
+.PP
+\fB\fCmeson setup {{build_dir}}\fR
+.RS
+.IP \(bu 2
+Build the project:
+.RE
+.PP
+\fB\fCmeson compile \-C {{path/to/build_dir}}\fR
+.RS
+.IP \(bu 2
+Run all tests in the project:
+.RE
+.PP
+\fB\fCmeson test\fR
+.RS
+.IP \(bu 2
+Show the help:
+.RE
+.PP
+\fB\fCmeson \-\-help\fR
+.RS
+.IP \(bu 2
+Show version info:
+.RE
+.PP
+\fB\fCmeson \-\-version\fR

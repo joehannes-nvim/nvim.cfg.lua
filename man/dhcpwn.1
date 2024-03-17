@@ -1,0 +1,18 @@
+.TH dhcpwn
+.PP
+.RS
+Test DHCP IP exhaustion attacks and sniff local DHCP traffic.
+More information: \[la]https://github.com/mschwager/dhcpwn\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Flood the network with IP requests:
+.RE
+.PP
+\fB\fCdhcpwn \-\-interface {{network_interface}} flood \-\-count {{number_of_requests}}\fR
+.RS
+.IP \(bu 2
+Sniff local DHCP traffic:
+.RE
+.PP
+\fB\fCdhcpwn \-\-interface {{network_interface}} sniff\fR

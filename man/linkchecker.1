@@ -1,0 +1,30 @@
+.TH linkchecker
+.PP
+.RS
+Command\-line client to check HTML documents and websites for broken links.
+More information: \[la]https://linkchecker.github.io/linkchecker/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find broken links on \[la]https://example.com/\[ra]:
+.RE
+.PP
+\fB\fClinkchecker {{https://example.com/}}\fR
+.RS
+.IP \(bu 2
+Also check URLs that point to external domains:
+.RE
+.PP
+\fB\fClinkchecker \-\-check\-extern {{https://example.com/}}\fR
+.RS
+.IP \(bu 2
+Ignore URLs that match a specific regular expression:
+.RE
+.PP
+\fB\fClinkchecker \-\-ignore\-url {{regular_expression}} {{https://example.com/}}\fR
+.RS
+.IP \(bu 2
+Output results to a CSV file:
+.RE
+.PP
+\fB\fClinkchecker \-\-file\-output {{csv}}/{{path/to/file}} {{https://example.com/}}\fR

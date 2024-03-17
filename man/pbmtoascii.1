@@ -1,0 +1,30 @@
+.TH pbmtoascii
+.PP
+.RS
+Convert a PBM image to ASCII graphics.
+More information: \[la]https://netpbm.sourceforge.net/doc/pbmtoascii.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read a PBM file as input and produce an ASCII output:
+.RE
+.PP
+\fB\fCpbmtoascii {{path/to/input_file.pbm}}\fR
+.RS
+.IP \(bu 2
+Read a PBM file as input and save an ASCII output into a file:
+.RE
+.PP
+\fB\fCpbmtoascii {{path/to/input_file.pbm}} > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Read a PBM file as input while setting the pixel mapping (defaults to 1x2):
+.RE
+.PP
+\fB\fCpbmtoascii \-{{1x2|2x4}} {{path/to/input_file.pbm}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCpbmtoascii \-version\fR

@@ -1,0 +1,18 @@
+.TH amass track
+.PP
+.RS
+Track differences between enumerations of the same domain.
+More information: \[la]https://github.com/OWASP/Amass/blob/master/doc/user_guide.md#the-track-subcommand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the difference between the last two enumerations of the specified domain:
+.RE
+.PP
+\fB\fCamass track \-dir {{path/to/database_directory}} \-d {{domain_name}} \-last 2\fR
+.RS
+.IP \(bu 2
+Show the difference between a certain point in time and the last enumeration:
+.RE
+.PP
+\fB\fCamass track \-dir {{path/to/database_directory}} \-d {{domain_name}} \-since {{01/02 15:04:05 2006 MST}}\fR

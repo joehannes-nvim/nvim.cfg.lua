@@ -1,0 +1,48 @@
+.TH msbuild
+.PP
+.RS
+The Microsoft build tool for Visual Studio project solutions.
+More information: \[la]https://learn.microsoft.com/visualstudio/msbuild\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the first project file in the current directory:
+.RE
+.PP
+\fB\fCmsbuild\fR
+.RS
+.IP \(bu 2
+Build a specific project file:
+.RE
+.PP
+\fB\fCmsbuild {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Set one or more semicolon\-separated targets to build:
+.RE
+.PP
+\fB\fCmsbuild {{path/to/project_file}} /target:{{targets}}\fR
+.RS
+.IP \(bu 2
+Set one or more semicolon\-separated properties:
+.RE
+.PP
+\fB\fCmsbuild {{path/to/project_file}} /property:{{name=value}}\fR
+.RS
+.IP \(bu 2
+Set the build tools version to use:
+.RE
+.PP
+\fB\fCmsbuild {{path/to/project_file}} /toolsversion:{{version}}\fR
+.RS
+.IP \(bu 2
+Display detailed information at the end of the log about how the project was configured:
+.RE
+.PP
+\fB\fCmsbuild {{path/to/project_file}} /detailedsummary\fR
+.RS
+.IP \(bu 2
+Display detailed help information:
+.RE
+.PP
+\fB\fCmsbuild /help\fR

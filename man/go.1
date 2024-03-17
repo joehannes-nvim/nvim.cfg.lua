@@ -1,0 +1,49 @@
+.TH go
+.PP
+.RS
+Tool for managing go source code.
+Some subcommands such as \fB\fCgo build\fR have their own usage documentation.
+More information: \[la]https://golang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download and install a package, specified by its import path:
+.RE
+.PP
+\fB\fCgo get {{package_path}}\fR
+.RS
+.IP \(bu 2
+Compile and run a source file (it has to contain a \fB\fCmain\fR package):
+.RE
+.PP
+\fB\fCgo run {{file}}.go\fR
+.RS
+.IP \(bu 2
+Compile a source file into a named executable:
+.RE
+.PP
+\fB\fCgo build \-o {{executable}} {{file}}.go\fR
+.RS
+.IP \(bu 2
+Compile the package present in the current directory:
+.RE
+.PP
+\fB\fCgo build\fR
+.RS
+.IP \(bu 2
+Execute all test cases of the current package (files have to end with \fB\fC_test.go\fR):
+.RE
+.PP
+\fB\fCgo test\fR
+.RS
+.IP \(bu 2
+Compile and install the current package:
+.RE
+.PP
+\fB\fCgo install\fR
+.RS
+.IP \(bu 2
+Initialize a new module in the current directory:
+.RE
+.PP
+\fB\fCgo mod init {{module_name}}\fR

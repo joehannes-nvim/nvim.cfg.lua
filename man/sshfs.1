@@ -1,0 +1,36 @@
+.TH sshfs
+.PP
+.RS
+Filesystem client based on SSH.
+More information: \[la]https://github.com/libfuse/sshfs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Mount remote directory:
+.RE
+.PP
+\fB\fCsshfs {{username}}@{{remote_host}}:{{remote_directory}} {{mountpoint}}\fR
+.RS
+.IP \(bu 2
+Unmount remote directory:
+.RE
+.PP
+\fB\fCumount {{mountpoint}}\fR
+.RS
+.IP \(bu 2
+Mount remote directory from server with specific port:
+.RE
+.PP
+\fB\fCsshfs {{username}}@{{remote_host}}:{{remote_directory}} \-p {{2222}}\fR
+.RS
+.IP \(bu 2
+Use compression:
+.RE
+.PP
+\fB\fCsshfs {{username}}@{{remote_host}}:{{remote_directory}} \-C\fR
+.RS
+.IP \(bu 2
+Follow symbolic links:
+.RE
+.PP
+\fB\fCsshfs \-o follow_symlinks {{username}}@{{remote_host}}:{{remote_directory}} {{mountpoint}}\fR

@@ -1,0 +1,24 @@
+.TH ln
+.PP
+.RS
+Creates links to files and directories.
+More information: \[la]https://www.gnu.org/software/coreutils/ln\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a symbolic link to a file or directory:
+.RE
+.PP
+\fB\fCln \-s {{/path/to/file_or_directory}} {{path/to/symlink}}\fR
+.RS
+.IP \(bu 2
+Overwrite an existing symbolic link to point to a different file:
+.RE
+.PP
+\fB\fCln \-sf {{/path/to/new_file}} {{path/to/symlink}}\fR
+.RS
+.IP \(bu 2
+Create a hard link to a file:
+.RE
+.PP
+\fB\fCln {{/path/to/file}} {{path/to/hardlink}}\fR

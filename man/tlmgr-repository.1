@@ -1,0 +1,42 @@
+.TH tlmgr repository
+.PP
+.RS
+Manage repositories of a TeX Live installation.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all configured repositories and their tags (if set):
+.RE
+.PP
+\fB\fCtlmgr repository list\fR
+.RS
+.IP \(bu 2
+List all packages available in a specific repository:
+.RE
+.PP
+\fB\fCtlmgr repository list {{path|url|tag}}\fR
+.RS
+.IP \(bu 2
+Add a new repository with a specific tag (the tag is not required):
+.RE
+.PP
+\fB\fCsudo tlmgr repository add {{path|url}} {{tag}}\fR
+.RS
+.IP \(bu 2
+Remove a specific repository:
+.RE
+.PP
+\fB\fCsudo tlmgr repository remove {{path|url|tag}}\fR
+.RS
+.IP \(bu 2
+Set a new list of repositories, overwriting the previous list:
+.RE
+.PP
+\fB\fCsudo tlmgr repository set {{path|url|tag}}#{{tag}} {{path|url|tag}}#{{tag}} {{...}}\fR
+.RS
+.IP \(bu 2
+Show the verification status of all configured repositories:
+.RE
+.PP
+\fB\fCtlmgr repository status\fR

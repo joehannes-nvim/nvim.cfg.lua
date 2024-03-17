@@ -1,0 +1,42 @@
+.TH binwalk
+.PP
+.RS
+Firmware Analysis Tool.
+More information: \[la]https://github.com/ReFirmLabs/binwalk\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a binary file:
+.RE
+.PP
+\fB\fCbinwalk {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Extract files from a binary, specifying the output directory:
+.RE
+.PP
+\fB\fCbinwalk \-\-extract \-\-directory {{output_directory}} {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Recursively extract files from a binary limiting the recursion depth to 2:
+.RE
+.PP
+\fB\fCbinwalk \-\-extract \-\-matryoshka \-\-depth {{2}} {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Extract files from a binary with the specified file signature:
+.RE
+.PP
+\fB\fCbinwalk \-\-dd '{{png image:png}}' {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Analyze the entropy of a binary, saving the plot with the same name as the binary and \fB\fC\&.png\fR extension appended:
+.RE
+.PP
+\fB\fCbinwalk \-\-entropy \-\-save {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Combine entropy, signature and opcodes analysis in a single command:
+.RE
+.PP
+\fB\fCbinwalk \-\-entropy \-\-signature \-\-opcodes {{path/to/binary}}\fR

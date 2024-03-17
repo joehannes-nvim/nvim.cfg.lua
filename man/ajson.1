@@ -1,0 +1,30 @@
+.TH ajson
+.PP
+.RS
+Executes JSONPath on JSON objects.
+More information: \[la]https://github.com/spyzhov/ajson\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read JSON from a file and execute a specified JSONPath expression:
+.RE
+.PP
+\fB\fCajson '{{$..json[?(@.path)]}}' {{path/to/file.json}}\fR
+.RS
+.IP \(bu 2
+Read JSON from \fB\fCstdin\fR and execute a specified JSONPath expression:
+.RE
+.PP
+\fB\fCcat {{path/to/file.json}} | ajson '{{$..json[?(@.path)]}}'\fR
+.RS
+.IP \(bu 2
+Read JSON from a URL and evaluate a specified JSONPath expression:
+.RE
+.PP
+\fB\fCajson '{{avg($..price)}}' '{{https://example.com/api/}}'\fR
+.RS
+.IP \(bu 2
+Read some simple JSON and calculate a value:
+.RE
+.PP
+\fB\fCecho '{{3}}' | ajson '{{2 * pi * $}}'\fR

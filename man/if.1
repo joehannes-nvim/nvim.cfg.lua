@@ -1,0 +1,55 @@
+.TH if
+.PP
+.RS
+Performs conditional processing in shell scripts.
+See also: \fB\fCtest\fR, \fB\fC[\fR\&.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute the specified commands if the condition command's exit status is zero:
+.RE
+.PP
+\fB\fCif {{condition_command}}; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+Execute the specified commands if the condition command's exit status is not zero:
+.RE
+.PP
+\fB\fCif ! {{condition_command}}; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+Execute the first specified commands if the condition command's exit status is zero otherwise execute the second specified commands:
+.RE
+.PP
+\fB\fCif {{condition_command}}; then {{echo "Condition is true"}}; else {{echo "Condition is false"}}; fi\fR
+.RS
+.IP \(bu 2
+Check whether a [f]ile exists:
+.RE
+.PP
+\fB\fCif [[ \-f {{path/to/file}} ]]; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+Check whether a [d]irectory exists:
+.RE
+.PP
+\fB\fCif [[ \-d {{path/to/directory}} ]]; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+Check whether a file or directory [e]xists:
+.RE
+.PP
+\fB\fCif [[ \-e {{path/to/file_or_directory}} ]]; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+Check whether a variable is defined:
+.RE
+.PP
+\fB\fCif [[ \-n "${{variable}}" ]]; then {{echo "Condition is true"}}; fi\fR
+.RS
+.IP \(bu 2
+List all possible conditions (\fB\fCtest\fR is an alias to \fB\fC[\fR; both are commonly used with \fB\fCif\fR):
+.RE
+.PP
+\fB\fCman [\fR

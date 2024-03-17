@@ -1,0 +1,24 @@
+.TH mcs
+.PP
+.RS
+Mono C# Compiler.
+More information: \[la]https://manned.org/mcs.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile the specified files:
+.RE
+.PP
+\fB\fCmcs {{path/to/input_file1.cs path/to/input_file2.cs ...}}\fR
+.RS
+.IP \(bu 2
+Specify the output program name:
+.RE
+.PP
+\fB\fCmcs \-out:{{path/to/file.exe}} {{path/to/input_file1.cs path/to/input_file2.cs ...}}\fR
+.RS
+.IP \(bu 2
+Specify the output program type:
+.RE
+.PP
+\fB\fCmcs \-target:{{exe|winexe|library|module}} {{path/to/input_file1.cs path/to/input_file2.cs ...}}\fR

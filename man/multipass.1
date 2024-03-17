@@ -1,0 +1,54 @@
+.TH multipass
+.PP
+.RS
+Manage Ubuntu virtual machines using native hypervisors.
+More information: \[la]https://multipass.run/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the aliases that can be used to launch an instance:
+.RE
+.PP
+\fB\fCmultipass find\fR
+.RS
+.IP \(bu 2
+Launch a new instance, set its name and use a cloud\-init configuration file:
+.RE
+.PP
+\fB\fCmultipass launch \-n {{instance_name}} \-\-cloud\-init {{configuration_file}}\fR
+.RS
+.IP \(bu 2
+List all the created instances and some of their properties:
+.RE
+.PP
+\fB\fCmultipass list\fR
+.RS
+.IP \(bu 2
+Start a specific instance by name:
+.RE
+.PP
+\fB\fCmultipass start {{instance_name}}\fR
+.RS
+.IP \(bu 2
+Show the properties of an instance:
+.RE
+.PP
+\fB\fCmultipass info {{instance_name}}\fR
+.RS
+.IP \(bu 2
+Open a shell prompt on a specific instance by name:
+.RE
+.PP
+\fB\fCmultipass shell {{instance_name}}\fR
+.RS
+.IP \(bu 2
+Delete an instance by name:
+.RE
+.PP
+\fB\fCmultipass delete {{instance_name}}\fR
+.RS
+.IP \(bu 2
+Mount a directory into a specific instance:
+.RE
+.PP
+\fB\fCmultipass mount {{path/to/local/directory}} {{instance_name}}:{{path/to/target/directory}}\fR

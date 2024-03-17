@@ -1,0 +1,49 @@
+.TH pm2
+.PP
+.RS
+Process manager for Node.js.
+Used for log management, monitoring and configuring processes.
+More information: \[la]https://pm2.keymetrics.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a process with a name that can be used for later operations:
+.RE
+.PP
+\fB\fCpm2 start {{app.js}} \-\-name {{application_name}}\fR
+.RS
+.IP \(bu 2
+List processes:
+.RE
+.PP
+\fB\fCpm2 list\fR
+.RS
+.IP \(bu 2
+Monitor all processes:
+.RE
+.PP
+\fB\fCpm2 monit\fR
+.RS
+.IP \(bu 2
+Stop a process:
+.RE
+.PP
+\fB\fCpm2 stop {{application_name}}\fR
+.RS
+.IP \(bu 2
+Restart a process:
+.RE
+.PP
+\fB\fCpm2 restart {{application_name}}\fR
+.RS
+.IP \(bu 2
+Dump all processes for resurrecting them later:
+.RE
+.PP
+\fB\fCpm2 save\fR
+.RS
+.IP \(bu 2
+Resurrect previously dumped processes:
+.RE
+.PP
+\fB\fCpm2 resurrect\fR

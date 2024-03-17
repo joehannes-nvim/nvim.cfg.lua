@@ -1,0 +1,48 @@
+.TH kubectl get
+.PP
+.RS
+Get Kubernetes objects and resources.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get all namespaces in the current cluster:
+.RE
+.PP
+\fB\fCkubectl get namespaces\fR
+.RS
+.IP \(bu 2
+Get nodes in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl get nodes \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Get pods in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl get pods \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Get deployments in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl get deployments \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Get services in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl get services \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Get all resources in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl get all \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Get Kubernetes objects defined in a YAML manifest:
+.RE
+.PP
+\fB\fCkubectl get \-f {{path/to/manifest.yaml}}\fR

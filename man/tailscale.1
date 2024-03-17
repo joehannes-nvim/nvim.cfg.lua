@@ -1,0 +1,55 @@
+.TH tailscale
+.PP
+.RS
+A private WireGuard network service.
+Some subcommands such as \fB\fCtailscale up\fR have their own usage documentation.
+More information: \[la]https://tailscale.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to Tailscale:
+.RE
+.PP
+\fB\fCsudo tailscale up\fR
+.RS
+.IP \(bu 2
+Disconnect from Tailscale:
+.RE
+.PP
+\fB\fCsudo tailscale down\fR
+.RS
+.IP \(bu 2
+Display the current Tailscale IP addresses:
+.RE
+.PP
+\fB\fCtailscale ip\fR
+.RS
+.IP \(bu 2
+Ping a peer node at the Tailscale layer and display which route it took for each response:
+.RE
+.PP
+\fB\fCtailscale ping {{ip|hostname}}\fR
+.RS
+.IP \(bu 2
+Analyze the local network conditions and display the result:
+.RE
+.PP
+\fB\fCtailscale netcheck\fR
+.RS
+.IP \(bu 2
+Start a web server for controlling Tailscale:
+.RE
+.PP
+\fB\fCtailscale web\fR
+.RS
+.IP \(bu 2
+Display a shareable identifier to help diagnose issues:
+.RE
+.PP
+\fB\fCtailscale bugreport\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCtailscale {{subcommand}} \-\-help\fR

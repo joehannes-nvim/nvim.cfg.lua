@@ -1,0 +1,36 @@
+.TH apg
+.PP
+.RS
+Creates arbitrarily complex random passwords.
+More information: \[la]https://manned.org/apg\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create random passwords (default password length is 8):
+.RE
+.PP
+\fB\fCapg\fR
+.RS
+.IP \(bu 2
+Create a password with at least 1 symbol (S), 1 number (N), 1 uppercase (C), 1 lowercase (L):
+.RE
+.PP
+\fB\fCapg \-M SNCL\fR
+.RS
+.IP \(bu 2
+Create a password with 16 characters:
+.RE
+.PP
+\fB\fCapg \-m {{16}}\fR
+.RS
+.IP \(bu 2
+Create a password with maximum length of 16:
+.RE
+.PP
+\fB\fCapg \-x {{16}}\fR
+.RS
+.IP \(bu 2
+Create a password that doesn't appear in a dictionary (the dictionary file has to be provided):
+.RE
+.PP
+\fB\fCapg \-r {{path/to/dictionary_file}}\fR

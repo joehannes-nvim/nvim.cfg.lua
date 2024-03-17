@@ -1,0 +1,30 @@
+.TH wasm\-objdump
+.PP
+.RS
+Display information from WebAssembly binaries.
+More information: \[la]https://github.com/WebAssembly/wabt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the section headers of a given binary:
+.RE
+.PP
+\fB\fCwasm\-objdump \-h {{file.wasm}}\fR
+.RS
+.IP \(bu 2
+Display the entire disassembled output of a given binary:
+.RE
+.PP
+\fB\fCwasm\-objdump \-d {{file.wasm}}\fR
+.RS
+.IP \(bu 2
+Display the details of each section:
+.RE
+.PP
+\fB\fCwasm\-objdump \-\-details {{file.wasm}}\fR
+.RS
+.IP \(bu 2
+Display the details of a given section:
+.RE
+.PP
+\fB\fCwasm\-objdump \-\-section '{{import}}' \-\-details {{file.wasm}}\fR

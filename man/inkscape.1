@@ -1,0 +1,49 @@
+.TH inkscape
+.PP
+.RS
+An SVG (Scalable Vector Graphics) editing program.
+For Inkscape versions up to 0.92.x, use \-e instead of \-o.
+More information: \[la]https://inkscape.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open an SVG file in the Inkscape GUI:
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}}\fR
+.RS
+.IP \(bu 2
+Export an SVG file into a bitmap with the default format (PNG) and the default resolution (96 DPI):
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-o {{filename.png}}\fR
+.RS
+.IP \(bu 2
+Export an SVG file into a bitmap of 600x400 pixels (aspect ratio distortion may occur):
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-o {{filename.png}} \-w {{600}} \-h {{400}}\fR
+.RS
+.IP \(bu 2
+Export the drawing (bounding box of all objects) of an SVG file into a bitmap:
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-o {{filename.png}} \-D\fR
+.RS
+.IP \(bu 2
+Export a single object, given its ID, into a bitmap:
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-i {{id}} \-o {{object.png}}\fR
+.RS
+.IP \(bu 2
+Export an SVG document to PDF, converting all texts to paths:
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-o {{filename.pdf}} \-\-export\-text\-to\-path\fR
+.RS
+.IP \(bu 2
+Duplicate the object with id="path123", rotate the duplicate 90 degrees, save the file, and quit Inkscape:
+.RE
+.PP
+\fB\fCinkscape {{filename.svg}} \-\-select=path123 \-\-verb="{{EditDuplicate;ObjectRotate90;FileSave;FileQuit}}"\fR

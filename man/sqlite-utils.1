@@ -1,0 +1,54 @@
+.TH sqlite\-utils
+.PP
+.RS
+Command\-line tool used to manipulate SQLite databases in a number of different ways.
+More information: \[la]https://sqlite-utils.datasette.io/en/stable/cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a database:
+.RE
+.PP
+\fB\fCsqlite\-utils create\-database {{path/to/database.db}}\fR
+.RS
+.IP \(bu 2
+Create a table:
+.RE
+.PP
+\fB\fCsqlite\-utils create\-table {{path/to/database.db}} {{table_name}} {{id integer name text height float photo blob \-\-pk id}}\fR
+.RS
+.IP \(bu 2
+List tables:
+.RE
+.PP
+\fB\fCsqlite\-utils tables {{path/to/database.db}}\fR
+.RS
+.IP \(bu 2
+Upsert a record:
+.RE
+.PP
+\fB\fC{{echo '[ {"id": 1, "name": "Linus Torvalds"}, {"id": 2, "name": "Steve Wozniak"}, {"id": 3, "name": "Tony Hoare"} ]'}} | sqlite\-utils upsert {{path/to/database.db}} {{table_name}} \- {{\-\-pk id}}\fR
+.RS
+.IP \(bu 2
+Select records:
+.RE
+.PP
+\fB\fCsqlite\-utils rows {{path/to/database.db}} {{table_name}}\fR
+.RS
+.IP \(bu 2
+Delete a record:
+.RE
+.PP
+\fB\fCsqlite\-utils query {{path/to/database.db}} "{{delete from table_name where name = 'Tony Hoare'}}"\fR
+.RS
+.IP \(bu 2
+Drop a table:
+.RE
+.PP
+\fB\fCsqlite\-utils drop\-table {{path/to/database.db}} {{table_name}}\fR
+.RS
+.IP \(bu 2
+Show help information:
+.RE
+.PP
+\fB\fCsqlite\-utils \-h\fR

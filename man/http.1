@@ -1,0 +1,48 @@
+.TH http
+.PP
+.RS
+HTTPie: HTTP client, aims to be easier to use than cURL.
+More information: \[la]https://httpie.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a URL to a file:
+.RE
+.PP
+\fB\fChttp \-\-download {{example.org}}\fR
+.RS
+.IP \(bu 2
+Send form\-encoded data:
+.RE
+.PP
+\fB\fChttp \-\-form {{example.org}} {{name='bob'}} {{profile_picture@'bob.png'}}\fR
+.RS
+.IP \(bu 2
+Send JSON object:
+.RE
+.PP
+\fB\fChttp {{example.org}} {{name='bob'}}\fR
+.RS
+.IP \(bu 2
+Specify an HTTP method:
+.RE
+.PP
+\fB\fChttp {{HEAD}} {{example.org}}\fR
+.RS
+.IP \(bu 2
+Include an extra header:
+.RE
+.PP
+\fB\fChttp {{example.org}} {{X\-MyHeader:123}}\fR
+.RS
+.IP \(bu 2
+Pass a username and password for server authentication:
+.RE
+.PP
+\fB\fChttp \-\-auth {{username:password}} {{example.org}}\fR
+.RS
+.IP \(bu 2
+Specify raw request body via \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{data.txt}} | http PUT {{example.org}}\fR

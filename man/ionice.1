@@ -1,0 +1,26 @@
+.TH ionice
+.PP
+.RS
+Get or set program I/O scheduling class and priority.
+Scheduling classes: 1 (realtime), 2 (best\-effort), 3 (idle).
+Priority levels: 0 (the highest) \- 7 (the lowest).
+More information: \[la]https://manned.org/ionice\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set I/O scheduling class of a running process:
+.RE
+.PP
+\fB\fCionice \-c {{scheduling_class}} \-p {{pid}}\fR
+.RS
+.IP \(bu 2
+Run a command with custom I/O scheduling class and priority:
+.RE
+.PP
+\fB\fCionice \-c {{scheduling_class}} \-n {{priority}} {{command}}\fR
+.RS
+.IP \(bu 2
+Print the I/O scheduling class and priority of a running process:
+.RE
+.PP
+\fB\fCionice \-p {{pid}}\fR

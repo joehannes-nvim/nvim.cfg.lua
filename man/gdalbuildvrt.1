@@ -1,0 +1,30 @@
+.TH gdalbuildvrt
+.PP
+.RS
+Build Virtual Datasets from a list of existing datasets.
+More information: \[la]https://gdal.org/programs/gdalbuildvrt.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Make a virtual mosaic from all TIFF files contained in a directory:
+.RE
+.PP
+\fB\fCgdalbuildvrt {{path/to/output.vrt}} {{path/to/input_directory/*.tif}}\fR
+.RS
+.IP \(bu 2
+Make a virtual mosaic from files whose name is specified in a text file:
+.RE
+.PP
+\fB\fCgdalbuildvrt \-input_file_list {{path/to/list.txt}} {{path/to/output.vrt}}\fR
+.RS
+.IP \(bu 2
+Make an RGB virtual mosaic from 3 single\-band input files:
+.RE
+.PP
+\fB\fCgdalbuildvrt \-separate {{path/to/rgb.vrt}} {{path/to/red.tif}} {{path/to/green.tif}} {{path/to/blue.tif}}\fR
+.RS
+.IP \(bu 2
+Make a virtual mosaic with blue background color (RGB: 0 0 255):
+.RE
+.PP
+\fB\fCgdalbuildvrt \-hidenodata \-vrtnodata "{{0 0 255}}" {{path/to/output.vrt}} {{path/to/input_directory/*.tif}}\fR

@@ -1,0 +1,37 @@
+.TH gvpack
+.PP
+.RS
+Combine several graph layouts (that already have layout information).
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://graphviz.org/pdf/gvpack.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Combine several graph layouts (that already have layout information):
+.RE
+.PP
+\fB\fCgvpack {{path/to/layout1.gv}} {{path/to/layout2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Combine several graph layouts at the graph level, keeping graphs separate:
+.RE
+.PP
+\fB\fCgvpack \-g {{path/to/layout1.gv}} {{path/to/layout2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Combine several graph layouts at the node level, ignoring clusters:
+.RE
+.PP
+\fB\fCgvpack \-n {{path/to/layout1.gv}} {{path/to/layout2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Combine several graph layouts without packing:
+.RE
+.PP
+\fB\fCgvpack \-u {{path/to/layout1.gv}} {{path/to/layout2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCgvpack\fR:
+.RE
+.PP
+\fB\fCgvpack \-?\fR

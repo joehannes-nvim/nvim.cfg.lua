@@ -1,0 +1,30 @@
+.TH berks
+.PP
+.RS
+Chef cookbook dependency manager.
+More information: \[la]https://docs.chef.io/berkshelf.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install cookbook dependencies into a local repo:
+.RE
+.PP
+\fB\fCberks install\fR
+.RS
+.IP \(bu 2
+Update a specific cookbook and its dependencies:
+.RE
+.PP
+\fB\fCberks update {{cookbook}}\fR
+.RS
+.IP \(bu 2
+Upload a cookbook to the Chef server:
+.RE
+.PP
+\fB\fCberks upload {{cookbook}}\fR
+.RS
+.IP \(bu 2
+View the dependencies of a cookbook:
+.RE
+.PP
+\fB\fCberks contingent {{cookbook}}\fR

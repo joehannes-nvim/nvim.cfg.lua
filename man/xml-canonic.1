@@ -1,0 +1,30 @@
+.TH xml canonic
+.PP
+.RS
+Make XML documents canonical.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Make an XML document canonical, preserving comments:
+.RE
+.PP
+\fB\fCxml canonic {{path/to/input.xml|URI}} > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Make an XML document canonical, removing comments:
+.RE
+.PP
+\fB\fCxml canonic \-\-without\-comments {{path/to/input.xml|URI}} > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Make XML exclusively canonical, using an XPATH from a file, preserving comments:
+.RE
+.PP
+\fB\fCxml canonic \-\-exc\-with\-comments {{path/to/input.xml|URI}} {{path/to/c14n.xpath}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCcanonic\fR subcommand:
+.RE
+.PP
+\fB\fCxml canonic \-\-help\fR

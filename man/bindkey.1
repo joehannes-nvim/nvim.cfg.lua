@@ -1,0 +1,30 @@
+.TH bindkey
+.PP
+.RS
+Add keybindings to Z\-Shell.
+More information: \[la]https://zsh.sourceforge.io/Guide/zshguide04.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bind a hotkey to a specific command:
+.RE
+.PP
+\fB\fCbindkey "{{^k}}" {{kill\-line}}\fR
+.RS
+.IP \(bu 2
+Bind a hotkey to a specific key sequence:
+.RE
+.PP
+\fB\fCbindkey \-s '^o' 'cd ..\\n'\fR
+.RS
+.IP \(bu 2
+View keymaps:
+.RE
+.PP
+\fB\fCbindkey \-l\fR
+.RS
+.IP \(bu 2
+View the hotkey in a keymap:
+.RE
+.PP
+\fB\fCbindkey \-M main\fR

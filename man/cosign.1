@@ -1,0 +1,54 @@
+.TH cosign
+.PP
+.RS
+Container Signing, Verification and Storage in an OCI registry.
+More information: \[la]https://github.com/sigstore/cosign\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a key\-pair:
+.RE
+.PP
+\fB\fCcosign generate\-key\-pair\fR
+.RS
+.IP \(bu 2
+Sign a container and store the signature in the registry:
+.RE
+.PP
+\fB\fCcosign sign \-key {{cosign.key}} {{image}}\fR
+.RS
+.IP \(bu 2
+Sign a container image with a key pair stored in a Kubernetes secret:
+.RE
+.PP
+\fB\fCcosign sign \-key k8s://{{namespace}}/{{key}} {{image}}\fR
+.RS
+.IP \(bu 2
+Sign a blob with a local key pair file:
+.RE
+.PP
+\fB\fCcosign sign\-blob \-\-key {{cosign.key}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Verify a container against a public key:
+.RE
+.PP
+\fB\fCcosign verify \-key {{cosign.pub}} {{image}}\fR
+.RS
+.IP \(bu 2
+Verify images with a public key in a Dockerfile:
+.RE
+.PP
+\fB\fCcosign dockerfile verify \-key {{cosign.pub}} {{path/to/Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Verify an image with a public key stored in a Kubernetes secret:
+.RE
+.PP
+\fB\fCcosign verify \-key k8s://{{namespace}}/{{key}} {{image}}\fR
+.RS
+.IP \(bu 2
+Copy a container image and its signatures:
+.RE
+.PP
+\fB\fCcosign copy {{example.com/src:latest}} {{example.com/dest:latest}}\fR

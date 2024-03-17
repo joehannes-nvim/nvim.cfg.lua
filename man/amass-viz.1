@@ -1,0 +1,36 @@
+.TH amass viz
+.PP
+.RS
+Visualize gathered information in a network graph.
+More information: \[la]https://github.com/OWASP/Amass/blob/master/doc/user_guide.md#the-viz-subcommand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a D3.js visualization based on database data:
+.RE
+.PP
+\fB\fCamass viz \-d3 \-dir {{path/to/database_directory}}\fR
+.RS
+.IP \(bu 2
+Generate a DOT file based on database data:
+.RE
+.PP
+\fB\fCamass viz \-dot \-dir {{path/to/database_directory}}\fR
+.RS
+.IP \(bu 2
+Generate a Gephi Graph Exchange XML Format (GEXF) file based on database data:
+.RE
+.PP
+\fB\fCamass viz \-gexf \-dir {{path/to/database_directory}}\fR
+.RS
+.IP \(bu 2
+Generate a Graphistry JSON file based on database data:
+.RE
+.PP
+\fB\fCamass viz \-graphistry \-dir {{path/to/database_directory}}\fR
+.RS
+.IP \(bu 2
+Generate a Maltego CSV file based on database data:
+.RE
+.PP
+\fB\fCamass viz \-maltego \-dir {{path/to/database_directory}}\fR

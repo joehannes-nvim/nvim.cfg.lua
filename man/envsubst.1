@@ -1,0 +1,31 @@
+.TH envsubst
+.PP
+.RS
+Substitutes environment variables with their value in shell format strings.
+Variables to be replaced should be in either \fB\fC${var}\fR or \fB\fC$var\fR format.
+More information: \[la]https://www.gnu.org/software/gettext/manual/html_node/envsubst-Invocation.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace environment variables in \fB\fCstdin\fR and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCecho '{{$HOME}}' | envsubst\fR
+.RS
+.IP \(bu 2
+Replace environment variables in an input file and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCenvsubst < {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Replace environment variables in an input file and output to a file:
+.RE
+.PP
+\fB\fCenvsubst < {{path/to/input_file}} > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Replace environment variables in an input file from a space\-separated list:
+.RE
+.PP
+\fB\fCenvsubst '{{$USER $SHELL $HOME}}' < {{path/to/input_file}}\fR

@@ -1,0 +1,42 @@
+.TH stack
+.PP
+.RS
+Tool for managing Haskell projects.
+More information: \[la]https://github.com/commercialhaskell/stack\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new package:
+.RE
+.PP
+\fB\fCstack new {{package}} {{template}}\fR
+.RS
+.IP \(bu 2
+Compile a package:
+.RE
+.PP
+\fB\fCstack build\fR
+.RS
+.IP \(bu 2
+Run tests inside a package:
+.RE
+.PP
+\fB\fCstack test\fR
+.RS
+.IP \(bu 2
+Compile a project and re\-compile every time a file changes:
+.RE
+.PP
+\fB\fCstack build \-\-file\-watch\fR
+.RS
+.IP \(bu 2
+Compile a project and execute a command after compilation:
+.RE
+.PP
+\fB\fCstack build \-\-exec "{{command}}"\fR
+.RS
+.IP \(bu 2
+Run a program and pass an argument to it:
+.RE
+.PP
+\fB\fCstack exec {{program}} \-\- {{argument}}\fR

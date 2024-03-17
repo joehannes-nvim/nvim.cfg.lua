@@ -1,0 +1,24 @@
+.TH hub issue
+.PP
+.RS
+Manage Github issues.
+More information: \[la]https://hub.github.com/hub-issue.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the last 10 issues with the \fB\fCbug\fR label:
+.RE
+.PP
+\fB\fChub issue list \-\-limit {{10}} \-\-labels "{{bug}}"\fR
+.RS
+.IP \(bu 2
+Display a specific issue:
+.RE
+.PP
+\fB\fChub issue show {{issue_number}}\fR
+.RS
+.IP \(bu 2
+List 10 closed issues assigneed to a specific user:
+.RE
+.PP
+\fB\fChub issue \-\-state {{closed}} \-\-assignee {{username}} \-\-limit {{10}}\fR

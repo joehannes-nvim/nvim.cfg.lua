@@ -1,0 +1,54 @@
+.TH dotnet ef
+.PP
+.RS
+Perform design\-time development tasks for Entity Framework Core.
+More information: \[la]https://learn.microsoft.com/ef/core/cli/dotnet\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update the database to a specified migration:
+.RE
+.PP
+\fB\fCdotnet ef database update {{migration}}\fR
+.RS
+.IP \(bu 2
+Drop the database:
+.RE
+.PP
+\fB\fCdotnet ef database drop\fR
+.RS
+.IP \(bu 2
+List available \fB\fCDbContext\fR types:
+.RE
+.PP
+\fB\fCdotnet ef dbcontext list\fR
+.RS
+.IP \(bu 2
+Generate code for a \fB\fCDbContext\fR and entity types for a database:
+.RE
+.PP
+\fB\fCdotnet ef dbcontext scaffold {{connection_string}} {{provider}}\fR
+.RS
+.IP \(bu 2
+Add a new migration:
+.RE
+.PP
+\fB\fCdotnet ef migrations add {{name}}\fR
+.RS
+.IP \(bu 2
+Remove the last migration, rolling back the code changes that were done for the latest migration:
+.RE
+.PP
+\fB\fCdotnet ef migrations remove\fR
+.RS
+.IP \(bu 2
+List available migrations:
+.RE
+.PP
+\fB\fCdotnet ef migrations list\fR
+.RS
+.IP \(bu 2
+Generate a SQL script from migrations range:
+.RE
+.PP
+\fB\fCdotnet ef migrations script {{from_migration}} {{to_migration}}\fR

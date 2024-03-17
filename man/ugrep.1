@@ -1,0 +1,54 @@
+.TH ugrep
+.PP
+.RS
+Ultra fast search tool with query TUI.
+More information: \[la]https://github.com/Genivia/ugrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a query TUI to search files in the current directory recursively (CTRL\-Z for help):
+.RE
+.PP
+\fB\fCugrep \-\-query\fR
+.RS
+.IP \(bu 2
+Search the current directory recursively for files containing a regex search pattern:
+.RE
+.PP
+\fB\fCugrep "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Search in a specific file or in all files in a specific directory, showing line numbers of matches:
+.RE
+.PP
+\fB\fCugrep \-\-line\-number "{{search_pattern}}" {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Search in all files in the current directory recursively and print the name of each matching file:
+.RE
+.PP
+\fB\fCugrep \-\-files\-with\-matches "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Fuzzy search files with up to 3 extra, missing or mismatching characters in the pattern:
+.RE
+.PP
+\fB\fCugrep \-\-fuzzy={{3}} "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Also search compressed files, \fB\fCzip\fR and \fB\fCtar\fR archives recursively:
+.RE
+.PP
+\fB\fCugrep \-\-decompress "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Search only files whose filenames match a specific glob pattern:
+.RE
+.PP
+\fB\fCugrep \-\-glob="{{glob_pattern}}" "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Search only C++ source files (use \fB\fC\-\-file\-type=list\fR to list all file types):
+.RE
+.PP
+\fB\fCugrep \-\-file\-type=cpp "{{search_pattern}}"\fR

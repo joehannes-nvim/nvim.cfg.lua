@@ -1,0 +1,30 @@
+.TH base32
+.PP
+.RS
+Encode or decode file or \fB\fCstdin\fR to/from Base32, to \fB\fCstdout\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/base32\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encode a file:
+.RE
+.PP
+\fB\fCbase32 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decode a file:
+.RE
+.PP
+\fB\fCbase32 \-\-decode {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Encode from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{somecommand}} | base32\fR
+.RS
+.IP \(bu 2
+Decode from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{somecommand}} | base32 \-\-decode\fR

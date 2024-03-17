@@ -1,0 +1,24 @@
+.TH noti
+.PP
+.RS
+Monitor a process and trigger a banner notification.
+More information: \[la]https://github.com/variadico/noti\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a notification when tar finishes compressing files:
+.RE
+.PP
+\fB\fCnoti {{tar \-cjf example.tar.bz2 example/}}\fR
+.RS
+.IP \(bu 2
+Display a notification even when you put it after the command to watch:
+.RE
+.PP
+\fB\fC{{command_to_watch}}; noti\fR
+.RS
+.IP \(bu 2
+Monitor a process by PID and trigger a notification when the PID disappears:
+.RE
+.PP
+\fB\fCnoti \-w {{process_id}}\fR

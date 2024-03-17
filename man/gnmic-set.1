@@ -1,0 +1,30 @@
+.TH gnmic set
+.PP
+.RS
+Modify gnmi network device configuration.
+More information: \[la]https://gnmic.kmrd.dev/cmd/set\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update the value of a path:
+.RE
+.PP
+\fB\fCgnmic \-\-address {{ip:port}} set \-\-update\-path {{path}} \-\-update\-value {{value}}\fR
+.RS
+.IP \(bu 2
+Update the value of a path to match the contents of a json file:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} set \-\-update\-path {{path}} \-\-update\-file {{filepath}}\fR
+.RS
+.IP \(bu 2
+Replace the value of a path to match the contents of a json file:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} set \-\-replace\-path {{path}} \-\-replace\-file {{filepath}}\fR
+.RS
+.IP \(bu 2
+Delete the node at a given path:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} set \-\-delete {{path}}\fR

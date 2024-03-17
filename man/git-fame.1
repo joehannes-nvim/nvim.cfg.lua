@@ -1,0 +1,54 @@
+.TH git fame
+.PP
+.RS
+Pretty\-print Git repository contributions.
+More information: \[la]https://github.com/casperdcl/git-fame\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate contributions for the current Git repository:
+.RE
+.PP
+\fB\fCgit fame\fR
+.RS
+.IP \(bu 2
+Exclude files/directories that match the specified regular expression:
+.RE
+.PP
+\fB\fCgit fame \-\-excl "{{regular_expression}}"\fR
+.RS
+.IP \(bu 2
+Calculate contributions made after the specified date:
+.RE
+.PP
+\fB\fCgit fame \-\-since "{{3 weeks ago|2021\-05\-13}}"\fR
+.RS
+.IP \(bu 2
+Display contributions in the specified format:
+.RE
+.PP
+\fB\fCgit fame \-\-format {{pipe|yaml|json|csv|tsv}}\fR
+.RS
+.IP \(bu 2
+Display contributions per file extension:
+.RE
+.PP
+\fB\fCgit fame \-\-bytype\fR
+.RS
+.IP \(bu 2
+Ignore whitespace changes:
+.RE
+.PP
+\fB\fCgit fame \-\-ignore\-whitespace\fR
+.RS
+.IP \(bu 2
+Detect inter\-file line moves and copies:
+.RE
+.PP
+\fB\fCgit fame \-C\fR
+.RS
+.IP \(bu 2
+Detect intra\-file line moves and copies:
+.RE
+.PP
+\fB\fCgit fame \-M\fR

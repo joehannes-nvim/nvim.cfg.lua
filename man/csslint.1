@@ -1,0 +1,42 @@
+.TH csslint
+.PP
+.RS
+A linter for CSS code.
+More information: \[la]https://github.com/CSSLint/csslint/wiki/Command-line-interface\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lint a single CSS file:
+.RE
+.PP
+\fB\fCcsslint {{file.css}}\fR
+.RS
+.IP \(bu 2
+Lint multiple CSS files:
+.RE
+.PP
+\fB\fCcsslint {{file1.css}} {{file2.css}} {{file3.css}}\fR
+.RS
+.IP \(bu 2
+List all possible style rules:
+.RE
+.PP
+\fB\fCcsslint \-\-list\-rules\fR
+.RS
+.IP \(bu 2
+Specify certain rules as errors (which result in a non\-zero exit code):
+.RE
+.PP
+\fB\fCcsslint \-\-errors={{errors,universal\-selector,imports}} {{file.css}}\fR
+.RS
+.IP \(bu 2
+Specify certain rules as warnings:
+.RE
+.PP
+\fB\fCcsslint \-\-warnings={{box\-sizing,selector\-max,floats}} {{file.css}}\fR
+.RS
+.IP \(bu 2
+Specify certain rules to ignore:
+.RE
+.PP
+\fB\fCcsslint \-\-ignore={{ids,rules\-count,shorthand}} {{file.css}}\fR

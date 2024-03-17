@@ -1,0 +1,30 @@
+.TH socat
+.PP
+.RS
+Multipurpose relay (SOcket CAT).
+More information: \[la]http://www.dest-unreach.org/socat/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Listen to a port, wait for an incoming connection and transfer data to STDIO:
+.RE
+.PP
+\fB\fCsocat \- TCP\-LISTEN:8080,fork\fR
+.RS
+.IP \(bu 2
+Listen on a port using SSL and print to STDOUT:
+.RE
+.PP
+\fB\fCsocat OPENSSL\-LISTEN:4433,reuseaddr,cert=./cert.pem,cafile=./ca.cert.pem,key=./key.pem,verify=0 STDOUT\fR
+.RS
+.IP \(bu 2
+Create a connection to a host and port, transfer data in STDIO to connected host:
+.RE
+.PP
+\fB\fCsocat \- TCP4:www.example.com:80\fR
+.RS
+.IP \(bu 2
+Forward incoming data of a local port to another host and port:
+.RE
+.PP
+\fB\fCsocat TCP\-LISTEN:80,fork TCP4:www.example.com:80\fR

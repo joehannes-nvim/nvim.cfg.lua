@@ -1,0 +1,42 @@
+.TH gobuster
+.PP
+.RS
+Brute\-forces hidden paths on web servers and more.
+More information: \[la]https://github.com/OJ/gobuster\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Discover directories and files that match in the wordlist:
+.RE
+.PP
+\fB\fCgobuster dir \-\-url {{https://example.com/}} \-\-wordlist {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Discover subdomains:
+.RE
+.PP
+\fB\fCgobuster dns \-\-domain {{example.com}} \-\-wordlist {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Discover Amazon S3 buckets:
+.RE
+.PP
+\fB\fCgobuster s3 \-\-wordlist {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Discover other virtual hosts on the server:
+.RE
+.PP
+\fB\fCgobuster vhost \-\-url {{https://example.com/}} \-\-wordlist {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Fuzz the value of a parameter:
+.RE
+.PP
+\fB\fCgobuster fuzz \-\-url {{https://example.com/?parameter=FUZZ}} \-\-wordlist {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Fuzz the name of a parameter:
+.RE
+.PP
+\fB\fCgobuster fuzz \-\-url {{https://example.com/?FUZZ=value}} \-\-wordlist {{path/to/file}}\fR

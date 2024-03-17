@@ -1,0 +1,37 @@
+.TH git send\-email
+.PP
+.RS
+Send a collection of patches as emails.
+Patches can be specified as files, directions, or a revision list.
+More information: \[la]https://git-scm.com/docs/git-send-email\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send the last commit in the current branch:
+.RE
+.PP
+\fB\fCgit send\-email \-1\fR
+.RS
+.IP \(bu 2
+Send a given commit:
+.RE
+.PP
+\fB\fCgit send\-email \-1 {{commit}}\fR
+.RS
+.IP \(bu 2
+Send multiple (e.g. 10) commits in the current branch:
+.RE
+.PP
+\fB\fCgit send\-email {{\-10}}\fR
+.RS
+.IP \(bu 2
+Send an introductory email message for the patch series:
+.RE
+.PP
+\fB\fCgit send\-email \-{{number_of_commits}} \-\-compose\fR
+.RS
+.IP \(bu 2
+Review and edit the email message for each patch you're about to send:
+.RE
+.PP
+\fB\fCgit send\-email \-{{number_of_commits}} \-\-annotate\fR

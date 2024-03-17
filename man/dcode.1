@@ -1,0 +1,31 @@
+.TH dcode
+.PP
+.RS
+Recursively detect and decode strings, supporting hex, decimal, binary, base64, URL, FromChar encodings, Caesar ciphers, and MD5, SHA1, and SHA2 hashes.
+Warning: uses 3rd\-party web services for MD5, SHA1 and SHA2 hash lookups. For sensitive data, use \fB\fC\-s\fR to avoid these services.
+More information: \[la]https://github.com/s0md3v/Decodify\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively detect and decode a string:
+.RE
+.PP
+\fB\fCdcode "{{NjM3YTQyNzQ1YTQ0NGUzMg==}}"\fR
+.RS
+.IP \(bu 2
+Rotate a string by the specified offset:
+.RE
+.PP
+\fB\fCdcode \-rot {{11}} "{{spwwz hzcwo}}"\fR
+.RS
+.IP \(bu 2
+Rotate a string by all 26 possible offsets:
+.RE
+.PP
+\fB\fCdcode \-rot {{all}} "{{bpgkta xh qtiitg iwpc sr}}"\fR
+.RS
+.IP \(bu 2
+Reverse a string:
+.RE
+.PP
+\fB\fCdcode \-rev "{{hello world}}"\fR

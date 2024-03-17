@@ -1,0 +1,31 @@
+.TH az storage queue
+.PP
+.RS
+Manage storage queues in Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage/queue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a queue:
+.RE
+.PP
+\fB\fCaz storage queue create \-\-account\-name {{storage_account_name}} \-\-name {{queue_name}} \-\-metadata {{queue_metadata}}\fR
+.RS
+.IP \(bu 2
+Generate a shared access signature for the queue:
+.RE
+.PP
+\fB\fCaz storage queue generate\-sas \-\-account\-name {{storage_account_name}} \-\-name {{queue_name}} \-\-permissions {{queue_permissions}} \-\-expiry {{expiry_date}} \-\-https\-only\fR
+.RS
+.IP \(bu 2
+List queues in a storage account:
+.RE
+.PP
+\fB\fCaz storage queue list \-\-prefix {{filter_prefix}} \-\-account\-name {{storage_account_name}}\fR
+.RS
+.IP \(bu 2
+Delete the specified queue and any messages it contains:
+.RE
+.PP
+\fB\fCaz storage queue delete \-\-account\-name {{storage_account_name}} \-\-name {{queue_name}} \-\-fail\-not\-exist\fR

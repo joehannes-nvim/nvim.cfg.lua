@@ -1,0 +1,42 @@
+.TH tig
+.PP
+.RS
+A text\-mode interface for Git.
+More information: \[la]https://github.com/jonas/tig\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the sequence of commits starting from the current one in reverse chronological order:
+.RE
+.PP
+\fB\fCtig\fR
+.RS
+.IP \(bu 2
+Show the history of a specific branch:
+.RE
+.PP
+\fB\fCtig {{branch}}\fR
+.RS
+.IP \(bu 2
+Show the history of specific files or directories:
+.RE
+.PP
+\fB\fCtig {{path1 path2 ...}}\fR
+.RS
+.IP \(bu 2
+Show the difference between two references (such as branches or tags):
+.RE
+.PP
+\fB\fCtig {{base_ref}}..{{compared_ref}}\fR
+.RS
+.IP \(bu 2
+Display commits from all branches and stashes:
+.RE
+.PP
+\fB\fCtig \-\-all\fR
+.RS
+.IP \(bu 2
+Start in stash view, displaying all saved stashes:
+.RE
+.PP
+\fB\fCtig stash\fR

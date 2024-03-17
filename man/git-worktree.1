@@ -1,0 +1,30 @@
+.TH git worktree
+.PP
+.RS
+Manage multiple working trees attached to the same repository.
+More information: \[la]https://git-scm.com/docs/git-worktree\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new directory with the specified branch checked out into it:
+.RE
+.PP
+\fB\fCgit worktree add {{path/to/directory}} {{branch}}\fR
+.RS
+.IP \(bu 2
+Create a new directory with a new branch checked out into it:
+.RE
+.PP
+\fB\fCgit worktree add {{path/to/directory}} \-b {{new_branch}}\fR
+.RS
+.IP \(bu 2
+List all the working directories attached to this repository:
+.RE
+.PP
+\fB\fCgit worktree list\fR
+.RS
+.IP \(bu 2
+Remove a worktree (after deleting worktree directory):
+.RE
+.PP
+\fB\fCgit worktree prune\fR

@@ -1,0 +1,48 @@
+.TH traceroute
+.PP
+.RS
+Print the route packets trace to network host.
+More information: \[la]https://manned.org/traceroute\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Traceroute to a host:
+.RE
+.PP
+\fB\fCtraceroute {{example.com}}\fR
+.RS
+.IP \(bu 2
+Disable IP address and host name mapping:
+.RE
+.PP
+\fB\fCtraceroute \-n {{example.com}}\fR
+.RS
+.IP \(bu 2
+Specify wait time in seconds for response:
+.RE
+.PP
+\fB\fCtraceroute \-\-wait={{0.5}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Specify number of queries per hop:
+.RE
+.PP
+\fB\fCtraceroute \-\-queries={{5}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Specify size in bytes of probing packet:
+.RE
+.PP
+\fB\fCtraceroute {{example.com}} {{42}}\fR
+.RS
+.IP \(bu 2
+Determine the MTU to the destination:
+.RE
+.PP
+\fB\fCtraceroute \-\-mtu {{example.com}}\fR
+.RS
+.IP \(bu 2
+Use ICMP instead of UDP for tracerouting:
+.RE
+.PP
+\fB\fCtraceroute \-\-icmp {{example.com}}\fR

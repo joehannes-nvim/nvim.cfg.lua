@@ -1,0 +1,31 @@
+.TH gitlab
+.PP
+.RS
+Ruby wrapper for the GitLab API.
+Some subcommands such as \fB\fCgitlab ctl\fR have their own usage documentation.
+More information: \[la]https://narkoz.github.io/gitlab/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new project:
+.RE
+.PP
+\fB\fCgitlab create_project {{project_name}}\fR
+.RS
+.IP \(bu 2
+Get info about a specific commit:
+.RE
+.PP
+\fB\fCgitlab commit {{project_name}} {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+Get info about jobs in a CI pipeline:
+.RE
+.PP
+\fB\fCgitlab pipeline_jobs {{project_name}} {{pipeline_id}}\fR
+.RS
+.IP \(bu 2
+Start a specific CI job:
+.RE
+.PP
+\fB\fCgitlab job_play {{project_name}} {{job_id}}\fR

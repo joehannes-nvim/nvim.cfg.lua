@@ -1,0 +1,55 @@
+.TH git bulk
+.PP
+.RS
+Execute operations on multiple Git repositories.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-bulk\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register the current directory as a workspace:
+.RE
+.PP
+\fB\fCgit bulk \-\-addcurrent {{workspace_name}}\fR
+.RS
+.IP \(bu 2
+Register a workspace for bulk operations:
+.RE
+.PP
+\fB\fCgit bulk \-\-addworkspace {{workspace_name}} {{/absolute/path/to/repository}}\fR
+.RS
+.IP \(bu 2
+Clone a repository inside a specific directory then register the repository as a workspace:
+.RE
+.PP
+\fB\fCgit bulk \-\-addworkspace {{workspace_name}} {{/absolute/path/to/parent_directory}} \-\-from {{remote_repository_location}}\fR
+.RS
+.IP \(bu 2
+Clone repositories from a newline\-separated list of remote locations then register them as workspaces:
+.RE
+.PP
+\fB\fCgit bulk \-\-addworkspace {{workspace\-name}} {{absolute/path/to/root/directory}} \-\-from {{absolute/path/to/file}}\fR
+.RS
+.IP \(bu 2
+List all registered workspaces:
+.RE
+.PP
+\fB\fCgit bulk \-\-listall\fR
+.RS
+.IP \(bu 2
+Run a Git command on the repositories of the current workspace:
+.RE
+.PP
+\fB\fCgit bulk {{command}} {{command_arguments}}\fR
+.RS
+.IP \(bu 2
+Remove a specific workspace:
+.RE
+.PP
+\fB\fCgit bulk \-\-removeworkspace {{workspace_name}}\fR
+.RS
+.IP \(bu 2
+Remove all workspaces:
+.RE
+.PP
+\fB\fCgit bulk \-\-purge\fR

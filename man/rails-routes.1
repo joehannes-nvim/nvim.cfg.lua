@@ -1,0 +1,30 @@
+.TH rails routes
+.PP
+.RS
+List routes in a Rails application.
+More information: \[la]https://guides.rubyonrails.org/routing.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all routes:
+.RE
+.PP
+\fB\fCrails routes\fR
+.RS
+.IP \(bu 2
+List all routes in an expanded format:
+.RE
+.PP
+\fB\fCrails routes \-\-expanded\fR
+.RS
+.IP \(bu 2
+List routes partially matching URL helper method name, HTTP verb, or URL path:
+.RE
+.PP
+\fB\fCrails routes \-g {{posts_path|GET|/posts}}\fR
+.RS
+.IP \(bu 2
+List routes that map to a specified controller:
+.RE
+.PP
+\fB\fCrails routes \-c {{posts|Posts|Blogs::PostsController}}\fR

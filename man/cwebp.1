@@ -1,0 +1,36 @@
+.TH cwebp
+.PP
+.RS
+Compress an image file to a WebP file.
+More information: \[la]https://developers.google.com/speed/webp/docs/cwebp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a WebP file with default settings (q = 75) to the [o]utput file:
+.RE
+.PP
+\fB\fCcwebp {{path/to/image_file}} \-o {{path/to/output.webp}}\fR
+.RS
+.IP \(bu 2
+Compress a WebP file with the best [q]uality and largest file size:
+.RE
+.PP
+\fB\fCcwebp {{path/to/image_file}} \-o {{path/to/output.webp}} \-q {{100}}\fR
+.RS
+.IP \(bu 2
+Compress a WebP file with the worst [q]uality and smallest file size:
+.RE
+.PP
+\fB\fCcwebp {{path/to/image_file}} \-o {{path/to/output.webp}} \-q {{0}}\fR
+.RS
+.IP \(bu 2
+Compress a WebP file and apply resize to image:
+.RE
+.PP
+\fB\fCcwebp {{path/to/image_file}} \-o {{path/to/output.webp}} \-resize {{width}} {{height}}\fR
+.RS
+.IP \(bu 2
+Compress a WebP file and drop alpha channel information:
+.RE
+.PP
+\fB\fCcwebp {{path/to/image_file}} \-o {{path/to/output.webp}} \-noalpha\fR

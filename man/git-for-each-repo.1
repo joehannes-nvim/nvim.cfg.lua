@@ -1,0 +1,19 @@
+.TH git for\-each\-repo
+.PP
+.RS
+Run a Git command on a list of repositories.
+Note: this command is experimental and may change.
+More information: \[la]https://git-scm.com/docs/git-for-each-repo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run maintenance on each of a list of repositories stored in the \fB\fCmaintenance.repo\fR user configuration variable:
+.RE
+.PP
+\fB\fCgit for\-each\-repo \-\-config={{maintenance.repo}} {{maintenance run}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCgit pull\fR on each repository listed in a global configuration variable:
+.RE
+.PP
+\fB\fCgit for\-each\-repo \-\-config={{global_configuration_variable}} {{pull}}\fR

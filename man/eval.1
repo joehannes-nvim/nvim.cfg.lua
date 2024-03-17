@@ -1,0 +1,18 @@
+.TH eval
+.PP
+.RS
+Execute arguments as a single command in the current shell and return its result.
+More information: \[la]https://manned.org/eval\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Call \fB\fCecho\fR with the "foo" argument:
+.RE
+.PP
+\fB\fCeval "{{echo foo}}"\fR
+.RS
+.IP \(bu 2
+Set a variable in the current shell:
+.RE
+.PP
+\fB\fCeval "{{foo=bar}}"\fR

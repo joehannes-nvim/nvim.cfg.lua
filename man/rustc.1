@@ -1,0 +1,49 @@
+.TH rustc
+.PP
+.RS
+The Rust compiler.
+Rust projects usually use \fB\fCcargo\fR instead of invoking \fB\fCrustc\fR directly.
+More information: \[la]https://doc.rust-lang.org/rustc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a binary crate:
+.RE
+.PP
+\fB\fCrustc {{path/to/main.rs}}\fR
+.RS
+.IP \(bu 2
+Compile with optimizations (\fB\fCs\fR means optimize for binary size; \fB\fCz\fR is the same with even more optimizations):
+.RE
+.PP
+\fB\fCrustc \-C lto \-C opt\-level={{0|1|2|3|s|z}} {{path/to/main.rs}}\fR
+.RS
+.IP \(bu 2
+Compile with debugging information:
+.RE
+.PP
+\fB\fCrustc \-g {{path/to/main.rs}}\fR
+.RS
+.IP \(bu 2
+Explain an error message:
+.RE
+.PP
+\fB\fCrustc \-\-explain {{error_code}}\fR
+.RS
+.IP \(bu 2
+Compile with architecture\-specific optimizations for the current CPU:
+.RE
+.PP
+\fB\fCrustc \-C target\-cpu={{native}} {{path/to/main.rs}}\fR
+.RS
+.IP \(bu 2
+Display the target list (Note: you have to add a target using \fB\fCrustup\fR first to be able to compile for it):
+.RE
+.PP
+\fB\fCrustc \-\-print target\-list\fR
+.RS
+.IP \(bu 2
+Compile for a specific target:
+.RE
+.PP
+\fB\fCrustc \-\-target {{target_triple}} {{path/to/main.rs}}\fR

@@ -1,0 +1,24 @@
+.TH lzop
+.PP
+.RS
+Compress or decompress files with LZO compression.
+More information: \[la]https://www.lzop.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file into a new file with the \fB\fC\&.lzo\fR suffix:
+.RE
+.PP
+\fB\fClzop {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress a file:
+.RE
+.PP
+\fB\fClzop \-d {{path/to/file}}.lzo\fR
+.RS
+.IP \(bu 2
+Compress a file, while specifying the compression level. 0 = Worst, 9 = Best (Default level is 3):
+.RE
+.PP
+\fB\fClzop \-{{level}} {{path/to/file}}\fR

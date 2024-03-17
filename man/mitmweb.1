@@ -1,0 +1,25 @@
+.TH mitmweb
+.PP
+.RS
+A web\-based interactive man\-in\-the\-middle HTTP proxy.
+See also: \fB\fCmitmproxy\fR\&.
+More information: \[la]https://docs.mitmproxy.org/stable/concepts-options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCmitmweb\fR with default settings:
+.RE
+.PP
+\fB\fCmitmweb\fR
+.RS
+.IP \(bu 2
+Start \fB\fCmitmweb\fR bound to a custom address and port:
+.RE
+.PP
+\fB\fCmitmweb \-\-listen\-host {{ip_address}} \-\-listen\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCmitmweb\fR using a script to process traffic:
+.RE
+.PP
+\fB\fCmitmweb \-\-scripts {{path/to/script.py}}\fR

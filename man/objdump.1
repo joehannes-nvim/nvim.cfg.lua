@@ -1,0 +1,36 @@
+.TH objdump
+.PP
+.RS
+View information about object files.
+More information: \[la]https://manned.org/objdump\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the file header information:
+.RE
+.PP
+\fB\fCobjdump \-f {{binary}}\fR
+.RS
+.IP \(bu 2
+Display all header information:
+.RE
+.PP
+\fB\fCobjdump \-x {{binary}}\fR
+.RS
+.IP \(bu 2
+Display the disassembled output of executable sections:
+.RE
+.PP
+\fB\fCobjdump \-d {{binary}}\fR
+.RS
+.IP \(bu 2
+Display the disassembled executable sections in intel syntax:
+.RE
+.PP
+\fB\fCobjdump \-M intel \-d {{binary}}\fR
+.RS
+.IP \(bu 2
+Display a complete binary hex dump of all sections:
+.RE
+.PP
+\fB\fCobjdump \-s {{binary}}\fR

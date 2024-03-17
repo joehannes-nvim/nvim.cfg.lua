@@ -1,0 +1,55 @@
+.TH podman
+.PP
+.RS
+Simple management tool for pods, containers and images.
+Podman provides a Docker\-CLI comparable command\-line. Simply put: \fB\fCalias docker=podman\fR\&.
+More information: \[la]https://github.com/containers/podman/blob/main/commands-demo.md\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all containers (both running and stopped):
+.RE
+.PP
+\fB\fCpodman ps \-\-all\fR
+.RS
+.IP \(bu 2
+Create a container from an image, with a custom name:
+.RE
+.PP
+\fB\fCpodman run \-\-name {{container_name}} {{image}}\fR
+.RS
+.IP \(bu 2
+Start or stop an existing container:
+.RE
+.PP
+\fB\fCpodman {{start|stop}} {{container_name}}\fR
+.RS
+.IP \(bu 2
+Pull an image from a registry (defaults to Docker Hub):
+.RE
+.PP
+\fB\fCpodman pull {{image}}\fR
+.RS
+.IP \(bu 2
+Display the list of already downloaded images:
+.RE
+.PP
+\fB\fCpodman images\fR
+.RS
+.IP \(bu 2
+Open a shell inside an already running container:
+.RE
+.PP
+\fB\fCpodman exec \-\-interactive \-\-tty {{container_name}} {{sh}}\fR
+.RS
+.IP \(bu 2
+Remove a stopped container:
+.RE
+.PP
+\fB\fCpodman rm {{container_name}}\fR
+.RS
+.IP \(bu 2
+Display the logs of one or more containers and follow log output:
+.RE
+.PP
+\fB\fCpodman logs \-\-follow {{container_name}} {{container_id}}\fR

@@ -1,0 +1,42 @@
+.TH git mergetool
+.PP
+.RS
+Run merge conflict resolution tools to resolve merge conflicts.
+More information: \[la]https://git-scm.com/docs/git-mergetool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch the default merge tool to resolve conflicts:
+.RE
+.PP
+\fB\fCgit mergetool\fR
+.RS
+.IP \(bu 2
+List valid merge tools:
+.RE
+.PP
+\fB\fCgit mergetool \-\-tool\-help\fR
+.RS
+.IP \(bu 2
+Launch the merge tool identified by a name:
+.RE
+.PP
+\fB\fCgit mergetool \-\-tool {{tool_name}}\fR
+.RS
+.IP \(bu 2
+Don't prompt before each invocation of the merge tool:
+.RE
+.PP
+\fB\fCgit mergetool \-\-no\-prompt\fR
+.RS
+.IP \(bu 2
+Explicitly use the GUI merge tool (see the \fB\fCmerge.guitool\fR config variable):
+.RE
+.PP
+\fB\fCgit mergetool \-\-gui\fR
+.RS
+.IP \(bu 2
+Explicitly use the regular merge tool (see the \fB\fCmerge.tool\fR config variable):
+.RE
+.PP
+\fB\fCgit mergetool \-\-no\-gui\fR

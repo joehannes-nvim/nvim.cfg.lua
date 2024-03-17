@@ -1,0 +1,49 @@
+.TH glab mr
+.PP
+.RS
+Manage GitLab merge requests.
+Some subcommands such as \fB\fCglab mr create\fR have their own usage documentation.
+More information: \[la]https://glab.readthedocs.io/en/latest/mr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a merge request:
+.RE
+.PP
+\fB\fCglab mr create\fR
+.RS
+.IP \(bu 2
+Check out a specific merge request locally:
+.RE
+.PP
+\fB\fCglab mr checkout {{mr_number}}\fR
+.RS
+.IP \(bu 2
+View the changes made in the merge request:
+.RE
+.PP
+\fB\fCglab mr diff\fR
+.RS
+.IP \(bu 2
+Approve the merge request for the current branch:
+.RE
+.PP
+\fB\fCglab mr approve\fR
+.RS
+.IP \(bu 2
+Merge the merge request associated with the current branch interactively:
+.RE
+.PP
+\fB\fCglab mr merge\fR
+.RS
+.IP \(bu 2
+Edit a merge request interactively:
+.RE
+.PP
+\fB\fCglab mr update\fR
+.RS
+.IP \(bu 2
+Edit the target branch of a merge request:
+.RE
+.PP
+\fB\fCglab mr update \-\-target\-branch {{branch_name}}\fR

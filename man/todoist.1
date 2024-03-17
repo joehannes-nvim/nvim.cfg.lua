@@ -1,0 +1,42 @@
+.TH todoist
+.PP
+.RS
+Access \[la]https://todoist.com\[ra] from the command\-line.
+More information: \[la]https://github.com/sachaos/todoist\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a task:
+.RE
+.PP
+\fB\fCtodoist add "{{task_name}}"\fR
+.RS
+.IP \(bu 2
+Add a high priority task with a label, project, and due date:
+.RE
+.PP
+\fB\fCtodoist add "{{task_name}}" \-\-priority {{1}} \-\-label\-ids "{{label_id}}" \-\-project\-name "{{project_name}}" \-\-date "{{tmr 9am}}"\fR
+.RS
+.IP \(bu 2
+Add a high priority task with a label, project, and due date in quick mode:
+.RE
+.PP
+\fB\fCtodoist quick '#{{project_name}} "{{tmr 9am}}" p{{1}} {{task_name}} @{{label_name}}'\fR
+.RS
+.IP \(bu 2
+List all tasks with a header and color:
+.RE
+.PP
+\fB\fCtodoist \-\-header \-\-color list\fR
+.RS
+.IP \(bu 2
+List all high priority tasks:
+.RE
+.PP
+\fB\fCtodoist list \-\-filter p{{1}}\fR
+.RS
+.IP \(bu 2
+List today's tasks with high priority that have the specified label:
+.RE
+.PP
+\fB\fCtodoist list \-\-filter '(@{{label_name}} | {{today}}) & p{{1}}'\fR

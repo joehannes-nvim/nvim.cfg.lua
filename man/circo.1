@@ -1,0 +1,37 @@
+.TH circo
+.PP
+.RS
+Render an image of a \fB\fCcircular\fR network graph from a \fB\fCgraphviz\fR file.
+Layouts: \fB\fCdot\fR, \fB\fCneato\fR, \fB\fCtwopi\fR, \fB\fCcirco\fR, \fB\fCfdp\fR, \fB\fCsfdp\fR, \fB\fCosage\fR & \fB\fCpatchwork\fR\&.
+More information: \[la]https://graphviz.org/doc/info/command.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render a \fB\fCpng\fR image with a filename based on the input filename and output format (uppercase \-O):
+.RE
+.PP
+\fB\fCcirco \-T {{png}} \-O {{path/to/input.gv}}\fR
+.RS
+.IP \(bu 2
+Render a \fB\fCsvg\fR image with the specified output filename (lowercase \-o):
+.RE
+.PP
+\fB\fCcirco \-T {{svg}} \-o {{path/to/image.svg}} {{path/to/input.gv}}\fR
+.RS
+.IP \(bu 2
+Render the output in \fB\fCps\fR, \fB\fCpdf\fR, \fB\fCsvg\fR, \fB\fCfig\fR, \fB\fCpng\fR, \fB\fCgif\fR, \fB\fCjpg\fR, \fB\fCjson\fR, or \fB\fCdot\fR format:
+.RE
+.PP
+\fB\fCcirco \-T {{format}} \-O {{path/to/input.gv}}\fR
+.RS
+.IP \(bu 2
+Render a \fB\fCgif\fR image using \fB\fCstdin\fR and \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCecho "{{digraph {this \-> that} }}" | circo \-T {{gif}} > {{path/to/image.gif}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCcirco \-?\fR

@@ -1,0 +1,31 @@
+.TH rustup override
+.PP
+.RS
+Modify directory toolchain overrides.
+See \fB\fCrustup help toolchain\fR for more information about toolchains.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List directiory toolchain overrides:
+.RE
+.PP
+\fB\fCrustup override list\fR
+.RS
+.IP \(bu 2
+Set the override toolchain for the current directory (i.e. tell \fB\fCrustup\fR to run \fB\fCcargo\fR, \fB\fCrustc\fR, etc. from a specific toolchain when in that directory):
+.RE
+.PP
+\fB\fCrustup override set {{toolchain}}\fR
+.RS
+.IP \(bu 2
+Remove the toolchain override for the current directory:
+.RE
+.PP
+\fB\fCrustup override unset\fR
+.RS
+.IP \(bu 2
+Remove all toolchain overrides for directories that no longer exist:
+.RE
+.PP
+\fB\fCrustup override unset \-\-nonexistent\fR

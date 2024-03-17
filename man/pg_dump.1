@@ -1,0 +1,42 @@
+.TH pg_dump
+.PP
+.RS
+Extract a PostgreSQL database into a script file or other archive file.
+More information: \[la]https://www.postgresql.org/docs/current/app-pgdump.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Dump database into an SQL\-script file:
+.RE
+.PP
+\fB\fCpg_dump {{db_name}} > {{output_file.sql}}\fR
+.RS
+.IP \(bu 2
+Same as above, customize username:
+.RE
+.PP
+\fB\fCpg_dump \-U {{username}} {{db_name}} > {{output_file.sql}}\fR
+.RS
+.IP \(bu 2
+Same as above, customize host and port:
+.RE
+.PP
+\fB\fCpg_dump \-h {{host}} \-p {{port}} {{db_name}} > {{output_file.sql}}\fR
+.RS
+.IP \(bu 2
+Dump a database into a custom\-format archive file:
+.RE
+.PP
+\fB\fCpg_dump \-Fc {{db_name}} > {{output_file.dump}}\fR
+.RS
+.IP \(bu 2
+Dump only database data into an SQL\-script file:
+.RE
+.PP
+\fB\fCpg_dump \-a {{db_name}} > {{path/to/output_file.sql}}\fR
+.RS
+.IP \(bu 2
+Dump only schema (data definitions) into an SQL\-script file:
+.RE
+.PP
+\fB\fCpg_dump \-s {{db_name}} > {{path/to/output_file.sql}}\fR

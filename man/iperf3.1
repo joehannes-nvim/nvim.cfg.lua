@@ -1,0 +1,36 @@
+.TH iperf3
+.PP
+.RS
+Traffic generator for testing network bandwidth.
+More information: \[la]https://iperf.fr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run iperf3 as a server:
+.RE
+.PP
+\fB\fCiperf3 \-s\fR
+.RS
+.IP \(bu 2
+Run an iperf3 server on a specific port:
+.RE
+.PP
+\fB\fCiperf3 \-s \-p {{port}}\fR
+.RS
+.IP \(bu 2
+Start bandwidth test:
+.RE
+.PP
+\fB\fCiperf3 \-c {{server}}\fR
+.RS
+.IP \(bu 2
+Run iperf3 in multiple parallel streams:
+.RE
+.PP
+\fB\fCiperf3 \-c {{server}} \-P {{streams}}\fR
+.RS
+.IP \(bu 2
+Reverse direction of the test. Server sends data to the client:
+.RE
+.PP
+\fB\fCiperf3 \-c {{server}} \-R\fR

@@ -1,0 +1,30 @@
+.TH slackcat
+.PP
+.RS
+Utility for passing files and command output to Slack.
+More information: \[la]https://github.com/bcicen/slackcat\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Post a file to Slack:
+.RE
+.PP
+\fB\fCslackcat \-\-channel {{channel_name}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Post a file to Slack with a custom filename:
+.RE
+.PP
+\fB\fCslackcat \-\-channel {{channel_name}} \-\-filename={{filename}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Pipe command output to Slack as a text snippet:
+.RE
+.PP
+\fB\fC{{command}} | slackcat \-\-channel {{channel_name}} \-\-filename={{snippet_name}}\fR
+.RS
+.IP \(bu 2
+Stream command output to Slack continuously:
+.RE
+.PP
+\fB\fC{{command}} | slackcat \-\-channel {{channel_name}} \-\-stream\fR

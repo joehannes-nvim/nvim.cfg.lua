@@ -1,0 +1,30 @@
+.TH aws\-google\-auth
+.PP
+.RS
+Command\-line tool to acquire AWS temporary (STS) credentials using Google Apps as a federated (Single Sign\-On) provider.
+More information: \[la]https://github.com/cevoaustralia/aws-google-auth\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in with Google SSO using the IDP and SP identifiers and set the credentials duration to one hour:
+.RE
+.PP
+\fB\fCaws\-google\-auth \-u {{example@example.com}} \-I {{$GOOGLE_IDP_ID}} \-S {{$GOOGLE_SP_ID}} \-d {{3600}}\fR
+.RS
+.IP \(bu 2
+Log in [a]sking which role to use (in case of several available SAML roles):
+.RE
+.PP
+\fB\fCaws\-google\-auth \-u {{example@example.com}} \-I {{$GOOGLE_IDP_ID}} \-S {{$GOOGLE_SP_ID}} \-d {{3600}} \-a\fR
+.RS
+.IP \(bu 2
+Resolve aliases for AWS accounts:
+.RE
+.PP
+\fB\fCaws\-google\-auth \-u {{example@example.com}} \-I {{$GOOGLE_IDP_ID}} \-S {{$GOOGLE_SP_ID}} \-d {{3600}} \-a \-\-resolve\-aliases\fR
+.RS
+.IP \(bu 2
+Show help information:
+.RE
+.PP
+\fB\fCaws\-google\-auth \-h\fR

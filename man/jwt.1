@@ -1,0 +1,31 @@
+.TH jwt
+.PP
+.RS
+Work with JSON Web Tokens (JWTs).
+Encryption algorithms available are HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384.
+More information: \[la]https://github.com/mike-engel/jwt-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Decode a JWT:
+.RE
+.PP
+\fB\fCjwt decode {{jwt_string}}\fR
+.RS
+.IP \(bu 2
+Decode a JWT as a JSON string:
+.RE
+.PP
+\fB\fCjwt decode \-j {{jwt_string}}\fR
+.RS
+.IP \(bu 2
+Encode a JSON string to a JWT:
+.RE
+.PP
+\fB\fCjwt encode \-\-alg {{HS256}} \-\-secret {{1234567890}} '{{json_string}}'\fR
+.RS
+.IP \(bu 2
+Encode key pair payload to JWT:
+.RE
+.PP
+\fB\fCjwt encode \-\-alg {{HS256}} \-\-secret {{1234567890}} \-P key=value\fR

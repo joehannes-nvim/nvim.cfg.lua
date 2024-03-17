@@ -1,0 +1,48 @@
+.TH minikube
+.PP
+.RS
+Tool to run Kubernetes locally.
+More information: \[la]https://github.com/kubernetes/minikube\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the cluster:
+.RE
+.PP
+\fB\fCminikube start\fR
+.RS
+.IP \(bu 2
+Get the IP address of the cluster:
+.RE
+.PP
+\fB\fCminikube ip\fR
+.RS
+.IP \(bu 2
+Access a service named my_service exposed via a node port and get the URL:
+.RE
+.PP
+\fB\fCminikube service {{my_service}} \-\-url\fR
+.RS
+.IP \(bu 2
+Open the Kubernetes dashboard in a browser:
+.RE
+.PP
+\fB\fCminikube dashboard\fR
+.RS
+.IP \(bu 2
+Stop the running cluster:
+.RE
+.PP
+\fB\fCminikube stop\fR
+.RS
+.IP \(bu 2
+Delete the cluster:
+.RE
+.PP
+\fB\fCminikube delete\fR
+.RS
+.IP \(bu 2
+Connect to LoadBalancer services:
+.RE
+.PP
+\fB\fCminikube tunnel\fR

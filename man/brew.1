@@ -1,0 +1,54 @@
+.TH brew
+.PP
+.RS
+Package manager for macOS and Linux.
+More information: \[la]https://brew.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install the latest stable version of a formula or cask (use \fB\fC\-\-devel\fR for development versions):
+.RE
+.PP
+\fB\fCbrew install {{formula}}\fR
+.RS
+.IP \(bu 2
+List all installed formulae and casks:
+.RE
+.PP
+\fB\fCbrew list\fR
+.RS
+.IP \(bu 2
+Upgrade an installed formula or cask (if none is given, all installed formulae/casks are upgraded):
+.RE
+.PP
+\fB\fCbrew upgrade {{formula}}\fR
+.RS
+.IP \(bu 2
+Fetch the newest version of Homebrew and of all formulae and casks from the Homebrew source repository:
+.RE
+.PP
+\fB\fCbrew update\fR
+.RS
+.IP \(bu 2
+Show formulae and casks that have a more recent version available:
+.RE
+.PP
+\fB\fCbrew outdated\fR
+.RS
+.IP \(bu 2
+Search for available formulae (i.e. packages) and casks (i.e. native packages):
+.RE
+.PP
+\fB\fCbrew search {{text}}\fR
+.RS
+.IP \(bu 2
+Display information about a formula or a cask (version, installation path, dependencies, etc.):
+.RE
+.PP
+\fB\fCbrew info {{formula}}\fR
+.RS
+.IP \(bu 2
+Check the local Homebrew installation for potential problems:
+.RE
+.PP
+\fB\fCbrew doctor\fR

@@ -1,0 +1,30 @@
+.TH mytop
+.PP
+.RS
+Display MySQL server performance info like \fB\fCtop\fR\&.
+More information: \[la]http://jeremy.zawodny.com/mysql/mytop/mytop.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCmytop\fR:
+.RE
+.PP
+\fB\fCmytop\fR
+.RS
+.IP \(bu 2
+Connect with a specified username and password:
+.RE
+.PP
+\fB\fCmytop \-u {{user}} \-p {{password}}\fR
+.RS
+.IP \(bu 2
+Connect with a specified username (the user will be prompted for a password):
+.RE
+.PP
+\fB\fCmytop \-u {{user}} \-\-prompt\fR
+.RS
+.IP \(bu 2
+Do not show any idle (sleeping) threads:
+.RE
+.PP
+\fB\fCmytop \-u {{user}} \-p {{password}} \-\-noidle\fR

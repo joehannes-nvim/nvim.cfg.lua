@@ -1,0 +1,13 @@
+.TH virsh pool\-start
+.PP
+.RS
+Start a previously configured but inactive virtual machine storage pool.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-define\-as\fR, \fB\fCvirsh\-pool\-destroy\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the storage pool specified by name or UUID (determine using \fB\fCvirsh pool\-list\fR) and create the underlying storage system if it doesn't exist:
+.RE
+.PP
+\fB\fCvirsh pool\-start \-\-pool {{name|uuid}} \-\-build\fR

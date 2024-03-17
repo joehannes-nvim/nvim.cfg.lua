@@ -1,0 +1,36 @@
+.TH ldc
+.PP
+.RS
+D compiler using LLVM as a backend.
+More information: \[la]https://wiki.dlang.org/Using_LDC\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a source code file into an executable binary:
+.RE
+.PP
+\fB\fCldc2 {{path/to/source.d}} \-of={{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Compile the source code file without linking:
+.RE
+.PP
+\fB\fCldc2 \-c {{path/to/source.d}}\fR
+.RS
+.IP \(bu 2
+Select the target architecture and OS:
+.RE
+.PP
+\fB\fCldc \-mtriple={{architecture_OS}} \-c {{path/to/source.d}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCldc2 \-h\fR
+.RS
+.IP \(bu 2
+Display complete help:
+.RE
+.PP
+\fB\fCldc2 \-help\-hidden\fR

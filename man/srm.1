@@ -1,0 +1,31 @@
+.TH srm
+.PP
+.RS
+Securely remove files or directories.
+Overwrites the existing data one or multiple times. Drop in replacement for rm.
+More information: \[la]http://srm.sourceforge.net/srm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove a file after a single\-pass overwriting with random data:
+.RE
+.PP
+\fB\fCsrm \-s {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Remove a file after seven passes of overwriting with random data:
+.RE
+.PP
+\fB\fCsrm \-m {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively remove a directory and its contents overwriting each file with a single\-pass of random data:
+.RE
+.PP
+\fB\fCsrm \-r \-s {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Prompt before every removal:
+.RE
+.PP
+\fB\fCsrm \-i {{\\*}}\fR

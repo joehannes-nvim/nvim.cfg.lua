@@ -1,0 +1,55 @@
+.TH emacs
+.PP
+.RS
+The extensible, customizable, self\-documenting, real\-time display editor.
+See also \fB\fCemacsclient\fR\&.
+More information: \[la]https://www.gnu.org/software/emacs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Emacs and open a file:
+.RE
+.PP
+\fB\fCemacs {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file at a specified line number:
+.RE
+.PP
+\fB\fCemacs +{{line_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Run an Emacs Lisp file as a script:
+.RE
+.PP
+\fB\fCemacs \-\-script {{path/to/file.el}}\fR
+.RS
+.IP \(bu 2
+Start Emacs in console mode (without an X window):
+.RE
+.PP
+\fB\fCemacs \-\-no\-window\-system\fR
+.RS
+.IP \(bu 2
+Start an Emacs server in the background (accessible via \fB\fCemacsclient\fR):
+.RE
+.PP
+\fB\fCemacs \-\-daemon\fR
+.RS
+.IP \(bu 2
+Stop a running Emacs server and all its instances, asking for confirmation on unsaved files:
+.RE
+.PP
+\fB\fCemacsclient \-\-eval '(save\-buffers\-kill\-emacs)'\fR
+.RS
+.IP \(bu 2
+Save a file in Emacs:
+.RE
+.PP
+\fB\fCCtrl + X, Ctrl + S\fR
+.RS
+.IP \(bu 2
+Quit Emacs:
+.RE
+.PP
+\fB\fCCtrl + X, Ctrl + C\fR

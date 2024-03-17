@@ -1,0 +1,43 @@
+.TH docker update
+.PP
+.RS
+Update configuration of Docker containers.
+This command is not supported for Windows containers.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/update/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update restart policy to apply when a specific container exits:
+.RE
+.PP
+\fB\fCdocker update \-\-restart={{always|no|on\-failure|unless\-stopped}} {{container_name}}\fR
+.RS
+.IP \(bu 2
+Update the policy to restart up to three times a specific container when it exits with non\-zero exit status:
+.RE
+.PP
+\fB\fCdocker update \-\-restart=on\-failure:3 {{container_name}}\fR
+.RS
+.IP \(bu 2
+Update the number of CPUs available to a specific container:
+.RE
+.PP
+\fB\fCdocker update \-\-cpus {{count}} {{container_name}}\fR
+.RS
+.IP \(bu 2
+Update the memory limit in [M]egabytes for a specific container:
+.RE
+.PP
+\fB\fCdocker update \-\-memory {{limit}}M {{container_name}}\fR
+.RS
+.IP \(bu 2
+Update the maximum number of process IDs allowed inside a specific container (use \fB\fC\-1\fR for unlimited):
+.RE
+.PP
+\fB\fCdocker update \-\-pids\-limit {{count}} {{container_name}}\fR
+.RS
+.IP \(bu 2
+Update the amount of memory in [M]egabytes a specific container can swap to disk (use \fB\fC\-1\fR for unlimited):
+.RE
+.PP
+\fB\fCdocker update \-\-memory\-swap {{limit}}M {{container_name}}\fR

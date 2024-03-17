@@ -1,0 +1,31 @@
+.TH git filter\-repo
+.PP
+.RS
+A versatile tool for rewriting Git history.
+See also: \fB\fCbfg\fR\&.
+More information: \[la]https://github.com/newren/git-filter-repo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace a sensitive string in all files:
+.RE
+.PP
+\fB\fCgit filter\-repo \-\-replace\-text <(echo '{{find}}==>{{replacement}}')\fR
+.RS
+.IP \(bu 2
+Extract a single folder, keeping history:
+.RE
+.PP
+\fB\fCgit filter\-repo \-\-path {{path/to/folder}}\fR
+.RS
+.IP \(bu 2
+Remove a single folder, keeping history:
+.RE
+.PP
+\fB\fCgit filter\-repo \-\-path {{path/to/folder}} \-\-invert\-paths\fR
+.RS
+.IP \(bu 2
+Move everything from sub\-folder one level up:
+.RE
+.PP
+\fB\fCgit filter\-repo \-\-path\-rename {{path/to/folder/:}}\fR

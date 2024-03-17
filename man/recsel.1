@@ -1,0 +1,24 @@
+.TH recsel
+.PP
+.RS
+Print records from a recfile: a human\-editable, plain text database.
+More information: \[la]https://www.gnu.org/software/recutils/manual/recutils.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract name and version field:
+.RE
+.PP
+\fB\fCrecsel \-p name,version {{data.rec}}\fR
+.RS
+.IP \(bu 2
+Use "~" to match a string with a given regular expression:
+.RE
+.PP
+\fB\fCrecsel \-e "{{field_name}} ~ '{{regular_expression}}' {{data.rec}}"\fR
+.RS
+.IP \(bu 2
+Use a predicate to match a name and a version:
+.RE
+.PP
+\fB\fCrecsel \-e "name ~ '{{regular_expression}}' && version ~ '{{regular_expression}}'" {{data.rec}}\fR

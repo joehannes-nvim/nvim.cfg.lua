@@ -1,0 +1,30 @@
+.TH umask
+.PP
+.RS
+Manage the read/write/execute permissions that are masked out (i.e. restricted) for newly created files by the user.
+More information: \[la]https://manned.org/umask\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the current mask in octal notation:
+.RE
+.PP
+\fB\fCumask\fR
+.RS
+.IP \(bu 2
+Display the current mask in symbolic (human\-readable) mode:
+.RE
+.PP
+\fB\fCumask \-S\fR
+.RS
+.IP \(bu 2
+Change the mask symbolically to allow read permission for all users (the rest of the mask bits are unchanged):
+.RE
+.PP
+\fB\fCumask {{a+r}}\fR
+.RS
+.IP \(bu 2
+Set the mask (using octal) to restrict no permissions for the file's owner, and restrict all permissions for everyone else:
+.RE
+.PP
+\fB\fCumask {{077}}\fR

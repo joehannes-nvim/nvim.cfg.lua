@@ -1,0 +1,55 @@
+.TH lzip
+.PP
+.RS
+Lzip is a lossless data compressor with a user interface similar to \fB\fCgzip\fR or \fB\fCbzip2\fR\&.
+Lzip uses a simplified form of the "Lempel\-Ziv\-Markovchain\-Algorithm"z (LZMA) stream format and provides a 3 factor integrity checking to maximize interoperability and optimize safety.
+More information: \[la]https://www.nongnu.org/lzip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Archive a file, replacing it with with a compressed version:
+.RE
+.PP
+\fB\fClzip {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Archive a file, keeping the input file:
+.RE
+.PP
+\fB\fClzip \-k {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Archive a file with the best compression (level=9):
+.RE
+.PP
+\fB\fClzip \-k {{path/to/file}} \-\-best\fR
+.RS
+.IP \(bu 2
+Archive a file at the fastest speed (level=0):
+.RE
+.PP
+\fB\fClzip \-k {{path/to/file}} \-\-fast\fR
+.RS
+.IP \(bu 2
+Test the integrity of compressed file:
+.RE
+.PP
+\fB\fClzip \-\-test {{path/to/archive.lz}}\fR
+.RS
+.IP \(bu 2
+Decompress a file, replacing it with the original uncompressed version:
+.RE
+.PP
+\fB\fClzip \-d {{path/to/archive.lz}}\fR
+.RS
+.IP \(bu 2
+Decompress a file, keeping the archive:
+.RE
+.PP
+\fB\fClzip \-d \-k {{path/to/archive.lz}}\fR
+.RS
+.IP \(bu 2
+List files which are in an archive and show compression stats:
+.RE
+.PP
+\fB\fClzip \-\-list {{path/to/archive.lz}}\fR

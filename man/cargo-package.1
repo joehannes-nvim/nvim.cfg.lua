@@ -1,0 +1,19 @@
+.TH cargo package
+.PP
+.RS
+Assemble a local package into a distributable tarball (a \fB\fC\&.crate\fR file).
+Similar to \fB\fCcargo publish \-\-dry\-run\fR, but has more options.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-package.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform checks and create a \fB\fC\&.crate\fR file (equivalent of \fB\fCcargo publish \-\-dry\-run\fR):
+.RE
+.PP
+\fB\fCcargo package\fR
+.RS
+.IP \(bu 2
+Display what files would be included in the tarball without actually creating it:
+.RE
+.PP
+\fB\fCcargo package \-\-list\fR

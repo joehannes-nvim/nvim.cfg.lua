@@ -1,0 +1,42 @@
+.TH ansible\-playbook
+.PP
+.RS
+Execute tasks defined in playbook on remote machines over SSH.
+More information: \[la]https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run tasks in playbook:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}}\fR
+.RS
+.IP \(bu 2
+Run tasks in playbook with custom host inventory:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}} \-i {{inventory_file}}\fR
+.RS
+.IP \(bu 2
+Run tasks in playbook with extra variables defined via the command\-line:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}} \-e "{{variable1}}={{value1}} {{variable2}}={{value2}}"\fR
+.RS
+.IP \(bu 2
+Run tasks in playbook with extra variables defined in a JSON file:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}} \-e "@{{variables.json}}"\fR
+.RS
+.IP \(bu 2
+Run tasks in playbook for the given tags:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}} \-\-tags {{tag1,tag2}}\fR
+.RS
+.IP \(bu 2
+Run tasks in a playbook starting at a specific task:
+.RE
+.PP
+\fB\fCansible\-playbook {{playbook}} \-\-start\-at {{task_name}}\fR

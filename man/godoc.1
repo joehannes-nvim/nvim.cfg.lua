@@ -1,0 +1,36 @@
+.TH godoc
+.PP
+.RS
+Show documentation for go packages.
+More information: \[la]https://godoc.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display help for package "fmt":
+.RE
+.PP
+\fB\fCgodoc {{fmt}}\fR
+.RS
+.IP \(bu 2
+Display help for the function "Printf" of "fmt" package:
+.RE
+.PP
+\fB\fCgodoc {{fmt}} {{Printf}}\fR
+.RS
+.IP \(bu 2
+Serve documentation as a web server on port 6060:
+.RE
+.PP
+\fB\fCgodoc \-http=:{{6060}}\fR
+.RS
+.IP \(bu 2
+Create an index file:
+.RE
+.PP
+\fB\fCgodoc \-write_index \-index_files={{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use the given index file to search the docs:
+.RE
+.PP
+\fB\fCgodoc \-http=:{{6060}} \-index \-index_files={{path/to/file}}\fR

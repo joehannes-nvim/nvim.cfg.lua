@@ -1,0 +1,18 @@
+.TH convmv
+.PP
+.RS
+Convert filenames (NOT file content) from one encoding to another.
+More information: \[la]https://www.j3e.de/linux/convmv/man/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test filename encoding conversion (don't actually change the filename):
+.RE
+.PP
+\fB\fCconvmv \-f {{from_encoding}} \-t {{to_encoding}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+Convert filename encoding and rename the file to the new encoding:
+.RE
+.PP
+\fB\fCconvmv \-f {{from_encoding}} \-t {{to_encoding}} \-\-notest {{input_file}}\fR

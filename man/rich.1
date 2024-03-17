@@ -1,0 +1,48 @@
+.TH rich
+.PP
+.RS
+A toolbox for fancy output in the terminal.
+More information: \[la]https://github.com/Textualize/rich-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a file with syntax highlighting:
+.RE
+.PP
+\fB\fCrich {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Add line numbers, and indentation guides:
+.RE
+.PP
+\fB\fCrich {{path/to/file.py}} \-\-line\-number \-\-guides\fR
+.RS
+.IP \(bu 2
+Apply a theme:
+.RE
+.PP
+\fB\fCrich {{path/to/file.py}} \-\-theme {{monokai}}\fR
+.RS
+.IP \(bu 2
+Display a file in an interactive pager:
+.RE
+.PP
+\fB\fCrich {{path/to/file.py}} \-\-pager\fR
+.RS
+.IP \(bu 2
+Display contents from a URL:
+.RE
+.PP
+\fB\fCrich {{https://raw.githubusercontent.com/Textualize/rich\-cli/main/README.md}} \-\-markdown \-\-pager\fR
+.RS
+.IP \(bu 2
+Export a file as HTML:
+.RE
+.PP
+\fB\fCrich {{path/to/file.md}} \-\-export\-html {{path/to/file.html}}\fR
+.RS
+.IP \(bu 2
+Display text with formatting tags, custom alignment, and line width:
+.RE
+.PP
+\fB\fCrich \-\-print {{"Hello [green on black]Stylized[/green on black] [bold]World[/bold]"}} \-\-{{left|center|right}} \-\-width {{10}}\fR

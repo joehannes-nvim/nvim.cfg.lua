@@ -1,0 +1,36 @@
+.TH git merge
+.PP
+.RS
+Merge branches.
+More information: \[la]https://git-scm.com/docs/git-merge\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Merge a branch into your current branch:
+.RE
+.PP
+\fB\fCgit merge {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Edit the merge message:
+.RE
+.PP
+\fB\fCgit merge \-\-edit {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Merge a branch and create a merge commit:
+.RE
+.PP
+\fB\fCgit merge \-\-no\-ff {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Abort a merge in case of conflicts:
+.RE
+.PP
+\fB\fCgit merge \-\-abort\fR
+.RS
+.IP \(bu 2
+Merge using a specific strategy:
+.RE
+.PP
+\fB\fCgit merge \-\-strategy {{strategy}} \-\-strategy\-option {{strategy_option}} {{branch_name}}\fR

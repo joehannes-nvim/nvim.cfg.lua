@@ -1,0 +1,31 @@
+.TH az repos
+.PP
+.RS
+Manage Azure DevOps repos.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/repos\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all repos in a specific project:
+.RE
+.PP
+\fB\fCaz repos list \-\-project {{project_name}}\fR
+.RS
+.IP \(bu 2
+Add policy on a specific branch of a specific repository to restrict basic merge:
+.RE
+.PP
+\fB\fCaz repos policy merge\-strategy create \-\-repository\-id {{repository_id_in_repos_list}} \-\-branch {{branch_name}} \-\-blocking \-\-enabled \-\-allow\-no\-fast\-forward false \-\-allow\-rebase true \-\-allow\-rebase\-merge true \-\-allow\-squash true\fR
+.RS
+.IP \(bu 2
+Add build validation on a specific repository, using an existing build pipeline, to be triggered automatically on source update:
+.RE
+.PP
+\fB\fCaz repos policy build create \-\-repository\-id {{repository_id}} \-\-build\-definition\-id {{build_pipeline_id}} \-\-branch main \-\-blocking \-\-enabled \-\-queue\-on\-source\-update\-only true \-\-display\-name {{name}} \-\-valid\-duration {{minutes}}\fR
+.RS
+.IP \(bu 2
+List all active Pull Requests on a specific repository within a specific project:
+.RE
+.PP
+\fB\fCaz repos pr list \-\-project {{project_name}} \-\-repository {{repository_name}} \-\-status active\fR

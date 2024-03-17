@@ -1,0 +1,48 @@
+.TH man
+.PP
+.RS
+Format and display manual pages.
+More information: \[la]https://www.man7.org/linux/man-pages/man1/man.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the man page for a command:
+.RE
+.PP
+\fB\fCman {{command}}\fR
+.RS
+.IP \(bu 2
+Display the man page for a command from section 7:
+.RE
+.PP
+\fB\fCman {{7}} {{command}}\fR
+.RS
+.IP \(bu 2
+List all available sections for a command:
+.RE
+.PP
+\fB\fCman \-f {{command}}\fR
+.RS
+.IP \(bu 2
+Display the path searched for manpages:
+.RE
+.PP
+\fB\fCman \-\-path\fR
+.RS
+.IP \(bu 2
+Display the location of a manpage rather than the manpage itself:
+.RE
+.PP
+\fB\fCman \-w {{command}}\fR
+.RS
+.IP \(bu 2
+Display the man page using a specific locale:
+.RE
+.PP
+\fB\fCman {{command}} \-\-locale={{locale}}\fR
+.RS
+.IP \(bu 2
+Search for manpages containing a search string:
+.RE
+.PP
+\fB\fCman \-k "{{search_string}}"\fR

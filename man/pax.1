@@ -1,0 +1,42 @@
+.TH pax
+.PP
+.RS
+Archiving and copying utility.
+More information: \[la]https://manned.org/pax.1p\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the contents of an archive:
+.RE
+.PP
+\fB\fCpax \-f {{archive.tar}}\fR
+.RS
+.IP \(bu 2
+List the contents of a gzipped archive:
+.RE
+.PP
+\fB\fCpax \-zf {{archive.tar.gz}}\fR
+.RS
+.IP \(bu 2
+Create an archive from files:
+.RE
+.PP
+\fB\fCpax \-wf {{target.tar}} {{path/to/file1}} {{path/to/file2}} {{path/to/file3}}\fR
+.RS
+.IP \(bu 2
+Create an archive from files, using output redirection:
+.RE
+.PP
+\fB\fCpax \-w {{path/to/file1}} {{path/to/file2}} {{path/to/file3}} > {{target.tar}}\fR
+.RS
+.IP \(bu 2
+Extract an archive into the current directory:
+.RE
+.PP
+\fB\fCpax \-rf {{source.tar}}\fR
+.RS
+.IP \(bu 2
+Copy to a directory, while keeping the original metadata; \fB\fCtarget/\fR must exist:
+.RE
+.PP
+\fB\fCpax \-rw {{path/to/file1}} {{path/to/directory1}} {{path/to/directory2}} {{target/}}\fR

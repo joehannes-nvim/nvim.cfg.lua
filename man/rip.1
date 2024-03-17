@@ -1,0 +1,42 @@
+.TH rip
+.PP
+.RS
+Remove files or directories by sending them to the graveyard, allowing for them to be recovered.
+More information: \[la]https://github.com/nivekuil/rip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove files or directories from specified locations and place them in the graveyard:
+.RE
+.PP
+\fB\fCrip {{path/to/file_or_directory}} {{path/to/another/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Interactively remove files or directories, with a prompt before every removal:
+.RE
+.PP
+\fB\fCrip \-\-inspect {{path/to/file_or_directory}} {{path/to/another/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+List all files and directories in the graveyard that were originally within the current directory:
+.RE
+.PP
+\fB\fCrip \-\-seance\fR
+.RS
+.IP \(bu 2
+Permanently delete every file and directory in the graveyard:
+.RE
+.PP
+\fB\fCrip \-\-decompose\fR
+.RS
+.IP \(bu 2
+Put back the files and directories which were affected by the most recent removal:
+.RE
+.PP
+\fB\fCrip \-\-unbury\fR
+.RS
+.IP \(bu 2
+Put back every file and directory that is listed by \fB\fCrip \-\-seance\fR:
+.RE
+.PP
+\fB\fCrip \-\-seance \-\-unbury\fR

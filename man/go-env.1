@@ -1,0 +1,30 @@
+.TH go env
+.PP
+.RS
+Manage environment variables used by the Go toolchain.
+More information: \[la]https://golang.org/cmd/go/#hdr-Print_Go_environment_information\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all environment variables:
+.RE
+.PP
+\fB\fCgo env\fR
+.RS
+.IP \(bu 2
+Show a specific environment variable:
+.RE
+.PP
+\fB\fCgo env {{GOPATH}}\fR
+.RS
+.IP \(bu 2
+Set an environment variable to a value:
+.RE
+.PP
+\fB\fCgo env \-w {{GOBIN}}={{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Reset an environment variable's value:
+.RE
+.PP
+\fB\fCgo env \-u {{GOBIN}}\fR

@@ -1,0 +1,20 @@
+.TH ssh\-agent
+.PP
+.RS
+Spawn an SSH Agent process.
+An SSH Agent holds SSH keys decrypted in memory until removed or the process is killed.
+See also \fB\fCssh\-add\fR, which can add and manage keys held by an SSH Agent.
+More information: \[la]https://man.openbsd.org/ssh-agent\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an SSH Agent for the current shell:
+.RE
+.PP
+\fB\fCeval $(ssh\-agent)\fR
+.RS
+.IP \(bu 2
+Kill the currently running agent:
+.RE
+.PP
+\fB\fCssh\-agent \-k\fR

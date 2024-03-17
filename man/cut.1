@@ -1,0 +1,24 @@
+.TH cut
+.PP
+.RS
+Cut out fields from \fB\fCstdin\fR or files.
+More information: \[la]https://www.gnu.org/software/coreutils/cut\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a specific character/field range of each line:
+.RE
+.PP
+\fB\fC{{command}} | cut \-\-{{characters|fields}}={{1|1,10|1\-10|1\-|\-10}}\fR
+.RS
+.IP \(bu 2
+Print a range of each line with a specific delimiter:
+.RE
+.PP
+\fB\fC{{command}} | cut \-\-delimiter="{{,}}" \-\-{{fields}}={{1}}\fR
+.RS
+.IP \(bu 2
+Print a range of each line of the specific file:
+.RE
+.PP
+\fB\fCcut \-\-{{characters}}={{1}} {{path/to/file}}\fR

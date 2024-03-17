@@ -1,0 +1,36 @@
+.TH smbmap
+.PP
+.RS
+Allow users to enumerate samba share drives across an entire domain.
+More information: \[la]https://github.com/ShawnDEvans/smbmap\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enumerate hosts with NULL sessions enabled and open shares:
+.RE
+.PP
+\fB\fCsmbmap \-\-host\-file {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Enumerate hosts and check SMB file permissions:
+.RE
+.PP
+\fB\fCsmbmap \-\-host\-file {{path/to/file}} \-u {{username}} \-p {{password}} \-q\fR
+.RS
+.IP \(bu 2
+Connect to an ip or hostname through smb using a username and password:
+.RE
+.PP
+\fB\fCsmbmap \-u {{username}} \-p {{password}} \-d {{domain}} \-H {{ip_or_hostname}}\fR
+.RS
+.IP \(bu 2
+Locate and download files [R]ecursively up to N levels depth, searching for filename pattern (regex), and excluding certain shares:
+.RE
+.PP
+\fB\fCsmbmap \-\-host\-file {{path/to/file}} \-u {{username}} \-p {{password}} \-q \-R \-\-depth {{number}} \-\-exclude {{sharename}} \-A {{filepattern}}\fR
+.RS
+.IP \(bu 2
+Upload file through smb using username and password:
+.RE
+.PP
+\fB\fCsmbmap \-u {{username}} \-p {{password}} \-d {{domain}} \-H {{ip_or_hostname}} \-\-upload {{path/to/file}} '{{/share_name/remote_filename}}'\fR

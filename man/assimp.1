@@ -1,0 +1,49 @@
+.TH assimp
+.PP
+.RS
+Command\-line client for the Open Asset Import Library.
+Supports loading of 40+ 3D file formats, and exporting to several popular 3D formats.
+More information: \[la]https://assimp-docs.readthedocs.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all supported import formats:
+.RE
+.PP
+\fB\fCassimp listext\fR
+.RS
+.IP \(bu 2
+List all supported export formats:
+.RE
+.PP
+\fB\fCassimp listexport\fR
+.RS
+.IP \(bu 2
+Convert a file to one of the supported output formats, using the default parameters:
+.RE
+.PP
+\fB\fCassimp export {{input_file.stl}} {{output_file.obj}}\fR
+.RS
+.IP \(bu 2
+Convert a file using custom parameters (the dox_cmd.h file in assimp's source code lists available parameters):
+.RE
+.PP
+\fB\fCassimp export {{input_file.stl}} {{output_file.obj}} {{parameters}}\fR
+.RS
+.IP \(bu 2
+Display a summary of a 3D file's contents:
+.RE
+.PP
+\fB\fCassimp info {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+List all supported subcommands ("verbs"):
+.RE
+.PP
+\fB\fCassimp help\fR
+.RS
+.IP \(bu 2
+Get help on a specific subcommand (e.g. the parameters specific to it):
+.RE
+.PP
+\fB\fCassimp {{subcommand}} \-\-help\fR

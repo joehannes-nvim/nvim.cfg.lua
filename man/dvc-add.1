@@ -1,0 +1,30 @@
+.TH dvc add
+.PP
+.RS
+Add changed files to the index.
+More information: \[la]https://dvc.org/doc/command-reference/add\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a single target file to the index:
+.RE
+.PP
+\fB\fCdvc add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add a target directory to the index:
+.RE
+.PP
+\fB\fCdvc add {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Recursively add all the files in a given target directory:
+.RE
+.PP
+\fB\fCdvc add \-\-recursive {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Add a target file with a custom \fB\fC\&.dvc\fR filename:
+.RE
+.PP
+\fB\fCdvc add \-\-file {{custom_name.dvc}} {{path/to/file}}\fR

@@ -1,0 +1,36 @@
+.TH highlight
+.PP
+.RS
+Outputs syntax\-highlighted source code to a variety of formats.
+More information: \[la]http://www.andre-simon.de/doku/highlight/highlight.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Produce a complete HTML document from a source code file:
+.RE
+.PP
+\fB\fChighlight \-\-out\-format={{html}} \-\-style {{theme_name}} \-\-syntax {{language}} {{path/to/source_code}}\fR
+.RS
+.IP \(bu 2
+Produce an HTML fragment, suitable for inclusion in a larger document:
+.RE
+.PP
+\fB\fChighlight \-\-out\-format={{html}} \-\-fragment \-\-syntax {{language}} {{source_file}}\fR
+.RS
+.IP \(bu 2
+Inline the CSS styling in every tag:
+.RE
+.PP
+\fB\fChighlight \-\-out\-format={{html}} \-\-inline\-css \-\-syntax {{language}} {{source_file}}\fR
+.RS
+.IP \(bu 2
+List all supported languages, themes, or plugins:
+.RE
+.PP
+\fB\fChighlight \-\-list\-scripts {{langs|themes|plugins}}\fR
+.RS
+.IP \(bu 2
+Print a CSS stylesheet for a theme:
+.RE
+.PP
+\fB\fChighlight \-\-out\-format={{html}} \-\-print\-style \-\-style {{theme_name}} \-\-syntax {{language}}] \-\-stdout\fR

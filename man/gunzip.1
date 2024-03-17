@@ -1,0 +1,38 @@
+.TH gunzip
+.PP
+.RS
+Extract 
+.BR file (s) 
+from a gzip (.gz) archive.
+More information: \[la]https://manned.org/gunzip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract a file from an archive, replacing the original file if it exists:
+.RE
+.PP
+\fB\fCgunzip {{archive.tar.gz}}\fR
+.RS
+.IP \(bu 2
+Extract a file to a target destination:
+.RE
+.PP
+\fB\fCgunzip \-\-stdout {{archive.tar.gz}} > {{archive.tar}}\fR
+.RS
+.IP \(bu 2
+Extract a file and keep the archive file:
+.RE
+.PP
+\fB\fCgunzip \-\-keep {{archive.tar.gz}}\fR
+.RS
+.IP \(bu 2
+List the contents of a compressed file:
+.RE
+.PP
+\fB\fCgunzip \-\-list {{file.txt.gz}}\fR
+.RS
+.IP \(bu 2
+Decompress an archive from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/archive.gz}} | gunzip\fR

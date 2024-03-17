@@ -1,0 +1,30 @@
+.TH git diff\-index
+.PP
+.RS
+Compare the working directory with a specific commit or tree object.
+More information: \[la]https://git-scm.com/docs/git-diff-index\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare the working directory with a specific commit:
+.RE
+.PP
+\fB\fCgit diff\-index {{commit}}\fR
+.RS
+.IP \(bu 2
+Compare a specific file or directory in working directory with a commit:
+.RE
+.PP
+\fB\fCgit diff\-index {{commit}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Compare the working directory with the index (staging area) to check for staged changes:
+.RE
+.PP
+\fB\fCgit diff\-index \-\-cached {{commit}}\fR
+.RS
+.IP \(bu 2
+Suppress output and return an exit status to check for differences:
+.RE
+.PP
+\fB\fCgit diff\-index \-\-quiet {{commit}}\fR

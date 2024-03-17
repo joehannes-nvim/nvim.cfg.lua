@@ -1,0 +1,24 @@
+.TH funzip
+.PP
+.RS
+Print the content of the first (non\-directory) member in an archive without extraction.
+More information: \[la]https://manned.org/funzip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the content of the first member in a \fB\fC\&.zip\fR archive:
+.RE
+.PP
+\fB\fCfunzip {{path/to/archive.zip}}\fR
+.RS
+.IP \(bu 2
+Print the content in a \fB\fC\&.gz\fR archive:
+.RE
+.PP
+\fB\fCfunzip {{path/to/archive.gz}}\fR
+.RS
+.IP \(bu 2
+Decrypt a \fB\fC\&.zip\fR or \fB\fC\&.gz\fR archive and print the content:
+.RE
+.PP
+\fB\fCfunzip \-password {{password}} {{path/to/archive}}\fR

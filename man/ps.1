@@ -1,0 +1,48 @@
+.TH ps
+.PP
+.RS
+Information about running processes.
+More information: \[la]https://manned.org/ps\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all running processes:
+.RE
+.PP
+\fB\fCps aux\fR
+.RS
+.IP \(bu 2
+List all running processes including the full command string:
+.RE
+.PP
+\fB\fCps auxww\fR
+.RS
+.IP \(bu 2
+Search for a process that matches a string:
+.RE
+.PP
+\fB\fCps aux | grep {{string}}\fR
+.RS
+.IP \(bu 2
+List all processes of the current user in extra full format:
+.RE
+.PP
+\fB\fCps \-\-user $(id \-u) \-F\fR
+.RS
+.IP \(bu 2
+List all processes of the current user as a tree:
+.RE
+.PP
+\fB\fCps \-\-user $(id \-u) f\fR
+.RS
+.IP \(bu 2
+Get the parent PID of a process:
+.RE
+.PP
+\fB\fCps \-o ppid= \-p {{pid}}\fR
+.RS
+.IP \(bu 2
+Sort processes by memory consumption:
+.RE
+.PP
+\fB\fCps \-\-sort size\fR

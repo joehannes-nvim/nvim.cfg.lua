@@ -1,0 +1,54 @@
+.TH git show\-branch
+.PP
+.RS
+Show branches and their commits.
+More information: \[la]https://git-scm.com/docs/git-show-branch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show a summary of the latest commit on a branch:
+.RE
+.PP
+\fB\fCgit show\-branch {{branch_name|ref|commit}}\fR
+.RS
+.IP \(bu 2
+Compare commits in the history of multiple commits or branches:
+.RE
+.PP
+\fB\fCgit show\-branch {{branch_name|ref|commit}}\fR
+.RS
+.IP \(bu 2
+Compare all remote tracking branches:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-remotes\fR
+.RS
+.IP \(bu 2
+Compare both local and remote tracking branches:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-all\fR
+.RS
+.IP \(bu 2
+List the latest commits in all branches:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-all \-\-list\fR
+.RS
+.IP \(bu 2
+Compare a given branch with the current branch:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-current {{commit|branch_name|ref}}\fR
+.RS
+.IP \(bu 2
+Display the commit name instead of the relative name:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-sha1\-name \-\-current {{current|branch_name|ref}}\fR
+.RS
+.IP \(bu 2
+Keep going a given number of commits past the common ancestor:
+.RE
+.PP
+\fB\fCgit show\-branch \-\-more {{5}} {{commit|branch_name|ref}} {{commit|branch_name|ref}} {{...}}\fR

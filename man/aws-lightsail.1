@@ -1,0 +1,48 @@
+.TH aws lightsail
+.PP
+.RS
+Manage Amazon Lightsail resources.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lightsail/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all virtual private servers, or instances:
+.RE
+.PP
+\fB\fCaws lightsail get\-instances\fR
+.RS
+.IP \(bu 2
+List all bundles (instance plans):
+.RE
+.PP
+\fB\fCaws lightsail list\-bundles\fR
+.RS
+.IP \(bu 2
+List all available instance images, or blueprints:
+.RE
+.PP
+\fB\fCaws lightsail list\-blueprints\fR
+.RS
+.IP \(bu 2
+Create an instance:
+.RE
+.PP
+\fB\fCaws lightsail create\-instances \-\-instance\-names {{name}} \-\-availability\-zone {{region}} \-\-bundle\-id {{nano_2_0}} \-\-blueprint\-id {{blueprint_id}}\fR
+.RS
+.IP \(bu 2
+Print the state of a specific instance:
+.RE
+.PP
+\fB\fCaws lightsail get\-instance\-state \-\-instance\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Stop a specific instance:
+.RE
+.PP
+\fB\fCaws lightsail stop\-instance \-\-instance\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Delete a specific instance:
+.RE
+.PP
+\fB\fCaws lightsail delete\-instance \-\-instance\-name {{name}}\fR

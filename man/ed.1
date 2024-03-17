@@ -1,0 +1,49 @@
+.TH ed
+.PP
+.RS
+The original Unix text editor.
+See also: \fB\fCawk\fR, \fB\fCsed\fR\&.
+More information: \[la]https://www.gnu.org/software/ed/manual/ed_manual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive editor session with an empty document:
+.RE
+.PP
+\fB\fCed\fR
+.RS
+.IP \(bu 2
+Start an interactive editor session with an empty document and a specific prompt:
+.RE
+.PP
+\fB\fCed \-\-prompt='> '\fR
+.RS
+.IP \(bu 2
+Start an interactive editor session with user\-friendly errors:
+.RE
+.PP
+\fB\fCed \-\-verbose\fR
+.RS
+.IP \(bu 2
+Start an interactive editor session with an empty document and without diagnostics, byte counts and '!' prompt:
+.RE
+.PP
+\fB\fCed \-\-quiet\fR
+.RS
+.IP \(bu 2
+Start an interactive editor session without exit status change when command fails:
+.RE
+.PP
+\fB\fCed \-\-loose\-exit\-status\fR
+.RS
+.IP \(bu 2
+Edit a specific file (this shows the byte count of the loaded file):
+.RE
+.PP
+\fB\fCed {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Replace a string with a specific replacement for all lines:
+.RE
+.PP
+\fB\fC,s/{{regular_expression}}/{{replacement}}/g\fR

@@ -1,0 +1,30 @@
+.TH fmt
+.PP
+.RS
+Reformat a text file by joining its paragraphs and limiting the line width to given number of characters (75 by default).
+More information: \[la]https://www.gnu.org/software/coreutils/fmt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Reformat a file:
+.RE
+.PP
+\fB\fCfmt {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Reformat a file producing output lines of (at most) \fB\fCn\fR characters:
+.RE
+.PP
+\fB\fCfmt \-w {{n}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Reformat a file without joining lines shorter than the given width together:
+.RE
+.PP
+\fB\fCfmt \-s {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Reformat a file with uniform spacing (1 space between words and 2 spaces between paragraphs):
+.RE
+.PP
+\fB\fCfmt \-u {{path/to/file}}\fR

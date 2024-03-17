@@ -1,0 +1,31 @@
+.TH dotnet
+.PP
+.RS
+Cross platform .NET command\-line tools for .NET Core.
+Some subcommands such as \fB\fCdotnet build\fR have their own usage documentation.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new .NET project:
+.RE
+.PP
+\fB\fCdotnet new {{template_short_name}}\fR
+.RS
+.IP \(bu 2
+Restore NuGet packages:
+.RE
+.PP
+\fB\fCdotnet restore\fR
+.RS
+.IP \(bu 2
+Build and execute the .NET project in the current directory:
+.RE
+.PP
+\fB\fCdotnet run\fR
+.RS
+.IP \(bu 2
+Run a packaged dotnet application (only needs the runtime, the rest of the commands require the .NET Core SDK installed):
+.RE
+.PP
+\fB\fCdotnet {{path/to/application.dll}}\fR

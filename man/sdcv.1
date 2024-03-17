@@ -1,0 +1,49 @@
+.TH sdcv
+.PP
+.RS
+StarDict, a command\-line dictionary client.
+Dictionaries are provided separately from the client.
+More information: \[la]https://manned.org/sdcv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCsdcv\fR interactively:
+.RE
+.PP
+\fB\fCsdcv\fR
+.RS
+.IP \(bu 2
+List installed dictionaries:
+.RE
+.PP
+\fB\fCsdcv \-\-list\-dicts\fR
+.RS
+.IP \(bu 2
+Display a definition from a specific dictionary:
+.RE
+.PP
+\fB\fCsdcv \-\-use\-dict {{dictionary_name}} {{search_term}}\fR
+.RS
+.IP \(bu 2
+Look up a definition with a fuzzy search:
+.RE
+.PP
+\fB\fCsdcv {{search_term}}\fR
+.RS
+.IP \(bu 2
+Look up a definition with an exact search:
+.RE
+.PP
+\fB\fCsdcv \-\-exact\-search {{search_term}}\fR
+.RS
+.IP \(bu 2
+Look up a definition and format the output as JSON:
+.RE
+.PP
+\fB\fCsdcv \-\-json {{search_term}}\fR
+.RS
+.IP \(bu 2
+Search for dictionaries in a specific directory:
+.RE
+.PP
+\fB\fCsdcv \-\-data\-dir {{path/to/directory}} {{search_term}}\fR

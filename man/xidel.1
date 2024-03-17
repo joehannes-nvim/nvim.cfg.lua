@@ -1,0 +1,54 @@
+.TH xidel
+.PP
+.RS
+Download and extract data from HTML/XML pages as well as JSON APIs.
+More information: \[la]https://www.videlibri.de/xidel.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print all URLs found by a Google search:
+.RE
+.PP
+\fB\fCxidel {{https://www.google.com/search?q=test}} \-\-extract "//a/extract(@href, 'url[?]q=([^&]+)&', 1)[. != '']"\fR
+.RS
+.IP \(bu 2
+Print the title of all pages found by a Google search and download them:
+.RE
+.PP
+\fB\fCxidel {{https://www.google.com/search?q=test}} \-\-follow "{{//a/extract(@href, 'url[?]q=([^&]+)&', 1)[. != '']}}" \-\-extract {{//title}} \-\-download {{'{$host}/'}}\fR
+.RS
+.IP \(bu 2
+Follow all links on a page and print the titles, with XPath:
+.RE
+.PP
+\fB\fCxidel {{https://example.org}} \-\-follow {{//a}} \-\-extract {{//title}}\fR
+.RS
+.IP \(bu 2
+Follow all links on a page and print the titles, with CSS selectors:
+.RE
+.PP
+\fB\fCxidel {{https://example.org}} \-\-follow "{{css('a')}}" \-\-css {{title}}\fR
+.RS
+.IP \(bu 2
+Follow all links on a page and print the titles, with pattern matching:
+.RE
+.PP
+\fB\fCxidel {{https://example.org}} \-\-follow "{{<a>{.}</a>*}}" \-\-extract "{{<title>{.}</title>}}"\fR
+.RS
+.IP \(bu 2
+Read the pattern from example.xml (which will also check if the element containing "ood" is there, and fail otherwise):
+.RE
+.PP
+\fB\fCxidel {{path/to/example.xml}} \-\-extract "{{<x><foo>ood</foo><bar>{.}</bar></x>}}"\fR
+.RS
+.IP \(bu 2
+Print all newest Stack Overflow questions with title and URL using pattern matching on their RSS feed:
+.RE
+.PP
+\fB\fCxidel {{http://stackoverflow.com/feeds}} \-\-extract "{{<entry><title>{title:=.}</title><link>{uri:=@href}</link></entry>+}}"\fR
+.RS
+.IP \(bu 2
+Check for unread Reddit mail, Webscraping, combining CSS, XPath, JSONiq, and automatically form evaluation:
+.RE
+.PP
+\fB\fCxidel {{https://reddit.com}} \-\-follow "{{form(css('form.login\-form')[1], {'user': '$your_username', 'passwd': '$your_password'})}}" \-\-extract "{{css('#mail')/@title}}"\fR

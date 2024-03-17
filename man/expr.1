@@ -1,0 +1,48 @@
+.TH expr
+.PP
+.RS
+Evaluate expressions and manipulate strings.
+More information: \[la]https://www.gnu.org/software/coreutils/expr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get the length of a specific string:
+.RE
+.PP
+\fB\fCexpr length "{{string}}"\fR
+.RS
+.IP \(bu 2
+Get the substring of a string with a specific length:
+.RE
+.PP
+\fB\fCexpr substr "{{string}}" {{from}} {{length}}\fR
+.RS
+.IP \(bu 2
+Match a specific substring against an anchored pattern:
+.RE
+.PP
+\fB\fCexpr match "{{string}}" '{{pattern}}'\fR
+.RS
+.IP \(bu 2
+Get the first char position from a specific set in a string:
+.RE
+.PP
+\fB\fCexpr index "{{string}}" "{{chars}}"\fR
+.RS
+.IP \(bu 2
+Calculate a specific mathematic expression:
+.RE
+.PP
+\fB\fCexpr {{expression1}} {{+|\-|*|/|%}} {{expression2}}\fR
+.RS
+.IP \(bu 2
+Get the first expression if its value is non\-zero and not null otherwise get the second one:
+.RE
+.PP
+\fB\fCexpr {{expression1}} \\| {{expression2}}\fR
+.RS
+.IP \(bu 2
+Get the first expression if both expressions are non\-zero and not null otherwise get zero:
+.RE
+.PP
+\fB\fCexpr {{expression1}} \\& {{expression2}}\fR

@@ -1,0 +1,43 @@
+.TH Nix classic interface
+.PP
+.RS
+A classic, stable interface to a powerful package manager that makes package management reliable, reproducible, and declarative.
+Some Nix commands such as \fB\fCnix\-build\fR, \fB\fCnix\-shell\fR, \fB\fCnix\-env\fR, and \fB\fCnix\-store\fR have their own pages. See also: \fB\fCtldr nix\fR\&.
+More information: \[la]https://nixos.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a package in nixpkgs via its name:
+.RE
+.PP
+\fB\fCnix\-env \-qaP {{search_term_regexp}}\fR
+.RS
+.IP \(bu 2
+Start a shell with the specified packages available:
+.RE
+.PP
+\fB\fCnix\-shell \-p {{pkg1 pkg2 pkg3...}}\fR
+.RS
+.IP \(bu 2
+Install some packages permanently:
+.RE
+.PP
+\fB\fCnix\-env \-iA {{nixpkgs.pkg1 nixpkgs.pkg2...}}\fR
+.RS
+.IP \(bu 2
+Show all dependencies of a store path (package), in a tree format:
+.RE
+.PP
+\fB\fCnix\-store \-\-query \-\-tree {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+Update the channels (repositories):
+.RE
+.PP
+\fB\fCnix\-channel \-\-update\fR
+.RS
+.IP \(bu 2
+Remove unused paths from Nix store:
+.RE
+.PP
+\fB\fCnix\-collect\-garbage\fR

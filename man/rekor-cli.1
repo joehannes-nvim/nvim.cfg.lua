@@ -1,0 +1,30 @@
+.TH rekor\-cli
+.PP
+.RS
+Immutable tamper resistant ledger of metadata generated within a software projects supply chain.
+More information: \[la]https://github.com/sigstore/rekor\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Upload an artifact to Rekor:
+.RE
+.PP
+\fB\fCrekor\-cli upload \-\-artifact {{path/to/file.ext}} \-\-signature {{path/to/file.ext.sig}} \-\-pki\-format={{x509}} \-\-public\-key={{path/to/key.pub}}\fR
+.RS
+.IP \(bu 2
+Get information regarding entries in the Transparency Log:
+.RE
+.PP
+\fB\fCrekor\-cli get \-\-uuid={{0e81b4d9299e2609e45b5c453a4c0e7820ac74e02c4935a8b830d104632fd2d1}}\fR
+.RS
+.IP \(bu 2
+Search the Rekor index to find entries by Artifact:
+.RE
+.PP
+\fB\fCrekor\-cli search \-\-artifact {{path/to/file.ext}}\fR
+.RS
+.IP \(bu 2
+Search the Rekor index to find entries by a specific hash:
+.RE
+.PP
+\fB\fCrekor\-cli search \-\-sha {{6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b}}\fR

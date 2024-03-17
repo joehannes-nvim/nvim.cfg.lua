@@ -1,0 +1,37 @@
+.TH chafa
+.PP
+.RS
+Image printing in the terminal.
+See also: \fB\fCcatimg\fR, \fB\fCpixterm\fR\&.
+More information: \[la]https://hpjansson.org/chafa\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render an image directly in the terminal:
+.RE
+.PP
+\fB\fCchafa {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render an image with 24\-bit [c]olor:
+.RE
+.PP
+\fB\fCchafa \-c full {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Improve image rendering with small color palettes using dithering:
+.RE
+.PP
+\fB\fCchafa \-c 16 \-\-dither ordered {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render an image, making it appear pixelated:
+.RE
+.PP
+\fB\fCchafa \-\-symbols vhalf {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render a monochrome image with only braille characters:
+.RE
+.PP
+\fB\fCchafa \-c none \-\-symbols braille {{path/to/file}}\fR

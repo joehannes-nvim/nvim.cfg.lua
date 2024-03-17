@@ -1,0 +1,24 @@
+.TH xml depyx
+.PP
+.RS
+Convert a PYX (ESIS \- ISO 8879) document to XML format.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a PYX (ESIS \- ISO 8879) document to XML format:
+.RE
+.PP
+\fB\fCxml depyx {{path/to/input.pyx|URI}} > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Convert a PYX document from \fB\fCstdin\fR to XML format:
+.RE
+.PP
+\fB\fCcat {{path/to/input.pyx}} | xml depyx > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCdepyx\fR subcommand:
+.RE
+.PP
+\fB\fCxml depyx \-\-help\fR

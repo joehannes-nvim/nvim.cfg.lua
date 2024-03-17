@@ -1,0 +1,36 @@
+.TH go doc
+.PP
+.RS
+Show documentation for a package or symbol.
+More information: \[la]https://golang.org/cmd/go/#hdr-Show_documentation_for_package_or_symbol\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show documentation for the current package:
+.RE
+.PP
+\fB\fCgo doc\fR
+.RS
+.IP \(bu 2
+Show package documentation and exported symbols:
+.RE
+.PP
+\fB\fCgo doc {{encoding/json}}\fR
+.RS
+.IP \(bu 2
+Show also documentation of symbols:
+.RE
+.PP
+\fB\fCgo doc \-all {{encoding/json}}\fR
+.RS
+.IP \(bu 2
+Show also sources:
+.RE
+.PP
+\fB\fCgo doc \-all \-src {{encoding/json}}\fR
+.RS
+.IP \(bu 2
+Show a specific symbol:
+.RE
+.PP
+\fB\fCgo doc \-all \-src {{encoding/json.Number}}\fR

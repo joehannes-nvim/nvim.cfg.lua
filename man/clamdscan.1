@@ -1,0 +1,54 @@
+.TH clamdscan
+.PP
+.RS
+A command\-line virus scanner using the ClamAV Daemon.
+More information: \[la]https://docs.clamav.net/manual/Usage/Scanning.html#clamdscan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a file or directory for vulnerabilities:
+.RE
+.PP
+\fB\fCclamdscan {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Scan data from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | clamdscan \-\fR
+.RS
+.IP \(bu 2
+Scan the current directory and output only infected files:
+.RE
+.PP
+\fB\fCclamdscan \-\-infected\fR
+.RS
+.IP \(bu 2
+Output the scan report to a log file:
+.RE
+.PP
+\fB\fCclamdscan \-\-log {{path/to/log_file}}\fR
+.RS
+.IP \(bu 2
+Move infected files to a specific directory:
+.RE
+.PP
+\fB\fCclamdscan \-\-move {{path/to/quarantine_directory}}\fR
+.RS
+.IP \(bu 2
+Remove infected files:
+.RE
+.PP
+\fB\fCclamdscan \-\-remove\fR
+.RS
+.IP \(bu 2
+Use multiple threads to scan a directory:
+.RE
+.PP
+\fB\fCclamdscan \-\-multiscan\fR
+.RS
+.IP \(bu 2
+Pass the file descriptor instead of streaming the file to the daemon:
+.RE
+.PP
+\fB\fCclamdscan \-\-fdpass\fR

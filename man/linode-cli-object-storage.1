@@ -1,0 +1,49 @@
+.TH linode\-cli object\-storage
+.PP
+.RS
+Manage Linode Object Storage.
+See also: \fB\fClinode\-cli\fR\&.
+More information: \[la]https://www.linode.com/docs/products/tools/cli/guides/object-storage/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all Object Storage buckets:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage buckets list\fR
+.RS
+.IP \(bu 2
+Create a new Object Storage bucket:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage buckets create \-\-cluster {{cluster_id}} \-\-label {{bucket_label}}\fR
+.RS
+.IP \(bu 2
+Delete an Object Storage bucket:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage buckets delete {{cluster_id}} {{bucket_label}}\fR
+.RS
+.IP \(bu 2
+List Object Storage cluster regions:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage clusters list\fR
+.RS
+.IP \(bu 2
+List access keys for Object Storage:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage keys list\fR
+.RS
+.IP \(bu 2
+Create a new access key for Object Storage:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage keys create \-\-label {{label}}\fR
+.RS
+.IP \(bu 2
+Revoke an access key for Object Storage:
+.RE
+.PP
+\fB\fClinode\-cli object\-storage keys revoke {{access_key_id}}\fR

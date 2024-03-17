@@ -1,0 +1,48 @@
+.TH phpenv
+.PP
+.RS
+A PHP version manager for development purposes.
+More information: \[la]https://github.com/phpenv/phpenv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a PHP version globally:
+.RE
+.PP
+\fB\fCphpenv install {{version}}\fR
+.RS
+.IP \(bu 2
+Refresh shim files for all PHP binaries known to \fB\fCphpenv\fR:
+.RE
+.PP
+\fB\fCphpenv rehash\fR
+.RS
+.IP \(bu 2
+List all installed PHP versions:
+.RE
+.PP
+\fB\fCphpenv versions\fR
+.RS
+.IP \(bu 2
+Display the currently active PHP version:
+.RE
+.PP
+\fB\fCphpenv version\fR
+.RS
+.IP \(bu 2
+Set the global PHP version:
+.RE
+.PP
+\fB\fCphpenv global {{version}}\fR
+.RS
+.IP \(bu 2
+Set the local PHP version, which overrides the global version:
+.RE
+.PP
+\fB\fCphpenv local {{version}}\fR
+.RS
+.IP \(bu 2
+Unset the local PHP version:
+.RE
+.PP
+\fB\fCphpenv local \-\-unset\fR

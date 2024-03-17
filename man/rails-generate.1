@@ -1,0 +1,36 @@
+.TH rails generate
+.PP
+.RS
+Generate new Rails templates in an existing project.
+More information: \[la]https://guides.rubyonrails.org/command_line.html#bin-rails-generate\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available generators:
+.RE
+.PP
+\fB\fCrails generate\fR
+.RS
+.IP \(bu 2
+Generate a new model named Post with attributes title and body:
+.RE
+.PP
+\fB\fCrails generate model {{Post}} {{title:string}} {{body:text}}\fR
+.RS
+.IP \(bu 2
+Generate a new controller named Posts with actions index, show, new and create:
+.RE
+.PP
+\fB\fCrails generate controller {{Posts}} {{index}} {{show}} {{new}} {{create}}\fR
+.RS
+.IP \(bu 2
+Generate a new migration that adds a category attribute to an existing model called Post:
+.RE
+.PP
+\fB\fCrails generate migration {{AddCategoryToPost}} {{category:string}}\fR
+.RS
+.IP \(bu 2
+Generate a scaffold for a model named Post, predefining the attributes title and body:
+.RE
+.PP
+\fB\fCrails generate scaffold {{Post}} {{title:string}} {{body:text}}\fR

@@ -1,0 +1,54 @@
+.TH adb logcat
+.PP
+.RS
+Dump a log of system messages.
+More information: \[la]https://developer.android.com/studio/command-line/logcat\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display system logs:
+.RE
+.PP
+\fB\fCadb logcat\fR
+.RS
+.IP \(bu 2
+Display lines that match a regular expression:
+.RE
+.PP
+\fB\fCadb logcat \-e {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Display logs for a tag in a specific mode ([V]erbose, [D]ebug, [I]nfo, [W]arning, [E]rror, [F]atal, [S]ilent), filtering other tags:
+.RE
+.PP
+\fB\fCadb logcat {{tag}}:{{mode}} *:S\fR
+.RS
+.IP \(bu 2
+Display logs for React Native applications in [V]erbose mode [S]ilencing other tags:
+.RE
+.PP
+\fB\fCadb logcat ReactNative:V ReactNativeJS:V *:S\fR
+.RS
+.IP \(bu 2
+Display logs for all tags with priority level [W]arning and higher:
+.RE
+.PP
+\fB\fCadb logcat *:W\fR
+.RS
+.IP \(bu 2
+Display logs for a specific PID:
+.RE
+.PP
+\fB\fCadb logcat \-\-pid={{pid}}\fR
+.RS
+.IP \(bu 2
+Display logs for the process of a specific package:
+.RE
+.PP
+\fB\fCadb logcat \-\-pid=$(adb shell pidof \-s {{package}})\fR
+.RS
+.IP \(bu 2
+Color the log (usually use with filters):
+.RE
+.PP
+\fB\fCadb logcat \-v color\fR

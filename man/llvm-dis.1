@@ -1,0 +1,24 @@
+.TH llvm\-dis
+.PP
+.RS
+Converts LLVM bitcode files into human\-readable LLVM Intermediate Representation (IR).
+More information: \[la]https://www.llvm.org/docs/CommandGuide/llvm-dis.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a bitcode file as LLVM IR and write the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCllvm\-dis {{path/to/input.bc}} \-o \-\fR
+.RS
+.IP \(bu 2
+Convert a bitcode file to an LLVM IR file with the same filename:
+.RE
+.PP
+\fB\fCllvm\-dis {{path/to/file.bc}}\fR
+.RS
+.IP \(bu 2
+Convert a bitcode file to LLVM IR, writing the result to the specified file:
+.RE
+.PP
+\fB\fCllvm\-dis {{path/to/input.bc}} \-o {{path/to/output.ll}}\fR

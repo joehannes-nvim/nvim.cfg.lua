@@ -1,0 +1,30 @@
+.TH gdal_translate
+.PP
+.RS
+Convert raster data between different formats.
+More information: \[la]https://gdal.org/programs/gdal_translate\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a raster dataset to JPEG format:
+.RE
+.PP
+\fB\fCgdal_translate \-of {{JPEG}} {{path/to/input.tif}} {{path/to/output.jpeg}}\fR
+.RS
+.IP \(bu 2
+Assign a projection to a raster dataset:
+.RE
+.PP
+\fB\fCgdal_translate \-a_srs {{EPSG:4326}} {{path/to/input.tif}} {{path/to/output.tif}}\fR
+.RS
+.IP \(bu 2
+Reduce the size of a raster dataset to a specific fraction:
+.RE
+.PP
+\fB\fCgdal_translate \-outsize {{40%}} {{40%}} {{path/to/input.tif}} {{path/to/output.tif}}\fR
+.RS
+.IP \(bu 2
+Convert a GeoTiff to a Cloud Optimized GeoTiff:
+.RE
+.PP
+\fB\fCgdal_translate {{path/to/input.tif}} {{path/to/output.tif}} \-of COG \-co COMPRESS=LZW\fR

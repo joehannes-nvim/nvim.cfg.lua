@@ -1,0 +1,48 @@
+.TH charm
+.PP
+.RS
+Set of tools that makes adding a backend to your terminal\-based applications, without worrying about user accounts, data storage and encryption.
+More information: \[la]https://github.com/charmbracelet/charm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Backup your Charm account keys:
+.RE
+.PP
+\fB\fCcharm backup\-keys\fR
+.RS
+.IP \(bu 2
+Backup Charm account keys to a specific location:
+.RE
+.PP
+\fB\fCcharm backup\-keys \-o {{path/to/output_file.tar}}\fR
+.RS
+.IP \(bu 2
+Import previously backed up Charm account keys:
+.RE
+.PP
+\fB\fCcharm import\-keys "{{charm\-keys\-backup.tar}}"\fR
+.RS
+.IP \(bu 2
+Find where your \fB\fCcloud.charm.sh\fR folder resides on your machine:
+.RE
+.PP
+\fB\fCcharm where\fR
+.RS
+.IP \(bu 2
+Start your Charm server:
+.RE
+.PP
+\fB\fCcharm serve\fR
+.RS
+.IP \(bu 2
+Print linked SSH keys:
+.RE
+.PP
+\fB\fCcharm keys\fR
+.RS
+.IP \(bu 2
+Print your Charm ID:
+.RE
+.PP
+\fB\fCcharm id\fR

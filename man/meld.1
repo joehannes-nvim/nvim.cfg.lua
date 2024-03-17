@@ -1,0 +1,42 @@
+.TH meld
+.PP
+.RS
+Graphical diffing and merging tool.
+More information: \[la]https://meldmerge.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCmeld\fR:
+.RE
+.PP
+\fB\fCmeld\fR
+.RS
+.IP \(bu 2
+Compare 2 files:
+.RE
+.PP
+\fB\fCmeld {{path/to/file_1}} {{path/to/file_2}}\fR
+.RS
+.IP \(bu 2
+Compare 2 directories:
+.RE
+.PP
+\fB\fCmeld {{path/to/directory_1}} {{path/to/directory_2}}\fR
+.RS
+.IP \(bu 2
+Compare 3 files:
+.RE
+.PP
+\fB\fCmeld {{path/to/file_1}} {{path/to/file_2}} {{path/to/file_3}}\fR
+.RS
+.IP \(bu 2
+Open a comparison as a new tab in a pre\-existing meld instance:
+.RE
+.PP
+\fB\fCmeld \-\-newtab {{path/to/file_1}} {{path/to/file_2}}\fR
+.RS
+.IP \(bu 2
+Compare multiple sets of files:
+.RE
+.PP
+\fB\fCmeld \-\-diff {{path/to/file_1}} {{path/to/file_2}} \-\-diff {{path/to/file_3}} {{path/to/file_4}}\fR

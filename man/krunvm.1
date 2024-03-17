@@ -1,0 +1,36 @@
+.TH krunvm
+.PP
+.RS
+Create MicroVMs from OCI images.
+More information: \[la]https://github.com/containers/krunvm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create MicroVM based on Fedora:
+.RE
+.PP
+\fB\fCkrunvm create {{docker.io/fedora}} \-\-cpus {{number_of_vcpus}} \-\-mem {{memory_in_megabytes}} \-\-name "{{name}}"\fR
+.RS
+.IP \(bu 2
+Start a specific image:
+.RE
+.PP
+\fB\fCkrunvm start "{{image_name}}"\fR
+.RS
+.IP \(bu 2
+List images:
+.RE
+.PP
+\fB\fCkrunvm list\fR
+.RS
+.IP \(bu 2
+Change a specific image:
+.RE
+.PP
+\fB\fCkrunvm changevm \-\-cpus {{number_of_vcpus}} \-\-mem {{memory_in_megabytes}} \-\-name "{{new_vm_name}}" "{{current_vm_name}}"\fR
+.RS
+.IP \(bu 2
+Delete a specific image:
+.RE
+.PP
+\fB\fCkrunvm delete "{{image_name}}"\fR

@@ -1,0 +1,42 @@
+.TH quilt
+.PP
+.RS
+Tool to manage a series of patches.
+More information: \[la]https://savannah.nongnu.org/projects/quilt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Import an existing patch from a file:
+.RE
+.PP
+\fB\fCquilt import {{path/to/filename.patch}}\fR
+.RS
+.IP \(bu 2
+Create a new patch:
+.RE
+.PP
+\fB\fCquilt new {{filename.patch}}\fR
+.RS
+.IP \(bu 2
+Add a file to the current patch:
+.RE
+.PP
+\fB\fCquilt add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+After editing the file, refresh the current patch with the changes:
+.RE
+.PP
+\fB\fCquilt refresh\fR
+.RS
+.IP \(bu 2
+Apply all the patches in the series file:
+.RE
+.PP
+\fB\fCquilt push \-a\fR
+.RS
+.IP \(bu 2
+Remove all applied patches:
+.RE
+.PP
+\fB\fCquilt pop \-a\fR

@@ -1,0 +1,30 @@
+.TH mmls
+.PP
+.RS
+Display the partition layout of a volume system.
+More information: \[la]https://wiki.sleuthkit.org/index.php?title=Mmls\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the partition table stored in an image file:
+.RE
+.PP
+\fB\fCmmls {{path/to/image_file}}\fR
+.RS
+.IP \(bu 2
+Display the partition table with an additional column for the partition size:
+.RE
+.PP
+\fB\fCmmls \-B \-i {{path/to/image_file}}\fR
+.RS
+.IP \(bu 2
+Display the partition table in a split EWF image:
+.RE
+.PP
+\fB\fCmmls \-i ewf {{image.e01}} {{image.e02}}\fR
+.RS
+.IP \(bu 2
+Display nested partition tables:
+.RE
+.PP
+\fB\fCmmls \-t {{nested_table_type}} \-o {{offset}} {{path/to/image_file}}\fR

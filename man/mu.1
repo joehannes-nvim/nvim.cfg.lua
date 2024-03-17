@@ -1,0 +1,48 @@
+.TH mu
+.PP
+.RS
+Index and search emails from a local Maildir.
+More information: \[la]https://man.cx/mu\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize the email database, optionally specifying the Maildir directory and email addresses:
+.RE
+.PP
+\fB\fCmu init \-\-maildir={{path/to/directory}} \-\-my\-address={{name@example.com}}\fR
+.RS
+.IP \(bu 2
+Index new emails:
+.RE
+.PP
+\fB\fCmu index\fR
+.RS
+.IP \(bu 2
+Find messages using a specific keyword (in message body, subject, sender, ...):
+.RE
+.PP
+\fB\fCmu find {{keyword}}\fR
+.RS
+.IP \(bu 2
+Find messages to Alice with subject \fB\fCjellyfish\fR containing the words \fB\fCapples\fR or \fB\fCoranges\fR:
+.RE
+.PP
+\fB\fCmu find to:{{alice}} subject:{{jellyfish}} {{apples}} OR {{oranges}}\fR
+.RS
+.IP \(bu 2
+Find unread messages about words starting with \fB\fCsoc\fR (the \fB\fC*\fR only works at the end of the search term) in the Sent Items folder:
+.RE
+.PP
+\fB\fCmu find 'subject:{{soc}}*' flag:{{unread}} maildir:'/{{Sent Items}}'\fR
+.RS
+.IP \(bu 2
+Find messages from Sam with attached images, between 2 KiB and 2 MiB, written in 2021:
+.RE
+.PP
+\fB\fCmu find 'mime:{{image/*}} size:{{2k..2m}} date:{{20210101..20211231}} from:{{sam}}\fR
+.RS
+.IP \(bu 2
+List contacts with \fB\fCBob\fR in either name or email address:
+.RE
+.PP
+\fB\fCmu cfind {{Bob}}\fR

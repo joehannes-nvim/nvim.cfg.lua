@@ -1,0 +1,42 @@
+.TH xcaddy
+.PP
+.RS
+The custom build tool for the Caddy Web Server.
+More information: \[la]https://github.com/caddyserver/xcaddy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build Caddy server from source:
+.RE
+.PP
+\fB\fCxcaddy build\fR
+.RS
+.IP \(bu 2
+Build Caddy server with a specific version (defaults to latest):
+.RE
+.PP
+\fB\fCxcaddy build {{version}}\fR
+.RS
+.IP \(bu 2
+Build Caddy with a specific module:
+.RE
+.PP
+\fB\fCxcaddy build \-\-with {{module_name}}\fR
+.RS
+.IP \(bu 2
+Build Caddy and output to a specific file:
+.RE
+.PP
+\fB\fCxcaddy build \-\-output {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Build and run Caddy for a development plugin in the current directory:
+.RE
+.PP
+\fB\fCxcaddy run\fR
+.RS
+.IP \(bu 2
+Build and run Caddy for a development plugin using a specific Caddy config:
+.RE
+.PP
+\fB\fCxcaddy run \-\-config {{path/to/file}}\fR

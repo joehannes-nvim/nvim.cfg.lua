@@ -1,0 +1,42 @@
+.TH parallel
+.PP
+.RS
+Run commands on multiple CPU cores.
+More information: \[la]https://www.gnu.org/software/parallel\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Gzip several files at once, using all cores:
+.RE
+.PP
+\fB\fCparallel gzip ::: {{file1}} {{file2}} {{file3}}\fR
+.RS
+.IP \(bu 2
+Read arguments from \fB\fCstdin\fR, run 4 jobs at once:
+.RE
+.PP
+\fB\fCls *.txt | parallel \-j4 gzip\fR
+.RS
+.IP \(bu 2
+Convert JPG images to PNG using replacement strings:
+.RE
+.PP
+\fB\fCparallel convert {} {.}.png ::: *.jpg\fR
+.RS
+.IP \(bu 2
+Parallel xargs, cram as many args as possible onto one command:
+.RE
+.PP
+\fB\fC{{args}} | parallel \-X {{command}}\fR
+.RS
+.IP \(bu 2
+Break \fB\fCstdin\fR into ~1M blocks, feed each block to \fB\fCstdin\fR of new command:
+.RE
+.PP
+\fB\fCcat {{big_file.txt}} | parallel \-\-pipe \-\-block 1M {{command}}\fR
+.RS
+.IP \(bu 2
+Run on multiple machines via SSH:
+.RE
+.PP
+\fB\fCparallel \-S {{machine1}},{{machine2}} {{command}} ::: {{arg1}} {{arg2}}\fR

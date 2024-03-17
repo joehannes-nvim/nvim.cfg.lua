@@ -1,0 +1,49 @@
+.TH git restore
+.PP
+.RS
+Restore working tree files. Requires Git version 2.23+.
+See also \fB\fCgit checkout\fR and \fB\fCgit reset\fR\&.
+More information: \[la]https://git-scm.com/docs/git-restore\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Restore an unstaged file to the version of the current commit (HEAD):
+.RE
+.PP
+\fB\fCgit restore {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Restore an unstaged file to the version of a specific commit:
+.RE
+.PP
+\fB\fCgit restore \-\-source {{commit}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Discard all unstaged changes to tracked files:
+.RE
+.PP
+\fB\fCgit restore :/\fR
+.RS
+.IP \(bu 2
+Unstage a file:
+.RE
+.PP
+\fB\fCgit restore \-\-staged {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Unstage all files:
+.RE
+.PP
+\fB\fCgit restore \-\-staged :/\fR
+.RS
+.IP \(bu 2
+Discard all changes to files, both staged and unstaged:
+.RE
+.PP
+\fB\fCgit restore \-\-worktree \-\-staged :/\fR
+.RS
+.IP \(bu 2
+Interactively select sections of files to restore:
+.RE
+.PP
+\fB\fCgit restore \-\-patch\fR

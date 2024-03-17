@@ -1,0 +1,48 @@
+.TH units
+.PP
+.RS
+Provide the conversion between two units of measure.
+More information: \[la]https://www.gnu.org/software/units/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run in interactive mode:
+.RE
+.PP
+\fB\fCunits\fR
+.RS
+.IP \(bu 2
+List all units containing a specific string in interactive mode:
+.RE
+.PP
+\fB\fCsearch {{string}}\fR
+.RS
+.IP \(bu 2
+Show the conversion between two simple units:
+.RE
+.PP
+\fB\fCunits {{quarts}} {{tablespoons}}\fR
+.RS
+.IP \(bu 2
+Convert between units with quantities:
+.RE
+.PP
+\fB\fCunits "{{15 pounds}}" {{kilograms}}\fR
+.RS
+.IP \(bu 2
+Show the conversion between two compound units:
+.RE
+.PP
+\fB\fCunits "{{meters / second}}" "{{inches / hour}}"\fR
+.RS
+.IP \(bu 2
+Show the conversion between units with different dimensions:
+.RE
+.PP
+\fB\fCunits "{{acres}}" "{{ft^2}}"\fR
+.RS
+.IP \(bu 2
+Show the conversion of byte multipliers:
+.RE
+.PP
+\fB\fCunits "{{15 megabytes}}" {{bytes}}\fR

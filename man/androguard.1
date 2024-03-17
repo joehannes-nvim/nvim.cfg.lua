@@ -1,0 +1,24 @@
+.TH androguard
+.PP
+.RS
+Reverse engineering tool for Android applications. Written in Python.
+More information: \[la]https://github.com/androguard/androguard\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display Android app manifest:
+.RE
+.PP
+\fB\fCandroguard axml {{path/to/app.apk}}\fR
+.RS
+.IP \(bu 2
+Display app metadata (version and app ID):
+.RE
+.PP
+\fB\fCandroguard apkid {{path/to/app.apk}}\fR
+.RS
+.IP \(bu 2
+Decompile Java code from an app:
+.RE
+.PP
+\fB\fCandroguard decompile {{path/to/app.apk}} \-\-output {{path/to/directory}}\fR

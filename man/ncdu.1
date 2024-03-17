@@ -1,0 +1,36 @@
+.TH ncdu
+.PP
+.RS
+Disk usage analyzer with an ncurses interface.
+More information: \[la]https://manned.org/ncdu\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze the current working directory:
+.RE
+.PP
+\fB\fCncdu\fR
+.RS
+.IP \(bu 2
+Colorize output:
+.RE
+.PP
+\fB\fCncdu \-\-color {{dark|off}}\fR
+.RS
+.IP \(bu 2
+Analyze a given directory:
+.RE
+.PP
+\fB\fCncdu {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Save results to a file:
+.RE
+.PP
+\fB\fCncdu \-o {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Exclude files that match a pattern, argument can be given multiple times to add more patterns:
+.RE
+.PP
+\fB\fCncdu \-\-exclude '{{*.txt}}'\fR

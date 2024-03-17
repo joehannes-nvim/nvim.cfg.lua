@@ -1,0 +1,36 @@
+.TH sequelize
+.PP
+.RS
+Promise\-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
+More information: \[la]https://sequelize.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a model with 3 fields and a migration file:
+.RE
+.PP
+\fB\fCsequelize model:generate \-\-name {{table_name}} \-\-attributes {{field1:integer,field2:string,field3:boolean}}\fR
+.RS
+.IP \(bu 2
+Run the migration file:
+.RE
+.PP
+\fB\fCsequelize db:migrate\fR
+.RS
+.IP \(bu 2
+Revert all migrations:
+.RE
+.PP
+\fB\fCsequelize db:migrate:undo:all\fR
+.RS
+.IP \(bu 2
+Create a seed file with the specified name to populate the database:
+.RE
+.PP
+\fB\fCsequelize seed:generate \-\-name {{seed_filename}}\fR
+.RS
+.IP \(bu 2
+Populate database using all seed files:
+.RE
+.PP
+\fB\fCsequelize db:seed:all\fR

@@ -1,0 +1,37 @@
+.TH fio
+.PP
+.RS
+Flexible I/O tester.
+Tool that will spawn a number of threads or processes doing a particular type of I/O action.
+More information: \[la]https://fio.readthedocs.io/en/latest/fio_doc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test random reads:
+.RE
+.PP
+\fB\fCfio \-\-filename={{path/to/file}} \-\-direct=1 \-\-rw=randread \-\-bs=4k \-\-ioengine=libaio \-\-iodepth=256 \-\-runtime=120 \-\-numjobs=4 \-\-time_based \-\-group_reporting \-\-name={{job_name}} \-\-eta\-newline=1 \-\-readonly\fR
+.RS
+.IP \(bu 2
+Test sequential reads:
+.RE
+.PP
+\fB\fCfio \-\-filename={{path/to/file}} \-\-direct=1 \-\-rw=read \-\-bs=4k \-\-ioengine=libaio \-\-iodepth=256 \-\-runtime=120 \-\-numjobs=4 \-\-time_based \-\-group_reporting \-\-name={{job_name}} \-\-eta\-newline=1 \-\-readonly\fR
+.RS
+.IP \(bu 2
+Test random read/write:
+.RE
+.PP
+\fB\fCfio \-\-filename={{path/to/file}} \-\-direct=1 \-\-rw=randrw \-\-bs=4k \-\-ioengine=libaio \-\-iodepth=256 \-\-runtime=120 \-\-numjobs=4 \-\-time_based \-\-group_reporting \-\-name={{job_name}} \-\-eta\-newline=1\fR
+.RS
+.IP \(bu 2
+Test with parameters from a job file:
+.RE
+.PP
+\fB\fCfio {{path/to/job_file}}\fR
+.RS
+.IP \(bu 2
+Convert a specific job file to command\-line options:
+.RE
+.PP
+\fB\fCfio \-\-showcmd {{path/to/job_file}}\fR

@@ -1,0 +1,25 @@
+.TH csvgrep
+.PP
+.RS
+Filter CSV rows with string and pattern matching.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/csvgrep.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find rows that have a certain string in column 1:
+.RE
+.PP
+\fB\fCcsvgrep \-c {{1}} \-m {{string_to_match}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Find rows in which columns 3 or 4 match a certain regular expression:
+.RE
+.PP
+\fB\fCcsvgrep \-c {{3,4}} \-r {{regular_expression}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Find rows in which the "name" column does NOT include the string "John Doe":
+.RE
+.PP
+\fB\fCcsvgrep \-i \-c {{name}} \-m "{{John Doe}}" {{data.csv}}\fR

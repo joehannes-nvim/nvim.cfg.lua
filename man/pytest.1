@@ -1,0 +1,42 @@
+.TH pytest
+.PP
+.RS
+Run Python tests.
+More information: \[la]https://docs.pytest.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run tests from specific files:
+.RE
+.PP
+\fB\fCpytest {{path/to/test_file1.py path/to/test_file2.py ...}}\fR
+.RS
+.IP \(bu 2
+Run tests with names matching a specific [k]eyword expression:
+.RE
+.PP
+\fB\fCpytest \-k {{expression}}\fR
+.RS
+.IP \(bu 2
+Exit as soon as a test fails or encounters an error:
+.RE
+.PP
+\fB\fCpytest \-\-exitfirst\fR
+.RS
+.IP \(bu 2
+Run tests matching or excluding markers:
+.RE
+.PP
+\fB\fCpytest \-m {{marker_name1 and not marker_name2}}\fR
+.RS
+.IP \(bu 2
+Run until a test failure, continuing from the last failing test:
+.RE
+.PP
+\fB\fCpytest \-\-stepwise\fR
+.RS
+.IP \(bu 2
+Run tests without capturing output:
+.RE
+.PP
+\fB\fCpytest \-\-capture=no\fR

@@ -1,0 +1,42 @@
+.TH osv\-scanner
+.PP
+.RS
+Scan various mediums for dependencies and matches them against the OSV database.
+More information: \[la]https://osv.dev/about\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a docker image:
+.RE
+.PP
+\fB\fCosv\-scanner \-D {{docker_image_name}}\fR
+.RS
+.IP \(bu 2
+Scan a package lockfile:
+.RE
+.PP
+\fB\fCosv\-scanner \-L {{path/to/lockfile}}\fR
+.RS
+.IP \(bu 2
+Scan an SBOM file:
+.RE
+.PP
+\fB\fCosv\-scanner \-S {{path/to/sbom_file}}\fR
+.RS
+.IP \(bu 2
+Scan multiple directories recursively:
+.RE
+.PP
+\fB\fCosv\-scanner \-r {{directory1 directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Skip scanning git repositories:
+.RE
+.PP
+\fB\fCosv\-scanner \-\-skip\-git {{\-r|\-D}} {{target}}\fR
+.RS
+.IP \(bu 2
+Output result in JSON format:
+.RE
+.PP
+\fB\fCosv\-scanner \-\-json {{\-D|\-L|\-S|\-r}} {{target}}\fR

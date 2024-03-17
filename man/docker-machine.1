@@ -1,0 +1,42 @@
+.TH docker\-machine
+.PP
+.RS
+Create and manage machines running Docker.
+More information: \[la]https://docs.docker.com/machine/reference/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List currently running docker machines:
+.RE
+.PP
+\fB\fCdocker\-machine ls\fR
+.RS
+.IP \(bu 2
+Create a new docker machine with specific name:
+.RE
+.PP
+\fB\fCdocker\-machine create {{name}}\fR
+.RS
+.IP \(bu 2
+Get the status of a machine:
+.RE
+.PP
+\fB\fCdocker\-machine status {{name}}\fR
+.RS
+.IP \(bu 2
+Start a machine:
+.RE
+.PP
+\fB\fCdocker\-machine start {{name}}\fR
+.RS
+.IP \(bu 2
+Stop a machine:
+.RE
+.PP
+\fB\fCdocker\-machine stop {{name}}\fR
+.RS
+.IP \(bu 2
+Inspect information about a machine:
+.RE
+.PP
+\fB\fCdocker\-machine inspect {{name}}\fR

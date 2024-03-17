@@ -1,0 +1,55 @@
+.TH ssh
+.PP
+.RS
+Secure Shell is a protocol used to securely log onto remote systems.
+It can be used for logging or executing commands on a remote server.
+More information: \[la]https://man.openbsd.org/ssh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a remote server:
+.RE
+.PP
+\fB\fCssh {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server with a specific identity (private key):
+.RE
+.PP
+\fB\fCssh \-i {{path/to/key_file}} {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server using a specific port:
+.RE
+.PP
+\fB\fCssh {{username}}@{{remote_host}} \-p {{2222}}\fR
+.RS
+.IP \(bu 2
+Run a command on a remote server with a [t]ty allocation allowing interaction with the remote command:
+.RE
+.PP
+\fB\fCssh {{username}}@{{remote_host}} \-t {{command}} {{command_arguments}}\fR
+.RS
+.IP \(bu 2
+SSH tunneling: Dynamic port forwarding (SOCKS proxy on \fB\fClocalhost:1080\fR):
+.RE
+.PP
+\fB\fCssh \-D {{1080}} {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+SSH tunneling: Forward a specific port (\fB\fClocalhost:9999\fR to \fB\fCexample.org:80\fR) along with disabling pseudo\-[T]ty allocation and executio[N] of remote commands:
+.RE
+.PP
+\fB\fCssh \-L {{9999}}:{{example.org}}:{{80}} \-N \-T {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+SSH jumping: Connect through a jumphost to a remote server (Multiple jump hops may be specified separated by comma characters):
+.RE
+.PP
+\fB\fCssh \-J {{username}}@{{jump_host}} {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Agent forwarding: Forward the authentication information to the remote machine (see \fB\fCman ssh_config\fR for available options):
+.RE
+.PP
+\fB\fCssh \-A {{username}}@{{remote_host}}\fR

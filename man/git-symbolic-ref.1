@@ -1,0 +1,36 @@
+.TH git symbolic\-ref
+.PP
+.RS
+Read, change, or delete files that store references.
+More information: \[la]https://git-scm.com/docs/git-symbolic-ref\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Store a reference by a name:
+.RE
+.PP
+\fB\fCgit symbolic\-ref refs/{{name}} {{ref}}\fR
+.RS
+.IP \(bu 2
+Store a reference by name, including a message with a reason for the update:
+.RE
+.PP
+\fB\fCgit symbolic\-ref \-m "{{message}}" refs/{{name}} refs/heads/{{branch_name}}\fR
+.RS
+.IP \(bu 2
+Read a reference by name:
+.RE
+.PP
+\fB\fCgit symbolic\-ref refs/{{name}}\fR
+.RS
+.IP \(bu 2
+Delete a reference by name:
+.RE
+.PP
+\fB\fCgit symbolic\-ref \-\-delete refs/{{name}}\fR
+.RS
+.IP \(bu 2
+For scripting, hide errors with \fB\fC\-\-quiet\fR and use \fB\fC\-\-short\fR to simplify ("refs/heads/X" prints as "X"):
+.RE
+.PP
+\fB\fCgit symbolic\-ref \-\-quiet \-\-short refs/{{name}}\fR

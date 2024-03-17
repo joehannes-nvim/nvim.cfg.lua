@@ -1,0 +1,18 @@
+.TH nix edit
+.PP
+.RS
+Open the Nix expression of a Nix package in $EDITOR.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-edit.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the source of the Nix expression of a package from nixpkgs in your \fB\fC$EDITOR\fR:
+.RE
+.PP
+\fB\fCnix edit {{nixpkgs#pkg}}\fR
+.RS
+.IP \(bu 2
+Dump the source of a package to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCEDITOR=cat nix edit {{nixpkgs#pkg}}\fR

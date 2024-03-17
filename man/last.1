@@ -1,0 +1,42 @@
+.TH last
+.PP
+.RS
+View the last logged in users.
+More information: \[la]https://manned.org/last\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View last logins, their duration and other information as read from \fB\fC/var/log/wtmp\fR:
+.RE
+.PP
+\fB\fClast\fR
+.RS
+.IP \(bu 2
+Specify how many of the last logins to show:
+.RE
+.PP
+\fB\fClast \-n {{login_count}}\fR
+.RS
+.IP \(bu 2
+Print the full date and time for entries and then display the hostname column last to prevent truncation:
+.RE
+.PP
+\fB\fClast \-F \-a\fR
+.RS
+.IP \(bu 2
+View all logins by a specific user and show the IP address instead of the hostname:
+.RE
+.PP
+\fB\fClast {{username}} \-i\fR
+.RS
+.IP \(bu 2
+View all recorded reboots (i.e., the last logins of the pseudo user "reboot"):
+.RE
+.PP
+\fB\fClast reboot\fR
+.RS
+.IP \(bu 2
+View all recorded shutdowns (i.e., the last logins of the pseudo user "shutdown"):
+.RE
+.PP
+\fB\fClast shutdown\fR

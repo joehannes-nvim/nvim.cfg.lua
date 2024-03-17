@@ -1,0 +1,36 @@
+.TH kitty
+.PP
+.RS
+A fast, feature\-rich, GPU based terminal emulator.
+More information: \[la]https://sw.kovidgoyal.net/kitty/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a new terminal:
+.RE
+.PP
+\fB\fCkitty\fR
+.RS
+.IP \(bu 2
+Open a terminal with the specified title for the window:
+.RE
+.PP
+\fB\fCkitty \-\-title "{{title}}"\fR
+.RS
+.IP \(bu 2
+Start the theme\-chooser builtin:
+.RE
+.PP
+\fB\fCkitty +kitten themes\fR
+.RS
+.IP \(bu 2
+Display an image in the terminal:
+.RE
+.PP
+\fB\fCkitty +kitten icat {{path/to/image}}\fR
+.RS
+.IP \(bu 2
+Copy the contents of \fB\fCstdin\fR to the clipboard:
+.RE
+.PP
+\fB\fCecho {{example}} | kitty +kitten clipboard\fR

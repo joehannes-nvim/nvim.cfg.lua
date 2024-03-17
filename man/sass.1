@@ -1,0 +1,30 @@
+.TH sass
+.PP
+.RS
+Converts SCSS or Sass files to CSS.
+More information: \[la]https://sass-lang.com/documentation/cli/dart-sass\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a SCSS or Sass file to CSS and print out the result:
+.RE
+.PP
+\fB\fCsass {{inputfile.scss|inputfile.sass}}\fR
+.RS
+.IP \(bu 2
+Convert a SCSS or Sass file to CSS and save the result to a file:
+.RE
+.PP
+\fB\fCsass {{inputfile.scss|inputfile.sass}} {{outputfile.css}}\fR
+.RS
+.IP \(bu 2
+Watch a SCSS or Sass file for changes and output or update the CSS file with same filename:
+.RE
+.PP
+\fB\fCsass \-\-watch {{inputfile.scss|inputfile.sass}}\fR
+.RS
+.IP \(bu 2
+Watch a SCSS or Sass file for changes and output or update the CSS file with the given filename:
+.RE
+.PP
+\fB\fCsass \-\-watch {{inputfile.scss|inputfile.sass}}:{{outputfile.css}}\fR

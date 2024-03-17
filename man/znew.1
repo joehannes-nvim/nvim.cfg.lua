@@ -1,0 +1,30 @@
+.TH znew
+.PP
+.RS
+Recompress files from \fB\fC\&.Z\fR to \fB\fC\&.gz\fR format.
+More information: \[la]https://manned.org/znew\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recompress a file from \fB\fC\&.Z\fR to \fB\fC\&.gz\fR format:
+.RE
+.PP
+\fB\fCznew {{path/to/file1.Z}}\fR
+.RS
+.IP \(bu 2
+Recompress multiple files and display the achieved size reduction % per file:
+.RE
+.PP
+\fB\fCznew \-v {{path/to/file1.Z}} {{path/to/file2.Z}} {{path/to/file3.Z}}\fR
+.RS
+.IP \(bu 2
+Recompress a file using the slowest compression method (for optimal compression):
+.RE
+.PP
+\fB\fCznew \-9 {{path/to/file1.Z}}\fR
+.RS
+.IP \(bu 2
+Recompress a file, [K]eeping the \fB\fC\&.Z\fR file if it is smaller than the \fB\fC\&.gz\fR file:
+.RE
+.PP
+\fB\fCznew \-K {{path/to/file1.Z}}\fR

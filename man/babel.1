@@ -1,0 +1,54 @@
+.TH babel
+.PP
+.RS
+A transpiler which converts code from JavaScript ES6/ES7 syntax to ES5 syntax.
+More information: \[la]https://babeljs.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transpile a specified input file and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbabel {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Transpile a specified input file and output to a specific file:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_file}} \-\-out\-file {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Transpile the input file every time it is changed:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_file}} \-\-watch\fR
+.RS
+.IP \(bu 2
+Transpile a whole directory of files:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_directory}}\fR
+.RS
+.IP \(bu 2
+Ignore specified comma\-separated files in a directory:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_directory}} \-\-ignore {{ignored_files}}\fR
+.RS
+.IP \(bu 2
+Transpile and output as minified JavaScript:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_file}} \-\-minified\fR
+.RS
+.IP \(bu 2
+Choose a set of presets for output formatting:
+.RE
+.PP
+\fB\fCbabel {{path/to/input_file}} \-\-presets {{presets}}\fR
+.RS
+.IP \(bu 2
+Output all available options:
+.RE
+.PP
+\fB\fCbabel \-\-help\fR

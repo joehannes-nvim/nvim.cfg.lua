@@ -1,0 +1,36 @@
+.TH pueue kill
+.PP
+.RS
+Kill running tasks or whole groups.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Kill all tasks in the default group:
+.RE
+.PP
+\fB\fCpueue kill\fR
+.RS
+.IP \(bu 2
+Kill a specific task:
+.RE
+.PP
+\fB\fCpueue kill {{task_id}}\fR
+.RS
+.IP \(bu 2
+Kill a task and terminate all its child processes:
+.RE
+.PP
+\fB\fCpueue kill \-\-children {{task_id}}\fR
+.RS
+.IP \(bu 2
+Kill all tasks in a group and pause the group:
+.RE
+.PP
+\fB\fCpueue kill \-\-group {{group_name}}\fR
+.RS
+.IP \(bu 2
+Kill all tasks across all groups and pause all groups:
+.RE
+.PP
+\fB\fCpueue kill \-\-all\fR

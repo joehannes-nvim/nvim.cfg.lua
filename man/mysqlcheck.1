@@ -1,0 +1,30 @@
+.TH mysqlcheck
+.PP
+.RS
+Check and repair MySQL tables.
+More information: \[la]https://dev.mysql.com/doc/refman/8.0/en/mysqlcheck.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check a table:
+.RE
+.PP
+\fB\fCmysqlcheck \-\-check {{table}}\fR
+.RS
+.IP \(bu 2
+Check a table and provide credentials to access it:
+.RE
+.PP
+\fB\fCmysqlcheck \-\-check {{table}} \-\-user {{username}} \-\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Repair a table:
+.RE
+.PP
+\fB\fCmysqlcheck \-\-repair {{table}}\fR
+.RS
+.IP \(bu 2
+Optimize a table:
+.RE
+.PP
+\fB\fCmysqlcheck \-\-optimize {{table}}\fR

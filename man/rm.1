@@ -1,0 +1,37 @@
+.TH rm
+.PP
+.RS
+Remove files or directories.
+See also: \fB\fCrmdir\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/rm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove specific files:
+.RE
+.PP
+\fB\fCrm {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove specific files ignoring nonexistent ones:
+.RE
+.PP
+\fB\fCrm \-f {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove specific files [i]nteractively prompting before each removal:
+.RE
+.PP
+\fB\fCrm \-i {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove specific files printing info about each removal:
+.RE
+.PP
+\fB\fCrm \-v {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove specific files and directories [r]ecursively:
+.RE
+.PP
+\fB\fCrm \-r {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR

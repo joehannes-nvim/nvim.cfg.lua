@@ -1,0 +1,48 @@
+.TH gradle
+.PP
+.RS
+Gradle is an open source build automation system.
+More information: \[la]https://gradle.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a package:
+.RE
+.PP
+\fB\fCgradle build\fR
+.RS
+.IP \(bu 2
+Exclude test task:
+.RE
+.PP
+\fB\fCgradle build \-x {{test}}\fR
+.RS
+.IP \(bu 2
+Run in offline mode to prevent Gradle from accessing the network during builds:
+.RE
+.PP
+\fB\fCgradle build \-\-offline\fR
+.RS
+.IP \(bu 2
+Clear the build directory:
+.RE
+.PP
+\fB\fCgradle clean\fR
+.RS
+.IP \(bu 2
+Build an Android Package (APK) in release mode:
+.RE
+.PP
+\fB\fCgradle assembleRelease\fR
+.RS
+.IP \(bu 2
+List the main tasks:
+.RE
+.PP
+\fB\fCgradle tasks\fR
+.RS
+.IP \(bu 2
+List all the tasks:
+.RE
+.PP
+\fB\fCgradle tasks \-\-all\fR

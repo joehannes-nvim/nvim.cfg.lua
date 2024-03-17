@@ -1,0 +1,42 @@
+.TH pv
+.PP
+.RS
+Monitor the progress of data through a pipe.
+More information: \[la]https://manned.org/pv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the contents of the file and display a progress bar:
+.RE
+.PP
+\fB\fCpv {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Measure the speed and amount of data flow between pipes (\fB\fC\-\-size\fR is optional):
+.RE
+.PP
+\fB\fCcommand1 | pv \-\-size {{expected_amount_of_data_for_eta}} | command2\fR
+.RS
+.IP \(bu 2
+Filter a file, see both progress and amount of output data:
+.RE
+.PP
+\fB\fCpv \-cN in {{big_text_file}} | grep {{pattern}} | pv \-cN out > {{filtered_file}}\fR
+.RS
+.IP \(bu 2
+Attach to an already running process and see its file reading progress:
+.RE
+.PP
+\fB\fCpv \-d {{PID}}\fR
+.RS
+.IP \(bu 2
+Read an erroneous file, skip errors as \fB\fCdd conv=sync,noerror\fR would:
+.RE
+.PP
+\fB\fCpv \-EE {{path/to/faulty_media}} > image.img\fR
+.RS
+.IP \(bu 2
+Stop reading after reading specified amount of data, rate limit to 1K/s:
+.RE
+.PP
+\fB\fCpv \-L 1K \-\-stop\-at \-\-size {{maximum_file_size_to_be_read}}\fR

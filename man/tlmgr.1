@@ -1,0 +1,49 @@
+.TH tlmgr
+.PP
+.RS
+Manages packages and configuration options of an existing TeX Live installation.
+Some subcommands such as \fB\fCtlmgr paper\fR have their own usage documentation.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package and its dependencies:
+.RE
+.PP
+\fB\fCtlmgr install {{package}}\fR
+.RS
+.IP \(bu 2
+Remove a package and its dependencies:
+.RE
+.PP
+\fB\fCtlmgr remove {{package}}\fR
+.RS
+.IP \(bu 2
+Display information about a package:
+.RE
+.PP
+\fB\fCtlmgr info {{package}}\fR
+.RS
+.IP \(bu 2
+Update all packages:
+.RE
+.PP
+\fB\fCtlmgr update \-\-all\fR
+.RS
+.IP \(bu 2
+Show possible updates without updating anything:
+.RE
+.PP
+\fB\fCtlmgr update \-\-list\fR
+.RS
+.IP \(bu 2
+Start a GUI version of tlmgr:
+.RE
+.PP
+\fB\fCtlmgr gui\fR
+.RS
+.IP \(bu 2
+List all TeX Live configurations:
+.RE
+.PP
+\fB\fCtlmgr conf\fR

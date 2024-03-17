@@ -1,0 +1,36 @@
+.TH mutt
+.PP
+.RS
+Command\-line email client.
+More information: \[la]http://mutt.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the specified mailbox:
+.RE
+.PP
+\fB\fCmutt \-f {{mailbox}}\fR
+.RS
+.IP \(bu 2
+Send an email and specify a subject and a cc recipient:
+.RE
+.PP
+\fB\fCmutt \-s {{subject}} \-c {{cc@example.com}} {{recipient@example.com}}\fR
+.RS
+.IP \(bu 2
+Send an email with files attached:
+.RE
+.PP
+\fB\fCmutt \-a {{file1}} {{file2}} \-\- {{recipient@example.com}}\fR
+.RS
+.IP \(bu 2
+Specify a file to include as the message body:
+.RE
+.PP
+\fB\fCmutt \-i {{path/to/file}} {{recipient@example.com}}\fR
+.RS
+.IP \(bu 2
+Specify a draft file containing the header and the body of the message, in RFC 5322 format:
+.RE
+.PP
+\fB\fCmutt \-H {{path/to/file}} {{recipient@example.com}}\fR

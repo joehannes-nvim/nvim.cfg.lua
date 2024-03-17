@@ -1,0 +1,37 @@
+.TH arduino\-builder
+.PP
+.RS
+Compile arduino sketches.
+DEPRECATION WARNING: This tool is being phased out in favor of \fB\fCarduino\fR\&.
+More information: \[la]https://github.com/arduino/arduino-builder\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a sketch:
+.RE
+.PP
+\fB\fCarduino\-builder \-compile {{path/to/sketch.ino}}\fR
+.RS
+.IP \(bu 2
+Specify the debug level (default: 5):
+.RE
+.PP
+\fB\fCarduino\-builder \-debug\-level {{1..10}}\fR
+.RS
+.IP \(bu 2
+Specify a custom build directory:
+.RE
+.PP
+\fB\fCarduino\-builder \-build\-path {{path/to/build_directory}}\fR
+.RS
+.IP \(bu 2
+Use a build option file, instead of specifying \fB\fC\-\-hardware\fR, \fB\fC\-\-tools\fR, etc. manually every time:
+.RE
+.PP
+\fB\fCarduino\-builder \-build\-options\-file {{path/to/build.options.json}}\fR
+.RS
+.IP \(bu 2
+Enable verbose mode:
+.RE
+.PP
+\fB\fCarduino\-builder \-verbose {{true}}\fR

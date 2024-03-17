@@ -1,0 +1,44 @@
+.TH cbt
+.PP
+.RS
+Utility for reading data from Google Cloud's Bigtable.
+More information: \[la]https://cloud.google.com/bigtable/docs/cbt-reference\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List tables in the current project:
+.RE
+.PP
+\fB\fCcbt ls\fR
+.RS
+.IP \(bu 2
+Print count of rows in a specific table in the current project:
+.RE
+.PP
+\fB\fCcbt count "{{table_name}}"\fR
+.RS
+.IP \(bu 2
+Display a single row from a specific table with only 1 (most recent) cell revision per column in the current project:
+.RE
+.PP
+\fB\fCcbt lookup "{{table_name}}" "{{row_key}}" cells\-per\-column={{1}}\fR
+.RS
+.IP \(bu 2
+Display a single row with only specific 
+.BR column (s) 
+(omit qualifier to return entire family) in the current project:
+.RE
+.PP
+\fB\fCcbt lookup "{{table_name}}" "{{row_key}}" columns="{{family1:qualifier1,family2:qualifier2,...}}"\fR
+.RS
+.IP \(bu 2
+Search up to 5 rows in the current project by a specific regex pattern and print them:
+.RE
+.PP
+\fB\fCcbt read "{{table_name}}" regex="{{row_key_pattern}}" count={{5}}\fR
+.RS
+.IP \(bu 2
+Read a specific range of rows and print only returned row keys in the current project:
+.RE
+.PP
+\fB\fCcbt read {{table_name}} start={{start_row_key}} end={{end_row_key}} keys\-only=true\fR

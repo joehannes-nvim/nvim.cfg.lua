@@ -1,0 +1,55 @@
+.TH orca\-c
+.PP
+.RS
+A C\-port of the ORCA live programming environment.
+ORCA is an esoteric programming language for creating procedural sequencers.
+More information: \[la]https://github.com/hundredrabbits/Orca-c\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start ORCA with an empty workspace:
+.RE
+.PP
+\fB\fCorca\-c\fR
+.RS
+.IP \(bu 2
+Start ORCA and open a specific file:
+.RE
+.PP
+\fB\fCorca\-c {{path/to/file.orca}}\fR
+.RS
+.IP \(bu 2
+Start ORCA and set a specific tempo (defaults to 120):
+.RE
+.PP
+\fB\fCorca\-c \-\-bpm {{beats_per_minute}}\fR
+.RS
+.IP \(bu 2
+Start ORCA and set the size of the grid:
+.RE
+.PP
+\fB\fCorca\-c \-\-initial\-size {{columns}}x{{rows}}\fR
+.RS
+.IP \(bu 2
+Start ORCA and set the maximum number of undo steps (defaults to 100):
+.RE
+.PP
+\fB\fCorca\-c \-\-undo\-limit {{limit}}\fR
+.RS
+.IP \(bu 2
+Show the main menu inside of ORCA:
+.RE
+.PP
+\fB\fCF1\fR
+.RS
+.IP \(bu 2
+Show all shortcuts inside of ORCA:
+.RE
+.PP
+\fB\fC?\fR
+.RS
+.IP \(bu 2
+Show all ORCA operators inside of ORCA:
+.RE
+.PP
+\fB\fCCtrl + g\fR

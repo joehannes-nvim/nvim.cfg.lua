@@ -1,0 +1,49 @@
+.TH adb
+.PP
+.RS
+Android Debug Bridge: communicate with an Android emulator instance or connected Android devices.
+Some subcommands such as \fB\fCadb shell\fR have their own usage documentation.
+More information: \[la]https://developer.android.com/studio/command-line/adb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check whether the adb server process is running and start it:
+.RE
+.PP
+\fB\fCadb start\-server\fR
+.RS
+.IP \(bu 2
+Terminate the adb server process:
+.RE
+.PP
+\fB\fCadb kill\-server\fR
+.RS
+.IP \(bu 2
+Start a remote shell in the target emulator/device instance:
+.RE
+.PP
+\fB\fCadb shell\fR
+.RS
+.IP \(bu 2
+Push an Android application to an emulator/device:
+.RE
+.PP
+\fB\fCadb install \-r {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Copy a file/directory from the target device:
+.RE
+.PP
+\fB\fCadb pull {{path/to/device_file_or_directory}} {{path/to/local_destination_directory}}\fR
+.RS
+.IP \(bu 2
+Copy a file/directory to the target device:
+.RE
+.PP
+\fB\fCadb push {{path/to/local_file_or_directory}} {{path/to/device_destination_directory}}\fR
+.RS
+.IP \(bu 2
+Get a list of connected devices:
+.RE
+.PP
+\fB\fCadb devices\fR

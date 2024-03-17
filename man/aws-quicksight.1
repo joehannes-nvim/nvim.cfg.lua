@@ -1,0 +1,43 @@
+.TH aws quicksight
+.PP
+.RS
+CLI for AWS QuickSight.
+Access QuickSight entities.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/quicksight/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List datasets:
+.RE
+.PP
+\fB\fCaws quicksight list\-data\-sets \-\-aws\-account\-id {{aws_account_id}}\fR
+.RS
+.IP \(bu 2
+List users:
+.RE
+.PP
+\fB\fCaws quicksight list\-users \-\-aws\-account\-id {{aws_account_id}} \-\-namespace default\fR
+.RS
+.IP \(bu 2
+List groups:
+.RE
+.PP
+\fB\fCaws quicksight list\-groups \-\-aws\-account\-id {{aws_account_id}} \-\-namespace default\fR
+.RS
+.IP \(bu 2
+List dashboards:
+.RE
+.PP
+\fB\fCaws quicksight list\-dashboards \-\-aws\-account\-id {{aws_account_id}}\fR
+.RS
+.IP \(bu 2
+Display detailed information about a dataset:
+.RE
+.PP
+\fB\fCaws quicksight describe\-data\-set \-\-aws\-account\-id {{aws_account_id}} \-\-data\-set\-id {{data_set_id}}\fR
+.RS
+.IP \(bu 2
+Display who has access to the dataset and what kind of actions they can perform on the dataset:
+.RE
+.PP
+\fB\fCaws quicksight describe\-data\-set\-permissions \-\-aws\-account\-id {{aws_account_id}} \-\-data\-set\-id {{data_set_id}}\fR

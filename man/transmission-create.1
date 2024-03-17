@@ -1,0 +1,36 @@
+.TH transmission\-create
+.PP
+.RS
+Create BitTorrent \fB\fC\&.torrent\fR files.
+More information: \[la]https://manned.org/transmission-create\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a torrent with 2048 KB as the piece size:
+.RE
+.PP
+\fB\fCtransmission\-create \-o {{path/to/example.torrent}} \-\-tracker {{tracker_announce_url}} \-\-piecesize {{2048}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a private torrent with a 2048 KB piece size:
+.RE
+.PP
+\fB\fCtransmission\-create \-p \-o {{path/to/example.torrent}} \-\-tracker {{tracker_announce_url}} \-\-piecesize {{2048}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a torrent with a comment:
+.RE
+.PP
+\fB\fCtransmission\-create \-o {{path/to/example.torrent}} \-\-tracker {{tracker_url1}} \-c {{comment}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a torrent with multiple trackers:
+.RE
+.PP
+\fB\fCtransmission\-create \-o {{path/to/example.torrent}} \-\-tracker {{tracker_url1}} \-\-tracker {{tracker_url2}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Show help page:
+.RE
+.PP
+\fB\fCtransmission\-create \-\-help\fR

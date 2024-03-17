@@ -1,0 +1,42 @@
+.TH cradle elastic
+.PP
+.RS
+Manage the Elasticsearch instances for a Cradle instance.
+More information: \[la]https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html#elastic\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Truncate the Elasticsearch index:
+.RE
+.PP
+\fB\fCcradle elastic flush\fR
+.RS
+.IP \(bu 2
+Truncate the Elasticsearch index for a specific package:
+.RE
+.PP
+\fB\fCcradle elastic flush {{package}}\fR
+.RS
+.IP \(bu 2
+Submit the Elasticsearch schema:
+.RE
+.PP
+\fB\fCcradle elastic map\fR
+.RS
+.IP \(bu 2
+Submit the Elasticsearch schema for a specific package:
+.RE
+.PP
+\fB\fCcradle elastic map {{package}}\fR
+.RS
+.IP \(bu 2
+Populate the Elasticsearch indices for all packages:
+.RE
+.PP
+\fB\fCcradle elastic populate\fR
+.RS
+.IP \(bu 2
+Populate the Elasticsearch indices for a specific package:
+.RE
+.PP
+\fB\fCcradle elastic populate {{package}}\fR

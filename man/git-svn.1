@@ -1,0 +1,36 @@
+.TH git svn
+.PP
+.RS
+Bidirectional operation between a Subversion repository and Git.
+More information: \[la]https://git-scm.com/docs/git-svn\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone an SVN repository:
+.RE
+.PP
+\fB\fCgit svn clone {{https://example.com/subversion_repo}} {{local_dir}}\fR
+.RS
+.IP \(bu 2
+Clone an SVN repository starting at a given revision number:
+.RE
+.PP
+\fB\fCgit svn clone \-r{{1234}}:HEAD {{https://svn.example.net/subversion/repo}} {{local_dir}}\fR
+.RS
+.IP \(bu 2
+Update local clone from the remote SVN repository:
+.RE
+.PP
+\fB\fCgit svn rebase\fR
+.RS
+.IP \(bu 2
+Fetch updates from the remote SVN repository without changing the Git HEAD:
+.RE
+.PP
+\fB\fCgit svn fetch\fR
+.RS
+.IP \(bu 2
+Commit back to the SVN repository:
+.RE
+.PP
+\fB\fCgit svn dcommit\fR

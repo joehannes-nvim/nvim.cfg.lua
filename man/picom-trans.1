@@ -1,0 +1,30 @@
+.TH picom\-trans
+.PP
+.RS
+Set the window opacity for the \fB\fCpicom\fR window compositor.
+More information: \[la]https://github.com/yshui/picom\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set the currently focused window opacity to a specific percentage:
+.RE
+.PP
+\fB\fCpicom\-trans \-\-current \-\-opacity {{90}}\fR
+.RS
+.IP \(bu 2
+Set the opacity of a window with a specific name:
+.RE
+.PP
+\fB\fCpicom\-trans \-\-name {{Firefox}} \-\-opacity {{90}}\fR
+.RS
+.IP \(bu 2
+Set the opacity of a specific window selected via mouse cursor:
+.RE
+.PP
+\fB\fCpicom\-trans \-\-select \-\-opacity {{90}}\fR
+.RS
+.IP \(bu 2
+Toggle the opacity of a specific window:
+.RE
+.PP
+\fB\fCpicom\-trans \-\-name {{Firefox}} \-\-toggle\fR

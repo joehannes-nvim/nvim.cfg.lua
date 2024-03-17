@@ -1,0 +1,36 @@
+.TH zipgrep
+.PP
+.RS
+Find patterns in files in a ZIP archive using extended regular expression (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR).
+More information: \[la]https://manned.org/zipgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a ZIP archive:
+.RE
+.PP
+\fB\fCzipgrep "{{search_pattern}}" {{path/to/file.zip}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCzipgrep \-H \-n "{{search_pattern}}" {{path/to/file.zip}}\fR
+.RS
+.IP \(bu 2
+Search for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCzipgrep \-v "{{search_pattern}}" {{path/to/file.zip}}\fR
+.RS
+.IP \(bu 2
+Specify files inside a ZIP archive from search:
+.RE
+.PP
+\fB\fCzipgrep "{{search_pattern}}" {{path/to/file.zip}} {{file/to/search1}} {{file/to/search2}}\fR
+.RS
+.IP \(bu 2
+Exclude files inside a ZIP archive from search:
+.RE
+.PP
+\fB\fCzipgrep "{{search_pattern}}" {{path/to/file.zip}} \-x {{file/to/exclude1}} {{file/to/exclude2}}\fR

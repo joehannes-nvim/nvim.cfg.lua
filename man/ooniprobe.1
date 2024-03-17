@@ -1,0 +1,49 @@
+.TH ooniprobe
+.PP
+.RS
+Open Observatory of Network Interference (OONI).
+Test the blocking of websites and apps. Measure the speed and performance of your network.
+More information: \[la]https://ooni.org/support/ooni-probe-cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all tests performed:
+.RE
+.PP
+\fB\fCooniprobe list\fR
+.RS
+.IP \(bu 2
+Show information about a specific test:
+.RE
+.PP
+\fB\fCooniprobe list {{7}}\fR
+.RS
+.IP \(bu 2
+Run all available tests:
+.RE
+.PP
+\fB\fCooniprobe run all\fR
+.RS
+.IP \(bu 2
+Perform a specific test:
+.RE
+.PP
+\fB\fCooniprobe run {{performance}}\fR
+.RS
+.IP \(bu 2
+Check the availability of a specific website:
+.RE
+.PP
+\fB\fCooniprobe run websites \-\-input {{https://ooni.org/}}\fR
+.RS
+.IP \(bu 2
+Check the availability of all websites listed in a file:
+.RE
+.PP
+\fB\fCooniprobe run websites \-\-input\-file {{path/to/my\-websites.txt}}\fR
+.RS
+.IP \(bu 2
+Display detailed information about a test in JSON format:
+.RE
+.PP
+\fB\fCooniprobe show {{9}}\fR

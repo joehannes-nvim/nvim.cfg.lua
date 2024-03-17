@@ -1,0 +1,43 @@
+.TH mk
+.PP
+.RS
+Task runner for targets described in Mkfile.
+Mostly used to control the compilation of an executable from source code.
+More information: \[la]http://doc.cat-v.org/plan_9/4th_edition/papers/mk\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Call the first target specified in the Mkfile (usually named "all"):
+.RE
+.PP
+\fB\fCmk\fR
+.RS
+.IP \(bu 2
+Call a specific target:
+.RE
+.PP
+\fB\fCmk {{target}}\fR
+.RS
+.IP \(bu 2
+Call a specific target, executing 4 jobs at a time in parallel:
+.RE
+.PP
+\fB\fCNPROC=4 mk {{target}}\fR
+.RS
+.IP \(bu 2
+Force mking of a target, even if source files are unchanged:
+.RE
+.PP
+\fB\fCmk \-w{{target}} {{target}}\fR
+.RS
+.IP \(bu 2
+Assume all targets to be out of date. Thus, update \fB\fCtarget\fR and all of its dependencies:
+.RE
+.PP
+\fB\fCmk \-a {{target}}\fR
+.RS
+.IP \(bu 2
+Keep going as far as possible on error:
+.RE
+.PP
+\fB\fCmk \-k\fR

@@ -1,0 +1,25 @@
+.TH mingle
+.PP
+.RS
+Bundle the edges of a graph layout.
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://www.graphviz.org/pdf/mingle.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bundle the edges of one or more graph layouts (that already have layout information):
+.RE
+.PP
+\fB\fCmingle {{path/to/layout1.gv}} {{path/to/layout2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Perform layout, bundling, and output to a picture with one command:
+.RE
+.PP
+\fB\fCdot {{path/to/input.gv}} | mingle | dot \-T {{png}} > {{path/to/output.png}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCmingle\fR:
+.RE
+.PP
+\fB\fCmingle \-?\fR

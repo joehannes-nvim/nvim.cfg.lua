@@ -1,0 +1,49 @@
+.TH nvm
+.PP
+.RS
+Install, uninstall or switch between Node.js versions.
+Supports version numbers like "12.8" or "v16.13.1", and labels like "stable", "system", etc.
+More information: \[la]https://github.com/creationix/nvm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a specific version of Node.js:
+.RE
+.PP
+\fB\fCnvm install {{node_version}}\fR
+.RS
+.IP \(bu 2
+Use a specific version of Node.js in the current shell:
+.RE
+.PP
+\fB\fCnvm use {{node_version}}\fR
+.RS
+.IP \(bu 2
+Set the default Node.js version:
+.RE
+.PP
+\fB\fCnvm alias default {{node_version}}\fR
+.RS
+.IP \(bu 2
+List all available Node.js versions and highlight the default one:
+.RE
+.PP
+\fB\fCnvm list\fR
+.RS
+.IP \(bu 2
+Uninstall a given Node.js version:
+.RE
+.PP
+\fB\fCnvm uninstall {{node_version}}\fR
+.RS
+.IP \(bu 2
+Launch the REPL of a specific version of Node.js:
+.RE
+.PP
+\fB\fCnvm run {{node_version}} \-\-version\fR
+.RS
+.IP \(bu 2
+Execute a script in a specific version of Node.js:
+.RE
+.PP
+\fB\fCnvm exec {{node_version}} node {{app.js}}\fR

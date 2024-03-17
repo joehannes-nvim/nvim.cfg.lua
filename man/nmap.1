@@ -1,0 +1,57 @@
+.TH nmap
+.PP
+.RS
+Network exploration tool and security/port scanner.
+Some features only activate when Nmap is run with root privileges.
+More information: \[la]https://nmap.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check if an IP address is up, and guess the remote host's operating system:
+.RE
+.PP
+\fB\fCnmap \-O {{ip_or_hostname}}\fR
+.RS
+.IP \(bu 2
+Try to determine whether the specified hosts are up (ping scan) and what their names and MAC addresses are:
+.RE
+.PP
+\fB\fCsudo nmap \-sn {{ip_or_hostname}} {{optional_another_address}}\fR
+.RS
+.IP \(bu 2
+Also enable scripts, service detection, OS fingerprinting and traceroute:
+.RE
+.PP
+\fB\fCnmap \-A {{address_or_addresses}}\fR
+.RS
+.IP \(bu 2
+Scan a specific list of ports (use '\-p\-' for all ports from 1 to 65535):
+.RE
+.PP
+\fB\fCnmap \-p {{port1,port2,...,portN}} {{address_or_addresses}}\fR
+.RS
+.IP \(bu 2
+Perform service and version detection of the top 1000 ports using default NSE scripts; writing results ('\-oN') to output file:
+.RE
+.PP
+\fB\fCnmap \-sC \-sV \-oN {{top\-1000\-ports.txt}} {{address_or_addresses}}\fR
+.RS
+.IP \(bu 2
+Scan 
+.BR target (s) 
+carefully using 'default and safe' NSE scripts:
+.RE
+.PP
+\fB\fCnmap \-\-script "default and safe" {{address_or_addresses}}\fR
+.RS
+.IP \(bu 2
+Scan web server running on standard ports 80 and 443 using all available 'http\-*' NSE scripts:
+.RE
+.PP
+\fB\fCnmap \-\-script "http\-*" {{address_or_addresses}} \-p 80,443\fR
+.RS
+.IP \(bu 2
+Perform a stealthy very slow scan ('\-T0') trying to avoid detection by IDS/IPS and use decoy ('\-D') source IP addresses:
+.RE
+.PP
+\fB\fCnmap \-T0 \-D {{decoy1_ipaddress,decoy2_ipaddress,...,decoyN_ipaddress}} {{address_or_addresses}}\fR

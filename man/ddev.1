@@ -1,0 +1,48 @@
+.TH ddev
+.PP
+.RS
+Container based local development tool for PHP environments.
+More information: \[la]https://ddev.readthedocs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start up a project:
+.RE
+.PP
+\fB\fCddev start\fR
+.RS
+.IP \(bu 2
+Configure a project's type and docroot:
+.RE
+.PP
+\fB\fCddev config\fR
+.RS
+.IP \(bu 2
+[f]ollow the log trail:
+.RE
+.PP
+\fB\fCddev logs \-f\fR
+.RS
+.IP \(bu 2
+Run composer within the container:
+.RE
+.PP
+\fB\fCddev composer\fR
+.RS
+.IP \(bu 2
+Install a specific Node.js version:
+.RE
+.PP
+\fB\fCddev nvm install {{version}}\fR
+.RS
+.IP \(bu 2
+Export a database:
+.RE
+.PP
+\fB\fCddev export\-db \-\-file={{/tmp/db.sql.gz}}\fR
+.RS
+.IP \(bu 2
+Run a specific command within a container:
+.RE
+.PP
+\fB\fCddev exec {{echo 1}}\fR

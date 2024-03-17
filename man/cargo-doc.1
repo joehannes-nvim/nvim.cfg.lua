@@ -1,0 +1,30 @@
+.TH cargo doc
+.PP
+.RS
+Build the documentation of Rust packages.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-doc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the documentation for the current project and all dependencies:
+.RE
+.PP
+\fB\fCcargo doc\fR
+.RS
+.IP \(bu 2
+Do not build documentation for dependencies:
+.RE
+.PP
+\fB\fCcargo doc \-\-no\-deps\fR
+.RS
+.IP \(bu 2
+Build and open the documentation in a browser:
+.RE
+.PP
+\fB\fCcargo doc \-\-open\fR
+.RS
+.IP \(bu 2
+Build and view the documentation of a particular package:
+.RE
+.PP
+\fB\fCcargo doc \-\-open \-\-package {{package}}\fR

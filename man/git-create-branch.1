@@ -1,0 +1,25 @@
+.TH git create\-branch
+.PP
+.RS
+Create a Git branch in a repository.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-create-branch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a local branch:
+.RE
+.PP
+\fB\fCgit create\-branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a branch locally and on origin:
+.RE
+.PP
+\fB\fCgit create\-branch \-\-remote {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a branch locally and on upstream (through forks):
+.RE
+.PP
+\fB\fCgit create\-branch \-\-remote upstream {{branch_name}}\fR

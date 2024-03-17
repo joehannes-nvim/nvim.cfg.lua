@@ -1,0 +1,42 @@
+.TH todo.sh
+.PP
+.RS
+Simple and extensible shell script for managing your \fB\fCtodo.txt\fR file.
+More information: \[la]https://github.com/todotxt/todo.txt-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List every item:
+.RE
+.PP
+\fB\fCtodo.sh ls\fR
+.RS
+.IP \(bu 2
+Add an item with project and context tags:
+.RE
+.PP
+\fB\fCtodo.sh add '{{description}} +{{project}} @{{context}}'\fR
+.RS
+.IP \(bu 2
+Mark an item as [do]ne:
+.RE
+.PP
+\fB\fCtodo.sh do {{item_no}}\fR
+.RS
+.IP \(bu 2
+Remove an item:
+.RE
+.PP
+\fB\fCtodo.sh rm {{item_no}}\fR
+.RS
+.IP \(bu 2
+Set an item's [pri]ority (A\-Z):
+.RE
+.PP
+\fB\fCtodo.sh pri {{item_no}} {{priority}}\fR
+.RS
+.IP \(bu 2
+Replace an item:
+.RE
+.PP
+\fB\fCtodo.sh replace {{item_no}} '{{new_description}}'\fR

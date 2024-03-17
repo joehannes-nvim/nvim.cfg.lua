@@ -1,0 +1,42 @@
+.TH gitlab\-ctl
+.PP
+.RS
+Manage the GitLab omnibus.
+More information: \[la]https://docs.gitlab.com/omnibus/maintenance/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the status of every service:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl status\fR
+.RS
+.IP \(bu 2
+Display the status of a specific service:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl status {{nginx}}\fR
+.RS
+.IP \(bu 2
+Restart every service:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl restart\fR
+.RS
+.IP \(bu 2
+Restart a specific service:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl restart {{nginx}}\fR
+.RS
+.IP \(bu 2
+Display the logs of every service and keep reading until \fB\fCCtrl + C\fR is pressed:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl tail\fR
+.RS
+.IP \(bu 2
+Display the logs of a specific service:
+.RE
+.PP
+\fB\fCsudo gitlab\-ctl tail {{nginx}}\fR

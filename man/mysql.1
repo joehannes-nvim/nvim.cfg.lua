@@ -1,0 +1,48 @@
+.TH mysql
+.PP
+.RS
+The MySQL command\-line tool.
+More information: \[la]https://www.mysql.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a database:
+.RE
+.PP
+\fB\fCmysql {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a database, user will be prompted for a password:
+.RE
+.PP
+\fB\fCmysql \-u {{user}} \-\-password {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a database on another host:
+.RE
+.PP
+\fB\fCmysql \-h {{database_host}} {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a database through a Unix socket:
+.RE
+.PP
+\fB\fCmysql \-\-socket {{path/to/socket.sock}}\fR
+.RS
+.IP \(bu 2
+Execute SQL statements in a script file (batch file):
+.RE
+.PP
+\fB\fCmysql \-e "source {{filename.sql}}" {{database_name}}\fR
+.RS
+.IP \(bu 2
+Restore a database from a backup created with \fB\fCmysqldump\fR (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysql \-\-user {{user}} \-\-password {{database_name}} < {{path/to/backup.sql}}\fR
+.RS
+.IP \(bu 2
+Restore all databases from a backup (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmysql \-\-user {{user}} \-\-password < {{path/to/backup.sql}}\fR

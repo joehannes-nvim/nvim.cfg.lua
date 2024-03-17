@@ -1,0 +1,55 @@
+.TH virsh
+.PP
+.RS
+Manage virsh guest domains. (NOTE: 'guest_id' can be the id, name or UUID of the guest).
+Some subcommands such as \fB\fCvirsh list\fR have their own usage documentation.
+More information: \[la]https://libvirt.org/virshcmdref.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a hypervisor session:
+.RE
+.PP
+\fB\fCvirsh connect {{qemu:///system}}\fR
+.RS
+.IP \(bu 2
+List all domains:
+.RE
+.PP
+\fB\fCvirsh list \-\-all\fR
+.RS
+.IP \(bu 2
+Dump guest configuration file:
+.RE
+.PP
+\fB\fCvirsh dumpxml {{guest_id}} > {{path/to/guest.xml}}\fR
+.RS
+.IP \(bu 2
+Create a guest from a configuration file:
+.RE
+.PP
+\fB\fCvirsh create {{path/to/config_file.xml}}\fR
+.RS
+.IP \(bu 2
+Edit a guest's configuration file (editor can be changed with $EDITOR):
+.RE
+.PP
+\fB\fCvirsh edit {{guest_id}}\fR
+.RS
+.IP \(bu 2
+Start/reboot/shutdown/suspend/resume a guest:
+.RE
+.PP
+\fB\fCvirsh {{command}} {{guest_id}}\fR
+.RS
+.IP \(bu 2
+Save the current state of a guest to a file:
+.RE
+.PP
+\fB\fCvirsh save {{guest_id}} {{filename}}\fR
+.RS
+.IP \(bu 2
+Delete a running guest:
+.RE
+.PP
+\fB\fCvirsh destroy {{guest_id}} && virsh undefine {{guest_id}}\fR

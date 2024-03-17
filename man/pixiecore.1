@@ -1,0 +1,24 @@
+.TH pixiecore
+.PP
+.RS
+Tool to manage the network booting of machines.
+More information: \[la]https://github.com/danderson/netboot/tree/master/pixiecore\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a PXE boot server which provides a \fB\fCnetboot.xyz\fR boot image:
+.RE
+.PP
+\fB\fCpixiecore {{quick}} xyz \-\-dhcp\-no\-bind\fR
+.RS
+.IP \(bu 2
+Start a new PXE boot server which provides an Ubuntu boot image:
+.RE
+.PP
+\fB\fCpixiecore {{quick}} ubuntu \-\-dhcp\-no\-bind\fR
+.RS
+.IP \(bu 2
+Get a list of all available boot images for quick mode:
+.RE
+.PP
+\fB\fCpixiecore quick \-\-help\fR

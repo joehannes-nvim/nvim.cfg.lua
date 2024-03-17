@@ -1,0 +1,48 @@
+.TH fastboot
+.PP
+.RS
+Communicate with connected Android devices when in bootloader mode (the one place \fB\fCadb\fR doesn't work).
+More information: \[la]https://cs.android.com/android/platform/superproject/+/main:system/core/fastboot\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Unlock the bootloader:
+.RE
+.PP
+\fB\fCfastboot oem unlock\fR
+.RS
+.IP \(bu 2
+Relock the bootloader:
+.RE
+.PP
+\fB\fCfastboot oem lock\fR
+.RS
+.IP \(bu 2
+Reboot the device from fastboot mode into fastboot mode again:
+.RE
+.PP
+\fB\fCfastboot reboot bootloader\fR
+.RS
+.IP \(bu 2
+Flash a given image:
+.RE
+.PP
+\fB\fCfastboot flash {{file.img}}\fR
+.RS
+.IP \(bu 2
+Flash a custom recovery image:
+.RE
+.PP
+\fB\fCfastboot flash recovery {{file.img}}\fR
+.RS
+.IP \(bu 2
+Display connected devices:
+.RE
+.PP
+\fB\fCfastboot devices\fR
+.RS
+.IP \(bu 2
+Display all information of a device:
+.RE
+.PP
+\fB\fCfastboot getvar all\fR

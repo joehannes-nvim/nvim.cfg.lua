@@ -1,0 +1,55 @@
+.TH helm
+.PP
+.RS
+Helm is a package manager for Kubernetes.
+Some subcommands such as \fB\fChelm install\fR have their own usage documentation.
+More information: \[la]https://helm.sh/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a helm chart:
+.RE
+.PP
+\fB\fChelm create {{chart_name}}\fR
+.RS
+.IP \(bu 2
+Add a new helm repository:
+.RE
+.PP
+\fB\fChelm repo add {{repository_name}}\fR
+.RS
+.IP \(bu 2
+List helm repositories:
+.RE
+.PP
+\fB\fChelm repo list\fR
+.RS
+.IP \(bu 2
+Update helm repositories:
+.RE
+.PP
+\fB\fChelm repo update\fR
+.RS
+.IP \(bu 2
+Delete a helm repository:
+.RE
+.PP
+\fB\fChelm repo remove {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Install a helm chart:
+.RE
+.PP
+\fB\fChelm install {{name}} {{repository_name}}/{{chart_name}}\fR
+.RS
+.IP \(bu 2
+Download helm chart as a tar archive:
+.RE
+.PP
+\fB\fChelm get {{chart_release_name}}\fR
+.RS
+.IP \(bu 2
+Update helm dependencies:
+.RE
+.PP
+\fB\fChelm dependency update\fR

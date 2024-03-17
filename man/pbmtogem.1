@@ -1,0 +1,25 @@
+.TH pbmtogem
+.PP
+.RS
+Read a PBM image as input and produce a compressed GEM .img file as output.
+\fB\fCpbmtogem\fR cannot compress repeated lines.
+More information: \[la]https://netpbm.sourceforge.net/doc/pbmtogem.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a PBM image into a GEM .img file:
+.RE
+.PP
+\fB\fCpbmtogem {{path/to/file.pbm}} > {{path/to/file.img}}\fR
+.RS
+.IP \(bu 2
+Suppress all informational messages:
+.RE
+.PP
+\fB\fCpbmtogem \-quiet\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCpbmtogem \-version\fR

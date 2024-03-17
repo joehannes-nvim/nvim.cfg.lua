@@ -1,0 +1,36 @@
+.TH gops
+.PP
+.RS
+List and diagnose Go processes currently running on your system.
+More information: \[la]https://github.com/google/gops\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print all go processes running locally:
+.RE
+.PP
+\fB\fCgops\fR
+.RS
+.IP \(bu 2
+Print more information about a process:
+.RE
+.PP
+\fB\fCgops {{pid}}\fR
+.RS
+.IP \(bu 2
+Display a process tree:
+.RE
+.PP
+\fB\fCgops tree\fR
+.RS
+.IP \(bu 2
+Print the current stack trace from a target program:
+.RE
+.PP
+\fB\fCgops stack {{pid|addr}}\fR
+.RS
+.IP \(bu 2
+Print the current runtime memory statistics:
+.RE
+.PP
+\fB\fCgops memstats {{pid|addr}}\fR

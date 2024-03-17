@@ -1,0 +1,48 @@
+.TH html5validator
+.PP
+.RS
+Validate HTML5.
+More information: \[la]https://github.com/svenkreiss/html5validator\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Validate a specific file:
+.RE
+.PP
+\fB\fChtml5validator {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Validate all HTML files in a specific directory:
+.RE
+.PP
+\fB\fChtml5validator \-\-root {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Show warnings as well as errors:
+.RE
+.PP
+\fB\fChtml5validator \-\-show\-warnings {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Match multiple files using a glob pattern:
+.RE
+.PP
+\fB\fChtml5validator \-\-root {{path/to/directory}} \-\-match "{{*.html *.php}}"\fR
+.RS
+.IP \(bu 2
+Ignore specific directory names:
+.RE
+.PP
+\fB\fChtml5validator \-\-root {{path/to/directory}} \-\-blacklist "{{node_modules vendor}}"\fR
+.RS
+.IP \(bu 2
+Output the results in a specific format:
+.RE
+.PP
+\fB\fChtml5validator \-\-format {{gnu|xml|json|text}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Output the log at a specific verbosity level:
+.RE
+.PP
+\fB\fChtml5validator \-\-root {{path/to/directory}} \-\-log {{debug|info|warning}}\fR

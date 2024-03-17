@@ -1,0 +1,24 @@
+.TH fold
+.PP
+.RS
+Wrap each line in an input file to fit a specified width and print it to \fB\fCstdout\fR\&.
+More information: \[la]https://manned.org/fold.1p\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Wrap each line to default width (80 characters):
+.RE
+.PP
+\fB\fCfold {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Wrap each line to width "30":
+.RE
+.PP
+\fB\fCfold \-w30 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Wrap each line to width "5" and break the line at spaces (puts each space separated word in a new line, words with length > 5 are wrapped):
+.RE
+.PP
+\fB\fCfold \-w5 \-s {{path/to/file}}\fR

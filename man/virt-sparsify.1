@@ -1,0 +1,19 @@
+.TH virt\-sparsify
+.PP
+.RS
+Make virtual machine drive images thin\-provisioned.
+NOTE: Use only for offline machines to avoid data corruption.
+More information: \[la]https://libguestfs.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a sparsified compressed image without snapshots from an unsparsified one:
+.RE
+.PP
+\fB\fCvirt\-sparsify \-\-compress {{path/to/image.qcow2}} {{path/to/image_new.qcow2}}\fR
+.RS
+.IP \(bu 2
+Sparsify an image in\-place:
+.RE
+.PP
+\fB\fCvirt\-sparsify \-\-in\-place {{path/to/image.img}}\fR

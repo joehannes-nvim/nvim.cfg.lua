@@ -1,0 +1,42 @@
+.TH pio run
+.PP
+.RS
+Run PlatformIO project targets.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_run.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available project targets:
+.RE
+.PP
+\fB\fCpio run \-\-list\-targets\fR
+.RS
+.IP \(bu 2
+List all available project targets of a specific environment:
+.RE
+.PP
+\fB\fCpio run \-\-list\-targets \-\-environment {{environment}}\fR
+.RS
+.IP \(bu 2
+Run all targets:
+.RE
+.PP
+\fB\fCpio run\fR
+.RS
+.IP \(bu 2
+Run all targets of specified environments:
+.RE
+.PP
+\fB\fCpio run \-\-environment {{environment1}} \-\-environment {{environment2}}\fR
+.RS
+.IP \(bu 2
+Run specified targets:
+.RE
+.PP
+\fB\fCpio run \-\-target {{target1}} \-\-target {{target2}}\fR
+.RS
+.IP \(bu 2
+Run the targets of a specified configuration file:
+.RE
+.PP
+\fB\fCpio run \-\-project\-conf {{path/to/platformio.ini}}\fR

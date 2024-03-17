@@ -1,0 +1,24 @@
+.TH ppmhist
+.PP
+.RS
+Print a histogram of the colors present in a PPM image.
+More information: \[la]https://netpbm.sourceforge.net/doc/ppmhist.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate the histogram for human reading:
+.RE
+.PP
+\fB\fCppmhist \-nomap {{path/to/image_file.ppm}}\fR
+.RS
+.IP \(bu 2
+Generate a PPM file of the colormap for the image, with the color histogram as comments:
+.RE
+.PP
+\fB\fCppmhist \-map {{path/to/image_file.ppm}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCppmhist \-version\fR

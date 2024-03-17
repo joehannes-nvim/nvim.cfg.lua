@@ -1,0 +1,37 @@
+.TH gnmic
+.PP
+.RS
+A gNMI command\-line client.
+Manage gNMI network device configuration and view operational data.
+More information: \[la]https://gnmic.kmrd.dev\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Request device capabilities:
+.RE
+.PP
+\fB\fCgnmic \-\-address {{ip:port}} capabilities\fR
+.RS
+.IP \(bu 2
+Provide a username and password to fetch device capabilities:
+.RE
+.PP
+\fB\fCgnmic \-\-address {{ip:port}} \-\-username {{username}} \-\-password {{password}} capabilities\fR
+.RS
+.IP \(bu 2
+Get a snapshot of the device state at a specific path:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} get \-\-path {{path}}\fR
+.RS
+.IP \(bu 2
+Update device state at a specific path:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} set \-\-update\-path {{path}} \-\-update\-value {{value}}\fR
+.RS
+.IP \(bu 2
+Subscribe to target state updates under the subtree at a specific path:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} subscribe \-\-path {{path}}\fR

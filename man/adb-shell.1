@@ -1,0 +1,54 @@
+.TH adb shell
+.PP
+.RS
+Android Debug Bridge Shell: Run remote shell commands on an Android emulator instance or connected Android devices.
+More information: \[la]https://developer.android.com/studio/command-line/adb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a remote interactive shell on the emulator or device:
+.RE
+.PP
+\fB\fCadb shell\fR
+.RS
+.IP \(bu 2
+Get all the properties from emulator or device:
+.RE
+.PP
+\fB\fCadb shell getprop\fR
+.RS
+.IP \(bu 2
+Revert all runtime permissions to their default:
+.RE
+.PP
+\fB\fCadb shell pm reset\-permissions\fR
+.RS
+.IP \(bu 2
+Revoke a dangerous permission for an application:
+.RE
+.PP
+\fB\fCadb shell pm revoke {{package}} {{permission}}\fR
+.RS
+.IP \(bu 2
+Trigger a key event:
+.RE
+.PP
+\fB\fCadb shell input keyevent {{keycode}}\fR
+.RS
+.IP \(bu 2
+Clear the data of an application on an emulator or device:
+.RE
+.PP
+\fB\fCadb shell pm clear {{package}}\fR
+.RS
+.IP \(bu 2
+Start an activity on emulator or device:
+.RE
+.PP
+\fB\fCadb shell am start \-n {{package}}/{{activity}}\fR
+.RS
+.IP \(bu 2
+Start the home activity on an emulator or device:
+.RE
+.PP
+\fB\fCadb shell am start \-W \-c android.intent.category.HOME \-a android.intent.action.MAIN\fR

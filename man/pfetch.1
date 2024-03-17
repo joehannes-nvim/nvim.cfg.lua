@@ -1,0 +1,36 @@
+.TH pfetch
+.PP
+.RS
+Display system information.
+More information: \[la]https://github.com/dylanaraps/pfetch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the ASCII art and default fields:
+.RE
+.PP
+\fB\fCpfetch\fR
+.RS
+.IP \(bu 2
+Display only the ASCII art and color palette fields:
+.RE
+.PP
+\fB\fCPF_INFO="{{ascii palette}}" pfetch\fR
+.RS
+.IP \(bu 2
+Display all possible fields:
+.RE
+.PP
+\fB\fCPF_INFO="{{ascii title os host kernel uptime pkgs memory shell editor wm de palette}}" pfetch\fR
+.RS
+.IP \(bu 2
+Display a different username and hostname:
+.RE
+.PP
+\fB\fCUSER="{{user}}" HOSTNAME="{{hostname}}" pfetch\fR
+.RS
+.IP \(bu 2
+Display without colors:
+.RE
+.PP
+\fB\fCPF_COLOR={{0}} pfetch\fR

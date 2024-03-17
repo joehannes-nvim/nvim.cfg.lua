@@ -1,0 +1,24 @@
+.TH docker cp
+.PP
+.RS
+Copy files or directories between host and container filesystems.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/cp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy a file or directory from the host to a container:
+.RE
+.PP
+\fB\fCdocker cp {{path/to/file_or_directory_on_host}} {{container_name}}:{{path/to/file_or_directory_in_container}}\fR
+.RS
+.IP \(bu 2
+Copy a file or directory from a container to the host:
+.RE
+.PP
+\fB\fCdocker cp {{container_name}}:{{path/to/file_or_directory_in_container}} {{path/to/file_or_directory_on_host}}\fR
+.RS
+.IP \(bu 2
+Copy a file or directory from the host to a container, following symlinks (copies the symlinked files directly, not the symlinks themselves):
+.RE
+.PP
+\fB\fCdocker cp \-\-follow\-link {{path/to/symlink_on_host}} {{container_name}}:{{path/to/file_or_directory_in_container}}\fR

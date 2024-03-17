@@ -1,0 +1,49 @@
+.TH standard
+.PP
+.RS
+The JavaScript Standard Style tool for linting and fixing JavaScript code.
+More information: \[la]https://standardjs.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lint all JavaScript source files in the current directory:
+.RE
+.PP
+\fB\fCstandard\fR
+.RS
+.IP \(bu 2
+Lint specific JavaScript 
+.BR file (s):
+.RE
+.PP
+\fB\fCstandard {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Apply automatic fixes during linting:
+.RE
+.PP
+\fB\fCstandard \-\-fix\fR
+.RS
+.IP \(bu 2
+Declare any available global variables:
+.RE
+.PP
+\fB\fCstandard \-\-global {{variable}}\fR
+.RS
+.IP \(bu 2
+Use a custom ESLint plugin when linting:
+.RE
+.PP
+\fB\fCstandard \-\-plugin {{plugin}}\fR
+.RS
+.IP \(bu 2
+Use a custom JS parser when linting:
+.RE
+.PP
+\fB\fCstandard \-\-parser {{parser}}\fR
+.RS
+.IP \(bu 2
+Use a custom ESLint environment when linting:
+.RE
+.PP
+\fB\fCstandard \-\-env {{environment}}\fR

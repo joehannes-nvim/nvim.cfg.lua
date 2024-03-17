@@ -1,0 +1,54 @@
+.TH eksctl
+.PP
+.RS
+The official CLI for Amazon EKS.
+More information: \[la]https://eksctl.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a basic cluster:
+.RE
+.PP
+\fB\fCeksctl create cluster\fR
+.RS
+.IP \(bu 2
+List the details about a cluster or all of the clusters:
+.RE
+.PP
+\fB\fCeksctl get cluster \-\-name={{name}} \-\-region={{region}}\fR
+.RS
+.IP \(bu 2
+Create a cluster passing all configuration information in a file:
+.RE
+.PP
+\fB\fCeksctl create cluster \-\-config\-file={{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create a cluster using a configuration file and skip creating nodegroups until later:
+.RE
+.PP
+\fB\fCeksctl create cluster \-\-config\-file=<path> \-\-without\-nodegroup\fR
+.RS
+.IP \(bu 2
+Delete a cluster:
+.RE
+.PP
+\fB\fCeksctl delete cluster \-\-name={{name}} \-\-region={{region}}\fR
+.RS
+.IP \(bu 2
+Create cluster and write cluster credentials to a file other than the default:
+.RE
+.PP
+\fB\fCeksctl create cluster \-\-name={{name}} \-\-nodes={{4}} \-\-kubeconfig={{path/to/config.yaml}}\fR
+.RS
+.IP \(bu 2
+Create a cluster and prevent storing cluster credentials locally:
+.RE
+.PP
+\fB\fCeksctl create cluster \-\-name={{name}} \-\-nodes={{4}} \-\-write\-kubeconfig=false\fR
+.RS
+.IP \(bu 2
+Create a cluster and let \fB\fCeksctl\fR manage cluster credentials under the \fB\fC~/.kube/eksctl/clusters\fR directory:
+.RE
+.PP
+\fB\fCeksctl create cluster \-\-name={{name}} \-\-nodes={{4}} \-\-auto\-kubeconfig\fR

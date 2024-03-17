@@ -1,0 +1,54 @@
+.TH gh codespace
+.PP
+.RS
+Connect and manage your codespaces in GitHub.
+More information: \[la]https://cli.github.com/manual/gh_codespace\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a codespace in GitHub interactively:
+.RE
+.PP
+\fB\fCgh codespace create\fR
+.RS
+.IP \(bu 2
+List all available codespaces:
+.RE
+.PP
+\fB\fCgh codespace list\fR
+.RS
+.IP \(bu 2
+Connect to a codespace via SSH interactively:
+.RE
+.PP
+\fB\fCgh codespace ssh\fR
+.RS
+.IP \(bu 2
+Transfer a specific file to a codespace interactively:
+.RE
+.PP
+\fB\fCgh codespace cp {{path/to/source_file}} remote:{{path/to/remote_file}}\fR
+.RS
+.IP \(bu 2
+List the ports of a codespace interactively:
+.RE
+.PP
+\fB\fCgh codespace ports\fR
+.RS
+.IP \(bu 2
+Display the logs from a codespace interactively:
+.RE
+.PP
+\fB\fCgh codespace logs\fR
+.RS
+.IP \(bu 2
+Delete a codespace interactively:
+.RE
+.PP
+\fB\fCgh codespace delete\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCgh codespace {{code|cp|create|delete|edit|...}} \-\-help\fR

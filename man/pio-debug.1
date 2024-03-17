@@ -1,0 +1,36 @@
+.TH pio debug
+.PP
+.RS
+Debug PlatformIO projects.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_debug.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Debug the PlatformIO project in the current directory:
+.RE
+.PP
+\fB\fCpio debug\fR
+.RS
+.IP \(bu 2
+Debug a specific PlatformIO project:
+.RE
+.PP
+\fB\fCpio debug \-\-project\-dir {{path/to/platformio_project}}\fR
+.RS
+.IP \(bu 2
+Debug a specific environment:
+.RE
+.PP
+\fB\fCpio debug \-\-environment {{environment}}\fR
+.RS
+.IP \(bu 2
+Debug a PlatformIO project using a specific configuration file:
+.RE
+.PP
+\fB\fCpio debug \-\-project\-conf {{path/to/platformio.ini}}\fR
+.RS
+.IP \(bu 2
+Debug a PlatformIO project using the \fB\fCgdb\fR debugger:
+.RE
+.PP
+\fB\fCpio debug \-\-interface={{gdb}} {{gdb_options}}\fR

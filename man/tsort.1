@@ -1,0 +1,19 @@
+.TH tsort
+.PP
+.RS
+Perform a topological sort.
+A common use is to show the dependency order of nodes in a directed acyclic graph.
+More information: \[la]https://www.gnu.org/software/coreutils/tsort\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform a topological sort consistent with a partial sort per line of input separated by blanks:
+.RE
+.PP
+\fB\fCtsort {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Perform a topological sort consistent on strings:
+.RE
+.PP
+\fB\fCecho \-e "{{UI Backend\\nBackend Database\\nDocs UI}}" | tsort\fR

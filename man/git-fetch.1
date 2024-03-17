@@ -1,0 +1,36 @@
+.TH git fetch
+.PP
+.RS
+Download objects and refs from a remote repository.
+More information: \[la]https://git-scm.com/docs/git-fetch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fetch the latest changes from the default remote upstream repository (if set):
+.RE
+.PP
+\fB\fCgit fetch\fR
+.RS
+.IP \(bu 2
+Fetch new branches from a specific remote upstream repository:
+.RE
+.PP
+\fB\fCgit fetch {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Fetch the latest changes from all remote upstream repositories:
+.RE
+.PP
+\fB\fCgit fetch \-\-all\fR
+.RS
+.IP \(bu 2
+Also fetch tags from the remote upstream repository:
+.RE
+.PP
+\fB\fCgit fetch \-\-tags\fR
+.RS
+.IP \(bu 2
+Delete local references to remote branches that have been deleted upstream:
+.RE
+.PP
+\fB\fCgit fetch \-\-prune\fR

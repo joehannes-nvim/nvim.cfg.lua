@@ -1,0 +1,54 @@
+.TH gdu
+.PP
+.RS
+Disk usage analyzer with console interface.
+More information: \[la]https://github.com/dundee/gdu\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively show the disk usage of the current directory:
+.RE
+.PP
+\fB\fCgdu\fR
+.RS
+.IP \(bu 2
+Interactively show the disk usage of a given directory:
+.RE
+.PP
+\fB\fCgdu {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Interactively show the disk usage of all mounted disks:
+.RE
+.PP
+\fB\fCgdu \-\-show\-disks\fR
+.RS
+.IP \(bu 2
+Interactively show the disk usage of the current directory but ignore some sub\-directories:
+.RE
+.PP
+\fB\fCgdu \-\-ignore\-dirs {{path/to/directory1,path/to/directory2,...}}\fR
+.RS
+.IP \(bu 2
+Ignore paths by regular expression:
+.RE
+.PP
+\fB\fCgdu \-\-ignore\-dirs\-pattern '{{.*[abc]+}}'\fR
+.RS
+.IP \(bu 2
+Ignore hidden directories:
+.RE
+.PP
+\fB\fCgdu \-\-no\-hidden\fR
+.RS
+.IP \(bu 2
+Only print the result, do not enter interactive mode:
+.RE
+.PP
+\fB\fCgdu \-\-non\-interactive {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Do not show the progress in non\-interactive mode (useful in scripts):
+.RE
+.PP
+\fB\fCgdu \-\-no\-progress {{path/to/directory}}\fR

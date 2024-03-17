@@ -1,0 +1,54 @@
+.TH PHP\-CS\-Fixer
+.PP
+.RS
+Automatic coding style fixer for PHP.
+More information: \[la]https://github.com/FriendsOfPHP/PHP-CS-Fixer\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute code style fixing in the current directory:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix\fR
+.RS
+.IP \(bu 2
+Execute code style fixing for a specific directory:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Execute code style linting without applying changes:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Execute code style fixes using specific rules:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix \-\-rules={{rules}}\fR
+.RS
+.IP \(bu 2
+Display the rules that have been applied:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix \-\-verbose\fR
+.RS
+.IP \(bu 2
+Output the results in a different format:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer fix \-\-format={{txt|json|xml|checkstyle|junit|gitlab}}\fR
+.RS
+.IP \(bu 2
+Display files that require fixing:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer list\-files\fR
+.RS
+.IP \(bu 2
+Describe a rule or ruleset:
+.RE
+.PP
+\fB\fCphp\-cs\-fixer describe {{rule}}\fR

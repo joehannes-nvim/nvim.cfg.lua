@@ -1,0 +1,36 @@
+.TH theHarvester
+.PP
+.RS
+A tool designed to be used in the early stages of a penetration test.
+More information: \[la]https://github.com/laramies/theHarvester\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Gather information on a domain using Google:
+.RE
+.PP
+\fB\fCtheHarvester \-\-domain {{domain_name}} \-\-source google\fR
+.RS
+.IP \(bu 2
+Gather information on a domain using multiple sources:
+.RE
+.PP
+\fB\fCtheHarvester \-\-domain {{domain_name}} \-\-source {{google,bing,crtsh}}\fR
+.RS
+.IP \(bu 2
+Change the limit of results to work with:
+.RE
+.PP
+\fB\fCtheHarvester \-\-domain {{domain_name}} \-\-source {{google}} \-\-limit {{200}}\fR
+.RS
+.IP \(bu 2
+Save the output to two files in XML and HTML format:
+.RE
+.PP
+\fB\fCtheHarvester \-\-domain {{domain_name}} \-\-source {{google}} \-\-file {{output_file_name}}\fR
+.RS
+.IP \(bu 2
+Output all available options:
+.RE
+.PP
+\fB\fCtheHarvester \-\-help\fR

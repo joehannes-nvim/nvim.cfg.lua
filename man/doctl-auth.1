@@ -1,0 +1,36 @@
+.TH doctl auth
+.PP
+.RS
+Authenticate doctl with one or more API tokens.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/auth/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a prompt to enter an API token and label its context:
+.RE
+.PP
+\fB\fCdoctl auth init \-\-context {{token_label}}\fR
+.RS
+.IP \(bu 2
+List authentication contexts (API tokens):
+.RE
+.PP
+\fB\fCdoctl auth list\fR
+.RS
+.IP \(bu 2
+Switch contexts (API tokens):
+.RE
+.PP
+\fB\fCdoctl auth switch \-\-context {{token_label}}\fR
+.RS
+.IP \(bu 2
+Remove a stored authentication context (API token):
+.RE
+.PP
+\fB\fCdoctl auth remove \-\-context {{token_label}}\fR
+.RS
+.IP \(bu 2
+Show available commands:
+.RE
+.PP
+\fB\fCdoctl auth \-\-help\fR

@@ -1,0 +1,24 @@
+.TH loadtest
+.PP
+.RS
+Run a load test on the selected HTTP or WebSockets URL.
+More information: \[la]https://github.com/alexfernandez/loadtest\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run with concurrent users and a specified amount of requests per second:
+.RE
+.PP
+\fB\fCloadtest \-\-concurrency {{10}} \-\-rps {{200}} {{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Run with a custom HTTP header:
+.RE
+.PP
+\fB\fCloadtest \-\-headers "{{accept:text/plain;text\-html}}" {{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Run with a specific HTTP method:
+.RE
+.PP
+\fB\fCloadtest \-\-method {{GET}} {{https://example.com}}\fR

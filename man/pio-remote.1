@@ -1,0 +1,49 @@
+.TH pio remote
+.PP
+.RS
+Helper command for PlatformIO Remote Development.
+\fB\fCpio remote [command]\fR takes the same arguments as its locally executing counterpart \fB\fCpio [command]\fR\&.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/remote/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all active Remote Agents:
+.RE
+.PP
+\fB\fCpio remote agent list\fR
+.RS
+.IP \(bu 2
+Start a new Remote Agent with a specific name and share it with friends:
+.RE
+.PP
+\fB\fCpio remote agent start \-\-name {{agent_name}} \-\-share {{example1@example.com}} \-\-share {{example2@example.com}}\fR
+.RS
+.IP \(bu 2
+List devices from specified Agents (omit \fB\fC\-\-agent\fR to specify all Agents):
+.RE
+.PP
+\fB\fCpio remote \-\-agent {{agent_name1}} \-\-agent {{agent_name2}} device list\fR
+.RS
+.IP \(bu 2
+Connect to the serial port of a remote device:
+.RE
+.PP
+\fB\fCpio remote \-\-agent {{agent_name}} device monitor\fR
+.RS
+.IP \(bu 2
+Run all targets on a specified Agent:
+.RE
+.PP
+\fB\fCpio remote \-\-agent {{agent_name}} run\fR
+.RS
+.IP \(bu 2
+Update installed core packages, development platforms and global libraries on a specific Agent:
+.RE
+.PP
+\fB\fCpio remote \-\-agent {{agent_name}} update\fR
+.RS
+.IP \(bu 2
+Run all tests in all environments on a specific Agent:
+.RE
+.PP
+\fB\fCpio remote \-\-agent {{agent_name}} test\fR

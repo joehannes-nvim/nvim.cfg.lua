@@ -1,0 +1,43 @@
+.TH arping
+.PP
+.RS
+Discover and probe hosts in a network using the ARP protocol.
+Useful for MAC address discovery.
+More information: \[la]https://github.com/ThomasHabets/arping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ping a host by ARP request packets:
+.RE
+.PP
+\fB\fCarping {{host_ip}}\fR
+.RS
+.IP \(bu 2
+Ping a host on a specific interface:
+.RE
+.PP
+\fB\fCarping \-I {{interface}} {{host_ip}}\fR
+.RS
+.IP \(bu 2
+Ping a host and stop at the first reply:
+.RE
+.PP
+\fB\fCarping \-f {{host_ip}}\fR
+.RS
+.IP \(bu 2
+Ping a host a specific number of times:
+.RE
+.PP
+\fB\fCarping \-c {{count}} {{host_ip}}\fR
+.RS
+.IP \(bu 2
+Broadcast ARP request packets to update neighbours' ARP caches:
+.RE
+.PP
+\fB\fCarping \-U {{ip_to_broadcast}}\fR
+.RS
+.IP \(bu 2
+Detect duplicated IP addresses in the network by sending ARP requests with a 3 second timeout:
+.RE
+.PP
+\fB\fCarping \-D \-w {{3}} {{ip_to_check}}\fR

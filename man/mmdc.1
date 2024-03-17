@@ -1,0 +1,25 @@
+.TH mmdc
+.PP
+.RS
+CLI for mermaid, a diagram generation tool with a domain\-specific language.
+A mermaid definition file is taken as input and a SVG, PNG, or PDF file is generated as output.
+More information: \[la]https://mermaid-js.github.io/mermaid/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a file to the specified format (automatically determined from the file extension):
+.RE
+.PP
+\fB\fCmmdc \-\-input {{input.mmd}} \-\-output {{output.svg}}\fR
+.RS
+.IP \(bu 2
+Specify the theme of the chart:
+.RE
+.PP
+\fB\fCmmdc \-\-input {{input.mmd}} \-\-output {{output.svg}} \-\-theme {{forest|dark|neutral|default}}\fR
+.RS
+.IP \(bu 2
+Specify the background color of the chart (e.g. \fB\fClime\fR, \fB\fC"#D8064F"\fR, or \fB\fCtransparent\fR):
+.RE
+.PP
+\fB\fCmmdc \-\-input {{input.mmd}} \-\-output {{output.svg}} \-\-backgroundColor {{color}}\fR

@@ -1,0 +1,36 @@
+.TH certutil
+.PP
+.RS
+Manage keys and certificates in both NSS databases and other NSS tokens.
+More information: \[la]https://manned.org/certutil\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new certificate database:
+.RE
+.PP
+\fB\fCcertutil \-N \-d .\fR
+.RS
+.IP \(bu 2
+List all certificates in a database:
+.RE
+.PP
+\fB\fCcertutil \-L \-d .\fR
+.RS
+.IP \(bu 2
+List all private keys in a database:
+.RE
+.PP
+\fB\fCcertutil \-K \-d . \-f {{path/to/password_file.txt}}\fR
+.RS
+.IP \(bu 2
+Import the signed certificate into the requesters database:
+.RE
+.PP
+\fB\fCcertutil \-A \-n "{{server_certificate}}" \-t ",," \-i {{path/to/file.crt}} \-d .\fR
+.RS
+.IP \(bu 2
+Add subject alternative names to a given certificate:
+.RE
+.PP
+\fB\fCcertutil \-S \-f {{path/to/password_file.txt}} \-d . \-t ",," \-c "{{server_certificate}}" \-n "{{server_name}}" \-g {{2048}} \-s "CN={{common_name}},O={{organization}}"\fR

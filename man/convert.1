@@ -1,0 +1,55 @@
+.TH convert
+.PP
+.RS
+Image conversion tool.
+Part of ImageMagick.
+More information: \[la]https://imagemagick.org/script/convert.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an image from JPG to PNG:
+.RE
+.PP
+\fB\fCconvert {{path/to/input_image.jpg}} {{path/to/output_image.png}}\fR
+.RS
+.IP \(bu 2
+Scale an image to 50% of its original size:
+.RE
+.PP
+\fB\fCconvert {{path/to/input_image.png}} \-resize 50% {{path/to/output_image.png}}\fR
+.RS
+.IP \(bu 2
+Scale an image keeping the original aspect ratio to a maximum dimension of 640x480:
+.RE
+.PP
+\fB\fCconvert {{path/to/input_image.png}} \-resize 640x480 {{path/to/output_image.png}}\fR
+.RS
+.IP \(bu 2
+Horizontally append images:
+.RE
+.PP
+\fB\fCconvert {{path/to/image1.png path/to/image2.png ...}} +append {{path/to/output_image.png}}\fR
+.RS
+.IP \(bu 2
+Vertically append images:
+.RE
+.PP
+\fB\fCconvert {{path/to/image1.png path/to/image2.png ...}} \-append {{path/to/output_image.png}}\fR
+.RS
+.IP \(bu 2
+Create a GIF from a series of images with 100ms delay between them:
+.RE
+.PP
+\fB\fCconvert {{path/to/image1.png path/to/image2.png ...}} \-delay {{10}} {{path/to/animation.gif}}\fR
+.RS
+.IP \(bu 2
+Create an image with nothing but a solid red background:
+.RE
+.PP
+\fB\fCconvert \-size {{800x600}} "xc:{{#ff0000}}" {{path/to/image.png}}\fR
+.RS
+.IP \(bu 2
+Create a favicon from several images of different sizes:
+.RE
+.PP
+\fB\fCconvert {{path/to/image1.png path/to/image2.png ...}} {{path/to/favicon.ico}}\fR

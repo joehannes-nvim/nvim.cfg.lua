@@ -1,0 +1,42 @@
+.TH plesk
+.PP
+.RS
+Plesk hosting control panel.
+More information: \[la]https://docs.plesk.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an auto login link for the admin user and print it:
+.RE
+.PP
+\fB\fCplesk login\fR
+.RS
+.IP \(bu 2
+Show product version information:
+.RE
+.PP
+\fB\fCplesk version\fR
+.RS
+.IP \(bu 2
+List all hosted domains:
+.RE
+.PP
+\fB\fCplesk bin domain \-\-list\fR
+.RS
+.IP \(bu 2
+Start watching for changes in the \fB\fCpanel.log\fR file:
+.RE
+.PP
+\fB\fCplesk log {{panel.log}}\fR
+.RS
+.IP \(bu 2
+Start the interactive MySQL console:
+.RE
+.PP
+\fB\fCplesk db\fR
+.RS
+.IP \(bu 2
+Open the Plesk main configuration file in the default editor:
+.RE
+.PP
+\fB\fCplesk conf {{panel.ini}}\fR

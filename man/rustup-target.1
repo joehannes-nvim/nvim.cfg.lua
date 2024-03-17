@@ -1,0 +1,31 @@
+.TH rustup target
+.PP
+.RS
+Modify a toolchain's supported targets.
+Without the \fB\fC\-\-toolchain\fR option \fB\fCrustup\fR will use the default toolchain. See \fB\fCrustup help toolchain\fR for more information about toolchains.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a target to a toolchain:
+.RE
+.PP
+\fB\fCrustup target add \-\-toolchain {{toolchain}} {{target}}\fR
+.RS
+.IP \(bu 2
+Remove a target from a toolchain:
+.RE
+.PP
+\fB\fCrustup target remove \-\-toolchain {{toolchain}} {{target}}\fR
+.RS
+.IP \(bu 2
+List available and installed targets for a toolchain:
+.RE
+.PP
+\fB\fCrustup target list \-\-toolchain {{toolchain}}\fR
+.RS
+.IP \(bu 2
+List installed targets for a toolchain:
+.RE
+.PP
+\fB\fCrustup target list \-\-toolchain {{toolchain}} \-\-installed\fR

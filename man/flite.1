@@ -1,0 +1,42 @@
+.TH flite
+.PP
+.RS
+Speech synthesis engine.
+More information: \[la]http://www.festvox.org/flite/doc/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available voices:
+.RE
+.PP
+\fB\fCflite \-lv\fR
+.RS
+.IP \(bu 2
+Convert a text string to speech:
+.RE
+.PP
+\fB\fCflite \-t "{{string}}"\fR
+.RS
+.IP \(bu 2
+Convert the contents of a file to speech:
+.RE
+.PP
+\fB\fCflite \-f {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Specify which voice to use:
+.RE
+.PP
+\fB\fCflite \-voice {{file://path/to/filename.flitevox|url}}\fR
+.RS
+.IP \(bu 2
+Store output into a wav file:
+.RE
+.PP
+\fB\fCflite \-voice {{file://path/to/filename.flitevox|url}} \-f {{path/to/file.txt}} \-o {{output.wav}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCflite \-\-version\fR

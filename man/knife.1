@@ -1,0 +1,48 @@
+.TH knife
+.PP
+.RS
+Interact with a Chef server from a local Chef repo.
+More information: \[la]https://docs.chef.io/knife.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bootstrap a new node:
+.RE
+.PP
+\fB\fCknife bootstrap {{fqdn_or_ip}}\fR
+.RS
+.IP \(bu 2
+List all registered nodes:
+.RE
+.PP
+\fB\fCknife node list\fR
+.RS
+.IP \(bu 2
+Show a node:
+.RE
+.PP
+\fB\fCknife node show {{node_name}}\fR
+.RS
+.IP \(bu 2
+Edit a node:
+.RE
+.PP
+\fB\fCknife node edit {{node_name}}\fR
+.RS
+.IP \(bu 2
+Edit a role:
+.RE
+.PP
+\fB\fCknife role edit {{role_name}}\fR
+.RS
+.IP \(bu 2
+View a data bag:
+.RE
+.PP
+\fB\fCknife data bag show {{data_bag_name}} {{data_bag_item}}\fR
+.RS
+.IP \(bu 2
+Upload a local cookbook to the Chef server:
+.RE
+.PP
+\fB\fCknife cookbook upload {{cookbook_name}}\fR

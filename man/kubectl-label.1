@@ -1,0 +1,36 @@
+.TH kubectl edit
+.PP
+.RS
+Edit Kubernetes resources.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#label\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Label a pod:
+.RE
+.PP
+\fB\fCkubectl label pod {{pod_name}} {{key}}={{value}}\fR
+.RS
+.IP \(bu 2
+Update a pod label by overwriting the existing value:
+.RE
+.PP
+\fB\fCkubectl label \-\-overwrite {{pod_name}} {{key}}={{value}}\fR
+.RS
+.IP \(bu 2
+Label all pods in the namespace:
+.RE
+.PP
+\fB\fCkubectl label pods \-\-all {{key}}={{value}}\fR
+.RS
+.IP \(bu 2
+Label pod identified by pod definition file:
+.RE
+.PP
+\fB\fCkubectl label \-f {{pod_defination_file}} {{key}}={{value}}\fR
+.RS
+.IP \(bu 2
+Remove the label from a pod:
+.RE
+.PP
+\fB\fCkubectl label pod {{pod_name}} {{key}}\-\fR

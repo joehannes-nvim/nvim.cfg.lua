@@ -1,0 +1,48 @@
+.TH copyq
+.PP
+.RS
+Clipboard manager with advanced features.
+More information: \[la]https://copyq.readthedocs.io/en/latest/command-line.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch CopyQ to store clipboard history:
+.RE
+.PP
+\fB\fCcopyq\fR
+.RS
+.IP \(bu 2
+Show current clipboard content:
+.RE
+.PP
+\fB\fCcopyq clipboard\fR
+.RS
+.IP \(bu 2
+Insert raw text into the clipboard history:
+.RE
+.PP
+\fB\fCcopyq add \-\- {{text1}} {{text2}} {{text3}}\fR
+.RS
+.IP \(bu 2
+Insert text containing escape sequences ('\[rs]n', '\[rs]t') into the clipboard history:
+.RE
+.PP
+\fB\fCcopyq add {{firstline\\nsecondline}}\fR
+.RS
+.IP \(bu 2
+Print the content of the first 3 items in the clipboard history:
+.RE
+.PP
+\fB\fCcopyq read 0 1 2\fR
+.RS
+.IP \(bu 2
+Copy a file's contents into the clipboard:
+.RE
+.PP
+\fB\fCcopyq copy < {{file.txt}}\fR
+.RS
+.IP \(bu 2
+Copy a JPEG image into the clipboard:
+.RE
+.PP
+\fB\fCcopyq copy image/jpeg < {{image.jpg}}\fR

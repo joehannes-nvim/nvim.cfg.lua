@@ -1,0 +1,54 @@
+.TH duckdb
+.PP
+.RS
+Command\-line client for DuckDB, an in\-process analytical SQL engine.
+More information: \[la]https://duckdb.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell with a transient in\-memory database:
+.RE
+.PP
+\fB\fCduckdb\fR
+.RS
+.IP \(bu 2
+Start an interactive shell on a database file. If the file does not exist, a new database is created:
+.RE
+.PP
+\fB\fCduckdb {{path/to/dbfile}}\fR
+.RS
+.IP \(bu 2
+Directly query a CSV, JSON, or Parquet file:
+.RE
+.PP
+\fB\fCduckdb \-c "{{SELECT * FROM 'data_source.[csv|csv.gz|json|json.gz|parquet]'}}"\fR
+.RS
+.IP \(bu 2
+Run a SQL script:
+.RE
+.PP
+\fB\fCduckdb \-c ".read {{path/to/script.sql}}"\fR
+.RS
+.IP \(bu 2
+Run query on database file and keep the interactive shell open:
+.RE
+.PP
+\fB\fCduckdb {{path/to/dbfile}} \-cmd "{{SELECT DISTINCT * FROM tbl}}"\fR
+.RS
+.IP \(bu 2
+Run SQL queries in file on database and keep the interactive shell open:
+.RE
+.PP
+\fB\fCduckdb {{path/to/dbfile}} \-init {{path/to/script.sql}}\fR
+.RS
+.IP \(bu 2
+Read CSV from \fB\fCstdin\fR and write CSV to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/source.csv}} | duckdb \-c "{{COPY (FROM read_csv_auto('/dev/stdin')) TO '/dev/stdout' WITH (FORMAT CSV, HEADER)}}"\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCduckdb \-help\fR

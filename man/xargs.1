@@ -1,0 +1,37 @@
+.TH xargs
+.PP
+.RS
+Execute a command with piped arguments coming from another command, a file, etc.
+The input is treated as a single block of text and split into separate pieces on spaces, tabs, newlines and end\-of\-file.
+More information: \[la]https://pubs.opengroup.org/onlinepubs/9699919799/utilities/xargs.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a command using the input data as arguments:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xargs {{command}}\fR
+.RS
+.IP \(bu 2
+Run multiple chained commands on the input data:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xargs sh \-c "{{command1}} && {{command2}} | {{command3}}"\fR
+.RS
+.IP \(bu 2
+Delete all files with a \fB\fC\&.backup\fR extension (\fB\fC\-print0\fR uses a null character to split file names, and \fB\fC\-0\fR uses it as delimiter):
+.RE
+.PP
+\fB\fCfind . \-name {{'*.backup'}} \-print0 | xargs \-0 rm \-v\fR
+.RS
+.IP \(bu 2
+Execute the command once for each input line, replacing any occurrences of the placeholder (here marked as \fB\fC_\fR) with the input line:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xargs \-I _ {{command}} _ {{optional_extra_arguments}}\fR
+.RS
+.IP \(bu 2
+Parallel runs of up to \fB\fCmax\-procs\fR processes at a time; the default is 1. If \fB\fCmax\-procs\fR is 0, xargs will run as many processes as possible at a time:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xargs \-P {{max\-procs}} {{command}}\fR

@@ -1,0 +1,37 @@
+.TH nix store
+.PP
+.RS
+Manipulate the Nix store.
+See also: \fB\fCtldr nix\-store\fR\&.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-store.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Collect garbage, i.e. remove unused paths to reduce space usage:
+.RE
+.PP
+\fB\fCnix store gc\fR
+.RS
+.IP \(bu 2
+Hard\-link identical files together to reduce space usage:
+.RE
+.PP
+\fB\fCnix store optimise\fR
+.RS
+.IP \(bu 2
+Delete a specific store path (most be unused):
+.RE
+.PP
+\fB\fCnix store delete {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+List a contents of the store path, on a remote store:
+.RE
+.PP
+\fB\fCnix store \-\-store {{https://cache.nixos.org}} ls {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+Show the differences in versions between two store paths, with their respective dependencies:
+.RE
+.PP
+\fB\fCnix store diff\-closures {{/nix/store/...}} {{/nix/store/...}}\fR

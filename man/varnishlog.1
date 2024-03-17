@@ -1,0 +1,36 @@
+.TH varnishlog
+.PP
+.RS
+Display Varnish logs.
+More information: \[la]https://varnish-cache.org/docs/trunk/reference/varnishlog.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display logs in real time:
+.RE
+.PP
+\fB\fCvarnishlog\fR
+.RS
+.IP \(bu 2
+Only display requests to a specific domain:
+.RE
+.PP
+\fB\fCvarnishlog \-q 'ReqHeader eq "Host: {{example.com}}"'\fR
+.RS
+.IP \(bu 2
+Only display POST requests:
+.RE
+.PP
+\fB\fCvarnishlog \-q 'ReqMethod eq "{{POST}}"'\fR
+.RS
+.IP \(bu 2
+Only display requests to a specific path:
+.RE
+.PP
+\fB\fCvarnishlog \-q 'ReqURL eq "{{/path}}"'\fR
+.RS
+.IP \(bu 2
+Only display requests to paths matching a regular expression:
+.RE
+.PP
+\fB\fCvarnishlog \-q 'ReqURL ~ "{{regex}}"'\fR

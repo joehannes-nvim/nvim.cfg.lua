@@ -1,0 +1,43 @@
+.TH git switch
+.PP
+.RS
+Switch between Git branches. Requires Git version 2.23+.
+See also \fB\fCgit checkout\fR\&.
+More information: \[la]https://git-scm.com/docs/git-switch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Switch to an existing branch:
+.RE
+.PP
+\fB\fCgit switch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a new branch and switch to it:
+.RE
+.PP
+\fB\fCgit switch \-\-create {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a new branch based on an existing commit and switch to it:
+.RE
+.PP
+\fB\fCgit switch \-\-create {{branch_name}} {{commit}}\fR
+.RS
+.IP \(bu 2
+Switch to the previous branch:
+.RE
+.PP
+\fB\fCgit switch \-\fR
+.RS
+.IP \(bu 2
+Switch to a branch and update all submodules to match:
+.RE
+.PP
+\fB\fCgit switch \-\-recurse\-submodules {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Switch to a branch and automatically merge the current branch and any uncommitted changes into it:
+.RE
+.PP
+\fB\fCgit switch \-\-merge {{branch_name}}\fR

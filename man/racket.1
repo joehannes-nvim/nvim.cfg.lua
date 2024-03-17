@@ -1,0 +1,36 @@
+.TH racket
+.PP
+.RS
+Racket language interpreter.
+More information: \[la]https://racket-lang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCracket\fR
+.RS
+.IP \(bu 2
+Execute a Racket script:
+.RE
+.PP
+\fB\fCracket {{path/to/script.rkt}}\fR
+.RS
+.IP \(bu 2
+Execute a Racket expression:
+.RE
+.PP
+\fB\fCracket \-\-eval "{{expression}}"\fR
+.RS
+.IP \(bu 2
+Run module as a script (terminates option list):
+.RE
+.PP
+\fB\fCracket \-\-lib {{module_name}} \-\-main {{arguments}}\fR
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell) for the \fB\fCtyped/racket\fR hashlang:
+.RE
+.PP
+\fB\fCracket \-I typed/racket\fR

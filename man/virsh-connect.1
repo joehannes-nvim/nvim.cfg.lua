@@ -1,0 +1,31 @@
+.TH virsh\-connect
+.PP
+.RS
+Connect to a virtual machine hypervisor.
+See also: \fB\fCvirsh\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to the default hypervisor:
+.RE
+.PP
+\fB\fCvirsh connect\fR
+.RS
+.IP \(bu 2
+Connect as root to the local QEMU/KVM hypervisor:
+.RE
+.PP
+\fB\fCvirsh connect qemu:///system\fR
+.RS
+.IP \(bu 2
+Launch a new instance of the hypervisor and connect to it as the local user:
+.RE
+.PP
+\fB\fCvirsh connect qemu:///session\fR
+.RS
+.IP \(bu 2
+Connect as root to a remote hypervisor using ssh:
+.RE
+.PP
+\fB\fCvirsh connect qemu+ssh://{{user_name@host_name}}/system\fR

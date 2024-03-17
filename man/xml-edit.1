@@ -1,0 +1,42 @@
+.TH xml edit
+.PP
+.RS
+Edit an XML document.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete elements matching an XPATH from an XML document:
+.RE
+.PP
+\fB\fCxml edit \-\-delete "{{XPATH1}}" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Move an element node of an XML document from XPATH1 to XPATH2:
+.RE
+.PP
+\fB\fCxml edit \-\-move "{{XPATH1}}" "{{XPATH2}}" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Rename all attributes named "id" to "ID":
+.RE
+.PP
+\fB\fCxml edit \-\-rename "{{//*/@id}}" \-v "{{ID}}" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Rename sub\-elements of the element "table" that are named "rec" to "record":
+.RE
+.PP
+\fB\fCxml edit \-\-rename "{{/xml/table/rec}}" \-v "{{record}}" {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Update the XML table record with "id=3" to the value "id=5":
+.RE
+.PP
+\fB\fCxml edit \-\-update "{{xml/table/rec[@id=3]/@id}}" \-v {{5}} {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCedit\fR subcommand:
+.RE
+.PP
+\fB\fCxml edit \-\-help\fR

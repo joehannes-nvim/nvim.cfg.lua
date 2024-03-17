@@ -1,0 +1,42 @@
+.TH pygmentize
+.PP
+.RS
+Python\-based syntax highlighter.
+More information: \[la]https://pygments.org/docs/cmdline/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Highlight file syntax and print to \fB\fCstdout\fR (language is inferred from the file extension):
+.RE
+.PP
+\fB\fCpygmentize {{file.py}}\fR
+.RS
+.IP \(bu 2
+Explicitly set the language for syntax highlighting:
+.RE
+.PP
+\fB\fCpygmentize \-l {{javascript}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+List available lexers (processors for input languages):
+.RE
+.PP
+\fB\fCpygmentize \-L lexers\fR
+.RS
+.IP \(bu 2
+Save output to a file in HTML format:
+.RE
+.PP
+\fB\fCpygmentize \-f html \-o {{output_file.html}} {{input_file.py}}\fR
+.RS
+.IP \(bu 2
+List available output formats:
+.RE
+.PP
+\fB\fCpygmentize \-L formatters\fR
+.RS
+.IP \(bu 2
+Output an HTML file, with additional formatter options (full page, with line numbers):
+.RE
+.PP
+\fB\fCpygmentize \-f html \-O "full,linenos=True" \-o {{output_file.html}} {{input_file}}\fR

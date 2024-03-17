@@ -1,0 +1,54 @@
+.TH sf
+.PP
+.RS
+Salesforce CLI is a powerful command line interface that simplifies development and build automation when working with your Salesforce org.
+More information: \[la]https://developer.salesforce.com/tools/salesforcecli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authorize a Salesforce Organization:
+.RE
+.PP
+\fB\fCsf force:auth:web:login \-\-setalias {{organization}} \-\-instanceurl {{organization_url}}\fR
+.RS
+.IP \(bu 2
+List all authorized organizations:
+.RE
+.PP
+\fB\fCsf force:org:list\fR
+.RS
+.IP \(bu 2
+Open a specific organization in the default web browser:
+.RE
+.PP
+\fB\fCsf force:org:open \-\-targetusername {{organization}}\fR
+.RS
+.IP \(bu 2
+Display information about a specific organization:
+.RE
+.PP
+\fB\fCsf force:org:display \-\-targetusername {{organization}}\fR
+.RS
+.IP \(bu 2
+Push source metadata to an Organization:
+.RE
+.PP
+\fB\fCsf force:source:push \-\-targetusername {{organization}}\fR
+.RS
+.IP \(bu 2
+Pull source metadata from an Organization:
+.RE
+.PP
+\fB\fCsf force:source:pull \-\-targetusername {{organization}}\fR
+.RS
+.IP \(bu 2
+Generate a password for the organization's logged\-in user:
+.RE
+.PP
+\fB\fCsf force:user:password:generate \-\-targetusername {{organization}}\fR
+.RS
+.IP \(bu 2
+Assign a permission set for the organization's logged\-in user:
+.RE
+.PP
+\fB\fCsf force:user:permset:assign \-\-permsetname {{permission_set_name}} \-\-targetusername {{organization}}\fR

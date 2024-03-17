@@ -1,0 +1,30 @@
+.TH kubectl apply
+.PP
+.RS
+Manages applications through files defining Kubernetes resources. It creates and updates resources in a cluster.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply a configuration to a resource by file name or \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCkubectl apply \-f {{resource_filename}}\fR
+.RS
+.IP \(bu 2
+Edit the latest last\-applied\-configuration annotations of resources from the default editor:
+.RE
+.PP
+\fB\fCkubectl apply edit\-last\-applied \-f {{resource_filename}}\fR
+.RS
+.IP \(bu 2
+Set the latest last\-applied\-configuration annotations by setting it to match the contents of a file:
+.RE
+.PP
+\fB\fCkubectl apply set\-last\-applied \-f {{resource_filename}}\fR
+.RS
+.IP \(bu 2
+View the latest last\-applied\-configuration annotations by type/name or file:
+.RE
+.PP
+\fB\fCkubectl apply view\-last\-applied \-f {{resource_filename}}\fR

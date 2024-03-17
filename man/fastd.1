@@ -1,0 +1,43 @@
+.TH fastd
+.PP
+.RS
+VPN daemon.
+Works on Layer 2 or Layer 3, supports different encryption methods, used by Freifunk.
+More information: \[la]https://fastd.readthedocs.io/en/stable/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCfastd\fR with a specific configuration file:
+.RE
+.PP
+\fB\fCfastd \-\-config {{path/to/fastd.conf}}\fR
+.RS
+.IP \(bu 2
+Start a Layer 3 VPN with an MTU of 1400, loading the rest of the configuration parameters from a file:
+.RE
+.PP
+\fB\fCfastd \-\-mode {{tap}} \-\-mtu {{1400}} \-\-config {{path/to/fastd.conf}}\fR
+.RS
+.IP \(bu 2
+Validate a configuration file:
+.RE
+.PP
+\fB\fCfastd \-\-verify\-config \-\-config {{path/to/fastd.conf}}\fR
+.RS
+.IP \(bu 2
+Generate a new key:
+.RE
+.PP
+\fB\fCfastd \-\-generate\-key\fR
+.RS
+.IP \(bu 2
+Show the public key to a private key in a configuration file:
+.RE
+.PP
+\fB\fCfastd \-\-show\-key \-\-config {{path/to/fastd.conf}}\fR
+.RS
+.IP \(bu 2
+Show the current version:
+.RE
+.PP
+\fB\fCfastd \-v\fR

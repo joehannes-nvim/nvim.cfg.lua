@@ -1,0 +1,43 @@
+.TH bgpgrep
+.PP
+.RS
+Filter and print BGP data within MRT dumps.
+Can read files compressed with gzip, bzip2 and xz.
+More information: \[la]https://codeberg.org/1414codeforge/ubgpsuite\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Output all routes:
+.RE
+.PP
+\fB\fCbgpgrep {{master6.mrt}}\fR
+.RS
+.IP \(bu 2
+Output all routes received from a specific peer, determined by the peer's AS number:
+.RE
+.PP
+\fB\fCbgpgrep {{master4.mrt}} \-peer {{64498}}\fR
+.RS
+.IP \(bu 2
+Output all routes received from a specific peer, determined by the peer's IP address:
+.RE
+.PP
+\fB\fCbgpgrep {{master4.mrt.bz2}} \-peer {{2001:db8:dead:cafe:acd::19e}}\fR
+.RS
+.IP \(bu 2
+Output all routes which have certain ASNs in their AS path:
+.RE
+.PP
+\fB\fCbgpgrep {{master6.mrt.bz2}} \-aspath '{{64498 64510}}'\fR
+.RS
+.IP \(bu 2
+Output all routes that lead to a specific address:
+.RE
+.PP
+\fB\fCbgpgrep {{master6.mrt.bz2}} \-supernet '{{2001:db8:dead:cafe:aef::5}}'\fR
+.RS
+.IP \(bu 2
+Output all routes that have communities from a specific AS:
+.RE
+.PP
+\fB\fCbgpgrep {{master4.mrt}} \-communities \\( '{{64497}}:*' \\)\fR

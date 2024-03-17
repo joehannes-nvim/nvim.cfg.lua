@@ -1,0 +1,30 @@
+.TH docker login
+.PP
+.RS
+Log into a docker registry.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/login/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively log into a registry:
+.RE
+.PP
+\fB\fCdocker login\fR
+.RS
+.IP \(bu 2
+Log into a registry with a specific username (user will be prompted for a password):
+.RE
+.PP
+\fB\fCdocker login \-\-username {{username}}\fR
+.RS
+.IP \(bu 2
+Log into a registry with username and password:
+.RE
+.PP
+\fB\fCdocker login \-\-username {{username}} \-\-password {{password}} {{server}}\fR
+.RS
+.IP \(bu 2
+Log into a registry with password from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{{password}}" | docker login \-\-username {{username}} \-\-password\-stdin\fR

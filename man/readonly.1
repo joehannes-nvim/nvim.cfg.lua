@@ -1,0 +1,25 @@
+.TH readonly
+.PP
+.RS
+Create or modify read\-only variables within a shell script, preventing the variable from being changed by subsequent commands.
+This is useful when you want to ensure that a variable retains a constant value throughout the execution of a script.
+More information: \[la]https://manned.org/readonly.1p\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a read\-only variable:
+.RE
+.PP
+\fB\fCreadonly {{variable_name}}={{value}}\fR
+.RS
+.IP \(bu 2
+Mark a variable as read\-only:
+.RE
+.PP
+\fB\fCreadonly {{existing_variable}}\fR
+.RS
+.IP \(bu 2
+[p]rint the names and values of all read\-only variables to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCreadonly \-p\fR

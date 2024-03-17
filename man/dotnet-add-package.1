@@ -1,0 +1,42 @@
+.TH dotnet add package
+.PP
+.RS
+Add or update a .NET package reference in a project file.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools/dotnet-add-package\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a package to the project in the current directory:
+.RE
+.PP
+\fB\fCdotnet add package {{package}}\fR
+.RS
+.IP \(bu 2
+Add a package to a specific project:
+.RE
+.PP
+\fB\fCdotnet add {{path/to/file.csproj}} package {{package}}\fR
+.RS
+.IP \(bu 2
+Add a specific version of a package to the project:
+.RE
+.PP
+\fB\fCdotnet add package {{package}} \-\-version {{1.0.0}}\fR
+.RS
+.IP \(bu 2
+Add a package using a specific NuGet source:
+.RE
+.PP
+\fB\fCdotnet add package {{package}} \-\-source {{https://api.nuget.org/v3/index.json}}\fR
+.RS
+.IP \(bu 2
+Add a package only when targeting a specific framework:
+.RE
+.PP
+\fB\fCdotnet add package {{package}} \-\-framework {{net7.0}}\fR
+.RS
+.IP \(bu 2
+Add and specify the directory where to restore packages (\fB\fC~/.nuget/packages\fR by default):
+.RE
+.PP
+\fB\fCdotnet add package {{package}} \-\-package\-directory {{path/to/directory}}\fR

@@ -1,0 +1,37 @@
+.TH pt
+.PP
+.RS
+Platinum Searcher.
+A code search tool similar to \fB\fCag\fR\&.
+More information: \[la]https://github.com/monochromegane/the_platinum_searcher\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find files containing "foo" and print the files with highlighted matches:
+.RE
+.PP
+\fB\fCpt {{foo}}\fR
+.RS
+.IP \(bu 2
+Find files containing "foo" and display count of matches in each file:
+.RE
+.PP
+\fB\fCpt \-c {{foo}}\fR
+.RS
+.IP \(bu 2
+Find files containing "foo" as a whole word and ignore its case:
+.RE
+.PP
+\fB\fCpt \-wi {{foo}}\fR
+.RS
+.IP \(bu 2
+Find "foo" in files with a given extension using a regular expression:
+.RE
+.PP
+\fB\fCpt \-G='{{\\.bar$}}' {{foo}}\fR
+.RS
+.IP \(bu 2
+Find files whose contents match the regular expression, up to 2 directories deep:
+.RE
+.PP
+\fB\fCpt \-\-depth={{2}} \-e '{{^ba[rz]*$}}'\fR

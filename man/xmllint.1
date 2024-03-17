@@ -1,0 +1,42 @@
+.TH xmllint
+.PP
+.RS
+XML parser and linter that supports XPath, a syntax for navigating XML trees.
+More information: \[la]https://manned.org/xmllint\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Return all nodes (tags) named "foo":
+.RE
+.PP
+\fB\fCxmllint \-\-xpath "//{{foo}}" {{source_file.xml}}\fR
+.RS
+.IP \(bu 2
+Return the contents of the first node named "foo" as a string:
+.RE
+.PP
+\fB\fCxmllint \-\-xpath "string(//{{foo}})" {{source_file.xml}}\fR
+.RS
+.IP \(bu 2
+Return the href attribute of the second anchor element in an HTML file:
+.RE
+.PP
+\fB\fCxmllint \-\-html \-\-xpath "string(//a[2]/@href)" webpage.xhtml\fR
+.RS
+.IP \(bu 2
+Return human\-readable (indented) XML from file:
+.RE
+.PP
+\fB\fCxmllint \-\-format {{source_file.xml}}\fR
+.RS
+.IP \(bu 2
+Check that an XML file meets the requirements of its DOCTYPE declaration:
+.RE
+.PP
+\fB\fCxmllint \-\-valid {{source_file.xml}}\fR
+.RS
+.IP \(bu 2
+Validate XML against DTD schema hosted online:
+.RE
+.PP
+\fB\fCxmllint \-\-dtdvalid {{URL}} {{source_file.xml}}\fR

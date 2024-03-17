@@ -1,0 +1,24 @@
+.TH tex
+.PP
+.RS
+Compile a DVI document from TeX source files.
+More information: \[la]https://www.tug.org/begin.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a DVI document:
+.RE
+.PP
+\fB\fCtex {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a DVI document, specifying an output directory:
+.RE
+.PP
+\fB\fCtex \-output\-directory={{path/to/directory}} {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a DVI document, exiting on each error:
+.RE
+.PP
+\fB\fCtex \-halt\-on\-error {{source.tex}}\fR

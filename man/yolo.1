@@ -1,0 +1,18 @@
+.TH yolo
+.PP
+.RS
+The YOLO command\-line interface lets you simply train, validate or infer models on various tasks and versions.
+More information: \[la]https://docs.ultralytics.com/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a copy of the default configuration in your current working directory:
+.RE
+.PP
+\fB\fCyolo task=init\fR
+.RS
+.IP \(bu 2
+Train the object detection, instance segment, or classification model with the specified configuration file:
+.RE
+.PP
+\fB\fCyolo task={{detect|segment|classify}} mode=train cfg={{path/to/config.yaml}}\fR

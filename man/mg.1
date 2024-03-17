@@ -1,0 +1,30 @@
+.TH mg
+.PP
+.RS
+A small, fast, and portable text editor based on \fB\fCemacs\fR\&.
+More information: \[la]https://github.com/hboetes/mg\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file for editing:
+.RE
+.PP
+\fB\fCmg {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file at a specified line number:
+.RE
+.PP
+\fB\fCmg +{{line_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open files in a read\-only mode:
+.RE
+.PP
+\fB\fCmg \-R {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Disable \fB\fC~\fR backup files while editing:
+.RE
+.PP
+\fB\fCmg \-n {{path/to/file}}\fR

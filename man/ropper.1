@@ -1,0 +1,36 @@
+.TH ropper
+.PP
+.RS
+Find ROP gadgets in binary files.
+More information: \[la]http://scoding.de/ropper/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List gadgets in the binary file:
+.RE
+.PP
+\fB\fCropper \-\-file {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Filter gadgets in the binary file by a regular expression:
+.RE
+.PP
+\fB\fCropper \-\-file {{path/to/binary}} \-\-search {{regex}}\fR
+.RS
+.IP \(bu 2
+List gadgets of specified type in the binary file:
+.RE
+.PP
+\fB\fCropper \-\-file {{path/to/binary}} \-\-type {{rop|job|sys|all}}\fR
+.RS
+.IP \(bu 2
+Exclude bad byte gadgets in the binary file:
+.RE
+.PP
+\fB\fCropper \-\-file {{path/to/binary}} \-\-badbytes {{byte_string}}\fR
+.RS
+.IP \(bu 2
+List gadgets up to the specified instruction count in the binary file:
+.RE
+.PP
+\fB\fCropper \-\-file {{path/to/binary}} \-\-inst\-count {{count}}\fR

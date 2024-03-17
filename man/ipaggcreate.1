@@ -1,0 +1,24 @@
+.TH ipaggcreate
+.PP
+.RS
+Produce aggregate statistics of TCP/IP dumps.
+More information: \[la]https://manned.org/ipaggcreate\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Count the number of packets sent from each source address appearing in a pcap file:
+.RE
+.PP
+\fB\fCipaggcreate \-\-src {{path/to/file.pcap}}\fR
+.RS
+.IP \(bu 2
+Group and count packets read from a network interface by IP packet length:
+.RE
+.PP
+\fB\fCipaggcreate \-\-interface {{eth0}} \-\-length\fR
+.RS
+.IP \(bu 2
+Count the number of bytes sent between each address pair appearing in a pcap file:
+.RE
+.PP
+\fB\fCipaggcreate \-\-address\-pairs \-\-bytes {{path/to/file.pcap}}\fR

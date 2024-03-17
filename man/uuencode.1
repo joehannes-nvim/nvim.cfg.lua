@@ -1,0 +1,24 @@
+.TH uuencode
+.PP
+.RS
+Encode binary files into ASCII for transport via mediums that only support simple ASCII encoding.
+More information: \[la]https://manned.org/uuencode\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encode a file and print the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCuuencode {{path/to/input_file}} {{output_file_name_after_decoding}}\fR
+.RS
+.IP \(bu 2
+Encode a file and write the result to a file:
+.RE
+.PP
+\fB\fCuuencode \-o {{path/to/output_file}} {{path/to/input_file}} {{output_file_name_after_decoding}}\fR
+.RS
+.IP \(bu 2
+Encode a file using Base64 instead of the default uuencode encoding and write the result to a file:
+.RE
+.PP
+\fB\fCuuencode \-m \-o {{path/to/output_file}} {{path/to/input_file}} {{output_file_name_after_decoding}}\fR

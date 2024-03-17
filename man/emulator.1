@@ -1,0 +1,54 @@
+.TH emulator
+.PP
+.RS
+Manage Android emulators.
+More information: \[la]https://developer.android.com/studio/run/emulator-commandline\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an Android emulator device:
+.RE
+.PP
+\fB\fCemulator \-avd {{name}}\fR
+.RS
+.IP \(bu 2
+Display the webcams on your development computer that are available for emulation:
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-webcam\-list\fR
+.RS
+.IP \(bu 2
+Start an emulator overriding the facing back camera setting (use \fB\fC\-camera\-front\fR for front camera):
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-camera\-back {{none|emulated|webcamN}}\fR
+.RS
+.IP \(bu 2
+Start an emulator, with a maximum network speed:
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-netspeed {{gsm|hscsd|gprs|edge|hsdpa|lte|evdo|full}}\fR
+.RS
+.IP \(bu 2
+Start an emulator with network latency:
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-netdelay {{gsm|hscsd|gprs|edge|hsdpa|lte|evdo|none}}\fR
+.RS
+.IP \(bu 2
+Start an emulator, making all TCP connections through a specified HTTP/HTTPS proxy (port number is required):
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-http\-proxy {{http://example.com:80}}\fR
+.RS
+.IP \(bu 2
+Start an emulator with a given SD card partition image file:
+.RE
+.PP
+\fB\fCemulator \-avd {{name}} \-sdcard {{path/to/sdcard.img}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCemulator \-help\fR

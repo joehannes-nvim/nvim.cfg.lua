@@ -1,0 +1,24 @@
+.TH dvc commit
+.PP
+.RS
+Record changes to DVC\-tracked files in the project.
+More information: \[la]https://dvc.org/doc/command-reference/commit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Commit changes to all DVC\-tracked files and directories:
+.RE
+.PP
+\fB\fCdvc commit\fR
+.RS
+.IP \(bu 2
+Commit changes to a specified DVC\-tracked target:
+.RE
+.PP
+\fB\fCdvc commit {{target}}\fR
+.RS
+.IP \(bu 2
+Recursively commit all DVC\-tracked files in a directory:
+.RE
+.PP
+\fB\fCdvc commit \-\-recursive {{path/to/directory}}\fR

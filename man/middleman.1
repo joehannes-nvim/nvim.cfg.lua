@@ -1,0 +1,36 @@
+.TH middleman
+.PP
+.RS
+Static site generator written in Ruby.
+More information: \[la]https://middlemanapp.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Middleman project:
+.RE
+.PP
+\fB\fCmiddleman init "{{project_name}}"\fR
+.RS
+.IP \(bu 2
+Start local server for current project on port 4567:
+.RE
+.PP
+\fB\fCmiddleman server\fR
+.RS
+.IP \(bu 2
+Start local server for current project on a specified port:
+.RE
+.PP
+\fB\fCmiddleman server \-p "{{port}}"\fR
+.RS
+.IP \(bu 2
+Build the project in the current directory to prepare for deployment:
+.RE
+.PP
+\fB\fCbundle exec middleman build\fR
+.RS
+.IP \(bu 2
+Deploy the Middleman project in the current directory:
+.RE
+.PP
+\fB\fCmiddleman deploy\fR

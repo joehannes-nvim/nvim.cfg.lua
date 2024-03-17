@@ -1,0 +1,30 @@
+.TH clear
+.PP
+.RS
+Clears the screen of the terminal.
+More information: \[la]https://manned.org/clear\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clear the screen (equivalent to pressing Control\-L in Bash shell):
+.RE
+.PP
+\fB\fCclear\fR
+.RS
+.IP \(bu 2
+Clear the screen but keep the terminal's scrollback buffer:
+.RE
+.PP
+\fB\fCclear \-x\fR
+.RS
+.IP \(bu 2
+Indicate the type of terminal to clean (defaults to the value of the environment variable \fB\fCTERM\fR):
+.RE
+.PP
+\fB\fCclear \-T {{type_of_terminal}}\fR
+.RS
+.IP \(bu 2
+Show the version of \fB\fCncurses\fR used by \fB\fCclear\fR:
+.RE
+.PP
+\fB\fCclear \-V\fR

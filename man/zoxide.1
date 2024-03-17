@@ -1,0 +1,43 @@
+.TH zoxide
+.PP
+.RS
+Keep track of the most frequently used directories.
+Uses a ranking algorithm to navigate to the best match.
+More information: \[la]https://github.com/ajeetdsouza/zoxide\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Go to the highest\-ranked directory that contains "foo" in the name:
+.RE
+.PP
+\fB\fCzoxide query {{foo}}\fR
+.RS
+.IP \(bu 2
+Go to the highest\-ranked directory that contains "foo" and then "bar":
+.RE
+.PP
+\fB\fCzoxide query {{foo}} {{bar}}\fR
+.RS
+.IP \(bu 2
+Start an interactive directory search (requires \fB\fCfzf\fR):
+.RE
+.PP
+\fB\fCzoxide query \-\-interactive\fR
+.RS
+.IP \(bu 2
+Add a directory or increment its rank:
+.RE
+.PP
+\fB\fCzoxide add {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Remove a directory from \fB\fCzoxide\fR\&'s database interactively:
+.RE
+.PP
+\fB\fCzoxide remove {{path/to/directory}} \-\-interactive\fR
+.RS
+.IP \(bu 2
+Generate shell configuration for command aliases (\fB\fCz\fR, \fB\fCza\fR, \fB\fCzi\fR, \fB\fCzq\fR, \fB\fCzr\fR):
+.RE
+.PP
+\fB\fCzoxide init {{bash|fish|zsh}}\fR

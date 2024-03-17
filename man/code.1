@@ -1,0 +1,54 @@
+.TH code
+.PP
+.RS
+Cross platform and extensible code editor.
+More information: \[la]https://github.com/microsoft/vscode\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Visual Studio Code:
+.RE
+.PP
+\fB\fCcode\fR
+.RS
+.IP \(bu 2
+Open specific files/directories:
+.RE
+.PP
+\fB\fCcode {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Compare two specific files:
+.RE
+.PP
+\fB\fCcode \-\-diff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Open specific files/directories in a new window:
+.RE
+.PP
+\fB\fCcode \-\-new\-window {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Install/uninstall a specific extension:
+.RE
+.PP
+\fB\fCcode \-\-{{install|uninstall}}\-extension {{publisher.extension}}\fR
+.RS
+.IP \(bu 2
+Print installed extensions:
+.RE
+.PP
+\fB\fCcode \-\-list\-extensions\fR
+.RS
+.IP \(bu 2
+Print installed extensions with their versions:
+.RE
+.PP
+\fB\fCcode \-\-list\-extensions \-\-show\-versions\fR
+.RS
+.IP \(bu 2
+Start the editor as a superuser (root) while storing user data in a specific directory:
+.RE
+.PP
+\fB\fCsudo code \-\-user\-data\-dir {{path/to/directory}}\fR

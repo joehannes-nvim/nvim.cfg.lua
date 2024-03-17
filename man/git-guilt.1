@@ -1,0 +1,43 @@
+.TH git guilt
+.PP
+.RS
+Show total blame count for files with unstaged changes or calculate the change in blame between two revisions.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-guilt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show total blame count:
+.RE
+.PP
+\fB\fCgit guilt\fR
+.RS
+.IP \(bu 2
+Calculate the change in blame between two revisions:
+.RE
+.PP
+\fB\fCgit guilt {{first_revision}} {{last_revision}}\fR
+.RS
+.IP \(bu 2
+Show author emails instead of names:
+.RE
+.PP
+\fB\fCgit guilt \-\-email\fR
+.RS
+.IP \(bu 2
+Ignore whitespace only changes when attributing blame:
+.RE
+.PP
+\fB\fCgit guilt \-\-ignore\-whitespace\fR
+.RS
+.IP \(bu 2
+Find blame delta over the last three weeks:
+.RE
+.PP
+\fB\fCgit guilt 'git log \-\-until="3 weeks ago" \-\-format="%H" \-n 1'\fR
+.RS
+.IP \(bu 2
+Find blame delta over the last three weeks (git 1.8.5+):
+.RE
+.PP
+\fB\fCgit guilt @{3.weeks.ago}\fR

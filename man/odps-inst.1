@@ -1,0 +1,37 @@
+.TH odps inst
+.PP
+.RS
+Manage instances in ODPS (Open Data Processing Service).
+See also \fB\fCodps\fR\&.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show instances created by current user:
+.RE
+.PP
+\fB\fCshow instances;\fR
+.RS
+.IP \(bu 2
+Describe the details of an instance:
+.RE
+.PP
+\fB\fCdesc instance {{instance_id}};\fR
+.RS
+.IP \(bu 2
+Check the status of an instance:
+.RE
+.PP
+\fB\fCstatus {{instance_id}};\fR
+.RS
+.IP \(bu 2
+Wait on the termination of an instance, printing log and progress information until then:
+.RE
+.PP
+\fB\fCwait {{instance_id}};\fR
+.RS
+.IP \(bu 2
+Kill an instance:
+.RE
+.PP
+\fB\fCkill {{instance_id}};\fR

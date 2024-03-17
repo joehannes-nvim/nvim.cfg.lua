@@ -1,0 +1,24 @@
+.TH git replace
+.PP
+.RS
+Create, list, and delete refs to replace objects.
+More information: \[la]https://git-scm.com/docs/git-replace\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace any commit with a different one, leaving other commits unchanged:
+.RE
+.PP
+\fB\fCgit replace {{object}} {{replacement}}\fR
+.RS
+.IP \(bu 2
+Delete existing replace refs for the given objects:
+.RE
+.PP
+\fB\fCgit replace \-\-delete {{object}}\fR
+.RS
+.IP \(bu 2
+Edit an object’s content interactively:
+.RE
+.PP
+\fB\fCgit replace \-\-edit {{object}}\fR

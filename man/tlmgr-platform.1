@@ -1,0 +1,36 @@
+.TH tldr platform
+.PP
+.RS
+Manage TeX Live platforms.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available platforms in the package repository:
+.RE
+.PP
+\fB\fCtlmgr platform list\fR
+.RS
+.IP \(bu 2
+Add the executables for a specific platform:
+.RE
+.PP
+\fB\fCsudo tlmgr platform add {{platform}}\fR
+.RS
+.IP \(bu 2
+Remove the executables for a specific platform:
+.RE
+.PP
+\fB\fCsudo tlmgr platform remove {{platform}}\fR
+.RS
+.IP \(bu 2
+Auto\-detect and switch to the current platform:
+.RE
+.PP
+\fB\fCsudo tlmgr platform set {{auto}}\fR
+.RS
+.IP \(bu 2
+Switch to a specific platform:
+.RE
+.PP
+\fB\fCsudo tlmgr platform set {{platform}}\fR

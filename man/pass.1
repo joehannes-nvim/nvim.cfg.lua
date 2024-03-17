@@ -1,0 +1,55 @@
+.TH pass
+.PP
+.RS
+Tool for storing and reading passwords or other sensitive data.
+All data is GPG\-encrypted, and managed with a Git repository.
+More information: \[la]https://www.passwordstore.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize (or re\-encrypt) the storage using one or more GPG IDs:
+.RE
+.PP
+\fB\fCpass init {{gpg_id_1}} {{gpg_id_2}}\fR
+.RS
+.IP \(bu 2
+Save a new password and additional information (press Ctrl + D on a new line to complete):
+.RE
+.PP
+\fB\fCpass insert \-\-multiline {{path/to/data}}\fR
+.RS
+.IP \(bu 2
+Edit an entry:
+.RE
+.PP
+\fB\fCpass edit {{path/to/data}}\fR
+.RS
+.IP \(bu 2
+Copy a password (first line of the data file) to the clipboard:
+.RE
+.PP
+\fB\fCpass \-c {{path/to/data}}\fR
+.RS
+.IP \(bu 2
+List the whole store tree:
+.RE
+.PP
+\fB\fCpass\fR
+.RS
+.IP \(bu 2
+Generate a new random password with a given length, and copy it to the clipboard:
+.RE
+.PP
+\fB\fCpass generate \-c {{path/to/data}} {{num}}\fR
+.RS
+.IP \(bu 2
+Initialize a new Git repository (any changes done by pass will be committed automatically):
+.RE
+.PP
+\fB\fCpass git init\fR
+.RS
+.IP \(bu 2
+Run a Git command on behalf of the password storage:
+.RE
+.PP
+\fB\fCpass git {{command}}\fR

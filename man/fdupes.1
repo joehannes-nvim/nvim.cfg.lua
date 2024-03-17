@@ -1,0 +1,48 @@
+.TH fdupes
+.PP
+.RS
+Finds duplicate files in a given set of directories.
+More information: \[la]https://github.com/adrianlopezroche/fdupes\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search a single directory:
+.RE
+.PP
+\fB\fCfdupes {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search multiple directories:
+.RE
+.PP
+\fB\fCfdupes {{directory1}} {{directory2}}\fR
+.RS
+.IP \(bu 2
+Search a directory recursively:
+.RE
+.PP
+\fB\fCfdupes \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search multiple directories, one recursively:
+.RE
+.PP
+\fB\fCfdupes {{directory1}} \-R {{directory2}}\fR
+.RS
+.IP \(bu 2
+Search recursively and replace duplicates with hardlinks:
+.RE
+.PP
+\fB\fCfdupes \-rH {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search recursively for duplicates and display interactive prompt to pick which ones to keep, deleting the others:
+.RE
+.PP
+\fB\fCfdupes \-rd {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search recursively and delete duplicates without prompting:
+.RE
+.PP
+\fB\fCfdupes \-rdN {{path/to/directory}}\fR

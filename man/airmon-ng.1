@@ -1,0 +1,31 @@
+.TH airmon\-ng
+.PP
+.RS
+Activate monitor mode on wireless network devices.
+Part of \fB\fCaircrack\-ng\fR\&.
+More information: \[la]https://www.aircrack-ng.org/doku.php?id=airmon-ng\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List wireless devices and their statuses:
+.RE
+.PP
+\fB\fCsudo airmon\-ng\fR
+.RS
+.IP \(bu 2
+Turn on monitor mode for a specific device:
+.RE
+.PP
+\fB\fCsudo airmon\-ng start {{wlan0}}\fR
+.RS
+.IP \(bu 2
+Kill disturbing processes that use wireless devices:
+.RE
+.PP
+\fB\fCsudo airmon\-ng check kill\fR
+.RS
+.IP \(bu 2
+Turn off monitor mode for a specific network interface:
+.RE
+.PP
+\fB\fCsudo airmon\-ng stop {{wlan0mon}}\fR

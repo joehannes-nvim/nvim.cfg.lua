@@ -1,0 +1,24 @@
+.TH pueue group
+.PP
+.RS
+Display, add or remove groups.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all groups with their statuses and number of parallel jobs:
+.RE
+.PP
+\fB\fCpueue group\fR
+.RS
+.IP \(bu 2
+Add a custom group:
+.RE
+.PP
+\fB\fCpueue group \-\-add "{{group_name}}"\fR
+.RS
+.IP \(bu 2
+Remove a group and move its tasks to the default group:
+.RE
+.PP
+\fB\fCpueue group \-\-remove "{{group_name}}"\fR

@@ -1,0 +1,31 @@
+.TH in2csv
+.PP
+.RS
+Converts various tabular data formats into CSV.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/in2csv.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an XLS file to CSV:
+.RE
+.PP
+\fB\fCin2csv {{data.xls}}\fR
+.RS
+.IP \(bu 2
+Convert a DBF file to a CSV file:
+.RE
+.PP
+\fB\fCin2csv {{data.dbf}} > {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Convert a specific sheet from an XLSX file to CSV:
+.RE
+.PP
+\fB\fCin2csv \-\-sheet={{sheet_name}} {{data.xlsx}}\fR
+.RS
+.IP \(bu 2
+Pipe a JSON file to in2csv:
+.RE
+.PP
+\fB\fCcat {{data.json}} | in2csv \-f json > {{data.csv}}\fR

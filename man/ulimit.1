@@ -1,0 +1,30 @@
+.TH ulimit
+.PP
+.RS
+Get and set user limits.
+More information: \[la]https://manned.org/ulimit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get the properties of all the user limits:
+.RE
+.PP
+\fB\fCulimit \-a\fR
+.RS
+.IP \(bu 2
+Get hard limit for the number of simultaneously opened files:
+.RE
+.PP
+\fB\fCulimit \-H \-n\fR
+.RS
+.IP \(bu 2
+Get soft limit for the number of simultaneously opened files:
+.RE
+.PP
+\fB\fCulimit \-S \-n\fR
+.RS
+.IP \(bu 2
+Set max per\-user process limit:
+.RE
+.PP
+\fB\fCulimit \-u 30\fR

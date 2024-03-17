@@ -1,0 +1,24 @@
+.TH git cat\-file
+.PP
+.RS
+Provide content or type and size information for Git repository objects.
+More information: \[la]https://git-scm.com/docs/git-cat-file\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get the [s]ize of the HEAD commit in bytes:
+.RE
+.PP
+\fB\fCgit cat\-file \-s HEAD\fR
+.RS
+.IP \(bu 2
+Get the [t]ype (blob, tree, commit, tag) of a given Git object:
+.RE
+.PP
+\fB\fCgit cat\-file \-t {{8c442dc3}}\fR
+.RS
+.IP \(bu 2
+Pretty\-[p]rint the contents of a given Git object based on its type:
+.RE
+.PP
+\fB\fCgit cat\-file \-p {{HEAD~2}}\fR

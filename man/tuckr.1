@@ -1,0 +1,36 @@
+.TH tuckr
+.PP
+.RS
+Dotfile manager written in Rust.
+More information: \[la]https://github.com/RaphGL/Tuckr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check dotfile status:
+.RE
+.PP
+\fB\fCtuckr status\fR
+.RS
+.IP \(bu 2
+Add all dotfiles to system:
+.RE
+.PP
+\fB\fCtuckr add \\*\fR
+.RS
+.IP \(bu 2
+Add all dotfiles except specified programs:
+.RE
+.PP
+\fB\fCtuckr add \\* \-e {{program1}},{{program2}}\fR
+.RS
+.IP \(bu 2
+Remove all dotfiles from the system:
+.RE
+.PP
+\fB\fCtuckr rm \\*\fR
+.RS
+.IP \(bu 2
+Add a program dotfile and run its setup script:
+.RE
+.PP
+\fB\fCtuckr set {{program}}\fR

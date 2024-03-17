@@ -1,0 +1,31 @@
+.TH electron\-packager
+.PP
+.RS
+A tool used to build Electron app executables for Windows, Linux and macOS.
+Requires a valid package.json in the application directory.
+More information: \[la]https://github.com/electron/electron-packager\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Package an application for the current architecture and platform:
+.RE
+.PP
+\fB\fCelectron\-packager "{{path/to/app}}" "{{app_name}}"\fR
+.RS
+.IP \(bu 2
+Package an application for all architectures and platforms:
+.RE
+.PP
+\fB\fCelectron\-packager "{{path/to/app}}" "{{app_name}}" \-\-all\fR
+.RS
+.IP \(bu 2
+Package an application for 64\-bit Linux:
+.RE
+.PP
+\fB\fCelectron\-packager "{{path/to/app}}" "{{app_name}}" \-\-platform="{{linux}}" \-\-arch="{{x64}}"\fR
+.RS
+.IP \(bu 2
+Package an application for ARM macOS:
+.RE
+.PP
+\fB\fCelectron\-packager "{{path/to/app}}" "{{app_name}}" \-\-platform="{{darwin}}" \-\-arch="{{arm64}}"\fR

@@ -1,0 +1,42 @@
+.TH ogr2ogr
+.PP
+.RS
+Convert geospatial vector data between file formats.
+More information: \[la]https://gdal.org/programs/ogr2ogr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a Shapefile into a GeoPackage:
+.RE
+.PP
+\fB\fCogr2ogr \-f GPKG {{path/to/output}}.gpkg {{path/to/input}}.shp\fR
+.RS
+.IP \(bu 2
+Reduce a GeoJSON to features matching a condition:
+.RE
+.PP
+\fB\fCogr2ogr \-where '{{myProperty > 42}}' \-f {{GeoJSON}} {{path/to/output.geojson}} {{path/to/input.geojson}}\fR
+.RS
+.IP \(bu 2
+Change coordinate reference system of a GeoPackage from \fB\fCEPSG:4326\fR to \fB\fCEPSG:3857\fR:
+.RE
+.PP
+\fB\fCogr2ogr \-s_srs {{EPSG:4326}} \-t_srs {{EPSG:3857}} \-f GPKG {{path/to/output}}.gpkg {{path/to/input}}.gpkg\fR
+.RS
+.IP \(bu 2
+Convert a CSV file into a GeoPackage, specifying the names of the coordinate columns and assigning a coordinate reference system:
+.RE
+.PP
+\fB\fCogr2ogr \-f GPKG {{path/to/output}}.gpkg {{path/to/input}}.csv \-oo X_POSSIBLE_NAMES={{longitude}} \-oo Y_POSSIBLE_NAMES={{latitude}} \-a_srs {{EPSG:4326}}\fR
+.RS
+.IP \(bu 2
+Load a GeoPackage into a PostGIS database:
+.RE
+.PP
+\fB\fCogr2ogr \-f PostgreSQL PG:dbname="{{database_name}}" {{path/to/input}}.gpkg\fR
+.RS
+.IP \(bu 2
+Clip layers of a GeoPackage file to the given bounding box:
+.RE
+.PP
+\fB\fCogr2ogr \-spat {{min_x}} {{min_y}} {{max_x}} {{max_y}} \-f GPKG {{path/to/output}}.gpkg {{path/to/input}}.gpkg\fR

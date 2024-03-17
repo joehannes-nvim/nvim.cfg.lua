@@ -1,0 +1,43 @@
+.TH zeek
+.PP
+.RS
+Passive network traffic analyzer.
+Any output and log files will be saved to the current working directory.
+More information: \[la]https://docs.zeek.org/en/lts/quickstart.html#zeek-as-a-command-line-utility\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze live traffic from a network interface:
+.RE
+.PP
+\fB\fCsudo zeek \-\-iface {{interface}}\fR
+.RS
+.IP \(bu 2
+Analyze live traffic from a network interface and load custom scripts:
+.RE
+.PP
+\fB\fCsudo zeek \-\-iface {{interface}} {{script1}} {{script2}}\fR
+.RS
+.IP \(bu 2
+Analyze live traffic from a network interface, without loading any scripts:
+.RE
+.PP
+\fB\fCsudo zeek \-\-bare\-mode \-\-iface {{interface}}\fR
+.RS
+.IP \(bu 2
+Analyze live traffic from a network interface, applying a \fB\fCtcpdump\fR filter:
+.RE
+.PP
+\fB\fCsudo zeek \-\-filter {{path/to/filter}} \-\-iface {{interface}}\fR
+.RS
+.IP \(bu 2
+Analyze live traffic from a network interface using a watchdog timer:
+.RE
+.PP
+\fB\fCsudo zeek \-\-watchdog \-\-iface {{interface}}\fR
+.RS
+.IP \(bu 2
+Analyze traffic from a \fB\fCpcap\fR file:
+.RE
+.PP
+\fB\fCzeek \-\-readfile {{path/to/file.trace}}\fR

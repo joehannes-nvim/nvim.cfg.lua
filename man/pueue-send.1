@@ -1,0 +1,18 @@
+.TH pueue send
+.PP
+.RS
+Send input to a task.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send input to a running command:
+.RE
+.PP
+\fB\fCpueue send {{task_id}} "{{input}}"\fR
+.RS
+.IP \(bu 2
+Send confirmation to a task expecting y/N (e.g. apt, cp):
+.RE
+.PP
+\fB\fCpueue send {{task_id}} {{y}}\fR

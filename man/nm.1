@@ -1,0 +1,30 @@
+.TH nm
+.PP
+.RS
+List symbol names in object files.
+More information: \[la]https://manned.org/nm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List global (extern) functions in a file (prefixed with T):
+.RE
+.PP
+\fB\fCnm \-g {{path/to/file.o}}\fR
+.RS
+.IP \(bu 2
+List only undefined symbols in a file:
+.RE
+.PP
+\fB\fCnm \-u {{path/to/file.o}}\fR
+.RS
+.IP \(bu 2
+List all symbols, even debugging symbols:
+.RE
+.PP
+\fB\fCnm \-a {{path/to/file.o}}\fR
+.RS
+.IP \(bu 2
+Demangle C++ symbols (make them readable):
+.RE
+.PP
+\fB\fCnm \-\-demangle {{path/to/file.o}}\fR

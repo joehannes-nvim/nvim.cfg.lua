@@ -1,0 +1,42 @@
+.TH raco
+.PP
+.RS
+Racket command\-line tools.
+More information: \[la]https://docs.racket-lang.org/raco/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package, automatically installing dependencies:
+.RE
+.PP
+\fB\fCraco pkg install \-\-auto {{package_source}}\fR
+.RS
+.IP \(bu 2
+Install the current directory as a package:
+.RE
+.PP
+\fB\fCraco pkg install\fR
+.RS
+.IP \(bu 2
+Build (or rebuild) bytecode, documentation, executables, and metadata indexes for collections:
+.RE
+.PP
+\fB\fCraco setup {{collection1 collection2 ...}}\fR
+.RS
+.IP \(bu 2
+Run tests in files:
+.RE
+.PP
+\fB\fCraco test {{path/to/tests1.rkt path/to/tests2.rkt ...}}\fR
+.RS
+.IP \(bu 2
+Search local documentation:
+.RE
+.PP
+\fB\fCraco docs {{search_terms ...}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCraco help\fR

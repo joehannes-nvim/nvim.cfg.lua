@@ -1,0 +1,24 @@
+.TH vela
+.PP
+.RS
+Command\-line tools for the Vela pipeline.
+More information: \[la]https://go-vela.github.io/docs/reference/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Trigger a pipeline to run from a Git branch, commit or tag:
+.RE
+.PP
+\fB\fCvela add deployment \-\-org {{organization}} \-\-repo {{repository_name}} \-\-target {{environment}} \-\-ref {{branch|commit|refs/tags/git_tag}} \-\-description "{{deploy_description}}"\fR
+.RS
+.IP \(bu 2
+List deployments for a repository:
+.RE
+.PP
+\fB\fCvela get deployment \-\-org {{organization}} \-\-repo {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Inspect a specific deployment:
+.RE
+.PP
+\fB\fCvela view deployment \-\-org {{organization}} \-\-repo {{repository_name}} \-\-deployment {{deployment_number}}\fR

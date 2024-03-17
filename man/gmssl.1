@@ -1,0 +1,54 @@
+.TH gmssl
+.PP
+.RS
+GmSSL is a crypto toolkit supporting SM1, SM2, SM3, SM4, SM9, and ZUC/ZUC256.
+More information: \[la]http://gmssl.org/english.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an SM3 hash for a file:
+.RE
+.PP
+\fB\fCgmssl sm3 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Encrypt a file using the SM4 cipher:
+.RE
+.PP
+\fB\fCgmssl sms4 \-e \-in {{path/to/file}} \-out {{path/to/file.sms4}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file using the SM4 cipher:
+.RE
+.PP
+\fB\fCgmssl sms4 \-d \-in {{path/to/file.sms4}}\fR
+.RS
+.IP \(bu 2
+Generate an SM2 private key:
+.RE
+.PP
+\fB\fCgmssl sm2 \-genkey \-out {{path/to/file.pem}}\fR
+.RS
+.IP \(bu 2
+Generate an SM2 public key from an existing private key:
+.RE
+.PP
+\fB\fCgmssl sm2 \-pubout \-in {{path/to/file.pem}} \-out {{path/to/file.pem.pub}}\fR
+.RS
+.IP \(bu 2
+Encrypt a file using the ZUC cipher:
+.RE
+.PP
+\fB\fCgmssl zuc \-e \-in {{path/to/file}} \-out {{path/to/file.zuc}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file using the ZUC cipher:
+.RE
+.PP
+\fB\fCgmssl zuc \-d \-in {{path/to/file.zuc}}\fR
+.RS
+.IP \(bu 2
+Print version:
+.RE
+.PP
+\fB\fCgmssl version\fR

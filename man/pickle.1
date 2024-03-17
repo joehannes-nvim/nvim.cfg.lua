@@ -1,0 +1,30 @@
+.TH pickle
+.PP
+.RS
+A PHP extension installer based on Composer.
+More information: \[la]https://github.com/FriendsOfPHP/pickle\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a specific PHP extension:
+.RE
+.PP
+\fB\fCpickle install {{extension_name}}\fR
+.RS
+.IP \(bu 2
+Convert an existing PECL extension configuration to a Pickle configuration file:
+.RE
+.PP
+\fB\fCpickle convert {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Validate a PECL extension:
+.RE
+.PP
+\fB\fCpickle validate {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Package a PECL extension for release:
+.RE
+.PP
+\fB\fCpickle release {{path/to/directory}}\fR

@@ -1,0 +1,36 @@
+.TH sysbench
+.PP
+.RS
+Benchmark a System's CPU, IO and memory.
+More information: \[la]https://github.com/akopytov/sysbench/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a CPU benchmark with 1 thread for 10 seconds:
+.RE
+.PP
+\fB\fCsysbench cpu run\fR
+.RS
+.IP \(bu 2
+Run a CPU benchmark with multiple threads for a specified time:
+.RE
+.PP
+\fB\fCsysbench \-\-threads={{number_of_threads}} \-\-time={{seconds}}\fR
+.RS
+.IP \(bu 2
+Run a memory benchmark with 1 thread for 10 seconds:
+.RE
+.PP
+\fB\fCsysbench memory run\fR
+.RS
+.IP \(bu 2
+Prepare a filesystem\-level read benchmark:
+.RE
+.PP
+\fB\fCsysbench fileio prepare\fR
+.RS
+.IP \(bu 2
+Run a filesystem\-level benchmark:
+.RE
+.PP
+\fB\fCsysbench \-\-file\-test\-mode={{rndrd|rndrw|rndwr|seqrd|seqrewr|seqwr}} fileio run\fR

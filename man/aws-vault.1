@@ -1,0 +1,42 @@
+.TH aws\-vault
+.PP
+.RS
+A vault for securely storing and accessing AWS credentials in development environments.
+More information: \[la]https://github.com/99designs/aws-vault\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add credentials to the secure keystore:
+.RE
+.PP
+\fB\fCaws\-vault add {{profile}}\fR
+.RS
+.IP \(bu 2
+Execute a command with AWS credentials in the environment:
+.RE
+.PP
+\fB\fCaws\-vault exec {{profile}} \-\- {{aws s3 ls}}\fR
+.RS
+.IP \(bu 2
+Open a browser window and login to the AWS Console:
+.RE
+.PP
+\fB\fCaws\-vault login {{profile}}\fR
+.RS
+.IP \(bu 2
+List profiles, along with their credentials and sessions:
+.RE
+.PP
+\fB\fCaws\-vault list\fR
+.RS
+.IP \(bu 2
+Rotate AWS credentials:
+.RE
+.PP
+\fB\fCaws\-vault rotate {{profile}}\fR
+.RS
+.IP \(bu 2
+Remove credentials from the secure keystore:
+.RE
+.PP
+\fB\fCaws\-vault remove {{profile}}\fR

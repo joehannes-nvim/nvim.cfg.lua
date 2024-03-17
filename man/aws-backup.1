@@ -1,0 +1,36 @@
+.TH aws backup
+.PP
+.RS
+Unified backup service designed to protect Amazon Web Services services and their associated data.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/backup/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Return BackupPlan details for a specific BackupPlanId:
+.RE
+.PP
+\fB\fCaws backup get\-backup\-plan \-\-backup\-plan\-id {{id}}\fR
+.RS
+.IP \(bu 2
+Create a backup plan using a specific backup plan name and backup rules:
+.RE
+.PP
+\fB\fCaws backup create\-backup\-plan \-\-backup\-plan {{plan}}\fR
+.RS
+.IP \(bu 2
+Delete a specific backup plan:
+.RE
+.PP
+\fB\fCaws backup delete\-backup\-plan \-\-backup\-plan\-id {{id}}\fR
+.RS
+.IP \(bu 2
+Return a list of all active backup plans for the current account:
+.RE
+.PP
+\fB\fCaws backup list\-backup\-plans\fR
+.RS
+.IP \(bu 2
+Display details about your report jobs:
+.RE
+.PP
+\fB\fCaws backup list\-report\-jobs\fR

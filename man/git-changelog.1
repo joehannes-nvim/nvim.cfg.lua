@@ -1,0 +1,49 @@
+.TH git changelog
+.PP
+.RS
+Generate a changelog report from repository commits and tags.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-changelog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update existing file or create a new \fB\fCHistory.md\fR file with the commit messages since the latest Git tag:
+.RE
+.PP
+\fB\fCgit changelog\fR
+.RS
+.IP \(bu 2
+List commits from the current version:
+.RE
+.PP
+\fB\fCgit changelog \-\-list\fR
+.RS
+.IP \(bu 2
+List a range of commits from the tag named \fB\fC2.1.0\fR to now:
+.RE
+.PP
+\fB\fCgit changelog \-\-list \-\-start\-tag {{2.1.0}}\fR
+.RS
+.IP \(bu 2
+List pretty formatted range of commits between the tag \fB\fC0.5.0\fR and the tag \fB\fC1.0.0\fR:
+.RE
+.PP
+\fB\fCgit changelog \-\-start\-tag {{0.5.0}} \-\-final\-tag {{1.0.0}}\fR
+.RS
+.IP \(bu 2
+List pretty formatted range of commits between the commit \fB\fC0b97430\fR and the tag \fB\fC1.0.0\fR:
+.RE
+.PP
+\fB\fCgit changelog \-\-start\-commit {{0b97430}} \-\-final\-tag {{1.0.0}}\fR
+.RS
+.IP \(bu 2
+Specify \fB\fCCHANGELOG.md\fR as the output file:
+.RE
+.PP
+\fB\fCgit changelog {{CHANGELOG.md}}\fR
+.RS
+.IP \(bu 2
+Replace contents of current changelog file entirely:
+.RE
+.PP
+\fB\fCgit changelog \-\-prune\-old\fR

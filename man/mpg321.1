@@ -1,0 +1,43 @@
+.TH mpg321
+.PP
+.RS
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layer 1, 2, and 3.
+Mpg321 was written (sometime in 1999) to be a drop\-in replacement for the (previously) non\-free mpg123 player.
+More information: \[la]http://mpg321.sourceforge.net/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Play an audio source exactly N times (N=0 means forever):
+.RE
+.PP
+\fB\fCmpg321 \-l {{N}} {{path/to/file_a|URL}} {{path/to/file_b|URL}} {{...}}\fR
+.RS
+.IP \(bu 2
+Play a directory recursively:
+.RE
+.PP
+\fB\fCmpg321 \-B {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Enable Basic Keys ( \fB\fC*\fR or \fB\fC/\fR \- Increase or decrease volume, \fB\fCn\fR \- Skip song, \fB\fCm\fR \- Mute/unmute.) while playing:
+.RE
+.PP
+\fB\fCmpg321 \-K {{path/to/file_a|URL}} {{path/to/file_b|URL}} {{...}}\fR
+.RS
+.IP \(bu 2
+Play files randomly until interrupted:
+.RE
+.PP
+\fB\fCmpg321 \-Z {{path/to/file_a|URL}} {{path/to/file_b|URL}} {{...}}\fR
+.RS
+.IP \(bu 2
+Shuffle the files before playing them once:
+.RE
+.PP
+\fB\fCmpg321 \-z {{path/to/file_a|URL}} {{path/to/file_b|URL}} {{...}}\fR
+.RS
+.IP \(bu 2
+Play all files in the current directory and subdirectories, randomly (until interrupted), with Basic Keys enabled:
+.RE
+.PP
+\fB\fCmpg321 \-B \-Z \-K .\fR

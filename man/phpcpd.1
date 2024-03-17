@@ -1,0 +1,42 @@
+.TH phpcpd
+.PP
+.RS
+A copy and paste detector for PHP code.
+More information: \[la]https://github.com/sebastianbergmann/phpcpd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze duplicated code for a specific file or directory:
+.RE
+.PP
+\fB\fCphpcpd {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Analyze using fuzzy matching for variable names:
+.RE
+.PP
+\fB\fCphpcpd \-\-fuzzy {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Specify a minimum number of identical lines (defaults to 5):
+.RE
+.PP
+\fB\fCphpcpd \-\-min\-lines {{number_of_lines}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Specify a minimum number of identical tokens (defaults to 70):
+.RE
+.PP
+\fB\fCphpcpd \-\-min\-tokens {{number_of_tokens}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Exclude a directory from analysis (must be relative to the source):
+.RE
+.PP
+\fB\fCphpcpd \-\-exclude {{path/to/excluded_directory}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Output the results to a PHP\-CPD XML file:
+.RE
+.PP
+\fB\fCphpcpd \-\-log\-pmd {{path/to/log_file}} {{path/to/file_or_directory}}\fR

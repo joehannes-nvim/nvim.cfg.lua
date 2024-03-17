@@ -1,0 +1,42 @@
+.TH cargo fix
+.PP
+.RS
+Automatically fix lint warnings reported by \fB\fCrustc\fR\&.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-fix.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fix code even if it already has compiler errors:
+.RE
+.PP
+\fB\fCcargo fix \-\-broken\-code\fR
+.RS
+.IP \(bu 2
+Fix code even if the working directory has changes:
+.RE
+.PP
+\fB\fCcargo fix \-\-allow\-dirty\fR
+.RS
+.IP \(bu 2
+Migrate a package to the next Rust edition:
+.RE
+.PP
+\fB\fCcargo fix \-\-edition\fR
+.RS
+.IP \(bu 2
+Fix the package’s library:
+.RE
+.PP
+\fB\fCcargo fix \-\-lib\fR
+.RS
+.IP \(bu 2
+Fix the specified integration test:
+.RE
+.PP
+\fB\fCcargo fix \-\-test {{name}}\fR
+.RS
+.IP \(bu 2
+Fix all members in the workspace:
+.RE
+.PP
+\fB\fCcargo fix \-\-workspace\fR

@@ -1,0 +1,30 @@
+.TH kubetail
+.PP
+.RS
+Utility to tail multiple Kubernetes pod logs at the same time.
+More information: \[la]https://github.com/johanhaleby/kubetail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Tail the logs of multiple pods (whose name starts with "my_app") in one go:
+.RE
+.PP
+\fB\fCkubetail {{my_app}}\fR
+.RS
+.IP \(bu 2
+Tail only a specific container from multiple pods:
+.RE
+.PP
+\fB\fCkubetail {{my_app}} \-c {{my_container}}\fR
+.RS
+.IP \(bu 2
+To tail multiple containers from multiple pods:
+.RE
+.PP
+\fB\fCkubetail {{my_app}} \-c {{my_container_1}} \-c {{my_container_2}}\fR
+.RS
+.IP \(bu 2
+To tail multiple applications at the same time separate them by comma:
+.RE
+.PP
+\fB\fCkubetail {{my_app_1}},{{my_app_2}}\fR

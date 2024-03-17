@@ -1,0 +1,31 @@
+.TH warp\-diag
+.PP
+.RS
+Diagnostic and feedback tool for Cloudflare's WARP service.
+See also: \fB\fCwarp\-cli\fR\&.
+More information: \[la]https://developers.cloudflare.com/warp-client/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a zip file with information about the system configuration and the WARP connection:
+.RE
+.PP
+\fB\fCwarp\-diag\fR
+.RS
+.IP \(bu 2
+Generate a zip file with debug information including a timestamp to the output filename:
+.RE
+.PP
+\fB\fCwarp\-diag \-\-add\-ts\fR
+.RS
+.IP \(bu 2
+Save the output file under a specific directory:
+.RE
+.PP
+\fB\fCwarp\-diag \-\-output {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Submit a new feedback to Cloudflare's WARP interactively:
+.RE
+.PP
+\fB\fCwarp\-diag feedback\fR

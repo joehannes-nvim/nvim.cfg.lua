@@ -1,0 +1,36 @@
+.TH httpflow
+.PP
+.RS
+A command\-line utility to capture and dump HTTP streams.
+More information: \[la]https://github.com/six-ddc/httpflow\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture traffic on all interfaces:
+.RE
+.PP
+\fB\fChttpflow \-i {{any}}\fR
+.RS
+.IP \(bu 2
+Use a bpf\-style capture to filter the results:
+.RE
+.PP
+\fB\fChttpflow {{host httpbin.org or host baidu.com}}\fR
+.RS
+.IP \(bu 2
+Use a regular expression to filter requests by URLs:
+.RE
+.PP
+\fB\fChttpflow \-u '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Read packets from pcap format binary file:
+.RE
+.PP
+\fB\fChttpflow \-r {{out.cap}}\fR
+.RS
+.IP \(bu 2
+Write the output to a directory:
+.RE
+.PP
+\fB\fChttpflow \-w {{path/to/directory}}\fR

@@ -1,0 +1,30 @@
+.TH deluge
+.PP
+.RS
+A command\-line BitTorrent client.
+More information: \[la]https://deluge-torrent.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a torrent:
+.RE
+.PP
+\fB\fCdeluge {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Download a torrent using a specific configuration file:
+.RE
+.PP
+\fB\fCdeluge \-c {{path/to/configuration_file}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Download a torrent and launch the specified user interface:
+.RE
+.PP
+\fB\fCdeluge \-u {{gtk|web|console}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Download a torrent and output the log to a file:
+.RE
+.PP
+\fB\fCdeluge \-l {{path/to/log_file}} {{url|magnet|path/to/file}}\fR

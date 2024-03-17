@@ -1,0 +1,36 @@
+.TH gnmic subscribe
+.PP
+.RS
+Subscribe to a gnmic network device state updates.
+More information: \[la]https://gnmic.kmrd.dev/cmd/subscribe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Subscribe to target state updates under the subtree of a specific path:
+.RE
+.PP
+\fB\fCgnmic \-\-address {{ip:port}} subscribe \-\-path {{path}}\fR
+.RS
+.IP \(bu 2
+Subscribe to a target with a sample interval of 30s (default is 10s):
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} subscribe \-\-path {{path}} \-\-sample\-interval 30s\fR
+.RS
+.IP \(bu 2
+Subscribe to a target with sample interval and updates only on change:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} subscribe \-\-path {{path}} \-\-stream\-mode on\-change \-\-heartbeat\-interval 1m\fR
+.RS
+.IP \(bu 2
+Subscribe to a target for only one update:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} subscribe \-\-path {{path}} \-\-mode once\fR
+.RS
+.IP \(bu 2
+Subscribe to a target and specify response encoding (json_ietf):
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} subscribe \-\-path {{path}} \-\-encoding json_ietf\fR

@@ -1,0 +1,37 @@
+.TH age
+.PP
+.RS
+A simple, modern and secure file encryption tool.
+See \fB\fCage\-keygen\fR for how to generate key pairs.
+More information: \[la]https://github.com/FiloSottile/age\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an encrypted file that can be decrypted with a passphrase:
+.RE
+.PP
+\fB\fCage \-\-passphrase \-\-output {{path/to/encrypted_file}} {{path/to/unencrypted_file}}\fR
+.RS
+.IP \(bu 2
+Encrypt a file with one or more public keys entered as literals (repeat the \fB\fC\-\-recipient\fR flag to specify multiple public keys):
+.RE
+.PP
+\fB\fCage \-\-recipient {{public_key}} \-\-output {{path/to/encrypted_file}} {{path/to/unencrypted_file}}\fR
+.RS
+.IP \(bu 2
+Encrypt a file to one or more recipients with their public keys specified in a file (one per line):
+.RE
+.PP
+\fB\fCage \-\-recipients\-file {{path/to/recipients_file}} \-\-output {{path/to/encrypted_file}} {{path/to/unencrypted_file}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file with a passphrase:
+.RE
+.PP
+\fB\fCage \-\-decrypt \-\-output {{path/to/decrypted_file}} {{path/to/encrypted_file}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file with a private key file:
+.RE
+.PP
+\fB\fCage \-\-decrypt \-\-identity {{path/to/private_key_file}} \-\-output {{path/to/decrypted_file}} {{path/to/encrypted_file}}\fR

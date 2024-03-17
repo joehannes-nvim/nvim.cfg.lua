@@ -1,0 +1,48 @@
+.TH core\-validate\-commit
+.PP
+.RS
+Validate commit messages for Node.js core.
+More information: \[la]https://github.com/nodejs/core-validate-commit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Validate the current commit:
+.RE
+.PP
+\fB\fCcore\-validate\-commit\fR
+.RS
+.IP \(bu 2
+Validate a specific commit:
+.RE
+.PP
+\fB\fCcore\-validate\-commit {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+Validate a range of commits:
+.RE
+.PP
+\fB\fCgit rev\-list {{commit_hash}}..HEAD | xargs core\-validate\-commit\fR
+.RS
+.IP \(bu 2
+List all validation rules:
+.RE
+.PP
+\fB\fCcore\-validate\-commit \-\-list\fR
+.RS
+.IP \(bu 2
+List all valid Node.js subsystems:
+.RE
+.PP
+\fB\fCcore\-validate\-commit \-\-list\-subsystem\fR
+.RS
+.IP \(bu 2
+Validate the current commit formatting the output in tap format:
+.RE
+.PP
+\fB\fCcore\-validate\-commit \-\-tap\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCcore\-validate\-commit \-\-help\fR

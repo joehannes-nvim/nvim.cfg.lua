@@ -1,0 +1,18 @@
+.TH aws sts
+.PP
+.RS
+Security Token Service (STS) allows to request temporary credentials for (IAM) users or federated users.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/sts/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get temporary security credentials to access specific AWS resources:
+.RE
+.PP
+\fB\fCaws sts assume\-role \-\-role\-arn {{aws_role_arn}}\fR
+.RS
+.IP \(bu 2
+Get an IAM user or role whose credentials are used to call the operation:
+.RE
+.PP
+\fB\fCaws sts get\-caller\-identity\fR

@@ -1,0 +1,36 @@
+.TH pastel
+.PP
+.RS
+Generate, analyze, convert and manipulate colors.
+More information: \[la]https://github.com/sharkdp/pastel\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert colors from one format to another. Here from RGB to HSL:
+.RE
+.PP
+\fB\fCpastel format {{hsl}} {{ff8000}}\fR
+.RS
+.IP \(bu 2
+Show and analyze colors on the terminal:
+.RE
+.PP
+\fB\fCpastel color "{{rgb(255,50,127)}}"\fR
+.RS
+.IP \(bu 2
+Pick a color from somewhere on the screen:
+.RE
+.PP
+\fB\fCpastel pick\fR
+.RS
+.IP \(bu 2
+Generate a set of N visually distinct colors:
+.RE
+.PP
+\fB\fCpastel distinct {{8}}\fR
+.RS
+.IP \(bu 2
+Get a list of all X11/CSS color names:
+.RE
+.PP
+\fB\fCpastel list\fR

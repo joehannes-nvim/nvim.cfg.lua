@@ -1,0 +1,54 @@
+.TH docker system
+.PP
+.RS
+Manage Docker data and display system\-wide information.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/system/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show help:
+.RE
+.PP
+\fB\fCdocker system\fR
+.RS
+.IP \(bu 2
+Show docker disk usage:
+.RE
+.PP
+\fB\fCdocker system df\fR
+.RS
+.IP \(bu 2
+Show detailed information on disk usage:
+.RE
+.PP
+\fB\fCdocker system df \-\-verbose\fR
+.RS
+.IP \(bu 2
+Remove unused data:
+.RE
+.PP
+\fB\fCdocker system prune\fR
+.RS
+.IP \(bu 2
+Remove unused data created more than a specified amount of time in the past:
+.RE
+.PP
+\fB\fCdocker system prune \-\-filter="until={{hours}}h{{minutes}}m"\fR
+.RS
+.IP \(bu 2
+Display real\-time events from the Docker daemon:
+.RE
+.PP
+\fB\fCdocker system events\fR
+.RS
+.IP \(bu 2
+Display real\-time events from containers streamed as valid JSON Lines:
+.RE
+.PP
+\fB\fCdocker system events \-\-filter 'type=container' \-\-format '{{json .}}'\fR
+.RS
+.IP \(bu 2
+Display system\-wide information:
+.RE
+.PP
+\fB\fCdocker system info\fR

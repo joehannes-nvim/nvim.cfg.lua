@@ -1,0 +1,36 @@
+.TH nix flake
+.PP
+.RS
+Manage Nix flakes.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+See documentation about what Nix flakes are:
+.RE
+.PP
+\fB\fCnix flake \-\-help\fR
+.RS
+.IP \(bu 2
+Create a new flake (just the \fB\fCflake.nix\fR file) from the default template, in the current directory:
+.RE
+.PP
+\fB\fCnix flake init\fR
+.RS
+.IP \(bu 2
+Update all inputs (dependencies) of the flake in the current directory:
+.RE
+.PP
+\fB\fCnix flake update\fR
+.RS
+.IP \(bu 2
+Update a specific input (dependency) of the flake in the current directory:
+.RE
+.PP
+\fB\fCnix flake lock \-\-update\-input {{input}}\fR
+.RS
+.IP \(bu 2
+Show all the outputs of a flake on github:
+.RE
+.PP
+\fB\fCnix flake show {{github:owner/repo}}\fR

@@ -1,0 +1,36 @@
+.TH jdeps
+.PP
+.RS
+Java class dependency analyzer.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/jdeps.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze the dependencies of a \fB\fC\&.jar\fR or \fB\fC\&.class\fR file:
+.RE
+.PP
+\fB\fCjdeps {{path/to/filename.class}}\fR
+.RS
+.IP \(bu 2
+Print a summary of all dependencies of a specific \fB\fC\&.jar\fR file:
+.RE
+.PP
+\fB\fCjdeps {{path/to/filename.jar}} \-summary\fR
+.RS
+.IP \(bu 2
+Print all class\-level dependencies of a \fB\fC\&.jar\fR file:
+.RE
+.PP
+\fB\fCjdeps {{path/to/filename.jar}} \-verbose\fR
+.RS
+.IP \(bu 2
+Output the results of the analysis in a DOT file into a specific directory:
+.RE
+.PP
+\fB\fCjdeps {{path/to/filename.jar}} \-dotoutput {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCjdeps \-\-help\fR

@@ -1,0 +1,24 @@
+.TH csv2tsv
+.PP
+.RS
+Convert CSV (comma\-separated) text to TSV (tab\-separated) format.
+More information: \[la]https://github.com/eBay/tsv-utils/blob/master/README.md#csv2tsv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert from CSV to TSV:
+.RE
+.PP
+\fB\fCcsv2tsv {{path/to/input_csv1 path/to/input_csv2 ...}} > {{path/to/output_tsv}}\fR
+.RS
+.IP \(bu 2
+Convert field delimiter separated CSV to TSV:
+.RE
+.PP
+\fB\fCcsv2tsv \-c'{{field_delimiter}}' {{path/to/input_csv}}\fR
+.RS
+.IP \(bu 2
+Convert semicolon separated CSV to TSV:
+.RE
+.PP
+\fB\fCcsv2tsv \-c';' {{path/to/input_csv}}\fR

@@ -1,0 +1,36 @@
+.TH local
+.PP
+.RS
+Declare local variables and give them attributes.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Declare a string variable with the specified value:
+.RE
+.PP
+\fB\fClocal {{variable}}="{{value}}"\fR
+.RS
+.IP \(bu 2
+Declare an integer variable with the specified value:
+.RE
+.PP
+\fB\fClocal \-i {{variable}}="{{value}}"\fR
+.RS
+.IP \(bu 2
+Declare an array variable with the specified value:
+.RE
+.PP
+\fB\fClocal {{variable}}=({{item_a item_b item_c}})\fR
+.RS
+.IP \(bu 2
+Declare an associative array variable with the specified value:
+.RE
+.PP
+\fB\fClocal \-A {{variable}}=({{[key_a]=item_a [key_b]=item_b [key_c]=item_c}})\fR
+.RS
+.IP \(bu 2
+Declare a readonly variable with the specified value:
+.RE
+.PP
+\fB\fClocal \-r {{variable}}="{{value}}"\fR

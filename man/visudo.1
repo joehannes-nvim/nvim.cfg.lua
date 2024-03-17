@@ -1,0 +1,30 @@
+.TH visudo
+.PP
+.RS
+Safely edit the sudoers file.
+More information: \[la]https://www.sudo.ws/docs/man/visudo.man\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Edit the sudoers file:
+.RE
+.PP
+\fB\fCsudo visudo\fR
+.RS
+.IP \(bu 2
+Check the sudoers file for errors:
+.RE
+.PP
+\fB\fCsudo visudo \-c\fR
+.RS
+.IP \(bu 2
+Edit the sudoers file using a specific editor:
+.RE
+.PP
+\fB\fCsudo EDITOR={{editor}} visudo\fR
+.RS
+.IP \(bu 2
+Display version information:
+.RE
+.PP
+\fB\fCvisudo \-\-version\fR

@@ -1,0 +1,24 @@
+.TH xetex
+.PP
+.RS
+Compile a PDF document from XeTeX source files.
+More information: \[la]https://www.tug.org/xetex/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a PDF document:
+.RE
+.PP
+\fB\fCxetex {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a PDF document, specifying an output directory:
+.RE
+.PP
+\fB\fCxetex \-output\-directory={{path/to/directory}} {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a PDF document, exiting if errors occur:
+.RE
+.PP
+\fB\fCxetex \-halt\-on\-error {{source.tex}}\fR

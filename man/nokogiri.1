@@ -1,0 +1,36 @@
+.TH nokogiri
+.PP
+.RS
+An HTML, XML, SAX and Reader parser.
+More information: \[la]https://nokogiri.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Parse the contents of a URL or file:
+.RE
+.PP
+\fB\fCnokogiri {{url|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Parse as a specific type:
+.RE
+.PP
+\fB\fCnokogiri {{url|path/to/file}} \-\-type {{xml|html}}\fR
+.RS
+.IP \(bu 2
+Load a specific initialization file before parsing:
+.RE
+.PP
+\fB\fCnokogiri {{url|path/to/file}} \-C {{path/to/config_file}}\fR
+.RS
+.IP \(bu 2
+Parse using a specific encoding:
+.RE
+.PP
+\fB\fCnokogiri {{url|path/to/file}} \-\-encoding {{encoding}}\fR
+.RS
+.IP \(bu 2
+Validate using a RELAX NG file:
+.RE
+.PP
+\fB\fCnokogiri {{url|path/to/file}} \-\-rng {{url|path/to/file}}\fR

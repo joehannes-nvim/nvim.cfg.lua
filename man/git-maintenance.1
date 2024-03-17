@@ -1,0 +1,36 @@
+.TH git\-maintenance
+.PP
+.RS
+Run tasks to optimize Git repository data.
+More information: \[la]https://git-scm.com/docs/git-maintenance\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register the current repository in the user's list of repositories to daily have maintenance run:
+.RE
+.PP
+\fB\fCgit maintenance register\fR
+.RS
+.IP \(bu 2
+Start running maintenance on the current repository:
+.RE
+.PP
+\fB\fCgit maintenance start\fR
+.RS
+.IP \(bu 2
+Halt the background maintenance schedule for the current repository:
+.RE
+.PP
+\fB\fCgit maintenance stop\fR
+.RS
+.IP \(bu 2
+Remove the current repository from the user's maintenance repository list:
+.RE
+.PP
+\fB\fCgit maintenance unregister\fR
+.RS
+.IP \(bu 2
+Run a specific maintenance task on the current repository:
+.RE
+.PP
+\fB\fCgit maintenance run \-\-task={{commit\-graph|gc|incremental\-repack|loose\-objects|pack\-refs|prefetch}}\fR

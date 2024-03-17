@@ -1,0 +1,54 @@
+.TH sbt
+.PP
+.RS
+Build tool for Scala and Java projects.
+More information: \[la]https://www.scala-sbt.org/1.x/docs/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCsbt\fR
+.RS
+.IP \(bu 2
+Create a new Scala project from an existing Giter8 template hosted on GitHub:
+.RE
+.PP
+\fB\fCsbt new {{scala/hello\-world.g8}}\fR
+.RS
+.IP \(bu 2
+Compile and run all tests:
+.RE
+.PP
+\fB\fCsbt test\fR
+.RS
+.IP \(bu 2
+Delete all generated files in the \fB\fCtarget\fR directory:
+.RE
+.PP
+\fB\fCsbt clean\fR
+.RS
+.IP \(bu 2
+Compile the main sources in \fB\fCsrc/main/scala\fR and \fB\fCsrc/main/java\fR directories:
+.RE
+.PP
+\fB\fCsbt compile\fR
+.RS
+.IP \(bu 2
+Use the specified version of sbt:
+.RE
+.PP
+\fB\fCsbt \-sbt\-version {{version}}\fR
+.RS
+.IP \(bu 2
+Use a specific jar file as the sbt launcher:
+.RE
+.PP
+\fB\fCsbt \-sbt\-jar {{path}}\fR
+.RS
+.IP \(bu 2
+List all sbt options:
+.RE
+.PP
+\fB\fCsbt \-h\fR

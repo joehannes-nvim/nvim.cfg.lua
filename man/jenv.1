@@ -1,0 +1,42 @@
+.TH jenv
+.PP
+.RS
+Command\-line tool to manage the "JAVA_HOME" environment variable.
+More information: \[la]https://www.jenv.be/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a Java version to jEnv:
+.RE
+.PP
+\fB\fCjenv add {{path/to/jdk_home}}\fR
+.RS
+.IP \(bu 2
+Display the current JDK version used:
+.RE
+.PP
+\fB\fCjenv version\fR
+.RS
+.IP \(bu 2
+Display all managed JDKs:
+.RE
+.PP
+\fB\fCjenv versions\fR
+.RS
+.IP \(bu 2
+Set the global JDK version:
+.RE
+.PP
+\fB\fCjenv global {{java_version}}\fR
+.RS
+.IP \(bu 2
+Set the JDK version for the current shell session:
+.RE
+.PP
+\fB\fCjenv shell {{java_version}}\fR
+.RS
+.IP \(bu 2
+Enable a jEnv plugin:
+.RE
+.PP
+\fB\fCjenv enable\-plugin {{plugin_name}}\fR

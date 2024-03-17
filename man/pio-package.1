@@ -1,0 +1,55 @@
+.TH pio package
+.PP
+.RS
+Manage packages in the registry.
+Packages can only be removed within 72 hours (3 days) from the date that they are published.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/package/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a package tarball from the current directory:
+.RE
+.PP
+\fB\fCpio package pack \-\-output {{path/to/package.tar.gz}}\fR
+.RS
+.IP \(bu 2
+Create and publish a package tarball from the current directory:
+.RE
+.PP
+\fB\fCpio package publish\fR
+.RS
+.IP \(bu 2
+Publish the current directory and restrict public access to it:
+.RE
+.PP
+\fB\fCpio package publish \-\-private\fR
+.RS
+.IP \(bu 2
+Publish a package:
+.RE
+.PP
+\fB\fCpio package publish {{path/to/package.tar.gz}}\fR
+.RS
+.IP \(bu 2
+Publish a package with a custom release date (UTC):
+.RE
+.PP
+\fB\fCpio package publish {{path/to/package.tar.gz}} \-\-released\-at "{{2021\-04\-08 21:15:38}}"\fR
+.RS
+.IP \(bu 2
+Remove all versions of a published package from the registry:
+.RE
+.PP
+\fB\fCpio package unpublish {{package}}\fR
+.RS
+.IP \(bu 2
+Remove a specific version of a published package from the registry:
+.RE
+.PP
+\fB\fCpio package unpublish {{package}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Undo the removal, putting all versions or a specific version of the package back into the registry:
+.RE
+.PP
+\fB\fCpio package unpublish \-\-undo {{package}}@{{version}}\fR

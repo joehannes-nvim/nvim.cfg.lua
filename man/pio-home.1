@@ -1,0 +1,42 @@
+.TH pio home
+.PP
+.RS
+Launch the PlatformIO Home web server.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_home.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open PlatformIO Home in the default web browser:
+.RE
+.PP
+\fB\fCpio home\fR
+.RS
+.IP \(bu 2
+Use a specific HTTP port (defaults to 8008):
+.RE
+.PP
+\fB\fCpio home \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Bind to a specific IP address (defaults to 127.0.0.1):
+.RE
+.PP
+\fB\fCpio home \-\-host {{ip_address}}\fR
+.RS
+.IP \(bu 2
+Do not automatically open PlatformIO Home in the default web browser:
+.RE
+.PP
+\fB\fCpio home \-\-no\-open\fR
+.RS
+.IP \(bu 2
+Automatically shutdown the server on timeout (in seconds) when no clients are connected:
+.RE
+.PP
+\fB\fCpio home \-\-shutdown\-timeout {{time}}\fR
+.RS
+.IP \(bu 2
+Specify a unique session identifier to keep PlatformIO Home isolated from other instances and protected from 3rd party access:
+.RE
+.PP
+\fB\fCpio home \-\-session\-id {{id}}\fR

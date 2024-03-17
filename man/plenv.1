@@ -1,0 +1,48 @@
+.TH plenv
+.PP
+.RS
+Switch between multiple versions of Perl.
+More information: \[la]https://github.com/tokuhirom/plenv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the currently selected Perl version and how it was selected:
+.RE
+.PP
+\fB\fCplenv version\fR
+.RS
+.IP \(bu 2
+List all available installed Perl versions:
+.RE
+.PP
+\fB\fCplenv versions\fR
+.RS
+.IP \(bu 2
+Set the global Perl version (used unless a local or shell version takes priority):
+.RE
+.PP
+\fB\fCplenv global {{version}}\fR
+.RS
+.IP \(bu 2
+Set the local application\-specific Perl version (used in the current directory and all directories below it):
+.RE
+.PP
+\fB\fCplenv local {{version}}\fR
+.RS
+.IP \(bu 2
+Set the shell\-specific Perl version (used for the current session only):
+.RE
+.PP
+\fB\fCplenv shell {{version}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCplenv\fR
+.RS
+.IP \(bu 2
+Display help for a command:
+.RE
+.PP
+\fB\fCplenv help {{command}}\fR

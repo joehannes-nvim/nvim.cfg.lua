@@ -1,0 +1,54 @@
+.TH gcloud
+.PP
+.RS
+The official CLI tool for Google Cloud Platform.
+More information: \[la]https://cloud.google.com/sdk/gcloud\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all properties in one's active configuration:
+.RE
+.PP
+\fB\fCgcloud config list\fR
+.RS
+.IP \(bu 2
+Log in to Google account:
+.RE
+.PP
+\fB\fCgcloud auth login\fR
+.RS
+.IP \(bu 2
+Set the active project:
+.RE
+.PP
+\fB\fCgcloud config set project {{project_name}}\fR
+.RS
+.IP \(bu 2
+SSH into a virtual machine instance:
+.RE
+.PP
+\fB\fCgcloud compute ssh {{user}}@{{instance}}\fR
+.RS
+.IP \(bu 2
+Display all Google Compute Engine instances in a project. Instances from all zones are listed by default:
+.RE
+.PP
+\fB\fCgcloud compute instances list\fR
+.RS
+.IP \(bu 2
+Update a kubeconfig file with the appropriate credentials to point kubectl to a specific cluster in Google Kubernetes Engine:
+.RE
+.PP
+\fB\fCgcloud container clusters get\-credentials {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Update all gcloud CLI components:
+.RE
+.PP
+\fB\fCgcloud components update\fR
+.RS
+.IP \(bu 2
+Show help for a given command:
+.RE
+.PP
+\fB\fCgcloud help {{command}}\fR

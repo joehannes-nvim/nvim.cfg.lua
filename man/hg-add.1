@@ -1,0 +1,36 @@
+.TH hg add
+.PP
+.RS
+Adds specified files to the staging area for the next commit in Mercurial.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#add\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add files or directories to the staging area:
+.RE
+.PP
+\fB\fChg add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add all unstaged files matching a specified pattern:
+.RE
+.PP
+\fB\fChg add \-\-include {{pattern}}\fR
+.RS
+.IP \(bu 2
+Add all unstaged files, excluding those that match a specified pattern:
+.RE
+.PP
+\fB\fChg add \-\-exclude {{pattern}}\fR
+.RS
+.IP \(bu 2
+Recursively add sub\-repositories:
+.RE
+.PP
+\fB\fChg add \-\-subrepos\fR
+.RS
+.IP \(bu 2
+Perform a test\-run without performing any actions:
+.RE
+.PP
+\fB\fChg add \-\-dry\-run\fR

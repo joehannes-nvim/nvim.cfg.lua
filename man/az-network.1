@@ -1,0 +1,31 @@
+.TH az network
+.PP
+.RS
+Manage Azure Network resources.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/network\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List network resources in a region that are used against a subscription quota:
+.RE
+.PP
+\fB\fCaz network list\-usages\fR
+.RS
+.IP \(bu 2
+List all virtual networks in a subscription:
+.RE
+.PP
+\fB\fCaz network vnet list\fR
+.RS
+.IP \(bu 2
+Create a virtual network:
+.RE
+.PP
+\fB\fCaz network vnet create \-\-address\-prefixes {{10.0.0.0/16}} \-\-name {{vnet}} \-\-resource_group {{group_name}} \-\-submet\-name {{subnet}} \-\-subnet\-prefixes {{10.0.0.0/24}}\fR
+.RS
+.IP \(bu 2
+Enable accelerated networking for a network interface card:
+.RE
+.PP
+\fB\fCaz network nic update \-\-accelerated\-networking true \-\-name {{nic}} \-\-resource\-group {{resource_group}}\fR

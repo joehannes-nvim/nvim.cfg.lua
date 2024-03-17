@@ -1,0 +1,36 @@
+.TH reflex
+.PP
+.RS
+Tool to watch a directory and rerun a command when certain files change.
+More information: \[la]https://github.com/cespare/reflex\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rebuild with \fB\fCmake\fR if any file changes:
+.RE
+.PP
+\fB\fCreflex make\fR
+.RS
+.IP \(bu 2
+Compile and run Go application if any \fB\fC\&.go\fR file changes:
+.RE
+.PP
+\fB\fCreflex \-\-regex='{{\\.go$}}' {{go run .}}\fR
+.RS
+.IP \(bu 2
+Ignore a directory when watching for changes:
+.RE
+.PP
+\fB\fCreflex \-\-inverse\-regex='{{^dir/}}' {{command}}\fR
+.RS
+.IP \(bu 2
+Run command when reflex starts and restarts on file changes:
+.RE
+.PP
+\fB\fCreflex \-\-start\-service=true {{command}}\fR
+.RS
+.IP \(bu 2
+Substitute the filename that changed in:
+.RE
+.PP
+\fB\fCreflex \-\- echo {}\fR

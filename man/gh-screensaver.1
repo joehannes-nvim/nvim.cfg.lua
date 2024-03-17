@@ -1,0 +1,37 @@
+.TH gh screensaver
+.PP
+.RS
+Extension for GitHub CLI that runs animated terminal screensavers.
+See also: \fB\fCgh extension\fR\&.
+More information: \[la]https://github.com/vilmibm/gh-screensaver\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a random screensaver:
+.RE
+.PP
+\fB\fCgh screensaver\fR
+.RS
+.IP \(bu 2
+Run a specific screensaver:
+.RE
+.PP
+\fB\fCgh screensaver \-\-saver {{fireworks|life|marquee|pipes|pollock|starfield}}\fR
+.RS
+.IP \(bu 2
+Run the "marquee" screensaver with a specific text and font:
+.RE
+.PP
+\fB\fCgh screensaver \-\-saver {{marquee}} \-\- \-\-message="{{message}}" \-\-font={{font_name}}\fR
+.RS
+.IP \(bu 2
+Run the "starfield" screensaver with a specific density and speed:
+.RE
+.PP
+\fB\fCgh screensaver \-\-saver {{starfield}} \-\- \-\-density {{500}} \-\-speed {{10}}\fR
+.RS
+.IP \(bu 2
+List available screensavers:
+.RE
+.PP
+\fB\fCgh screensaver \-\-list\fR

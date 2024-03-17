@@ -1,0 +1,48 @@
+.TH aws cloud9
+.PP
+.RS
+Manage Cloud9 \- a collection of tools to code, build, run, test, debug, and release software in the cloud.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cloud9/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get a list of Cloud9 development environment identifiers:
+.RE
+.PP
+\fB\fCaws cloud9 list\-environments\fR
+.RS
+.IP \(bu 2
+Create a Cloud9 development environment:
+.RE
+.PP
+\fB\fCaws cloud9 create\-environment\-ec2 \-\-name {{name}} \-\-instance\-type {{instance_type}}\fR
+.RS
+.IP \(bu 2
+Display information about Cloud9 development environments:
+.RE
+.PP
+\fB\fCaws cloud9 describe\-environments \-\-environment\-ids {{environment_ids}}\fR
+.RS
+.IP \(bu 2
+Add an environment member to a Cloud9 development environment:
+.RE
+.PP
+\fB\fCaws cloud9 create\-environment\-membership \-\-environment\-id {{environment_id}} \-\-user\-arn {{user_arn}} \-\-permissions {{permissions}}\fR
+.RS
+.IP \(bu 2
+Display status information for a Cloud9 development environment:
+.RE
+.PP
+\fB\fCaws cloud9 describe\-environment\-status \-\-environment\-id {{environment_id}}\fR
+.RS
+.IP \(bu 2
+Delete a Cloud9 environment:
+.RE
+.PP
+\fB\fCaws cloud9 delete\-environment \-\-environment\-id {{environment_id}}\fR
+.RS
+.IP \(bu 2
+Delete an environment member from a development environment:
+.RE
+.PP
+\fB\fCaws cloud9 delete\-environment\-membership \-\-environment\-id {{environment_id}} \-\-user\-arn {{user_arn}}\fR

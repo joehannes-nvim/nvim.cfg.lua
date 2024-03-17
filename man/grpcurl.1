@@ -1,0 +1,31 @@
+.TH grpcurl
+.PP
+.RS
+Interact with gRPC servers.
+Like \fB\fCcurl\fR, but for gRPC.
+More information: \[la]https://github.com/fullstorydev/grpcurl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send an empty request:
+.RE
+.PP
+\fB\fCgrpcurl {{grpc.server.com:443}} {{my.custom.server.Service/Method}}\fR
+.RS
+.IP \(bu 2
+Send a request with a header and a body:
+.RE
+.PP
+\fB\fCgrpcurl \-H "{{Authorization: Bearer $token}}" \-d {{'{"foo": "bar"}'}} {{grpc.server.com:443}} {{my.custom.server.Service/Method}}\fR
+.RS
+.IP \(bu 2
+List all services exposed by a server:
+.RE
+.PP
+\fB\fCgrpcurl {{grpc.server.com:443}} list\fR
+.RS
+.IP \(bu 2
+List all methods in a particular service:
+.RE
+.PP
+\fB\fCgrpcurl {{grpc.server.com:443}} list {{my.custom.server.Service}}\fR

@@ -1,0 +1,36 @@
+.TH bw
+.PP
+.RS
+Access and manage a Bitwarden vault.
+More information: \[la]https://help.bitwarden.com/article/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to a Bitwarden user account:
+.RE
+.PP
+\fB\fCbw login\fR
+.RS
+.IP \(bu 2
+Log out of a Bitwarden user account:
+.RE
+.PP
+\fB\fCbw logout\fR
+.RS
+.IP \(bu 2
+Search and display items from Bitwarden vault:
+.RE
+.PP
+\fB\fCbw list items \-\-search {{github}}\fR
+.RS
+.IP \(bu 2
+Display a particular item from Bitwarden vault:
+.RE
+.PP
+\fB\fCbw get item {{github}}\fR
+.RS
+.IP \(bu 2
+Create a folder in Bitwarden vault:
+.RE
+.PP
+\fB\fC{{echo \-n '{"name":"My Folder1"}' | base64}} | bw create folder\fR

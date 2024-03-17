@@ -1,0 +1,49 @@
+.TH gsutil
+.PP
+.RS
+Access Google Cloud Storage.
+You can use \fB\fCgsutil\fR to do a wide range of bucket and object management tasks.
+More information: \[la]https://cloud.google.com/storage/docs/gsutil\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all buckets in a project you are logged into:
+.RE
+.PP
+\fB\fCgsutil ls\fR
+.RS
+.IP \(bu 2
+List the objects in a bucket:
+.RE
+.PP
+\fB\fCgsutil ls \-r 'gs://{{bucket_name}}/{{prefix}}**'\fR
+.RS
+.IP \(bu 2
+Download an object from a bucket:
+.RE
+.PP
+\fB\fCgsutil cp gs://{{bucket_name}}/{{object_name}} {{path/to/save_location}}\fR
+.RS
+.IP \(bu 2
+Upload an object to a bucket:
+.RE
+.PP
+\fB\fCgsutil cp {{object_location}} gs://{{destination_bucket_name}}/\fR
+.RS
+.IP \(bu 2
+Rename or move objects in a bucket:
+.RE
+.PP
+\fB\fCgsutil mv gs://{{bucket_name}}/{{old_object_name}} gs://{{bucket_name}}/{{new_object_name}}\fR
+.RS
+.IP \(bu 2
+Create a new bucket in the project you are logged into:
+.RE
+.PP
+\fB\fCgsutil mb gs://{{bucket_name}}\fR
+.RS
+.IP \(bu 2
+Delete a bucket and remove all the objects in it:
+.RE
+.PP
+\fB\fCgsutil rm \-r gs://{{bucket_name}}\fR

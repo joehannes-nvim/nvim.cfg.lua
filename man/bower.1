@@ -1,0 +1,49 @@
+.TH bower
+.PP
+.RS
+A package manager optimized for front\-end web development.
+A package can be a GitHub user/repo shorthand, a Git endpoint, a URL or a registered package.
+More information: \[la]https://bower.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a project's dependencies, listed in its bower.json:
+.RE
+.PP
+\fB\fCbower install\fR
+.RS
+.IP \(bu 2
+Install one or more packages to the bower_components directory:
+.RE
+.PP
+\fB\fCbower install {{package}} {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall packages locally from the bower_components directory:
+.RE
+.PP
+\fB\fCbower uninstall {{package}} {{package}}\fR
+.RS
+.IP \(bu 2
+List local packages and possible updates:
+.RE
+.PP
+\fB\fCbower list\fR
+.RS
+.IP \(bu 2
+Display help information about a bower command:
+.RE
+.PP
+\fB\fCbower help {{command}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCbower.json\fR file for your package:
+.RE
+.PP
+\fB\fCbower init\fR
+.RS
+.IP \(bu 2
+Install a specific dependency version, and add it to \fB\fCbower.json\fR:
+.RE
+.PP
+\fB\fCbower install {{local_name}}={{package}}#{{version}} \-\-save\fR

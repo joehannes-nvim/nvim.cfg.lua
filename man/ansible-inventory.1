@@ -1,0 +1,31 @@
+.TH ansible\-inventory
+.PP
+.RS
+Display or dump an Ansible inventory.
+See also: \fB\fCansible\fR\&.
+More information: \[la]https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the default inventory:
+.RE
+.PP
+\fB\fCansible\-inventory \-\-list\fR
+.RS
+.IP \(bu 2
+Display a custom inventory:
+.RE
+.PP
+\fB\fCansbile\-inventory \-\-list \-\-inventory {{path/to/file_or_script_or_directory}}\fR
+.RS
+.IP \(bu 2
+Display the default inventory in YAML:
+.RE
+.PP
+\fB\fCansible\-inventory \-\-list \-\-yaml\fR
+.RS
+.IP \(bu 2
+Dump the default inventory to a file:
+.RE
+.PP
+\fB\fCansible\-inventory \-\-list \-\-output {{path/to/file}}\fR

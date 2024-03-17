@@ -1,0 +1,36 @@
+.TH ninja
+.PP
+.RS
+A Build system designed to be fast.
+More information: \[la]https://ninja-build.org/manual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build in the current directory:
+.RE
+.PP
+\fB\fCninja\fR
+.RS
+.IP \(bu 2
+Build in the current directory, executing 4 jobs at a time in parallel:
+.RE
+.PP
+\fB\fCninja \-j {{4}}\fR
+.RS
+.IP \(bu 2
+Build a program in a given directory:
+.RE
+.PP
+\fB\fCninja \-C {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Show targets (e.g. \fB\fCinstall\fR and \fB\fCuninstall\fR):
+.RE
+.PP
+\fB\fCninja \-t targets\fR
+.RS
+.IP \(bu 2
+Show help:
+.RE
+.PP
+\fB\fCninja \-h\fR

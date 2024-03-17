@@ -1,0 +1,36 @@
+.TH minisign
+.PP
+.RS
+A dead simple tool to sign files and verify signatures.
+More information: \[la]https://jedisct1.github.io/minisign/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a new keypair at the default location:
+.RE
+.PP
+\fB\fCminisign \-G\fR
+.RS
+.IP \(bu 2
+Sign a file:
+.RE
+.PP
+\fB\fCminisign \-Sm {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Sign a file, adding a trusted (signed) and an untrusted (unsigned) comment in the signature:
+.RE
+.PP
+\fB\fCminisign \-Sm {{path/to/file}} \-c "{{Untrusted comment}}" \-t "{{Trusted comment}}"\fR
+.RS
+.IP \(bu 2
+Verify a file and the trusted comments in its signature using the specified public key file:
+.RE
+.PP
+\fB\fCminisign \-Vm {{path/to/file}} \-p {{path/to/publickey.pub}}\fR
+.RS
+.IP \(bu 2
+Verify a file and the trusted comments in its signature, specifying a public key as a Base64 encoded literal:
+.RE
+.PP
+\fB\fCminisign \-Vm {{path/to/file}} \-P "{{public_key_base64}}"\fR

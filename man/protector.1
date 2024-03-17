@@ -1,0 +1,24 @@
+.TH protector
+.PP
+.RS
+Protect or unprotect branches on GitHub repositories.
+More information: \[la]https://github.com/jcgay/protector\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Protect branches of a GitHub repository (create branch protection rules):
+.RE
+.PP
+\fB\fCprotector {{branches_regex}} \-repos {{organization/repository}}\fR
+.RS
+.IP \(bu 2
+Use the dry run to see what would be protected (can also be used for freeing):
+.RE
+.PP
+\fB\fCprotector \-dry\-run {{branches_regex}} \-repos {{organization/repository}}\fR
+.RS
+.IP \(bu 2
+Free branches of a GitHub repository (delete branch protection rules):
+.RE
+.PP
+\fB\fCprotector \-free {{branches_regex}} \-repos {{organization/repository}}\fR

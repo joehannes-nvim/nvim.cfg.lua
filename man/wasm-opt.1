@@ -1,0 +1,30 @@
+.TH wasm\-opt
+.PP
+.RS
+Optimize WebAssembly binary files.
+More information: \[la]https://github.com/webassembly/binaryen\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply default optimizations and write to a given file:
+.RE
+.PP
+\fB\fCwasm\-opt \-O {{input.wasm}} \-o {{output.wasm}}\fR
+.RS
+.IP \(bu 2
+Apply all optimizations and write to a given file (takes more time, but generates optimal code):
+.RE
+.PP
+\fB\fCwasm\-opt \-O4 {{input.wasm}} \-o {{output.wasm}}\fR
+.RS
+.IP \(bu 2
+Optimize a file for size:
+.RE
+.PP
+\fB\fCwasm\-opt \-Oz {{input.wasm}} \-o {{output.wasm}}\fR
+.RS
+.IP \(bu 2
+Print the textual representation of the binary to console:
+.RE
+.PP
+\fB\fCwasm\-opt {{input.wasm}} \-\-print\fR

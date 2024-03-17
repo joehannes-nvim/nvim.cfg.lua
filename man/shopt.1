@@ -1,0 +1,37 @@
+.TH shopt
+.PP
+.RS
+Manage Bash shell options: variables (stored in \fB\fC$BASHOPTS\fR) that control behavior specific to the Bash shell.
+Generic POSIX shell variables (stored in \fB\fC$SHELLOPTS\fR) are managed with the \fB\fCset\fR command instead.
+More information: \[la]https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List of all settable options and whether they are set:
+.RE
+.PP
+\fB\fCshopt\fR
+.RS
+.IP \(bu 2
+Set an option:
+.RE
+.PP
+\fB\fCshopt \-s {{option_name}}\fR
+.RS
+.IP \(bu 2
+Unset an option:
+.RE
+.PP
+\fB\fCshopt \-u {{option_name}}\fR
+.RS
+.IP \(bu 2
+Print a list of all options and their status formatted as runnable \fB\fCshopt\fR commands:
+.RE
+.PP
+\fB\fCshopt \-p\fR
+.RS
+.IP \(bu 2
+Show help for the command:
+.RE
+.PP
+\fB\fChelp shopt\fR

@@ -1,0 +1,55 @@
+.TH tre
+.PP
+.RS
+Show the contents of the current directory as a tree.
+Respects the \fB\fC\&.gitignore\fR settings by default.
+More information: \[la]https://github.com/dduan/tre\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print directories only:
+.RE
+.PP
+\fB\fCtre \-\-directories\fR
+.RS
+.IP \(bu 2
+Print JSON containing files in the tree hierarchy instead of the normal tree diagram:
+.RE
+.PP
+\fB\fCtre \-\-json\fR
+.RS
+.IP \(bu 2
+Print files and directories up to the specified depth limit (where 1 means the current directory):
+.RE
+.PP
+\fB\fCtre \-\-limit {{depth}}\fR
+.RS
+.IP \(bu 2
+Print all hidden files and directories using the specified colorization mode:
+.RE
+.PP
+\fB\fCtre \-\-all \-\-color {{automatic|always|never}}\fR
+.RS
+.IP \(bu 2
+Print files within the tree hierarchy, assigning a shell alias to each file that, when called, will open the associated file using the provided \fB\fCcommand\fR (or in \fB\fC$EDITOR\fR by default):
+.RE
+.PP
+\fB\fCtre \-\-editor {{command}}\fR
+.RS
+.IP \(bu 2
+Print files within the tree hierarchy, excluding all paths that match the provided regular expression:
+.RE
+.PP
+\fB\fCtre \-\-exclude {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCtre \-\-version\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCtre \-\-help\fR

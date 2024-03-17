@@ -1,0 +1,55 @@
+.TH npm
+.PP
+.RS
+JavaScript and Node.js package manager.
+Manage Node.js projects and their module dependencies.
+More information: \[la]https://www.npmjs.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a \fB\fCpackage.json\fR file:
+.RE
+.PP
+\fB\fCnpm init\fR
+.RS
+.IP \(bu 2
+Download all the packages listed as dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCnpm install\fR
+.RS
+.IP \(bu 2
+Download a specific version of a package and add it to the list of dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCnpm install {{package_name}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Download the latest version of a package and add it to the list of dev dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCnpm install {{package_name}} \-\-save\-dev\fR
+.RS
+.IP \(bu 2
+Download the latest version of a package and install it globally:
+.RE
+.PP
+\fB\fCnpm install \-\-global {{package_name}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package and remove it from the list of dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCnpm uninstall {{package_name}}\fR
+.RS
+.IP \(bu 2
+List of locally installed dependencies:
+.RE
+.PP
+\fB\fCnpm list\fR
+.RS
+.IP \(bu 2
+List top\-level globally installed packages:
+.RE
+.PP
+\fB\fCnpm list \-\-global \-\-depth={{0}}\fR

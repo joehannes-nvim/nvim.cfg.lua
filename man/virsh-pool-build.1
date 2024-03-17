@@ -1,0 +1,13 @@
+.TH virsh pool\-build
+.PP
+.RS
+Build the underlying storage system for a virtual machine storage pool as defined in it's configuration file in \fB\fC/etc/libvirt/storage\fR\&.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-define\-as\fR, \fB\fCvirsh\-pool\-start\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the storage pool specified by name or UUID (determine using \fB\fCvirsh pool\-list\fR):
+.RE
+.PP
+\fB\fCvirsh pool\-build \-\-pool {{name|uuid}}\fR

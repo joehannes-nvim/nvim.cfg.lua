@@ -1,0 +1,25 @@
+.TH cargo publish
+.PP
+.RS
+Upload a package to a registry.
+Note: you have to add an authentication token using \fB\fCcargo login\fR before publishing a package.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-publish.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform checks, create a \fB\fC\&.crate\fR file and upload it to the registry:
+.RE
+.PP
+\fB\fCcargo publish\fR
+.RS
+.IP \(bu 2
+Perform checks, create a \fB\fC\&.crate\fR file but don't upload it (equivalent of \fB\fCcargo package\fR):
+.RE
+.PP
+\fB\fCcargo publish \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Specify the name of the registry to use (registry names can be defined in the config \- the default is \[la]https://crates.io\[ra]):
+.RE
+.PP
+\fB\fCcargo publish \-\-registry {{name}}\fR

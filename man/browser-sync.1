@@ -1,0 +1,30 @@
+.TH browser\-sync
+.PP
+.RS
+Starts local web server that updates browser on file changes.
+More information: \[la]https://browsersync.io/docs/command-line\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a server from a specific directory:
+.RE
+.PP
+\fB\fCbrowser\-sync start \-\-server {{path/to/directory}} \-\-files {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Start a server from local directory, watching all CSS files in a directory:
+.RE
+.PP
+\fB\fCbrowser\-sync start \-\-server \-\-files '{{path/to/directory/*.css}}'\fR
+.RS
+.IP \(bu 2
+Create configuration file:
+.RE
+.PP
+\fB\fCbrowser\-sync init\fR
+.RS
+.IP \(bu 2
+Start Browsersync from config file:
+.RE
+.PP
+\fB\fCbrowser\-sync start \-\-config {{config_file}}\fR

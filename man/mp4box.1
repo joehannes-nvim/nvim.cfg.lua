@@ -1,0 +1,24 @@
+.TH mp4box
+.PP
+.RS
+MPEG\-4 Systems Toolbox \- Muxes streams into MP4 container.
+More information: \[la]https://gpac.wp.imt.fr/mp4box\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display information about an existing MP4 file:
+.RE
+.PP
+\fB\fCmp4box \-info {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add an SRT subtitle file into an MP4 file:
+.RE
+.PP
+\fB\fCmp4box \-add {{input_subs.srt}}:lang=eng \-add {{input.mp4}} {{output.mp4}}\fR
+.RS
+.IP \(bu 2
+Combine audio from one file and video from another:
+.RE
+.PP
+\fB\fCmp4box \-add {{input1.mp4}}#audio \-add {{input2.mp4}}#video {{output.mp4}}\fR

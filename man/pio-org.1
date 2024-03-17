@@ -1,0 +1,42 @@
+.TH pio org
+.PP
+.RS
+Manage PlatformIO organizations and their owners.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new organization:
+.RE
+.PP
+\fB\fCpio org create {{organization_name}}\fR
+.RS
+.IP \(bu 2
+Delete an organization:
+.RE
+.PP
+\fB\fCpio org destroy {{organization_name}}\fR
+.RS
+.IP \(bu 2
+Add a user to an organization:
+.RE
+.PP
+\fB\fCpio org add {{organization_name}} {{username}}\fR
+.RS
+.IP \(bu 2
+Remove a user from an organization:
+.RE
+.PP
+\fB\fCpio org remove {{organization_name}} {{username}}\fR
+.RS
+.IP \(bu 2
+List all organizations the current user is a member of and their owners:
+.RE
+.PP
+\fB\fCpio org list\fR
+.RS
+.IP \(bu 2
+Update the name, email or display name of an organization:
+.RE
+.PP
+\fB\fCpio org update \-\-orgname {{new_organization_name}} \-\-email {{new_email}} \-\-displayname {{new_display_name}} {{organization_name}}\fR

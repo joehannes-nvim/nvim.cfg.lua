@@ -1,0 +1,18 @@
+.TH sponge
+.PP
+.RS
+Soak up the input before writing the output file.
+More information: \[la]https://manned.org/sponge\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Append file content to the source file:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | sponge \-a {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Remove all lines starting with # in a file:
+.RE
+.PP
+\fB\fCgrep \-v '^{{#}}' {{path/to/file}} | sponge {{path/to/file}}\fR

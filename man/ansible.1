@@ -1,0 +1,49 @@
+.TH ansible
+.PP
+.RS
+Manage groups of computers remotely over SSH. (use the \fB\fC/etc/ansible/hosts\fR file to add new groups/hosts).
+Some subcommands such as \fB\fCansible galaxy\fR have their own usage documentation.
+More information: \[la]https://www.ansible.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List hosts belonging to a group:
+.RE
+.PP
+\fB\fCansible {{group}} \-\-list\-hosts\fR
+.RS
+.IP \(bu 2
+Ping a group of hosts by invoking the ping module:
+.RE
+.PP
+\fB\fCansible {{group}} \-m ping\fR
+.RS
+.IP \(bu 2
+Display facts about a group of hosts by invoking the setup module:
+.RE
+.PP
+\fB\fCansible {{group}} \-m setup\fR
+.RS
+.IP \(bu 2
+Execute a command on a group of hosts by invoking command module with arguments:
+.RE
+.PP
+\fB\fCansible {{group}} \-m command \-a '{{my_command}}'\fR
+.RS
+.IP \(bu 2
+Execute a command with administrative privileges:
+.RE
+.PP
+\fB\fCansible {{group}} \-\-become \-\-ask\-become\-pass \-m command \-a '{{my_command}}'\fR
+.RS
+.IP \(bu 2
+Execute a command using a custom inventory file:
+.RE
+.PP
+\fB\fCansible {{group}} \-i {{inventory_file}} \-m command \-a '{{my_command}}'\fR
+.RS
+.IP \(bu 2
+List the groups in an inventory:
+.RE
+.PP
+\fB\fCansible localhost \-m debug \-a '{{var=groups.keys()}}'\fR

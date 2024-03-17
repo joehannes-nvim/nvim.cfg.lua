@@ -1,0 +1,13 @@
+.TH cargo generate\-lockfile
+.PP
+.RS
+Generate the \fB\fCCargo.lock\fR file for the current package. Similar to \fB\fCcargo update\fR, but has less options.
+If the lockfile already exists it will be rebuilt with latest version of every package.
+More information: \[la]https://doc.rust-lang.org/stable/cargo/commands/cargo-generate-lockfile.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a \fB\fCCargo.lock\fR file with the latest version of every package:
+.RE
+.PP
+\fB\fCcargo generate\-lockfile\fR

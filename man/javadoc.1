@@ -1,0 +1,24 @@
+.TH javadoc
+.PP
+.RS
+Generate Java API documentation in HTML format from source code.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/javadoc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate documentation for Java source code and save the result in a directory:
+.RE
+.PP
+\fB\fCjavadoc \-d {{path/to/directory/}} {{path/to/java_source_code}}\fR
+.RS
+.IP \(bu 2
+Generate documentation with a specific encoding:
+.RE
+.PP
+\fB\fCjavadoc \-docencoding {{UTF\-8}} {{path/to/java_source_code}}\fR
+.RS
+.IP \(bu 2
+Generate documentation excluding some packages:
+.RE
+.PP
+\fB\fCjavadoc \-exclude {{package_list}} {{path/to/java_source_code}}\fR

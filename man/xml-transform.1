@@ -1,0 +1,18 @@
+.TH xml transform
+.PP
+.RS
+Transform XML documents using XSLT.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transform an XML document using an XSL stylesheet, passing one XPATH parameter and one literal string parameter:
+.RE
+.PP
+\fB\fCxml transform {{path/to/stylesheet.xsl}} \-p "{{Count='count(/xml/table/rec)'}}" \-s {{Text="Count="}} {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCtransform\fR subcommand:
+.RE
+.PP
+\fB\fCxml transform \-\-help\fR

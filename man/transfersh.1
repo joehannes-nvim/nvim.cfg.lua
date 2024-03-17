@@ -1,0 +1,42 @@
+.TH transfersh
+.PP
+.RS
+An unofficial command\-line client for transfer.sh.
+More information: \[la]https://github.com/AlpixTM/transfersh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Upload a file to transfer.sh:
+.RE
+.PP
+\fB\fCtransfersh {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Upload a file showing a progress bar (requires Python package \fB\fCrequests_toolbelt\fR):
+.RE
+.PP
+\fB\fCtransfersh \-\-progress {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Upload a file using a different file name:
+.RE
+.PP
+\fB\fCtransfersh \-\-name {{filename}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Upload a file to a custom transfer.sh server:
+.RE
+.PP
+\fB\fCtransfersh \-\-servername {{upload.server.name}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Upload all files from a directory recursively:
+.RE
+.PP
+\fB\fCtransfersh \-\-recursive {{path/to/directory/}}\fR
+.RS
+.IP \(bu 2
+Upload a specific directory as an uncompressed tar:
+.RE
+.PP
+\fB\fCtransfersh \-rt {{path/to/directory}}\fR

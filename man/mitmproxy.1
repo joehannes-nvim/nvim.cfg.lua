@@ -1,0 +1,31 @@
+.TH mitmproxy
+.PP
+.RS
+An interactive man\-in\-the\-middle HTTP proxy.
+See also: \fB\fCmitmweb\fR\&.
+More information: \[la]https://docs.mitmproxy.org/stable/concepts-options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCmitmproxy\fR with default settings:
+.RE
+.PP
+\fB\fCmitmproxy\fR
+.RS
+.IP \(bu 2
+Start \fB\fCmitmproxy\fR bound to a custom address and port:
+.RE
+.PP
+\fB\fCmitmproxy \-\-listen\-host {{ip_address}} \-\-listen\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCmitmproxy\fR using a script to process traffic:
+.RE
+.PP
+\fB\fCmitmproxy \-\-scripts {{path/to/script.py}}\fR
+.RS
+.IP \(bu 2
+Export the logs with SSL/TLS master keys to external programs (wireshark, etc.):
+.RE
+.PP
+\fB\fCSSLKEYLOGFILE="{{path/to/file}}" mitmproxy\fR

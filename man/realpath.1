@@ -1,0 +1,36 @@
+.TH realpath
+.PP
+.RS
+Display the resolved absolute path for a file or directory.
+More information: \[la]https://www.gnu.org/software/coreutils/realpath\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the absolute path for a file or directory:
+.RE
+.PP
+\fB\fCrealpath {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Require all path components to exist:
+.RE
+.PP
+\fB\fCrealpath \-\-canonicalize\-existing {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Resolve ".." components before symlinks:
+.RE
+.PP
+\fB\fCrealpath \-\-logical {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Disable symlink expansion:
+.RE
+.PP
+\fB\fCrealpath \-\-no\-symlinks {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Suppress error messages:
+.RE
+.PP
+\fB\fCrealpath \-\-quiet {{path/to/file_or_directory}}\fR

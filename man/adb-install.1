@@ -1,0 +1,42 @@
+.TH adb install
+.PP
+.RS
+Android Debug Bridge Install: Push packages to an Android emulator instance or connected Android devices.
+More information: \[la]https://developer.android.com/studio/command-line/adb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Push an Android application to an emulator/device:
+.RE
+.PP
+\fB\fCadb install {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Push an Android application to a specific emulator/device (overrides \fB\fC$ANDROID_SERIAL\fR):
+.RE
+.PP
+\fB\fCadb \-s {{serial_number}} install {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Reinstall an existing app, keeping its data:
+.RE
+.PP
+\fB\fCadb install \-r {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Push an Android application allowing version code downgrade (debuggable packages only):
+.RE
+.PP
+\fB\fCadb install \-d {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Grant all permissions listed in the app manifest:
+.RE
+.PP
+\fB\fCadb install \-g {{path/to/file.apk}}\fR
+.RS
+.IP \(bu 2
+Quickly update an installed package by only updating the parts of the APK that changed:
+.RE
+.PP
+\fB\fCadb install \-\-fastdeploy {{path/to/file.apk}}\fR

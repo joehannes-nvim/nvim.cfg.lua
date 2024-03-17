@@ -1,0 +1,24 @@
+.TH fping
+.PP
+.RS
+A more powerful ping which can ping multiple hosts.
+More information: \[la]https://fping.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List alive hosts within a subnet generated from a netmask:
+.RE
+.PP
+\fB\fCfping \-a \-g 192.168.1.0/24\fR
+.RS
+.IP \(bu 2
+List alive hosts within a subnet generated from an IP range:
+.RE
+.PP
+\fB\fCfping \-a \-g 192.168.1.1 192.168.1.254\fR
+.RS
+.IP \(bu 2
+List unreachable hosts within a subnet generated from a netmask:
+.RE
+.PP
+\fB\fCfping \-u \-g 192.168.1.0/24\fR

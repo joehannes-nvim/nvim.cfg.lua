@@ -1,0 +1,48 @@
+.TH bzip3
+.PP
+.RS
+An efficient statistical file compressor.
+More information: \[la]https://github.com/kspalaiologos/bzip3\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file:
+.RE
+.PP
+\fB\fCbzip3 {{path/to/file_to_compress}}\fR
+.RS
+.IP \(bu 2
+Decompress a file:
+.RE
+.PP
+\fB\fCbzip3 \-d {{path/to/compressed_file.bz3}}\fR
+.RS
+.IP \(bu 2
+Decompress a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbzip3 \-dc {{path/to/compressed_file.bz3}}\fR
+.RS
+.IP \(bu 2
+Test the integrity of each file inside the archive file:
+.RE
+.PP
+\fB\fCbzip3 \-\-test {{path/to/compressed_file.bz3}}\fR
+.RS
+.IP \(bu 2
+Show the compression ratio for each file processed with detailed information:
+.RE
+.PP
+\fB\fCbzip3 \-\-verbose {{path/to/compressed_files.bz3}}\fR
+.RS
+.IP \(bu 2
+Decompress a file overwriting existing files:
+.RE
+.PP
+\fB\fCbzip3 \-\-force {{path/to/compressed_file.bz3}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCbzip3 \-h\fR

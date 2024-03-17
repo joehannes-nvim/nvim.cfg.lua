@@ -1,0 +1,56 @@
+.TH youtube\-dl
+.PP
+.RS
+Download videos from YouTube and other websites.
+More information: \[la]http://rg3.github.io/youtube-dl/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a video or playlist:
+.RE
+.PP
+\fB\fCyoutube\-dl '{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}'\fR
+.RS
+.IP \(bu 2
+List all formats that a video or playlist is available in:
+.RE
+.PP
+\fB\fCyoutube\-dl \-\-list\-formats '{{https://www.youtube.com/watch?v=Mwa0_nE9H7A}}'\fR
+.RS
+.IP \(bu 2
+Download a video or playlist at a specific quality:
+.RE
+.PP
+\fB\fCyoutube\-dl \-\-format "{{best[height<=480]}}" '{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}'\fR
+.RS
+.IP \(bu 2
+Download the audio from a video and convert it to an MP3:
+.RE
+.PP
+\fB\fCyoutube\-dl \-x \-\-audio\-format {{mp3}} '{{url}}'\fR
+.RS
+.IP \(bu 2
+Download the best quality audio and video and merge them:
+.RE
+.PP
+\fB\fCyoutube\-dl \-f bestvideo+bestaudio '{{url}}'\fR
+.RS
+.IP \(bu 2
+Download 
+.BR video (s) 
+as MP4 files with custom filenames:
+.RE
+.PP
+\fB\fCyoutube\-dl \-\-format {{mp4}} \-o "{{%(playlist_index)s\-%(title)s by %(uploader)s on %(upload_date)s in %(playlist)s.%(ext)s}}" '{{url}}'\fR
+.RS
+.IP \(bu 2
+Download a particular language's subtitles along with the video:
+.RE
+.PP
+\fB\fCyoutube\-dl \-\-sub\-lang {{en}} \-\-write\-sub '{{https://www.youtube.com/watch?v=Mwa0_nE9H7A}}'\fR
+.RS
+.IP \(bu 2
+Download a playlist and extract MP3s from it:
+.RE
+.PP
+\fB\fCyoutube\-dl \-f "bestaudio" \-\-continue \-\-no\-overwrites \-\-ignore\-errors \-\-extract\-audio \-\-audio\-format mp3 \-o "%(title)s.%(ext)s" {{url_to_playlist}}\fR

@@ -1,0 +1,30 @@
+.TH git hash\-object
+.PP
+.RS
+Computes the unique hash key of content and optionally creates an object with specified type.
+More information: \[la]https://git-scm.com/docs/git-hash-object\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compute the object ID without storing it:
+.RE
+.PP
+\fB\fCgit hash\-object {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compute the object ID and store it in the Git database:
+.RE
+.PP
+\fB\fCgit hash\-object \-w {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compute the object ID specifying the object type:
+.RE
+.PP
+\fB\fCgit hash\-object \-t {{blob|commit|tag|tree}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compute the object ID from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | git hash\-object \-\-stdin\fR

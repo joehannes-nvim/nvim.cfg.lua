@@ -1,0 +1,30 @@
+.TH bmaptool
+.PP
+.RS
+Create or copy block maps intelligently (designed to be faster than \fB\fCcp\fR or \fB\fCdd\fR).
+More information: \[la]https://source.tizen.org/documentation/reference/bmaptool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a blockmap from image file:
+.RE
+.PP
+\fB\fCbmaptool create \-o {{blockmap.bmap}} {{source.img}}\fR
+.RS
+.IP \(bu 2
+Copy an image file into sdb:
+.RE
+.PP
+\fB\fCbmaptool copy \-\-bmap {{blockmap.bmap}} {{source.img}} {{/dev/sdb}}\fR
+.RS
+.IP \(bu 2
+Copy a compressed image file into sdb:
+.RE
+.PP
+\fB\fCbmaptool copy \-\-bmap {{blockmap.bmap}} {{source.img.gz}} {{/dev/sdb}}\fR
+.RS
+.IP \(bu 2
+Copy an image file into sdb without using a blockmap:
+.RE
+.PP
+\fB\fCbmaptool copy \-\-nobmap {{source.img}} {{/dev/sdb}}\fR

@@ -1,0 +1,48 @@
+.TH psalm
+.PP
+.RS
+A static analysis tool for finding errors in PHP applications.
+More information: \[la]https://psalm.dev\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a Psalm configuration:
+.RE
+.PP
+\fB\fCpsalm \-\-init\fR
+.RS
+.IP \(bu 2
+Analyze the current working directory:
+.RE
+.PP
+\fB\fCpsalm\fR
+.RS
+.IP \(bu 2
+Analyze a specific directory or file:
+.RE
+.PP
+\fB\fCpsalm {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Analyze a project with a specific configuration file:
+.RE
+.PP
+\fB\fCpsalm \-\-config {{path/to/psalm.xml}}\fR
+.RS
+.IP \(bu 2
+Include informational findings in the output:
+.RE
+.PP
+\fB\fCpsalm \-\-show\-info\fR
+.RS
+.IP \(bu 2
+Analyze a project and display statistics:
+.RE
+.PP
+\fB\fCpsalm \-\-stats\fR
+.RS
+.IP \(bu 2
+Analyze a project in parallel with 4 threads:
+.RE
+.PP
+\fB\fCpsalm \-\-threads {{4}}\fR

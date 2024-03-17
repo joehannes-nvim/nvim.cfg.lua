@@ -1,0 +1,42 @@
+.TH pueue add
+.PP
+.RS
+Enqueue a task for execution.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add any command to the default queue:
+.RE
+.PP
+\fB\fCpueue add {{command}}\fR
+.RS
+.IP \(bu 2
+Pass a list of flags or arguments to a command when enqueuing:
+.RE
+.PP
+\fB\fCpueue add \-\- {{command \-\-arg \-f}}\fR
+.RS
+.IP \(bu 2
+Add a command but do not start it if it's the first in a queue:
+.RE
+.PP
+\fB\fCpueue add \-\-stashed \-\- {{rsync \-\-archive \-\-compress /local/directory /remote/directory}}\fR
+.RS
+.IP \(bu 2
+Add a command to a group and start it immediately, see \fB\fCpueue group\fR to manage groups:
+.RE
+.PP
+\fB\fCpueue add \-\-immediate \-\-group "{{CPU_intensive}}" \-\- {{ffmpeg \-i input.mp4 frame_%d.png}}\fR
+.RS
+.IP \(bu 2
+Add a command and start it after commands 9 and 12 finish successfully:
+.RE
+.PP
+\fB\fCpueue add \-\-after {{9}} {{12}} \-\-group "{{torrents}}" \-\- {{transmission\-cli torrent_file.torrent}}\fR
+.RS
+.IP \(bu 2
+Add a command with a label after some delay has passed, see \fB\fCpueue enqueue\fR for valid datetime formats:
+.RE
+.PP
+\fB\fCpueue add \-\-label "{{compressing large file}}" \-\-delay "{{wednesday 10:30pm}}" \-\- "{{7z a compressed_file.7z large_file.xml}}"\fR

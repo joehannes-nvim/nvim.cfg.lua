@@ -1,0 +1,54 @@
+.TH minifab
+.PP
+.RS
+Utility tool that automates the setup and deployment of Hyperledger Fabric networks.
+More information: \[la]https://github.com/hyperledger-labs/minifabric\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bring up the default Hyperledger Fabric network:
+.RE
+.PP
+\fB\fCminifab up \-i {{minifab_version}}\fR
+.RS
+.IP \(bu 2
+Bring down the Hyperledger Fabric network:
+.RE
+.PP
+\fB\fCminifab down\fR
+.RS
+.IP \(bu 2
+Install chaincode onto a specified channel:
+.RE
+.PP
+\fB\fCminifab install \-n {{chaincode_name}}\fR
+.RS
+.IP \(bu 2
+Install a specific chaincode version onto a channel:
+.RE
+.PP
+\fB\fCminifab install \-n {{chaincode_name}} \-v {{chaincode_version}}\fR
+.RS
+.IP \(bu 2
+Initialize the chaincode after installation/upgrade:
+.RE
+.PP
+\fB\fCminifab approve,commit,initialize,discover\fR
+.RS
+.IP \(bu 2
+Invoke a chaincode method with the specified arguments:
+.RE
+.PP
+\fB\fCminifab invoke \-n {{chaincode_name}} \-p '"{{method_name}}", "{{argument1}}", "{{argument2}}", ...'\fR
+.RS
+.IP \(bu 2
+Make a query on the ledger:
+.RE
+.PP
+\fB\fCminifab blockquery {{block_number}}\fR
+.RS
+.IP \(bu 2
+Quickly run an application:
+.RE
+.PP
+\fB\fCminifab apprun \-l {{app_programming_language}}\fR

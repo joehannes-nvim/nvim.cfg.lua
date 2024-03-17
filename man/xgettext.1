@@ -1,0 +1,30 @@
+.TH xgettext
+.PP
+.RS
+Extract gettext strings from code files.
+More information: \[la]https://www.gnu.org/software/gettext/manual/html_node/xgettext-Invocation.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan file and output strings to \fB\fCmessages.po\fR:
+.RE
+.PP
+\fB\fCxgettext {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Use a different output filename:
+.RE
+.PP
+\fB\fCxgettext \-\-output {{path/to/output_file}} {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Append new strings to an existing file:
+.RE
+.PP
+\fB\fCxgettext \-\-join\-existing \-\-output {{path/to/output_file}} {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Don't add a header containing metadata to the output file:
+.RE
+.PP
+\fB\fCxgettext \-\-omit\-header {{path/to/input_file}}\fR

@@ -1,0 +1,12 @@
+.TH cargo vendor
+.PP
+.RS
+Vendor all dependencies of a project into the specified directory (default: \fB\fCvendor\fR).
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-vendor.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Vendor dependencies and configure \fB\fCcargo\fR to use the vendored sources in the current project:
+.RE
+.PP
+\fB\fCcargo vendor {{path/to/directory}} > .cargo/config.toml\fR

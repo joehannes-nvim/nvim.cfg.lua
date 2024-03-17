@@ -1,0 +1,25 @@
+.TH unflatten
+.PP
+.RS
+Adjust directed graphs to improve the layout aspect ratio.
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://www.graphviz.org/pdf/unflatten.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Adjust one or more directed graphs to improve the layout aspect ratio:
+.RE
+.PP
+\fB\fCunflatten {{path/to/input1.gv}} {{path/to/input2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Use \fB\fCunflatten\fR as a preprocessor for \fB\fCdot\fR layout to improve aspect ratio:
+.RE
+.PP
+\fB\fCunflatten {{path/to/input.gv}} | dot \-T {{png}} {{path/to/output.png}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCunflatten\fR:
+.RE
+.PP
+\fB\fCunflatten \-?\fR

@@ -1,0 +1,55 @@
+.TH sdk
+.PP
+.RS
+Tool for managing parallel versions of multiple Software Development Kits.
+Supports Java, Groovy, Scala, Kotlin, Gradle, Maven, Vert.x and many others.
+More information: \[la]https://sdkman.io/usage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install an SDK version:
+.RE
+.PP
+\fB\fCsdk install {{sdk_name}} {{sdk_version}}\fR
+.RS
+.IP \(bu 2
+Use a specific SDK version for the current terminal session:
+.RE
+.PP
+\fB\fCsdk use {{sdk_name}} {{sdk_version}}\fR
+.RS
+.IP \(bu 2
+Show the stable version of any available SDK:
+.RE
+.PP
+\fB\fCsdk current {{sdk_name}}\fR
+.RS
+.IP \(bu 2
+Show the stable versions of all installed SDKs:
+.RE
+.PP
+\fB\fCsdk current\fR
+.RS
+.IP \(bu 2
+List all available SDKs:
+.RE
+.PP
+\fB\fCsdk list\fR
+.RS
+.IP \(bu 2
+List all versions of an SDK:
+.RE
+.PP
+\fB\fCsdk list {{sdk_name}}\fR
+.RS
+.IP \(bu 2
+Upgrade an SDK to the latest stable version:
+.RE
+.PP
+\fB\fCsdk upgrade {{sdk_name}}\fR
+.RS
+.IP \(bu 2
+Uninstall a specific SDK version:
+.RE
+.PP
+\fB\fCsdk rm {{sdk_name}} {{sdk_version}}\fR

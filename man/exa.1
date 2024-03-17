@@ -1,0 +1,54 @@
+.TH exa
+.PP
+.RS
+A modern replacement for \fB\fCls\fR (List directory contents).
+More information: \[la]https://the.exa.website\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List files one per line:
+.RE
+.PP
+\fB\fCexa \-\-oneline\fR
+.RS
+.IP \(bu 2
+List all files, including hidden files:
+.RE
+.PP
+\fB\fCexa \-\-all\fR
+.RS
+.IP \(bu 2
+Long format list (permissions, ownership, size and modification date) of all files:
+.RE
+.PP
+\fB\fCexa \-\-long \-\-all\fR
+.RS
+.IP \(bu 2
+List files with the largest at the top:
+.RE
+.PP
+\fB\fCexa \-\-reverse \-\-sort={{size}}\fR
+.RS
+.IP \(bu 2
+Display a tree of files, three levels deep:
+.RE
+.PP
+\fB\fCexa \-\-long \-\-tree \-\-level={{3}}\fR
+.RS
+.IP \(bu 2
+List files sorted by modification date (oldest first):
+.RE
+.PP
+\fB\fCexa \-\-long \-\-sort={{modified}}\fR
+.RS
+.IP \(bu 2
+List files with their headers, icons, and Git statuses:
+.RE
+.PP
+\fB\fCexa \-\-long \-\-header \-\-icons \-\-git\fR
+.RS
+.IP \(bu 2
+Don't list files mentioned in \fB\fC\&.gitignore\fR:
+.RE
+.PP
+\fB\fCexa \-\-git\-ignore\fR

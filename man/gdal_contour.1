@@ -1,0 +1,18 @@
+.TH gdal_contour
+.PP
+.RS
+Create contour lines and polygons from a digital elevation model.
+More information: \[la]https://gdal.org/programs/gdal_contour.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a vector dataset with contour lines spread over an 100\-meter [i]nterval while [a]ttributing the elevation property as "ele":
+.RE
+.PP
+\fB\fCgdal_contour \-a {{ele}} \-i {{100.0}} {{path/to/input.tif}} {{path/to/output.gpkg}}\fR
+.RS
+.IP \(bu 2
+Create a vector dataset with [p]olygons spread over an 100\-meter [i]nterval:
+.RE
+.PP
+\fB\fCgdal_contour \-i {{100.0}} \-p {{path/to/input.tif}} {{path/to/output.gpkg}}\fR

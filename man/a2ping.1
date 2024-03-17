@@ -1,0 +1,48 @@
+.TH a2ping
+.PP
+.RS
+Convert images into EPS or PDF files.
+More information: \[la]https://manned.org/a2ping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an image to PDF (Note: Specifying an output filename is optional):
+.RE
+.PP
+\fB\fCa2ping {{path/to/image.ext}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Compress the document using the specified method:
+.RE
+.PP
+\fB\fCa2ping \-\-nocompress {{none|zip|best|flate}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Scan HiResBoundingBox if present (Note: It Defaults to yes):
+.RE
+.PP
+\fB\fCa2ping \-\-nohires {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Allow page content below and left of the origin (Note: It defaults to no):
+.RE
+.PP
+\fB\fCa2ping \-\-below {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Pass extra arguments to \fB\fCgs\fR`:
+.RE
+.PP
+\fB\fCa2ping \-\-gsextra {{arguments}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Pass extra arguments to external program (i.e pdftops):
+.RE
+.PP
+\fB\fCa2ping \-\-extra {{arguments}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCa2ping \-h\fR

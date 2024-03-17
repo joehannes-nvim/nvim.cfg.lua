@@ -1,0 +1,43 @@
+.TH az lock
+.PP
+.RS
+Manage Azure locks.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/lock\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a read\-only subscription level lock:
+.RE
+.PP
+\fB\fCaz lock create \-\-name {{lock_name}} \-\-lock\-type ReadOnly\fR
+.RS
+.IP \(bu 2
+Create a read\-only resource group level lock:
+.RE
+.PP
+\fB\fCaz lock create \-\-name {{lock_name}} \-\-resource\-group {{group_name}} \-\-lock\-type ReadOnly\fR
+.RS
+.IP \(bu 2
+Delete a subscription level lock:
+.RE
+.PP
+\fB\fCaz lock delete \-\-name {{lock_name}}\fR
+.RS
+.IP \(bu 2
+Delete a resource group level lock:
+.RE
+.PP
+\fB\fCaz lock delete \-\-name {{lock_name}} \-\-resource\-group {{group_name}}\fR
+.RS
+.IP \(bu 2
+List out all locks on the subscription level:
+.RE
+.PP
+\fB\fCaz lock list\fR
+.RS
+.IP \(bu 2
+Show a subscription level lock:
+.RE
+.PP
+\fB\fCaz lock show \-n {{lock_name}}\fR

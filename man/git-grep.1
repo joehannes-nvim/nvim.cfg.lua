@@ -1,0 +1,37 @@
+.TH git\-grep
+.PP
+.RS
+Find strings inside files anywhere in a repository's history.
+Accepts a lot of the same flags as regular \fB\fCgrep\fR\&.
+More information: \[la]https://git-scm.com/docs/git-grep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a string in tracked files:
+.RE
+.PP
+\fB\fCgit grep {{search_string}}\fR
+.RS
+.IP \(bu 2
+Search for a string in files matching a pattern in tracked files:
+.RE
+.PP
+\fB\fCgit grep {{search_string}} \-\- {{file_glob_pattern}}\fR
+.RS
+.IP \(bu 2
+Search for a string in tracked files, including submodules:
+.RE
+.PP
+\fB\fCgit grep \-\-recurse\-submodules {{search_string}}\fR
+.RS
+.IP \(bu 2
+Search for a string at a specific point in history:
+.RE
+.PP
+\fB\fCgit grep {{search_string}} {{HEAD~2}}\fR
+.RS
+.IP \(bu 2
+Search for a string across all branches:
+.RE
+.PP
+\fB\fCgit grep {{search_string}} $(git rev\-list \-\-all)\fR

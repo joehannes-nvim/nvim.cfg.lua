@@ -1,0 +1,54 @@
+.TH task
+.PP
+.RS
+Command\-line to\-do list manager.
+More information: \[la]https://taskwarrior.org/docs/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a new task which is due tomorrow:
+.RE
+.PP
+\fB\fCtask add {{description}} due:{{tomorrow}}\fR
+.RS
+.IP \(bu 2
+Update a task's priority:
+.RE
+.PP
+\fB\fCtask {{task_id}} modify priority:{{H|M|L}}\fR
+.RS
+.IP \(bu 2
+Complete a task:
+.RE
+.PP
+\fB\fCtask {{task_id}} done\fR
+.RS
+.IP \(bu 2
+Delete a task:
+.RE
+.PP
+\fB\fCtask {{task_id}} delete\fR
+.RS
+.IP \(bu 2
+List all open tasks:
+.RE
+.PP
+\fB\fCtask list\fR
+.RS
+.IP \(bu 2
+List open tasks due before the end of the week:
+.RE
+.PP
+\fB\fCtask list due.before:{{eow}}\fR
+.RS
+.IP \(bu 2
+Show a graphical burndown chart, by day:
+.RE
+.PP
+\fB\fCtask burndown.daily\fR
+.RS
+.IP \(bu 2
+List all reports:
+.RE
+.PP
+\fB\fCtask reports\fR

@@ -1,0 +1,36 @@
+.TH prosodyctl
+.PP
+.RS
+The control tool for the Prosody XMPP server.
+More information: \[la]https://prosody.im/doc/prosodyctl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the status of the Prosody server:
+.RE
+.PP
+\fB\fCsudo prosodyctl status\fR
+.RS
+.IP \(bu 2
+Reload the server's configuration files:
+.RE
+.PP
+\fB\fCsudo prosodyctl reload\fR
+.RS
+.IP \(bu 2
+Add a user to the Prosody XMPP server:
+.RE
+.PP
+\fB\fCsudo prosodyctl adduser {{user@example.com}}\fR
+.RS
+.IP \(bu 2
+Set a user's password:
+.RE
+.PP
+\fB\fCsudo prosodyctl passwd {{user@example.com}}\fR
+.RS
+.IP \(bu 2
+Permanently delete a user:
+.RE
+.PP
+\fB\fCsudo prosodyctl deluser {{user@example.com}}\fR

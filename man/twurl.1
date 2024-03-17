@@ -1,0 +1,42 @@
+.TH twurl
+.PP
+.RS
+Curl\-like command but tailored specifically for the Twitter API.
+More information: \[la]https://github.com/twitter/twurl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authorize \fB\fCtwurl\fR to access a Twitter account:
+.RE
+.PP
+\fB\fCtwurl authorize \-\-consumer\-key {{twitter_api_key}} \-\-consumer\-secret {{twitter_api_secret}}\fR
+.RS
+.IP \(bu 2
+Make a GET request to an API endpoint:
+.RE
+.PP
+\fB\fCtwurl \-X GET {{twitter_api_endpoint}}\fR
+.RS
+.IP \(bu 2
+Make a POST request to an API endpoint:
+.RE
+.PP
+\fB\fCtwurl \-X POST \-d '{{endpoint_params}}' {{twitter_api_endpoint}}\fR
+.RS
+.IP \(bu 2
+Upload media to Twitter:
+.RE
+.PP
+\fB\fCtwurl \-H "{{twitter_upload_url}}" \-X POST "{{twitter_upload_endpoint}}" \-\-file "{{path/to/media.jpg}}" \-\-file\-field "media"\fR
+.RS
+.IP \(bu 2
+Access a different Twitter API host:
+.RE
+.PP
+\fB\fCtwurl \-H {{twitter_api_url}} \-X GET {{twitter_api_endpoint}}\fR
+.RS
+.IP \(bu 2
+Create an alias for a requested resource:
+.RE
+.PP
+\fB\fCtwurl alias {{alias_name}} {{resource}}\fR

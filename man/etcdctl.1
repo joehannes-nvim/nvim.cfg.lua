@@ -1,0 +1,54 @@
+.TH etcdctl
+.PP
+.RS
+Interact with \fB\fCetcd\fR, a highly\-available key\-value pair store.
+More information: \[la]https://etcd.io/docs/latest/dev-guide/interacting_v3/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the value associated with a specified key:
+.RE
+.PP
+\fB\fCetcdctl get {{my/key}}\fR
+.RS
+.IP \(bu 2
+Store a key\-value pair:
+.RE
+.PP
+\fB\fCetcdctl put {{my/key}} {{my_value}}\fR
+.RS
+.IP \(bu 2
+Delete a key\-value pair:
+.RE
+.PP
+\fB\fCetcdctl del {{my/key}}\fR
+.RS
+.IP \(bu 2
+Store a key\-value pair, reading the value from a file:
+.RE
+.PP
+\fB\fCetcdctl put {{my/file}} < {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Save a snapshot of the etcd keystore:
+.RE
+.PP
+\fB\fCetcdctl snapshot save {{path/to/snapshot.db}}\fR
+.RS
+.IP \(bu 2
+Restore a snapshot of an etcd keystore (restart the etcd server afterwards):
+.RE
+.PP
+\fB\fCetcdctl snapshot restore {{path/to/snapshot.db}}\fR
+.RS
+.IP \(bu 2
+Add a user:
+.RE
+.PP
+\fB\fCetcdctl user add {{my_user}}\fR
+.RS
+.IP \(bu 2
+Watch a key for changes:
+.RE
+.PP
+\fB\fCetcdctl watch {{my/key}}\fR

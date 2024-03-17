@@ -1,0 +1,30 @@
+.TH fastlane
+.PP
+.RS
+Build and release mobile applications.
+More information: \[la]https://docs.fastlane.tools/actions/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build and sign the iOS application in the current directory:
+.RE
+.PP
+\fB\fCfastlane run build_app\fR
+.RS
+.IP \(bu 2
+Run \fB\fCpod install\fR for the project in the current directory:
+.RE
+.PP
+\fB\fCfastlane run cocoapods\fR
+.RS
+.IP \(bu 2
+Delete the derived data from Xcode:
+.RE
+.PP
+\fB\fCfastlane run clear_derived_data\fR
+.RS
+.IP \(bu 2
+Remove the cache for pods:
+.RE
+.PP
+\fB\fCfastlane run clean_cocoapods_cache\fR

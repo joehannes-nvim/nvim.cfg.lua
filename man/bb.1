@@ -1,0 +1,30 @@
+.TH bb
+.PP
+.RS
+Native Clojure interpreter for scripting.
+More information: \[la]https://book.babashka.org/#usage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+[e]valuate an expression:
+.RE
+.PP
+\fB\fCbb \-e "(+ 1 2 3)"\fR
+.RS
+.IP \(bu 2
+Evaluate a script [f]ile:
+.RE
+.PP
+\fB\fCbb \-f {{path/to/script.clj}}\fR
+.RS
+.IP \(bu 2
+Bind input to a sequence of lines from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCprintf "first\\nsecond" | bb \-i "(map clojure.string/capitalize *input*)"\fR
+.RS
+.IP \(bu 2
+Bind input to a sequence of EDN(Extensible Data Notation) values from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{:key 'val}" | bb \-I "(:key (first *input*))"\fR

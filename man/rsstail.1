@@ -1,0 +1,36 @@
+.TH rsstail
+.PP
+.RS
+\fB\fCtail\fR for RSS feeds.
+More information: \[la]https://github.com/gvalkov/rsstail.py\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the feed of a given URL and wait for new entries appearing at the bottom:
+.RE
+.PP
+\fB\fCrsstail \-u {{url}}\fR
+.RS
+.IP \(bu 2
+Show the feed in reverse chronological order (newer at the bottom):
+.RE
+.PP
+\fB\fCrsstail \-r \-u {{url}}\fR
+.RS
+.IP \(bu 2
+Include publication date and link:
+.RE
+.PP
+\fB\fCrsstail \-pl \-u {{url}}\fR
+.RS
+.IP \(bu 2
+Set update interval:
+.RE
+.PP
+\fB\fCrsstail \-u {{url}} \-i {{interval_in_seconds}}\fR
+.RS
+.IP \(bu 2
+Show feed and exit:
+.RE
+.PP
+\fB\fCrsstail \-1 \-u {{url}}\fR

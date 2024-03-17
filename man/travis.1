@@ -1,0 +1,36 @@
+.TH travis
+.PP
+.RS
+Command\-line client to interface with Travis CI.
+More information: \[la]https://github.com/travis-ci/travis.rb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the client version:
+.RE
+.PP
+\fB\fCtravis version\fR
+.RS
+.IP \(bu 2
+Authenticate the CLI client against the server, using an authentication token:
+.RE
+.PP
+\fB\fCtravis login\fR
+.RS
+.IP \(bu 2
+List repositories the user has permissions on:
+.RE
+.PP
+\fB\fCtravis repos\fR
+.RS
+.IP \(bu 2
+Encrypt values in \fB\fC\&.travis.yml\fR:
+.RE
+.PP
+\fB\fCtravis encrypt {{token}}\fR
+.RS
+.IP \(bu 2
+Generate a \fB\fC\&.travis.yml\fR file and enable the project:
+.RE
+.PP
+\fB\fCtravis init\fR

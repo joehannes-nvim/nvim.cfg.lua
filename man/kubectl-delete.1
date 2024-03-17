@@ -1,0 +1,48 @@
+.TH kubectl delete
+.PP
+.RS
+Delete Kubernetes resources.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#delete\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete a specific pod:
+.RE
+.PP
+\fB\fCkubectl delete pod {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Delete a specific deployment:
+.RE
+.PP
+\fB\fCkubectl delete deployment {{deployment_name}}\fR
+.RS
+.IP \(bu 2
+Delete a specific node:
+.RE
+.PP
+\fB\fCkubectl delete node {{node_name}}\fR
+.RS
+.IP \(bu 2
+Delete all pods in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl delete pods \-\-all \-\-namespace {{namespace}}\fR
+.RS
+.IP \(bu 2
+Delete all deployments and services in a specified namespace:
+.RE
+.PP
+\fB\fCkubectl delete deployments,services \-\-all \-\-namespace {{namespace}}\fR
+.RS
+.IP \(bu 2
+Delete all nodes:
+.RE
+.PP
+\fB\fCkubectl delete nodes \-\-all\fR
+.RS
+.IP \(bu 2
+Delete resources defined in a YAML manifest:
+.RE
+.PP
+\fB\fCkubectl delete \-\-filename {{path/to/manifest.yaml}}\fR

@@ -1,0 +1,24 @@
+.TH indent
+.PP
+.RS
+Change the appearance of a C/C++ program by inserting or deleting whitespace.
+More information: \[la]https://www.gnu.org/software/indent/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format C/C++ source according to the Linux style guide, automatically back up the original files, and replace with the indented versions:
+.RE
+.PP
+\fB\fCindent \-\-linux\-style {{path/to/source.c}} {{path/to/another_source.c}}\fR
+.RS
+.IP \(bu 2
+Format C/C++ source according to the GNU style, saving the indented version to a different file:
+.RE
+.PP
+\fB\fCindent \-\-gnu\-style {{path/to/source.c}} \-o {{path/to/indented_source.c}}\fR
+.RS
+.IP \(bu 2
+Format C/C++ source according to the style of Kernighan & Ritchie (K&R), no tabs, 3 spaces per indent, and wrap lines at 120 characters:
+.RE
+.PP
+\fB\fCindent \-\-k\-and\-r\-style \-\-indent\-level3 \-\-no\-tabs \-\-line\-length120 {{path/to/source.c}} \-o {{path/to/indented_source.c}}\fR

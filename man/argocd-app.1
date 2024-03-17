@@ -1,0 +1,54 @@
+.TH argocd app
+.PP
+.RS
+Command\-line interface to manage applications by Argo CD.
+More information: \[la]https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd_app/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List applications:
+.RE
+.PP
+\fB\fCargocd app list \-\-output {{json|yaml|wide}}\fR
+.RS
+.IP \(bu 2
+Get application details:
+.RE
+.PP
+\fB\fCargocd app get {{app_name}} \-\-output {{json|yaml|wide}}\fR
+.RS
+.IP \(bu 2
+Deploy application internally (to the same cluster that Argo CD is running in):
+.RE
+.PP
+\fB\fCargocd app create {{app_name}} \-\-repo {{git_repo_url}} \-\-path {{path/to/repo}} \-\-dest\-server https://kubernetes.default.svc \-\-dest\-namespace {{ns}}\fR
+.RS
+.IP \(bu 2
+Delete an application:
+.RE
+.PP
+\fB\fCargocd app delete {{app_name}}\fR
+.RS
+.IP \(bu 2
+Enable application auto\-sync:
+.RE
+.PP
+\fB\fCargocd app set {{app_name}} \-\-sync\-policy auto \-\-auto\-prune \-\-self\-heal\fR
+.RS
+.IP \(bu 2
+Preview app synchronization without affecting cluster:
+.RE
+.PP
+\fB\fCargocd app sync {{app_name}} \-\-dry\-run \-\-prune\fR
+.RS
+.IP \(bu 2
+Show application deployment history:
+.RE
+.PP
+\fB\fCargocd app history {{app_name}} \-\-output {{wide|id}}\fR
+.RS
+.IP \(bu 2
+Rollback application to a previous deployed version by history ID (deleting unexpected resources):
+.RE
+.PP
+\fB\fCargocd app rollback {{app_name}} {{history_id}} \-\-prune\fR

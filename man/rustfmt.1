@@ -1,0 +1,24 @@
+.TH rustfmt
+.PP
+.RS
+Tool for formatting Rust source code.
+More information: \[la]https://github.com/rust-lang/rustfmt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a file, overwriting the original file in\-place:
+.RE
+.PP
+\fB\fCrustfmt {{path/to/source.rs}}\fR
+.RS
+.IP \(bu 2
+Check a file for formatting and display any changes on the console:
+.RE
+.PP
+\fB\fCrustfmt \-\-check {{path/to/source.rs}}\fR
+.RS
+.IP \(bu 2
+Backup any modified files before formatting (the original file is renamed with a \fB\fC\&.bk\fR extension):
+.RE
+.PP
+\fB\fCrustfmt \-\-backup {{path/to/source.rs}}\fR

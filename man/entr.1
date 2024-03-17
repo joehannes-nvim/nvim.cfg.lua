@@ -1,0 +1,30 @@
+.TH entr
+.PP
+.RS
+Run arbitrary commands when files change.
+More information: \[la]https://manned.org/entr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rebuild with \fB\fCmake\fR if any file in any subdirectory changes:
+.RE
+.PP
+\fB\fC{{ag \-l}} | entr {{make}}\fR
+.RS
+.IP \(bu 2
+Rebuild and test with \fB\fCmake\fR if any \fB\fC\&.c\fR source files in the current directory change:
+.RE
+.PP
+\fB\fC{{ls *.c}} | entr {{'make && make test'}}\fR
+.RS
+.IP \(bu 2
+Send a \fB\fCSIGTERM\fR to any previously spawned ruby subprocesses before executing \fB\fCruby main.rb\fR:
+.RE
+.PP
+\fB\fC{{ls *.rb}} | entr \-r {{ruby main.rb}}\fR
+.RS
+.IP \(bu 2
+Run a command with the changed file (\fB\fC/_\fR) as an argument:
+.RE
+.PP
+\fB\fC{{ls *.sql}} | entr {{psql \-f}} /_\fR

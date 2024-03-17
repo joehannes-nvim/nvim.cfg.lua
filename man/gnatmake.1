@@ -1,0 +1,24 @@
+.TH gnatmake
+.PP
+.RS
+A low\-level build tool for Ada programs (part of the GNAT toolchain).
+More information: \[la]https://gcc.gnu.org/onlinedocs/gnat_ugn/Building-with-gnatmake.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile an executable:
+.RE
+.PP
+\fB\fCgnatmake {{source_file1.adb source_file2.adb ...}}\fR
+.RS
+.IP \(bu 2
+Set a custom executable name:
+.RE
+.PP
+\fB\fCgnatmake \-o {{executable_name}} {{source_file.adb}}\fR
+.RS
+.IP \(bu 2
+[f]orce recompilation:
+.RE
+.PP
+\fB\fCgnatmake \-f {{source_file.adb}}\fR

@@ -1,0 +1,42 @@
+.TH rhash
+.PP
+.RS
+Calculate or check common message digests.
+More information: \[la]https://rhash.sourceforge.net/manpage.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate default CRC32 digests of a file:
+.RE
+.PP
+\fB\fCrhash {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively process a directory to generate an SFV file using SHA1:
+.RE
+.PP
+\fB\fCrhash \-\-sha1 \-\-recursive {{path/to/folder}} > {{path/to/output.sfv}}\fR
+.RS
+.IP \(bu 2
+Verify the integrity of files based on an SFV file:
+.RE
+.PP
+\fB\fCrhash \-\-check {{path/to/file.sfv}}\fR
+.RS
+.IP \(bu 2
+Calculate the SHA3 digest of a text message:
+.RE
+.PP
+\fB\fCrhash \-\-sha3\-256 \-\-message '{{message}}'\fR
+.RS
+.IP \(bu 2
+Calculate CRC32 digest of a file and output digest encoded in base64 using BSD format:
+.RE
+.PP
+\fB\fCrhash \-\-base64 \-\-bsd {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use custom output template:
+.RE
+.PP
+\fB\fCrhash \-\-printf '{{%p\\t%s\\t%{mtime}\\t%m\\n}}' {{path/to/file}}\fR

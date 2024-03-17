@@ -1,0 +1,24 @@
+.TH texliveonfly
+.PP
+.RS
+Downloads missing TeX Live packages while compiling \fB\fC\&.tex\fR files.
+More information: \[la]https://ctan.org/pkg/texliveonfly\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download missing packages while compiling:
+.RE
+.PP
+\fB\fCtexliveonfly {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Use a specific compiler (defaults to \fB\fCpdflatex\fR):
+.RE
+.PP
+\fB\fCtexliveonfly \-\-compiler={{compiler}} {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Use a custom TeX Live \fB\fCbin\fR folder:
+.RE
+.PP
+\fB\fCtexliveonfly \-\-texlive_bin={{path/to/texlive_bin}} {{source.tex}}\fR

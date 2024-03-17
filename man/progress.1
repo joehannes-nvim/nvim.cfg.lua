@@ -1,0 +1,30 @@
+.TH progress
+.PP
+.RS
+Display/Monitor the progress of running coreutils.
+More information: \[la]https://github.com/Xfennec/progress\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the progress of running coreutils:
+.RE
+.PP
+\fB\fCprogress\fR
+.RS
+.IP \(bu 2
+Show the progress of running coreutils in quiet mode:
+.RE
+.PP
+\fB\fCprogress \-q\fR
+.RS
+.IP \(bu 2
+Launch and monitor a single long\-running command:
+.RE
+.PP
+\fB\fC{{command}} & progress \-\-monitor \-\-pid $!\fR
+.RS
+.IP \(bu 2
+Include an estimate of time remaining for completion:
+.RE
+.PP
+\fB\fCprogress \-\-wait \-\-command {{firefox}}\fR

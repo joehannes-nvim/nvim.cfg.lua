@@ -1,0 +1,36 @@
+.TH openconnect
+.PP
+.RS
+A VPN client, for Cisco AnyConnect VPNs and others.
+More information: \[la]https://www.infradead.org/openconnect/manual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a server:
+.RE
+.PP
+\fB\fCopenconnect {{vpn.example.org}}\fR
+.RS
+.IP \(bu 2
+Connect to a server, forking into the background:
+.RE
+.PP
+\fB\fCopenconnect \-\-background {{vpn.example.org}}\fR
+.RS
+.IP \(bu 2
+Terminate the connection that is running in the background:
+.RE
+.PP
+\fB\fCkillall \-SIGINT openconnect\fR
+.RS
+.IP \(bu 2
+Connect to a server, reading options from a config file:
+.RE
+.PP
+\fB\fCopenconnect \-\-config={{path/to/file}} {{vpn.example.org}}\fR
+.RS
+.IP \(bu 2
+Connect to a server and authenticate with a specific SSL client certificate:
+.RE
+.PP
+\fB\fCopenconnect \-\-certificate={{path/to/file}} {{vpn.example.org}}\fR

@@ -1,0 +1,42 @@
+.TH ghdl
+.PP
+.RS
+Open\-source simulator for the VHDL language.
+More information: \[la]http://ghdl.free.fr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze a VHDL source file and produce an object file:
+.RE
+.PP
+\fB\fCghdl \-a {{filename.vhdl}}\fR
+.RS
+.IP \(bu 2
+Elaborate a design (where \fB\fC{{design}}\fR is the name of a configuration unit, entity unit or architecture unit):
+.RE
+.PP
+\fB\fCghdl \-e {{design}}\fR
+.RS
+.IP \(bu 2
+Run an elaborated design:
+.RE
+.PP
+\fB\fCghdl \-r {{design}}\fR
+.RS
+.IP \(bu 2
+Run an elaborated design and dump output to a waveform file:
+.RE
+.PP
+\fB\fCghdl \-r {{design}} \-\-wave={{output.ghw}}\fR
+.RS
+.IP \(bu 2
+Check the syntax of a VHDL source file:
+.RE
+.PP
+\fB\fCghdl \-s {{filename.vhdl}}\fR
+.RS
+.IP \(bu 2
+Display the help page:
+.RE
+.PP
+\fB\fCghdl \-\-help\fR

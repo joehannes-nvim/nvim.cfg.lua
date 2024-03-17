@@ -1,0 +1,36 @@
+.TH lein
+.PP
+.RS
+Manage Clojure projects with declarative configuration.
+More information: \[la]https://leiningen.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate scaffolding for a new project based on a template:
+.RE
+.PP
+\fB\fClein new {{template_name}} {{project_name}}\fR
+.RS
+.IP \(bu 2
+Start a REPL session either with the project or standalone:
+.RE
+.PP
+\fB\fClein repl\fR
+.RS
+.IP \(bu 2
+Run the project's \fB\fC\-main\fR function with optional args:
+.RE
+.PP
+\fB\fClein run {{args}}\fR
+.RS
+.IP \(bu 2
+Run the project's tests:
+.RE
+.PP
+\fB\fClein test\fR
+.RS
+.IP \(bu 2
+Package up the project files and all its dependencies into a jar file:
+.RE
+.PP
+\fB\fClein uberjar\fR

@@ -1,0 +1,24 @@
+.TH csv\-diff
+.PP
+.RS
+View differences between two CSV, TSV or JSON files.
+More information: \[la]https://github.com/simonw/csv-diff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a human\-readable summary of differences between files using a specific column as a unique identifier:
+.RE
+.PP
+\fB\fCcsv\-diff {{path/to/file1.csv}} {{path/to/file2.csv}} \-\-key={{column_name}}\fR
+.RS
+.IP \(bu 2
+Display a human\-readable summary of differences between files that includes unchanged values in rows with at least one change:
+.RE
+.PP
+\fB\fCcsv\-diff {{path/to/file1.csv}} {{path/to/file2.csv}} \-\-key={{column_name}} \-\-show\-unchanged\fR
+.RS
+.IP \(bu 2
+Display a summary of differences between files in JSON format using a specific column as a unique identifier:
+.RE
+.PP
+\fB\fCcsv\-diff {{path/to/file1.csv}} {{path/to/file2.csv}} \-\-key={{column_name}} \-\-json\fR

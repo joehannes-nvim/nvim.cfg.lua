@@ -1,0 +1,25 @@
+.TH git psykorebase
+.PP
+.RS
+Rebase a branch on top of another using a merge commit and only one conflict handling.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-psykorebase\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rebase the current branch on top of another using a merge commit and only one conflict handling:
+.RE
+.PP
+\fB\fCgit psykorebase {{upstream_branch}}\fR
+.RS
+.IP \(bu 2
+Continue after conflicts have been handled:
+.RE
+.PP
+\fB\fCgit psykorebase \-\-continue\fR
+.RS
+.IP \(bu 2
+Specify the branch to rebase:
+.RE
+.PP
+\fB\fCgit psykorebase {{upstream_branch}} {{target_branch}}\fR

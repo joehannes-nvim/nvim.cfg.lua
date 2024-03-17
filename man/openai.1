@@ -1,0 +1,30 @@
+.TH openai
+.PP
+.RS
+CLI tool providing access to the OpenAI API.
+More information: \[la]https://github.com/openai/openai-python\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List models:
+.RE
+.PP
+\fB\fCopenai api models.list\fR
+.RS
+.IP \(bu 2
+Create a completion:
+.RE
+.PP
+\fB\fCopenai api completions.create \-\-model {{ada}} \-\-prompt {{"Hello world"}}\fR
+.RS
+.IP \(bu 2
+Create a chat completion:
+.RE
+.PP
+\fB\fCopenai api chat_completions.create \-\-model {{gpt\-3.5\-turbo}} \-\-message {{user "Hello world"}}\fR
+.RS
+.IP \(bu 2
+Generate images via DALL·E API:
+.RE
+.PP
+\fB\fCopenai api image.create \-\-prompt {{"two dogs playing chess, cartoon"}} \-\-num\-images {{1}}\fR

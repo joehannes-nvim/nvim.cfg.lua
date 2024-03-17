@@ -1,0 +1,30 @@
+.TH ansible\-pull
+.PP
+.RS
+Pull ansible playbooks from a VCS repo and executes them for the local host.
+More information: \[la]https://docs.ansible.com/ansible/latest/cli/ansible-pull.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pull a playbook from a VCS and execute a default local.yml playbook:
+.RE
+.PP
+\fB\fCansible\-pull \-U {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Pull a playbook from a VCS and execute a specific playbook:
+.RE
+.PP
+\fB\fCansible\-pull \-U {{repository_url}} {{playbook}}\fR
+.RS
+.IP \(bu 2
+Pull a playbook from a VCS at a specific branch and execute a specific playbook:
+.RE
+.PP
+\fB\fCansible\-pull \-U {{repository_url}} \-C {{branch}} {{playbook}}\fR
+.RS
+.IP \(bu 2
+Pull a playbook from a VCS, specify hosts file and execute a specific playbook:
+.RE
+.PP
+\fB\fCansible\-pull \-U {{repository_url}} \-i {{hosts_file}} {{playbook}}\fR

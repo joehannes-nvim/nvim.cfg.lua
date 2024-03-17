@@ -1,0 +1,42 @@
+.TH java
+.PP
+.RS
+Java application launcher.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/java.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute a java \fB\fC\&.class\fR file that contains a main method by using just the class name:
+.RE
+.PP
+\fB\fCjava {{classname}}\fR
+.RS
+.IP \(bu 2
+Execute a java program and use additional third\-party or user\-defined classes:
+.RE
+.PP
+\fB\fCjava \-classpath {{path/to/classes1}}:{{path/to/classes2}}:. {{classname}}\fR
+.RS
+.IP \(bu 2
+Execute a \fB\fC\&.jar\fR program:
+.RE
+.PP
+\fB\fCjava \-jar {{filename.jar}}\fR
+.RS
+.IP \(bu 2
+Execute a \fB\fC\&.jar\fR program with debug waiting to connect on port 5005:
+.RE
+.PP
+\fB\fCjava \-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005 \-jar {{filename.jar}}\fR
+.RS
+.IP \(bu 2
+Display JDK, JRE and HotSpot versions:
+.RE
+.PP
+\fB\fCjava \-version\fR
+.RS
+.IP \(bu 2
+Display usage information for the java command:
+.RE
+.PP
+\fB\fCjava \-help\fR

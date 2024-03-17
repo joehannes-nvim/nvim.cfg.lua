@@ -1,0 +1,54 @@
+.TH php\-coveralls
+.PP
+.RS
+A PHP client for Coveralls.
+More information: \[la]https://php-coveralls.github.io/php-coveralls\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls:
+.RE
+.PP
+\fB\fCphp\-coveralls\fR
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls for a specific directory:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-root_dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls with a specific config:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-config {{path/to/.coveralls.yml}}\fR
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls with verbose output:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-verbose\fR
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls excluding source files with no executable statements:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-exclude\-no\-stmt\fR
+.RS
+.IP \(bu 2
+Send coverage information to Coveralls with a specific environment name:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-env {{test|dev|prod}}\fR
+.RS
+.IP \(bu 2
+Specify multiple Coverage Clover XML files to upload:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-coverage_clover {{path/to/first_clover.xml}} \-\-coverage_clover {{path/to/second_clover.xml}}\fR
+.RS
+.IP \(bu 2
+Output the JSON that will be sent to Coveralls to a specific file:
+.RE
+.PP
+\fB\fCphp\-coveralls \-\-json_path {{path/to/coveralls\-upload.json}}\fR

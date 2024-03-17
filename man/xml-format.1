@@ -1,0 +1,42 @@
+.TH xml format
+.PP
+.RS
+Format an XML document.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format an XML document, indenting with tabs:
+.RE
+.PP
+\fB\fCxml format \-\-indent\-tab {{path/to/input.xml|URI}} > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Format an HTML document, indenting with 4 spaces:
+.RE
+.PP
+\fB\fCxml format \-\-html \-\-indent\-spaces {{4}} {{path/to/input.html|URI}} > {{path/to/output.html}}\fR
+.RS
+.IP \(bu 2
+Recover parsable parts of a malformed XML document, without indenting:
+.RE
+.PP
+\fB\fCxml format \-\-recover \-\-noindent {{path/to/malformed.xml|URI}} > {{path/to/recovered.xml}}\fR
+.RS
+.IP \(bu 2
+Format an XML document from \fB\fCstdin\fR, removing the \fB\fCDOCTYPE\fR declaration:
+.RE
+.PP
+\fB\fCcat {{path\\to\\input.xml}} | xml format \-\-dropdtd > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Format an XML document, omitting the XML declaration:
+.RE
+.PP
+\fB\fCxml format \-\-omit\-decl {{path\\to\\input.xml|URI}} > {{path/to/output.xml}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCformat\fR subcommand:
+.RE
+.PP
+\fB\fCxml format \-\-help\fR

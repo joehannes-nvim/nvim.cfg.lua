@@ -1,0 +1,54 @@
+.TH kcat
+.PP
+.RS
+Apache Kafka producer and consumer tool.
+More information: \[la]https://github.com/edenhill/kcat\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Consume messages starting with the newest offset:
+.RE
+.PP
+\fB\fCkcat \-C \-t {{topic}} \-b {{brokers}}\fR
+.RS
+.IP \(bu 2
+Consume messages starting with the oldest offset and exit after the last message is received:
+.RE
+.PP
+\fB\fCkcat \-C \-t {{topic}} \-b {{brokers}} \-o beginning \-e\fR
+.RS
+.IP \(bu 2
+Consume messages as a Kafka consumer group:
+.RE
+.PP
+\fB\fCkcat \-G {{group_id}} {{topic}} \-b {{brokers}}\fR
+.RS
+.IP \(bu 2
+Publish message by reading from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho {{message}} | kcat \-P \-t {{topic}} \-b {{brokers}}\fR
+.RS
+.IP \(bu 2
+Publish messages by reading from a file:
+.RE
+.PP
+\fB\fCkcat \-P \-t {{topic}} \-b {{brokers}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+List metadata for all topics and brokers:
+.RE
+.PP
+\fB\fCkcat \-L \-b {{brokers}}\fR
+.RS
+.IP \(bu 2
+List metadata for a specific topic:
+.RE
+.PP
+\fB\fCkcat \-L \-t {{topic}} \-b {{brokers}}\fR
+.RS
+.IP \(bu 2
+Get offset for a topic/partition for a specific point in time:
+.RE
+.PP
+\fB\fCkcat \-Q \-t {{topic}}:{{partition}}:{{unix_timestamp}} \-b {{brokers}}\fR

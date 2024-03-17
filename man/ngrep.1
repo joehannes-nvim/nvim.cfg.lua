@@ -1,0 +1,36 @@
+.TH ngrep
+.PP
+.RS
+Filter network traffic packets using regular expressions.
+More information: \[la]https://github.com/jpr5/ngrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture traffic of all interfaces:
+.RE
+.PP
+\fB\fCngrep \-d any\fR
+.RS
+.IP \(bu 2
+Capture traffic of a specific interface:
+.RE
+.PP
+\fB\fCngrep \-d {{eth0}}\fR
+.RS
+.IP \(bu 2
+Capture traffic crossing port 22 of interface eth0:
+.RE
+.PP
+\fB\fCngrep \-d {{eth0}} port {{22}}\fR
+.RS
+.IP \(bu 2
+Capture traffic from or to a host:
+.RE
+.PP
+\fB\fCngrep host {{www.example.com}}\fR
+.RS
+.IP \(bu 2
+Filter keyword 'User\-Agent:' of interface eth0:
+.RE
+.PP
+\fB\fCngrep \-d {{eth0}} '{{User\-Agent:}}'\fR

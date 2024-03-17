@@ -1,0 +1,36 @@
+.TH doctl databases options
+.PP
+.RS
+Enable the navigation of available options under each database engine.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases options\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases options {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Retrieve a list of the available database engines:
+.RE
+.PP
+\fB\fCdoctl databases options engines\fR
+.RS
+.IP \(bu 2
+Retrieve a list of the available regions for a given database engine:
+.RE
+.PP
+\fB\fCdoctl databases options regions \-\-engine {{pg|mysql|redis|mongodb}}\fR
+.RS
+.IP \(bu 2
+Retrieve a list of the available slugs for a given database engine:
+.RE
+.PP
+\fB\fCdoctl databases options slugs \-\-engine {{pg|mysql|redis|mongodb}}\fR
+.RS
+.IP \(bu 2
+Retrieve a list of the available versions for a given database engine:
+.RE
+.PP
+\fB\fCdoctl databases options versions \-\-engine {{pg|mysql|redis|mongodb}}\fR

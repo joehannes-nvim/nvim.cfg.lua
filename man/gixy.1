@@ -1,0 +1,30 @@
+.TH gixy
+.PP
+.RS
+Analyze nginx configuration files.
+More information: \[la]https://github.com/yandex/gixy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze nginx configuration (default path: \fB\fC/etc/nginx/nginx.conf\fR):
+.RE
+.PP
+\fB\fCgixy\fR
+.RS
+.IP \(bu 2
+Analyze nginx configuration but skip specific tests:
+.RE
+.PP
+\fB\fCgixy \-\-skips {{http_splitting}}\fR
+.RS
+.IP \(bu 2
+Analyze nginx configuration with the specific severity level:
+.RE
+.PP
+\fB\fCgixy {{\-l|\-ll|\-lll}}\fR
+.RS
+.IP \(bu 2
+Analyze nginx configuration files on the specific path:
+.RE
+.PP
+\fB\fCgixy {{path/to/configuration_file_1}} {{path/to/configuration_file_2}}\fR

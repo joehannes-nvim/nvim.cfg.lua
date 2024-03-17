@@ -1,0 +1,36 @@
+.TH pest
+.PP
+.RS
+A PHP testing framework with a focus on simplicity.
+More information: \[la]https://pestphp.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a standard Pest configuration in the current directory:
+.RE
+.PP
+\fB\fCpest \-\-init\fR
+.RS
+.IP \(bu 2
+Run tests in the current directory:
+.RE
+.PP
+\fB\fCpest\fR
+.RS
+.IP \(bu 2
+Run tests annotated with the given group:
+.RE
+.PP
+\fB\fCpest \-\-group {{name}}\fR
+.RS
+.IP \(bu 2
+Run tests and print the coverage report to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCpest \-\-coverage\fR
+.RS
+.IP \(bu 2
+Run tests with coverage and fail if the coverage is less than the minimum percentage:
+.RE
+.PP
+\fB\fCpest \-\-coverage \-\-min={{80}}\fR

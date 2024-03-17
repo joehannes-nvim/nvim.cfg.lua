@@ -1,0 +1,50 @@
+.TH git reset
+.PP
+.RS
+Undo commits or unstage changes, by resetting the current Git HEAD to the specified state.
+If a path is passed, it works as "unstage"; if a commit hash or branch is passed, it works as "uncommit".
+More information: \[la]https://git-scm.com/docs/git-reset\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Unstage everything:
+.RE
+.PP
+\fB\fCgit reset\fR
+.RS
+.IP \(bu 2
+Unstage specific 
+.BR file (s):
+.RE
+.PP
+\fB\fCgit reset {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Interactively unstage portions of a file:
+.RE
+.PP
+\fB\fCgit reset \-\-patch {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Undo the last commit, keeping its changes (and any further uncommitted changes) in the filesystem:
+.RE
+.PP
+\fB\fCgit reset HEAD~\fR
+.RS
+.IP \(bu 2
+Undo the last two commits, adding their changes to the index, i.e. staged for commit:
+.RE
+.PP
+\fB\fCgit reset \-\-soft HEAD~2\fR
+.RS
+.IP \(bu 2
+Discard any uncommitted changes, staged or not (for only unstaged changes, use \fB\fCgit checkout\fR):
+.RE
+.PP
+\fB\fCgit reset \-\-hard\fR
+.RS
+.IP \(bu 2
+Reset the repository to a given commit, discarding committed, staged and uncommitted changes since then:
+.RE
+.PP
+\fB\fCgit reset \-\-hard {{commit}}\fR

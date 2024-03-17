@@ -1,0 +1,55 @@
+.TH aws ses
+.PP
+.RS
+CLI for AWS Simple Email Service.
+High\-scale inbound and outbound cloud email service.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ses/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new receipt rule set:
+.RE
+.PP
+\fB\fCaws ses create\-receipt\-rule\-set \-\-rule\-set\-name {{rule_set_name}} \-\-generate\-cli\-skeleton\fR
+.RS
+.IP \(bu 2
+Describe the active receipt rule set:
+.RE
+.PP
+\fB\fCaws ses describe\-active\-receipt\-rule\-set \-\-generate\-cli\-skeletion\fR
+.RS
+.IP \(bu 2
+Describe a specific receipt rule:
+.RE
+.PP
+\fB\fCaws ses describe\-receipt\-rule \-\-rule\-set\-name {{rule_set_name}} \-\-rule\-name {{rule_name}} \-\-generate\-cli\-skeleton\fR
+.RS
+.IP \(bu 2
+List all receipt rule sets:
+.RE
+.PP
+\fB\fCaws ses list\-receipt\-rule\-sets \-\-starting\-token {{token_string}} \-\-max\-items {{integer}} \-\-generate\-cli\-skeleton\fR
+.RS
+.IP \(bu 2
+Delete a specific receipt rule set (the currently active rule set cannot be deleted):
+.RE
+.PP
+\fB\fCaws ses delete\-receipt\-rule\-set \-\-rule\-set\-name {{rule_set_name}} \-\-generate\-cli\-skeleton\fR
+.RS
+.IP \(bu 2
+Delete a specific receipt rule:
+.RE
+.PP
+\fB\fCaws ses delete\-receipt\-rule \-\-rule\-set\-name {{rule_set_name}} \-\-rule\-name {{rule_name}} \-\-generate\-cli\-skeleton\fR
+.RS
+.IP \(bu 2
+Send an email:
+.RE
+.PP
+\fB\fCaws ses send\-email \-\-from {{from_address}} \-\-destination "ToAddresses={{addresses}}" \-\-message "Subject={Data={{subject_text}},Charset=utf8},Body={Text={Data={{body_text}},Charset=utf8},Html={Data={{message_body_containing_html}},Charset=utf8}}"\fR
+.RS
+.IP \(bu 2
+Show help for a specific SES subcommand:
+.RE
+.PP
+\fB\fCaws ses {{subcommand}} help\fR

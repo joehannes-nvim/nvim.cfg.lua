@@ -1,0 +1,48 @@
+.TH ganache\-cli
+.PP
+.RS
+Command\-line version of Ganache, your personal blockchain for Ethereum development.
+More information: \[la]https://www.trufflesuite.com/ganache\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run Ganache:
+.RE
+.PP
+\fB\fCganache\-cli\fR
+.RS
+.IP \(bu 2
+Run Ganache with a specific number of accounts:
+.RE
+.PP
+\fB\fCganache\-cli \-\-accounts={{number_of_accounts}}\fR
+.RS
+.IP \(bu 2
+Run Ganache and lock available accounts by default:
+.RE
+.PP
+\fB\fCganache\-cli \-\-secure\fR
+.RS
+.IP \(bu 2
+Run Ganache server and unlock specific accounts:
+.RE
+.PP
+\fB\fCganache\-cli \-\-secure \-\-unlock "{{account_private_key1}}" \-\-unlock "{{account_private_key2}}"\fR
+.RS
+.IP \(bu 2
+Run Ganache with a specific account and balance:
+.RE
+.PP
+\fB\fCganache\-cli \-\-account="{{account_private_key}},{{account_balance}}"\fR
+.RS
+.IP \(bu 2
+Run Ganache with accounts with a default balance:
+.RE
+.PP
+\fB\fCganache\-cli \-\-defaultBalanceEther={{default_balance}}\fR
+.RS
+.IP \(bu 2
+Run Ganache and log all requests to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCganache\-cli \-\-verbose\fR

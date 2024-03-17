@@ -1,0 +1,48 @@
+.TH scrcpy
+.PP
+.RS
+Display and control your Android device on a desktop.
+More information: \[la]https://github.com/Genymobile/scrcpy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a mirror of a connected device:
+.RE
+.PP
+\fB\fCscrcpy\fR
+.RS
+.IP \(bu 2
+Display a mirror of a specific device based on its ID or IP address (find it under the \fB\fCadb devices\fR command):
+.RE
+.PP
+\fB\fCscrcpy \-\-serial {{0123456789abcdef|192.168.0.1:5555}}\fR
+.RS
+.IP \(bu 2
+Start display in fullscreen mode:
+.RE
+.PP
+\fB\fCscrcpy \-\-fullscreen\fR
+.RS
+.IP \(bu 2
+Rotate the display screen. Each incremental value adds a 90 degree counterclockwise rotation:
+.RE
+.PP
+\fB\fCscrcpy \-\-rotation {{0|1|2|3}}\fR
+.RS
+.IP \(bu 2
+Show touches on physical device:
+.RE
+.PP
+\fB\fCscrcpy \-\-show\-touches\fR
+.RS
+.IP \(bu 2
+Record display screen:
+.RE
+.PP
+\fB\fCscrcpy \-\-record {{path/to/file.mp4}}\fR
+.RS
+.IP \(bu 2
+Set target directory for pushing files to device by drag and drop (non\-APK):
+.RE
+.PP
+\fB\fCscrcpy \-\-push\-target {{path/to/directory}}\fR

@@ -1,0 +1,42 @@
+.TH json5
+.PP
+.RS
+A command\-line tool for converting JSON5 files to JSON.
+More information: \[la]https://json5.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert JSON5 \fB\fCstdin\fR to JSON \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCecho {{input}} | json5\fR
+.RS
+.IP \(bu 2
+Convert a JSON5 file to JSON and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCjson5 {{path/to/input_file.json5}}\fR
+.RS
+.IP \(bu 2
+Convert a JSON5 file to the specified JSON file:
+.RE
+.PP
+\fB\fCjson5 {{path/to/input_file.json5}} \-\-out\-file {{path/to/output_file.json}}\fR
+.RS
+.IP \(bu 2
+Validate a JSON5 file:
+.RE
+.PP
+\fB\fCjson5 {{path/to/input_file.json5}} \-\-validate\fR
+.RS
+.IP \(bu 2
+Specify the number of spaces to indent by (or "t" for tabs):
+.RE
+.PP
+\fB\fCjson5 \-\-space {{indent_amount}}\fR
+.RS
+.IP \(bu 2
+View available options:
+.RE
+.PP
+\fB\fCjson5 \-\-help\fR

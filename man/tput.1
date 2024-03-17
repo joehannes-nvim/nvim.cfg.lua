@@ -1,0 +1,42 @@
+.TH tput
+.PP
+.RS
+View and modify terminal settings and capabilities.
+More information: \[la]https://manned.org/tput\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Move the cursor to a screen location:
+.RE
+.PP
+\fB\fCtput cup {{row}} {{column}}\fR
+.RS
+.IP \(bu 2
+Set foreground (af) or background (ab) color:
+.RE
+.PP
+\fB\fCtput {{setaf|setab}} {{ansi_color_code}}\fR
+.RS
+.IP \(bu 2
+Show number of columns, lines, or colors:
+.RE
+.PP
+\fB\fCtput {{cols|lines|colors}}\fR
+.RS
+.IP \(bu 2
+Ring the terminal bell:
+.RE
+.PP
+\fB\fCtput bel\fR
+.RS
+.IP \(bu 2
+Reset all terminal attributes:
+.RE
+.PP
+\fB\fCtput sgr0\fR
+.RS
+.IP \(bu 2
+Enable or disable word wrap:
+.RE
+.PP
+\fB\fCtput {{smam|rmam}}\fR

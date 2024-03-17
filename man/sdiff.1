@@ -1,0 +1,36 @@
+.TH sdiff
+.PP
+.RS
+Compare the differences between and optionally merge 2 files.
+More information: \[la]https://manned.org/sdiff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare 2 files:
+.RE
+.PP
+\fB\fCsdiff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare 2 files, ignoring all tabs and whitespace:
+.RE
+.PP
+\fB\fCsdiff \-W {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare 2 files, ignoring whitespace at the end of lines:
+.RE
+.PP
+\fB\fCsdiff \-Z {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare 2 files in a case\-insensitive manner:
+.RE
+.PP
+\fB\fCsdiff \-i {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare and then merge, writing the output to a new file:
+.RE
+.PP
+\fB\fCsdiff \-o {{path/to/merged_file}} {{path/to/file1}} {{path/to/file2}}\fR

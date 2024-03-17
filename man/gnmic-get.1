@@ -1,0 +1,30 @@
+.TH gnmic get
+.PP
+.RS
+Get a snapshot of a gnmi network device operation data.
+More information: \[la]https://gnmic.kmrd.dev/cmd/get\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get a snapshot of the device state at a specific path:
+.RE
+.PP
+\fB\fCgnmic \-\-address {{ip:port}} get \-\-path {{path}}\fR
+.RS
+.IP \(bu 2
+Query the device state at multiple paths:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} get \-\-path {{path1}} \-\-path {{path2}}\fR
+.RS
+.IP \(bu 2
+Query the device state at multiple paths with a common prefix:
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} get \-\-prefix {{prefix}} \-\-path {{path1}} \-\-path {{path2}}\fR
+.RS
+.IP \(bu 2
+Query the device state and specify response encoding (json_ietf):
+.RE
+.PP
+\fB\fCgnmic \-a {{ip:port}} get \-\-path {{path}} \-\-encoding json_ietf\fR

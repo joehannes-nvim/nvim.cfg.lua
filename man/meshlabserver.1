@@ -1,0 +1,36 @@
+.TH meshlabserver
+.PP
+.RS
+Command\-line interface for the MeshLab 3D mesh processing software.
+More information: \[la]https://manned.org/meshlabserver\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an STL file to an OBJ file:
+.RE
+.PP
+\fB\fCmeshlabserver \-i {{input.stl}} \-o {{output.obj}}\fR
+.RS
+.IP \(bu 2
+Convert a WRL file to a OFF file, including the vertex and face normals in the output mesh:
+.RE
+.PP
+\fB\fCmeshlabserver \-i {{input.wrl}} \-o {{output.off}} \-om vn fn\fR
+.RS
+.IP \(bu 2
+Dump a list of all the available processing filters into a file:
+.RE
+.PP
+\fB\fCmeshlabserver \-d {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Process a 3D file using a filter script created in the MeshLab GUI (Filters > Show current filter script > Save Script):
+.RE
+.PP
+\fB\fCmeshlabserver \-i {{input.ply}} \-o {{output.ply}} \-s {{filter_script.mlx}}\fR
+.RS
+.IP \(bu 2
+Process a 3D file using a filter script, writing the output of the filters into a log file:
+.RE
+.PP
+\fB\fCmeshlabserver \-i {{input.x3d}} \-o {{output.x3d}} \-s {{filter_script.mlx}} \-l {{logfile}}\fR

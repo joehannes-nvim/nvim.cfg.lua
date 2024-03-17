@@ -1,0 +1,24 @@
+.TH kubectl edit
+.PP
+.RS
+Set a new size for a deployment, replica set, replication controller, or stateful set.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#scale\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scale a replica set:
+.RE
+.PP
+\fB\fCkubectl scale \-\-replicas={{number_of_replicas}} rs/{{replica_name}}\fR
+.RS
+.IP \(bu 2
+Scale a resource identified by a file:
+.RE
+.PP
+\fB\fCkubectl scale \-\-replicas={{number_of_replicas}} \-f {{path/to/file.yml}}\fR
+.RS
+.IP \(bu 2
+Scale a deployment based on current number of replicas:
+.RE
+.PP
+\fB\fCkubectl scale \-\-current\-replicas={{current_replicas}} \-\-replicas={{number_of_replicas}} deployment/{{deployment_name}}\fR

@@ -1,0 +1,30 @@
+.TH eva
+.PP
+.RS
+Simple calculator REPL, similar to \fB\fCbc\fR, with syntax highlighting and persistent history.
+More information: \[la]https://github.com/NerdyPepper/eva\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run the calculator in interactive mode:
+.RE
+.PP
+\fB\fCeva\fR
+.RS
+.IP \(bu 2
+Calculate the result of an expression:
+.RE
+.PP
+\fB\fCeva "{{(1 + 2) * 2 ^ 2}}"\fR
+.RS
+.IP \(bu 2
+Calculate an expression forcing the number of decimal places to 5:
+.RE
+.PP
+\fB\fCeva \-\-fix {{5}} "{{5 / 3}}"\fR
+.RS
+.IP \(bu 2
+Calculate an expression with sine and cosine:
+.RE
+.PP
+\fB\fCeva "{{sin(1) + cos(1)}}"\fR

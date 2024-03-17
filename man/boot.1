@@ -1,0 +1,42 @@
+.TH boot
+.PP
+.RS
+Build tooling for the Clojure programming language.
+More information: \[la]https://github.com/boot-clj/boot\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL session either with the project or standalone:
+.RE
+.PP
+\fB\fCboot repl\fR
+.RS
+.IP \(bu 2
+Build a single \fB\fCuberjar\fR:
+.RE
+.PP
+\fB\fCboot jar\fR
+.RS
+.IP \(bu 2
+Learn about a command:
+.RE
+.PP
+\fB\fCboot cljs \-\-help\fR
+.RS
+.IP \(bu 2
+Generate scaffolding for a new project based on a template:
+.RE
+.PP
+\fB\fCboot \-\-dependencies boot/new new \-\-template {{template_name}} \-\-name {{project_name}}\fR
+.RS
+.IP \(bu 2
+Build for development (if using the boot/new template):
+.RE
+.PP
+\fB\fCboot dev\fR
+.RS
+.IP \(bu 2
+Build for production (if using the boot/new template):
+.RE
+.PP
+\fB\fCboot prod\fR

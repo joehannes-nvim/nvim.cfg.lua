@@ -1,0 +1,55 @@
+.TH git config
+.PP
+.RS
+Manage custom configuration options for Git repositories.
+These configurations can be local (for the current repository) or global (for the current user).
+More information: \[la]https://git-scm.com/docs/git-config\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List only local configuration entries (stored in \fB\fC\&.git/config\fR in the current repository):
+.RE
+.PP
+\fB\fCgit config \-\-list \-\-local\fR
+.RS
+.IP \(bu 2
+List only global configuration entries (stored in \fB\fC~/.gitconfig\fR by default or in \fB\fC$XDG_CONFIG_HOME/git/config\fR if such a file exists):
+.RE
+.PP
+\fB\fCgit config \-\-list \-\-global\fR
+.RS
+.IP \(bu 2
+List only system configuration entries (stored in \fB\fC/etc/gitconfig\fR), and show their file location:
+.RE
+.PP
+\fB\fCgit config \-\-list \-\-system \-\-show\-origin\fR
+.RS
+.IP \(bu 2
+Get the value of a given configuration entry:
+.RE
+.PP
+\fB\fCgit config alias.unstage\fR
+.RS
+.IP \(bu 2
+Set the global value of a given configuration entry:
+.RE
+.PP
+\fB\fCgit config \-\-global alias.unstage "reset HEAD \-\-"\fR
+.RS
+.IP \(bu 2
+Revert a global configuration entry to its default value:
+.RE
+.PP
+\fB\fCgit config \-\-global \-\-unset alias.unstage\fR
+.RS
+.IP \(bu 2
+Edit the Git configuration for the current repository in the default editor:
+.RE
+.PP
+\fB\fCgit config \-\-edit\fR
+.RS
+.IP \(bu 2
+Edit the global Git configuration in the default editor:
+.RE
+.PP
+\fB\fCgit config \-\-global \-\-edit\fR

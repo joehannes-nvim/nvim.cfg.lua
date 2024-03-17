@@ -1,0 +1,48 @@
+.TH gh pr merge
+.PP
+.RS
+Merge GitHub pull requests.
+More information: \[la]https://cli.github.com/manual/gh_pr_merge\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Merge the pull request associated with the current branch interactively:
+.RE
+.PP
+\fB\fCgh pr merge\fR
+.RS
+.IP \(bu 2
+Merge the specified pull request, interactively:
+.RE
+.PP
+\fB\fCgh pr merge {{pr_number}}\fR
+.RS
+.IP \(bu 2
+Merge the pull request, removing the branch on both the local and the remote:
+.RE
+.PP
+\fB\fCgh pr merge \-\-delete\-branch\fR
+.RS
+.IP \(bu 2
+Merge the current pull request with the specified merge strategy:
+.RE
+.PP
+\fB\fCgh pr merge \-\-{{merge|squash|rebase}}\fR
+.RS
+.IP \(bu 2
+Merge the current pull request with the specified merge strategy and commit message:
+.RE
+.PP
+\fB\fCgh pr merge \-\-{{merge|squash|rebase}} \-\-subject {{commit_message}}\fR
+.RS
+.IP \(bu 2
+Squash the current pull request into one commit with the message body and merge:
+.RE
+.PP
+\fB\fCgh pr merge \-\-squash \-\-body="{{commit_message_body}}"\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgh pr merge \-\-help\fR

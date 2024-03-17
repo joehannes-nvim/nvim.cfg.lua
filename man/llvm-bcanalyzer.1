@@ -1,0 +1,24 @@
+.TH llvm\-bcanalyzer
+.PP
+.RS
+LLVM Bitcode (\fB\fC\&.bc\fR) analyzer.
+More information: \[la]https://llvm.org/docs/CommandGuide/llvm-bcanalyzer.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print statistics about a Bitcode file:
+.RE
+.PP
+\fB\fCllvm\-bcanalyzer {{path/to/file.bc}}\fR
+.RS
+.IP \(bu 2
+Print an SGML representation and statistics about a Bitcode file:
+.RE
+.PP
+\fB\fCllvm\-bcanalyzer \-dump {{path/to/file.bc}}\fR
+.RS
+.IP \(bu 2
+Read a Bitcode file from \fB\fCstdin\fR and analyze it:
+.RE
+.PP
+\fB\fCcat {{path/to/file.bc}} | llvm\-bcanalyzer\fR

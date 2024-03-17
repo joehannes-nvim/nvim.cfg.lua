@@ -1,0 +1,30 @@
+.TH amass db
+.PP
+.RS
+Interact with an Amass database.
+More information: \[la]https://github.com/OWASP/Amass/blob/master/doc/user_guide.md#the-db-subcommand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all performed enumerations in the database:
+.RE
+.PP
+\fB\fCamass db \-dir {{path/to/database_directory}} \-list\fR
+.RS
+.IP \(bu 2
+Show results for a specified enumeration index and domain name:
+.RE
+.PP
+\fB\fCamass db \-dir {{path/to/database_directory}} \-d {{domain_name}} \-enum {{index_from_list}} \-show\fR
+.RS
+.IP \(bu 2
+List all found subdomains of a domain within an enumeration:
+.RE
+.PP
+\fB\fCamass db \-dir {{path/to/database_directory}} \-d {{domain_name}} \-enum {{index_from_list}} \-names\fR
+.RS
+.IP \(bu 2
+Show a summary of the found subdomains within an enumeration:
+.RE
+.PP
+\fB\fCamass db \-dir {{path/to/database_directory}} \-d {{domain_name}} \-enum {{index_from_list}} \-summary\fR

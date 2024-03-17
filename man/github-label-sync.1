@@ -1,0 +1,36 @@
+.TH github\-label\-sync
+.PP
+.RS
+A command\-line interface for synchronizing GitHub labels.
+More information: \[la]https://github.com/Financial-Times/github-label-sync\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Synchronize labels using a local \fB\fClabels.json\fR file:
+.RE
+.PP
+\fB\fCgithub\-label\-sync \-\-access\-token {{token}} {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Synchronize labels using a specific labels JSON file:
+.RE
+.PP
+\fB\fCgithub\-label\-sync \-\-access\-token {{token}} \-\-labels {{url|path/to/json_file}} {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Perform a dry run instead of actually synchronizing labels:
+.RE
+.PP
+\fB\fCgithub\-label\-sync \-\-access\-token {{token}} \-\-dry\-run {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Keep labels that aren't in \fB\fClabels.json\fR:
+.RE
+.PP
+\fB\fCgithub\-label\-sync \-\-access\-token {{token}} \-\-allow\-added\-labels {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Synchronize using the \fB\fCGITHUB_ACCESS_TOKEN\fR environment variable:
+.RE
+.PP
+\fB\fCgithub\-label\-sync {{repository_name}}\fR

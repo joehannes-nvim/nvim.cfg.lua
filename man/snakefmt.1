@@ -1,0 +1,36 @@
+.TH snakefmt
+.PP
+.RS
+Format Snakemake files.
+More information: \[la]https://github.com/snakemake/snakefmt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a specific Snakefile:
+.RE
+.PP
+\fB\fCsnakefmt {{path/to/snakefile}}\fR
+.RS
+.IP \(bu 2
+Format all Snakefiles recursively in a specific directory:
+.RE
+.PP
+\fB\fCsnakefmt {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Format a file using a specific configuration file:
+.RE
+.PP
+\fB\fCsnakefmt \-\-config {{path/to/config.toml}} {{path/to/snakefile}}\fR
+.RS
+.IP \(bu 2
+Format a file using a specific maximum line length:
+.RE
+.PP
+\fB\fCsnakefmt \-\-line\-length {{100}} {{path/to/snakefile}}\fR
+.RS
+.IP \(bu 2
+Display the changes that would be performed without performing them (dry\-run):
+.RE
+.PP
+\fB\fCsnakefmt \-\-diff {{path/to/snakefile}}\fR

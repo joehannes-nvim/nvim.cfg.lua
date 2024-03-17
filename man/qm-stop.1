@@ -1,0 +1,30 @@
+.TH qm stop
+.PP
+.RS
+Stop a virtual machine.
+More information: \[la]https://pve.proxmox.com/pve-docs/qm.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Stop a virtual machine immediately:
+.RE
+.PP
+\fB\fCqm stop {{VM_ID}}\fR
+.RS
+.IP \(bu 2
+Stop a virtual machine and wait for at most 10 seconds:
+.RE
+.PP
+\fB\fCqm stop \-\-timeout {{10}} {{VM_ID}}\fR
+.RS
+.IP \(bu 2
+Stop a virtual machine and skip lock (only root can use this option):
+.RE
+.PP
+\fB\fCqm stop \-\-skiplock {{true}} {{VM_ID}}\fR
+.RS
+.IP \(bu 2
+Stop a virtual machine and don't deactivate storage volumes:
+.RE
+.PP
+\fB\fCqm stop \-\-keepActive {{true}} {{VM_ID}}\fR

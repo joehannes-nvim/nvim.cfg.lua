@@ -1,0 +1,42 @@
+.TH echo
+.PP
+.RS
+Print given arguments.
+More information: \[la]https://www.gnu.org/software/coreutils/echo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a text message. Note: quotes are optional:
+.RE
+.PP
+\fB\fCecho "{{Hello World}}"\fR
+.RS
+.IP \(bu 2
+Print a message with environment variables:
+.RE
+.PP
+\fB\fCecho "{{My path is $PATH}}"\fR
+.RS
+.IP \(bu 2
+Print a message without the trailing newline:
+.RE
+.PP
+\fB\fCecho \-n "{{Hello World}}"\fR
+.RS
+.IP \(bu 2
+Append a message to the file:
+.RE
+.PP
+\fB\fCecho "{{Hello World}}" >> {{file.txt}}\fR
+.RS
+.IP \(bu 2
+Enable interpretation of backslash escapes (special characters):
+.RE
+.PP
+\fB\fCecho \-e "{{Column 1\\tColumn 2}}"\fR
+.RS
+.IP \(bu 2
+Print the exit status of the last executed command (Note: In Windows Command Prompt and PowerShell the equivalent commands are \fB\fCecho %errorlevel%\fR and \fB\fC$lastexitcode\fR respectively):
+.RE
+.PP
+\fB\fCecho $?\fR

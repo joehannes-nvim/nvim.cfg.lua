@@ -1,0 +1,30 @@
+.TH sonar\-scanner
+.PP
+.RS
+SonarScanner is a generic scanner for SonarQube projects that do not use build tools such as Maven, Gradle, or Ant.
+More information: \[la]https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a project with configuration file in your project's root directory named \fB\fCsonar\-project.properties\fR:
+.RE
+.PP
+\fB\fCsonar\-scanner\fR
+.RS
+.IP \(bu 2
+Scan a project using configuration file other than \fB\fCsonar\-project.properties\fR:
+.RE
+.PP
+\fB\fCsonar\-scanner \-D{{project.settings=myproject.properties}}\fR
+.RS
+.IP \(bu 2
+Print help information:
+.RE
+.PP
+\fB\fCsonar\-scanner \-h\fR
+.RS
+.IP \(bu 2
+Print debugging information:
+.RE
+.PP
+\fB\fCsonar\-scanner \-X\fR

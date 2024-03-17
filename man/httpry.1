@@ -1,0 +1,37 @@
+.TH httpry
+.PP
+.RS
+A lightweight packet sniffer for displaying and logging HTTP traffic.
+It can be run in real\-time displaying the traffic as it is parsed, or as a daemon process that logs to an output file.
+More information: \[la]http://dumpsterventures.com/jason/httpry/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Save output to a file:
+.RE
+.PP
+\fB\fChttpry \-o {{path/to/file.log}}\fR
+.RS
+.IP \(bu 2
+Listen on a specific interface and save output to a binary pcap format file:
+.RE
+.PP
+\fB\fChttpry {{eth0}} \-b {{path/to/file.pcap}}\fR
+.RS
+.IP \(bu 2
+Filter output by a comma\-separated list of HTTP verbs:
+.RE
+.PP
+\fB\fChttpry \-m {{get|post|put|head|options|delete|trace|connect|patch}}\fR
+.RS
+.IP \(bu 2
+Read from an input capture file and filter by IP:
+.RE
+.PP
+\fB\fChttpry \-r {{path/to/file.log}} '{{host 192.168.5.25}}'\fR
+.RS
+.IP \(bu 2
+Run as daemon process:
+.RE
+.PP
+\fB\fChttpry \-d \-o {{path/to/file.log}}\fR

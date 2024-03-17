@@ -1,0 +1,55 @@
+.TH exrex
+.PP
+.RS
+Generate all/random matching strings for a regular expression.
+It can also simplify regular expressions.
+More information: \[la]https://github.com/asciimoo/exrex\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate all possible strings that match a regular expression:
+.RE
+.PP
+\fB\fCexrex '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Generate a random string that matches a regular expression:
+.RE
+.PP
+\fB\fCexrex \-\-random '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Generate at most 100 strings that match a regular expression:
+.RE
+.PP
+\fB\fCexrex \-\-max\-number {{100}} '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Generate all possible strings that match a regular expression, joined by a custom delimiter string:
+.RE
+.PP
+\fB\fCexrex \-\-delimiter "{{, }}" '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Print count of all possible strings that match a regular expression:
+.RE
+.PP
+\fB\fCexrex \-\-count '{{regular_expression}}'\fR
+.RS
+.IP \(bu 2
+Simplify a regular expression:
+.RE
+.PP
+\fB\fCexrex \-\-simplify '{{ab|ac}}'\fR
+.RS
+.IP \(bu 2
+Print eyes:
+.RE
+.PP
+\fB\fCexrex '{{[oO0](_)[oO0]}}'\fR
+.RS
+.IP \(bu 2
+Print a boat:
+.RE
+.PP
+\fB\fCexrex '{{( {20}(\\| *\\\\|\-{22}|\\|)|\\.={50}| ( ){0,5}\\\\\\.| {12}~{39})}}'\fR

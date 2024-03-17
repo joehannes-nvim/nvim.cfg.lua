@@ -1,0 +1,55 @@
+.TH webtorrent
+.PP
+.RS
+The command\-line interface for WebTorrent.
+Supports magnets, URLs, info hashes and \fB\fC\&.torrent\fR files.
+More information: \[la]https://github.com/webtorrent/webtorrent-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a torrent:
+.RE
+.PP
+\fB\fCwebtorrent download "{{torrent_id}}"\fR
+.RS
+.IP \(bu 2
+Stream a torrent to VLC media player:
+.RE
+.PP
+\fB\fCwebtorrent download "{{torrent_id}}" \-\-vlc\fR
+.RS
+.IP \(bu 2
+Stream a torrent to a Digital Living Network Alliance (DLNA) device:
+.RE
+.PP
+\fB\fCwebtorrent download "{{torrent_id}}" \-\-dlna\fR
+.RS
+.IP \(bu 2
+Display a list of files for a specific torrent:
+.RE
+.PP
+\fB\fCwebtorrent download "{{torrent_id}}" \-\-select\fR
+.RS
+.IP \(bu 2
+Specify a file index from the torrent to download:
+.RE
+.PP
+\fB\fCwebtorrent download "{{torrent_id}}" \-\-select {{index}}\fR
+.RS
+.IP \(bu 2
+Seed a specific file or directory:
+.RE
+.PP
+\fB\fCwebtorrent seed {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Create a new torrent file for the specified file path:
+.RE
+.PP
+\fB\fCwebtorrent create {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display information for a magnet URI or \fB\fC\&.torrent\fR file:
+.RE
+.PP
+\fB\fCwebtorrent info {{path/to/file_or_magnet}}\fR

@@ -1,0 +1,19 @@
+.TH grap
+.PP
+.RS
+A charting preprocessor for the groff (GNU Troff) document formatting system.
+See also \fB\fCpic\fR and \fB\fCgroff\fR\&.
+More information: \[la]https://manned.org/grap\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Process a \fB\fCgrap\fR file and save the output file for future processing with \fB\fCpic\fR and \fB\fCgroff\fR:
+.RE
+.PP
+\fB\fCgrap {{path/to/input.grap}} > {{path/to/output.pic}}\fR
+.RS
+.IP \(bu 2
+Typeset a \fB\fCgrap\fR file to PDF using the [me] macro package, saving the output to a file:
+.RE
+.PP
+\fB\fCgrap {{path/to/input.grap}} | pic \-T {{pdf}} | groff \-{{me}} \-T {{pdf}} > {{path/to/output.pdf}}\fR

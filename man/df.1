@@ -1,0 +1,36 @@
+.TH df
+.PP
+.RS
+Gives an overview of the filesystem disk space usage.
+More information: \[la]https://www.gnu.org/software/coreutils/df\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display all filesystems and their disk usage:
+.RE
+.PP
+\fB\fCdf\fR
+.RS
+.IP \(bu 2
+Display all filesystems and their disk usage in human\-readable form:
+.RE
+.PP
+\fB\fCdf \-h\fR
+.RS
+.IP \(bu 2
+Display the filesystem and its disk usage containing the given file or directory:
+.RE
+.PP
+\fB\fCdf {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Display statistics on the number of free inodes:
+.RE
+.PP
+\fB\fCdf \-i\fR
+.RS
+.IP \(bu 2
+Display filesystems but exclude the specified types:
+.RE
+.PP
+\fB\fCdf \-x {{squashfs}} \-x {{tmpfs}}\fR

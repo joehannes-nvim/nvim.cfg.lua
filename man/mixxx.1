@@ -1,0 +1,42 @@
+.TH mixxx
+.PP
+.RS
+Free and open source cross\-platform DJ software.
+More information: \[la]https://mixxx.org/manual/latest/chapters/appendix.html#command-line-options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the Mixxx GUI in fullscreen:
+.RE
+.PP
+\fB\fCmixxx \-\-fullScreen\fR
+.RS
+.IP \(bu 2
+Start in safe developer mode to debug a crash:
+.RE
+.PP
+\fB\fCmixxx \-\-developer \-\-safeMode\fR
+.RS
+.IP \(bu 2
+Debug a malfunction:
+.RE
+.PP
+\fB\fCmixxx \-\-debugAssertBreak \-\-developer \-\-loglevel trace\fR
+.RS
+.IP \(bu 2
+Start Mixxx using the specified settings file:
+.RE
+.PP
+\fB\fCmixxx \-\-resourcePath {{mixxx/res/controllers}} \-\-settingsPath {{path/to/settings\-file}}\fR
+.RS
+.IP \(bu 2
+Debug a custom controller mapping:
+.RE
+.PP
+\fB\fCmixxx \-\-controllerDebug \-\-resourcePath {{path/to/mapping\-directory}}\fR
+.RS
+.IP \(bu 2
+Show command\-line help:
+.RE
+.PP
+\fB\fCmixxx \-\-help\fR

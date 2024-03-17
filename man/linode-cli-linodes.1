@@ -1,0 +1,55 @@
+.TH linode\-cli linodes
+.PP
+.RS
+Manage Linode instances.
+See also: \fB\fClinode\-cli\fR\&.
+More information: \[la]https://www.linode.com/docs/products/tools/cli/guides/linode-instances/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all Linodes:
+.RE
+.PP
+\fB\fClinode\-cli linodes list\fR
+.RS
+.IP \(bu 2
+Create a new Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes create \-\-type {{linode_type}} \-\-region {{region}} \-\-image {{image_id}}\fR
+.RS
+.IP \(bu 2
+View details of a specific Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes view {{linode_id}}\fR
+.RS
+.IP \(bu 2
+Update settings for a Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes update {{linode_id}} \-\-label {{[new_label}}\fR
+.RS
+.IP \(bu 2
+Delete a Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes delete {{linode_id}}\fR
+.RS
+.IP \(bu 2
+Perform a power management operation on a Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes {{boot|reboot|shutdown}} {{linode_id}}\fR
+.RS
+.IP \(bu 2
+List available backups for a Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes backups\-list {{linode_id}}\fR
+.RS
+.IP \(bu 2
+Restore a backup to a Linode:
+.RE
+.PP
+\fB\fClinode\-cli linodes backups\-restore {{linode_id}} \-\-backup\-id {{backup_id}}\fR

@@ -1,0 +1,37 @@
+.TH lebab
+.PP
+.RS
+A JavaScript modernizer for transpiling code to ES6/ES7.
+Transformations must be provided for all examples.
+More information: \[la]https://github.com/lebab/lebab\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a list of the available transformations:
+.RE
+.PP
+\fB\fClebab \-\-help\fR
+.RS
+.IP \(bu 2
+Transpile using one or more comma\-separated transformations:
+.RE
+.PP
+\fB\fClebab \-\-transform {{transformation}}\fR
+.RS
+.IP \(bu 2
+Transpile a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fClebab {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Transpile a file to the specified output file:
+.RE
+.PP
+\fB\fClebab {{path/to/input_file}} \-\-out\-file {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Replace all \fB\fC\&.js\fR files in\-place in the specified directory, glob or file:
+.RE
+.PP
+\fB\fClebab \-\-replace {{directory|glob|file}}\fR

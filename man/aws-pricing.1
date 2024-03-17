@@ -1,0 +1,36 @@
+.TH aws pricing
+.PP
+.RS
+Query services, products, and pricing information from Amazon Web Services.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/pricing/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List service codes of a specific region:
+.RE
+.PP
+\fB\fCaws pricing describe\-services \-\-region {{us\-east\-1}}\fR
+.RS
+.IP \(bu 2
+List attributes for a given service code in a specific region:
+.RE
+.PP
+\fB\fCaws pricing describe\-services \-\-service\-code {{AmazonEC2}} \-\-region {{us\-east\-1}}\fR
+.RS
+.IP \(bu 2
+Print pricing information for a service code in a specific region:
+.RE
+.PP
+\fB\fCaws pricing get\-products \-\-service\-code {{AmazonEC2}} \-\-region {{us\-east\-1}}\fR
+.RS
+.IP \(bu 2
+List values for a specific attribute for a service code in a specific region:
+.RE
+.PP
+\fB\fCaws pricing get\-attribute\-values \-\-service\-code {{AmazonEC2}} \-\-attribute\-name {{instanceType}} \-\-region {{us\-east\-1}}\fR
+.RS
+.IP \(bu 2
+Print pricing information for a service code using filters for instance type and location:
+.RE
+.PP
+\fB\fCaws pricing get\-products \-\-service\-code {{AmazonEC2}} \-\-filters "{{Type=TERM_MATCH,Field=instanceType,Value=m5.xlarge}}" "{{Type=TERM_MATCH,Field=location,Value=US East (N. Virginia)}}" \-\-region {{us\-east\-1}}\fR

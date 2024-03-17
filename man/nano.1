@@ -1,0 +1,48 @@
+.TH nano
+.PP
+.RS
+Command\-line text editor. An enhanced \fB\fCPico\fR clone.
+More information: \[la]https://nano-editor.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the editor:
+.RE
+.PP
+\fB\fCnano\fR
+.RS
+.IP \(bu 2
+Start the editor without using configuration files:
+.RE
+.PP
+\fB\fCnano \-\-ignorercfiles\fR
+.RS
+.IP \(bu 2
+Open specific files, moving to the next file when closing the previous one:
+.RE
+.PP
+\fB\fCnano {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Open a file and position the cursor at a specific line and column:
+.RE
+.PP
+\fB\fCnano +{{line}},{{column}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file and enable soft wrapping:
+.RE
+.PP
+\fB\fCnano \-\-softwrap {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file and indent new lines to the previous line's indentation:
+.RE
+.PP
+\fB\fCnano \-\-autoindent {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file and create a backup file (\fB\fCpath/to/file~\fR) on save:
+.RE
+.PP
+\fB\fCnano \-\-backup {{path/to/file}}\fR

@@ -1,0 +1,48 @@
+.TH cargo build
+.PP
+.RS
+Compile a local package and all of its dependencies.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-build.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the package or packages defined by the \fB\fCCargo.toml\fR manifest file in the local path:
+.RE
+.PP
+\fB\fCcargo build\fR
+.RS
+.IP \(bu 2
+Build artifacts in release mode, with optimizations:
+.RE
+.PP
+\fB\fCcargo build \-\-release\fR
+.RS
+.IP \(bu 2
+Require that \fB\fCCargo.lock\fR is up to date:
+.RE
+.PP
+\fB\fCcargo build \-\-locked\fR
+.RS
+.IP \(bu 2
+Build all packages in the workspace:
+.RE
+.PP
+\fB\fCcargo build \-\-workspace\fR
+.RS
+.IP \(bu 2
+Build a specific package:
+.RE
+.PP
+\fB\fCcargo build \-\-package {{package}}\fR
+.RS
+.IP \(bu 2
+Build only the specified binary:
+.RE
+.PP
+\fB\fCcargo build \-\-bin {{name}}\fR
+.RS
+.IP \(bu 2
+Build only the specified test target:
+.RE
+.PP
+\fB\fCcargo build \-\-test {{testname}}\fR

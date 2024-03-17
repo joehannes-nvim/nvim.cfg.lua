@@ -1,0 +1,49 @@
+.TH dvc config
+.PP
+.RS
+Low level command to manage custom configuration options for dvc repositories.
+These configurations can be on project, local, global, or system level.
+More information: \[la]https://dvc.org/doc/command-reference/config\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get the name of the default remote:
+.RE
+.PP
+\fB\fCdvc config core.remote\fR
+.RS
+.IP \(bu 2
+Set the project's default remote:
+.RE
+.PP
+\fB\fCdvc config core.remote {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Unset the project's default remote:
+.RE
+.PP
+\fB\fCdvc config \-\-unset core.remote\fR
+.RS
+.IP \(bu 2
+Get the config value for a specified key for the current project:
+.RE
+.PP
+\fB\fCdvc config {{key}}\fR
+.RS
+.IP \(bu 2
+Set the config value for a key on a project level:
+.RE
+.PP
+\fB\fCdvc config {{key}} {{value}}\fR
+.RS
+.IP \(bu 2
+Unset a project level config value for a given key:
+.RE
+.PP
+\fB\fCdvc config \-\-unset {{key}}\fR
+.RS
+.IP \(bu 2
+Set a local, global, or system level config value:
+.RE
+.PP
+\fB\fCdvc config \-\-local/global/system {{key}} {{value}}\fR

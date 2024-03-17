@@ -1,0 +1,36 @@
+.TH packwiz
+.PP
+.RS
+Create, edit and manage Minecraft modpacks.
+More information: \[la]https://packwiz.infra.link/reference/commands/packwiz/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a new modpack in the current directory:
+.RE
+.PP
+\fB\fCpackwiz init\fR
+.RS
+.IP \(bu 2
+Add a mod from Modrinth or Curseforge:
+.RE
+.PP
+\fB\fCpackwiz {{modrinth|curseforge}} add {{url|slug|search_term}}\fR
+.RS
+.IP \(bu 2
+List all mods in the modpack:
+.RE
+.PP
+\fB\fCpackwiz list\fR
+.RS
+.IP \(bu 2
+Update \fB\fCindex.toml\fR after manually editing files:
+.RE
+.PP
+\fB\fCpackwiz refresh\fR
+.RS
+.IP \(bu 2
+Export as a Modrinth (\fB\fC\&.mrpack\fR) or Curseforge (\fB\fC\&.zip\fR) file:
+.RE
+.PP
+\fB\fCpackwiz {{modrinth|curseforge}} export\fR

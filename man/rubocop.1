@@ -1,0 +1,48 @@
+.TH rubocop
+.PP
+.RS
+Lint Ruby files.
+More information: \[la]https://docs.rubocop.org/rubocop/usage/basic_usage.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check all files in the current directory (including subdirectories):
+.RE
+.PP
+\fB\fCrubocop\fR
+.RS
+.IP \(bu 2
+Check one or more specific files or directories:
+.RE
+.PP
+\fB\fCrubocop {{path/to/file}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Write output to file:
+.RE
+.PP
+\fB\fCrubocop \-\-out {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+View list of cops (linter rules):
+.RE
+.PP
+\fB\fCrubocop \-\-show\-cops\fR
+.RS
+.IP \(bu 2
+Exclude a cop:
+.RE
+.PP
+\fB\fCrubocop \-\-except {{cop_1}} {{cop_2}}\fR
+.RS
+.IP \(bu 2
+Run only specified cops:
+.RE
+.PP
+\fB\fCrubocop \-\-only {{cop_1}} {{cop_2}}\fR
+.RS
+.IP \(bu 2
+Auto\-correct files (experimental):
+.RE
+.PP
+\fB\fCrubocop \-\-auto\-correct\fR

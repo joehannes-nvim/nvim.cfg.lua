@@ -1,0 +1,48 @@
+.TH electrum
+.PP
+.RS
+Ergonomic Bitcoin wallet and private key management.
+More information: \[la]https://electrum.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new wallet:
+.RE
+.PP
+\fB\fCelectrum \-w {{new_wallet.dat}} create\fR
+.RS
+.IP \(bu 2
+Restore an existing wallet from seed offline:
+.RE
+.PP
+\fB\fCelectrum \-w {{recovery_wallet.dat}} restore \-o\fR
+.RS
+.IP \(bu 2
+Create a signed transaction offline:
+.RE
+.PP
+\fB\fCelectrum mktx {{recipient}} {{amount}} \-f 0.0000001 \-F {{from}} \-o\fR
+.RS
+.IP \(bu 2
+Display all wallet receiving addresses:
+.RE
+.PP
+\fB\fCelectrum listaddresses \-a\fR
+.RS
+.IP \(bu 2
+Sign a message:
+.RE
+.PP
+\fB\fCelectrum signmessage {{address}} {{message}}\fR
+.RS
+.IP \(bu 2
+Verify a message:
+.RE
+.PP
+\fB\fCelectrum verifymessage {{address}} {{signature}} {{message}}\fR
+.RS
+.IP \(bu 2
+Connect only to a specific electrum\-server instance:
+.RE
+.PP
+\fB\fCelectrum \-p socks5:{{127.0.0.1}}:9050 \-s {{56ckl5obj37gypcu.onion}}:50001:t \-1\fR

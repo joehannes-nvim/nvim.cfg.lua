@@ -1,0 +1,24 @@
+.TH git merge\-base
+.PP
+.RS
+Find a common ancestor of two commits.
+More information: \[la]https://git-scm.com/docs/git-merge-base\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the best common ancestor of two commits:
+.RE
+.PP
+\fB\fCgit merge\-base {{commit_1}} {{commit_2}}\fR
+.RS
+.IP \(bu 2
+Output all best common ancestors of two commits:
+.RE
+.PP
+\fB\fCgit merge\-base \-\-all {{commit_1}} {{commit_2}}\fR
+.RS
+.IP \(bu 2
+Check if a commit is an ancestor of a specific commit:
+.RE
+.PP
+\fB\fCgit merge\-base \-\-is\-ancestor {{ancestor_commit}} {{commit}}\fR

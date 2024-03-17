@@ -1,0 +1,36 @@
+.TH nginx
+.PP
+.RS
+Nginx web server.
+More information: \[la]https://nginx.org/en/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start server with the default config file:
+.RE
+.PP
+\fB\fCnginx\fR
+.RS
+.IP \(bu 2
+Start server with a custom configuration file:
+.RE
+.PP
+\fB\fCnginx \-c {{configuration_file}}\fR
+.RS
+.IP \(bu 2
+Start server with a prefix for all relative paths in the configuration file:
+.RE
+.PP
+\fB\fCnginx \-c {{configuration_file}} \-p {{prefix/for/relative/paths}}\fR
+.RS
+.IP \(bu 2
+Test the configuration without affecting the running server:
+.RE
+.PP
+\fB\fCnginx \-t\fR
+.RS
+.IP \(bu 2
+Reload the configuration by sending a signal with no downtime:
+.RE
+.PP
+\fB\fCnginx \-s reload\fR

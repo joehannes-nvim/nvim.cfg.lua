@@ -1,0 +1,43 @@
+.TH kube\-fzf
+.PP
+.RS
+Shell commands for command\-line fuzzy searching of Kubernetes Pods.
+See also \fB\fCkubectl\fR for related commands.
+More information: \[la]https://github.com/thecasualcoder/kube-fzf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get pod details (from current namespace):
+.RE
+.PP
+\fB\fCfindpod\fR
+.RS
+.IP \(bu 2
+Get pod details (from all namespaces):
+.RE
+.PP
+\fB\fCfindpod \-a\fR
+.RS
+.IP \(bu 2
+Describe a pod:
+.RE
+.PP
+\fB\fCdescribepod\fR
+.RS
+.IP \(bu 2
+Tail pod logs:
+.RE
+.PP
+\fB\fCtailpod\fR
+.RS
+.IP \(bu 2
+Exec into a pod's container:
+.RE
+.PP
+\fB\fCexecpod {{shell_command}}\fR
+.RS
+.IP \(bu 2
+Port\-forward a pod:
+.RE
+.PP
+\fB\fCpfpod {{port_number}}\fR

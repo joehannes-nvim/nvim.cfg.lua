@@ -1,0 +1,31 @@
+.TH trap
+.PP
+.RS
+Automatically execute commands after receiving signals by processes or the operating system.
+Can be used to perform cleanups for interruptions by the user or other actions.
+More information: \[la]https://manned.org/trap\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available signals to set traps for:
+.RE
+.PP
+\fB\fCtrap \-l\fR
+.RS
+.IP \(bu 2
+List active traps for the current shell:
+.RE
+.PP
+\fB\fCtrap \-p\fR
+.RS
+.IP \(bu 2
+Set a trap to execute commands when one or more signals are detected:
+.RE
+.PP
+\fB\fCtrap 'echo "Caught signal {{SIGHUP}}"' {{SIGHUP}}\fR
+.RS
+.IP \(bu 2
+Remove active traps:
+.RE
+.PP
+\fB\fCtrap \- {{SIGHUP}} {{SIGINT}}\fR

@@ -1,0 +1,54 @@
+.TH asciinema
+.PP
+.RS
+Record and replay terminal sessions, and optionally share them on asciinema.org.
+More information: \[la]https://asciinema.org/docs/usage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Associate the local install of \fB\fCasciinema\fR with an asciinema.org account:
+.RE
+.PP
+\fB\fCasciinema auth\fR
+.RS
+.IP \(bu 2
+Make a new recording (once finished, user will be prompted to upload it or save it locally):
+.RE
+.PP
+\fB\fCasciinema rec\fR
+.RS
+.IP \(bu 2
+Make a new recording and save it to a local file:
+.RE
+.PP
+\fB\fCasciinema rec {{path/to/file}}.cast\fR
+.RS
+.IP \(bu 2
+Replay a terminal recording from a local file:
+.RE
+.PP
+\fB\fCasciinema play {{path/to/file}}.cast\fR
+.RS
+.IP \(bu 2
+Replay a terminal recording hosted on asciinema.org:
+.RE
+.PP
+\fB\fCasciinema play https://asciinema.org/a/{{cast_id}}\fR
+.RS
+.IP \(bu 2
+Make a new recording, limiting any idle time to at most 2.5 seconds:
+.RE
+.PP
+\fB\fCasciinema rec \-i {{2.5}}\fR
+.RS
+.IP \(bu 2
+Print the full output of a locally saved recording:
+.RE
+.PP
+\fB\fCasciinema cat {{path/to/file}}.cast\fR
+.RS
+.IP \(bu 2
+Upload a locally saved terminal session to asciinema.org:
+.RE
+.PP
+\fB\fCasciinema upload {{path/to/file}}.cast\fR

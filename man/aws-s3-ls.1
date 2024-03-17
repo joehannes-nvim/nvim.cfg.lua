@@ -1,0 +1,42 @@
+.TH aws s3 ls
+.PP
+.RS
+List AWS S3 buckets, folders (prefixes), and files (objects).
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/ls.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all buckets:
+.RE
+.PP
+\fB\fCaws s3 ls\fR
+.RS
+.IP \(bu 2
+List files and folders in the root of a bucket (\fB\fCs3://\fR is optional):
+.RE
+.PP
+\fB\fCaws s3 ls s3://{{bucket_name}}\fR
+.RS
+.IP \(bu 2
+List files and folders directly inside a directory:
+.RE
+.PP
+\fB\fCaws s3 ls {{bucket_name}}/{{path/to/directory}}/\fR
+.RS
+.IP \(bu 2
+List all files in a bucket:
+.RE
+.PP
+\fB\fCaws s3 ls \-\-recursive {{bucket_name}}\fR
+.RS
+.IP \(bu 2
+List all files in a path with a given prefix:
+.RE
+.PP
+\fB\fCaws s3 ls \-\-recursive {{bucket_name}}/{{path/to/directory/}}{{prefix}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCaws s3 ls help\fR

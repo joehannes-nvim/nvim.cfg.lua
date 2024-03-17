@@ -1,0 +1,30 @@
+.TH Rscript
+.PP
+.RS
+Run a script with the R programming language.
+More information: \[la]https://www.r-project.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a script:
+.RE
+.PP
+\fB\fCRscript {{path/to/file.R}}\fR
+.RS
+.IP \(bu 2
+Run a script in vanilla mode (i.e. a blank session that doesn't save the workspace at the end):
+.RE
+.PP
+\fB\fCRscript \-\-vanilla {{path/to/file.R}}\fR
+.RS
+.IP \(bu 2
+Execute one or more R expressions:
+.RE
+.PP
+\fB\fCRscript \-e {{expression1}} \-e {{expression2}}\fR
+.RS
+.IP \(bu 2
+Display R version:
+.RE
+.PP
+\fB\fCRscript \-\-version\fR

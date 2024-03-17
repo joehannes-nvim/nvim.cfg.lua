@@ -1,0 +1,42 @@
+.TH restic
+.PP
+.RS
+A backup program that aims to be fast, secure and efficient.
+More information: \[la]https://restic.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a backup repository in the specified local directory:
+.RE
+.PP
+\fB\fCrestic init \-\-repo {{path/to/repository}}\fR
+.RS
+.IP \(bu 2
+Backup a directory to the repository:
+.RE
+.PP
+\fB\fCrestic \-\-repo {{path/to/repository}} backup {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Show backup snapshots currently stored in the repository:
+.RE
+.PP
+\fB\fCrestic \-\-repo {{path/to/repository}} snapshots\fR
+.RS
+.IP \(bu 2
+Restore a specific backup snapshot to a target directory:
+.RE
+.PP
+\fB\fCrestic \-\-repo {{path/to/repository}} restore {{latest|snapshot_id}} \-\-target {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Restore a specific path from a specific backup to a target directory:
+.RE
+.PP
+\fB\fCrestic \-\-repo {{path/to/repository}} restore {{snapshot_id}} \-\-target {{path/to/target}} \-\-include {{path/to/restore}}\fR
+.RS
+.IP \(bu 2
+Clean up the repository and keep only the most recent snapshot of each unique backup:
+.RE
+.PP
+\fB\fCrestic forget \-\-keep\-last 1 \-\-prune\fR

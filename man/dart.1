@@ -1,0 +1,42 @@
+.TH dart
+.PP
+.RS
+The tool for managing Dart projects.
+More information: \[la]https://dart.dev/tools/dart-tool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new Dart project in a directory of the same name:
+.RE
+.PP
+\fB\fCdart create {{project_name}}\fR
+.RS
+.IP \(bu 2
+Run a Dart file:
+.RE
+.PP
+\fB\fCdart run {{path/to/file.dart}}\fR
+.RS
+.IP \(bu 2
+Download dependencies for the current project:
+.RE
+.PP
+\fB\fCdart pub get\fR
+.RS
+.IP \(bu 2
+Run unit tests for the current project:
+.RE
+.PP
+\fB\fCdart test\fR
+.RS
+.IP \(bu 2
+Update an outdated project's dependencies to support null\-safety:
+.RE
+.PP
+\fB\fCdart pub upgrade \-\-null\-safety\fR
+.RS
+.IP \(bu 2
+Compile a Dart file to a native binary:
+.RE
+.PP
+\fB\fCdart compile exe {{path/to/file.dart}}\fR

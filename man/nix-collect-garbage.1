@@ -1,0 +1,25 @@
+.TH nix\-collect\-garbage
+.PP
+.RS
+Delete unused and unreachable nix store paths.
+Generations can be listed using \fB\fCnix\-env \-\-list\-generations\fR\&.
+More information: \[la]https://nixos.org/releases/nix/latest/manual/#sec-nix-collect-garbage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete all store paths unused by current generations of each profile:
+.RE
+.PP
+\fB\fCsudo nix\-collect\-garbage \-\-delete\-old\fR
+.RS
+.IP \(bu 2
+Simulate the deletion of old store paths:
+.RE
+.PP
+\fB\fCsudo nix\-collect\-garbage \-\-delete\-old \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Delete all store paths older than 30 days:
+.RE
+.PP
+\fB\fCsudo nix\-collect\-garbage \-\-delete\-older\-than 30d\fR

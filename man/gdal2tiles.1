@@ -1,0 +1,18 @@
+.TH gdal2tiles.py
+.PP
+.RS
+Generate TMS or XYZ tiles for a raster dataset.
+More information: \[la]https://gdal.org/programs/gdal2tiles.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate TMS tiles for the zoom levels 2\-5 of a raster dataset:
+.RE
+.PP
+\fB\fCgdal2tiles.py \-\-zoom={{2\-5}} {{path/to/input.tif}} {{path/to/output_directory}}\fR
+.RS
+.IP \(bu 2
+Generate XYZ tiles for the zoom levels 2\-5 of a raster dataset:
+.RE
+.PP
+\fB\fCgdal2tiles.py \-\-zoom={{2\-5}} \-\-xyz {{path/to/input.tif}} {{path/to/output_directory}}\fR

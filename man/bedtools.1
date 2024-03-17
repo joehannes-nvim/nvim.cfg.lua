@@ -1,0 +1,43 @@
+.TH bedtools
+.PP
+.RS
+A swiss\-army knife of tools for genomic\-analysis tasks.
+Used to intersect, group, convert and count data in BAM, BED, GFF/GTF, VCF format.
+More information: \[la]https://bedtools.readthedocs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Intersect two files regarding the sequences' strand and save the result to the specified file:
+.RE
+.PP
+\fB\fCbedtools intersect \-a {{path/to/file_1}} \-b {{path/to/file_2}} \-s > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Intersect two files with a left outer join, i.e. report each feature from {{file\fI1}} and NULL if no overlap with {{file\fP2}}:
+.RE
+.PP
+\fB\fCbedtools intersect \-a {{path/to/file_1}} \-b {{path/to/file_2}} \-lof > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Using more efficient algorithm to intersect two pre\-sorted files:
+.RE
+.PP
+\fB\fCbedtools intersect \-a {{path/to/file_1}} \-b {{path/to/file_2}} \-sorted > {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Group file {{\fB\fCpath/to/file\fR}} based on the first three and the fifth column and summarize the sixth column by summing it up:
+.RE
+.PP
+\fB\fCbedtools groupby \-i {{path/to/file}} \-c 1\-3,5 \-g 6 \-o sum\fR
+.RS
+.IP \(bu 2
+Convert bam\-formatted file to a bed\-formatted one:
+.RE
+.PP
+\fB\fCbedtools bamtobed \-i {{path/to/file}}.bam > {{path/to/file}}.bed\fR
+.RS
+.IP \(bu 2
+Find for all features in {{file\fI1}}.bed the closest one in {{file\fP2}}.bed and write their distance in an extra column (input files must be sorted):
+.RE
+.PP
+\fB\fCbedtools closest \-a {{path/to/file_1}}.bed \-b {{path/to/file_2}}.bed \-d\fR

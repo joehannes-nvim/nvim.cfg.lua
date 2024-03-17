@@ -1,0 +1,31 @@
+.TH mongo
+.PP
+.RS
+The legacy MongoDB shell. See \fB\fCmongosh\fR for the new shell.
+Note: all connection options can be replaced with one string: \fB\fCmongodb://user@host:port/db_name?authSource=authdb_name\fR\&.
+More information: \[la]https://docs.mongodb.com/manual/reference/program/mongo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a local database on the default port (\fB\fCmongodb://localhost:27017\fR):
+.RE
+.PP
+\fB\fCmongo\fR
+.RS
+.IP \(bu 2
+Connect to a database:
+.RE
+.PP
+\fB\fCmongo \-\-host {{host}} \-\-port {{port}} {{db_name}}\fR
+.RS
+.IP \(bu 2
+Authenticate using the specified username on the specified database (you will be prompted for a password):
+.RE
+.PP
+\fB\fCmongo \-\-host {{host}} \-\-port {{port}} \-\-username {{username}} \-\-authenticationDatabase {{authdb_name}} {{db_name}}\fR
+.RS
+.IP \(bu 2
+Evaluate a JavaScript expression on a database:
+.RE
+.PP
+\fB\fCmongo \-\-eval '{{JSON.stringify(db.foo.findOne())}}' {{db_name}}\fR

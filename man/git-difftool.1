@@ -1,0 +1,31 @@
+.TH git difftool
+.PP
+.RS
+Show file changes using external diff tools. Accepts the same options and arguments as \fB\fCgit diff\fR\&.
+See also: \fB\fCgit diff\fR\&.
+More information: \[la]https://git-scm.com/docs/git-difftool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available diff tools:
+.RE
+.PP
+\fB\fCgit difftool \-\-tool\-help\fR
+.RS
+.IP \(bu 2
+Set the default diff tool to meld:
+.RE
+.PP
+\fB\fCgit config \-\-global diff.tool "{{meld}}"\fR
+.RS
+.IP \(bu 2
+Use the default diff tool to show staged changes:
+.RE
+.PP
+\fB\fCgit difftool \-\-staged\fR
+.RS
+.IP \(bu 2
+Use a specific tool (opendiff) to show changes since a given commit:
+.RE
+.PP
+\fB\fCgit difftool \-\-tool={{opendiff}} {{commit}}\fR

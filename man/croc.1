@@ -1,0 +1,48 @@
+.TH croc
+.PP
+.RS
+Send and receive files easily and securely over any network.
+More information: \[la]https://github.com/schollz/croc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a file or directory:
+.RE
+.PP
+\fB\fCcroc send {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Send a file or directory with a specific passphrase:
+.RE
+.PP
+\fB\fCcroc send \-\-code {{passphrase}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Receive a file or directory on receiving machine:
+.RE
+.PP
+\fB\fCcroc {{passphrase}}\fR
+.RS
+.IP \(bu 2
+Send and connect over a custom relay:
+.RE
+.PP
+\fB\fCcroc \-\-relay {{ip_to_relay}} send {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Receive and connect over a custom relay:
+.RE
+.PP
+\fB\fCcroc \-\-relay {{ip_to_relay}} {{passphrase}}\fR
+.RS
+.IP \(bu 2
+Host a croc relay on the default ports:
+.RE
+.PP
+\fB\fCcroc relay\fR
+.RS
+.IP \(bu 2
+Display parameters and options for a croc command:
+.RE
+.PP
+\fB\fCcroc {{send|relay}} \-\-help\fR

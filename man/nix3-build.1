@@ -1,0 +1,31 @@
+.TH nix build
+.PP
+.RS
+Build a Nix expression (downloading from the cache when possible).
+See also: \fB\fCtldr nix\-build\fR\&. See \fB\fCtldr nix3 flake\fR for information about flakes.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-build.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a package from nixpkgs, symlinking the result to \fB\fC\&./result\fR:
+.RE
+.PP
+\fB\fCnix build {{nixpkgs#pkg}}\fR
+.RS
+.IP \(bu 2
+Build a package from a flake in the current directory, showing the build logs in the process:
+.RE
+.PP
+\fB\fCnix build \-L {{.#pkg}}\fR
+.RS
+.IP \(bu 2
+Build the default package from a flake in some directory:
+.RE
+.PP
+\fB\fCnix build {{./path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Build a package without making the \fB\fCresult\fR symlink, instead printing the store path to the \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCnix build \-\-no\-link \-\-print\-out\-paths\fR

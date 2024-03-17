@@ -1,0 +1,36 @@
+.TH glab pipeline
+.PP
+.RS
+List, view, and run GitLab CI/CD pipelines.
+More information: \[la]https://glab.readthedocs.io/en/latest/pipeline\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View a running pipeline on the current branch:
+.RE
+.PP
+\fB\fCglab pipeline status\fR
+.RS
+.IP \(bu 2
+View a running pipeline on a specific branch:
+.RE
+.PP
+\fB\fCglab pipeline status \-\-branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Get the list of pipelines:
+.RE
+.PP
+\fB\fCglab pipeline list\fR
+.RS
+.IP \(bu 2
+Run a manual pipeline on the current branch:
+.RE
+.PP
+\fB\fCglab pipeline run\fR
+.RS
+.IP \(bu 2
+Run a manual pipeline on a specific branch:
+.RE
+.PP
+\fB\fCglab pipeline run \-\-branch {{branch_name}}\fR

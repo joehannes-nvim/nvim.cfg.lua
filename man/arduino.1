@@ -1,0 +1,54 @@
+.TH arduino
+.PP
+.RS
+Arduino Studio \- Integrated Development Environment for the Arduino platform.
+More information: \[la]https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a sketch:
+.RE
+.PP
+\fB\fCarduino \-\-verify {{path/to/file.ino}}\fR
+.RS
+.IP \(bu 2
+Build and upload a sketch:
+.RE
+.PP
+\fB\fCarduino \-\-upload {{path/to/file.ino}}\fR
+.RS
+.IP \(bu 2
+Build and upload a sketch to an Arduino Nano with an Atmega328p CPU, connected on port \fB\fC/dev/ttyACM0\fR:
+.RE
+.PP
+\fB\fCarduino \-\-board {{arduino:avr:nano:cpu=atmega328p}} \-\-port {{/dev/ttyACM0}} \-\-upload {{path/to/file.ino}}\fR
+.RS
+.IP \(bu 2
+Set the preference \fB\fCname\fR to a given \fB\fCvalue\fR:
+.RE
+.PP
+\fB\fCarduino \-\-pref {{name}}={{value}}\fR
+.RS
+.IP \(bu 2
+Build a sketch, put the build results in the build directory, and reuse any previous build results in that directory:
+.RE
+.PP
+\fB\fCarduino \-\-pref build.path={{path/to/build_directory}} \-\-verify {{path/to/file.ino}}\fR
+.RS
+.IP \(bu 2
+Save any (changed) preferences to \fB\fCpreferences.txt\fR:
+.RE
+.PP
+\fB\fCarduino \-\-save\-prefs\fR
+.RS
+.IP \(bu 2
+Install the latest SAM board:
+.RE
+.PP
+\fB\fCarduino \-\-install\-boards "{{arduino:sam}}"\fR
+.RS
+.IP \(bu 2
+Install Bridge and Servo libraries:
+.RE
+.PP
+\fB\fCarduino \-\-install\-library "{{Bridge:1.0.0,Servo:1.2.0}}"\fR

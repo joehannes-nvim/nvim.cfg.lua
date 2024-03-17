@@ -1,0 +1,42 @@
+.TH gdalinfo
+.PP
+.RS
+List various information about a GDAL supported raster dataset.
+More information: \[la]https://gdal.org/programs/gdalinfo.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all supported raster formats:
+.RE
+.PP
+\fB\fCgdalinfo \-\-formats\fR
+.RS
+.IP \(bu 2
+List information about a specific raster dataset:
+.RE
+.PP
+\fB\fCgdalinfo {{path/to/input.tif}}\fR
+.RS
+.IP \(bu 2
+List information about a specific raster dataset in JSON format:
+.RE
+.PP
+\fB\fCgdalinfo \-json {{path/to/input.tif}}\fR
+.RS
+.IP \(bu 2
+Show histogram values of a specific raster dataset:
+.RE
+.PP
+\fB\fCgdalinfo \-hist {{path/to/input.tif}}\fR
+.RS
+.IP \(bu 2
+List information about a Web Map Service (WMS):
+.RE
+.PP
+\fB\fCgdalinfo WMS:{{https://services.meggsimum.de/geoserver/ows}}\fR
+.RS
+.IP \(bu 2
+List information about a specific dataset of a Web Map Service (WMS):
+.RE
+.PP
+\fB\fCgdalinfo WMS:{{https://services.meggsimum.de/geoserver/ows}} \-sd {{4}}\fR

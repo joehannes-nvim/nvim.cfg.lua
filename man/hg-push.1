@@ -1,0 +1,42 @@
+.TH hg push
+.PP
+.RS
+Push changes from the local repository to a specified destination.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#push\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Push changes to the "default" remote path:
+.RE
+.PP
+\fB\fChg push\fR
+.RS
+.IP \(bu 2
+Push changes to a specified remote repository:
+.RE
+.PP
+\fB\fChg push {{path/to/destination_repository}}\fR
+.RS
+.IP \(bu 2
+Push a new branch if it does not exist (disabled by default):
+.RE
+.PP
+\fB\fChg push \-\-new\-branch\fR
+.RS
+.IP \(bu 2
+Specify a specific revision changeset to push:
+.RE
+.PP
+\fB\fChg push \-\-rev {{revision}}\fR
+.RS
+.IP \(bu 2
+Specify a specific branch to push:
+.RE
+.PP
+\fB\fChg push \-\-branch {{branch}}\fR
+.RS
+.IP \(bu 2
+Specify a specific bookmark to push:
+.RE
+.PP
+\fB\fChg push \-\-bookmark {{bookmark}}\fR

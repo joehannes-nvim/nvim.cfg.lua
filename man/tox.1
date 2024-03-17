@@ -1,0 +1,37 @@
+.TH tox
+.PP
+.RS
+Automate Python testing across multiple Python versions.
+Use tox.ini to configure environments and test command.
+More information: \[la]https://github.com/tox-dev/tox\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run tests on all test environments:
+.RE
+.PP
+\fB\fCtox\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCtox.ini\fR configuration:
+.RE
+.PP
+\fB\fCtox\-quickstart\fR
+.RS
+.IP \(bu 2
+List the available environments:
+.RE
+.PP
+\fB\fCtox \-\-listenvs\-all\fR
+.RS
+.IP \(bu 2
+Run tests on a specific environment (e.g. Python 3.6):
+.RE
+.PP
+\fB\fCtox \-e {{py36}}\fR
+.RS
+.IP \(bu 2
+Force the virtual environment to be recreated:
+.RE
+.PP
+\fB\fCtox \-\-recreate \-e {{py27}}\fR

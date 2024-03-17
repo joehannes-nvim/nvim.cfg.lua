@@ -1,0 +1,30 @@
+.TH qrencode
+.PP
+.RS
+QR Code generator. Supports PNG and EPS.
+More information: \[la]https://fukuchi.org/works/qrencode\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a string to a QR code and save to an output file:
+.RE
+.PP
+\fB\fCqrencode \-o {{path/to/output_file.png}} {{string}}\fR
+.RS
+.IP \(bu 2
+Convert an input file to a QR code and save to an output file:
+.RE
+.PP
+\fB\fCqrencode \-o {{path/to/output_file.png}} \-r {{path/to/input_file}}\fR
+.RS
+.IP \(bu 2
+Convert a string to a QR code and print it in terminal:
+.RE
+.PP
+\fB\fCqrencode \-t ansiutf8 {{string}}\fR
+.RS
+.IP \(bu 2
+Convert input from pipe to a QR code and print it in terminal:
+.RE
+.PP
+\fB\fCecho {{string}} | qrencode \-t ansiutf8\fR

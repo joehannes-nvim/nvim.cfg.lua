@@ -1,0 +1,36 @@
+.TH compgen
+.PP
+.RS
+A built\-in command for auto\-completion in Bash, which is called on pressing TAB key twice.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#index-compgen\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all commands that you could run:
+.RE
+.PP
+\fB\fCcompgen \-c\fR
+.RS
+.IP \(bu 2
+List all aliases:
+.RE
+.PP
+\fB\fCcompgen \-a\fR
+.RS
+.IP \(bu 2
+List all functions that you could run:
+.RE
+.PP
+\fB\fCcompgen \-A function\fR
+.RS
+.IP \(bu 2
+Show shell reserved keywords:
+.RE
+.PP
+\fB\fCcompgen \-k\fR
+.RS
+.IP \(bu 2
+See all available commands/aliases starting with 'ls':
+.RE
+.PP
+\fB\fCcompgen \-ac {{ls}}\fR

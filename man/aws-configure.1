@@ -1,0 +1,54 @@
+.TH aws configure
+.PP
+.RS
+Manage configuration for the AWS CLI.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/configure/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Configure AWS CLI interactively (creates a new configuration or updates the default):
+.RE
+.PP
+\fB\fCaws configure\fR
+.RS
+.IP \(bu 2
+Configure a named profile for AWS CLI interactively (creates a new profile or updates an existing one):
+.RE
+.PP
+\fB\fCaws configure \-\-profile {{profile_name}}\fR
+.RS
+.IP \(bu 2
+Display the value from a specific configuration variable:
+.RE
+.PP
+\fB\fCaws configure get {{name}}\fR
+.RS
+.IP \(bu 2
+Display the value for a configuration variable in a specific profile:
+.RE
+.PP
+\fB\fCaws configure get {{name}} \-\-profile {{profile_name}}\fR
+.RS
+.IP \(bu 2
+Set the value of a specific configuration variable:
+.RE
+.PP
+\fB\fCaws configure set {{name}} {{value}}\fR
+.RS
+.IP \(bu 2
+Set the value of a configuration variable in a specific profile:
+.RE
+.PP
+\fB\fCaws configure set {{name}} {{value}} \-\-profile {{profile_name}}\fR
+.RS
+.IP \(bu 2
+List the configuration entries:
+.RE
+.PP
+\fB\fCaws configure list\fR
+.RS
+.IP \(bu 2
+List the configuration entries for a specific profile:
+.RE
+.PP
+\fB\fCaws configure list \-\-profile {{profile_name}}\fR

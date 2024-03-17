@@ -1,0 +1,48 @@
+.TH wp
+.PP
+.RS
+The official command\-line interface to manage WordPress instances.
+More information: \[la]https://wp-cli.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print information about the operating system, shell, PHP, and WP\-CLI (\fB\fCwp\fR) installation:
+.RE
+.PP
+\fB\fCwp \-\-info\fR
+.RS
+.IP \(bu 2
+Update WP\-CLI:
+.RE
+.PP
+\fB\fCwp cli update\fR
+.RS
+.IP \(bu 2
+Download a fresh WordPress installation to current directory, optionally specifying the locale:
+.RE
+.PP
+\fB\fCwp core download \-\-locale={{locale}}\fR
+.RS
+.IP \(bu 2
+Create basic \fB\fCwpconfig\fR file (assuming database on \fB\fClocalhost\fR):
+.RE
+.PP
+\fB\fCwp config create \-\-dbname={{dbname}} \-\-dbuser={{dbuser}} \-\-dbpass={{dbpass}}\fR
+.RS
+.IP \(bu 2
+Install and activate a WordPress plugin:
+.RE
+.PP
+\fB\fCwp plugin install {{plugin}} \-\-activate\fR
+.RS
+.IP \(bu 2
+Replace all instances of a string in the database:
+.RE
+.PP
+\fB\fCwp search\-replace {{old_string}} {{new_string}}\fR
+.RS
+.IP \(bu 2
+Import the contents of a WordPress Extended RSS (WXR) file:
+.RE
+.PP
+\fB\fCwp import {{path/to/file.xml}}\fR

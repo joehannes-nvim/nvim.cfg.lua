@@ -1,0 +1,42 @@
+.TH procs
+.PP
+.RS
+Display information about the active processes.
+More information: \[la]https://github.com/dalance/procs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all processes showing the PID, user, CPU usage, memory usage, and the command which started them:
+.RE
+.PP
+\fB\fCprocs\fR
+.RS
+.IP \(bu 2
+List all processes as a tree:
+.RE
+.PP
+\fB\fCprocs \-\-tree\fR
+.RS
+.IP \(bu 2
+List information about processes, if the commands which started them contain \fB\fCzsh\fR:
+.RE
+.PP
+\fB\fCprocs {{zsh}}\fR
+.RS
+.IP \(bu 2
+List information about all processes sorted by CPU time in [a]scending or [d]escending order:
+.RE
+.PP
+\fB\fCprocs {{\-\-sorta|\-\-sortd}} cpu\fR
+.RS
+.IP \(bu 2
+List information about processes with either a PID, command, or user containing \fB\fC41\fR or \fB\fCfirefox\fR:
+.RE
+.PP
+\fB\fCprocs \-\-or {{PID|command|user}} {{41}} {{firefox}}\fR
+.RS
+.IP \(bu 2
+List information about processes with both PID \fB\fC41\fR and a command or user containing \fB\fCzsh\fR:
+.RE
+.PP
+\fB\fCprocs \-\-and {{41}} {{zsh}}\fR

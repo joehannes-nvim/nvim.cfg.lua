@@ -1,0 +1,36 @@
+.TH pandoc
+.PP
+.RS
+Convert documents between various formats.
+More information: \[la]https://pandoc.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert file to PDF (the output format is determined by file extension):
+.RE
+.PP
+\fB\fCpandoc {{input.md}} \-o {{output.pdf}}\fR
+.RS
+.IP \(bu 2
+Force conversion to use a specific format:
+.RE
+.PP
+\fB\fCpandoc {{input.docx}} \-\-to {{gfm}} \-o {{output.md}}\fR
+.RS
+.IP \(bu 2
+Convert to a standalone file with the appropriate headers/footers (for LaTeX, HTML, etc.):
+.RE
+.PP
+\fB\fCpandoc {{input.md}} \-s \-o {{output.tex}}\fR
+.RS
+.IP \(bu 2
+List all supported input formats:
+.RE
+.PP
+\fB\fCpandoc \-\-list\-input\-formats\fR
+.RS
+.IP \(bu 2
+List all supported output formats:
+.RE
+.PP
+\fB\fCpandoc \-\-list\-output\-formats\fR

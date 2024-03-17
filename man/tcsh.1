@@ -1,0 +1,43 @@
+.TH tcsh
+.PP
+.RS
+C shell with file name completion and command\-line editing.
+See also: \fB\fCcsh\fR\&.
+More information: \[la]https://manned.org/tcsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCtcsh\fR
+.RS
+.IP \(bu 2
+Start an interactive shell session without loading startup configs:
+.RE
+.PP
+\fB\fCtcsh \-f\fR
+.RS
+.IP \(bu 2
+Execute specific [c]ommands:
+.RE
+.PP
+\fB\fCtcsh \-c "{{echo 'tcsh is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCtcsh {{path/to/script.tcsh}}\fR
+.RS
+.IP \(bu 2
+Check a specific script for syntax errors:
+.RE
+.PP
+\fB\fCtcsh \-n {{path/to/script.tcsh}}\fR
+.RS
+.IP \(bu 2
+Execute specific commands from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{echo "echo 'tcsh is executed'"}} | tcsh\fR

@@ -1,0 +1,30 @@
+.TH openssl s_client
+.PP
+.RS
+OpenSSL command to create TLS client connections.
+More information: \[la]https://www.openssl.org/docs/manmaster/man1/openssl-s_client.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the start and expiry dates for a domain's certificate:
+.RE
+.PP
+\fB\fCopenssl s_client \-connect {{host}}:{{port}} 2>/dev/null | openssl x509 \-noout \-dates\fR
+.RS
+.IP \(bu 2
+Display the certificate presented by an SSL/TLS server:
+.RE
+.PP
+\fB\fCopenssl s_client \-connect {{host}}:{{port}} </dev/null\fR
+.RS
+.IP \(bu 2
+Set the Server Name Indicator (SNI) when connecting to the SSL/TLS server:
+.RE
+.PP
+\fB\fCopenssl s_client \-connect {{host}}:{{port}} \-servername {{hostname}}\fR
+.RS
+.IP \(bu 2
+Display the complete certificate chain of an HTTPS server:
+.RE
+.PP
+\fB\fCopenssl s_client \-connect {{host}}:443 \-showcerts </dev/null\fR

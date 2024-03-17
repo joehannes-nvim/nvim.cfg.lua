@@ -1,0 +1,25 @@
+.TH umount
+.PP
+.RS
+Unlink a filesystem from its mount point, making it no longer accessible.
+A filesystem cannot be unmounted when it is busy.
+More information: \[la]https://manned.org/umount.8\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Unmount a filesystem, by passing the path to the source it is mounted from:
+.RE
+.PP
+\fB\fCumount {{path/to/device_file}}\fR
+.RS
+.IP \(bu 2
+Unmount a filesystem, by passing the path to the target where it is mounted:
+.RE
+.PP
+\fB\fCumount {{path/to/mounted_directory}}\fR
+.RS
+.IP \(bu 2
+Unmount all mounted filesystems (except the \fB\fCproc\fR filesystem):
+.RE
+.PP
+\fB\fCumount \-a\fR

@@ -1,0 +1,42 @@
+.TH tsc
+.PP
+.RS
+TypeScript compiler.
+More information: \[la]https://www.typescriptlang.org/docs/handbook/compiler-options.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a TypeScript file \fB\fCfoobar.ts\fR into a JavaScript file \fB\fCfoobar.js\fR:
+.RE
+.PP
+\fB\fCtsc {{foobar.ts}}\fR
+.RS
+.IP \(bu 2
+Compile a TypeScript file into JavaScript using a specific target syntax (default is \fB\fCES3\fR):
+.RE
+.PP
+\fB\fCtsc \-\-target {{ES5|ES2015|ES2016|ES2017|ES2018|ESNEXT}} {{foobar.ts}}\fR
+.RS
+.IP \(bu 2
+Compile a TypeScript file into a JavaScript file with a custom name:
+.RE
+.PP
+\fB\fCtsc \-\-outFile {{output.js}} {{input.ts}}\fR
+.RS
+.IP \(bu 2
+Compile all \fB\fC\&.ts\fR files of a TypeScript project defined in a \fB\fCtsconfig.json\fR file:
+.RE
+.PP
+\fB\fCtsc \-\-build {{tsconfig.json}}\fR
+.RS
+.IP \(bu 2
+Run the compiler using command\-line options and arguments fetched from a text file:
+.RE
+.PP
+\fB\fCtsc @{{args.txt}}\fR
+.RS
+.IP \(bu 2
+Type\-check multiple JavaScript files, and output only the errors:
+.RE
+.PP
+\fB\fCtsc \-\-allowJs \-\-checkJs \-\-noEmit {{src/**/*.js}}\fR

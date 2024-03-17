@@ -1,0 +1,24 @@
+.TH gpg\-zip
+.PP
+.RS
+Encrypt files and directories in an archive using GPG.
+More information: \[la]https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dzip.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encrypt a directory into \fB\fCarchive.gpg\fR using a passphrase:
+.RE
+.PP
+\fB\fCgpg\-zip \-\-symmetric \-\-output {{archive.gpg}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Decrypt \fB\fCarchive.gpg\fR into a directory of the same name:
+.RE
+.PP
+\fB\fCgpg\-zip \-\-decrypt {{path/to/archive.gpg}}\fR
+.RS
+.IP \(bu 2
+List the contents of the encrypted \fB\fCarchive.gpg\fR:
+.RE
+.PP
+\fB\fCgpg\-zip \-\-list\-archive {{path/to/archive.gpg}}\fR

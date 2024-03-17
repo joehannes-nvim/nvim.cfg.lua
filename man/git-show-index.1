@@ -1,0 +1,18 @@
+.TH git show\-index
+.PP
+.RS
+Show the packed archive index of a Git repository.
+More information: \[la]https://git-scm.com/docs/git-show-index\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read an IDX file for a Git packfile and dump its contents to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgit show\-index {{path/to/file.idx}}\fR
+.RS
+.IP \(bu 2
+Specify the hash algorithm for the index file (experimental):
+.RE
+.PP
+\fB\fCgit show\-index \-\-object\-format={{sha1|sha256}} {{path/to/file}}\fR

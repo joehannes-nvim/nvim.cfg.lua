@@ -1,0 +1,48 @@
+.TH dust
+.PP
+.RS
+Dust gives an instant overview of which directories are using disk space.
+More information: \[la]https://github.com/bootandy/dust\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display information for the current directory:
+.RE
+.PP
+\fB\fCdust\fR
+.RS
+.IP \(bu 2
+Display information for a space\-separated list of directories:
+.RE
+.PP
+\fB\fCdust {{path/to/directory1}} {{path/to/directory2}}\fR
+.RS
+.IP \(bu 2
+Display 30 directories (defaults to 21):
+.RE
+.PP
+\fB\fCdust \-\-number\-of\-lines {{30}}\fR
+.RS
+.IP \(bu 2
+Display information for the current directory, up to 3 levels deep:
+.RE
+.PP
+\fB\fCdust \-\-depth {{3}}\fR
+.RS
+.IP \(bu 2
+Display the biggest directories at the top in descending order:
+.RE
+.PP
+\fB\fCdust \-\-reverse\fR
+.RS
+.IP \(bu 2
+Ignore all files and directories with a specific name:
+.RE
+.PP
+\fB\fCdust \-\-ignore\-directory {{file_or_directory_name}}\fR
+.RS
+.IP \(bu 2
+Do not display percent bars and percentages:
+.RE
+.PP
+\fB\fCdust \-\-no\-percent\-bars\fR

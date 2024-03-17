@@ -1,0 +1,42 @@
+.TH openvpn
+.PP
+.RS
+OpenVPN client and daemon binary.
+More information: \[la]https://openvpn.net/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to server using a config file:
+.RE
+.PP
+\fB\fCsudo openvpn {{path/to/client.conf}}\fR
+.RS
+.IP \(bu 2
+Try to set up an insecure peer\-to\-peer tunnel on bob.example.com host:
+.RE
+.PP
+\fB\fCsudo openvpn \-\-remote {{alice.example.com}} \-\-dev {{tun1}} \-\-ifconfig {{10.4.0.1}} {{10.4.0.2}}\fR
+.RS
+.IP \(bu 2
+Connect to the awaiting bob.example.com host without encryption:
+.RE
+.PP
+\fB\fCsudo openvpn \-\-remote {{bob.example.com}} \-\-dev {{tun1}} \-\-ifconfig {{10.4.0.2}} {{10.4.0.1}}\fR
+.RS
+.IP \(bu 2
+Create a cryptographic key and save it to file:
+.RE
+.PP
+\fB\fCopenvpn \-\-genkey secret {{path/to/key}}\fR
+.RS
+.IP \(bu 2
+Try to set up a peer\-to\-peer tunnel on bob.example.com host with a static key:
+.RE
+.PP
+\fB\fCsudo openvpn \-\-remote {{alice.example.com}} \-\-dev {{tun1}} \-\-ifconfig {{10.4.0.1}} {{10.4.0.2}} \-\-secret {{path/to/key}}\fR
+.RS
+.IP \(bu 2
+Connect to the awaiting bob.example.com host with the same static key as on bob.example.com:
+.RE
+.PP
+\fB\fCsudo openvpn \-\-remote {{bob.example.com}} \-\-dev {{tun1}} \-\-ifconfig {{10.4.0.2}} {{10.4.0.1}} \-\-secret {{path/to/key}}\fR

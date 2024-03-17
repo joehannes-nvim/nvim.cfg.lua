@@ -1,0 +1,37 @@
+.TH csvformat
+.PP
+.RS
+Convert a CSV file to a custom output format.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/csvformat.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert to a tab\-delimited file (TSV):
+.RE
+.PP
+\fB\fCcsvformat \-T {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Convert delimiters to a custom character:
+.RE
+.PP
+\fB\fCcsvformat \-D "{{custom_character}}" {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Convert line endings to carriage return ( + line feed:
+.RE
+.PP
+\fB\fCcsvformat \-M "{{\\r\\n}}" {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Minimize use of quote characters:
+.RE
+.PP
+\fB\fCcsvformat \-U 0 {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Maximize use of quote characters:
+.RE
+.PP
+\fB\fCcsvformat \-U 1 {{data.csv}}\fR

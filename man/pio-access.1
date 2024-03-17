@@ -1,0 +1,36 @@
+.TH pio access
+.PP
+.RS
+Set the access level on published resources (packages) in the registry.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/access/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Grant a user access to a resource:
+.RE
+.PP
+\fB\fCpio access grant {{guest|maintainer|admin}} {{username}} {{resource_urn}}\fR
+.RS
+.IP \(bu 2
+Remove a user's access to a resource:
+.RE
+.PP
+\fB\fCpio access revoke {{username}} {{resource_urn}}\fR
+.RS
+.IP \(bu 2
+Show all resources that a user or team has access to and the access level:
+.RE
+.PP
+\fB\fCpio access list {{username}}\fR
+.RS
+.IP \(bu 2
+Restrict access to a resource to specific users or team members:
+.RE
+.PP
+\fB\fCpio access private {{resource_urn}}\fR
+.RS
+.IP \(bu 2
+Allow all users access to a resource:
+.RE
+.PP
+\fB\fCpio access public {{resource_urn}}\fR

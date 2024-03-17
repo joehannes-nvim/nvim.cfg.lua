@@ -1,0 +1,54 @@
+.TH codespell
+.PP
+.RS
+Spellchecker for source code.
+More information: \[la]https://github.com/codespell-project/codespell\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check for typos in all text files in the current directory, recursively:
+.RE
+.PP
+\fB\fCcodespell\fR
+.RS
+.IP \(bu 2
+Correct all typos found in\-place:
+.RE
+.PP
+\fB\fCcodespell \-\-write\-changes\fR
+.RS
+.IP \(bu 2
+Skip files with names that match the specified pattern (accepts a comma\-separated list of patterns using wildcards):
+.RE
+.PP
+\fB\fCcodespell \-\-skip "{{pattern}}"\fR
+.RS
+.IP \(bu 2
+Use a custom dictionary file when checking (\fB\fC\-\-dictionary\fR can be used multiple times):
+.RE
+.PP
+\fB\fCcodespell \-\-dictionary {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Do not check words that are listed in the specified file:
+.RE
+.PP
+\fB\fCcodespell \-\-ignore\-words {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Do not check the specified words:
+.RE
+.PP
+\fB\fCcodespell \-\-ignore\-words\-list {{words,to,ignore}}\fR
+.RS
+.IP \(bu 2
+Print 3 lines of context around, before or after each match:
+.RE
+.PP
+\fB\fCcodespell \-\-{{context|before\-context|after\-context}} {{3}}\fR
+.RS
+.IP \(bu 2
+Check file names for typos, in addition to file contents:
+.RE
+.PP
+\fB\fCcodespell \-\-check\-filenames\fR

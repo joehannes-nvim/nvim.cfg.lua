@@ -1,0 +1,24 @@
+.TH zek
+.PP
+.RS
+Generate a Go struct from XML.
+More information: \[la]https://github.com/miku/zek\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a Go struct from a given XML from \fB\fCstdin\fR and display output on \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/input.xml}} | zek\fR
+.RS
+.IP \(bu 2
+Generate a Go struct from a given XML from \fB\fCstdin\fR and send output to a file:
+.RE
+.PP
+\fB\fCcurl \-s {{https://url/to/xml}} | zek \-o {{path/to/output.go}}\fR
+.RS
+.IP \(bu 2
+Generate an example Go program from a given XML from \fB\fCstdin\fR and send output to a file:
+.RE
+.PP
+\fB\fCcat {{path/to/input.xml}} | zek \-p \-o {{path/to/output.go}}\fR

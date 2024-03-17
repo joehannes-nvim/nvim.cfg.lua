@@ -1,0 +1,30 @@
+.TH peludna\-prognoza
+.PP
+.RS
+Fetch pollen measurement data for Croatian cities from your terminal using Pliva's allergies data API.
+More information: \[la]https://github.com/vladimyr/peludna-prognoza\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive search for a city and fetch data for it:
+.RE
+.PP
+\fB\fCpeludna\-prognoza\fR
+.RS
+.IP \(bu 2
+Fetch data for a city:
+.RE
+.PP
+\fB\fCpeludna\-prognoza "{{city}}"\fR
+.RS
+.IP \(bu 2
+Display data in a machine\-readable format:
+.RE
+.PP
+\fB\fCpeludna\-prognoza "{{city}}" \-\-{{json|xml}}\fR
+.RS
+.IP \(bu 2
+Display the pollen measurement page for a city at \[la]https://plivazdravlje.hr\[ra] in the default web browser:
+.RE
+.PP
+\fB\fCpeludna\-prognoza "{{city}}" \-\-web\fR

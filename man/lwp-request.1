@@ -1,0 +1,43 @@
+.TH lwp\-request
+.PP
+.RS
+Simple command\-line HTTP client.
+Built with libwww\-perl.
+More information: \[la]https://metacpan.org/pod/lwp-request\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Make a simple GET request:
+.RE
+.PP
+\fB\fClwp\-request \-m GET {{http://example.com/some/path}}\fR
+.RS
+.IP \(bu 2
+Upload a file with a POST request:
+.RE
+.PP
+\fB\fClwp\-request \-m POST {{http://example.com/some/path}} < {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Make a request with a custom user agent:
+.RE
+.PP
+\fB\fClwp\-request \-H 'User\-Agent: {{user_agent}} \-m {{METHOD}} {{http://example.com/some/path}}\fR
+.RS
+.IP \(bu 2
+Make a request with HTTP authentication:
+.RE
+.PP
+\fB\fClwp\-request \-C {{username}}:{{password}} \-m {{METHOD}} {{http://example.com/some/path}}\fR
+.RS
+.IP \(bu 2
+Make a request and print request headers:
+.RE
+.PP
+\fB\fClwp\-request \-U \-m {{METHOD}} {{http://example.com/some/path}}\fR
+.RS
+.IP \(bu 2
+Make a request and print response headers and status chain:
+.RE
+.PP
+\fB\fClwp\-request \-E \-m {{METHOD}} {{http://example.com/some/path}}\fR

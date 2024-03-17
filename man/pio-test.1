@@ -1,0 +1,42 @@
+.TH pio test
+.PP
+.RS
+Run local tests on a PlatformIO project.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_test.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run all tests in all environments of the current PlatformIO project:
+.RE
+.PP
+\fB\fCpio test\fR
+.RS
+.IP \(bu 2
+Test only specific environments:
+.RE
+.PP
+\fB\fCpio test \-\-environment {{environment1}} \-\-environment {{environment2}}\fR
+.RS
+.IP \(bu 2
+Run only tests whose name matches a specific glob pattern:
+.RE
+.PP
+\fB\fCpio test \-\-filter "{{pattern}}"\fR
+.RS
+.IP \(bu 2
+Ignore tests whose name matches a specific glob pattern:
+.RE
+.PP
+\fB\fCpio test \-\-ignore "{{pattern}}"\fR
+.RS
+.IP \(bu 2
+Specify a port for firmware uploading:
+.RE
+.PP
+\fB\fCpio test \-\-upload\-port {{upload_port}}\fR
+.RS
+.IP \(bu 2
+Specify a custom configuration file for running the tests:
+.RE
+.PP
+\fB\fCpio test \-\-project\-conf {{path/to/platformio.ini}}\fR

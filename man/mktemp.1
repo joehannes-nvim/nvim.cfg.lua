@@ -1,0 +1,36 @@
+.TH mktemp
+.PP
+.RS
+Create a temporary file or directory.
+More information: \[la]https://man.openbsd.org/mktemp.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an empty temporary file and print its absolute path:
+.RE
+.PP
+\fB\fCmktemp\fR
+.RS
+.IP \(bu 2
+Use a custom directory if \fB\fC$TMPDIR\fR is not set (the default is platform\-dependent, but usually \fB\fC/tmp\fR):
+.RE
+.PP
+\fB\fCmktemp \-p {{/path/to/tempdir}}\fR
+.RS
+.IP \(bu 2
+Use a custom path template (\fB\fCX\fRs are replaced with random alphanumeric characters):
+.RE
+.PP
+\fB\fCmktemp {{/tmp/example.XXXXXXXX}}\fR
+.RS
+.IP \(bu 2
+Use a custom file name template:
+.RE
+.PP
+\fB\fCmktemp \-t {{example.XXXXXXXX}}\fR
+.RS
+.IP \(bu 2
+Create an empty temporary directory and print its absolute path:
+.RE
+.PP
+\fB\fCmktemp \-d\fR

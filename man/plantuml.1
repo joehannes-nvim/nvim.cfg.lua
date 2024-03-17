@@ -1,0 +1,42 @@
+.TH plantuml
+.PP
+.RS
+Create UML diagrams from a plain text language and render them in different formats.
+More information: \[la]https://plantuml.com/en/command-line\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render diagrams to default format (PNG):
+.RE
+.PP
+\fB\fCplantuml {{diagram1.puml}} {{diagram2.puml}}\fR
+.RS
+.IP \(bu 2
+Render a diagram in given format (e.g. \fB\fCpng\fR, \fB\fCpdf\fR, \fB\fCsvg\fR, \fB\fCtxt\fR):
+.RE
+.PP
+\fB\fCplantuml \-t {{format}} {{diagram.puml}}\fR
+.RS
+.IP \(bu 2
+Render all diagrams of a directory:
+.RE
+.PP
+\fB\fCplantuml {{path/to/diagrams}}\fR
+.RS
+.IP \(bu 2
+Render a diagram to the output directory:
+.RE
+.PP
+\fB\fCplantuml \-o {{path/to/output}} {{diagram.puml}}\fR
+.RS
+.IP \(bu 2
+Render a diagram with the configuration file:
+.RE
+.PP
+\fB\fCplantuml \-config {{config.cfg}} {{diagram.puml}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCplantuml \-help\fR

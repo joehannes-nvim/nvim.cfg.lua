@@ -1,0 +1,24 @@
+.TH erl
+.PP
+.RS
+Run and manage programs in the Erlang programming language.
+More information: \[la]https://www.erlang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile and run sequential Erlang program as a common script and then exit:
+.RE
+.PP
+\fB\fCerlc {{files}} && erl \-noshell '{{mymodule:myfunction(arguments)}}, init:stop().'\fR
+.RS
+.IP \(bu 2
+Connect to a running Erlang node:
+.RE
+.PP
+\fB\fCerl \-remsh {{nodename}}@{{hostname}} \-sname {{custom_shortname}} \-hidden \-setcookie {{cookie_of_remote_node}}\fR
+.RS
+.IP \(bu 2
+Tell the Erlang shell to load modules from a directory:
+.RE
+.PP
+\fB\fCerl \-pa {{directory_with_beam_files}}\fR

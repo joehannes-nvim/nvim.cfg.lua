@@ -1,0 +1,48 @@
+.TH pio device
+.PP
+.RS
+Manage and monitor PlatformIO devices.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/device/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available serial ports:
+.RE
+.PP
+\fB\fCpio device list\fR
+.RS
+.IP \(bu 2
+List all available logical devices:
+.RE
+.PP
+\fB\fCpio device list \-\-logical\fR
+.RS
+.IP \(bu 2
+Start an interactive device monitor:
+.RE
+.PP
+\fB\fCpio device monitor\fR
+.RS
+.IP \(bu 2
+Start an interactive device monitor and listen to a specific port:
+.RE
+.PP
+\fB\fCpio device monitor \-\-port {{/dev/ttyUSBX}}\fR
+.RS
+.IP \(bu 2
+Start an interactive device monitor and set a specific baud rate (defaults to 9600):
+.RE
+.PP
+\fB\fCpio device monitor \-\-baud {{57600}}\fR
+.RS
+.IP \(bu 2
+Start an interactive device monitor and set a specific EOL character (defaults to \fB\fCCRLF\fR):
+.RE
+.PP
+\fB\fCpio device monitor \-\-eol {{CRLF|CR|LF}}\fR
+.RS
+.IP \(bu 2
+Go to the menu of the interactive device monitor:
+.RE
+.PP
+\fB\fCCtrl + T\fR

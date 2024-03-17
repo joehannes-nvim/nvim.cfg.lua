@@ -1,0 +1,48 @@
+.TH gh label
+.PP
+.RS
+Work with GitHub labels.
+More information: \[la]https://cli.github.com/manual/gh_label\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List labels for the repository in the current directory:
+.RE
+.PP
+\fB\fCgh label list\fR
+.RS
+.IP \(bu 2
+View labels for the repository in the current directory in the default web browser:
+.RE
+.PP
+\fB\fCgh label list \-\-web\fR
+.RS
+.IP \(bu 2
+Create a label with a specific name, description and color in hexadecimal format for the repository in the current directory:
+.RE
+.PP
+\fB\fCgh label create {{name}} \-\-description "{{description}}" \-\-color {{color_hex}}\fR
+.RS
+.IP \(bu 2
+Delete a label for the repository in the current directory, prompting for confirmation:
+.RE
+.PP
+\fB\fCgh label delete {{name}}\fR
+.RS
+.IP \(bu 2
+Update the name and description for a specific label for the repository in the current directory:
+.RE
+.PP
+\fB\fCgh label edit {{name}} \-\-name {{new_name}} \-\-description "{{description}}"\fR
+.RS
+.IP \(bu 2
+Clone labels from a specific repository into the repository in the current directory:
+.RE
+.PP
+\fB\fCgh label clone {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCgh label {{subcommand}} \-\-help\fR

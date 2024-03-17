@@ -1,0 +1,48 @@
+.TH helm install
+.PP
+.RS
+Install a helm chart.
+More information: \[la]https://helm.sh/docs/intro/using_helm/#helm-install-installing-a-package\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a helm chart:
+.RE
+.PP
+\fB\fChelm install {{name}} {{repository_name}}/{{chart_name}}\fR
+.RS
+.IP \(bu 2
+Install a helm chart from an unpacked chart directory:
+.RE
+.PP
+\fB\fChelm install {{name}} {{path/to/source_directory}}\fR
+.RS
+.IP \(bu 2
+Install a helm chart from a URL:
+.RE
+.PP
+\fB\fChelm install {{package_name}} {{https://example.com/charts/packagename\-1.2.3.tgz}}\fR
+.RS
+.IP \(bu 2
+Install a helm chart and generate a name:
+.RE
+.PP
+\fB\fChelm install {{repository_name}}/{{chart_name}} \-\-generate\-name\fR
+.RS
+.IP \(bu 2
+Perform a dry run:
+.RE
+.PP
+\fB\fChelm install {{name}} {{repository_name}}/{{chart_name}} \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Install a helm chart with custom values:
+.RE
+.PP
+\fB\fChelm install {{name}} {{repository_name}}/{{chart_name}} \-\-set {{parameter1}}={{value1}},{{parameter2}}={{value2}}\fR
+.RS
+.IP \(bu 2
+Install a helm chart passing a custom values file:
+.RE
+.PP
+\fB\fChelm install {{name}} {{repository_name}}/{{chart_name}} \-\-values {{path/to/values.yaml}}\fR

@@ -1,0 +1,30 @@
+.TH ss\-local
+.PP
+.RS
+Run a Shadowsocks client as a SOCKS5 proxy.
+More information: \[la]https://github.com/shadowsocks/shadowsocks-libev/blob/master/doc/ss-local.asciidoc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a Shadowsocks proxy by specifying the host, server port, local port, password, and encryption method:
+.RE
+.PP
+\fB\fCss\-local \-s {{host}} \-p {{server_port}} \-l {{local port}} \-k {{password}} \-m {{encrypt_method}}\fR
+.RS
+.IP \(bu 2
+Run a Shadowsocks proxy by specifying the config file:
+.RE
+.PP
+\fB\fCss\-local \-c {{path/to/config/file.json}}\fR
+.RS
+.IP \(bu 2
+Use a plugin to run the proxy client:
+.RE
+.PP
+\fB\fCss\-local \-\-plugin {{plugin_name}} \-\-plugin\-opts {{plugin_options}}\fR
+.RS
+.IP \(bu 2
+Enable TCP fast open:
+.RE
+.PP
+\fB\fCss\-local \-\-fast\-open\fR

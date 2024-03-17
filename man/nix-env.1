@@ -1,0 +1,54 @@
+.TH nix\-env
+.PP
+.RS
+Manipulate or query Nix user environments.
+More information: \[la]https://nixos.org/manual/nix/stable/#sec-nix-env\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all installed packages:
+.RE
+.PP
+\fB\fCnix\-env \-q\fR
+.RS
+.IP \(bu 2
+Query installed packages:
+.RE
+.PP
+\fB\fCnix\-env \-q {{search_term}}\fR
+.RS
+.IP \(bu 2
+Query available packages:
+.RE
+.PP
+\fB\fCnix\-env \-qa {{search_term}}\fR
+.RS
+.IP \(bu 2
+Install package:
+.RE
+.PP
+\fB\fCnix\-env \-iA nixpkgs.{{pkg_name}}\fR
+.RS
+.IP \(bu 2
+Install a package from a URL:
+.RE
+.PP
+\fB\fCnix\-env \-i {{pkg_name}} \-\-file {{example.com}}\fR
+.RS
+.IP \(bu 2
+Uninstall package:
+.RE
+.PP
+\fB\fCnix\-env \-e {{pkg_name}}\fR
+.RS
+.IP \(bu 2
+Upgrade one package:
+.RE
+.PP
+\fB\fCnix\-env \-u {{pkg_name}}\fR
+.RS
+.IP \(bu 2
+Upgrade all packages:
+.RE
+.PP
+\fB\fCnix\-env \-u\fR

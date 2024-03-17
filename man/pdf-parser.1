@@ -1,0 +1,24 @@
+.TH pdf\-parser
+.PP
+.RS
+Identify fundamental elements of a PDF file without rendering it.
+More information: \[la]https://blog.didierstevens.com/programs/pdf-tools\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display statistics for a PDF file:
+.RE
+.PP
+\fB\fCpdf\-parser \-\-stats {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Display objects of type \fB\fC/Font\fR in a PDF file:
+.RE
+.PP
+\fB\fCpdf\-parser \-\-type={{/Font}} {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Search for strings in indirect objects:
+.RE
+.PP
+\fB\fCpdf\-parser \-\-search={{search_string}} {{path/to/file.pdf}}\fR

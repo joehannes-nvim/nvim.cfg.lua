@@ -1,0 +1,49 @@
+.TH podman machine
+.PP
+.RS
+Create and manage virtual machines running Podman.
+Included with Podman version 4 or greater.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-machine.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List existing machines:
+.RE
+.PP
+\fB\fCpodman machine ls\fR
+.RS
+.IP \(bu 2
+Create a new default machine:
+.RE
+.PP
+\fB\fCpodman machine init\fR
+.RS
+.IP \(bu 2
+Create a new machine with a specific name:
+.RE
+.PP
+\fB\fCpodman machine init {{name}}\fR
+.RS
+.IP \(bu 2
+Create a new machine with different resources:
+.RE
+.PP
+\fB\fCpodman machine init \-\-cpus={{4}} \-\-memory={{4096}} \-\-disk\-size={{50}}\fR
+.RS
+.IP \(bu 2
+Start or stop a machine:
+.RE
+.PP
+\fB\fCpodman machine {{start|stop}} {{name}}\fR
+.RS
+.IP \(bu 2
+Connect to a running machine via SSH:
+.RE
+.PP
+\fB\fCpodman machine ssh {{name}}\fR
+.RS
+.IP \(bu 2
+Inspect information about a machine:
+.RE
+.PP
+\fB\fCpodman machine inspect {{name}}\fR

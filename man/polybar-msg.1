@@ -1,0 +1,49 @@
+.TH polybar\-msg
+.PP
+.RS
+Control \fB\fCpolybar\fR using inter\-process\-messaging (IPC).
+Note: IPC is disabled by default and can be enabled by setting \fB\fCenable\-ipc = true\fR in the Polybar config.
+More information: \[la]https://polybar.rtfd.io/en/stable/user/ipc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Quit the bar:
+.RE
+.PP
+\fB\fCpolybar\-msg cmd quit\fR
+.RS
+.IP \(bu 2
+Restart the bar in\-place:
+.RE
+.PP
+\fB\fCpolybar\-msg cmd restart\fR
+.RS
+.IP \(bu 2
+Hide the bar (does nothing if the bar is already hidden):
+.RE
+.PP
+\fB\fCpolybar\-msg cmd hide\fR
+.RS
+.IP \(bu 2
+Show the bar again (does nothing if the bar is not hidden):
+.RE
+.PP
+\fB\fCpolybar\-msg cmd show\fR
+.RS
+.IP \(bu 2
+Toggle between hidden/visible:
+.RE
+.PP
+\fB\fCpolybar\-msg cmd toggle\fR
+.RS
+.IP \(bu 2
+Execute a module action (the data string is optional):
+.RE
+.PP
+\fB\fCpolybar\-msg action "#{{module_name}}.{{action_name}}.{{data_string}}"\fR
+.RS
+.IP \(bu 2
+Only send messages to a specific Polybar instance (all instances by default):
+.RE
+.PP
+\fB\fCpolybar\-msg \-p {{pid}} {{cmd|action}} {{payload}}\fR

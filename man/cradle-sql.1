@@ -1,0 +1,42 @@
+.TH cradle sql
+.PP
+.RS
+Manage Cradle SQL databases.
+More information: \[la]https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html#sql\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rebuild the database schema:
+.RE
+.PP
+\fB\fCcradle sql build\fR
+.RS
+.IP \(bu 2
+Rebuild the database schema for a specific package:
+.RE
+.PP
+\fB\fCcradle sql build {{package}}\fR
+.RS
+.IP \(bu 2
+Empty the entire database:
+.RE
+.PP
+\fB\fCcradle sql flush\fR
+.RS
+.IP \(bu 2
+Empty the database tables for a specific package:
+.RE
+.PP
+\fB\fCcradle sql flush {{package}}\fR
+.RS
+.IP \(bu 2
+Populate the tables for all packages:
+.RE
+.PP
+\fB\fCcradle sql populate\fR
+.RS
+.IP \(bu 2
+Populate the tables for a specific package:
+.RE
+.PP
+\fB\fCcradle sql populate {{package}}\fR

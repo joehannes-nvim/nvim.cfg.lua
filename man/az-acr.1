@@ -1,0 +1,55 @@
+.TH az acr
+.PP
+.RS
+Manage private registries with Azure Container Registries.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/acr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a managed container registry:
+.RE
+.PP
+\fB\fCaz acr create \-\-name {{registry_name}} \-\-resource\-group {{resource_group}} \-\-sku {{sku}}\fR
+.RS
+.IP \(bu 2
+Login to a registry:
+.RE
+.PP
+\fB\fCaz acr login \-\-name {{registry_name}}\fR
+.RS
+.IP \(bu 2
+Tag a local image for ACR:
+.RE
+.PP
+\fB\fCdocker tag {{image_name}} {{registry_name}}.azurecr.io/{{image_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Push an image to a registry:
+.RE
+.PP
+\fB\fCdocker push {{registry_name}}.azurecr.io/{{image_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Pull an image from a registry:
+.RE
+.PP
+\fB\fCdocker pull {{registry_name}}.azurecr.io/{{image_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Delete an image from a registry:
+.RE
+.PP
+\fB\fCaz acr repository delete \-\-name {{registry_name}} \-\-repository {{image_name}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Delete a managed container registry:
+.RE
+.PP
+\fB\fCaz acr delete \-\-name {{registry_name}} \-\-resource\-group {{resource_group}} \-\-yes\fR
+.RS
+.IP \(bu 2
+List images within a registry:
+.RE
+.PP
+\fB\fCaz acr repository list \-\-name {{registry_name}} \-\-output table\fR

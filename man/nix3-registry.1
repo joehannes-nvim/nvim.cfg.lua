@@ -1,0 +1,37 @@
+.TH nix registry
+.PP
+.RS
+Manage a Nix flake registry.
+See \fB\fCtldr nix3 flake\fR for information about flakes.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-registry.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pin the \fB\fCnixpkgs\fR revision to the current version of the upstream repository:
+.RE
+.PP
+\fB\fCnix registry pin {{nixpkgs}}\fR
+.RS
+.IP \(bu 2
+Pin an entry to the latest version of the branch, or a particular reivision of a github repository:
+.RE
+.PP
+\fB\fCnix registry pin {{entry}} {{github:owner/repo/branch_or_revision}}\fR
+.RS
+.IP \(bu 2
+Add a new entry that always points to the latest version of a github repository, updating automatically:
+.RE
+.PP
+\fB\fCnix registry add {{entry}} {{github:owner/repo}}\fR
+.RS
+.IP \(bu 2
+Remove a registry entry:
+.RE
+.PP
+\fB\fCnix registry remove {{entry}}\fR
+.RS
+.IP \(bu 2
+See documentation about what Nix flake registries are:
+.RE
+.PP
+\fB\fCnix registry \-\-help\fR

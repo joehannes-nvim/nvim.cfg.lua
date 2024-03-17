@@ -1,0 +1,54 @@
+.TH git checkout
+.PP
+.RS
+Checkout a branch or paths to the working tree.
+More information: \[la]https://git-scm.com/docs/git-checkout\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create and switch to a new branch:
+.RE
+.PP
+\fB\fCgit checkout \-b {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create and switch to a new branch based on a specific reference (branch, remote/branch, tag are examples of valid references):
+.RE
+.PP
+\fB\fCgit checkout \-b {{branch_name}} {{reference}}\fR
+.RS
+.IP \(bu 2
+Switch to an existing local branch:
+.RE
+.PP
+\fB\fCgit checkout {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Switch to the previously checked out branch:
+.RE
+.PP
+\fB\fCgit checkout \-\fR
+.RS
+.IP \(bu 2
+Switch to an existing remote branch:
+.RE
+.PP
+\fB\fCgit checkout \-\-track {{remote_name}}/{{branch_name}}\fR
+.RS
+.IP \(bu 2
+Discard all unstaged changes in the current directory (see \fB\fCgit reset\fR for more undo\-like commands):
+.RE
+.PP
+\fB\fCgit checkout .\fR
+.RS
+.IP \(bu 2
+Discard unstaged changes to a given file:
+.RE
+.PP
+\fB\fCgit checkout {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Replace a file in the current directory with the version of it committed in a given branch:
+.RE
+.PP
+\fB\fCgit checkout {{branch_name}} \-\- {{path/to/file}}\fR

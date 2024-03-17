@@ -1,0 +1,54 @@
+.TH git diff
+.PP
+.RS
+Show changes to tracked files.
+More information: \[la]https://git-scm.com/docs/git-diff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show unstaged, uncommitted changes:
+.RE
+.PP
+\fB\fCgit diff\fR
+.RS
+.IP \(bu 2
+Show all uncommitted changes (including staged ones):
+.RE
+.PP
+\fB\fCgit diff HEAD\fR
+.RS
+.IP \(bu 2
+Show only staged (added, but not yet committed) changes:
+.RE
+.PP
+\fB\fCgit diff \-\-staged\fR
+.RS
+.IP \(bu 2
+Show changes from all commits since a given date/time (a date expression, e.g. "1 week 2 days" or an ISO date):
+.RE
+.PP
+\fB\fCgit diff 'HEAD@{3 months|weeks|days|hours|seconds ago}'\fR
+.RS
+.IP \(bu 2
+Show only names of changed files since a given commit:
+.RE
+.PP
+\fB\fCgit diff \-\-name\-only {{commit}}\fR
+.RS
+.IP \(bu 2
+Output a summary of file creations, renames and mode changes since a given commit:
+.RE
+.PP
+\fB\fCgit diff \-\-summary {{commit}}\fR
+.RS
+.IP \(bu 2
+Compare a single file between two branches or commits:
+.RE
+.PP
+\fB\fCgit diff {{branch_1}}..{{branch_2}} [\-\-] {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compare different files from the current branch to other branch:
+.RE
+.PP
+\fB\fCgit diff {{branch}}:{{path/to/file2}} {{path/to/file}}\fR

@@ -1,0 +1,55 @@
+.TH transmission\-cli
+.PP
+.RS
+A lightweight, command\-line BitTorrent client.
+This tool has been deprecated, please see \fB\fCtransmission\-remote\fR\&.
+More information: \[la]https://transmissionbt.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a specific torrent:
+.RE
+.PP
+\fB\fCtransmission\-cli {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Download a torrent to a specific directory:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-download\-dir {{path/to/download_directory}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create a torrent file from a specific file or directory:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-new {{path/to/source_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Set the download speed limit to 50 KB/s:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-downlimit {{50}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Set the upload speed limit to 50 KB/s:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-uplimit {{50}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use a specific port for connections:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-port {{port_number}} {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Force encryption for peer connections:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-encryption\-required {{url|magnet|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use a Bluetack\-formatted peer blocklist:
+.RE
+.PP
+\fB\fCtransmission\-cli \-\-blocklist {{blocklist_url|path/to/blocklist}} {{url|magnet|path/to/file}}\fR

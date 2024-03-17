@@ -1,0 +1,30 @@
+.TH webpack
+.PP
+.RS
+Bundle a web project's js files and other assets into a single output file.
+More information: \[la]https://webpack.js.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a single output file from an entry point file:
+.RE
+.PP
+\fB\fCwebpack {{app.js}} {{bundle.js}}\fR
+.RS
+.IP \(bu 2
+Load CSS files too from the JavaScript file (this uses the CSS loader for \fB\fC\&.css\fR files):
+.RE
+.PP
+\fB\fCwebpack {{app.js}} {{bundle.js}} \-\-module\-bind '{{css=css}}'\fR
+.RS
+.IP \(bu 2
+Pass a config file (with e.g. the entry script and the output filename) and show compilation progress:
+.RE
+.PP
+\fB\fCwebpack \-\-config {{webpack.config.js}} \-\-progress\fR
+.RS
+.IP \(bu 2
+Automatically recompile on changes to project files:
+.RE
+.PP
+\fB\fCwebpack \-\-watch {{app.js}} {{bundle.js}}\fR

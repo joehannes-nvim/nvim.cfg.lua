@@ -1,0 +1,25 @@
+.TH f3probe
+.PP
+.RS
+Probe a block device (e.g. a flash drive or a microSD card) for counterfeit flash memory.
+See also \fB\fCf3read\fR, \fB\fCf3write\fR, \fB\fCf3fix\fR\&.
+More information: \[la]https://github.com/AltraMayor/f3\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Probe a block device:
+.RE
+.PP
+\fB\fCsudo f3probe {{path/to/block_device}}\fR
+.RS
+.IP \(bu 2
+Use the minimum about of RAM possible:
+.RE
+.PP
+\fB\fCsudo f3probe \-\-min\-memory {{path/to/block_device}}\fR
+.RS
+.IP \(bu 2
+Time disk operations:
+.RE
+.PP
+\fB\fCsudo f3probe \-\-time\-ops {{path/to/block_device}}\fR

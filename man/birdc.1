@@ -1,0 +1,55 @@
+.TH birdc
+.PP
+.RS
+Bird remote control.
+Command tool to retrieve information like routes from bird and perform configurations during runtime.
+More information: \[la]https://bird.network.cz/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the remote control console:
+.RE
+.PP
+\fB\fCbirdc\fR
+.RS
+.IP \(bu 2
+Reload the configuration without restarting Bird:
+.RE
+.PP
+\fB\fCbirdc configure\fR
+.RS
+.IP \(bu 2
+Show the current status of Bird:
+.RE
+.PP
+\fB\fCbirdc show status\fR
+.RS
+.IP \(bu 2
+Show all configured protocols:
+.RE
+.PP
+\fB\fCbirdc show protocols\fR
+.RS
+.IP \(bu 2
+Show all details about a protocol:
+.RE
+.PP
+\fB\fCbirdc show protocols {{upstream1}} all\fR
+.RS
+.IP \(bu 2
+Show all routes that contain a specific AS number:
+.RE
+.PP
+\fB\fCbirdc "show route where bgp_path ~ [{{4242120045}}]"\fR
+.RS
+.IP \(bu 2
+Show all best routes:
+.RE
+.PP
+\fB\fCbirdc show route primary\fR
+.RS
+.IP \(bu 2
+Show all details of all routes from a given prefix:
+.RE
+.PP
+\fB\fCbirdc show route for {{fd00:/8}} all\fR

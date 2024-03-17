@@ -1,0 +1,31 @@
+.TH zmv
+.PP
+.RS
+Move or rename files matching a specified extended glob pattern.
+See also \fB\fCzcp\fR and \fB\fCzln\fR\&.
+More information: \[la]http://zsh.sourceforge.net/Doc/Release/User-Contributions.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Move files using a regular expression\-like pattern:
+.RE
+.PP
+\fB\fCzmv '{{(*).log}}' '{{$1.txt}}'\fR
+.RS
+.IP \(bu 2
+Preview the result of a move, without making any actual changes:
+.RE
+.PP
+\fB\fCzmv \-n '{{(*).log}}' '{{$1.txt}}'\fR
+.RS
+.IP \(bu 2
+Interactively move files, with a prompt before every change:
+.RE
+.PP
+\fB\fCzmv \-i '{{(*).log}}' '{{$1.txt}}'\fR
+.RS
+.IP \(bu 2
+Verbosely print each action as it's being executed:
+.RE
+.PP
+\fB\fCzmv \-v '{{(*).log}}' '{{$1.txt}}'\fR

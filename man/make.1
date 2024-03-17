@@ -1,0 +1,55 @@
+.TH make
+.PP
+.RS
+Task runner for targets described in Makefile.
+Mostly used to control the compilation of an executable from source code.
+More information: \[la]https://www.gnu.org/software/make/manual/make.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Call the first target specified in the Makefile (usually named "all"):
+.RE
+.PP
+\fB\fCmake\fR
+.RS
+.IP \(bu 2
+Call a specific target:
+.RE
+.PP
+\fB\fCmake {{target}}\fR
+.RS
+.IP \(bu 2
+Call a specific target, executing 4 jobs at a time in parallel:
+.RE
+.PP
+\fB\fCmake \-j{{4}} {{target}}\fR
+.RS
+.IP \(bu 2
+Use a specific Makefile:
+.RE
+.PP
+\fB\fCmake \-\-file {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Execute make from another directory:
+.RE
+.PP
+\fB\fCmake \-\-directory {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Force making of a target, even if source files are unchanged:
+.RE
+.PP
+\fB\fCmake \-\-always\-make {{target}}\fR
+.RS
+.IP \(bu 2
+Override a variable defined in the Makefile:
+.RE
+.PP
+\fB\fCmake {{target}} {{variable}}={{new_value}}\fR
+.RS
+.IP \(bu 2
+Override variables defined in the Makefile by the environment:
+.RE
+.PP
+\fB\fCmake \-\-environment\-overrides {{target}}\fR

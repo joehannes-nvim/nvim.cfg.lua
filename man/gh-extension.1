@@ -1,0 +1,54 @@
+.TH gh extension
+.PP
+.RS
+Manage extensions for the GitHub CLI.
+More information: \[la]https://cli.github.com/manual/gh_extension\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new GitHub CLI extension project in a directory of the same name:
+.RE
+.PP
+\fB\fCgh extension create {{extension_name}}\fR
+.RS
+.IP \(bu 2
+Install an extension from a GitHub repository:
+.RE
+.PP
+\fB\fCgh extension install {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+List installed extensions:
+.RE
+.PP
+\fB\fCgh extension list\fR
+.RS
+.IP \(bu 2
+Upgrade a specific extension:
+.RE
+.PP
+\fB\fCgh extension upgrade {{extension_name}}\fR
+.RS
+.IP \(bu 2
+Upgrade all extensions:
+.RE
+.PP
+\fB\fCgh extension upgrade \-\-all\fR
+.RS
+.IP \(bu 2
+List installed extensions:
+.RE
+.PP
+\fB\fCgh extension list\fR
+.RS
+.IP \(bu 2
+Remove an extension:
+.RE
+.PP
+\fB\fCgh extension remove {{extension_name}}\fR
+.RS
+.IP \(bu 2
+Display help about a subcommand:
+.RE
+.PP
+\fB\fCgh extension {{subcommand}} \-\-help\fR

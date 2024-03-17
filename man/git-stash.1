@@ -1,0 +1,54 @@
+.TH git stash
+.PP
+.RS
+Stash local Git changes in a temporary area.
+More information: \[la]https://git-scm.com/docs/git-stash\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Stash current changes, except new (untracked) files:
+.RE
+.PP
+\fB\fCgit stash push \-m {{optional_stash_message}}\fR
+.RS
+.IP \(bu 2
+Stash current changes, including new (untracked) files:
+.RE
+.PP
+\fB\fCgit stash \-u\fR
+.RS
+.IP \(bu 2
+Interactively select parts of changed files for stashing:
+.RE
+.PP
+\fB\fCgit stash \-p\fR
+.RS
+.IP \(bu 2
+List all stashes (shows stash name, related branch and message):
+.RE
+.PP
+\fB\fCgit stash list\fR
+.RS
+.IP \(bu 2
+Show the changes as a patch between the stash (default is stash@{0}) and the commit back when stash entry was first created:
+.RE
+.PP
+\fB\fCgit stash show \-p {{stash@{0}}}\fR
+.RS
+.IP \(bu 2
+Apply a stash (default is the latest, named stash@{0}):
+.RE
+.PP
+\fB\fCgit stash apply {{optional_stash_name_or_commit}}\fR
+.RS
+.IP \(bu 2
+Drop or apply a stash (default is stash@{0}) and remove it from the stash list if applying doesn't cause conflicts:
+.RE
+.PP
+\fB\fCgit stash pop {{optional_stash_name}}\fR
+.RS
+.IP \(bu 2
+Drop all stashes:
+.RE
+.PP
+\fB\fCgit stash clear\fR

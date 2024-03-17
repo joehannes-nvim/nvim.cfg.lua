@@ -1,0 +1,54 @@
+.TH piactl
+.PP
+.RS
+The command\-line tool for Private Internet Access, a commercial VPN provider.
+More information: \[la]https://helpdesk.privateinternetaccess.com/kb/articles/pia-desktop-command-line-interface-part-1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to Private Internet Access:
+.RE
+.PP
+\fB\fCpiactl login {{path/to/login_file}}\fR
+.RS
+.IP \(bu 2
+Connect to Private Internet Access:
+.RE
+.PP
+\fB\fCpiactl connect\fR
+.RS
+.IP \(bu 2
+Disconnect from Private Internet Access:
+.RE
+.PP
+\fB\fCpiactl disconnect\fR
+.RS
+.IP \(bu 2
+Enable or disable the Private Internet Access daemon in the background:
+.RE
+.PP
+\fB\fCpiactl background {{enable|disable}}\fR
+.RS
+.IP \(bu 2
+List all available VPN regions:
+.RE
+.PP
+\fB\fCpiactl get regions\fR
+.RS
+.IP \(bu 2
+Display the current VPN region:
+.RE
+.PP
+\fB\fCpiactl get region\fR
+.RS
+.IP \(bu 2
+Set your VPN region:
+.RE
+.PP
+\fB\fCpiactl set region {{region}}\fR
+.RS
+.IP \(bu 2
+Log out of Private Internet Access:
+.RE
+.PP
+\fB\fCpiactl logout\fR

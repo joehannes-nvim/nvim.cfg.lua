@@ -1,0 +1,49 @@
+.TH mid3v2
+.PP
+.RS
+Edit audio tags.
+See also: \fB\fCid3v2\fR\&.
+More information: \[la]https://manned.org/mid3v2.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all supported ID3v2.3 or ID3v2.4 frames and their meanings:
+.RE
+.PP
+\fB\fCid3v2 \-\-list\-frames {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+List all supported ID3v1 numeric genres:
+.RE
+.PP
+\fB\fCid3v2 \-\-list\-genres {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+List all tags in specific files:
+.RE
+.PP
+\fB\fCid3v2 \-\-list {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+Set specific artist, album, or song information:
+.RE
+.PP
+\fB\fCid3v2 {{\-\-artist|\-\-album|\-\-song}}={{string}} {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+Set specific picture information:
+.RE
+.PP
+\fB\fCid3v2 \-\-picture={{filename:description:image_type:mime_type}} {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+Set specific year information:
+.RE
+.PP
+\fB\fCid3v2 \-\-year={{YYYY}} {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR
+.RS
+.IP \(bu 2
+Set specific date information:
+.RE
+.PP
+\fB\fCid3v2 \-\-date={{YYYY\-MM\-DD}} {{path/to/file1.mp3 path/to/file2.mp3 ...}}\fR

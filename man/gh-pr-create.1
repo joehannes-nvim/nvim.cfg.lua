@@ -1,0 +1,36 @@
+.TH gh pr create
+.PP
+.RS
+Manage GitHub pull requests.
+More information: \[la]https://cli.github.com/manual/gh_pr_create\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a pull request:
+.RE
+.PP
+\fB\fCgh pr create\fR
+.RS
+.IP \(bu 2
+Create a pull request, determining the title and description from the commit messages of the current branch:
+.RE
+.PP
+\fB\fCgh pr create \-\-fill\fR
+.RS
+.IP \(bu 2
+Create a draft pull request:
+.RE
+.PP
+\fB\fCgh pr create \-\-draft\fR
+.RS
+.IP \(bu 2
+Create a pull request specifying the base branch, title, and description:
+.RE
+.PP
+\fB\fCgh pr create \-\-base {{base_branch}} \-\-title "{{title}}" \-\-body "{{body}}"\fR
+.RS
+.IP \(bu 2
+Start opening a pull request in the default web browser:
+.RE
+.PP
+\fB\fCgh pr create \-\-web\fR

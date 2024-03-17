@@ -1,0 +1,30 @@
+.TH tokei
+.PP
+.RS
+A program that prints out statistics about code.
+More information: \[la]https://github.com/XAMPPRocky/tokei\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get a report on the code in a directory and all subdirectories:
+.RE
+.PP
+\fB\fCtokei {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Get a report for a directory excluding \fB\fC\&.min.js\fR files:
+.RE
+.PP
+\fB\fCtokei {{path/to/directory}} \-e {{*.min.js}}\fR
+.RS
+.IP \(bu 2
+Print out statistics for individual files in a directory:
+.RE
+.PP
+\fB\fCtokei {{path/to/directory}} \-\-files\fR
+.RS
+.IP \(bu 2
+Get a report for all files of type Rust and Markdown:
+.RE
+.PP
+\fB\fCtokei {{path/to/directory}} \-t={{Rust}},{{Markdown}}\fR

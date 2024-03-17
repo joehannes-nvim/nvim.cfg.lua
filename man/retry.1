@@ -1,0 +1,24 @@
+.TH retry
+.PP
+.RS
+Repeat command until it succeeds or a criterion is met.
+More information: \[la]https://github.com/minfrin/retry\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Retry a command until it succeeds:
+.RE
+.PP
+\fB\fCretry {{command}}\fR
+.RS
+.IP \(bu 2
+Retry a command every n seconds until it succeeds:
+.RE
+.PP
+\fB\fCretry \-\-delay={{n}} {{command}}\fR
+.RS
+.IP \(bu 2
+Give up after n attempts:
+.RE
+.PP
+\fB\fCretry \-\-times={{n}} {{command}}\fR

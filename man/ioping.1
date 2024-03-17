@@ -1,0 +1,30 @@
+.TH ioping
+.PP
+.RS
+Monitor I/O latency in real time.
+More information: \[la]https://github.com/koct9i/ioping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show disk I/O latency using the default values and the current directory:
+.RE
+.PP
+\fB\fCioping .\fR
+.RS
+.IP \(bu 2
+Measure latency on /tmp using 10 requests of 1 megabyte each:
+.RE
+.PP
+\fB\fCioping \-c 10 \-s 1M /tmp\fR
+.RS
+.IP \(bu 2
+Measure disk seek rate on \fB\fC/dev/sdX\fR:
+.RE
+.PP
+\fB\fCioping \-R {{/dev/sdX}}\fR
+.RS
+.IP \(bu 2
+Measure disk sequential speed on \fB\fC/dev/sdX\fR:
+.RE
+.PP
+\fB\fCioping \-RL {{/dev/sdX}}\fR

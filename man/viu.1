@@ -1,0 +1,36 @@
+.TH viu
+.PP
+.RS
+View images on the terminal.
+More information: \[la]https://github.com/atanunq/viu\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render an image or animated GIF:
+.RE
+.PP
+\fB\fCviu {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render an image or GIF from the internet using \fB\fCcurl\fR:
+.RE
+.PP
+\fB\fCcurl \-s {{https://example.com/image.png}} | viu \-\fR
+.RS
+.IP \(bu 2
+Render an image with a transparent background:
+.RE
+.PP
+\fB\fCviu \-t {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render an image with a specific width and height in pixels:
+.RE
+.PP
+\fB\fCviu \-w {{width}} \-h {{height}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Render an image or GIF and display its file name:
+.RE
+.PP
+\fB\fCviu \-n {{path/to/file}}\fR

@@ -1,0 +1,30 @@
+.TH drupal\-check
+.PP
+.RS
+Check Drupal PHP code for deprecations.
+More information: \[la]https://github.com/mglaman/drupal-check\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the code in a specific directory for deprecations:
+.RE
+.PP
+\fB\fCdrupal\-check {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Check the code excluding a comma\-separated list of directories:
+.RE
+.PP
+\fB\fCdrupal\-check \-\-exclude\-dir {{path/to/excluded_directory}},{{path/to/excluded_files/*.php}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Don't show a progress bar:
+.RE
+.PP
+\fB\fCdrupal\-check \-\-no\-progress {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Perform static analysis to detect bad coding practices:
+.RE
+.PP
+\fB\fCdrupal\-check \-\-analysis {{path/to/directory}}\fR

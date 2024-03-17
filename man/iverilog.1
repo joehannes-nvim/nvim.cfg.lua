@@ -1,0 +1,36 @@
+.TH iverilog
+.PP
+.RS
+Preprocesses and compiles Verilog HDL (IEEE\-1364) code into executable programs for simulation.
+More information: \[la]https://github.com/steveicarus/iverilog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a source file into an executable:
+.RE
+.PP
+\fB\fCiverilog {{path/to/source.v}} \-o {{path/to/executable}}\fR
+.RS
+.IP \(bu 2
+Compile a source file into an executable while displaying all warnings:
+.RE
+.PP
+\fB\fCiverilog {{path/to/source.v}} \-Wall \-o {{path/to/executable}}\fR
+.RS
+.IP \(bu 2
+Compile and run explicitly using the VVP runtime:
+.RE
+.PP
+\fB\fCiverilog \-o {{path/to/executable}} \-tvvp {{path/to/source.v}}\fR
+.RS
+.IP \(bu 2
+Compile using Verilog library files from a different path:
+.RE
+.PP
+\fB\fCiverilog {{path/to/source.v}} \-o {{path/to/executable}} \-I{{path/to/library_directory}}\fR
+.RS
+.IP \(bu 2
+Preprocess Verilog code without compiling:
+.RE
+.PP
+\fB\fCiverilog \-E {{path/to/source.v}}\fR

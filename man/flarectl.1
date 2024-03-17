@@ -1,0 +1,36 @@
+.TH flarectl
+.PP
+.RS
+Official CLI for Cloudflare.
+More information: \[la]https://github.com/cloudflare/cloudflare-go/blob/master/cmd/flarectl/README.md\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Block a specific IP:
+.RE
+.PP
+\fB\fCflarectl firewall rules create \-\-zone="{{example.com}}" \-\-value="{{8.8.8.8}}" \-\-mode="{{block}}" \-\-notes="{{Block bad actor}}"\fR
+.RS
+.IP \(bu 2
+Add a DNS record:
+.RE
+.PP
+\fB\fCflarectl dns create \-\-zone="{{example.com}}" \-\-name="{{app}}" \-\-type="{{CNAME}}" \-\-content="{{myapp.herokuapp.com}}" \-\-proxy\fR
+.RS
+.IP \(bu 2
+List all Cloudflare IPv4/IPv6 ranges:
+.RE
+.PP
+\fB\fCflarectl ips \-\-ip\-type {{ipv4|ipv6|all}}\fR
+.RS
+.IP \(bu 2
+Create many new Cloudflare zones automatically with names from \fB\fCdomains.txt\fR:
+.RE
+.PP
+\fB\fCfor domain in $(cat {{domains.txt}}); do flarectl zone info \-\-zone=$domain; done\fR
+.RS
+.IP \(bu 2
+List all firewall rules:
+.RE
+.PP
+\fB\fCflarectl firewall rules list\fR

@@ -1,0 +1,54 @@
+.TH git lfs
+.PP
+.RS
+Work with large files in Git repositories.
+More information: \[la]https://git-lfs.github.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize Git LFS:
+.RE
+.PP
+\fB\fCgit lfs install\fR
+.RS
+.IP \(bu 2
+Track files that match a glob:
+.RE
+.PP
+\fB\fCgit lfs track '{{*.bin}}'\fR
+.RS
+.IP \(bu 2
+Change the Git LFS endpoint URL (useful if the LFS server is separate from the Git server):
+.RE
+.PP
+\fB\fCgit config \-f .lfsconfig lfs.url {{lfs_endpoint_url}}\fR
+.RS
+.IP \(bu 2
+List tracked patterns:
+.RE
+.PP
+\fB\fCgit lfs track\fR
+.RS
+.IP \(bu 2
+List tracked files that have been committed:
+.RE
+.PP
+\fB\fCgit lfs ls\-files\fR
+.RS
+.IP \(bu 2
+Push all Git LFS objects to the remote server (useful if errors are encountered):
+.RE
+.PP
+\fB\fCgit lfs push \-\-all {{remote_name}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Fetch all Git LFS objects:
+.RE
+.PP
+\fB\fCgit lfs fetch\fR
+.RS
+.IP \(bu 2
+Checkout all Git LFS objects:
+.RE
+.PP
+\fB\fCgit lfs checkout\fR

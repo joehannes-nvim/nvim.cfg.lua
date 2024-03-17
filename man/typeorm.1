@@ -1,0 +1,54 @@
+.TH typeorm
+.PP
+.RS
+A JavaScript ORM that can run on Node.js, browser, Cordova, Ionic, React Native, NativeScript, and Electron platforms.
+More information: \[la]https://typeorm.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a new initial TypeORM project structure:
+.RE
+.PP
+\fB\fCtypeorm init\fR
+.RS
+.IP \(bu 2
+Create an empty migration file:
+.RE
+.PP
+\fB\fCtypeorm migration:create \-\-name {{migration_name}}\fR
+.RS
+.IP \(bu 2
+Create a migration file with the SQL statements to update the schema:
+.RE
+.PP
+\fB\fCtypeorm migration:generate \-\-name {{migration_name}}\fR
+.RS
+.IP \(bu 2
+Run all pending migrations:
+.RE
+.PP
+\fB\fCtypeorm migration:run\fR
+.RS
+.IP \(bu 2
+Create a new entity file in a specific directory:
+.RE
+.PP
+\fB\fCtypeorm entity:create \-\-name {{entity}} \-\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display the SQL statements to be executed by \fB\fCtypeorm schema:sync\fR on the default connection:
+.RE
+.PP
+\fB\fCtypeorm schema:log\fR
+.RS
+.IP \(bu 2
+Execute a specific SQL statement on the default connection:
+.RE
+.PP
+\fB\fCtypeorm query {{sql_sentence}}\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCtypeorm {{subcommand}} \-\-help\fR

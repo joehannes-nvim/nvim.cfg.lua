@@ -1,0 +1,30 @@
+.TH gofmt
+.PP
+.RS
+Tool for formatting Go source code.
+More information: \[la]https://golang.org/cmd/gofmt/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a file and display the result to the console:
+.RE
+.PP
+\fB\fCgofmt {{source.go}}\fR
+.RS
+.IP \(bu 2
+Format a file, overwriting the original file in\-place:
+.RE
+.PP
+\fB\fCgofmt \-w {{source.go}}\fR
+.RS
+.IP \(bu 2
+Format a file, and then simplify the code, overwriting the original file:
+.RE
+.PP
+\fB\fCgofmt \-s \-w {{source.go}}\fR
+.RS
+.IP \(bu 2
+Print all (including spurious) errors:
+.RE
+.PP
+\fB\fCgofmt \-e {{source.go}}\fR

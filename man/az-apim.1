@@ -1,0 +1,37 @@
+.TH az apim
+.PP
+.RS
+Manage Azure API Management services.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/apim\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List API Management services within a resource group:
+.RE
+.PP
+\fB\fCaz apim list \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Create an API Management service instance:
+.RE
+.PP
+\fB\fCaz apim create \-\-name {{name}} \-\-resource\-group {{resource_group}} \-\-publisher\-email {{email}} \-\-publisher\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Delete an API Management service:
+.RE
+.PP
+\fB\fCaz apim delete \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Show details of an API Management service instance:
+.RE
+.PP
+\fB\fCaz apim show \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Update an API Management service instance:
+.RE
+.PP
+\fB\fCaz apim update \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR

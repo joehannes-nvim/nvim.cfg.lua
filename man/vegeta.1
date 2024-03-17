@@ -1,0 +1,43 @@
+.TH vegeta
+.PP
+.RS
+A command\-line utility and a library for HTTP load testing.
+See also \fB\fCab\fR\&.
+More information: \[la]https://github.com/tsenart/vegeta\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch an attack lasting 30 seconds:
+.RE
+.PP
+\fB\fCecho "{{GET https://example.com}}" | vegeta attack \-duration={{30s}}\fR
+.RS
+.IP \(bu 2
+Launch an attack on a server with a self\-signed HTTPS certificate:
+.RE
+.PP
+\fB\fCecho "{{GET https://example.com}}" | vegeta attack \-insecure \-duration={{30s}}\fR
+.RS
+.IP \(bu 2
+Launch an attack with a rate of 10 requests per second:
+.RE
+.PP
+\fB\fCecho "{{GET https://example.com}}" | vegeta attack \-duration={{30s}} \-rate={{10}}\fR
+.RS
+.IP \(bu 2
+Launch an attack and display a report:
+.RE
+.PP
+\fB\fCecho "{{GET https://example.com}}" | vegeta attack \-duration={{30s}} | vegeta report\fR
+.RS
+.IP \(bu 2
+Launch an attack and plot the results on a graph (latency over time):
+.RE
+.PP
+\fB\fCecho "{{GET https://example.com}}" | vegeta attack \-duration={{30s}} | vegeta plot > {{path/to/results.html}}\fR
+.RS
+.IP \(bu 2
+Launch an attack against multiple URLs from a file:
+.RE
+.PP
+\fB\fCvegeta attack \-duration={{30s}} \-targets={{requests.txt}} | vegeta report\fR

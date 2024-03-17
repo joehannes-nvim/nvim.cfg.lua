@@ -1,0 +1,24 @@
+.TH opt
+.PP
+.RS
+A tool that takes LLVM source files and runs specified optimizations and/or analyses on them.
+More information: \[la]https://llvm.org/docs/CommandGuide/opt.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run an optimization or analysis on a bitcode file:
+.RE
+.PP
+\fB\fCopt \-{{passname}} {{path/to/file.bc}} \-S \-o {{file_opt.bc}}\fR
+.RS
+.IP \(bu 2
+Output the Control Flow Graph of a function to a \fB\fC\&.dot\fR file:
+.RE
+.PP
+\fB\fCopt {{\-dot\-cfg}} \-S {{path/to/file.bc}} \-disable\-output\fR
+.RS
+.IP \(bu 2
+Optimize the program at level 2 and output the result to another file:
+.RE
+.PP
+\fB\fCopt \-O2 {{path/to/file.bc}} \-S \-o {{path/to/output_file.bc}}\fR

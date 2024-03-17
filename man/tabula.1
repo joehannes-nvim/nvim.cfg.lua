@@ -1,0 +1,42 @@
+.TH tabula
+.PP
+.RS
+Extract tables from PDF files.
+More information: \[la]https://tabula.technology\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract all tables from a PDF to a CSV file:
+.RE
+.PP
+\fB\fCtabula \-o {{file.csv}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Extract all tables from a PDF to a JSON file:
+.RE
+.PP
+\fB\fCtabula \-\-format JSON \-o {{file.json}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Extract tables from pages 1, 2, 3, and 6 of a PDF:
+.RE
+.PP
+\fB\fCtabula \-\-pages {{1\-3,6}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Extract tables from page 1 of a PDF, guessing which portion of the page to examine:
+.RE
+.PP
+\fB\fCtabula \-\-guess \-\-pages {{1}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Extract all tables from a PDF, using ruling lines to determine cell boundaries:
+.RE
+.PP
+\fB\fCtabula \-\-spreadsheet {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Extract all tables from a PDF, using blank space to determine cell boundaries:
+.RE
+.PP
+\fB\fCtabula \-\-no\-spreadsheet {{file.pdf}}\fR

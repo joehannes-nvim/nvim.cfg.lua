@@ -1,0 +1,30 @@
+.TH pyflakes
+.PP
+.RS
+Checks Python source code files for errors.
+More information: \[la]https://pypi.org/project/pyflakes\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check a single Python file:
+.RE
+.PP
+\fB\fCpyflakes check {{path/to/file}}.py\fR
+.RS
+.IP \(bu 2
+Check Python files in a specific directory:
+.RE
+.PP
+\fB\fCpyflakes checkPath {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Check Python files in a directory recursively:
+.RE
+.PP
+\fB\fCpyflakes checkRecursive {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Check all Python files found in multiple directories:
+.RE
+.PP
+\fB\fCpyflakes iterSourceCode {{path/to/directory_1}} {{path/to/directory_2}}\fR

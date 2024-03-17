@@ -1,0 +1,42 @@
+.TH git shortlog
+.PP
+.RS
+Summarizes the \fB\fCgit log\fR output.
+More information: \[la]https://git-scm.com/docs/git-shortlog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View a summary of all the commits made, grouped alphabetically by author name:
+.RE
+.PP
+\fB\fCgit shortlog\fR
+.RS
+.IP \(bu 2
+View a summary of all the commits made, sorted by the number of commits made:
+.RE
+.PP
+\fB\fCgit shortlog \-n\fR
+.RS
+.IP \(bu 2
+View a summary of all the commits made, grouped by the committer identities (name and email):
+.RE
+.PP
+\fB\fCgit shortlog \-c\fR
+.RS
+.IP \(bu 2
+View a summary of the last 5 commits (i.e. specify a revision range):
+.RE
+.PP
+\fB\fCgit shortlog HEAD~{{5}}..HEAD\fR
+.RS
+.IP \(bu 2
+View all users, emails and the number of commits in the current branch:
+.RE
+.PP
+\fB\fCgit shortlog \-sne\fR
+.RS
+.IP \(bu 2
+View all users, emails and the number of commits in all branches:
+.RE
+.PP
+\fB\fCgit shortlog \-sne \-\-all\fR

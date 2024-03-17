@@ -1,0 +1,48 @@
+.TH scrapy
+.PP
+.RS
+Web\-crawling framework.
+More information: \[la]https://scrapy.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a project:
+.RE
+.PP
+\fB\fCscrapy startproject {{project_name}}\fR
+.RS
+.IP \(bu 2
+Create a spider (in project directory):
+.RE
+.PP
+\fB\fCscrapy genspider {{spider_name}} {{website_domain}}\fR
+.RS
+.IP \(bu 2
+Edit spider (in project directory):
+.RE
+.PP
+\fB\fCscrapy edit {{spider_name}}\fR
+.RS
+.IP \(bu 2
+Run spider (in project directory):
+.RE
+.PP
+\fB\fCscrapy crawl {{spider_name}}\fR
+.RS
+.IP \(bu 2
+Fetch a webpage as Scrapy sees it and print the source to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCscrapy fetch {{url}}\fR
+.RS
+.IP \(bu 2
+Open a webpage in the default browser as Scrapy sees it (disable JavaScript for extra fidelity):
+.RE
+.PP
+\fB\fCscrapy view {{url}}\fR
+.RS
+.IP \(bu 2
+Open Scrapy shell for URL, which allows interaction with the page source in a Python shell (or IPython if available):
+.RE
+.PP
+\fB\fCscrapy shell {{url}}\fR

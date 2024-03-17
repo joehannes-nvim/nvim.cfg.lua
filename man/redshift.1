@@ -1,0 +1,36 @@
+.TH redshift
+.PP
+.RS
+Adjust the color temperature of your screen according to your surroundings.
+More information: \[la]http://jonls.dk/redshift\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Turn on Redshift with 5700K temperature during day and 3600K at night:
+.RE
+.PP
+\fB\fCredshift \-t {{5700}}:{{3600}}\fR
+.RS
+.IP \(bu 2
+Turn on Redshift with a manually specified custom location:
+.RE
+.PP
+\fB\fCredshift \-l {{latitude}}:{{longitude}}\fR
+.RS
+.IP \(bu 2
+Turn on Redshift with 70% screen brightness during day and 40% brightness at night:
+.RE
+.PP
+\fB\fCredshift \-b {{0.7}}:{{0.4}}\fR
+.RS
+.IP \(bu 2
+Turn on Redshift with custom gamma levels (between 0 and 1):
+.RE
+.PP
+\fB\fCredshift \-g {{red}}:{{green}}:{{blue}}\fR
+.RS
+.IP \(bu 2
+Turn on Redshift with a constant unchanging color temperature:
+.RE
+.PP
+\fB\fCredshift \-O {{temperature}}\fR

@@ -1,0 +1,25 @@
+.TH batch
+.PP
+.RS
+Execute commands at a later time when the system load levels permit.
+Service atd (or atrun) should be running for the actual executions.
+More information: \[la]https://manned.org/batch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute commands from \fB\fCstdin\fR (press \fB\fCCtrl + D\fR when done):
+.RE
+.PP
+\fB\fCbatch\fR
+.RS
+.IP \(bu 2
+Execute a command from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{{./make_db_backup.sh}}" | batch\fR
+.RS
+.IP \(bu 2
+Execute commands from a given file:
+.RE
+.PP
+\fB\fCbatch \-f {{path/to/file}}\fR

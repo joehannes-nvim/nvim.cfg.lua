@@ -1,0 +1,54 @@
+.TH gh browse
+.PP
+.RS
+Open a GitHub repository in the browser or print the URL.
+More information: \[la]https://cli.github.com/manual/gh_browse\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the homepage of the current repository in the default web browser:
+.RE
+.PP
+\fB\fCgh browse\fR
+.RS
+.IP \(bu 2
+Open the homepage of a specific repository in the default web browser:
+.RE
+.PP
+\fB\fCgh browse {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+Open the settings page of the current repository in the default web browser:
+.RE
+.PP
+\fB\fCgh browse \-\-settings\fR
+.RS
+.IP \(bu 2
+Open the wiki of the current repository in the default web browser:
+.RE
+.PP
+\fB\fCgh browse \-\-wiki\fR
+.RS
+.IP \(bu 2
+Open a specific issue or pull request in the web browser:
+.RE
+.PP
+\fB\fCgh browse {{issue_number|pull_request_number}}\fR
+.RS
+.IP \(bu 2
+Open a specific branch in the web browser:
+.RE
+.PP
+\fB\fCgh browse \-\-branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Open a specific file or directory of the current repository in the web browser:
+.RE
+.PP
+\fB\fCgh browse {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Print the destination URL without open the web browser:
+.RE
+.PP
+\fB\fCgh browse \-\-no\-browser\fR

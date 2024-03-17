@@ -1,0 +1,42 @@
+.TH node
+.PP
+.RS
+Server\-side JavaScript platform (Node.js).
+More information: \[la]https://nodejs.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a JavaScript file:
+.RE
+.PP
+\fB\fCnode {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCnode\fR
+.RS
+.IP \(bu 2
+Execute the specified file restarting the process when an imported file is changed (requires Node.js version 18.11+):
+.RE
+.PP
+\fB\fCnode \-\-watch {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Evaluate JavaScript code by passing it as an argument:
+.RE
+.PP
+\fB\fCnode \-e "{{code}}"\fR
+.RS
+.IP \(bu 2
+Evaluate and print the result, useful to print node's dependencies versions:
+.RE
+.PP
+\fB\fCnode \-p "process.versions"\fR
+.RS
+.IP \(bu 2
+Activate inspector, pausing execution until a debugger is connected once source code is fully parsed:
+.RE
+.PP
+\fB\fCnode \-\-no\-lazy \-\-inspect\-brk {{path/to/file}}\fR

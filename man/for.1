@@ -1,0 +1,36 @@
+.TH for
+.PP
+.RS
+Perform a command several times.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#Looping-Constructs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute the given commands for each of the specified items:
+.RE
+.PP
+\fB\fCfor {{variable}} in {{item1 item2 ...}}; do {{echo "Loop is executed"}}; done\fR
+.RS
+.IP \(bu 2
+Iterate over a given range of numbers:
+.RE
+.PP
+\fB\fCfor {{variable}} in {{{from}}..{{to}}..{{step}}}; do {{echo "Loop is executed"}}; done\fR
+.RS
+.IP \(bu 2
+Iterate over a given list of files:
+.RE
+.PP
+\fB\fCfor {{variable}} in {{path/to/file1 path/to/file2 ...}}; do {{echo "Loop is executed"}}; done\fR
+.RS
+.IP \(bu 2
+Iterate over a given list of directories:
+.RE
+.PP
+\fB\fCfor {{variable}} in {{path/to/directory1/ path/to/directory2/ ...}}; do {{echo "Loop is executed"}}; done\fR
+.RS
+.IP \(bu 2
+Perform a given command in every directory:
+.RE
+.PP
+\fB\fCfor {{variable}} in */; do (cd "${{variable}}" || continue; {{echo "Loop is executed"}}) done\fR

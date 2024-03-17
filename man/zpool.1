@@ -1,0 +1,54 @@
+.TH zpool
+.PP
+.RS
+Manage ZFS pools.
+More information: \[la]https://manned.org/zpool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the configuration and status of all ZFS zpools:
+.RE
+.PP
+\fB\fCzpool status\fR
+.RS
+.IP \(bu 2
+Check a ZFS pool for errors (verifies the checksum of EVERY block). Very CPU and disk intensive:
+.RE
+.PP
+\fB\fCzpool scrub {{pool_name}}\fR
+.RS
+.IP \(bu 2
+List zpools available for import:
+.RE
+.PP
+\fB\fCzpool import\fR
+.RS
+.IP \(bu 2
+Import a zpool:
+.RE
+.PP
+\fB\fCzpool import {{pool_name}}\fR
+.RS
+.IP \(bu 2
+Export a zpool (unmount all filesystems):
+.RE
+.PP
+\fB\fCzpool export {{pool_name}}\fR
+.RS
+.IP \(bu 2
+Show the history of all pool operations:
+.RE
+.PP
+\fB\fCzpool history {{pool_name}}\fR
+.RS
+.IP \(bu 2
+Create a mirrored pool:
+.RE
+.PP
+\fB\fCzpool create {{pool_name}} mirror {{disk1}} {{disk2}} mirror {{disk3}} {{disk4}}\fR
+.RS
+.IP \(bu 2
+Add a cache (L2ARC) device to a zpool:
+.RE
+.PP
+\fB\fCzpool add {{pool_name}} cache {{cache_disk}}\fR

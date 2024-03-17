@@ -1,0 +1,48 @@
+.TH cargo add
+.PP
+.RS
+Add dependencies to a Rust project's \fB\fCCargo.toml\fR manifest.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-add.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add the latest version of a dependency to the current project:
+.RE
+.PP
+\fB\fCcargo add {{dependency}}\fR
+.RS
+.IP \(bu 2
+Add a specific version of a dependency:
+.RE
+.PP
+\fB\fCcargo add {{dependency}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Add a dependency and enable one or more specific features:
+.RE
+.PP
+\fB\fCcargo add {{dependency}} \-\-features {{feature_1}},{{feature_2}}\fR
+.RS
+.IP \(bu 2
+Add an optional dependency, which then gets exposed as a feature of the crate:
+.RE
+.PP
+\fB\fCcargo add {{dependency}} \-\-optional\fR
+.RS
+.IP \(bu 2
+Add a local crate as a dependency:
+.RE
+.PP
+\fB\fCcargo add \-\-path {{path/to/crate_directory}}\fR
+.RS
+.IP \(bu 2
+Add a development or build dependency:
+.RE
+.PP
+\fB\fCcargo add {{dependency}} \-\-{{dev|build}}\fR
+.RS
+.IP \(bu 2
+Add a dependency with all default features disabled:
+.RE
+.PP
+\fB\fCcargo add {{dependency}} \-\-no\-default\-features\fR

@@ -1,0 +1,48 @@
+.TH svgr
+.PP
+.RS
+Transform SVGs into React components.
+More information: \[la]https://react-svgr.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transform a SVG file into a React component to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCsvgr \-\- {{path/to/file.svg}}\fR
+.RS
+.IP \(bu 2
+Transform a SVG file into a React component using TypeScript to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCsvgr \-\-typescript \-\- {{path/to/file.svg}}\fR
+.RS
+.IP \(bu 2
+Transform a SVG file into a React component using JSX transform to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCsvgr \-\-jsx\-runtime automatic \-\- {{path/to/file.svg}}\fR
+.RS
+.IP \(bu 2
+Transform all SVG files from a directory to React components into a specific directory:
+.RE
+.PP
+\fB\fCsvgr \-\-out\-dir {{path/to/output_directory}} {{path/to/input_directory}}\fR
+.RS
+.IP \(bu 2
+Transform all SVG files from a directory to React components into a specific directory skipping already transformed files:
+.RE
+.PP
+\fB\fCsvgr \-\-out\-dir {{path/to/output_directory}} \-\-ignore\-existing {{path/to/input_directory}}\fR
+.RS
+.IP \(bu 2
+Transform all SVG files from a directory to React components into a specific directory using a specific case for filenames:
+.RE
+.PP
+\fB\fCsvgr \-\-out\-dir {{path/to/output_directory}} \-\-filename\-case {{camel|kebab|pascal}} {{path/to/input_directory}}\fR
+.RS
+.IP \(bu 2
+Transform all SVG files from a directory to React components into a specific directory without generating an index file:
+.RE
+.PP
+\fB\fCsvgr \-\-out\-dir {{path/to/output_directory}} \-\-no\-index {{path/to/input_directory}}\fR

@@ -1,0 +1,36 @@
+.TH lt
+.PP
+.RS
+Localtunnel exposes your localhost to the world for easy testing and sharing.
+More information: \[la]https://github.com/localtunnel/localtunnel\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start tunnel from a specific port:
+.RE
+.PP
+\fB\fClt \-\-port {{8000}}\fR
+.RS
+.IP \(bu 2
+Specify the upstream server doing the forwarding:
+.RE
+.PP
+\fB\fClt \-\-port {{8000}} \-\-host {{host}}\fR
+.RS
+.IP \(bu 2
+Request a specific subdomain:
+.RE
+.PP
+\fB\fClt \-\-port {{8000}} \-\-subdomain {{subdomain}}\fR
+.RS
+.IP \(bu 2
+Print basic request info:
+.RE
+.PP
+\fB\fClt \-\-port {{8000}} \-\-print\-requests\fR
+.RS
+.IP \(bu 2
+Open the tunnel URL in the default web browser:
+.RE
+.PP
+\fB\fClt \-\-port {{8000}} \-\-open\fR

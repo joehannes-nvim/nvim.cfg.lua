@@ -1,0 +1,48 @@
+.TH particle
+.PP
+.RS
+Interact with Particle devices.
+More information: \[la]https://docs.particle.io/tutorials/developer-tools/cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in or create an account for the Particle CLI:
+.RE
+.PP
+\fB\fCparticle setup\fR
+.RS
+.IP \(bu 2
+Display a list of devices:
+.RE
+.PP
+\fB\fCparticle list\fR
+.RS
+.IP \(bu 2
+Create a new Particle project interactively:
+.RE
+.PP
+\fB\fCparticle project create\fR
+.RS
+.IP \(bu 2
+Compile a Particle project:
+.RE
+.PP
+\fB\fCparticle compile {{device_type}} {{path/to/source_code.ino}}\fR
+.RS
+.IP \(bu 2
+Update a device to use a specific app remotely:
+.RE
+.PP
+\fB\fCparticle flash {{device_name}} {{path/to/program.bin}}\fR
+.RS
+.IP \(bu 2
+Update a device to use the latest firmware via serial:
+.RE
+.PP
+\fB\fCparticle flash \-\-serial {{path/to/firmware.bin}}\fR
+.RS
+.IP \(bu 2
+Execute a function on a device:
+.RE
+.PP
+\fB\fCparticle call {{device_name}} {{function_name}} {{function_arguments}}\fR

@@ -1,0 +1,24 @@
+.TH iconv
+.PP
+.RS
+Converts text from one encoding to another.
+More information: \[la]https://manned.org/iconv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert file to a specific encoding, and print to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCiconv \-f {{from_encoding}} \-t {{to_encoding}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+Convert file to the current locale's encoding, and output to a file:
+.RE
+.PP
+\fB\fCiconv \-f {{from_encoding}} {{input_file}} > {{output_file}}\fR
+.RS
+.IP \(bu 2
+List supported encodings:
+.RE
+.PP
+\fB\fCiconv \-l\fR

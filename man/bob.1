@@ -1,0 +1,36 @@
+.TH bob
+.PP
+.RS
+Manage and switch between Neovim versions.
+More information: \[la]https://github.com/MordechaiHadad/bob\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install and switch to the specified version of Neovim:
+.RE
+.PP
+\fB\fCbob use {{nightly|stable|latest|version_string|commit_hash}}\fR
+.RS
+.IP \(bu 2
+List installed and currently used versions of Neovim:
+.RE
+.PP
+\fB\fCbob list\fR
+.RS
+.IP \(bu 2
+Uninstall the specified version of Neovim:
+.RE
+.PP
+\fB\fCbob uninstall {{nightly|stable|latest|version_string|commit_hash}}\fR
+.RS
+.IP \(bu 2
+Uninstall Neovim and erase any changes \fB\fCbob\fR has made:
+.RE
+.PP
+\fB\fCbob erase\fR
+.RS
+.IP \(bu 2
+Roll back to a previous nightly version:
+.RE
+.PP
+\fB\fCbob rollback\fR

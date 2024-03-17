@@ -1,0 +1,19 @@
+.TH zipalign
+.PP
+.RS
+Zip archive alignment tool.
+Part of the Android SDK build tools.
+More information: \[la]https://developer.android.com/studio/command-line/zipalign\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Align the data of a ZIP file on 4\-byte boundaries:
+.RE
+.PP
+\fB\fCzipalign {{4}} {{path/to/input.zip}} {{path/to/output.zip}}\fR
+.RS
+.IP \(bu 2
+Check that a ZIP file is correctly aligned on 4\-byte boundaries and display the results in a verbose manner:
+.RE
+.PP
+\fB\fCzipalign \-v \-c {{4}} {{path/to/input.zip}}\fR

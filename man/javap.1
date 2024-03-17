@@ -1,0 +1,36 @@
+.TH javap
+.PP
+.RS
+Disassemble one or more class files and list them.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/javap.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Disassemble and list a \fB\fC\&.class\fR file:
+.RE
+.PP
+\fB\fCjavap {{path/to/file.class}}\fR
+.RS
+.IP \(bu 2
+Disassemble and list multiple \fB\fC\&.class\fR files:
+.RE
+.PP
+\fB\fCjavap {{path/to/file1.class path/to/file2.class ...}}\fR
+.RS
+.IP \(bu 2
+Disassemble and list a built\-in class file:
+.RE
+.PP
+\fB\fCjavap java.{{package}}.{{class}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCjavap \-help\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCjavap \-version\fR

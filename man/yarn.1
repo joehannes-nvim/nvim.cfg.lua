@@ -1,0 +1,42 @@
+.TH yarn
+.PP
+.RS
+JavaScript and Node.js package manager alternative.
+More information: \[la]https://yarnpkg.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a module globally:
+.RE
+.PP
+\fB\fCyarn global add {{module_name}}\fR
+.RS
+.IP \(bu 2
+Install all dependencies referenced in the \fB\fCpackage.json\fR file (the \fB\fCinstall\fR is optional):
+.RE
+.PP
+\fB\fCyarn install\fR
+.RS
+.IP \(bu 2
+Install a module and save it as a dependency to the \fB\fCpackage.json\fR file (add \fB\fC\-\-dev\fR to save as a dev dependency):
+.RE
+.PP
+\fB\fCyarn add {{module_name}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Uninstall a module and remove it from the \fB\fCpackage.json\fR file:
+.RE
+.PP
+\fB\fCyarn remove {{module_name}}\fR
+.RS
+.IP \(bu 2
+Interactively create a \fB\fCpackage.json\fR file:
+.RE
+.PP
+\fB\fCyarn init\fR
+.RS
+.IP \(bu 2
+Identify whether a module is a dependency and list other modules that depend upon it:
+.RE
+.PP
+\fB\fCyarn why {{module_name}}\fR

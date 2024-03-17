@@ -1,0 +1,30 @@
+.TH terraform fmt
+.PP
+.RS
+Format configuration according to Terraform language style conventions.
+More information: \[la]https://www.terraform.io/docs/commands/fmt.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format the configuration in the current directory:
+.RE
+.PP
+\fB\fCterraform fmt\fR
+.RS
+.IP \(bu 2
+Format the configuration in the current directory and subdirectories:
+.RE
+.PP
+\fB\fCterraform fmt \-recursive\fR
+.RS
+.IP \(bu 2
+Display diffs of formatting changes:
+.RE
+.PP
+\fB\fCterraform fmt \-diff\fR
+.RS
+.IP \(bu 2
+Do not list files that were formatted to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCterraform fmt \-list=false\fR

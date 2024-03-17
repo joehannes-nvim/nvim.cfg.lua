@@ -1,0 +1,25 @@
+.TH git authors
+.PP
+.RS
+Generate a list of committers of a Git repository.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-authors\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a full list of committers to \fB\fCstdout\fR instead of to the \fB\fCAUTHORS\fR file:
+.RE
+.PP
+\fB\fCgit authors \-\-list\fR
+.RS
+.IP \(bu 2
+Append the list of committers to the \fB\fCAUTHORS\fR file and open it in the default editor:
+.RE
+.PP
+\fB\fCgit authors\fR
+.RS
+.IP \(bu 2
+Append the list of committers, excluding emails, to the \fB\fCAUTHORS\fR file and open it in the default editor:
+.RE
+.PP
+\fB\fCgit authors \-\-no\-email\fR

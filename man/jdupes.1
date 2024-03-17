@@ -1,0 +1,42 @@
+.TH jdupes
+.PP
+.RS
+A powerful duplicate file finder and an enhanced fork of fdupes.
+More information: \[la]https://github.com/jbruchon/jdupes\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search a single directory:
+.RE
+.PP
+\fB\fCjdupes {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search multiple directories:
+.RE
+.PP
+\fB\fCjdupes {{directory1}} {{directory2}}\fR
+.RS
+.IP \(bu 2
+Search all directories recursively:
+.RE
+.PP
+\fB\fCjdupes \-\-recurse {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search directory recursively and let user choose files to preserve:
+.RE
+.PP
+\fB\fCjdupes \-\-delete \-\-recurse {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search multiple directories and follow subdirectores under directory2, not directory1:
+.RE
+.PP
+\fB\fCjdupes {{directory1}} \-\-recurse: {{directory2}}\fR
+.RS
+.IP \(bu 2
+Search multiple directories and keep the directory order in result:
+.RE
+.PP
+\fB\fCjdupes \-O {{directory1}} {{directory2}} {{directory3}}\fR

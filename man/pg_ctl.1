@@ -1,0 +1,36 @@
+.TH pg_ctl
+.PP
+.RS
+Utility for controlling a PostgreSQL server and database cluster.
+More information: \[la]https://www.postgresql.org/docs/current/app-pg-ctl.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new PostgreSQL database cluster:
+.RE
+.PP
+\fB\fCpg_ctl \-D {{data_directory}} init\fR
+.RS
+.IP \(bu 2
+Start a PostgreSQL server:
+.RE
+.PP
+\fB\fCpg_ctl \-D {{data_directory}} start\fR
+.RS
+.IP \(bu 2
+Stop a PostgreSQL server:
+.RE
+.PP
+\fB\fCpg_ctl \-D {{data_directory}} stop\fR
+.RS
+.IP \(bu 2
+Restart a PostgreSQL server:
+.RE
+.PP
+\fB\fCpg_ctl \-D {{data_directory}} restart\fR
+.RS
+.IP \(bu 2
+Reload the PostgreSQL server configuration:
+.RE
+.PP
+\fB\fCpg_ctl \-D {{data_directory}} reload\fR

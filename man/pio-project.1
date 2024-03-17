@@ -1,0 +1,36 @@
+.TH pio project
+.PP
+.RS
+Tool to manage PlatformIO projects.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/project/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new PlatformIO project:
+.RE
+.PP
+\fB\fCpio project init\fR
+.RS
+.IP \(bu 2
+Initialize a new PlatformIO project in a specific directory:
+.RE
+.PP
+\fB\fCpio project init \-\-project\-dir {{path/to/project_directory}}\fR
+.RS
+.IP \(bu 2
+Initialize a new PlatformIO project, specifying a board ID:
+.RE
+.PP
+\fB\fCpio project init \-\-board {{ATmega328P|uno|...}}\fR
+.RS
+.IP \(bu 2
+Initialize a new PlatformIO based project, specifying one or more project options:
+.RE
+.PP
+\fB\fCpio project init \-\-project\-option="{{option}}={{value}}" \-\-project\-option="{{option}}={{value}}"\fR
+.RS
+.IP \(bu 2
+Print the configuration of a project:
+.RE
+.PP
+\fB\fCpio project config\fR

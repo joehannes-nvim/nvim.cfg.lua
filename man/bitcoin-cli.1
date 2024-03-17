@@ -1,0 +1,37 @@
+.TH bitcoin\-cli
+.PP
+.RS
+Command\-line client to interact with the Bitcoin daemon via RPC calls.
+Uses the configuration defined in \fB\fCbitcoin.conf\fR\&.
+More information: \[la]https://en.bitcoin.it/wiki/Running_Bitcoin#Command-line_arguments\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a transaction to a given address:
+.RE
+.PP
+\fB\fCbitcoin\-cli sendtoaddress "{{address}}" {{amount}}\fR
+.RS
+.IP \(bu 2
+Generate one or more blocks:
+.RE
+.PP
+\fB\fCbitcoin\-cli generate {{num_blocks}}\fR
+.RS
+.IP \(bu 2
+Print high\-level information about the wallet:
+.RE
+.PP
+\fB\fCbitcoin\-cli getwalletinfo\fR
+.RS
+.IP \(bu 2
+List all outputs from previous transactions available to fund outgoing transactions:
+.RE
+.PP
+\fB\fCbitcoin\-cli listunspent\fR
+.RS
+.IP \(bu 2
+Export the wallet information to a text file:
+.RE
+.PP
+\fB\fCbitcoin\-cli dumpwallet "{{path/to/file}}"\fR

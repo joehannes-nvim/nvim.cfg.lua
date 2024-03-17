@@ -1,0 +1,48 @@
+.TH mysqld
+.PP
+.RS
+Start the MySQL database server.
+More information: \[la]https://dev.mysql.com/doc/refman/en/mysqld.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the MySQL database server:
+.RE
+.PP
+\fB\fCmysqld\fR
+.RS
+.IP \(bu 2
+Start the server, printing error messages to the console:
+.RE
+.PP
+\fB\fCmysqld \-\-console\fR
+.RS
+.IP \(bu 2
+Start the server, saving logging output to a custom log file:
+.RE
+.PP
+\fB\fCmysqld \-\-log={{path/to/file.log}}\fR
+.RS
+.IP \(bu 2
+Print the default arguments and their values and exit:
+.RE
+.PP
+\fB\fCmysqld \-\-print\-defaults\fR
+.RS
+.IP \(bu 2
+Start the server, reading arguments and values from a file:
+.RE
+.PP
+\fB\fCmysqld \-\-defaults\-file={{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start the server and listen on a custom port:
+.RE
+.PP
+\fB\fCmysqld \-\-port={{port}}\fR
+.RS
+.IP \(bu 2
+Show all help options and exit:
+.RE
+.PP
+\fB\fCmysqld \-\-verbose \-\-help\fR

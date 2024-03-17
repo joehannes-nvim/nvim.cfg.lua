@@ -1,0 +1,30 @@
+.TH watchexec
+.PP
+.RS
+Run arbitrary commands when files change.
+More information: \[la]https://github.com/watchexec/watchexec\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Call \fB\fCls \-la\fR when any file in the current directory changes:
+.RE
+.PP
+\fB\fCwatchexec {{ls \-la}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCmake\fR when any JavaScript, CSS and HTML file in the current directory changes:
+.RE
+.PP
+\fB\fCwatchexec \-\-exts {{js,css,html}} make\fR
+.RS
+.IP \(bu 2
+Run \fB\fCmake\fR when any file in the \fB\fClib\fR or \fB\fCsrc\fR directory changes:
+.RE
+.PP
+\fB\fCwatchexec \-\-watch {{lib}} \-\-watch {{src}} {{make}}\fR
+.RS
+.IP \(bu 2
+Call/restart \fB\fCmy_server\fR when any file in the current directory changes, sending \fB\fCSIGKILL\fR to stop the child process:
+.RE
+.PP
+\fB\fCwatchexec \-\-restart \-\-stop\-signal {{SIGKILL}} {{my_server}}\fR

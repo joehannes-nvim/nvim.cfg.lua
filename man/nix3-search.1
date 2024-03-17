@@ -1,0 +1,25 @@
+.TH nix search
+.PP
+.RS
+Search for packages in a Nix flake.
+See \fB\fCtldr nix3 flake\fR for information about flakes.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-search.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search \fB\fCnixpkgs\fR for a package based on its name or description:
+.RE
+.PP
+\fB\fCnix search {{nixpkgs}} {{search_term...}}\fR
+.RS
+.IP \(bu 2
+Show description of a package from nixpkgs:
+.RE
+.PP
+\fB\fCnix search {{nixpkgs#pkg}}\fR
+.RS
+.IP \(bu 2
+Show all packages available from a flake on github:
+.RE
+.PP
+\fB\fCnix search {{github:owner/repo}}\fR

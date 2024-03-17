@@ -1,0 +1,30 @@
+.TH adb reverse
+.PP
+.RS
+Android Debug Bridge Reverse: reverse socket connections from an Android emulator instance or connected Android devices.
+More information: \[la]https://developer.android.com/studio/command-line/adb\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all reverse socket connections from emulators and devices:
+.RE
+.PP
+\fB\fCadb reverse \-\-list\fR
+.RS
+.IP \(bu 2
+Reverse a TCP port from an emulator or device to localhost:
+.RE
+.PP
+\fB\fCadb reverse tcp:{{remote_port}} tcp:{{local_port}}\fR
+.RS
+.IP \(bu 2
+Remove a reverse socket connections from an emulator or device:
+.RE
+.PP
+\fB\fCadb reverse \-\-remove tcp:{{remote_port}}\fR
+.RS
+.IP \(bu 2
+Remove all reverse socket connections from all emulators and devices:
+.RE
+.PP
+\fB\fCadb reverse \-\-remove\-all\fR

@@ -1,0 +1,54 @@
+.TH cupsd
+.PP
+.RS
+Server daemon for the CUPS print server.
+More information: \[la]https://www.cups.org/doc/man-cupsd.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCcupsd\fR in the background, aka. as a daemon:
+.RE
+.PP
+\fB\fCcupsd\fR
+.RS
+.IP \(bu 2
+Start \fB\fCcupsd\fR on the [f]oreground:
+.RE
+.PP
+\fB\fCcupsd \-f\fR
+.RS
+.IP \(bu 2
+[l]aunch \fB\fCcupsd\fR on\-demand (commonly used by \fB\fClaunchd\fR or \fB\fCsystemd\fR):
+.RE
+.PP
+\fB\fCcupsd \-l\fR
+.RS
+.IP \(bu 2
+Start \fB\fCcupsd\fR using the specified [\fB\fCc\fR]\fB\fCupsd.conf\fR configuration file:
+.RE
+.PP
+\fB\fCcupsd \-c {{path/to/cupsd.conf}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCcupsd\fR using the specified \fB\fCcups\-file\fR[\fB\fCs\fR]\fB\fC\&.conf\fR configuration file:
+.RE
+.PP
+\fB\fCcupsd \-s {{path/to/cups\-files.conf}}\fR
+.RS
+.IP \(bu 2
+[t]est the [\fB\fCc\fR]\fB\fCupsd.conf\fR configuration file for errors:
+.RE
+.PP
+\fB\fCcupsd \-t \-c {{path/to/cupsd.conf}}\fR
+.RS
+.IP \(bu 2
+[t]est the \fB\fCcups\-file\fR[\fB\fCs\fR]\fB\fC\&.conf\fR configuration file for errors:
+.RE
+.PP
+\fB\fCcupsd \-t \-s {{path/to/cups\-files.conf}}\fR
+.RS
+.IP \(bu 2
+Display all available options:
+.RE
+.PP
+\fB\fCcupsd \-h\fR

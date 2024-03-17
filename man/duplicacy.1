@@ -1,0 +1,54 @@
+.TH duplicacy
+.PP
+.RS
+A lock\-free deduplication cloud backup tool.
+More information: \[la]https://github.com/gilbertchen/duplicacy/wiki\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use current directory as the repository, initialize a SFTP storage and encrypt the storage with a password:
+.RE
+.PP
+\fB\fCduplicacy init \-e {{snapshot_id}} {{sftp://user@192.168.2.100/path/to/storage/}}\fR
+.RS
+.IP \(bu 2
+Save a snapshot of the repository to the default storage:
+.RE
+.PP
+\fB\fCduplicacy backup\fR
+.RS
+.IP \(bu 2
+List snapshots of current repository:
+.RE
+.PP
+\fB\fCduplicacy list\fR
+.RS
+.IP \(bu 2
+Restore the repository to a previously saved snapshot:
+.RE
+.PP
+\fB\fCduplicacy restore \-r {{revision}}\fR
+.RS
+.IP \(bu 2
+Check the integrity of snapshots:
+.RE
+.PP
+\fB\fCduplicacy check\fR
+.RS
+.IP \(bu 2
+Add another storage to be used for the existing repository:
+.RE
+.PP
+\fB\fCduplicacy add {{storage_name}} {{snapshot_id}} {{storage_url}}\fR
+.RS
+.IP \(bu 2
+Prune a specific revision of snapshot:
+.RE
+.PP
+\fB\fCduplicacy prune \-r {{revision}}\fR
+.RS
+.IP \(bu 2
+Prune revisions, keeping one revision every \fB\fCn\fR days for all revisions older than \fB\fCm\fR days:
+.RE
+.PP
+\fB\fCduplicacy prune \-keep {{n:m}}\fR

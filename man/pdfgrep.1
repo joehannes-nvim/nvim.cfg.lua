@@ -1,0 +1,36 @@
+.TH pdfgrep
+.PP
+.RS
+Search text in PDF files.
+More information: \[la]https://pdfgrep.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find lines that match pattern in a PDF:
+.RE
+.PP
+\fB\fCpdfgrep {{pattern}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Include file name and page number for each matched line:
+.RE
+.PP
+\fB\fCpdfgrep \-\-with\-filename \-\-page\-number {{pattern}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Do a case\-insensitive search for lines that begin with "foo" and return the first 3 matches:
+.RE
+.PP
+\fB\fCpdfgrep \-\-max\-count {{3}} \-\-ignore\-case {{'^foo'}} {{file.pdf}}\fR
+.RS
+.IP \(bu 2
+Find pattern in files with a \fB\fC\&.pdf\fR extension in the current directory recursively:
+.RE
+.PP
+\fB\fCpdfgrep \-\-recursive {{pattern}}\fR
+.RS
+.IP \(bu 2
+Find pattern on files that match a specific glob in the current directory recursively:
+.RE
+.PP
+\fB\fCpdfgrep \-\-recursive \-\-include {{'*book.pdf'}} {{pattern}}\fR

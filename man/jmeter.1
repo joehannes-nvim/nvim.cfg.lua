@@ -1,0 +1,30 @@
+.TH jmeter
+.PP
+.RS
+Open source java application designed for load testing functional behavior and measure performance.
+More information: \[la]https://jmeter.apache.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a specific test plan in nongui mode:
+.RE
+.PP
+\fB\fCjmeter \-\-nongui \-\-testfile {{path/to/file}}.jmx\fR
+.RS
+.IP \(bu 2
+Run a test plan in nongui mode using a specific log file:
+.RE
+.PP
+\fB\fCjmeter \-\-nogui \-\-testfile {{path/to/file}}.jmx \-\-logfile {{path/to/logfile}}.jtl\fR
+.RS
+.IP \(bu 2
+Run a test plan in nongui mode using a specific proxy:
+.RE
+.PP
+\fB\fCjmeter \-\-nongui \-\-testfile {{path/to/file}}.jmx \-\-proxyHost {{127.0.0.1}} \-\-proxyPort {{8888}}\fR
+.RS
+.IP \(bu 2
+Run a test plan in nongui mode using a specific JMeter property:
+.RE
+.PP
+\fB\fCjmeter \-\-jmeterproperty {{key}}='{{value}}' \-\-nongui \-\-testfile {{path/to/file}}.jmx\fR

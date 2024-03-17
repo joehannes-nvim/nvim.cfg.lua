@@ -1,0 +1,25 @@
+.TH at
+.PP
+.RS
+Execute commands once at a later time.
+Service atd (or atrun) should be running for the actual executions.
+More information: \[la]https://manned.org/at\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute commands from \fB\fCstdin\fR in 5 minutes (press \fB\fCCtrl + D\fR when done):
+.RE
+.PP
+\fB\fCat now + 5 minutes\fR
+.RS
+.IP \(bu 2
+Execute a command from \fB\fCstdin\fR at 10:00 AM today:
+.RE
+.PP
+\fB\fCecho "{{./make_db_backup.sh}}" | at 1000\fR
+.RS
+.IP \(bu 2
+Execute commands from a given file next Tuesday:
+.RE
+.PP
+\fB\fCat \-f {{path/to/file}} 9:30 PM Tue\fR

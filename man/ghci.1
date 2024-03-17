@@ -1,0 +1,36 @@
+.TH ghci
+.PP
+.RS
+The Glasgow Haskell Compiler's interactive environment.
+More information: \[la]https://downloads.haskell.org/ghc/latest/docs/html/users_guide/ghci.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCghci\fR
+.RS
+.IP \(bu 2
+Start a REPL and load the specified Haskell source file:
+.RE
+.PP
+\fB\fCghci {{source_file.hs}}\fR
+.RS
+.IP \(bu 2
+Start a REPL and enable a language option:
+.RE
+.PP
+\fB\fCghci \-X{{language_option}}\fR
+.RS
+.IP \(bu 2
+Start a REPL and enable some level of compiler warnings (e.g. \fB\fCall\fR or \fB\fCcompact\fR):
+.RE
+.PP
+\fB\fCghci \-W{{warning_level}}\fR
+.RS
+.IP \(bu 2
+Start a REPL with a colon\-separated list of directories for finding source files:
+.RE
+.PP
+\fB\fCghci \-i{{path/to/directory1}}:{{path/to/directory2}}\fR

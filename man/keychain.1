@@ -1,0 +1,36 @@
+.TH keychain
+.PP
+.RS
+Re\-use ssh\-agent and/or gpg\-agent between logins.
+More information: \[la]http://funtoo.org/Keychain\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check for a running ssh\-agent, and start one if needed:
+.RE
+.PP
+\fB\fCkeychain\fR
+.RS
+.IP \(bu 2
+Also check for gpg\-agent:
+.RE
+.PP
+\fB\fCkeychain \-\-agents "{{gpg,ssh}}"\fR
+.RS
+.IP \(bu 2
+List signatures of all active keys:
+.RE
+.PP
+\fB\fCkeychain \-\-list\fR
+.RS
+.IP \(bu 2
+List fingerprints of all active keys:
+.RE
+.PP
+\fB\fCkeychain \-\-list\-fp\fR
+.RS
+.IP \(bu 2
+Add a timeout for identities added to the agent, in minutes:
+.RE
+.PP
+\fB\fCkeychain \-\-timeout {{minutes}}\fR

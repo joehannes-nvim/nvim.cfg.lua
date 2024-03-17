@@ -1,0 +1,48 @@
+.TH kubectl logs
+.PP
+.RS
+Show logs for containers in a pod.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show logs for a single\-container pod:
+.RE
+.PP
+\fB\fCkubectl logs {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Show logs for a specified container in a pod:
+.RE
+.PP
+\fB\fCkubectl logs \-\-container {{container_name}} {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Show logs for all containers in a pod:
+.RE
+.PP
+\fB\fCkubectl logs \-\-all\-containers={{true}} {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Stream pod logs:
+.RE
+.PP
+\fB\fCkubectl logs \-\-follow {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Stream logs for a specified container in a pod:
+.RE
+.PP
+\fB\fCkubectl logs \-\-follow \-\-container {{container_name}} {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Show pod logs newer than a relative time like \fB\fC10s\fR, \fB\fC5m\fR, or \fB\fC1h\fR:
+.RE
+.PP
+\fB\fCkubectl logs \-\-since={{relative_time}} {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Show the 10 most recent logs in a pod:
+.RE
+.PP
+\fB\fCkubectl logs \-\-tail={{10}} {{pod_name}}\fR

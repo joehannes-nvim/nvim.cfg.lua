@@ -1,0 +1,42 @@
+.TH phpcbf
+.PP
+.RS
+Fix violations detected by phpcs.
+More information: \[la]https://github.com/squizlabs/PHP_CodeSniffer\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fix issues in the specified directory (defaults to the PEAR standard):
+.RE
+.PP
+\fB\fCphpcbf {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display a list of installed coding standards:
+.RE
+.PP
+\fB\fCphpcbf \-i\fR
+.RS
+.IP \(bu 2
+Specify a coding standard to validate against:
+.RE
+.PP
+\fB\fCphpcbf {{path/to/directory}} \-\-standard {{standard}}\fR
+.RS
+.IP \(bu 2
+Specify comma\-separated file extensions to include when sniffing:
+.RE
+.PP
+\fB\fCphpcbf {{path/to/directory}} \-\-extensions {{file_extension(s)}}\fR
+.RS
+.IP \(bu 2
+A comma\-separated list of files to load before processing:
+.RE
+.PP
+\fB\fCphpcbf {{path/to/directory}} \-\-bootstrap {{file(s)}}\fR
+.RS
+.IP \(bu 2
+Don't recurse into subdirectories:
+.RE
+.PP
+\fB\fCphpcbf {{path/to/directory}} \-l\fR

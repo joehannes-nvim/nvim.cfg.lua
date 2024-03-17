@@ -1,0 +1,43 @@
+.TH supervisorctl
+.PP
+.RS
+Supervisor is a client/server system that allows its users to control a number of processes on UNIX\-like operating systems.
+Supervisorctl is the command\-line client piece of the supervisor which provides a shell\-like interface.
+More information: \[la]http://supervisord.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the status of a process (or all processes if \fB\fCprocess_name\fR is not specified):
+.RE
+.PP
+\fB\fCsupervisorctl status {{process_name}}\fR
+.RS
+.IP \(bu 2
+Start/stop/restart a process:
+.RE
+.PP
+\fB\fCsupervisorctl {{start|stop|restart}} {{process_name}}\fR
+.RS
+.IP \(bu 2
+Start/stop/restart all processes in a group:
+.RE
+.PP
+\fB\fCsupervisorctl {{start|stop|restart}} {{group_name}}:*\fR
+.RS
+.IP \(bu 2
+Show last 100 \fBbytes\fP of process \fB\fCstderr\fR:
+.RE
+.PP
+\fB\fCsupervisorctl tail \-100 {{process_name}} stderr\fR
+.RS
+.IP \(bu 2
+Keep displaying \fB\fCstdout\fR of a process:
+.RE
+.PP
+\fB\fCsupervisorctl tail \-f {{process_name}} stdout\fR
+.RS
+.IP \(bu 2
+Reload process config file to add/remove processes as necessary:
+.RE
+.PP
+\fB\fCsupervisorctl update\fR

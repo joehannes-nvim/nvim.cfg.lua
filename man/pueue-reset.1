@@ -1,0 +1,24 @@
+.TH pueue reset
+.PP
+.RS
+Kill everything and reset.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Kill all tasks and remove everything (logs, status, groups, task IDs):
+.RE
+.PP
+\fB\fCpueue reset\fR
+.RS
+.IP \(bu 2
+Kill all tasks, terminate their children, and reset everything:
+.RE
+.PP
+\fB\fCpueue reset \-\-children\fR
+.RS
+.IP \(bu 2
+Reset without asking for confirmation:
+.RE
+.PP
+\fB\fCpueue reset \-\-force\fR

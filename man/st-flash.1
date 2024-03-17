@@ -1,0 +1,24 @@
+.TH st\-flash
+.PP
+.RS
+Flash binary files to STM32 ARM Cortex microcontrollers.
+More information: \[la]https://github.com/texane/stlink\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read 4096 bytes from the device starting from 0x8000000:
+.RE
+.PP
+\fB\fCst\-flash read {{firmware}}.bin {{0x8000000}} {{4096}}\fR
+.RS
+.IP \(bu 2
+Write firmware to device starting from 0x8000000:
+.RE
+.PP
+\fB\fCst\-flash write {{firmware}}.bin {{0x8000000}}\fR
+.RS
+.IP \(bu 2
+Erase firmware from device:
+.RE
+.PP
+\fB\fCst\-flash erase\fR

@@ -1,0 +1,48 @@
+.TH pyenv
+.PP
+.RS
+Switch between multiple versions of Python easily.
+More information: \[la]https://github.com/pyenv/pyenv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available commands:
+.RE
+.PP
+\fB\fCpyenv commands\fR
+.RS
+.IP \(bu 2
+List all Python versions under the \fB\fC${PYENV_ROOT}/versions\fR directory:
+.RE
+.PP
+\fB\fCpyenv versions\fR
+.RS
+.IP \(bu 2
+List all Python versions that can be installed from upstream:
+.RE
+.PP
+\fB\fCpyenv install \-\-list\fR
+.RS
+.IP \(bu 2
+Install a Python version under the \fB\fC${PYENV_ROOT}/versions\fR directory:
+.RE
+.PP
+\fB\fCpyenv install {{2.7.10}}\fR
+.RS
+.IP \(bu 2
+Uninstall a Python version under the \fB\fC${PYENV_ROOT}/versions\fR directory:
+.RE
+.PP
+\fB\fCpyenv uninstall {{2.7.10}}\fR
+.RS
+.IP \(bu 2
+Set Python version to be used globally in the current machine:
+.RE
+.PP
+\fB\fCpyenv global {{2.7.10}}\fR
+.RS
+.IP \(bu 2
+Set Python version to be used in the current directory and all directories below it:
+.RE
+.PP
+\fB\fCpyenv local {{2.7.10}}\fR

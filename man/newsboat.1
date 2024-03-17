@@ -1,0 +1,36 @@
+.TH newsboat
+.PP
+.RS
+An RSS/Atom feed reader for text terminals.
+More information: \[la]https://newsboat.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+First import feed URLs from an OPML file:
+.RE
+.PP
+\fB\fCnewsboat \-i {{my\-feeds.xml}}\fR
+.RS
+.IP \(bu 2
+Alternatively, add feeds manually:
+.RE
+.PP
+\fB\fCecho {{http://example.com/path/to/feed}} >> "${HOME}/.newsboat/urls"\fR
+.RS
+.IP \(bu 2
+Start Newsboat and refresh all feeds on startup:
+.RE
+.PP
+\fB\fCnewsboat \-r\fR
+.RS
+.IP \(bu 2
+Execute a space\-separated list of commands in non\-interactive mode:
+.RE
+.PP
+\fB\fCnewsboat \-x {{reload print\-unread ...}}\fR
+.RS
+.IP \(bu 2
+See keyboard shortcuts (the most relevant are visible in the status line):
+.RE
+.PP
+\fB\fC?\fR

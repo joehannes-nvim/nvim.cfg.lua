@@ -1,0 +1,18 @@
+.TH Xephyr
+.PP
+.RS
+A nested X server that runs as an X application.
+More information: \[la]https://manned.org/xserver-xephyr\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a black window with display ID ":2":
+.RE
+.PP
+\fB\fCXephyr \-br \-ac \-noreset \-screen {{800x600}} {{:2}}\fR
+.RS
+.IP \(bu 2
+Start an X application on the new screen:
+.RE
+.PP
+\fB\fCDISPLAY=:2 {{command_name}}\fR

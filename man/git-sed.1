@@ -1,0 +1,31 @@
+.TH git sed
+.PP
+.RS
+Replace patterns in git\-controlled files using sed.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-sed\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace the specified text in the current repository:
+.RE
+.PP
+\fB\fCgit sed '{{find_text}}' '{{replace_text}}'\fR
+.RS
+.IP \(bu 2
+Replace the specified text and then commit the resulting changes with a standard commit message:
+.RE
+.PP
+\fB\fCgit sed \-c '{{find_text}}' '{{replace_text}}'\fR
+.RS
+.IP \(bu 2
+Replace the specified text, using regular expressions:
+.RE
+.PP
+\fB\fCgit sed \-f g '{{find_text}}' '{{replace_text}}'\fR
+.RS
+.IP \(bu 2
+Replace a specific text in all files under a given directory:
+.RE
+.PP
+\fB\fCgit sed '{{find_text}}' '{{replace_text}}' \-\- {{path/to/directory}}\fR

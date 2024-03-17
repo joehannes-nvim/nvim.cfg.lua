@@ -1,0 +1,30 @@
+.TH surge
+.PP
+.RS
+Simple web publishing.
+More information: \[la]https://surge.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Upload a new site to surge.sh:
+.RE
+.PP
+\fB\fCsurge {{path/to/my_project}}\fR
+.RS
+.IP \(bu 2
+Deploy site to custom domain (note that the DNS records must point to the surge.sh subdomain):
+.RE
+.PP
+\fB\fCsurge {{path/to/my_project}} {{my_custom_domain.com}}\fR
+.RS
+.IP \(bu 2
+List your surge projects:
+.RE
+.PP
+\fB\fCsurge list\fR
+.RS
+.IP \(bu 2
+Remove a project:
+.RE
+.PP
+\fB\fCsurge teardown {{my_custom_domain.com}}\fR

@@ -1,0 +1,19 @@
+.TH f3write
+.PP
+.RS
+Fill a drive out with .h2w files to test its real capacity.
+See also \fB\fCf3read\fR, \fB\fCf3probe\fR, \fB\fCf3fix\fR\&.
+More information: \[la]http://oss.digirati.com.br/f3/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Write test files to a given directory, filling the drive:
+.RE
+.PP
+\fB\fCf3write {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Limit the write speed:
+.RE
+.PP
+\fB\fCf3write \-\-max\-write\-rate={{kb_per_second}} {{path/to/mount_point}}\fR

@@ -1,0 +1,50 @@
+.TH nix
+.PP
+.RS
+A powerful package manager that makes package management reliable, reproducible, and declarative.
+\fB\fCnix\fR is experimental and requires enabling experimental features. For a classic, stable interface, see \fB\fCtldr nix classic\fR\&.
+Some \fB\fCnix\fR subcommands such as \fB\fCbuild\fR, \fB\fCdevelop\fR, \fB\fCflake\fR, \fB\fCregistry\fR, \fB\fCprofile\fR, \fB\fCsearch\fR, \fB\fCrepl\fR, \fB\fCstore\fR, \fB\fCedit\fR, \fB\fCwhy\-depends\fR, etc. have their own usage documentation.
+More information: \[la]https://nixos.org/manual/nix\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enable the \fB\fCnix\fR command:
+.RE
+.PP
+\fB\fCmkdir \-p ~/.config/nix; echo 'experimental\-features = nix\-command flakes' > ~/.config/nix/nix.conf\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCnix\fR subcommand:
+.RE
+.PP
+\fB\fCnix help {{subcommand}}\fR
+.RS
+.IP \(bu 2
+Search for a package in nixpkgs via its name or description:
+.RE
+.PP
+\fB\fCnix search nixpkgs {{search_term}}\fR
+.RS
+.IP \(bu 2
+Start a shell with the specified packages from nixpkgs available:
+.RE
+.PP
+\fB\fCnix shell {{nixpkgs#pkg1 nixpkgs#pkg2 nixpkgs#pkg3 ...}}\fR
+.RS
+.IP \(bu 2
+Install some packages from nixpkgs permanently:
+.RE
+.PP
+\fB\fCnix profile install {{nixpkgs#pkg1 nixpkgs#pkg2 nixpkgs#pkg3 ...}}\fR
+.RS
+.IP \(bu 2
+Remove unused paths from Nix store to free up space:
+.RE
+.PP
+\fB\fCnix store gc\fR
+.RS
+.IP \(bu 2
+Start an interactive environment for evaluating Nix expressions:
+.RE
+.PP
+\fB\fCnix repl\fR

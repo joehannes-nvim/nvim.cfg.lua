@@ -1,0 +1,54 @@
+.TH xz
+.PP
+.RS
+Compress or decompress \fB\fC\&.xz\fR and \fB\fC\&.lzma\fR files.
+More information: \[la]https://manned.org/xz\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file using xz:
+.RE
+.PP
+\fB\fCxz {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress an xz file:
+.RE
+.PP
+\fB\fCxz \-\-decompress {{path/to/file.xz}}\fR
+.RS
+.IP \(bu 2
+Compress a file using lzma:
+.RE
+.PP
+\fB\fCxz \-\-format={{lzma}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress an lzma file:
+.RE
+.PP
+\fB\fCxz \-\-decompress \-\-format={{lzma}} {{path/to/file.lzma}}\fR
+.RS
+.IP \(bu 2
+Decompress a file and write to \fB\fCstdout\fR (implies \fB\fC\-\-keep\fR):
+.RE
+.PP
+\fB\fCxz \-\-decompress \-\-stdout {{path/to/file.xz}}\fR
+.RS
+.IP \(bu 2
+Compress a file, but don't delete the original:
+.RE
+.PP
+\fB\fCxz \-\-keep {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compress a file using the fastest compression:
+.RE
+.PP
+\fB\fCxz \-0 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compress a file using the best compression:
+.RE
+.PP
+\fB\fCxz \-9 {{path/to/file}}\fR

@@ -1,0 +1,24 @@
+.TH wat2wasm
+.PP
+.RS
+Convert a file from the WebAssembly text format to the binary format.
+More information: \[la]https://github.com/WebAssembly/wabt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Parse and check a file for errors:
+.RE
+.PP
+\fB\fCwat2wasm {{file.wat}}\fR
+.RS
+.IP \(bu 2
+Write the output binary to a given file:
+.RE
+.PP
+\fB\fCwat2wasm {{file.wat}} \-o {{file.wasm}}\fR
+.RS
+.IP \(bu 2
+Display simplified representation of every byte:
+.RE
+.PP
+\fB\fCwat2wasm \-v {{file.wat}}\fR

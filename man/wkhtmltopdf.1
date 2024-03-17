@@ -1,0 +1,36 @@
+.TH wkhtmltopdf
+.PP
+.RS
+An open\-source command\-line tool to convert HTML documents or web pages into PDF files.
+More information: \[la]https://wkhtmltopdf.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a HTML document into PDF:
+.RE
+.PP
+\fB\fCwkhtmltopdf {{input.html}} {{output.pdf}}\fR
+.RS
+.IP \(bu 2
+Specify the PDF page size (please see \fB\fCPaperSize\fR of \fB\fCQPrinter\fR for supported sizes):
+.RE
+.PP
+\fB\fCwkhtmltopdf \-\-page\-size {{A4}} {{input.html}} {{output.pdf}}\fR
+.RS
+.IP \(bu 2
+Set the PDF page margins:
+.RE
+.PP
+\fB\fCwkhtmltopdf \-\-margin\-{{top|bottom|left|right}} {{10mm}} {{input.html}} {{output.pdf}}\fR
+.RS
+.IP \(bu 2
+Set the PDF page orientation:
+.RE
+.PP
+\fB\fCwkhtmltopdf \-\-orientation {{Landscape|Portrait}} {{input.html}} {{output.pdf}}\fR
+.RS
+.IP \(bu 2
+Generate a greyscale version of the PDF document:
+.RE
+.PP
+\fB\fCwkhtmltopdf \-\-grayscale {{input.html}} {{output.pdf}}\fR

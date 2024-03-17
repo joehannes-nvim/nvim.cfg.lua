@@ -1,0 +1,42 @@
+.TH dotnet restore
+.PP
+.RS
+Restores the dependencies and tools of a .NET project.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools/dotnet-restore\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Restore dependencies for a .NET project or solution in the current directory:
+.RE
+.PP
+\fB\fCdotnet restore\fR
+.RS
+.IP \(bu 2
+Restore dependencies for a .NET project or solution in a specific location:
+.RE
+.PP
+\fB\fCdotnet restore {{path/to/project_or_solution}}\fR
+.RS
+.IP \(bu 2
+Restore dependencies without caching the HTTP requests:
+.RE
+.PP
+\fB\fCdotnet restore \-\-no\-cache\fR
+.RS
+.IP \(bu 2
+Force all dependencies to be resolved even if the last restore was successful:
+.RE
+.PP
+\fB\fCdotnet restore \-\-force\fR
+.RS
+.IP \(bu 2
+Restore dependencies using package source failures as warnings:
+.RE
+.PP
+\fB\fCdotnet restore \-\-ignore\-failed\-sources\fR
+.RS
+.IP \(bu 2
+Restore dependencies with a specific verbosity level:
+.RE
+.PP
+\fB\fCdotnet restore \-\-verbosity {{quiet|minimal|normal|detailed|diagnostic}}\fR

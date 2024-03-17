@@ -1,0 +1,24 @@
+.TH bioradtopgm
+.PP
+.RS
+Convert a Biorad confocal file into a PGM file.
+More information: \[la]https://netpbm.sourceforge.net/doc/bioradtopgm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read a Biorad confocal file and store the n'th image contained in it to as a PGM file:
+.RE
+.PP
+\fB\fCbioradtopgm \-{{n}} {{path/to/file.pic}} > {{path/to/file.pgm}}\fR
+.RS
+.IP \(bu 2
+Read a Biorad confocal file and print the number of images it contains:
+.RE
+.PP
+\fB\fCbioradtopgm {{path/to/file.pic}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCbioradtopgm \-version\fR

@@ -1,0 +1,48 @@
+.TH jello
+.PP
+.RS
+A command\-line JSON processor using Python syntax.
+More information: \[la]https://github.com/kellyjonbrazil/jello\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pretty\-print JSON or JSON\-Lines data from \fB\fCstdin\fR to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello\fR
+.RS
+.IP \(bu 2
+Output a schema of JSON or JSON Lines data from \fB\fCstdin\fR to \fB\fCstdout\fR (useful for grep):
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello \-s\fR
+.RS
+.IP \(bu 2
+Output all elements from arrays (or all the values from objects) in JSON or JSON\-Lines data from \fB\fCstdin\fR to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello \-l\fR
+.RS
+.IP \(bu 2
+Output the first element in JSON or JSON\-Lines data from \fB\fCstdin\fR to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello _[0]\fR
+.RS
+.IP \(bu 2
+Output the value of a given key of each element in JSON or JSON\-Lines data from \fB\fCstdin\fR to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello '[i.{{key_name}} for i in _]'\fR
+.RS
+.IP \(bu 2
+Output the value of multiple keys as a new JSON object (assuming the input JSON has the keys \fB\fCkey_name\fR and \fB\fCother_key_name\fR):
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello '{"{{my_new_key}}": _.{{key_name}}, "{{my_other_key}}": _.{{other_key_name}}}'\fR
+.RS
+.IP \(bu 2
+Output the value of a given key to a string (and disable JSON output):
+.RE
+.PP
+\fB\fCcat {{file.json}} | jello \-r '"{{some text}}: " + _.{{key_name}}'\fR

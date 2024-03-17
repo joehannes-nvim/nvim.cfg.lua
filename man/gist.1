@@ -1,0 +1,48 @@
+.TH gist
+.PP
+.RS
+Upload code to \[la]https://gist.github.com\[ra]\&.
+More information: \[la]https://github.com/defunkt/gist\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in in gist on this computer:
+.RE
+.PP
+\fB\fCgist \-\-login\fR
+.RS
+.IP \(bu 2
+Create a gist from any number of text files:
+.RE
+.PP
+\fB\fCgist {{file.txt}} {{file2.txt}}\fR
+.RS
+.IP \(bu 2
+Create a private gist with a description:
+.RE
+.PP
+\fB\fCgist \-\-private \-\-description "{{A meaningful description}}" {{file.txt}}\fR
+.RS
+.IP \(bu 2
+Read contents from \fB\fCstdin\fR and create a gist from it:
+.RE
+.PP
+\fB\fC{{echo "hello world"}} | gist\fR
+.RS
+.IP \(bu 2
+List your public and private gists:
+.RE
+.PP
+\fB\fCgist \-\-list\fR
+.RS
+.IP \(bu 2
+List all public gists for any user:
+.RE
+.PP
+\fB\fCgist \-\-list {{username}}\fR
+.RS
+.IP \(bu 2
+Update a gist using the ID from URL:
+.RE
+.PP
+\fB\fCgist \-\-update {{GIST_ID}} {{file.txt}}\fR

@@ -1,0 +1,36 @@
+.TH satis
+.PP
+.RS
+The command\-line utility for the Satis static Composer repository.
+More information: \[la]https://github.com/composer/satis\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a Satis configuration:
+.RE
+.PP
+\fB\fCsatis init {{satis.json}}\fR
+.RS
+.IP \(bu 2
+Add a VCS repository to the Satis configuration:
+.RE
+.PP
+\fB\fCsatis add {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Build the static output from the configuration:
+.RE
+.PP
+\fB\fCsatis build {{satis.json}} {{path/to/output_directory}}\fR
+.RS
+.IP \(bu 2
+Build the static output by updating only the specified repository:
+.RE
+.PP
+\fB\fCsatis build \-\-repository\-url {{repository_url}} {{satis.json}} {{path/to/output_directory}}\fR
+.RS
+.IP \(bu 2
+Remove useless archive files:
+.RE
+.PP
+\fB\fCsatis purge {{satis.json}} {{path/to/output_directory}}\fR

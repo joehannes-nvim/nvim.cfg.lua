@@ -1,0 +1,24 @@
+.TH x_x
+.PP
+.RS
+View Excel and CSV files.
+More information: \[la]https://github.com/kristianperkins/x_x\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View an XLSX or CSV file:
+.RE
+.PP
+\fB\fCx_x {{file.xlsx|file.csv}}\fR
+.RS
+.IP \(bu 2
+View an XLSX or CSV file, using the first row as table headers:
+.RE
+.PP
+\fB\fCx_x \-h {{0}} {{file.xlsx|file.csv}}\fR
+.RS
+.IP \(bu 2
+View a CSV file with unconventional delimiters:
+.RE
+.PP
+\fB\fCx_x \-\-delimiter={{';'}} \-\-quotechar={{'|'}} {{file.csv}}\fR

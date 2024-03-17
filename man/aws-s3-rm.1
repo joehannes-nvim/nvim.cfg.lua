@@ -1,0 +1,30 @@
+.TH aws s3 rm
+.PP
+.RS
+Delete S3 objects.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/rm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete a specific S3 object:
+.RE
+.PP
+\fB\fCaws s3 rm s3://{{bucket_name}}/{{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Preview the deletion of a specific S3 object without deleting it (dry\-run):
+.RE
+.PP
+\fB\fCaws s3 rm s3://{{bucket_name}}/{{path/to/file}} \-\-dryrun\fR
+.RS
+.IP \(bu 2
+Delete an object from a specific S3 access point:
+.RE
+.PP
+\fB\fCaws s3 rm s3://arn:aws:s3:{{region}}:{{account_id}}:{{access_point}}/{{access_point_name}}/{{object_key}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCaws s3 rm help\fR

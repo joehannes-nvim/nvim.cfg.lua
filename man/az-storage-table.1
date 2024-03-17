@@ -1,0 +1,31 @@
+.TH az storage table
+.PP
+.RS
+Manage NoSQL key\-value storage in Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage/table\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new table in the storage account:
+.RE
+.PP
+\fB\fCaz storage table create \-\-account\-name {{storage_account_name}} \-\-name {{table_name}} \-\-fail\-on\-exist\fR
+.RS
+.IP \(bu 2
+Generate a shared access signature for the table:
+.RE
+.PP
+\fB\fCaz storage table generate\-sas \-\-account\-name {{storage_account_name}} \-\-name {{table_name}} \-\-permissions {{sas_permissions}} \-\-expiry {{expiry_date}} \-\-https\-only\fR
+.RS
+.IP \(bu 2
+List tables in a storage account:
+.RE
+.PP
+\fB\fCaz storage table list \-\-account\-name {{storage_account_name}}\fR
+.RS
+.IP \(bu 2
+Delete the specified table and any data it contains:
+.RE
+.PP
+\fB\fCaz storage table delete \-\-account\-name {{storage_account_name}} \-\-name {{table_name}} \-\-fail\-not\-exist\fR

@@ -1,0 +1,24 @@
+.TH pngcrush
+.PP
+.RS
+PNG compression utility.
+More information: \[la]https://pmt.sourceforge.io/pngcrush\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a PNG file:
+.RE
+.PP
+\fB\fCpngcrush {{in.png}} {{out.png}}\fR
+.RS
+.IP \(bu 2
+Compress all PNGs and output them to the specified directory:
+.RE
+.PP
+\fB\fCpngcrush \-d {{path/to/output}} *.png\fR
+.RS
+.IP \(bu 2
+Compress PNG file with all 114 available algorithms and pick the best result:
+.RE
+.PP
+\fB\fCpngcrush \-rem allb \-brute \-reduce {{in.png}} {{out.png}}\fR

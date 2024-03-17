@@ -1,0 +1,36 @@
+.TH doas
+.PP
+.RS
+Executes a command as another user.
+More information: \[la]https://man.openbsd.org/doas\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a command as root:
+.RE
+.PP
+\fB\fCdoas {{command}}\fR
+.RS
+.IP \(bu 2
+Run a command as another user:
+.RE
+.PP
+\fB\fCdoas \-u {{user}} {{command}}\fR
+.RS
+.IP \(bu 2
+Launch the default shell as root:
+.RE
+.PP
+\fB\fCdoas \-s\fR
+.RS
+.IP \(bu 2
+Parse a config file and check if the execution of a command as another user is allowed:
+.RE
+.PP
+\fB\fCdoas \-C {{config_file}} {{command}}\fR
+.RS
+.IP \(bu 2
+Make \fB\fCdoas\fR request a password even after it was supplied earlier:
+.RE
+.PP
+\fB\fCdoas \-L\fR

@@ -1,0 +1,54 @@
+.TH tree
+.PP
+.RS
+Show the contents of the current directory as a tree.
+More information: \[la]http://mama.indstate.edu/users/ice/tree/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print files and directories up to 'num' levels of depth (where 1 means the current directory):
+.RE
+.PP
+\fB\fCtree \-L {{num}}\fR
+.RS
+.IP \(bu 2
+Print directories only:
+.RE
+.PP
+\fB\fCtree \-d\fR
+.RS
+.IP \(bu 2
+Print hidden files too with colorization on:
+.RE
+.PP
+\fB\fCtree \-a \-C\fR
+.RS
+.IP \(bu 2
+Print the tree without indentation lines, showing the full path instead (use \fB\fC\-N\fR to not escape non\-printable characters):
+.RE
+.PP
+\fB\fCtree \-i \-f\fR
+.RS
+.IP \(bu 2
+Print the size of each file and the cumulative size of each directory, in human\-readable format:
+.RE
+.PP
+\fB\fCtree \-s \-h \-\-du\fR
+.RS
+.IP \(bu 2
+Print files within the tree hierarchy, using a wildcard (glob) pattern, and pruning out directories that don't contain matching files:
+.RE
+.PP
+\fB\fCtree \-P '{{*.txt}}' \-\-prune\fR
+.RS
+.IP \(bu 2
+Print directories within the tree hierarchy, using the wildcard (glob) pattern, and pruning out directories that aren't ancestors of the wanted one:
+.RE
+.PP
+\fB\fCtree \-P {{directory_name}} \-\-matchdirs \-\-prune\fR
+.RS
+.IP \(bu 2
+Print the tree ignoring the given directories:
+.RE
+.PP
+\fB\fCtree \-I '{{directory_name1|directory_name2}}'\fR

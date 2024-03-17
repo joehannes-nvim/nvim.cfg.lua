@@ -1,0 +1,36 @@
+.TH semver
+.PP
+.RS
+Semantic version string parser.
+More information: \[la]https://github.com/npm/node-semver\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check if a version string respects the semantic versioning format (prints an empty string if it does not match):
+.RE
+.PP
+\fB\fCsemver {{1.2}}\fR
+.RS
+.IP \(bu 2
+Convert a version string to the semantic versioning format:
+.RE
+.PP
+\fB\fCsemver \-\-coerce {{1.2}}\fR
+.RS
+.IP \(bu 2
+Test if \fB\fC1.2.3\fR matches the \fB\fC^1.0\fR range (prints an empty string if it does not match):
+.RE
+.PP
+\fB\fCsemver {{1.2.3}} \-\-range "{{^1.0}}"\fR
+.RS
+.IP \(bu 2
+Test with multiple ranges:
+.RE
+.PP
+\fB\fCsemver {{1.2.3}} \-\-range {{">=1.0"}} {{"<2.0"}}\fR
+.RS
+.IP \(bu 2
+Test multiple version strings and return only the ones that match:
+.RE
+.PP
+\fB\fCsemver {{1.2.3}} {{2.0.0}} \-\-range "{{^1.0}}"\fR

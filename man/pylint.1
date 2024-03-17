@@ -1,0 +1,24 @@
+.TH pylint
+.PP
+.RS
+A Python code linter.
+More information: \[la]https://pylint.pycqa.org/en/latest/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show lint errors in a file:
+.RE
+.PP
+\fB\fCpylint {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Lint a file and use a configuration file (usually named \fB\fCpylintrc\fR):
+.RE
+.PP
+\fB\fCpylint \-\-rcfile {{path/to/pylintrc}} {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Lint a file and disable a specific error code:
+.RE
+.PP
+\fB\fCpylint \-\-disable {{C,W,no\-error,design}} {{path/to/file}}\fR

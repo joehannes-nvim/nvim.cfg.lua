@@ -1,0 +1,48 @@
+.TH cvs
+.PP
+.RS
+Concurrent Versions System, a revision control system.
+More information: \[la]https://cvs.nongnu.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new repository (requires the \fB\fCCVSROOT\fR environment variable to be set externally):
+.RE
+.PP
+\fB\fCcvs \-d {{path/to/repository}} init\fR
+.RS
+.IP \(bu 2
+Add a project to the repository:
+.RE
+.PP
+\fB\fCcvs import \-m "{{message}}" {{project_name}} {{version}} {{vendor}}\fR
+.RS
+.IP \(bu 2
+Checkout a project:
+.RE
+.PP
+\fB\fCcvs checkout {{project_name}}\fR
+.RS
+.IP \(bu 2
+Show changes made to files:
+.RE
+.PP
+\fB\fCcvs diff {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add a file:
+.RE
+.PP
+\fB\fCcvs add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Commit a file:
+.RE
+.PP
+\fB\fCcvs commit \-m "{{message}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Update the working directory from the remote repository:
+.RE
+.PP
+\fB\fCcvs update\fR

@@ -1,0 +1,55 @@
+.TH starship
+.PP
+.RS
+The minimal, blazing\-fast, and infinitely customizable prompt for any shell.
+Some subcommands such as \fB\fCstarship init\fR have their own usage documentation.
+More information: \[la]https://starship.rs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the starship integration code for the specified shell:
+.RE
+.PP
+\fB\fCstarship init {{bash|elvish|fish|ion|powershell|tcsh|zsh}}\fR
+.RS
+.IP \(bu 2
+Explain each part of the current prompt and show the time taken to render them:
+.RE
+.PP
+\fB\fCstarship explain\fR
+.RS
+.IP \(bu 2
+Print the computed starship configuration (use \fB\fC\-\-default\fR to print default configuration instead):
+.RE
+.PP
+\fB\fCstarship print\-config\fR
+.RS
+.IP \(bu 2
+List supported modules:
+.RE
+.PP
+\fB\fCstarship module \-\-list\fR
+.RS
+.IP \(bu 2
+Edit the starship configuration in the default editor:
+.RE
+.PP
+\fB\fCstarship configure\fR
+.RS
+.IP \(bu 2
+Create a bug report GitHub issue pre\-populated with information about the system and starship configuration:
+.RE
+.PP
+\fB\fCstarship bug\-report\fR
+.RS
+.IP \(bu 2
+Print the completion script for the specified shell:
+.RE
+.PP
+\fB\fCstarship completions {{bash|elvish|fish|powershell|zsh}}\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCstarship {{subcommand}} \-\-help\fR

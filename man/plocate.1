@@ -1,0 +1,19 @@
+.TH plocate
+.PP
+.RS
+Find filenames quickly.
+Make sure to run \fB\fCsudo updatedb\fR to include new files.
+More information: \[la]https://plocate.sesse.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Look for patterns in the database (recomputed periodically):
+.RE
+.PP
+\fB\fCplocate {{pattern}}\fR
+.RS
+.IP \(bu 2
+Look for a file by its exact filename (a pattern containing no globbing characters is interpreted as \fB\fC*pattern*\fR):
+.RE
+.PP
+\fB\fCplocate */{{filename}}\fR

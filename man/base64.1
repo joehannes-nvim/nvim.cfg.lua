@@ -1,0 +1,30 @@
+.TH base64
+.PP
+.RS
+Encode or decode file or \fB\fCstdin\fR to/from Base64, to \fB\fCstdout\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/base64\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encode the contents of a file as base64 and write the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbase64 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decode the base64 contents of a file and write the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbase64 \-\-decode {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Encode from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{somecommand}} | base64\fR
+.RS
+.IP \(bu 2
+Decode from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{somecommand}} | base64 \-\-decode\fR

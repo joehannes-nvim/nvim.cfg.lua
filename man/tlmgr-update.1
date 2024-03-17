@@ -1,0 +1,48 @@
+.TH tlmgr update
+.PP
+.RS
+Update TeX Live packages.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update all TeX Live packages:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-all\fR
+.RS
+.IP \(bu 2
+Update tlmgr itself:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-self\fR
+.RS
+.IP \(bu 2
+Update a specific package:
+.RE
+.PP
+\fB\fCsudo tlmgr update {{package}}\fR
+.RS
+.IP \(bu 2
+Update all except a specific package:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-all \-\-exclude {{package}}\fR
+.RS
+.IP \(bu 2
+Update all packages, making a backup of the current packages:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-all \-\-backup\fR
+.RS
+.IP \(bu 2
+Update a specific package without updating its dependencies:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-no\-depends {{package}}\fR
+.RS
+.IP \(bu 2
+Simulate updating all packages without making any changes:
+.RE
+.PP
+\fB\fCsudo tlmgr update \-\-all \-\-dry\-run\fR

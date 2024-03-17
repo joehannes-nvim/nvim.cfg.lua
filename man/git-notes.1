@@ -1,0 +1,54 @@
+.TH git notes
+.PP
+.RS
+Add or inspect object notes.
+More information: \[la]https://git-scm.com/docs/git-notes\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all notes and the objects they are attached to:
+.RE
+.PP
+\fB\fCgit notes list\fR
+.RS
+.IP \(bu 2
+List all notes attached to a given object (defaults to HEAD):
+.RE
+.PP
+\fB\fCgit notes list [{{object}}]\fR
+.RS
+.IP \(bu 2
+Show the notes attached to a given object (defaults to HEAD):
+.RE
+.PP
+\fB\fCgit notes show [{{object}}]\fR
+.RS
+.IP \(bu 2
+Append a note to a specified object (opens the default text editor):
+.RE
+.PP
+\fB\fCgit notes append {{object}}\fR
+.RS
+.IP \(bu 2
+Append a note to a specified object, specifying the message:
+.RE
+.PP
+\fB\fCgit notes append \-\-message="{{message_text}}"\fR
+.RS
+.IP \(bu 2
+Edit an existing note (defaults to HEAD):
+.RE
+.PP
+\fB\fCgit notes edit [{{object}}]\fR
+.RS
+.IP \(bu 2
+Copy a note from one object to another:
+.RE
+.PP
+\fB\fCgit notes copy {{source_object}} {{target_object}}\fR
+.RS
+.IP \(bu 2
+Remove all the notes added to a specified object:
+.RE
+.PP
+\fB\fCgit notes remove {{object}}\fR

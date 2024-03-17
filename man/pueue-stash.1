@@ -1,0 +1,31 @@
+.TH pueue stash
+.PP
+.RS
+Stash tasks to prevent them starting automatically.
+See also \fB\fCpueue start\fR and \fB\fCpueue enqueue\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Stash an enqueued task:
+.RE
+.PP
+\fB\fCpueue stash {{task_id}}\fR
+.RS
+.IP \(bu 2
+Stash multiple tasks at once:
+.RE
+.PP
+\fB\fCpueue stash {{task_id}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Start a stashed task immediately:
+.RE
+.PP
+\fB\fCpueue start {{task_id}}\fR
+.RS
+.IP \(bu 2
+Enqueue a task to be executed when preceding tasks finish:
+.RE
+.PP
+\fB\fCpueue enqueue {{task_id}}\fR

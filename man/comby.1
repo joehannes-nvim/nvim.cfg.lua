@@ -1,0 +1,30 @@
+.TH comby
+.PP
+.RS
+Tool for structural code search and replace that supports many languages.
+More information: \[la]https://github.com/comby-tools/comby\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Match and rewrite templates, and print changes:
+.RE
+.PP
+\fB\fCcomby '{{assert_eq!(:[a], :[b])}}' '{{assert_eq!(:[b], :[a])}}' {{.rs}}\fR
+.RS
+.IP \(bu 2
+Match and rewrite with rewrite properties:
+.RE
+.PP
+\fB\fCcomby '{{assert_eq!(:[a], :[b])}}' '{{assert_eq!(:[b].Capitalize, :[a])}}' {{.rs}}\fR
+.RS
+.IP \(bu 2
+Match and rewrite in\-place:
+.RE
+.PP
+\fB\fCcomby \-in\-place '{{match_pattern}}' '{{rewrite_pattern}}'\fR
+.RS
+.IP \(bu 2
+Only perform matching and print matches:
+.RE
+.PP
+\fB\fCcomby \-match\-only '{{match_pattern}}' ""\fR

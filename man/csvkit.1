@@ -1,0 +1,31 @@
+.TH csvkit
+.PP
+.RS
+Manipulation toolkit for CSV files.
+See also: \fB\fCcsvclean\fR, \fB\fCcsvcut\fR, \fB\fCcsvformat\fR, \fB\fCcsvgrep\fR, \fB\fCcsvlook\fR, \fB\fCcsvpy\fR, \fB\fCcsvsort\fR, \fB\fCcsvstat\fR\&.
+More information: \[la]https://csvkit.readthedocs.io/en/0.9.1/cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a command on a CSV file with a custom delimiter:
+.RE
+.PP
+\fB\fC{{command}} \-d {{delimiter}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Run a command on a CSV file with a tab as a delimiter (overrides \-d):
+.RE
+.PP
+\fB\fC{{command}} \-t {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Run a command on a CSV file with a custom quote character:
+.RE
+.PP
+\fB\fC{{command}} \-q {{quote_char}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Run a command on a CSV file with no header row:
+.RE
+.PP
+\fB\fC{{command}} \-H {{path/to/file.csv}}\fR

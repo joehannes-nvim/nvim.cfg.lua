@@ -1,0 +1,43 @@
+.TH nix\-shell
+.PP
+.RS
+Start an interactive shell based on a Nix expression.
+See also: \fB\fCtldr nix3 shell\fR\&.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/nix-shell.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start with nix expression in \fB\fCshell.nix\fR or \fB\fCdefault.nix\fR in the current directory:
+.RE
+.PP
+\fB\fCnix\-shell\fR
+.RS
+.IP \(bu 2
+Run shell command in non\-interactive shell and exit:
+.RE
+.PP
+\fB\fCnix\-shell \-\-run "{{command}} {{argument1 argument2 ...}}"\fR
+.RS
+.IP \(bu 2
+Start with expression in \fB\fCdefault.nix\fR in the current directory:
+.RE
+.PP
+\fB\fCnix\-shell {{default.nix}}\fR
+.RS
+.IP \(bu 2
+Start with packages loaded from nixpkgs:
+.RE
+.PP
+\fB\fCnix\-shell \-\-packages {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Start with packages loaded from specific nixpkgs revision:
+.RE
+.PP
+\fB\fCnix\-shell \-\-packages {{package1 package2 ...}} \-I nixpkgs={{https://github.com/NixOS/nixpkgs/archive/nixpkgs_revision.tar.gz}}\fR
+.RS
+.IP \(bu 2
+Evaluate rest of file in specific interpreter, for use in \fB\fC#!\-scripts\fR (see \[la]https://nixos.org/manual/nix/stable/#use-as-a-interpreter\[ra]):
+.RE
+.PP
+\fB\fCnix\-shell \-i {{interpreter}} \-\-packages {{package1 package2 ...}}\fR

@@ -1,0 +1,49 @@
+.TH oc
+.PP
+.RS
+The OpenShift Container Platform CLI.
+Allows for application and container management.
+More information: \[la]https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to the OpenShift Container Platform server:
+.RE
+.PP
+\fB\fCoc login\fR
+.RS
+.IP \(bu 2
+Create a new project:
+.RE
+.PP
+\fB\fCoc new\-project {{project_name}}\fR
+.RS
+.IP \(bu 2
+Switch to an existing project:
+.RE
+.PP
+\fB\fCoc project {{project_name}}\fR
+.RS
+.IP \(bu 2
+Add a new application to a project:
+.RE
+.PP
+\fB\fCoc new\-app {{repo_url}} \-\-name {{application}}\fR
+.RS
+.IP \(bu 2
+Open a remote shell session to a container:
+.RE
+.PP
+\fB\fCoc rsh {{pod_name}}\fR
+.RS
+.IP \(bu 2
+List pods in a project:
+.RE
+.PP
+\fB\fCoc get pods\fR
+.RS
+.IP \(bu 2
+Log out from the current session:
+.RE
+.PP
+\fB\fCoc logout\fR

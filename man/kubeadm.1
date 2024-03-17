@@ -1,0 +1,48 @@
+.TH kubeadm
+.PP
+.RS
+Command\-line interface for creating and managing Kubernetes clusters.
+More information: \[la]https://kubernetes.io/docs/reference/setup-tools/kubeadm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a Kubernetes master node:
+.RE
+.PP
+\fB\fCkubeadm init\fR
+.RS
+.IP \(bu 2
+Bootstrap a Kubernetes worker node and join it to a cluster:
+.RE
+.PP
+\fB\fCkubeadm join \-\-token {{token}}\fR
+.RS
+.IP \(bu 2
+Create a new bootstrap token with a TTL of 12 hours:
+.RE
+.PP
+\fB\fCkubeadm token create \-\-ttl {{12h0m0s}}\fR
+.RS
+.IP \(bu 2
+Check if the Kubernetes cluster is upgradeable and which versions are available:
+.RE
+.PP
+\fB\fCkubeadm upgrade plan\fR
+.RS
+.IP \(bu 2
+Upgrade Kubernetes cluster to a specified version:
+.RE
+.PP
+\fB\fCkubeadm upgrade apply {{version}}\fR
+.RS
+.IP \(bu 2
+View the kubeadm ConfigMap containing the cluster's configuration:
+.RE
+.PP
+\fB\fCkubeadm config view\fR
+.RS
+.IP \(bu 2
+Revert changes made to the host by 'kubeadm init' or 'kubeadm join':
+.RE
+.PP
+\fB\fCkubeadm reset\fR

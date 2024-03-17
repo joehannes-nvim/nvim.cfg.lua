@@ -1,0 +1,31 @@
+.TH leave
+.PP
+.RS
+Set a reminder for when it's time to leave.
+To remove reminders use \fB\fCkill $(pidof leave)\fR\&.
+More information: \[la]https://www.freebsd.org/cgi/man.cgi?query=leave\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set a reminder at a given time:
+.RE
+.PP
+\fB\fCleave {{time_to_leave}}\fR
+.RS
+.IP \(bu 2
+Set a reminder to leave at noon:
+.RE
+.PP
+\fB\fCleave {{1200}}\fR
+.RS
+.IP \(bu 2
+Set a reminder in a specific amount of time:
+.RE
+.PP
+\fB\fCleave +{{amount_of_time}}\fR
+.RS
+.IP \(bu 2
+Set a reminder to leave in 4 hours and 4 minutes:
+.RE
+.PP
+\fB\fCleave +{{0404}}\fR

@@ -1,0 +1,24 @@
+.TH git commit\-graph
+.PP
+.RS
+Write and verify Git commit\-graph files.
+More information: \[la]https://git-scm.com/docs/git-commit-graph\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Write a commit\-graph file for the packed commits in the repository's local \fB\fC\&.git\fR directory:
+.RE
+.PP
+\fB\fCgit commit\-graph write\fR
+.RS
+.IP \(bu 2
+Write a commit\-graph file containing all reachable commits:
+.RE
+.PP
+\fB\fCgit show\-ref \-\-hash | git commit\-graph write \-\-stdin\-commits\fR
+.RS
+.IP \(bu 2
+Write a commit\-graph file containing all commits in the current commit\-graph file along with those reachable from \fB\fCHEAD\fR:
+.RE
+.PP
+\fB\fCgit rev\-parse {{HEAD}} | git commit\-graph write \-\-stdin\-commits \-\-append\fR

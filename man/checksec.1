@@ -1,0 +1,30 @@
+.TH checksec
+.PP
+.RS
+Check security properties of executables.
+More information: \[la]https://github.com/slimm609/checksec.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List security properties of an executable binary file:
+.RE
+.PP
+\fB\fCchecksec \-\-file={{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+List security properties recursively of all executable files in a directory:
+.RE
+.PP
+\fB\fCchecksec \-\-dir={{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List security properties of a process:
+.RE
+.PP
+\fB\fCchecksec \-\-proc={{pid}}\fR
+.RS
+.IP \(bu 2
+List security properties of the running kernel:
+.RE
+.PP
+\fB\fCchecksec \-\-kernel\fR

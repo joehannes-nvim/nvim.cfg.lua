@@ -1,0 +1,49 @@
+.TH lpr
+.PP
+.RS
+CUPS tool for printing files.
+See also: \fB\fClpstat\fR and \fB\fClpadmin\fR\&.
+More information: \[la]https://www.cups.org/doc/man-lpr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a file to the default printer:
+.RE
+.PP
+\fB\fClpr {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print 2 copies:
+.RE
+.PP
+\fB\fClpr \-# {{2}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print to a named printer:
+.RE
+.PP
+\fB\fClpr \-P {{printer}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print either a single page (e.g. 2) or a range of pages (e.g. 2–16):
+.RE
+.PP
+\fB\fClpr \-o page\-ranges={{2|2\-16}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print double\-sided either in portrait (long) or in landscape (short):
+.RE
+.PP
+\fB\fClpr \-o sides={{two\-sided\-long\-edge|two\-sided\-short\-edge}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Set page size (more options may be available depending on setup):
+.RE
+.PP
+\fB\fClpr \-o media={{a4|letter|legal}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print multiple pages per sheet:
+.RE
+.PP
+\fB\fClpr \-o number\-up={{2|4|6|9|16}} {{path/to/file}}\fR

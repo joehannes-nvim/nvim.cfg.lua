@@ -1,0 +1,31 @@
+.TH az redis
+.PP
+.RS
+Manage Redis caches.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/redis\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Redis cache instance:
+.RE
+.PP
+\fB\fCaz redis create \-\-location {{location}} \-\-name {{name}} \-\-resource\-group {{resource_group}} \-\-sku {{Basic|Premium|Standard}} \-\-vm\-size {{c0|c1|c2|c3|c4|c5|c6|p1|p2|p3|p4|p5}}\fR
+.RS
+.IP \(bu 2
+Update a Redis cache:
+.RE
+.PP
+\fB\fCaz redis update \-\-name {{name}} \-\-resource\-group {{resource_group}} \-\-sku {{Basic|Premium|Standard}} \-\-vm\-size {{c0|c1|c2|c3|c4|c5|c6|p1|p2|p3|p4|p5}}\fR
+.RS
+.IP \(bu 2
+Export data stored in a Redis cache:
+.RE
+.PP
+\fB\fCaz redis export \-\-container {{container}} \-\-file\-format {{file\-format}} \-\-name {{name}} \-\-prefix {{prefix}} \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Delete a Redis cache:
+.RE
+.PP
+\fB\fCaz redis delete \-\-name {{name}} \-\-resource\-group {{resource_group}} \-\-yes\fR

@@ -1,0 +1,48 @@
+.TH dotnet build
+.PP
+.RS
+Builds a .NET application and its dependencies.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools/dotnet-build\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile the project or solution in the current directory:
+.RE
+.PP
+\fB\fCdotnet build\fR
+.RS
+.IP \(bu 2
+Compile a .NET project or solution in debug mode:
+.RE
+.PP
+\fB\fCdotnet build {{path/to/project_or_solution}}\fR
+.RS
+.IP \(bu 2
+Compile in release mode:
+.RE
+.PP
+\fB\fCdotnet build \-\-configuration {{Release}}\fR
+.RS
+.IP \(bu 2
+Compile without restoring dependencies:
+.RE
+.PP
+\fB\fCdotnet build \-\-no\-restore\fR
+.RS
+.IP \(bu 2
+Compile with a specific verbosity level:
+.RE
+.PP
+\fB\fCdotnet build \-\-verbosity {{quiet|minimal|normal|detailed|diagnostic}}\fR
+.RS
+.IP \(bu 2
+Compile for a specific runtime:
+.RE
+.PP
+\fB\fCdotnet build \-\-runtime {{runtime_identifier}}\fR
+.RS
+.IP \(bu 2
+Specify the output directory:
+.RE
+.PP
+\fB\fCdotnet build \-\-output {{path/to/directory}}\fR

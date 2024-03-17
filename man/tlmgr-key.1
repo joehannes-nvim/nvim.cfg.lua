@@ -1,0 +1,30 @@
+.TH tlmgr key
+.PP
+.RS
+Manage GPG keys used to verify TeX Live databases.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all keys for TeX Live:
+.RE
+.PP
+\fB\fCtlmgr key list\fR
+.RS
+.IP \(bu 2
+Add a key from a specific file:
+.RE
+.PP
+\fB\fCsudo tlmgr key add {{path/to/key.gpg}}\fR
+.RS
+.IP \(bu 2
+Add a key from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/key.gpg}} | sudo tlmgr key add \-\fR
+.RS
+.IP \(bu 2
+Remove a specific key by its ID:
+.RE
+.PP
+\fB\fCsudo tlmgr key remove {{key_id}}\fR

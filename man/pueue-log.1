@@ -1,0 +1,31 @@
+.TH pueue log
+.PP
+.RS
+Display the log output of 1 or more tasks.
+See also: \fB\fCpueue status\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the last few lines of output from all tasks:
+.RE
+.PP
+\fB\fCpueue log\fR
+.RS
+.IP \(bu 2
+Show the full output of a task:
+.RE
+.PP
+\fB\fCpueue log {{task_id}}\fR
+.RS
+.IP \(bu 2
+Show the last few lines of output from several tasks:
+.RE
+.PP
+\fB\fCpueue log {{task_id}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Print a specific number of lines from the tail of output:
+.RE
+.PP
+\fB\fCpueue log \-\-lines {{number_of_lines}} {{task_id}}\fR

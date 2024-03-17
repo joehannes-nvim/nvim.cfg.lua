@@ -1,0 +1,30 @@
+.TH palmtopnm
+.PP
+.RS
+Convert a Palm Bitmap file to a PNM image.
+More information: \[la]https://netpbm.sourceforge.net/doc/palmtopnm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate the PNM image as output, for a Palm Bitmap file as input:
+.RE
+.PP
+\fB\fCpalmtopnm {{path/to/file.palm}}\fR
+.RS
+.IP \(bu 2
+Display various information about the input Palm Bitmap file and process:
+.RE
+.PP
+\fB\fCpalmtopnm \-verbose {{path/to/file.palm}}\fR
+.RS
+.IP \(bu 2
+Generate a histogram of colours in the input Palm Bitmap file to \fB\fCstderr\fR:
+.RE
+.PP
+\fB\fCpalmtopnm \-showhist {{path/to/file.palm}}\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCpalmtopnm \-version\fR

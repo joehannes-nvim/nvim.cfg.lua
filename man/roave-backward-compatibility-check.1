@@ -1,0 +1,30 @@
+.TH roave\-backward\-compatibility\-check
+.PP
+.RS
+A tool that can be used to verify backward compatibility breaks between two versions of a PHP library.
+More information: \[la]https://github.com/Roave/BackwardCompatibilityCheck\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check for breaking changes since the last tag:
+.RE
+.PP
+\fB\fCroave\-backward\-compatibility\-check\fR
+.RS
+.IP \(bu 2
+Check for breaking changes since a specific tag:
+.RE
+.PP
+\fB\fCroave\-backward\-compatibility\-check \-\-from={{git_reference}}\fR
+.RS
+.IP \(bu 2
+Check for breaking changes between the last tag and a specific reference:
+.RE
+.PP
+\fB\fCroave\-backward\-compatibility\-check \-\-to={{git_reference}}\fR
+.RS
+.IP \(bu 2
+Check for breaking changes and output to Markdown:
+.RE
+.PP
+\fB\fCroave\-backward\-compatibility\-check \-\-format=markdown > {{results.md}}\fR

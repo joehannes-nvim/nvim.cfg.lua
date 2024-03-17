@@ -1,0 +1,36 @@
+.TH dotnet run
+.PP
+.RS
+Run a .NET application without explicit compile or launch commands.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools/dotnet-run\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run the project in the current directory:
+.RE
+.PP
+\fB\fCdotnet run\fR
+.RS
+.IP \(bu 2
+Run a specific project:
+.RE
+.PP
+\fB\fCdotnet run \-\-project {{path/to/file.csproj}}\fR
+.RS
+.IP \(bu 2
+Run the project with specific arguments:
+.RE
+.PP
+\fB\fCdotnet run \-\- {{arg1=foo arg2=bar ...}}\fR
+.RS
+.IP \(bu 2
+Run the project using a target framework moniker:
+.RE
+.PP
+\fB\fCdotnet run \-\-framework {{net7.0}}\fR
+.RS
+.IP \(bu 2
+Specify architecture and OS, available since .NET 6 (Don't use \fB\fC\-\-runtime\fR with these options):
+.RE
+.PP
+\fB\fCdotnet run \-\-arch {{x86|x64|arm|arm64}} \-\-os {{win|win7|osx|linux|ios|android}}\fR

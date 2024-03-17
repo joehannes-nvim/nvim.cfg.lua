@@ -1,0 +1,30 @@
+.TH nohup
+.PP
+.RS
+Allows for a process to live when the terminal gets killed.
+More information: \[la]https://www.gnu.org/software/coreutils/nohup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a process that can live beyond the terminal:
+.RE
+.PP
+\fB\fCnohup {{command}} {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+Launch \fB\fCnohup\fR in background mode:
+.RE
+.PP
+\fB\fCnohup {{command}} {{argument1 argument2 ...}} &\fR
+.RS
+.IP \(bu 2
+Run a shell script that can live beyond the terminal:
+.RE
+.PP
+\fB\fCnohup {{path/to/script.sh}} &\fR
+.RS
+.IP \(bu 2
+Run a process and write the output to a specific file:
+.RE
+.PP
+\fB\fCnohup {{command}} {{argument1 argument2 ...}} > {{path/to/output_file}} &\fR

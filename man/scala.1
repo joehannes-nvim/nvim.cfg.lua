@@ -1,0 +1,36 @@
+.TH scala
+.PP
+.RS
+Scala application launcher and interactive interpreter.
+More information: \[la]https://scala-lang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCscala\fR
+.RS
+.IP \(bu 2
+Start the interpreter with a dependency in the classpath:
+.RE
+.PP
+\fB\fCscala \-classpath {{filename.jar}} {{command}}\fR
+.RS
+.IP \(bu 2
+Execute a Scala script:
+.RE
+.PP
+\fB\fCscala {{script.scala}}\fR
+.RS
+.IP \(bu 2
+Execute a \fB\fC\&.jar\fR program:
+.RE
+.PP
+\fB\fCscala {{filename.jar}}\fR
+.RS
+.IP \(bu 2
+Execute a single Scala command in the command\-line:
+.RE
+.PP
+\fB\fCscala \-e {{command}}\fR

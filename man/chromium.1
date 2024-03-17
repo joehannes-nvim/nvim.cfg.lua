@@ -1,0 +1,54 @@
+.TH chromium
+.PP
+.RS
+Open\-source web browser principally developed and maintained by Google.
+More information: \[la]https://www.chromium.org/developers/how-tos/run-chromium-with-flags/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a specific URL or file:
+.RE
+.PP
+\fB\fCchromium {{https://example.com|path/to/file.html}}\fR
+.RS
+.IP \(bu 2
+Open in incognito mode:
+.RE
+.PP
+\fB\fCchromium \-\-incognito {{example.com}}\fR
+.RS
+.IP \(bu 2
+Open in a new window:
+.RE
+.PP
+\fB\fCchromium \-\-new\-window {{example.com}}\fR
+.RS
+.IP \(bu 2
+Open in application mode (without toolbars, URL bar, buttons, etc.):
+.RE
+.PP
+\fB\fCchromium \-\-app={{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Use a proxy server:
+.RE
+.PP
+\fB\fCchromium \-\-proxy\-server="{{socks5://hostname:66}}" {{example.com}}\fR
+.RS
+.IP \(bu 2
+Open with a custom profile directory:
+.RE
+.PP
+\fB\fCchromium \-\-user\-data\-dir={{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Open without CORS validation (useful to test an API):
+.RE
+.PP
+\fB\fCchromium \-\-user\-data\-dir={{path/to/directory}} \-\-disable\-web\-security\fR
+.RS
+.IP \(bu 2
+Open with a DevTools window for each tab opened:
+.RE
+.PP
+\fB\fCchromium \-\-auto\-open\-devtools\-for\-tabs\fR

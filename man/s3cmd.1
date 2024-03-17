@@ -1,0 +1,48 @@
+.TH s3cmd
+.PP
+.RS
+Command line tool and client for uploading, retrieving and managing data in S3 compatible object storage.
+More information: \[la]https://s3tools.org/s3cmd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Invoke configuration/reconfiguration tool:
+.RE
+.PP
+\fB\fCs3cmd \-\-configure\fR
+.RS
+.IP \(bu 2
+List Buckets/Folders/Objects:
+.RE
+.PP
+\fB\fCs3cmd ls s3://{{bucket|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create Bucket/Folder:
+.RE
+.PP
+\fB\fCs3cmd mb s3://{{bucket}}\fR
+.RS
+.IP \(bu 2
+Download a specific file from a bucket:
+.RE
+.PP
+\fB\fCs3cmd get s3://{{bucket_name}}/{{path/to/file}} {{path/to/local_file}}\fR
+.RS
+.IP \(bu 2
+Upload a file to a bucket:
+.RE
+.PP
+\fB\fCs3cmd put {{local_file}} s3://{{bucket}}/{{file}}\fR
+.RS
+.IP \(bu 2
+Move an object to a specific bucket location:
+.RE
+.PP
+\fB\fCs3cmd mv s3://{{src_bucket}}/{{src_object}} s3://{{dst_bucket}}/{{dst_object}}\fR
+.RS
+.IP \(bu 2
+Delete a specific object:
+.RE
+.PP
+\fB\fCs3cmd rm s3://{{bucket}}/{{object}}\fR

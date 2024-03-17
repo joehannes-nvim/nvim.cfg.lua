@@ -1,0 +1,25 @@
+.TH pio update
+.PP
+.RS
+Update installed PlatformIO Core packages, development platforms and global libraries.
+See also: \fB\fCpio platform update\fR, \fB\fCpio lib update\fR\&.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_update.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform a full update of all packages, development platforms and global libraries:
+.RE
+.PP
+\fB\fCpio update\fR
+.RS
+.IP \(bu 2
+Update core packages only (skips platforms and libraries):
+.RE
+.PP
+\fB\fCpio update \-\-core\-packages\fR
+.RS
+.IP \(bu 2
+Check for new versions of packages, platforms and libraries but do not actually update them:
+.RE
+.PP
+\fB\fCpio update \-\-dry\-run\fR

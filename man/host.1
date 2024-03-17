@@ -1,0 +1,30 @@
+.TH host
+.PP
+.RS
+Lookup Domain Name Server.
+More information: \[la]https://manned.org/host\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lookup A, AAAA, and MX records of a domain:
+.RE
+.PP
+\fB\fChost {{domain}}\fR
+.RS
+.IP \(bu 2
+Lookup a field (CNAME, TXT,...) of a domain:
+.RE
+.PP
+\fB\fChost \-t {{field}} {{domain}}\fR
+.RS
+.IP \(bu 2
+Reverse lookup an IP:
+.RE
+.PP
+\fB\fChost {{ip_address}}\fR
+.RS
+.IP \(bu 2
+Specify an alternate DNS server to query:
+.RE
+.PP
+\fB\fChost {{domain}} {{8.8.8.8}}\fR

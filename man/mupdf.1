@@ -1,0 +1,48 @@
+.TH mupdf
+.PP
+.RS
+MuPDF is a lightweight PDF, XPS, and E\-book viewer.
+More information: \[la]https://www.mupdf.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a PDF on the first page:
+.RE
+.PP
+\fB\fCmupdf {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a PDF on page 3:
+.RE
+.PP
+\fB\fCmupdf {{path/to/file}} {{3}}\fR
+.RS
+.IP \(bu 2
+Open a password secured PDF:
+.RE
+.PP
+\fB\fCmupdf \-p {{password}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a PDF with an initial zoom level, specified as DPI, of 72:
+.RE
+.PP
+\fB\fCmupdf \-r {{72}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a PDF with inverted color:
+.RE
+.PP
+\fB\fCmupdf \-I {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a PDF tinted red #FF0000 (hexadecimal color syntax RRGGBB):
+.RE
+.PP
+\fB\fCmupdf \-C {{FF0000}}\fR
+.RS
+.IP \(bu 2
+Open a PDF without anti\-aliasing (0 = off, 8 = best):
+.RE
+.PP
+\fB\fCmupdf \-A {{0}}\fR

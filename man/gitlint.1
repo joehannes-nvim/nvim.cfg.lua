@@ -1,0 +1,42 @@
+.TH gitlint
+.PP
+.RS
+Git commit message linter checks your commit messages for style.
+More information: \[la]https://jorisroovers.com/gitlint/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the last commit message:
+.RE
+.PP
+\fB\fCgitlint\fR
+.RS
+.IP \(bu 2
+The range of commits to lint:
+.RE
+.PP
+\fB\fCgitlint \-\-commits {{single_refspec_argument}}\fR
+.RS
+.IP \(bu 2
+Path to a directory or Python module with extra user\-defined rules:
+.RE
+.PP
+\fB\fCgitlint \-\-extra\-path {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Start a specific CI job:
+.RE
+.PP
+\fB\fCgitlint \-\-target {{path/to/target_directory}}\fR
+.RS
+.IP \(bu 2
+Path to a file containing a commit\-msg:
+.RE
+.PP
+\fB\fCgitlint \-\-msg\-filename {{path/to/filename}}\fR
+.RS
+.IP \(bu 2
+Read staged commit meta\-info from the local repository:
+.RE
+.PP
+\fB\fCgitlint \-\-staged\fR

@@ -1,0 +1,24 @@
+.TH cargo fmt
+.PP
+.RS
+Run \fB\fCrustfmt\fR on all source files in a Rust project.
+More information: \[la]https://github.com/rust-lang/rustfmt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format all source files:
+.RE
+.PP
+\fB\fCcargo fmt\fR
+.RS
+.IP \(bu 2
+Check for formatting errors without writing to the files:
+.RE
+.PP
+\fB\fCcargo fmt \-\-check\fR
+.RS
+.IP \(bu 2
+Pass arguments to each \fB\fCrustfmt\fR call:
+.RE
+.PP
+\fB\fCcargo fmt \-\- {{rustfmt_args}}\fR

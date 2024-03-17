@@ -1,0 +1,42 @@
+.TH wondershaper
+.PP
+.RS
+Allows the user to limit the bandwidth of one or more network adapters.
+More information: \[la]https://github.com/magnific0/wondershaper#usage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display [h]elp:
+.RE
+.PP
+\fB\fCwondershaper \-h\fR
+.RS
+.IP \(bu 2
+Show the current [s]tatus of a specific [a]dapter:
+.RE
+.PP
+\fB\fCwondershaper \-s \-a {{adapter_name}}\fR
+.RS
+.IP \(bu 2
+Clear limits from a specific [a]dapter:
+.RE
+.PP
+\fB\fCwondershaper \-c \-a {{adapter_name}}\fR
+.RS
+.IP \(bu 2
+Set a specific maximum [d]ownload rate (in Kbps):
+.RE
+.PP
+\fB\fCwondershaper \-a {{adapter_name}} \-d {{1024}}\fR
+.RS
+.IP \(bu 2
+Set a specific maximum [u]pload rate (in Kbps):
+.RE
+.PP
+\fB\fCwondershaper \-a {{adapter_name}} \-u {{512}}\fR
+.RS
+.IP \(bu 2
+Set a specific maximum [d]ownload rate and [u]pload rate (in Kpbs):
+.RE
+.PP
+\fB\fCwondershaper \-a {{adapter_name}} \-d {{1024}} \-u {{512}}\fR

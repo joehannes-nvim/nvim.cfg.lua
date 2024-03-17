@@ -1,0 +1,13 @@
+.TH virsh pool\-define\-as
+.PP
+.RS
+Create a configuration file in \fB\fC/etc/libvirt/storage\fR for a persistent virtual machine storage pool from the provided arguments.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-build\fR, \fB\fCvirsh\-pool\-start\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create the configuration file for a storage pool called pool_name using \fB\fC/var/vms\fR as the underlying storage system:
+.RE
+.PP
+\fB\fCvirsh pool\-define\-as \-\-name {{pool_name}} \-\-type {{dir}} \-\-target {{/var/vms}}\fR

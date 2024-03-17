@@ -1,0 +1,49 @@
+.TH git tag
+.PP
+.RS
+Create, list, delete or verify tags.
+A tag is a static reference to a specific commit.
+More information: \[la]https://git-scm.com/docs/git-tag\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all tags:
+.RE
+.PP
+\fB\fCgit tag\fR
+.RS
+.IP \(bu 2
+Create a tag with the given name pointing to the current commit:
+.RE
+.PP
+\fB\fCgit tag {{tag_name}}\fR
+.RS
+.IP \(bu 2
+Create a tag with the given name pointing to a given commit:
+.RE
+.PP
+\fB\fCgit tag {{tag_name}} {{commit}}\fR
+.RS
+.IP \(bu 2
+Create an annotated tag with the given message:
+.RE
+.PP
+\fB\fCgit tag {{tag_name}} \-m {{tag_message}}\fR
+.RS
+.IP \(bu 2
+Delete the tag with the given name:
+.RE
+.PP
+\fB\fCgit tag \-d {{tag_name}}\fR
+.RS
+.IP \(bu 2
+Get updated tags from upstream:
+.RE
+.PP
+\fB\fCgit fetch \-\-tags\fR
+.RS
+.IP \(bu 2
+List all tags whose ancestors include a given commit:
+.RE
+.PP
+\fB\fCgit tag \-\-contains {{commit}}\fR

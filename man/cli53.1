@@ -1,0 +1,54 @@
+.TH cli53
+.PP
+.RS
+Command line tool for Amazon Route 53.
+More information: \[la]https://github.com/barnybug/cli53\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List domains:
+.RE
+.PP
+\fB\fCcli53 list\fR
+.RS
+.IP \(bu 2
+Create a domain:
+.RE
+.PP
+\fB\fCcli53 create {{mydomain.com}} \-\-comment "{{comment}}"\fR
+.RS
+.IP \(bu 2
+Export a bind zone file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcli53 export {{mydomain.com}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCwww\fR subdomain pointing to a relative record in the same zone:
+.RE
+.PP
+\fB\fCcli53 {{rc|rrcreate}} {{mydomain.com}} {{'www 300 CNAME lb'}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCwww\fR subdomain pointing to an external address (must end with a dot):
+.RE
+.PP
+\fB\fCcli53 {{rc|rrcreate}} {{mydomain.com}} {{'www 300 CNAME lb.externalhost.com.'}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCwww\fR subdomain pointing to an IP address:
+.RE
+.PP
+\fB\fCcli53 {{rc|rrcreate}} {{mydomain.com} {{'www 300 A 150.130.110.1'}}\fR
+.RS
+.IP \(bu 2
+Replace a \fB\fCwww\fR subdomain pointing to a different IP:
+.RE
+.PP
+\fB\fCcli53 {{rc|rrcreate}} \-\-replace {{'www 300 A 150.130.110.2'}}\fR
+.RS
+.IP \(bu 2
+Delete a record A:
+.RE
+.PP
+\fB\fCcli53 {{rd|rrdelete}} {{mydomain.com}} {{www}} {{A}}\fR

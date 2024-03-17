@@ -1,0 +1,36 @@
+.TH git check\-ignore
+.PP
+.RS
+Analyze and debug Git ignore/exclude (".gitignore") files.
+More information: \[la]https://git-scm.com/docs/git-check-ignore\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check whether a file or directory is ignored:
+.RE
+.PP
+\fB\fCgit check\-ignore {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Check whether multiple files or directories are ignored:
+.RE
+.PP
+\fB\fCgit check\-ignore {{path/to/file}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Use pathnames, one per line, from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCgit check\-ignore \-\-stdin < {{path/to/file_list}}\fR
+.RS
+.IP \(bu 2
+Do not check the index (used to debug why paths were tracked and not ignored):
+.RE
+.PP
+\fB\fCgit check\-ignore \-\-no\-index {{path/to/files_or_directories}}\fR
+.RS
+.IP \(bu 2
+Include details about the matching pattern for each path:
+.RE
+.PP
+\fB\fCgit check\-ignore \-\-verbose {{path/to/files_or_directories}}\fR

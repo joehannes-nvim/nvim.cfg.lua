@@ -1,0 +1,30 @@
+.TH salt\-call
+.PP
+.RS
+Invoke salt locally on a salt minion.
+More information: \[la]https://docs.saltstack.com/ref/cli/salt-call.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Perform a highstate on this minion:
+.RE
+.PP
+\fB\fCsalt\-call state.highstate\fR
+.RS
+.IP \(bu 2
+Perform a highstate dry\-run, compute all changes but don't actually perform them:
+.RE
+.PP
+\fB\fCsalt\-call state.highstate test=true\fR
+.RS
+.IP \(bu 2
+Perform a highstate with verbose debugging output:
+.RE
+.PP
+\fB\fCsalt\-call \-l debug state.highstate\fR
+.RS
+.IP \(bu 2
+List this minion's grains:
+.RE
+.PP
+\fB\fCsalt\-call grains.items\fR

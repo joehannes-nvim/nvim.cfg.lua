@@ -1,0 +1,49 @@
+.TH az pipelines
+.PP
+.RS
+Manage Azure Pipelines resources.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/pipelines\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Azure Pipeline (YAML based):
+.RE
+.PP
+\fB\fCaz pipelines create \-\-org {{organization_url}} \-\-project {{project_name}} \-\-name {{pipeline_name}} \-\-description {{description}} \-\-repository {{repository_name}} \-\-branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Delete a specific pipeline:
+.RE
+.PP
+\fB\fCaz pipelines delete \-\-org {{organization_url}} \-\-project {{project_name}} \-\-id {{pipeline_id}}\fR
+.RS
+.IP \(bu 2
+List pipelines:
+.RE
+.PP
+\fB\fCaz pipelines list \-\-org {{organization_url}} \-\-project {{project_name}}\fR
+.RS
+.IP \(bu 2
+Enqueue a specific pipeline to run:
+.RE
+.PP
+\fB\fCaz pipelines run \-\-org {{organization_url}} \-\-project {{project_name}} \-\-name {{pipeline_name}}\fR
+.RS
+.IP \(bu 2
+Get the details of a specific pipeline:
+.RE
+.PP
+\fB\fCaz pipelines show \-\-org {{organization_url}} \-\-project {{project_name}} \-\-name {{pipeline_name}}\fR
+.RS
+.IP \(bu 2
+Update a specific pipeline:
+.RE
+.PP
+\fB\fCaz pipelines update \-\-org {{organization_url}} \-\-project {{project_name}} \-\-name {{pipeline_name}} \-\-new\-name {{pipeline_new_name}} \-\-new\-folder\-path {{user1/production_pipelines}}\fR
+.RS
+.IP \(bu 2
+Get a list of agents in a pool:
+.RE
+.PP
+\fB\fCaz pipelines agent list \-\-org {{organization_url}} \-\-pool\-id {{agent_pool}}\fR

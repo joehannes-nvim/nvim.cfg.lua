@@ -1,0 +1,24 @@
+.TH pgrep
+.PP
+.RS
+Find or signal processes by name.
+More information: \[la]https://www.man7.org/linux/man-pages/man1/pkill.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Return PIDs of any running processes with a matching command string:
+.RE
+.PP
+\fB\fCpgrep {{process_name}}\fR
+.RS
+.IP \(bu 2
+Search for processes including their command\-line options:
+.RE
+.PP
+\fB\fCpgrep \-\-full "{{process_name}} {{parameter}}"\fR
+.RS
+.IP \(bu 2
+Search for processes run by a specific user:
+.RE
+.PP
+\fB\fCpgrep \-\-euid root {{process_name}}\fR

@@ -1,0 +1,30 @@
+.TH timetrap
+.PP
+.RS
+Simple command\-line time tracker written in Ruby.
+More information: \[la]https://github.com/samg/timetrap\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new timesheet:
+.RE
+.PP
+\fB\fCtimetrap sheet {{timesheet}}\fR
+.RS
+.IP \(bu 2
+Check in an entry started 5 minutes ago:
+.RE
+.PP
+\fB\fCtimetrap in \-\-at "{{5 minutes ago}}" {{entry_notes}}\fR
+.RS
+.IP \(bu 2
+Display the current timesheet:
+.RE
+.PP
+\fB\fCtimetrap display\fR
+.RS
+.IP \(bu 2
+Edit the last entry's end time:
+.RE
+.PP
+\fB\fCtimetrap edit \-\-end {{time}}\fR

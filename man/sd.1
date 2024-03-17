@@ -1,0 +1,30 @@
+.TH sd
+.PP
+.RS
+Intuitive find and replace.
+More information: \[la]https://github.com/chmln/sd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Trim some whitespace using a regular expression (output stream: \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fC{{echo 'lorem ipsum 23   '}} | sd '\\s+$' ''\fR
+.RS
+.IP \(bu 2
+Replace words using capture groups (output stream: \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fC{{echo 'cargo +nightly watch'}} | sd '(\\w+)\\s+\\+(\\w+)\\s+(\\w+)' 'cmd: $1, channel: $2, subcmd: $3'\fR
+.RS
+.IP \(bu 2
+Find and replace in a specific file (output stream: \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCsd \-p {{'window.fetch'}} {{'fetch'}} {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Find and replace in all files in the current project (output stream: \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCsd {{'from "react"'}} {{'from "preact"'}} "$(find . \-type f)"\fR

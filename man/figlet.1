@@ -1,0 +1,37 @@
+.TH figlet
+.PP
+.RS
+Generate ASCII banners from user input.
+See also: \fB\fCshowfigfonts\fR\&.
+More information: \[la]http://www.figlet.org/figlet-man.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate by directly inputting text:
+.RE
+.PP
+\fB\fCfiglet {{input_text}}\fR
+.RS
+.IP \(bu 2
+Use a custom font file:
+.RE
+.PP
+\fB\fCfiglet {{input_text}} \-f {{path/to/font_file.flf}}\fR
+.RS
+.IP \(bu 2
+Use a font from the default font directory (the extension can be omitted):
+.RE
+.PP
+\fB\fCfiglet {{input_text}} \-f {{font_filename}}\fR
+.RS
+.IP \(bu 2
+Pipe command output through FIGlet:
+.RE
+.PP
+\fB\fC{{command}} | figlet\fR
+.RS
+.IP \(bu 2
+Show available FIGlet fonts:
+.RE
+.PP
+\fB\fCshowfigfonts {{optional_string_to_display}}\fR

@@ -1,0 +1,49 @@
+.TH az vm
+.PP
+.RS
+Manage virtual machines in Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/vm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List details of available Virtual Machines:
+.RE
+.PP
+\fB\fCaz vm list\fR
+.RS
+.IP \(bu 2
+Create a virtual machine using the default Ubuntu image and generate ssh keys:
+.RE
+.PP
+\fB\fCaz vm create \-\-resource\-group {{rg}} \-\-name {{vm_name}} \-\-image {{UbuntuLTS}} \-\-admin\-user {{azureuser}} \-\-generate\-ssh\-keys\fR
+.RS
+.IP \(bu 2
+Stop a Virtual Machine:
+.RE
+.PP
+\fB\fCaz vm stop \-\-resource\-group {{rg}} \-\-name {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Deallocate a Virtual Machine:
+.RE
+.PP
+\fB\fCaz vm deallocate \-\-resource\-group {{rg}} \-\-name {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Start a Virtual Machine:
+.RE
+.PP
+\fB\fCaz vm start \-\-resource\-group {{rg}} \-\-name {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Restart a Virtual Machine:
+.RE
+.PP
+\fB\fCaz vm restart \-\-resource\-group {{rg}} \-\-name {{vm_name}}\fR
+.RS
+.IP \(bu 2
+List VM images available in the Azure Marketplace:
+.RE
+.PP
+\fB\fCaz vm image list\fR

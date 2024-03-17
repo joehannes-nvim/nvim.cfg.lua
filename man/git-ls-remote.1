@@ -1,0 +1,37 @@
+.TH git ls\-remote
+.PP
+.RS
+Git command for listing references in a remote repository based on name or URL.
+If no name or URL are given, then the configured upstream branch will be used, or remote origin if the former is not configured.
+More information: \[la]https://git-scm.com/docs/git-ls-remote\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all references in the default remote repository:
+.RE
+.PP
+\fB\fCgit ls\-remote\fR
+.RS
+.IP \(bu 2
+Show only heads references in the default remote repository:
+.RE
+.PP
+\fB\fCgit ls\-remote \-\-heads\fR
+.RS
+.IP \(bu 2
+Show only tags references in the default remote repository:
+.RE
+.PP
+\fB\fCgit ls\-remote \-\-tags\fR
+.RS
+.IP \(bu 2
+Show all references from a remote repository based on name or URL:
+.RE
+.PP
+\fB\fCgit ls\-remote {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Show references from a remote repository filtered by a pattern:
+.RE
+.PP
+\fB\fCgit ls\-remote {{repository_name}} "{{pattern}}"\fR

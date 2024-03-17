@@ -1,0 +1,43 @@
+.TH install
+.PP
+.RS
+Copy files and set attributes.
+Copy files (often executable) to a system location like \fB\fC/usr/local/bin\fR, give them the appropriate permissions/ownership.
+More information: \[la]https://www.gnu.org/software/coreutils/install\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy files to the destination:
+.RE
+.PP
+\fB\fCinstall {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Copy files to the destination, setting their ownership:
+.RE
+.PP
+\fB\fCinstall \-\-owner {{user}} {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Copy files to the destination, setting their group ownership:
+.RE
+.PP
+\fB\fCinstall \-\-group {{user}} {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Copy files to the destination, setting their \fB\fCmode\fR:
+.RE
+.PP
+\fB\fCinstall \-\-mode {{+x}} {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Copy files and apply access/modification times of source to the destination:
+.RE
+.PP
+\fB\fCinstall \-\-preserve\-timestamps {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Copy files and create the directories at the destination if they don't exist:
+.RE
+.PP
+\fB\fCinstall \-D {{path/to/source_file1 path/to/source_file2 ...}} {{path/to/destination}}\fR

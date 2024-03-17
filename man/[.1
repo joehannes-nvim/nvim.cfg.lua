@@ -1,0 +1,49 @@
+.TH [
+.PP
+.RS
+Check file types and compare values.
+Returns a status of 0 if the condition evaluates to true, 1 if it evaluates to false.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#index-test\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test if a given variable is equal/not equal to the specified string:
+.RE
+.PP
+\fB\fC[ "${{variable}}" {{==|!=}} "{{string}}" ]\fR
+.RS
+.IP \(bu 2
+Test if a given variable is [eq]ual/[n]ot [e]qual/[g]reater [t]han/[l]ess [t]han/[g]reater than or [e]qual/[l]ess than or [e]qual to the specified number:
+.RE
+.PP
+\fB\fC[ "${{variable}}" \-{{eq|ne|gt|lt|ge|le}} {{integer}} ]\fR
+.RS
+.IP \(bu 2
+Test if the specified variable has a [n]on\-empty value:
+.RE
+.PP
+\fB\fC[ \-n "${{variable}}" ]\fR
+.RS
+.IP \(bu 2
+Test if the specified variable has an empty value:
+.RE
+.PP
+\fB\fC[ \-z "${{variable}}" ]\fR
+.RS
+.IP \(bu 2
+Test if the specified [f]ile exists:
+.RE
+.PP
+\fB\fC[ \-f {{path/to/file}} ]\fR
+.RS
+.IP \(bu 2
+Test if the specified [d]irectory exists:
+.RE
+.PP
+\fB\fC[ \-d {{path/to/directory}} ]\fR
+.RS
+.IP \(bu 2
+Test if the specified file or directory [e]xists:
+.RE
+.PP
+\fB\fC[ \-e {{path/to/file_or_directory}} ]\fR

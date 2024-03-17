@@ -1,0 +1,24 @@
+.TH pamfile
+.PP
+.RS
+Describe Netpbm (PAM or PNM) files.
+More information: \[la]https://netpbm.sourceforge.net/doc/pamfile.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Describe the specified Netpbm files:
+.RE
+.PP
+\fB\fCpamfile {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Describe every image in each input file (as opposed to only the first image in each file) in a machine\-readable format:
+.RE
+.PP
+\fB\fCpamfile \-allimages \-machine {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display a count on how many images the input files contain:
+.RE
+.PP
+\fB\fCpamfile \-count {{path/to/file}}\fR

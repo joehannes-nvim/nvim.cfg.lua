@@ -1,0 +1,48 @@
+.TH docker commit
+.PP
+.RS
+Create a new image from a container’s changes.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/commit/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an image from a specific container:
+.RE
+.PP
+\fB\fCdocker commit {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Apply a \fB\fCCMD\fR Dockerfile instruction to the created image:
+.RE
+.PP
+\fB\fCdocker commit \-\-change="CMD {{command}}" {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Apply an \fB\fCENV\fR Dockerfile instruction to the created image:
+.RE
+.PP
+\fB\fCdocker commit \-\-change="ENV {{name}}={{value}}" {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Create an image with a specific author in the metadata:
+.RE
+.PP
+\fB\fCdocker commit \-\-author="{{author}}" {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Create an image with a specific comment in the metadata:
+.RE
+.PP
+\fB\fCdocker commit \-\-message="{{comment}}" {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Create an image without pausing the container during commit:
+.RE
+.PP
+\fB\fCdocker commit \-\-pause={{false}} {{container}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCdocker commit \-\-help\fR

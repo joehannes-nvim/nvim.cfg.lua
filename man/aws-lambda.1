@@ -1,0 +1,48 @@
+.TH aws lambda
+.PP
+.RS
+CLI for AWS lambda.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/lambda/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a function:
+.RE
+.PP
+\fB\fCaws lambda invoke \-\-function\-name {{name}} {{path/to/response}}.json\fR
+.RS
+.IP \(bu 2
+Run a function with an input payload in JSON format:
+.RE
+.PP
+\fB\fCaws lambda invoke \-\-function\-name {{name}} \-\-payload {{json}} {{path/to/response}}.json\fR
+.RS
+.IP \(bu 2
+List functions:
+.RE
+.PP
+\fB\fCaws lambda list\-functions\fR
+.RS
+.IP \(bu 2
+Display the configuration of a function:
+.RE
+.PP
+\fB\fCaws lambda get\-function\-configuration \-\-function\-name {{name}}\fR
+.RS
+.IP \(bu 2
+List function aliases:
+.RE
+.PP
+\fB\fCaws lambda list\-aliases \-\-function\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Display the reserved concurrency configuration for a function:
+.RE
+.PP
+\fB\fCaws lambda get\-function\-concurrency \-\-function\-name {{name}}\fR
+.RS
+.IP \(bu 2
+List which AWS services can invoke the function:
+.RE
+.PP
+\fB\fCaws lambda get\-policy \-\-function\-name {{name}}\fR

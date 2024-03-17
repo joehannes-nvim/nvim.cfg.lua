@@ -1,0 +1,36 @@
+.TH quota
+.PP
+.RS
+Display users' disk space usage and allocated limits.
+More information: \[la]https://manned.org/quota\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show disk quotas in human\-readable units for the current user:
+.RE
+.PP
+\fB\fCquota \-s\fR
+.RS
+.IP \(bu 2
+Verbose output (also display quotas on filesystems where no storage is allocated):
+.RE
+.PP
+\fB\fCquota \-v\fR
+.RS
+.IP \(bu 2
+Quiet output (only display quotas on filesystems where usage is over quota):
+.RE
+.PP
+\fB\fCquota \-q\fR
+.RS
+.IP \(bu 2
+Print quotas for the groups of which the current user is a member:
+.RE
+.PP
+\fB\fCquota \-g\fR
+.RS
+.IP \(bu 2
+Show disk quotas for another user:
+.RE
+.PP
+\fB\fCsudo quota \-u {{username}}\fR

@@ -1,0 +1,31 @@
+.TH deemix
+.PP
+.RS
+A barebone deezer downloader library built from the ashes of Deezloader Remix.
+It can be used as a standalone CLI app or implemented in a UI using the API.
+More information: \[la]https://deemix.app\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a track or playlist:
+.RE
+.PP
+\fB\fCdeemix {{https://www.deezer.com/us/track/00000000}}\fR
+.RS
+.IP \(bu 2
+Download track/playlist at a specific bitrate:
+.RE
+.PP
+\fB\fCdeemix \-\-bitrate {{FLAC|MP3}} {{url}}\fR
+.RS
+.IP \(bu 2
+Download to a specific path:
+.RE
+.PP
+\fB\fCdeemix \-\-bitrate {{bitrate}} \-\-path {{path}} {{url}}\fR
+.RS
+.IP \(bu 2
+Create a portable deemix config in the current directory:
+.RE
+.PP
+\fB\fCdeemix \-\-portable \-\-bitrate {{bitrate}} \-\-path {{path}} {{url}}\fR

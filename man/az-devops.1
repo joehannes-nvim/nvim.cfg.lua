@@ -1,0 +1,37 @@
+.TH az devops
+.PP
+.RS
+Manage Azure DevOps organizations.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/devops\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set the Personal Access Token (PAT) to login to a particular organization:
+.RE
+.PP
+\fB\fCaz devops login \-\-organization {{organization_url}}\fR
+.RS
+.IP \(bu 2
+Open a project in the browser:
+.RE
+.PP
+\fB\fCaz devops project show \-\-project {{project_name}} \-\-open\fR
+.RS
+.IP \(bu 2
+List members of a specific team working on a particular project:
+.RE
+.PP
+\fB\fCaz devops team list\-member \-\-project {{project_name}} \-\-team {{team_name}}\fR
+.RS
+.IP \(bu 2
+Check the Azure DevOps CLI current configuration:
+.RE
+.PP
+\fB\fCaz devops configure \-\-list\fR
+.RS
+.IP \(bu 2
+Configure the Azure DevOps CLI behavior by setting a default project and a default organization:
+.RE
+.PP
+\fB\fCaz devops configure \-\-defaults project={{project_name}} organization={{organization_url}}\fR

@@ -1,0 +1,55 @@
+.TH kak
+.PP
+.RS
+Kakoune is a mode\-based code editor implementing the "multiple selections" paradigm.
+Data can be selected and simultaneously edited in different locations, using multiple selections; users can also connect to the same session for collaborative editing.
+More information: \[la]https://kakoune.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file and enter normal mode, to execute commands:
+.RE
+.PP
+\fB\fCkak {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Enter insert mode from normal mode, to write text into the file:
+.RE
+.PP
+\fB\fCi\fR
+.RS
+.IP \(bu 2
+Escape insert mode, to go back to normal mode:
+.RE
+.PP
+\fB\fC<Escape>\fR
+.RS
+.IP \(bu 2
+Replace all instances of "foo" in the current file with "bar":
+.RE
+.PP
+\fB\fC%s{{foo}}<Enter>c{{bar}}<Escape>\fR
+.RS
+.IP \(bu 2
+Unselect all secondary selections, and keep only the main one:
+.RE
+.PP
+\fB\fC<Space>\fR
+.RS
+.IP \(bu 2
+Search for numbers and select the first two:
+.RE
+.PP
+\fB\fC/\\d+<Enter>N\fR
+.RS
+.IP \(bu 2
+Insert the contents of a file:
+.RE
+.PP
+\fB\fC!cat {{path/to/file}}<Enter>\fR
+.RS
+.IP \(bu 2
+Save the current file:
+.RE
+.PP
+\fB\fC:w<Enter>\fR

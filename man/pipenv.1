@@ -1,0 +1,55 @@
+.TH pipenv
+.PP
+.RS
+Simple and unified Python development workflow.
+Manages packages and the virtual environment for a project.
+More information: \[la]https://pypi.org/project/pipenv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new project:
+.RE
+.PP
+\fB\fCpipenv\fR
+.RS
+.IP \(bu 2
+Create a new project using Python 3:
+.RE
+.PP
+\fB\fCpipenv \-\-three\fR
+.RS
+.IP \(bu 2
+Install a package:
+.RE
+.PP
+\fB\fCpipenv install {{package}}\fR
+.RS
+.IP \(bu 2
+Install all the dependencies for a project:
+.RE
+.PP
+\fB\fCpipenv install\fR
+.RS
+.IP \(bu 2
+Install all the dependencies for a project (including dev packages):
+.RE
+.PP
+\fB\fCpipenv install \-\-dev\fR
+.RS
+.IP \(bu 2
+Uninstall a package:
+.RE
+.PP
+\fB\fCpipenv uninstall {{package}}\fR
+.RS
+.IP \(bu 2
+Start a shell within the created virtual environment:
+.RE
+.PP
+\fB\fCpipenv shell\fR
+.RS
+.IP \(bu 2
+Generate a \fB\fCrequirements.txt\fR (list of dependencies) for a project:
+.RE
+.PP
+\fB\fCpipenv lock \-\-requirements\fR

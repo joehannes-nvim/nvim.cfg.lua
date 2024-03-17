@@ -1,0 +1,42 @@
+.TH jupytext
+.PP
+.RS
+Tool to convert Jupyter notebooks to plain text documents, and back again.
+More information: \[la]https://jupytext.readthedocs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Turn a notebook into a paired \fB\fC\&.ipynb\fR/\fB\fC\&.py\fR notebook:
+.RE
+.PP
+\fB\fCjupytext \-\-set\-formats ipynb,py {{notebook.ipynb}}\fR
+.RS
+.IP \(bu 2
+Convert a notebook to a \fB\fC\&.py\fR file:
+.RE
+.PP
+\fB\fCjupytext \-\-to py {{notebook.ipynb}}\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fC\&.py\fR file to a notebook with no outputs:
+.RE
+.PP
+\fB\fCjupytext \-\-to notebook {{notebook.py}}\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fC\&.md\fR file to a notebook and run it:
+.RE
+.PP
+\fB\fCjupytext \-\-to notebook \-\-execute {{notebook.md}}\fR
+.RS
+.IP \(bu 2
+Update the input cells in a notebook and preserve outputs and metadata:
+.RE
+.PP
+\fB\fCjupytext \-\-update \-\-to notebook {{notebook.py}}\fR
+.RS
+.IP \(bu 2
+Update all paired representations of a notebook:
+.RE
+.PP
+\fB\fCjupytext \-\-sync {{notebook.ipynb}}\fR

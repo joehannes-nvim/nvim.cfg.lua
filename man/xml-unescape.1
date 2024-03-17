@@ -1,0 +1,24 @@
+.TH xml unescape
+.PP
+.RS
+Unescape special XML characters, e.g. \fB\fC&lt;a1&gt;\fR → \fB\fC<a1>\fR\&.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Unescape special XML characters from a string:
+.RE
+.PP
+\fB\fCxml unescape "{{&lt;a1&gt;}}"\fR
+.RS
+.IP \(bu 2
+Unescape special XML characters from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{{&lt;a1&gt;}}" | xml unescape\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCunescape\fR subcommand:
+.RE
+.PP
+\fB\fCxml escape \-\-help\fR

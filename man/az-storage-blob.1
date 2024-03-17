@@ -1,0 +1,37 @@
+.TH az storage blob
+.PP
+.RS
+Manage blob storage containers and objects in Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage/blob\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download a blob to a file path:
+.RE
+.PP
+\fB\fCaz storage blob download \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}} \-c {{container_name}} \-n {{path/to/blob}} \-f {{path/to/local_file}}\fR
+.RS
+.IP \(bu 2
+Download blobs from a blob container recursively:
+.RE
+.PP
+\fB\fCaz storage blob download\-batch \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}} \-s {{container_name}} \-d {{path/to/remote}} \-\-pattern {{filename_regex}} \-\-destination {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Upload a local file to blob storage:
+.RE
+.PP
+\fB\fCaz storage blob upload \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}} \-c {{container_name}} \-n {{path/to/blob}} \-f {{path/to/local_file}}\fR
+.RS
+.IP \(bu 2
+Delete a blob object:
+.RE
+.PP
+\fB\fCaz storage blob delete \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}} \-c {{container_name}} \-n {{path/to/blob}}\fR
+.RS
+.IP \(bu 2
+Generate a shared access signature for a blob:
+.RE
+.PP
+\fB\fCaz storage blob generate\-sas \-\-account\-name {{storage_account_name}} \-\-account\-key {{storage_account_key}} \-c {{container_name}} \-n {{path/to/blob}} \-\-permissions {{permission_set}} \-\-expiry {{Y\-m\-d'T'H:M'Z'}} \-\-https\-only\fR

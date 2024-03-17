@@ -1,0 +1,42 @@
+.TH tmpmail
+.PP
+.RS
+A temporary email right from your terminal written in POSIX sh.
+More information: \[la]https://github.com/sdushantha/tmpmail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a temporary inbox:
+.RE
+.PP
+\fB\fCtmpmail \-\-generate\fR
+.RS
+.IP \(bu 2
+List messages and their numeric ID:
+.RE
+.PP
+\fB\fCtmpmail\fR
+.RS
+.IP \(bu 2
+Display the most recent received email:
+.RE
+.PP
+\fB\fCtmpmail \-\-recent\fR
+.RS
+.IP \(bu 2
+Open a specific message:
+.RE
+.PP
+\fB\fCtmpmail {{email_id}}\fR
+.RS
+.IP \(bu 2
+View email as raw text without HTML tags:
+.RE
+.PP
+\fB\fCtmpmail \-\-text\fR
+.RS
+.IP \(bu 2
+Open email with a specific browser (default is w3m):
+.RE
+.PP
+\fB\fCtmpmail \-\-browser {{browser}}\fR

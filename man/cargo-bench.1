@@ -1,0 +1,54 @@
+.TH cargo bench
+.PP
+.RS
+Compile and execute benchmarks.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-bench.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute all benchmarks of a package:
+.RE
+.PP
+\fB\fCcargo bench\fR
+.RS
+.IP \(bu 2
+Don't stop when a benchmark fails:
+.RE
+.PP
+\fB\fCcargo bench \-\-no\-fail\-fast\fR
+.RS
+.IP \(bu 2
+Compile, but don’t run benchmarks:
+.RE
+.PP
+\fB\fCcargo bench \-\-no\-run\fR
+.RS
+.IP \(bu 2
+Benchmark the specified benchmark:
+.RE
+.PP
+\fB\fCcargo bench \-\-bench {{benchmark}}\fR
+.RS
+.IP \(bu 2
+Benchmark with the given profile (default: \fB\fCbench\fR):
+.RE
+.PP
+\fB\fCcargo bench \-\-profile {{profile}}\fR
+.RS
+.IP \(bu 2
+Benchmark all example targets:
+.RE
+.PP
+\fB\fCcargo bench \-\-examples\fR
+.RS
+.IP \(bu 2
+Benchmark all binary targets:
+.RE
+.PP
+\fB\fCcargo bench \-\-bins\fR
+.RS
+.IP \(bu 2
+Benchmark the package’s library:
+.RE
+.PP
+\fB\fCcargo bench \-\-lib\fR

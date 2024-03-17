@@ -1,0 +1,37 @@
+.TH Install\-NodeVersion
+.PP
+.RS
+Install Node.js runtime versions for \fB\fCps\-nvm\fR\&.
+This command is part of \fB\fCps\-nvm\fR and can only be run under PowerShell.
+More information: \[la]https://github.com/aaronpowell/ps-nvm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a specific Node.js version:
+.RE
+.PP
+\fB\fCInstall\-NodeVersion {{node_version}}\fR
+.RS
+.IP \(bu 2
+Install multiple Node.js versions:
+.RE
+.PP
+\fB\fCInstall\-NodeVersion {{node_version1 , node_version2 , ...}}\fR
+.RS
+.IP \(bu 2
+Install latest available version of Node.js 20:
+.RE
+.PP
+\fB\fCInstall\-NodeVersion ^20\fR
+.RS
+.IP \(bu 2
+Install the x86 (x86 32\-bit) / x64 (x86 64\-bit) / arm64 (ARM 64\-bit) version of Node.js:
+.RE
+.PP
+\fB\fCInstall\-NodeVersion {{node_version}} \-Architecture {{x86|x64|arm64}}\fR
+.RS
+.IP \(bu 2
+Use a HTTP proxy to download Node.js:
+.RE
+.PP
+\fB\fCInstall\-NodeVersion {{node\-version}} \-Proxy {{http://example.com}}\fR

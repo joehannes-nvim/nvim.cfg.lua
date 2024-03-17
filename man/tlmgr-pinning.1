@@ -1,0 +1,30 @@
+.TH tlmgr pinning
+.PP
+.RS
+The pinning action manages the pinning file.
+More information: \[la]https://www.tug.org/texlive/doc/tlmgr.html#pinning\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the current pinning data:
+.RE
+.PP
+\fB\fCtlmgr pinning show\fR
+.RS
+.IP \(bu 2
+Pin the matching the packages to the given repository:
+.RE
+.PP
+\fB\fCtlmgr pinning add {{repository}} {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove any packages recorded in the pinning file matching the packages for the given repository:
+.RE
+.PP
+\fB\fCtlmgr pinning remove {{repository}} {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove all pinning data for the given repository:
+.RE
+.PP
+\fB\fCtlmgr pinning remove {{repository}} \-\-all\fR

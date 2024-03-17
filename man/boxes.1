@@ -1,0 +1,36 @@
+.TH boxes
+.PP
+.RS
+Draw, remove, and repair ASCII art boxes.
+More information: \[la]https://boxes.thomasjensen.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Draw a box around a string:
+.RE
+.PP
+\fB\fCecho "{{string}}" | boxes\fR
+.RS
+.IP \(bu 2
+Remove a box from a string:
+.RE
+.PP
+\fB\fCecho "{{string}}" | boxes \-r\fR
+.RS
+.IP \(bu 2
+Draw a box with a specific design around a string:
+.RE
+.PP
+\fB\fCecho "{{string}}" | boxes \-d {{parchment}}\fR
+.RS
+.IP \(bu 2
+Draw a box with a width of 10 and a height of 5:
+.RE
+.PP
+\fB\fCecho "{{string}}" | boxes \-s {{10}}x{{5}}\fR
+.RS
+.IP \(bu 2
+Draw a box with centered text:
+.RE
+.PP
+\fB\fCecho "{{string}}" | boxes \-a c\fR

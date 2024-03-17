@@ -1,0 +1,42 @@
+.TH tb
+.PP
+.RS
+Manage tasks and notes across multiple boards.
+More information: \[la]https://github.com/klaussinani/taskbook\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a new task to a board:
+.RE
+.PP
+\fB\fCtb \-\-task {{task_description}} @{{board_name}}\fR
+.RS
+.IP \(bu 2
+Add a new note to a board:
+.RE
+.PP
+\fB\fCtb \-\-note {{note_description}} @{{board_name}}\fR
+.RS
+.IP \(bu 2
+Edit item's priority:
+.RE
+.PP
+\fB\fCtb \-\-priority @{{item_id}} {{priority}}\fR
+.RS
+.IP \(bu 2
+Check/uncheck item:
+.RE
+.PP
+\fB\fCtb \-\-check {{item_id}}\fR
+.RS
+.IP \(bu 2
+Archive all checked items:
+.RE
+.PP
+\fB\fCtb \-\-clear\fR
+.RS
+.IP \(bu 2
+Move item to a board:
+.RE
+.PP
+\fB\fCtb \-\-move @{{item_id}} {{board_name}}\fR

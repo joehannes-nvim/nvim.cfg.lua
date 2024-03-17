@@ -1,0 +1,24 @@
+.TH kompose
+.PP
+.RS
+A tool to convert docker\-compose applications to Kubernetes.
+More information: \[la]https://github.com/kubernetes/kompose\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Deploy a dockerized application to Kubernetes:
+.RE
+.PP
+\fB\fCkompose up \-f {{docker\-compose.yml}}\fR
+.RS
+.IP \(bu 2
+Delete instantiated services/deployments from Kubernetes:
+.RE
+.PP
+\fB\fCkompose down \-f {{docker\-compose.yml}}\fR
+.RS
+.IP \(bu 2
+Convert a docker\-compose file into Kubernetes resources file:
+.RE
+.PP
+\fB\fCkompose convert \-f {{docker\-compose.yml}}\fR

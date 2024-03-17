@@ -1,0 +1,48 @@
+.TH act
+.PP
+.RS
+Execute GitHub Actions locally using Docker.
+More information: \[la]https://github.com/nektos/act\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the available actions:
+.RE
+.PP
+\fB\fCact \-l\fR
+.RS
+.IP \(bu 2
+Run the default event:
+.RE
+.PP
+\fB\fCact\fR
+.RS
+.IP \(bu 2
+Run a specific event:
+.RE
+.PP
+\fB\fCact {{event_type}}\fR
+.RS
+.IP \(bu 2
+Run a specific action:
+.RE
+.PP
+\fB\fCact \-a {{action_id}}\fR
+.RS
+.IP \(bu 2
+Do not actually run the actions (i.e. a dry run):
+.RE
+.PP
+\fB\fCact \-n\fR
+.RS
+.IP \(bu 2
+Show verbose logs:
+.RE
+.PP
+\fB\fCact \-v\fR
+.RS
+.IP \(bu 2
+Run a specific workflow:
+.RE
+.PP
+\fB\fCact push \-W {{path/to/workflow}}\fR

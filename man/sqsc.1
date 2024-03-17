@@ -1,0 +1,48 @@
+.TH sqsc
+.PP
+.RS
+A command\-line AWS Simple Queue Service client.
+More information: \[la]https://github.com/yongfei25/sqsc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all queues:
+.RE
+.PP
+\fB\fCsqsc lq {{queue_prefix}}\fR
+.RS
+.IP \(bu 2
+List all messages in a queue:
+.RE
+.PP
+\fB\fCsqsc ls {{queue_name}}\fR
+.RS
+.IP \(bu 2
+Copy all messages from one queue to another:
+.RE
+.PP
+\fB\fCsqsc cp {{source_queue}} {{destination_queue}}\fR
+.RS
+.IP \(bu 2
+Move all messages from one queue to another:
+.RE
+.PP
+\fB\fCsqsc mv {{source_queue}} {{destination_queue}}\fR
+.RS
+.IP \(bu 2
+Describe a queue:
+.RE
+.PP
+\fB\fCsqsc describe {{queue_name}}\fR
+.RS
+.IP \(bu 2
+Query a queue with SQL syntax:
+.RE
+.PP
+\fB\fCsqsc query "SELECT body FROM {{queue_name}} WHERE body LIKE '%user%'"\fR
+.RS
+.IP \(bu 2
+Pull all messages from a queue into a local SQLite database in your present working directory:
+.RE
+.PP
+\fB\fCsqsc pull {{queue_name}}\fR

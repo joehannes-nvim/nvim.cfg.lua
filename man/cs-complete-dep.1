@@ -1,0 +1,30 @@
+.TH cs complete dep
+.PP
+.RS
+Search for libraries without doing it directly on the web.
+More information: \[la]https://get-coursier.io/docs/cli-complete\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print which artifacts are published under a specific Maven group identifier:
+.RE
+.PP
+\fB\fCcs complete\-dep {{group_id}}\fR
+.RS
+.IP \(bu 2
+List published library versions under a specific Maven group identifier and an artifact one:
+.RE
+.PP
+\fB\fCcs complete\-dep {{group_id}}:{{artifact_id}}\fR
+.RS
+.IP \(bu 2
+Print which artifacts are pubblished under a given Maven groupId searching in the ivy2local:
+.RE
+.PP
+\fB\fCcs complete\-dep {{group_id}} \-\-repository ivy2local\fR
+.RS
+.IP \(bu 2
+List published artifacts under a Maven group identifier searching in a specific repository and credentials:
+.RE
+.PP
+\fB\fCcs complete\-dep {{group_id}}:{{artifact_id}} \-\-repository {{repository_url}} \-\-credentials {{user}}:{{password}}\fR

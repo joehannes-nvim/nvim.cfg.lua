@@ -1,0 +1,31 @@
+.TH pushd
+.PP
+.RS
+Place a directory on a stack so it can be accessed later.
+See also \fB\fCpopd\fR to switch back to original directory and \fB\fCdirs\fR to display directory stack contents.
+More information: \[la]https://www.gnu.org/software/bash/manual/html_node/Directory-Stack-Builtins.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Switch to directory and push it on the stack:
+.RE
+.PP
+\fB\fCpushd {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Switch first and second directories on the stack:
+.RE
+.PP
+\fB\fCpushd\fR
+.RS
+.IP \(bu 2
+Rotate stack by making the 5th element the top of the stack:
+.RE
+.PP
+\fB\fCpushd +4\fR
+.RS
+.IP \(bu 2
+Rotate the stack 4 times to the left (the current directory stays at the top by replacing the 5th element):
+.RE
+.PP
+\fB\fCpushd \-n +4\fR

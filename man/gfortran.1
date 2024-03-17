@@ -1,0 +1,36 @@
+.TH gfortran
+.PP
+.RS
+Preprocess and compile Fortran source files, then assemble and link them together.
+More information: \[la]https://gcc.gnu.org/wiki/GFortran\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile multiple source files into an executable:
+.RE
+.PP
+\fB\fCgfortran {{path/to/source1.f90 path/to/source2.f90 ...}} \-o {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Show common warnings, debug symbols in output, and optimize without affecting debugging:
+.RE
+.PP
+\fB\fCgfortran {{path/to/source.f90}} \-Wall \-g \-Og \-o {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Include libraries from a different path:
+.RE
+.PP
+\fB\fCgfortran {{path/to/source.f90}} \-o {{path/to/output_executable}} \-I{{path/to/mod_and_include}} \-L{{path/to/library}} \-l{{library_name}}\fR
+.RS
+.IP \(bu 2
+Compile source code into Assembler instructions:
+.RE
+.PP
+\fB\fCgfortran \-S {{path/to/source.f90}}\fR
+.RS
+.IP \(bu 2
+Compile source code into an object file without linking:
+.RE
+.PP
+\fB\fCgfortran \-c {{path/to/source.f90}}\fR

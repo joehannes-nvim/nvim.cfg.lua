@@ -1,0 +1,54 @@
+.TH gh run
+.PP
+.RS
+View, run and watch recent GitHub Actions workflow runs.
+More information: \[la]https://cli.github.com/manual/gh_run\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively select a run to see information about the jobs:
+.RE
+.PP
+\fB\fCgh run view\fR
+.RS
+.IP \(bu 2
+Display information about a specific run:
+.RE
+.PP
+\fB\fCgh run view {{workflow_run_number}}\fR
+.RS
+.IP \(bu 2
+Display information about the steps of a job:
+.RE
+.PP
+\fB\fCgh run view \-\-job={{job_number}}\fR
+.RS
+.IP \(bu 2
+Display the log of a job:
+.RE
+.PP
+\fB\fCgh run view \-\-job={{job_number}} \-\-log\fR
+.RS
+.IP \(bu 2
+Check a specific workflow and exit with a non\-zero status if the run failed:
+.RE
+.PP
+\fB\fCgh run view {{workflow_run_number}} \-\-exit\-status && {{echo "run pending or passed"}}\fR
+.RS
+.IP \(bu 2
+Interactively select an active run and wait until it's done:
+.RE
+.PP
+\fB\fCgh run watch\fR
+.RS
+.IP \(bu 2
+Display the jobs for a run and wait until it's done:
+.RE
+.PP
+\fB\fCgh run watch {{workflow_run_number}}\fR
+.RS
+.IP \(bu 2
+Re\-run a specific workflow:
+.RE
+.PP
+\fB\fCgh run rerun {{workflow_run_number}}\fR

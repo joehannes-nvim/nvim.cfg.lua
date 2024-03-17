@@ -1,0 +1,36 @@
+.TH mkcert
+.PP
+.RS
+Tool for making locally\-trusted development certificates.
+More information: \[la]https://github.com/FiloSottile/mkcert\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install the local CA in the system trust store:
+.RE
+.PP
+\fB\fCmkcert \-install\fR
+.RS
+.IP \(bu 2
+Generate certificate and private key for a given domain:
+.RE
+.PP
+\fB\fCmkcert {{example.org}}\fR
+.RS
+.IP \(bu 2
+Generate certificate and private key for multiple domains:
+.RE
+.PP
+\fB\fCmkcert {{example.org}} {{myapp.dev}} {{127.0.0.1}}\fR
+.RS
+.IP \(bu 2
+Generate wildcard certificate and private key for a given domain and its subdomains:
+.RE
+.PP
+\fB\fCmkcert "{{*.example.it}}"\fR
+.RS
+.IP \(bu 2
+Uninstall the local CA:
+.RE
+.PP
+\fB\fCmkcert \-uninstall\fR

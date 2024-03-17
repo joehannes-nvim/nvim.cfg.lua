@@ -1,0 +1,31 @@
+.TH sk
+.PP
+.RS
+Fuzzy finder written in Rust.
+Similar to \fB\fCfzf\fR\&.
+More information: \[la]https://github.com/lotabout/skim\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCskim\fR on all files in the specified directory:
+.RE
+.PP
+\fB\fCfind {{path/to/directory}} \-type f | sk\fR
+.RS
+.IP \(bu 2
+Start \fB\fCskim\fR for running processes:
+.RE
+.PP
+\fB\fCps aux | sk\fR
+.RS
+.IP \(bu 2
+Start \fB\fCskim\fR with a specified query:
+.RE
+.PP
+\fB\fCsk \-\-query "{{query}}"\fR
+.RS
+.IP \(bu 2
+Select multiple files with \fB\fCShift + Tab\fR and write to a file:
+.RE
+.PP
+\fB\fCfind {{path/to/directory}} \-type f | sk \-\-multi > {{path/to/file}}\fR

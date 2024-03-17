@@ -1,0 +1,36 @@
+.TH xh
+.PP
+.RS
+Friendly and fast tool for sending HTTP requests.
+More information: \[la]https://github.com/ducaale/xh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a GET request:
+.RE
+.PP
+\fB\fCxh {{httpbin.org/get}}\fR
+.RS
+.IP \(bu 2
+Send a POST request with a JSON body (key\-value pairs are added to a top\-level JSON object \- e.g. \fB\fC{"name": "john", "age": 25}\fR):
+.RE
+.PP
+\fB\fCxh post {{httpbin.org/post}} {{name=john}} {{age:=25}}\fR
+.RS
+.IP \(bu 2
+Send a GET request with query parameters (e.g. \fB\fCfirst_param=5&second_param=true\fR):
+.RE
+.PP
+\fB\fCxh get {{httpbin.org/get}} {{first_param==5}} {{second_param==true}}\fR
+.RS
+.IP \(bu 2
+Send a GET request with a custom header:
+.RE
+.PP
+\fB\fCxh get {{httpbin.org/get}} {{header\-name:header\-value}}\fR
+.RS
+.IP \(bu 2
+Make a GET request and save the response body to a file:
+.RE
+.PP
+\fB\fCxh \-\-download {{httpbin.org/json}} \-\-output {{path/to/file}}\fR

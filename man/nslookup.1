@@ -1,0 +1,50 @@
+.TH nslookup
+.PP
+.RS
+Query name 
+.BR server (s) 
+for various domain records.
+More information: \[la]https://manned.org/nslookup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Query your system's default name server for an IP address (A record) of the domain:
+.RE
+.PP
+\fB\fCnslookup {{example.com}}\fR
+.RS
+.IP \(bu 2
+Query a given name server for a NS record of the domain:
+.RE
+.PP
+\fB\fCnslookup \-type=NS {{example.com}} {{8.8.8.8}}\fR
+.RS
+.IP \(bu 2
+Query for a reverse lookup (PTR record) of an IP address:
+.RE
+.PP
+\fB\fCnslookup \-type=PTR {{54.240.162.118}}\fR
+.RS
+.IP \(bu 2
+Query for ANY available records using TCP protocol:
+.RE
+.PP
+\fB\fCnslookup \-vc \-type=ANY {{example.com}}\fR
+.RS
+.IP \(bu 2
+Query a given name server for the whole zone file (zone transfer) of the domain using TCP protocol:
+.RE
+.PP
+\fB\fCnslookup \-vc \-type=AXFR {{example.com}} {{name_server}}\fR
+.RS
+.IP \(bu 2
+Query for a mail server (MX record) of the domain, showing details of the transaction:
+.RE
+.PP
+\fB\fCnslookup \-type=MX \-debug {{example.com}}\fR
+.RS
+.IP \(bu 2
+Query a given name server on a specific port number for a TXT record of the domain:
+.RE
+.PP
+\fB\fCnslookup \-port={{port_number}} \-type=TXT {{example.com}} {{name_server}}\fR

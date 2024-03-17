@@ -1,0 +1,43 @@
+.TH git\-imerge
+.PP
+.RS
+Perform a merge or rebase between two Git branches incrementally.
+Conflicts between branches are tracked down to pairs of individual commits, to simplify conflict resolution.
+More information: \[la]https://github.com/mhagger/git-imerge\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start imerge\-based rebase (checkout the branch to be rebased, first):
+.RE
+.PP
+\fB\fCgit imerge rebase {{branch_to_rebase_onto}}\fR
+.RS
+.IP \(bu 2
+Start imerge\-based merge (checkout the branch to merge into, first):
+.RE
+.PP
+\fB\fCgit imerge merge {{branch_to_be_merged}}\fR
+.RS
+.IP \(bu 2
+Show ASCII diagram of in\-progress merge or rebase:
+.RE
+.PP
+\fB\fCgit imerge diagram\fR
+.RS
+.IP \(bu 2
+Continue imerge operation after resolving conflicts (\fB\fCgit add\fR the conflicted files, first):
+.RE
+.PP
+\fB\fCgit imerge continue \-\-no\-edit\fR
+.RS
+.IP \(bu 2
+Wrap up imerge operation, after all conflicts are resolved:
+.RE
+.PP
+\fB\fCgit imerge finish\fR
+.RS
+.IP \(bu 2
+Abort imerge operation, and return to the previous branch:
+.RE
+.PP
+\fB\fCgit\-imerge remove && git checkout {{previous_branch}}\fR

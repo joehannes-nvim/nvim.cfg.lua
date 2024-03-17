@@ -1,0 +1,42 @@
+.TH elm
+.PP
+.RS
+Compile and run Elm source files.
+More information: \[la]https://elm-lang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize an Elm project, generates an elm.json file:
+.RE
+.PP
+\fB\fCelm init\fR
+.RS
+.IP \(bu 2
+Start interactive Elm shell:
+.RE
+.PP
+\fB\fCelm repl\fR
+.RS
+.IP \(bu 2
+Compile an Elm file, output the result to an \fB\fCindex.html\fR file:
+.RE
+.PP
+\fB\fCelm make {{source}}\fR
+.RS
+.IP \(bu 2
+Compile an Elm file, output the result to a JavaScript file:
+.RE
+.PP
+\fB\fCelm make {{source}} \-\-output={{destination}}.js\fR
+.RS
+.IP \(bu 2
+Start local web server that compiles Elm files on page load:
+.RE
+.PP
+\fB\fCelm reactor\fR
+.RS
+.IP \(bu 2
+Install Elm package from \[la]https://package.elm-lang.org\[ra]:
+.RE
+.PP
+\fB\fCelm install {{author}}/{{package}}\fR

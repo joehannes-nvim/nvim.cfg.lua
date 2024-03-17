@@ -1,0 +1,31 @@
+.TH az group
+.PP
+.RS
+Manage resource groups and template deployments.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/group\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new resource group:
+.RE
+.PP
+\fB\fCaz group create \-\-name {{name}} \-\-location {{location}}\fR
+.RS
+.IP \(bu 2
+Check if a resource group exists:
+.RE
+.PP
+\fB\fCaz group exists \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Delete a resource group:
+.RE
+.PP
+\fB\fCaz group delete \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Wait until a condition of the resource group is met:
+.RE
+.PP
+\fB\fCaz group wait \-\-name {{name}} \-\-{{created|deleted|exists|updated}}\fR

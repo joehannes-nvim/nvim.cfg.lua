@@ -1,0 +1,42 @@
+.TH qmv
+.PP
+.RS
+Move files and directories using the default text editor to define the filenames.
+More information: \[la]https://www.nongnu.org/renameutils/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Move a single file (open an editor with the source filename on the left and the target filename on the right):
+.RE
+.PP
+\fB\fCqmv {{source_file}}\fR
+.RS
+.IP \(bu 2
+Move multiple JPG files:
+.RE
+.PP
+\fB\fCqmv {{*.jpg}}\fR
+.RS
+.IP \(bu 2
+Move multiple directories:
+.RE
+.PP
+\fB\fCqmv \-d {{path/to/directory1}} {{path/to/directory2}} {{path/to/directory3}}\fR
+.RS
+.IP \(bu 2
+Move all files and directories inside a directory:
+.RE
+.PP
+\fB\fCqmv \-\-recursive {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Move files, but swap the positions of the source and the target filenames in the editor:
+.RE
+.PP
+\fB\fCqmv \-\-option swap {{*.jpg}}\fR
+.RS
+.IP \(bu 2
+Rename all files and folders in the current directory, but show only target filenames in the editor (you can think of it as a kind of simple mode):
+.RE
+.PP
+\fB\fCqmv \-\-format=do .\fR

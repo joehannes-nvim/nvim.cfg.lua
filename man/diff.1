@@ -1,0 +1,48 @@
+.TH diff
+.PP
+.RS
+Compare files and directories.
+More information: \[la]https://man7.org/linux/man-pages/man1/diff.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare files (lists changes to turn \fB\fCold_file\fR into \fB\fCnew_file\fR):
+.RE
+.PP
+\fB\fCdiff {{old_file}} {{new_file}}\fR
+.RS
+.IP \(bu 2
+Compare files, ignoring white spaces:
+.RE
+.PP
+\fB\fCdiff \-\-ignore\-all\-space {{old_file}} {{new_file}}\fR
+.RS
+.IP \(bu 2
+Compare files, showing the differences side by side:
+.RE
+.PP
+\fB\fCdiff \-\-side\-by\-side {{old_file}} {{new_file}}\fR
+.RS
+.IP \(bu 2
+Compare files, showing the differences in unified format (as used by \fB\fCgit diff\fR):
+.RE
+.PP
+\fB\fCdiff \-\-unified {{old_file}} {{new_file}}\fR
+.RS
+.IP \(bu 2
+Compare directories recursively (shows names for differing files/directories as well as changes made to files):
+.RE
+.PP
+\fB\fCdiff \-\-recursive {{old_directory}} {{new_directory}}\fR
+.RS
+.IP \(bu 2
+Compare directories, only showing the names of files that differ:
+.RE
+.PP
+\fB\fCdiff \-\-recursive \-\-brief {{old_directory}} {{new_directory}}\fR
+.RS
+.IP \(bu 2
+Create a patch file for Git from the differences of two text files, treating nonexistent files as empty:
+.RE
+.PP
+\fB\fCdiff \-\-text \-\-unified \-\-new\-file {{old_file}} {{new_file}} > {{diff.patch}}\fR

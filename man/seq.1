@@ -1,0 +1,30 @@
+.TH seq
+.PP
+.RS
+Output a sequence of numbers to \fB\fCstdout\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/seq\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sequence from 1 to 10:
+.RE
+.PP
+\fB\fCseq 10\fR
+.RS
+.IP \(bu 2
+Every 3rd number from 5 to 20:
+.RE
+.PP
+\fB\fCseq 5 3 20\fR
+.RS
+.IP \(bu 2
+Separate the output with a space instead of a newline:
+.RE
+.PP
+\fB\fCseq \-s " " 5 3 20\fR
+.RS
+.IP \(bu 2
+Format output width to a minimum of 4 digits padding with zeros as necessary:
+.RE
+.PP
+\fB\fCseq \-f "%04g" 5 3 20\fR

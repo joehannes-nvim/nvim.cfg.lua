@@ -1,0 +1,48 @@
+.TH mv
+.PP
+.RS
+Move or rename files and directories.
+More information: \[la]https://www.gnu.org/software/coreutils/mv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Rename a file or directory when the target is not an existing directory:
+.RE
+.PP
+\fB\fCmv {{path/to/source}} {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Move a file or directory into an existing directory:
+.RE
+.PP
+\fB\fCmv {{path/to/source}} {{path/to/existing_directory}}\fR
+.RS
+.IP \(bu 2
+Move multiple files into an existing directory, keeping the filenames unchanged:
+.RE
+.PP
+\fB\fCmv {{path/to/source1 path/to/source2 ...}} {{path/to/existing_directory}}\fR
+.RS
+.IP \(bu 2
+Do not prompt for confirmation before overwriting existing files:
+.RE
+.PP
+\fB\fCmv \-f {{path/to/source}} {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Prompt for confirmation before overwriting existing files, regardless of file permissions:
+.RE
+.PP
+\fB\fCmv \-i {{path/to/source}} {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Do not overwrite existing files at the target:
+.RE
+.PP
+\fB\fCmv \-n {{path/to/source}} {{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Move files in verbose mode, showing files after they are moved:
+.RE
+.PP
+\fB\fCmv \-v {{path/to/source}} {{path/to/target}}\fR

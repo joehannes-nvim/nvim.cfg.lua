@@ -1,0 +1,19 @@
+.TH bfg
+.PP
+.RS
+Remove large files or passwords from Git history like git\-filter\-branch.
+Note: if your repository is connected to a remote, you will need to force push to it.
+More information: \[la]https://rtyley.github.io/bfg-repo-cleaner/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove a file with sensitive data but leave the latest commit untouched:
+.RE
+.PP
+\fB\fCbfg \-\-delete\-files {{file_with_sensitive_data}}\fR
+.RS
+.IP \(bu 2
+Remove all text mentioned in the specified file wherever it can be found in the repository's history:
+.RE
+.PP
+\fB\fCbfg \-\-replace\-text {{path/to/file.txt}}\fR

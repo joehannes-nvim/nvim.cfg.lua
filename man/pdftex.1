@@ -1,0 +1,24 @@
+.TH pdftex
+.PP
+.RS
+Compile a PDF document from TeX source files.
+More information: \[la]https://www.tug.org/applications/pdftex/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a PDF document:
+.RE
+.PP
+\fB\fCpdftex {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a PDF document, specifying an output directory:
+.RE
+.PP
+\fB\fCpdftex \-output\-directory={{path/to/directory}} {{source.tex}}\fR
+.RS
+.IP \(bu 2
+Compile a PDF document, exiting on each error:
+.RE
+.PP
+\fB\fCpdftex \-halt\-on\-error {{source.tex}}\fR

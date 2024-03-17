@@ -1,0 +1,37 @@
+.TH git bisect
+.PP
+.RS
+Use binary search to find the commit that introduced a bug.
+Git automatically jumps back and forth in the commit graph to progressively narrow down the faulty commit.
+More information: \[la]https://git-scm.com/docs/git-bisect\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a bisect session on a commit range bounded by a known buggy commit, and a known clean (typically older) one:
+.RE
+.PP
+\fB\fCgit bisect start {{bad_commit}} {{good_commit}}\fR
+.RS
+.IP \(bu 2
+For each commit that \fB\fCgit bisect\fR selects, mark it as "bad" or "good" after testing it for the issue:
+.RE
+.PP
+\fB\fCgit bisect {{good|bad}}\fR
+.RS
+.IP \(bu 2
+After \fB\fCgit bisect\fR pinpoints the faulty commit, end the bisect session and return to the previous branch:
+.RE
+.PP
+\fB\fCgit bisect reset\fR
+.RS
+.IP \(bu 2
+Skip a commit during a bisect (e.g. one that fails the tests due to a different issue):
+.RE
+.PP
+\fB\fCgit bisect skip\fR
+.RS
+.IP \(bu 2
+Display a log of what has been done so far:
+.RE
+.PP
+\fB\fCgit bisect log\fR

@@ -1,0 +1,49 @@
+.TH jupyter
+.PP
+.RS
+Web application to create and share documents that contain code, visualizations and notes.
+Primarily used for data analysis, scientific computing and machine learning.
+More information: \[la]https://jupyter.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a Jupyter notebook server in the current directory:
+.RE
+.PP
+\fB\fCjupyter notebook\fR
+.RS
+.IP \(bu 2
+Open a specific Jupyter notebook:
+.RE
+.PP
+\fB\fCjupyter notebook {{example.ipynb}}\fR
+.RS
+.IP \(bu 2
+Export a specific Jupyter notebook into another format:
+.RE
+.PP
+\fB\fCjupyter nbconvert \-\-to {{html|markdown|pdf|script}} {{example.ipynb}}\fR
+.RS
+.IP \(bu 2
+Start a server on a specific port:
+.RE
+.PP
+\fB\fCjupyter notebook \-\-port={{port}}\fR
+.RS
+.IP \(bu 2
+List currently running notebook servers:
+.RE
+.PP
+\fB\fCjupyter notebook list\fR
+.RS
+.IP \(bu 2
+Stop the currently running server:
+.RE
+.PP
+\fB\fCjupyter notebook stop\fR
+.RS
+.IP \(bu 2
+Start JupyterLab, if installed, in the current directory:
+.RE
+.PP
+\fB\fCjupyter lab\fR

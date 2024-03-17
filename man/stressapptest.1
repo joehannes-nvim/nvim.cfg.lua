@@ -1,0 +1,24 @@
+.TH stressapptest
+.PP
+.RS
+Userspace memory and IO test.
+More information: \[la]https://github.com/stressapptest/stressapptest\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test the given amount of memory (in Megabytes):
+.RE
+.PP
+\fB\fCstressapptest \-M {{memory}}\fR
+.RS
+.IP \(bu 2
+Test memory as well as I/O for the given file:
+.RE
+.PP
+\fB\fCstressapptest \-M {{memory}} \-f {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Test specifying the verbosity level, where 0=lowest, 20=highest, 8=default:
+.RE
+.PP
+\fB\fCstressapptest \-M {{memory}} \-v {{level}}\fR

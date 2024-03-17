@@ -1,0 +1,42 @@
+.TH glab issue
+.PP
+.RS
+Manage GitLab issues.
+More information: \[la]https://glab.readthedocs.io/en/latest/issue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a specific issue:
+.RE
+.PP
+\fB\fCglab issue view {{issue_number}}\fR
+.RS
+.IP \(bu 2
+Display a specific issue in the default web browser:
+.RE
+.PP
+\fB\fCglab issue view {{issue_number}} \-\-web\fR
+.RS
+.IP \(bu 2
+Create a new issue in the default web browser:
+.RE
+.PP
+\fB\fCglab issue create \-\-web\fR
+.RS
+.IP \(bu 2
+List the last 10 issues with the \fB\fCbug\fR label:
+.RE
+.PP
+\fB\fCglab issue list \-\-per\-page {{10}} \-\-label "{{bug}}"\fR
+.RS
+.IP \(bu 2
+List closed issues made by a specific user:
+.RE
+.PP
+\fB\fCglab issue list \-\-closed \-\-author {{username}}\fR
+.RS
+.IP \(bu 2
+Reopen a specific issue:
+.RE
+.PP
+\fB\fCglab issue reopen {{issue_number}}\fR

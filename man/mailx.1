@@ -1,0 +1,42 @@
+.TH mailx
+.PP
+.RS
+Send and receive mail.
+More information: \[la]https://manned.org/mailx\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send mail (the content should be typed after the command, and ended with \fB\fCCtrl+D\fR):
+.RE
+.PP
+\fB\fCmailx \-s "{{subject}}" {{to_addr}}\fR
+.RS
+.IP \(bu 2
+Send mail with content passed from another command:
+.RE
+.PP
+\fB\fCecho "{{content}}" | mailx \-s "{{subject}}" {{to_addr}}\fR
+.RS
+.IP \(bu 2
+Send mail with content read from a file:
+.RE
+.PP
+\fB\fCmailx \-s "{{subject}}" {{to_addr}} < {{content.txt}}\fR
+.RS
+.IP \(bu 2
+Send mail to a recipient and CC to another address:
+.RE
+.PP
+\fB\fCmailx \-s "{{subject}}" \-c {{cc_addr}} {{to_addr}}\fR
+.RS
+.IP \(bu 2
+Send mail specifying the sender address:
+.RE
+.PP
+\fB\fCmailx \-s "{{subject}}" \-r {{from_addr}} {{to_addr}}\fR
+.RS
+.IP \(bu 2
+Send mail with an attachment:
+.RE
+.PP
+\fB\fCmailx \-a {{path/to/file}} \-s "{{subject}}" {{to_addr}}\fR

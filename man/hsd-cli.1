@@ -1,0 +1,54 @@
+.TH hsd\-cli
+.PP
+.RS
+The command\-line REST tool for the Handshake blockchain.
+More information: \[la]https://handshake.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Retrieve information about the current server:
+.RE
+.PP
+\fB\fChsd\-cli info\fR
+.RS
+.IP \(bu 2
+Broadcast a local transaction:
+.RE
+.PP
+\fB\fChsd\-cli broadcast {{transaction_hex}}\fR
+.RS
+.IP \(bu 2
+Retrieve a mempool snapshot:
+.RE
+.PP
+\fB\fChsd\-cli mempool\fR
+.RS
+.IP \(bu 2
+View a transaction by address or hash:
+.RE
+.PP
+\fB\fChsd\-cli tx {{address_or_hash}}\fR
+.RS
+.IP \(bu 2
+View a coin by its hash index or address:
+.RE
+.PP
+\fB\fChsd\-cli coin {{hash_index_or_address}}\fR
+.RS
+.IP \(bu 2
+View a block by height or hash:
+.RE
+.PP
+\fB\fChsd\-cli block {{height_or_hash}}\fR
+.RS
+.IP \(bu 2
+Reset the chain to the specified block:
+.RE
+.PP
+\fB\fChsd\-cli reset {{height_or_hash}}\fR
+.RS
+.IP \(bu 2
+Execute an RPC command:
+.RE
+.PP
+\fB\fChsd\-cli rpc {{command}} {{args}}\fR

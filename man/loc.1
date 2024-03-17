@@ -1,0 +1,30 @@
+.TH loc
+.PP
+.RS
+Tool written in Rust that counts lines of code.
+More information: \[la]https://github.com/cgag/loc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print lines of code in the current directory:
+.RE
+.PP
+\fB\fCloc\fR
+.RS
+.IP \(bu 2
+Print lines of code in the target directory:
+.RE
+.PP
+\fB\fCloc {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Print lines of code with stats for individual files:
+.RE
+.PP
+\fB\fCloc \-\-files\fR
+.RS
+.IP \(bu 2
+Print lines of code without .gitignore (etc.) files (e.g. two \-u flags will additionally count hidden files and dirs):
+.RE
+.PP
+\fB\fCloc \-u\fR

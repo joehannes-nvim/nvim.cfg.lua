@@ -1,0 +1,36 @@
+.TH dvc fetch
+.PP
+.RS
+Download DVC tracked files and directories from a remote repository.
+More information: \[la]https://dvc.org/doc/command-reference/fetch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fetch the latest changes from the default remote upstream repository (if set):
+.RE
+.PP
+\fB\fCdvc fetch\fR
+.RS
+.IP \(bu 2
+Fetch changes from a specific remote upstream repository:
+.RE
+.PP
+\fB\fCdvc fetch \-\-remote {{remote_name}}\fR
+.RS
+.IP \(bu 2
+Fetch the latest changes for a specific target/s:
+.RE
+.PP
+\fB\fCdvc fetch {{target/s}}\fR
+.RS
+.IP \(bu 2
+Fetch changes for all branch and tags:
+.RE
+.PP
+\fB\fCdvc fetch \-\-all\-branches \-\-all\-tags\fR
+.RS
+.IP \(bu 2
+Fetch changes for all commits:
+.RE
+.PP
+\fB\fCdvc fetch \-\-all\-commits\fR

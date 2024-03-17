@@ -1,0 +1,48 @@
+.TH z
+.PP
+.RS
+Tracks the most used (by frecency) directories and enables quickly navigating to them using string patterns or regular expressions.
+More information: \[la]https://github.com/rupa/z\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Go to a directory that contains "foo" in the name:
+.RE
+.PP
+\fB\fCz {{foo}}\fR
+.RS
+.IP \(bu 2
+Go to a directory that contains "foo" and then "bar":
+.RE
+.PP
+\fB\fCz {{foo}} {{bar}}\fR
+.RS
+.IP \(bu 2
+Go to the highest\-ranked directory matching "foo":
+.RE
+.PP
+\fB\fCz \-r {{foo}}\fR
+.RS
+.IP \(bu 2
+Go to the most recently accessed directory matching "foo":
+.RE
+.PP
+\fB\fCz \-t {{foo}}\fR
+.RS
+.IP \(bu 2
+List all directories in \fB\fCz\fR\&'s database matching "foo":
+.RE
+.PP
+\fB\fCz \-l {{foo}}\fR
+.RS
+.IP \(bu 2
+Remove the current directory from \fB\fCz\fR\&'s database:
+.RE
+.PP
+\fB\fCz \-x .\fR
+.RS
+.IP \(bu 2
+Restrict matches to subdirectories of the current directory:
+.RE
+.PP
+\fB\fCz \-c {{foo}}\fR

@@ -1,0 +1,36 @@
+.TH go mod
+.PP
+.RS
+Module maintenance.
+More information: \[la]https://golang.org/cmd/go/#hdr-Module_maintenance\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize new module in current directory:
+.RE
+.PP
+\fB\fCgo mod init {{moduleName}}\fR
+.RS
+.IP \(bu 2
+Download modules to local cache:
+.RE
+.PP
+\fB\fCgo mod download\fR
+.RS
+.IP \(bu 2
+Add missing and remove unused modules:
+.RE
+.PP
+\fB\fCgo mod tidy\fR
+.RS
+.IP \(bu 2
+Verify dependencies have expected content:
+.RE
+.PP
+\fB\fCgo mod verify\fR
+.RS
+.IP \(bu 2
+Copy sources of all dependencies into the vendor directory:
+.RE
+.PP
+\fB\fCgo mod vendor\fR

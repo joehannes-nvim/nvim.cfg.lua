@@ -1,0 +1,43 @@
+.TH ghc
+.PP
+.RS
+The Glasgow Haskell Compiler.
+Compiles and links Haskell source files.
+More information: \[la]https://www.haskell.org/ghc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find and compile all modules in the current directory:
+.RE
+.PP
+\fB\fCghc Main\fR
+.RS
+.IP \(bu 2
+Compile a single file:
+.RE
+.PP
+\fB\fCghc {{file.hs}}\fR
+.RS
+.IP \(bu 2
+Compile using extra optimization:
+.RE
+.PP
+\fB\fCghc \-O {{file.hs}}\fR
+.RS
+.IP \(bu 2
+Stop compilation after generating object files (.o):
+.RE
+.PP
+\fB\fCghc \-c {{file.hs}}\fR
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCghci\fR
+.RS
+.IP \(bu 2
+Evaluate a single expression:
+.RE
+.PP
+\fB\fCghc \-e {{expression}}\fR

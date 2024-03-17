@@ -1,0 +1,19 @@
+.TH compare
+.PP
+.RS
+Create a comparison image to visually annotate the difference between two images.
+Part of ImageMagick.
+More information: \[la]https://imagemagick.org/script/compare.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare two images:
+.RE
+.PP
+\fB\fCcompare {{path/to/image1.png}} {{path/to/image2.png}} {{path/to/diff.png}}\fR
+.RS
+.IP \(bu 2
+Compare two images using the specified metric:
+.RE
+.PP
+\fB\fCcompare \-verbose \-metric {{PSNR}} {{path/to/image1.png}} {{path/to/image2.png}} {{path/to/diff.png}}\fR

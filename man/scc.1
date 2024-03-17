@@ -1,0 +1,54 @@
+.TH scc
+.PP
+.RS
+Tool written in Go that counts lines of code.
+More information: \[la]https://github.com/boyter/scc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print lines of code in the current directory:
+.RE
+.PP
+\fB\fCscc\fR
+.RS
+.IP \(bu 2
+Print lines of code in the target directory:
+.RE
+.PP
+\fB\fCscc {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display output for every file:
+.RE
+.PP
+\fB\fCscc \-\-by\-file\fR
+.RS
+.IP \(bu 2
+Display output using a specific output format (defaults to \fB\fCtabular\fR):
+.RE
+.PP
+\fB\fCscc \-\-format {{tabular|wide|json|csv|cloc\-yaml|html|html\-table}}\fR
+.RS
+.IP \(bu 2
+Only count files with specific file extensions:
+.RE
+.PP
+\fB\fCscc \-\-include\-ext {{go, java, js}}\fR
+.RS
+.IP \(bu 2
+Exclude directories from being counted:
+.RE
+.PP
+\fB\fCscc \-\-exclude\-dir {{.git,.hg}}\fR
+.RS
+.IP \(bu 2
+Display output and sort by column (defaults to by files):
+.RE
+.PP
+\fB\fCscc \-\-sort {{files|name|lines|blanks|code|comments|complexity}}\fR
+.RS
+.IP \(bu 2
+Print help for scc:
+.RE
+.PP
+\fB\fCscc \-h\fR

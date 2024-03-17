@@ -1,0 +1,36 @@
+.TH join
+.PP
+.RS
+Join lines of two sorted files on a common field.
+More information: \[la]https://www.gnu.org/software/coreutils/join\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Join two files on the first (default) field:
+.RE
+.PP
+\fB\fCjoin {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Join two files using a comma (instead of a space) as the field separator:
+.RE
+.PP
+\fB\fCjoin \-t {{','}} {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Join field3 of file1 with field1 of file2:
+.RE
+.PP
+\fB\fCjoin \-1 {{3}} \-2 {{1}} {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Produce a line for each unpairable line for file1:
+.RE
+.PP
+\fB\fCjoin \-a {{1}} {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Join a file from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/file1}} | join \- {{path/to/file2}}\fR

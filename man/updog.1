@@ -1,0 +1,37 @@
+.TH updog
+.PP
+.RS
+A replacement for Python's SimpleHTTPServer.
+It allows uploading and downloading via HTTP/S, can set ad hoc SSL certificates and use HTTP basic auth.
+More information: \[la]https://github.com/sc0tfree/updog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a HTTP server for the current directory:
+.RE
+.PP
+\fB\fCupdog\fR
+.RS
+.IP \(bu 2
+Start a HTTP server for a specified directory:
+.RE
+.PP
+\fB\fCupdog \-\-directory {{/path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Start a HTTP server on a specified port:
+.RE
+.PP
+\fB\fCupdog \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Start a HTTP server with a password (To log in, leave the username blank and enter the password in the password field):
+.RE
+.PP
+\fB\fCupdog \-\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Enable transport encryption via SSL:
+.RE
+.PP
+\fB\fCupdog \-\-ssl\fR

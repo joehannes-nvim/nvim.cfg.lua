@@ -1,0 +1,42 @@
+.TH stern
+.PP
+.RS
+Tail multiple pods and containers from Kubernetes.
+More information: \[la]https://github.com/wercker/stern/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Tail all pods within a current namespace:
+.RE
+.PP
+\fB\fCstern .\fR
+.RS
+.IP \(bu 2
+Tail all pods with a specific status:
+.RE
+.PP
+\fB\fCstern . \-\-container\-state {{running|waiting|terminated}}\fR
+.RS
+.IP \(bu 2
+Tail all pods that matches a given regular expression:
+.RE
+.PP
+\fB\fCstern {{pod_query}}\fR
+.RS
+.IP \(bu 2
+Tail matched pods from all namespaces:
+.RE
+.PP
+\fB\fCstern {{pod_query}} \-\-all\-namespaces\fR
+.RS
+.IP \(bu 2
+Tail matched pods from 15 minutes ago:
+.RE
+.PP
+\fB\fCstern {{pod_query}} \-\-since {{15m}}\fR
+.RS
+.IP \(bu 2
+Tail matched pods with a specific label:
+.RE
+.PP
+\fB\fCstern {{pod_query}} \-\-selector {{release=canary}}\fR

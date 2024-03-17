@@ -1,0 +1,36 @@
+.TH nl
+.PP
+.RS
+A utility for numbering lines, either from a file, or from \fB\fCstdin\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/nl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Number non\-blank lines in a file:
+.RE
+.PP
+\fB\fCnl {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Read from \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | nl {{options}} \-\fR
+.RS
+.IP \(bu 2
+Number only the lines with printable text:
+.RE
+.PP
+\fB\fCnl \-t {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Number all lines including blank lines:
+.RE
+.PP
+\fB\fCnl \-b a {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Number only the body lines that match a basic regular expression (BRE) pattern:
+.RE
+.PP
+\fB\fCnl \-b p'FooBar[0\-9]' {{path/to/file}}\fR

@@ -1,0 +1,36 @@
+.TH zstd
+.PP
+.RS
+Compress or decompress files with Zstandard compression.
+More information: \[la]https://github.com/facebook/zstd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file into a new file with the \fB\fC\&.zst\fR suffix:
+.RE
+.PP
+\fB\fCzstd {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress a file:
+.RE
+.PP
+\fB\fCzstd \-\-decompress {{path/to/file.zst}}\fR
+.RS
+.IP \(bu 2
+Decompress to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCzstd \-\-decompress \-\-stdout {{path/to/file.zst}}\fR
+.RS
+.IP \(bu 2
+Compress a file specifying the compression level, where 1=fastest, 19=slowest and 3=default:
+.RE
+.PP
+\fB\fCzstd \-{{level}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Unlock higher compression levels (up to 22) using more memory (both for compression and decompression):
+.RE
+.PP
+\fB\fCzstd \-\-ultra \-{{level}} {{path/to/file}}\fR

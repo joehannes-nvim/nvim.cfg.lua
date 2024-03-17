@@ -1,0 +1,37 @@
+.TH az advisor
+.PP
+.RS
+Manage Azure subscription information.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/advisor\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List Azure Advisor configuration for the entire subscription:
+.RE
+.PP
+\fB\fCaz advisor configuration list\fR
+.RS
+.IP \(bu 2
+Show Azure Advisor configuration for the given subscription or resource group:
+.RE
+.PP
+\fB\fCaz advisor configuration show \-\-resource_group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+List Azure Advisor recommendations:
+.RE
+.PP
+\fB\fCaz advisor recommendation list\fR
+.RS
+.IP \(bu 2
+Enable Azure Advisor recommendations:
+.RE
+.PP
+\fB\fCaz advisor recommendation enable \-\-resource_group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Disable Azure Advisor recommendations:
+.RE
+.PP
+\fB\fCaz advisor recommendation disable \-\-resource_group {{resource_group}}\fR

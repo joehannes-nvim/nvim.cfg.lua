@@ -1,0 +1,30 @@
+.TH trivy
+.PP
+.RS
+Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues.
+More information: \[la]https://github.com/aquasecurity/trivy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan an image:
+.RE
+.PP
+\fB\fCtrivy image {{image:tag}}\fR
+.RS
+.IP \(bu 2
+Scan the filesystem for vulnerabilities and misconfigurations:
+.RE
+.PP
+\fB\fCtrivy fs \-\-security\-checks {{vuln,config}} {{path/to/project_directory}}\fR
+.RS
+.IP \(bu 2
+Scan a directory for misconfigurations:
+.RE
+.PP
+\fB\fCtrivy config {{path/to/iac_directory}}\fR
+.RS
+.IP \(bu 2
+Generate output with a SARIF template:
+.RE
+.PP
+\fB\fCtrivy image \-\-format {{template}} \-\-template {{"@sarif.tpl"}} \-o {{path/to/report.sarif}} {{image:tag}}\fR

@@ -1,0 +1,42 @@
+.TH uncrustify
+.PP
+.RS
+C, C++, C#, D, Java and Pawn source code formatter.
+More information: \[la]https://github.com/uncrustify/uncrustify\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a single file:
+.RE
+.PP
+\fB\fCuncrustify \-f {{path/to/file.cpp}} \-o {{path/to/output.cpp}}\fR
+.RS
+.IP \(bu 2
+Read filenames from \fB\fCstdin\fR, and take backups before writing output back to the original filepaths:
+.RE
+.PP
+\fB\fCfind . \-name "*.cpp" | uncrustify \-F \- \-\-replace\fR
+.RS
+.IP \(bu 2
+Don't make backups (useful if files are under version control):
+.RE
+.PP
+\fB\fCfind . \-name "*.cpp" | uncrustify \-F \- \-\-no\-backup\fR
+.RS
+.IP \(bu 2
+Use a custom configuration file and write the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCuncrustify \-c {{path/to/uncrustify.cfg}} \-f {{path/to/file.cpp}}\fR
+.RS
+.IP \(bu 2
+Explicitly set a configuration variable's value:
+.RE
+.PP
+\fB\fCuncrustify \-\-set {{option}}={{value}}\fR
+.RS
+.IP \(bu 2
+Generate a new configuration file:
+.RE
+.PP
+\fB\fCuncrustify \-\-update\-config \-o {{path/to/new.cfg}}\fR

@@ -1,0 +1,42 @@
+.TH envoy
+.PP
+.RS
+A PHP\-based task manager for Laravel remote servers.
+More information: \[la]https://laravel.com/docs/envoy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a configuration file:
+.RE
+.PP
+\fB\fCenvoy init {{host_name}}\fR
+.RS
+.IP \(bu 2
+Run a task:
+.RE
+.PP
+\fB\fCenvoy run {{task_name}}\fR
+.RS
+.IP \(bu 2
+Run a task from a specific project:
+.RE
+.PP
+\fB\fCenvoy run \-\-path {{path/to/directory}} {{task_name}}\fR
+.RS
+.IP \(bu 2
+Run a task and continue on failure:
+.RE
+.PP
+\fB\fCenvoy run \-\-continue {{task_name}}\fR
+.RS
+.IP \(bu 2
+Dump a task as a Bash script for inspection:
+.RE
+.PP
+\fB\fCenvoy run \-\-pretend {{task_name}}\fR
+.RS
+.IP \(bu 2
+Connect to the specified server via SSH:
+.RE
+.PP
+\fB\fCenvoy ssh {{server_name}}\fR

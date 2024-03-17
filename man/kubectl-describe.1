@@ -1,0 +1,36 @@
+.TH kubectl describe
+.PP
+.RS
+Show details of Kubernetes objects and resources.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show details of pods in a namespace:
+.RE
+.PP
+\fB\fCkubectl describe pods \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Show details of nodes in a namespace:
+.RE
+.PP
+\fB\fCkubectl describe nodes \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Show the details of a specific pod in a namespace:
+.RE
+.PP
+\fB\fCkubectl describe pods {{pod_name}} \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Show the details of a specific node in a namespace:
+.RE
+.PP
+\fB\fCkubectl describe nodes {{node_name}} \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Show details of Kubernetes objects defined in a YAML manifest:
+.RE
+.PP
+\fB\fCkubectl describe \-f {{path/to/manifest.yaml}}\fR

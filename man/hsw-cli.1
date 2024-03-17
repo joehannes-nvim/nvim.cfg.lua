@@ -1,0 +1,54 @@
+.TH hsw\-cli
+.PP
+.RS
+The command\-line REST tool for the Handshake wallet.
+More information: \[la]https://github.com/handshake-org/hs-client\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Unlock the current wallet (timeout in seconds):
+.RE
+.PP
+\fB\fChsw\-cli unlock {{passphrase}} {{timeout}}\fR
+.RS
+.IP \(bu 2
+Lock the current wallet:
+.RE
+.PP
+\fB\fChsw\-cli lock\fR
+.RS
+.IP \(bu 2
+View the current wallet's details:
+.RE
+.PP
+\fB\fChsw\-cli get\fR
+.RS
+.IP \(bu 2
+View the current wallet's balance:
+.RE
+.PP
+\fB\fChsw\-cli balance\fR
+.RS
+.IP \(bu 2
+View the current wallet's transaction history:
+.RE
+.PP
+\fB\fChsw\-cli history\fR
+.RS
+.IP \(bu 2
+Send a transaction with the specified coin amount to an address:
+.RE
+.PP
+\fB\fChsw\-cli send {{address}} {{1.05}}\fR
+.RS
+.IP \(bu 2
+View the current wallet's pending transactions:
+.RE
+.PP
+\fB\fChsw\-cli pending\fR
+.RS
+.IP \(bu 2
+View details about a transaction:
+.RE
+.PP
+\fB\fChsw\-cli tx {{transaction_hash}}\fR

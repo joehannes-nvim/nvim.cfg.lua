@@ -1,0 +1,36 @@
+.TH snowsql
+.PP
+.RS
+SnowSQL command\-line client for Snowflake's Data Cloud.
+More information: \[la]https://docs.snowflake.com/en/user-guide/snowsql.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a specific instance at \[la]https://account.snowflakecomputing.com\[ra] (password can be provided in prompt or configuration file):
+.RE
+.PP
+\fB\fCsnowsql \-\-accountname {{account}} \-\-username {{username}} \-\-dbname {{database}} \-\-schemaname {{schema}}\fR
+.RS
+.IP \(bu 2
+Connect to an instance specified by a specific configuration file (defaults to \fB\fC~/.snowsql/config\fR):
+.RE
+.PP
+\fB\fCsnowsql \-\-config {{path/to/configuration_file}}\fR
+.RS
+.IP \(bu 2
+Connect to the default instance using a token for multi\-factor authentication:
+.RE
+.PP
+\fB\fCsnowsql \-\-mfa\-passcode {{token}}\fR
+.RS
+.IP \(bu 2
+Execute a single SQL query or SnowSQL command on the default connection (useful in shell scripts):
+.RE
+.PP
+\fB\fCsnowsql \-\-query '{{query}}'\fR
+.RS
+.IP \(bu 2
+Execute commands from a specific file on the default connection:
+.RE
+.PP
+\fB\fCsnowsql \-\-filename {{path/to/file.sql}}\fR

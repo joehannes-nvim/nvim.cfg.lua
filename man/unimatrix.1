@@ -1,0 +1,39 @@
+.TH unimatrix
+.PP
+.RS
+Simulate the Matrix look with Unicode characters.
+See also: \fB\fCcmatrix\fR\&.
+More information: \[la]https://github.com/will8211/unimatrix\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Mimic the default output of \fB\fCcmatrix\fR (no unicode, works in a TTY):
+.RE
+.PP
+\fB\fCunimatrix \-\-no\-bold \-\-speed {{96}} \-\-character\-list {{o}}\fR
+.RS
+.IP \(bu 2
+No bold characters, slowly, with emojis, numbers, and a few symbols:
+.RE
+.PP
+\fB\fCunimatrix \-\-no\-bold \-\-speed {{50}} \-\-character\-list {{ens}}\fR
+.RS
+.IP \(bu 2
+Change the color of characters:
+.RE
+.PP
+\fB\fCunimatrix \-\-color {{red|green|blue|white|...}}\fR
+.RS
+.IP \(bu 2
+Select character 
+.BR set (s) 
+using letter codes (see \fB\fCunimatrix \-\-help\fR for available character sets):
+.RE
+.PP
+\fB\fCunimatrix \-\-character\-list {{character_sets}}\fR
+.RS
+.IP \(bu 2
+Change the scrolling speed:
+.RE
+.PP
+\fB\fCunimatrix \-\-speed {{number}}\fR

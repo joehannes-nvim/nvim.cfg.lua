@@ -1,0 +1,37 @@
+.TH r2e
+.PP
+.RS
+Forwards RSS feeds to an email address.
+Requires a configured \fB\fCsendmail\fR or smtp setup.
+More information: \[la]https://github.com/rss2email/rss2email\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new feed database that sends email to an email address:
+.RE
+.PP
+\fB\fCr2e new {{email_address}}\fR
+.RS
+.IP \(bu 2
+Subscribe to a feed:
+.RE
+.PP
+\fB\fCr2e add {{feed_name}} {{feed_URI}}\fR
+.RS
+.IP \(bu 2
+Send new stories to an email address:
+.RE
+.PP
+\fB\fCr2e run\fR
+.RS
+.IP \(bu 2
+List all feeds:
+.RE
+.PP
+\fB\fCr2e list\fR
+.RS
+.IP \(bu 2
+Delete a feed at a specified index:
+.RE
+.PP
+\fB\fCr2e delete {{index}}\fR

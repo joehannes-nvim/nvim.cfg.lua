@@ -1,0 +1,30 @@
+.TH hive
+.PP
+.RS
+CLI tool for Apache Hive.
+More information: \[la]https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a Hive interactive shell:
+.RE
+.PP
+\fB\fChive\fR
+.RS
+.IP \(bu 2
+Run HiveQL:
+.RE
+.PP
+\fB\fChive \-e "{{hiveql_query}}"\fR
+.RS
+.IP \(bu 2
+Run a HiveQL file with a variable substitution:
+.RE
+.PP
+\fB\fChive \-\-define {{key}}={{value}} \-f {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Run a HiveQL with HiveConfig (e.g. \fB\fCmapred.reduce.tasks=32\fR):
+.RE
+.PP
+\fB\fChive \-\-hiveconf {{conf_name}}={{conf_value}}\fR

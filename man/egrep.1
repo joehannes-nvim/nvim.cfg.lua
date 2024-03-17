@@ -1,0 +1,42 @@
+.TH egrep
+.PP
+.RS
+Find patterns in files using extended regular expression (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR).
+More information: \[la]https://manned.org/egrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a file:
+.RE
+.PP
+\fB\fCegrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern within multiple files:
+.RE
+.PP
+\fB\fCegrep "{{search_pattern}}" {{path/to/file1}} {{path/to/file2}} {{path/to/file3}}\fR
+.RS
+.IP \(bu 2
+Search \fB\fCstdin\fR for a pattern:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | egrep {{search_pattern}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCegrep \-\-with\-filename \-\-line\-number "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern in all files recursively in a directory, ignoring binary files:
+.RE
+.PP
+\fB\fCegrep \-\-recursive \-\-binary\-files={{without\-match}} "{{search_pattern}}" {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Search for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCegrep \-\-invert\-match "{{search_pattern}}" {{path/to/file}}\fR

@@ -1,0 +1,19 @@
+.TH tailscale file
+.PP
+.RS
+Send files across connected devices on a Tailscale network.
+It currently does not support sending files to devices owned by other users even on the same Tailscale network.
+More information: \[la]https://tailscale.com/kb/1106/taildrop/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a file to a specific node:
+.RE
+.PP
+\fB\fCsudo tailscale file cp {{path/to/file}} {{hostname|ip}}:\fR
+.RS
+.IP \(bu 2
+Store files that were sent to the current node into a specific directory:
+.RE
+.PP
+\fB\fCsudo tailscale file get {{path/to/directory}}\fR

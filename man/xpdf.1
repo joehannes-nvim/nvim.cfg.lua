@@ -1,0 +1,42 @@
+.TH xpdf
+.PP
+.RS
+Portable Document Format (PDF) file viewer.
+More information: \[la]https://www.xpdfreader.com/xpdf-man.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a PDF file:
+.RE
+.PP
+\fB\fCxpdf {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Open a specific page in a PDF file:
+.RE
+.PP
+\fB\fCxpdf {{path/to/file.pdf}} :{{page_number}}\fR
+.RS
+.IP \(bu 2
+Open a compressed PDF file:
+.RE
+.PP
+\fB\fCxpdf {{path/to/file.pdf.tar}}\fR
+.RS
+.IP \(bu 2
+Open a PDF file in fullscreen mode:
+.RE
+.PP
+\fB\fCxpdf \-fullscreen {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Specify the initial zoom:
+.RE
+.PP
+\fB\fCxpdf \-z {{75}}% {{path/to/file.pdf}}\fR
+.RS
+.IP \(bu 2
+Specify the initial zoom at page width or full page:
+.RE
+.PP
+\fB\fCxpdf \-z {{page|width}} {{path/to/file.pdf}}\fR

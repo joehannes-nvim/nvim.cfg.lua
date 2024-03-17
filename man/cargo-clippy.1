@@ -1,0 +1,48 @@
+.TH cargo clippy
+.PP
+.RS
+A collection of lints to catch common mistakes and improve your Rust code.
+More information: \[la]https://github.com/rust-lang/rust-clippy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run checks over the code in the current directory:
+.RE
+.PP
+\fB\fCcargo clippy\fR
+.RS
+.IP \(bu 2
+Require that \fB\fCCargo.lock\fR is up to date:
+.RE
+.PP
+\fB\fCcargo clippy \-\-locked\fR
+.RS
+.IP \(bu 2
+Run checks on all packages in the workspace:
+.RE
+.PP
+\fB\fCcargo clippy \-\-workspace\fR
+.RS
+.IP \(bu 2
+Run checks for a package:
+.RE
+.PP
+\fB\fCcargo clippy \-\-package {{package}}\fR
+.RS
+.IP \(bu 2
+Treat warnings as errors:
+.RE
+.PP
+\fB\fCcargo clippy \-\- \-\-deny warnings\fR
+.RS
+.IP \(bu 2
+Run checks and ignore warnings:
+.RE
+.PP
+\fB\fCcargo clippy \-\- \-\-allow warnings\fR
+.RS
+.IP \(bu 2
+Apply Clippy suggestions automatically:
+.RE
+.PP
+\fB\fCcargo clippy \-\-fix\fR

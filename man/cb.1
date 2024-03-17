@@ -1,0 +1,54 @@
+.TH cb
+.PP
+.RS
+Cut, copy, and paste anything in the terminal.
+More information: \[la]https://github.com/Slackadays/Clipboard\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all clipboards:
+.RE
+.PP
+\fB\fCcb\fR
+.RS
+.IP \(bu 2
+Copy a file to the clipboard:
+.RE
+.PP
+\fB\fCcb copy {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Copy some text to the clipboard:
+.RE
+.PP
+\fB\fCcb copy "{{Some example text}}"\fR
+.RS
+.IP \(bu 2
+Copy piped data to the clipboard:
+.RE
+.PP
+\fB\fCecho "{{Some example text}}" | cb\fR
+.RS
+.IP \(bu 2
+Paste clipboard content:
+.RE
+.PP
+\fB\fCcb paste\fR
+.RS
+.IP \(bu 2
+Pipe out clipboard content:
+.RE
+.PP
+\fB\fCcb | cat\fR
+.RS
+.IP \(bu 2
+Show clipboard history:
+.RE
+.PP
+\fB\fCcb history\fR
+.RS
+.IP \(bu 2
+Show clipboard information:
+.RE
+.PP
+\fB\fCcb info\fR

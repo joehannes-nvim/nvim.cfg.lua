@@ -1,0 +1,49 @@
+.TH limactl
+.PP
+.RS
+Virtual machine manager for Linux guests, with multiple VM templates available.
+Can be used to run containers on macOS, but also for generic virtual machine use cases on macOS and Linux hosts.
+More information: \[la]https://github.com/lima-vm/lima\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List VMs:
+.RE
+.PP
+\fB\fClimactl list\fR
+.RS
+.IP \(bu 2
+Create a VM using the default settings and optionally provide a name and/or a template (see \fB\fClimactl create \-\-list\-templates\fR for available templates):
+.RE
+.PP
+\fB\fClimactl create \-\-name {{vm_name}} template://{{debian|fedora|ubuntu|…}}\fR
+.RS
+.IP \(bu 2
+Start a VM (this might install some dependencies in it and take a few minutes):
+.RE
+.PP
+\fB\fClimactl start {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Open a remote shell inside a VM:
+.RE
+.PP
+\fB\fClimactl shell {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Run a command inside a VM:
+.RE
+.PP
+\fB\fClimactl shell {{vm_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Stop/shutdown a VM:
+.RE
+.PP
+\fB\fClimactl stop {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Delete a VM:
+.RE
+.PP
+\fB\fClimactl remove {{vm_name}}\fR

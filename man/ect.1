@@ -1,0 +1,37 @@
+.TH ect
+.PP
+.RS
+Efficient Compression Tool.
+File optimizer written in C++. It supports \fB\fC\&.png\fR, \fB\fC\&.jpg\fR, \fB\fC\&.gzip\fR and \fB\fC\&.zip\fR files.
+More information: \[la]https://github.com/fhanau/Efficient-Compression-Tool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file:
+.RE
+.PP
+\fB\fCect {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a file with specified compression level and multithreading (1=Fastest (Worst), 9=Slowest (Best), default is 3):
+.RE
+.PP
+\fB\fCect \-{{9}} \-\-mt\-deflate {{path/to/file.zip}}\fR
+.RS
+.IP \(bu 2
+Compress all files in a directory recursively:
+.RE
+.PP
+\fB\fCect \-recurse {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Compress a file, keeping the original modification time:
+.RE
+.PP
+\fB\fCect \-keep {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a file, stripping metadata:
+.RE
+.PP
+\fB\fCect \-strip {{path/to/file.png}}\fR

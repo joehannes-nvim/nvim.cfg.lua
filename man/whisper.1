@@ -1,0 +1,42 @@
+.TH whisper
+.PP
+.RS
+Convert audio files to \fB\fCtxt\fR, \fB\fCvtt\fR, \fB\fCsrt\fR, \fB\fCtsv\fR and \fB\fCjson\fR\&.
+More information: \[la]https://github.com/openai/whisper\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a specific audio file to all of the given file formats:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}}\fR
+.RS
+.IP \(bu 2
+Convert an audio file specifying the output format of the converted file:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}} \-\-output_format {{txt}}\fR
+.RS
+.IP \(bu 2
+Convert an audio file using a specific model for conversion:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}} \-\-model {{tiny.en,tiny,base.en,base,small.en,small,medium.en,medium,large\-v1,large\-v2,large}}\fR
+.RS
+.IP \(bu 2
+Convert an audio file specifying which language the audio file is in to reduce conversion time:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}} \-\-language {{english}}\fR
+.RS
+.IP \(bu 2
+Convert an audio file and save it to a specific location:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}} \-\-output_dir "{{path/to/output}}"\fR
+.RS
+.IP \(bu 2
+Convert an audio file in quiet mode:
+.RE
+.PP
+\fB\fCwhisper {{path/to/audio.mp3}} \-\-verbose {{False}}\fR

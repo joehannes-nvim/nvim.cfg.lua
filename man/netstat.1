@@ -1,0 +1,48 @@
+.TH netstat
+.PP
+.RS
+Displays network\-related information such as open connections, open socket ports, etc.
+More information: \[la]https://man7.org/linux/man-pages/man8/netstat.8.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all ports:
+.RE
+.PP
+\fB\fCnetstat \-\-all\fR
+.RS
+.IP \(bu 2
+List all listening ports:
+.RE
+.PP
+\fB\fCnetstat \-\-listening\fR
+.RS
+.IP \(bu 2
+List listening TCP ports:
+.RE
+.PP
+\fB\fCnetstat \-\-tcp\fR
+.RS
+.IP \(bu 2
+Display PID and program names:
+.RE
+.PP
+\fB\fCnetstat \-\-program\fR
+.RS
+.IP \(bu 2
+List information continuously:
+.RE
+.PP
+\fB\fCnetstat \-\-continuous\fR
+.RS
+.IP \(bu 2
+List routes and do not resolve IP addresses to hostnames:
+.RE
+.PP
+\fB\fCnetstat \-\-route \-\-numeric\fR
+.RS
+.IP \(bu 2
+List listening TCP and UDP ports (+ user and process if you're root):
+.RE
+.PP
+\fB\fCnetstat \-\-listening \-\-program \-\-numeric \-\-tcp \-\-udp \-\-extend\fR

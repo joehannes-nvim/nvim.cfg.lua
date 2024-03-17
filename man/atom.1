@@ -1,0 +1,43 @@
+.TH atom
+.PP
+.RS
+A cross\-platform pluggable text editor.
+Plugins are managed by \fB\fCapm\fR\&.
+More information: \[la]https://atom.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file or directory:
+.RE
+.PP
+\fB\fCatom {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Open a file or directory in a new window:
+.RE
+.PP
+\fB\fCatom \-n {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Open a file or directory in an existing window:
+.RE
+.PP
+\fB\fCatom \-\-add {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Open Atom in safe mode (does not load any additional packages):
+.RE
+.PP
+\fB\fCatom \-\-safe\fR
+.RS
+.IP \(bu 2
+Prevent Atom from forking into the background, keeping Atom attached to the terminal:
+.RE
+.PP
+\fB\fCatom \-\-foreground\fR
+.RS
+.IP \(bu 2
+Wait for Atom window to close before returning (useful for Git commit editor):
+.RE
+.PP
+\fB\fCatom \-\-wait\fR

@@ -1,0 +1,36 @@
+.TH uvicorn
+.PP
+.RS
+Python ASGI HTTP Server, for asynchronous projects.
+More information: \[la]https://www.uvicorn.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run Python web app:
+.RE
+.PP
+\fB\fCuvicorn {{import.path:app_object}}\fR
+.RS
+.IP \(bu 2
+Listen on port 8080 on localhost:
+.RE
+.PP
+\fB\fCuvicorn \-\-host {{localhost}} \-\-port {{8080}} {{import.path:app_object}}\fR
+.RS
+.IP \(bu 2
+Turn on live reload:
+.RE
+.PP
+\fB\fCuvicorn \-\-reload {{import.path:app_object}}\fR
+.RS
+.IP \(bu 2
+Use 4 worker processes for handling requests:
+.RE
+.PP
+\fB\fCuvicorn \-\-workers {{4}} {{import.path:app_object}}\fR
+.RS
+.IP \(bu 2
+Run app over HTTPS:
+.RE
+.PP
+\fB\fCuvicorn \-\-ssl\-certfile {{cert.pem}} \-\-ssl\-keyfile {{key.pem}} {{import.path:app_object}}\fR

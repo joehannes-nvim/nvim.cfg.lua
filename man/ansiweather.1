@@ -1,0 +1,24 @@
+.TH ansiweather
+.PP
+.RS
+A shell script for displaying the current weather conditions in your terminal.
+More information: \[la]https://github.com/fcambus/ansiweather\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a forecast using metric units for the next five days for Rzeszow, Poland:
+.RE
+.PP
+\fB\fCansiweather \-u {{metric}} \-f {{5}} \-l {{Rzeszow,PL}}\fR
+.RS
+.IP \(bu 2
+Display a forecast showing symbols and daylight data for your current location:
+.RE
+.PP
+\fB\fCansiweather \-s {{true}} \-d {{true}}\fR
+.RS
+.IP \(bu 2
+Display a forecast showing wind and humidity data for your current location:
+.RE
+.PP
+\fB\fCansiweather \-w {{true}} \-h {{true}}\fR

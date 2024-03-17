@@ -1,0 +1,42 @@
+.TH eol
+.PP
+.RS
+Show end\-of\-life dates (EoLs) for a number of products.
+More information: \[la]https://github.com/hugovk/norwegianblue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available products:
+.RE
+.PP
+\fB\fCeol\fR
+.RS
+.IP \(bu 2
+Get EoLs of one or more products:
+.RE
+.PP
+\fB\fCeol {{product1 product2 ...}}\fR
+.RS
+.IP \(bu 2
+Open the product webpage:
+.RE
+.PP
+\fB\fCeol {{product}} \-\-web\fR
+.RS
+.IP \(bu 2
+Get EoLs of a one or more products in a specific format:
+.RE
+.PP
+\fB\fCeol {{product1 product2 ...}} \-\-format {{html|json|md|markdown|pretty|rst|csv|tsv|yaml}}\fR
+.RS
+.IP \(bu 2
+Get EoLs of one or more products as a single markdown file:
+.RE
+.PP
+\fB\fCeol {{product1 product2 ...}} \-\-format {{markdown}} > {{eol_report.md}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCeol \-\-help\fR

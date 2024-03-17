@@ -1,0 +1,55 @@
+.TH screen
+.PP
+.RS
+Hold a session open on a remote server. Manage multiple windows with a single SSH connection.
+See also \fB\fCtmux\fR and \fB\fCzellij\fR\&.
+More information: \[la]https://manned.org/screen\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a new screen session:
+.RE
+.PP
+\fB\fCscreen\fR
+.RS
+.IP \(bu 2
+Start a new named screen session:
+.RE
+.PP
+\fB\fCscreen \-S {{session_name}}\fR
+.RS
+.IP \(bu 2
+Start a new daemon and log the output to \fB\fCscreenlog.x\fR:
+.RE
+.PP
+\fB\fCscreen \-dmLS {{session_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Show open screen sessions:
+.RE
+.PP
+\fB\fCscreen \-ls\fR
+.RS
+.IP \(bu 2
+Reattach to an open screen:
+.RE
+.PP
+\fB\fCscreen \-r {{session_name}}\fR
+.RS
+.IP \(bu 2
+Detach from inside a screen:
+.RE
+.PP
+\fB\fCCtrl + A, D\fR
+.RS
+.IP \(bu 2
+Kill the current screen session:
+.RE
+.PP
+\fB\fCCtrl + A, K\fR
+.RS
+.IP \(bu 2
+Kill a detached screen:
+.RE
+.PP
+\fB\fCscreen \-X \-S {{session_name}} quit\fR

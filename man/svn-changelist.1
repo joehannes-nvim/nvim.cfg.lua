@@ -1,0 +1,36 @@
+.TH svn changelist
+.PP
+.RS
+Associate a changelist with a set of files.
+More information: \[la]http://svnbook.red-bean.com/en/1.7/svn.advanced.changelists.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add files to a changelist, creating the changelist if it does not exist:
+.RE
+.PP
+\fB\fCsvn changelist {{changelist_name}} {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Remove files from a changelist:
+.RE
+.PP
+\fB\fCsvn changelist \-\-remove {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Remove the whole changelist at once:
+.RE
+.PP
+\fB\fCsvn changelist \-\-remove \-\-recursive \-\-changelist {{changelist_name}} .\fR
+.RS
+.IP \(bu 2
+Add the contents of a space\-separated list of directories to a changelist:
+.RE
+.PP
+\fB\fCsvn changelist \-\-recursive {{changelist_name}} {{path/to/directory1}} {{path/to/directory2}}\fR
+.RS
+.IP \(bu 2
+Commit a changelist:
+.RE
+.PP
+\fB\fCsvn commit \-\-changelist {{changelist_name}}\fR

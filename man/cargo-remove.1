@@ -1,0 +1,24 @@
+.TH cargo remove
+.PP
+.RS
+Remove dependencies from a Rust project's \fB\fCCargo.toml\fR manifest.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-remove.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove a dependency from the current project:
+.RE
+.PP
+\fB\fCcargo remove {{dependency}}\fR
+.RS
+.IP \(bu 2
+Remove a development or build dependency:
+.RE
+.PP
+\fB\fCcargo remove \-\-{{dev|build}} {{dependency}}\fR
+.RS
+.IP \(bu 2
+Remove a dependency of the given target platform:
+.RE
+.PP
+\fB\fCcargo remove \-\-target {{target}} {{dependency}}\fR

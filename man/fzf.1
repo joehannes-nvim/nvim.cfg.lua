@@ -1,0 +1,43 @@
+.TH fzf
+.PP
+.RS
+Command\-line fuzzy finder.
+Similar to \fB\fCsk\fR\&.
+More information: \[la]https://github.com/junegunn/fzf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCfzf\fR on all files in the specified directory:
+.RE
+.PP
+\fB\fCfind {{path/to/directory}} \-type f | fzf\fR
+.RS
+.IP \(bu 2
+Start \fB\fCfzf\fR for running processes:
+.RE
+.PP
+\fB\fCps aux | fzf\fR
+.RS
+.IP \(bu 2
+Select multiple files with \fB\fCShift + Tab\fR and write to a file:
+.RE
+.PP
+\fB\fCfind {{path/to/directory}} \-type f | fzf \-\-multi > {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCfzf\fR with a specified query:
+.RE
+.PP
+\fB\fCfzf \-\-query "{{query}}"\fR
+.RS
+.IP \(bu 2
+Start \fB\fCfzf\fR on entries that start with core and end with either go, rb, or py:
+.RE
+.PP
+\fB\fCfzf \-\-query "^core go$ | rb$ | py$"\fR
+.RS
+.IP \(bu 2
+Start \fB\fCfzf\fR on entries that not match pyc and match exactly travis:
+.RE
+.PP
+\fB\fCfzf \-\-query "!pyc 'travis"\fR

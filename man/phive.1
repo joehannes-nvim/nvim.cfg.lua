@@ -1,0 +1,54 @@
+.TH phive
+.PP
+.RS
+The Phar Installation and Verification Environment for secure PHP application deployment.
+More information: \[la]https://phar.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a list of available aliased Phars:
+.RE
+.PP
+\fB\fCphive list\fR
+.RS
+.IP \(bu 2
+Install a specified Phar to the local directory:
+.RE
+.PP
+\fB\fCphive install {{alias|url}}\fR
+.RS
+.IP \(bu 2
+Install a specified Phar globally:
+.RE
+.PP
+\fB\fCphive install {{alias|url}} \-\-global\fR
+.RS
+.IP \(bu 2
+Install a specified Phar to a target directory:
+.RE
+.PP
+\fB\fCphive install {{alias|url}} \-\-target {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Update all Phar files to the latest version:
+.RE
+.PP
+\fB\fCphive update\fR
+.RS
+.IP \(bu 2
+Remove a specified Phar file:
+.RE
+.PP
+\fB\fCphive remove {{alias|url}}\fR
+.RS
+.IP \(bu 2
+Remove unused Phar files:
+.RE
+.PP
+\fB\fCphive purge\fR
+.RS
+.IP \(bu 2
+List all available commands:
+.RE
+.PP
+\fB\fCphive help\fR

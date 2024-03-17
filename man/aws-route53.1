@@ -1,0 +1,36 @@
+.TH aws route53
+.PP
+.RS
+CLI for AWS Route53 \- Route 53 is a highly available and scalable Domain Name System (DNS) web service.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all hosted zones, private and public:
+.RE
+.PP
+\fB\fCaws route53 list\-hosted\-zones\fR
+.RS
+.IP \(bu 2
+Show all records in a zone:
+.RE
+.PP
+\fB\fCaws route53 list\-resource\-record\-sets \-\-hosted\-zone\-id {{zone_id}}\fR
+.RS
+.IP \(bu 2
+Create a new, public zone using a request identifier to retry the operation safely:
+.RE
+.PP
+\fB\fCaws route53 create\-hosted\-zone \-\-name {{name}} \-\-caller\-reference {{request_identifier}}\fR
+.RS
+.IP \(bu 2
+Delete a zone (if the zone has non\-defaults SOA and NS records the command will fail):
+.RE
+.PP
+\fB\fCaws route53 delete\-hosted\-zone \-\-id {{zone_id}}\fR
+.RS
+.IP \(bu 2
+Test DNS resolving by Amazon servers of a given zone:
+.RE
+.PP
+\fB\fCaws route53 test\-dns\-answer \-\-hosted\-zone\-id {{zone_id}} \-\-record\-name {{name}} \-\-record\-type {{type}}\fR

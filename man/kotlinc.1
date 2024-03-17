@@ -1,0 +1,36 @@
+.TH kotlinc
+.PP
+.RS
+Kotlin compiler.
+More information: \[la]https://kotlinlang.org/docs/command-line.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCkotlinc\fR
+.RS
+.IP \(bu 2
+Compile a Kotlin file:
+.RE
+.PP
+\fB\fCkotlinc {{path/to/file.kt}}\fR
+.RS
+.IP \(bu 2
+Compile several Kotlin files:
+.RE
+.PP
+\fB\fCkotlinc {{path/to/file1.kt path/to/file2.kt ...}}\fR
+.RS
+.IP \(bu 2
+Execute a specific Kotlin Script file:
+.RE
+.PP
+\fB\fCkotlinc \-script {{path/to/file.kts}}\fR
+.RS
+.IP \(bu 2
+Compile a Kotlin file into a self contained jar file with the Kotlin runtime library included:
+.RE
+.PP
+\fB\fCkotlinc {{path/to/file.kt}} \-include\-runtime \-d {{path/to/file.jar}}\fR

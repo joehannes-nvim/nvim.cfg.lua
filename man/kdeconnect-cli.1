@@ -1,0 +1,54 @@
+.TH kdeconnect\-cli
+.PP
+.RS
+KDE's Connect CLI.
+More information: \[la]https://kdeconnect.kde.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all devices:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-list\-devices\fR
+.RS
+.IP \(bu 2
+List available (paired and reachable) devices:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-list\-available\fR
+.RS
+.IP \(bu 2
+Request pairing with a specific device, specifying its ID:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-pair \-\-device {{device_id}}\fR
+.RS
+.IP \(bu 2
+Ring a device, specifying its name:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-ring \-\-name "{{device_name}}"\fR
+.RS
+.IP \(bu 2
+Share an URL or file with a paired device, specifying its ID:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-share {{url|path/to/file}} \-\-device {{device_id}}\fR
+.RS
+.IP \(bu 2
+Send an SMS with an optional attachment to a specific number:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-name "{{device_name}}" \-\-send\-sms "{{message}}" \-\-destination {{phone_number}} \-\-attachment {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Unlock a specific device:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-name "{{device_name}}" \-\-unlock\fR
+.RS
+.IP \(bu 2
+Simulate a key press on a specific device:
+.RE
+.PP
+\fB\fCkdeconnect\-cli \-\-name "{{device_name}}" \-\-send\-keys {{key}}\fR

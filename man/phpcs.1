@@ -1,0 +1,54 @@
+.TH phpcs
+.PP
+.RS
+Tokenize PHP, JavaScript and CSS files to detect violations of a defined set of coding standards.
+More information: \[la]https://github.com/squizlabs/PHP_CodeSniffer\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sniff the specified directory for issues (defaults to the PEAR standard):
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display a list of installed coding standards:
+.RE
+.PP
+\fB\fCphpcs \-i\fR
+.RS
+.IP \(bu 2
+Specify a coding standard to validate against:
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-\-standard {{standard}}\fR
+.RS
+.IP \(bu 2
+Specify comma\-separated file extensions to include when sniffing:
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-\-extensions {{file_extension(s)}}\fR
+.RS
+.IP \(bu 2
+Specify the format of the output report (e.g. \fB\fCfull\fR, \fB\fCxml\fR, \fB\fCjson\fR, \fB\fCsummary\fR):
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-\-report {{format}}\fR
+.RS
+.IP \(bu 2
+Set config variables to be used during the process:
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-\-config\-set {{key}} {{value}}\fR
+.RS
+.IP \(bu 2
+A comma\-separated list of files to load before processing:
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-\-bootstrap {{file(s)}}\fR
+.RS
+.IP \(bu 2
+Don't recurse into subdirectories:
+.RE
+.PP
+\fB\fCphpcs {{path/to/directory}} \-l\fR

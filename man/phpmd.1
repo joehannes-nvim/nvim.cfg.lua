@@ -1,0 +1,48 @@
+.TH phpmd
+.PP
+.RS
+A PHP mess detector that checks for common potential problems.
+More information: \[la]https://github.com/phpmd/phpmd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display a list of available rulesets and formats:
+.RE
+.PP
+\fB\fCphpmd\fR
+.RS
+.IP \(bu 2
+Scan a file or directory for problems using comma\-separated rulesets:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}}\fR
+.RS
+.IP \(bu 2
+Specify the minimum priority threshold for rules:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} \-\-minimumpriority {{priority}}\fR
+.RS
+.IP \(bu 2
+Include only the specified extensions in analysis:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} \-\-suffixes {{extensions}}\fR
+.RS
+.IP \(bu 2
+Exclude the specified comma\-separated directories:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} \-\-exclude {{directory_patterns}}\fR
+.RS
+.IP \(bu 2
+Output the results to a file instead of \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} \-\-reportfile {{path/to/report_file}}\fR
+.RS
+.IP \(bu 2
+Ignore the use of warning\-suppressive PHPDoc comments:
+.RE
+.PP
+\fB\fCphpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} \-\-strict\fR

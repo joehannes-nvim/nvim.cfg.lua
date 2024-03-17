@@ -1,0 +1,48 @@
+.TH tea
+.PP
+.RS
+Interact with Gitea servers.
+More information: \[la]https://gitea.com/gitea/tea\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log into a Gitea server:
+.RE
+.PP
+\fB\fCtea login add \-\-name "{{name}}" \-\-url "{{url}}" \-\-token "{{token}}"\fR
+.RS
+.IP \(bu 2
+Display all repositories:
+.RE
+.PP
+\fB\fCtea repos ls\fR
+.RS
+.IP \(bu 2
+Display a list of issues:
+.RE
+.PP
+\fB\fCtea issues ls\fR
+.RS
+.IP \(bu 2
+Display a list of issues for a specific repository:
+.RE
+.PP
+\fB\fCtea issues ls \-\-repo "{{repository}}"\fR
+.RS
+.IP \(bu 2
+Create a new issue:
+.RE
+.PP
+\fB\fCtea issues create \-\-title "{{title}}" \-\-body "{{body}}"\fR
+.RS
+.IP \(bu 2
+Display a list of open pull requests:
+.RE
+.PP
+\fB\fCtea pulls ls\fR
+.RS
+.IP \(bu 2
+Open the current repository in a browser:
+.RE
+.PP
+\fB\fCtea open\fR

@@ -1,0 +1,41 @@
+.TH c99
+.PP
+.RS
+Compiles C programs according to the ISO C standard.
+More information: \[la]https://manned.org/c99\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile source 
+.BR file (s) 
+and create an executable:
+.RE
+.PP
+\fB\fCc99 {{file.c}}\fR
+.RS
+.IP \(bu 2
+Compile source 
+.BR file (s) 
+and create an executable with a custom name:
+.RE
+.PP
+\fB\fCc99 \-o {{executable_name}} {{file.c}}\fR
+.RS
+.IP \(bu 2
+Compile source 
+.BR file (s) 
+and create object 
+.BR file (s):
+.RE
+.PP
+\fB\fCc99 \-c {{file.c}}\fR
+.RS
+.IP \(bu 2
+Compile source 
+.BR file (s), 
+link with object 
+.BR file (s), 
+and create an executable:
+.RE
+.PP
+\fB\fCc99 {{file.c}} {{file.o}}\fR

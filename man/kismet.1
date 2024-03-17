@@ -1,0 +1,54 @@
+.TH kismet
+.PP
+.RS
+A wireless network and device detector, sniffer, wardriving tool, and WIDS (wireless intrusion detection) framework.
+More information: \[la]https://www.kismetwireless.net/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture packets from a specific wireless interface:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}}\fR
+.RS
+.IP \(bu 2
+Monitor multiple channels on a wireless interface:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0,wlan1}} \-m\fR
+.RS
+.IP \(bu 2
+Capture packets and save them to a specific directory:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-d {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Start Kismet with a specific configuration file:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-f {{path/to/config.conf}}\fR
+.RS
+.IP \(bu 2
+Monitor and log data to an SQLite database:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-\-log\-to\-db\fR
+.RS
+.IP \(bu 2
+Monitor using a specific data source:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-\-data\-source={{rtl433}}\fR
+.RS
+.IP \(bu 2
+Enable alerts for specific events:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-\-enable\-alert={{new_ap}}\fR
+.RS
+.IP \(bu 2
+Display detailed information about a specific AP's packets:
+.RE
+.PP
+\fB\fCsudo kismet \-c {{wlan0}} \-\-info {{BSSID}}\fR

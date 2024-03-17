@@ -1,0 +1,31 @@
+.TH rustup toolchain
+.PP
+.RS
+Manage Rust toolchains.
+See \fB\fCrustup help toolchain\fR for more information about toolchains.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install or update a given toolchain:
+.RE
+.PP
+\fB\fCrustup install {{toolchain}}\fR
+.RS
+.IP \(bu 2
+Uninstall a toolchain:
+.RE
+.PP
+\fB\fCrustup uninstall {{toolchain}}\fR
+.RS
+.IP \(bu 2
+List installed toolchains:
+.RE
+.PP
+\fB\fCrustup list\fR
+.RS
+.IP \(bu 2
+Create a custom toolchain by symlinking to a directory:
+.RE
+.PP
+\fB\fCrustup link {{custom_toolchain_name}} {{path/to/directory}}\fR

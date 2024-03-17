@@ -1,0 +1,36 @@
+.TH fakedata
+.PP
+.RS
+Generate fake data using a large variety of generators.
+More information: \[la]https://github.com/lucapette/fakedata\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all valid generators:
+.RE
+.PP
+\fB\fCfakedata \-\-generators\fR
+.RS
+.IP \(bu 2
+Generate data using one or more generators:
+.RE
+.PP
+\fB\fCfakedata {{generator1}} {{generator2}}\fR
+.RS
+.IP \(bu 2
+Generate data with a specific output format:
+.RE
+.PP
+\fB\fCfakedata \-\-format {{csv|tab|sql}} {{generator}}\fR
+.RS
+.IP \(bu 2
+Generate a given number of data items (defaults to 10):
+.RE
+.PP
+\fB\fCfakedata \-\-limit {{n}} {{generator}}\fR
+.RS
+.IP \(bu 2
+Generate data using a custom output template (the first letter of generator names must be capitalized):
+.RE
+.PP
+\fB\fCecho "{{\\{\\{Generator\\}\\}}}" | fakedata\fR

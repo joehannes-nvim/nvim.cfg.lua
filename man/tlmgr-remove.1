@@ -1,0 +1,37 @@
+.TH tlmgr remove
+.PP
+.RS
+Uninstall TeX Live packages.
+By default, removed packages will be backed up to \fB\fC\&./tlpkg/backups\fR under the TL installation directory.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Uninstall a TeX Live package:
+.RE
+.PP
+\fB\fCsudo tlmgr remove {{package}}\fR
+.RS
+.IP \(bu 2
+Simulate uninstalling a package without making any changes:
+.RE
+.PP
+\fB\fCtlmgr remove \-\-dry\-run {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package without its dependencies:
+.RE
+.PP
+\fB\fCsudo tlmgr remove \-\-no\-depends {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package and back it up to a specific directory:
+.RE
+.PP
+\fB\fCsudo tlmgr remove \-\-backupdir {{path/to/directory}} {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall all of TeX Live, asking for confirmation:
+.RE
+.PP
+\fB\fCsudo tlmgr remove \-\-all\fR

@@ -1,0 +1,24 @@
+.TH psgrep
+.PP
+.RS
+Search running processes with \fB\fCgrep\fR\&.
+More information: \[la]https://jvz.github.io/psgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find process lines containing a specific string:
+.RE
+.PP
+\fB\fCpsgrep {{process_name}}\fR
+.RS
+.IP \(bu 2
+Find process lines containing a specific string, excluding headers:
+.RE
+.PP
+\fB\fCpsgrep \-n {{process_name}}\fR
+.RS
+.IP \(bu 2
+Search using a simplified format (PID, user, command):
+.RE
+.PP
+\fB\fCpsgrep \-s {{process_name}}\fR

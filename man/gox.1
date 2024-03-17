@@ -1,0 +1,30 @@
+.TH gox
+.PP
+.RS
+A tool for cross\-compiling Go programs.
+More information: \[la]https://github.com/mitchellh/gox\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile Go program in the current directory for all operating systems and architecture combinations:
+.RE
+.PP
+\fB\fCgox\fR
+.RS
+.IP \(bu 2
+Download and compile a Go program from a remote URL:
+.RE
+.PP
+\fB\fCgox {{url_1}} {{url_2}}\fR
+.RS
+.IP \(bu 2
+Compile current directory for a particular operating system:
+.RE
+.PP
+\fB\fCgox \-os="{{os}}"\fR
+.RS
+.IP \(bu 2
+Compile current directory for a single operating system and architecture combination:
+.RE
+.PP
+\fB\fCgox \-osarch="{{os}}/{{arch}}"\fR

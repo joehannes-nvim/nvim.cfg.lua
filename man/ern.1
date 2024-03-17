@@ -1,0 +1,48 @@
+.TH ern
+.PP
+.RS
+Electrode Native platform command\-line client.
+More information: \[la]https://native.electrode.io/reference/index-6\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new \fB\fCern\fR application (\fB\fCMiniApp\fR):
+.RE
+.PP
+\fB\fCern create\-miniapp {{application_name}}\fR
+.RS
+.IP \(bu 2
+Run one or more \fB\fCMiniApps\fR in the iOS/Android Runner application:
+.RE
+.PP
+\fB\fCern run\-{{ios|android}}\fR
+.RS
+.IP \(bu 2
+Create an Electrode Native container:
+.RE
+.PP
+\fB\fCern create\-container \-\-miniapps {{/path/to/miniapp_directory}} \-\-platform {{ios|android}}\fR
+.RS
+.IP \(bu 2
+Publish an Electrode Native container to a local Maven repository:
+.RE
+.PP
+\fB\fCern publish\-container \-\-publisher {{maven}} \-\-platform {{android}} \-\-extra {{'{"groupId":"com.walmart.ern","artifactId":"quickstart"}'}}\fR
+.RS
+.IP \(bu 2
+Transform an iOS container into a pre\-compiled binary framework:
+.RE
+.PP
+\fB\fCern transform\-container \-\-platform {{ios}} \-\-transformer {{xcframework}}\fR
+.RS
+.IP \(bu 2
+List all installed versions of Electrode Native:
+.RE
+.PP
+\fB\fCern platform versions\fR
+.RS
+.IP \(bu 2
+Set a logging level:
+.RE
+.PP
+\fB\fCern platform config set logLevel {{trace|debug}}\fR

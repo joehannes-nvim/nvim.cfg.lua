@@ -1,0 +1,54 @@
+.TH flyctl
+.PP
+.RS
+Command\-line tool for flyctl.io.
+More information: \[la]https://github.com/superfly/flyctl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sign into a Fly account:
+.RE
+.PP
+\fB\fCflyctl auth login\fR
+.RS
+.IP \(bu 2
+Launch an application from a specific Dockerfile (the default path is the current working directory):
+.RE
+.PP
+\fB\fCflyctl launch \-\-dockerfile {{path/to/dockerfile}}\fR
+.RS
+.IP \(bu 2
+Open the current deployed application in the default web browser:
+.RE
+.PP
+\fB\fCflyctl open\fR
+.RS
+.IP \(bu 2
+Deploy the Fly applications from a specific Dockerfile:
+.RE
+.PP
+\fB\fCflyctl deploy \-\-dockerfile {{path/to/dockerfile}}\fR
+.RS
+.IP \(bu 2
+Open the Fly Web UI for the current application in a web browser:
+.RE
+.PP
+\fB\fCflyctl dashboard\fR
+.RS
+.IP \(bu 2
+List all applications in the logged\-in Fly account:
+.RE
+.PP
+\fB\fCflyctl apps list\fR
+.RS
+.IP \(bu 2
+View the status of a specific running application:
+.RE
+.PP
+\fB\fCflyctl status \-\-app {{app_name}}\fR
+.RS
+.IP \(bu 2
+Show version information:
+.RE
+.PP
+\fB\fCflyctl version\fR

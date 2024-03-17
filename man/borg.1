@@ -1,0 +1,49 @@
+.TH borg
+.PP
+.RS
+Deduplicating backup tool.
+Creates local or remote backups that are mountable as filesystems.
+More information: \[la]https://borgbackup.readthedocs.io/en/stable/usage/general.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a (local) repository:
+.RE
+.PP
+\fB\fCborg init {{path/to/repo_directory}}\fR
+.RS
+.IP \(bu 2
+Backup a directory into the repository, creating an archive called "Monday":
+.RE
+.PP
+\fB\fCborg create \-\-progress {{path/to/repo_directory}}::{{Monday}} {{path/to/source_directory}}\fR
+.RS
+.IP \(bu 2
+List all archives in a repository:
+.RE
+.PP
+\fB\fCborg list {{path/to/repo_directory}}\fR
+.RS
+.IP \(bu 2
+Extract a specific directory from the "Monday" archive in a remote repository, excluding all \fB\fC*.ext\fR files:
+.RE
+.PP
+\fB\fCborg extract {{user}}@{{host}}:{{path/to/repo_directory}}::{{Monday}} {{path/to/target_directory}} \-\-exclude '{{*.ext}}'\fR
+.RS
+.IP \(bu 2
+Prune a repository by deleting all archives older than 7 days, listing changes:
+.RE
+.PP
+\fB\fCborg prune \-\-keep\-within {{7d}} \-\-list {{path/to/repo_directory}}\fR
+.RS
+.IP \(bu 2
+Mount a repository as a FUSE filesystem:
+.RE
+.PP
+\fB\fCborg mount {{path/to/repo_directory}}::{{Monday}} {{path/to/mountpoint}}\fR
+.RS
+.IP \(bu 2
+Display help on creating archives:
+.RE
+.PP
+\fB\fCborg create \-\-help\fR

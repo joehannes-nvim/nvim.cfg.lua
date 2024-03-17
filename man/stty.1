@@ -1,0 +1,30 @@
+.TH stty
+.PP
+.RS
+Set options for a terminal device interface.
+More information: \[la]https://www.gnu.org/software/coreutils/stty\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display all settings for the current terminal:
+.RE
+.PP
+\fB\fCstty \-\-all\fR
+.RS
+.IP \(bu 2
+Set the number of rows or columns:
+.RE
+.PP
+\fB\fCstty {{rows|cols}} {{count}}\fR
+.RS
+.IP \(bu 2
+Get the actual transfer speed of a device:
+.RE
+.PP
+\fB\fCstty \-\-file {{path/to/device_file}} speed\fR
+.RS
+.IP \(bu 2
+Reset all modes to reasonable values for the current terminal:
+.RE
+.PP
+\fB\fCstty sane\fR

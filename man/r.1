@@ -1,0 +1,48 @@
+.TH R
+.PP
+.RS
+R language interpreter.
+More information: \[la]https://www.r-project.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCR\fR
+.RS
+.IP \(bu 2
+Check R version:
+.RE
+.PP
+\fB\fCR \-\-version\fR
+.RS
+.IP \(bu 2
+Start R in vanilla mode (i.e. a blank session that doesn't save the workspace at the end):
+.RE
+.PP
+\fB\fCR \-\-vanilla\fR
+.RS
+.IP \(bu 2
+Execute a file:
+.RE
+.PP
+\fB\fCR \-f {{path/to/file.R}}\fR
+.RS
+.IP \(bu 2
+Execute an R expression and then exit:
+.RE
+.PP
+\fB\fCR \-e {{expr}}\fR
+.RS
+.IP \(bu 2
+Run R with a debugger:
+.RE
+.PP
+\fB\fCR \-d {{debugger}}\fR
+.RS
+.IP \(bu 2
+Check R packages from package sources:
+.RE
+.PP
+\fB\fCR CMD check {{path/to/package_source}}\fR

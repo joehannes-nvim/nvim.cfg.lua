@@ -1,0 +1,48 @@
+.TH pio account
+.PP
+.RS
+Manage your PlatformIO account in the command\-line.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/account/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register a new PlatformIO account:
+.RE
+.PP
+\fB\fCpio account register \-\-username {{username}} \-\-email {{email}} \-\-password {{password}} \-\-firstname {{firstname}} \-\-lastname {{lastname}}\fR
+.RS
+.IP \(bu 2
+Permanently delete your PlatformIO account and related data:
+.RE
+.PP
+\fB\fCpio account destroy\fR
+.RS
+.IP \(bu 2
+Log in to your PlatformIO account:
+.RE
+.PP
+\fB\fCpio account login \-\-username {{username}} \-\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Log out of your PlatformIO account:
+.RE
+.PP
+\fB\fCpio account logout\fR
+.RS
+.IP \(bu 2
+Update your PlatformIO profile:
+.RE
+.PP
+\fB\fCpio account update \-\-username {{username}} \-\-email {{email}} \-\-firstname {{firstname}} \-\-lastname {{lastname}} \-\-current\-password {{password}}\fR
+.RS
+.IP \(bu 2
+Show detailed information about your PlatformIO account:
+.RE
+.PP
+\fB\fCpio account show\fR
+.RS
+.IP \(bu 2
+Reset your password using your username or email:
+.RE
+.PP
+\fB\fCpio account forgot \-\-username {{username_or_email}}\fR

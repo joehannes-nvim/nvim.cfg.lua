@@ -1,0 +1,42 @@
+.TH mosquitto_pub
+.PP
+.RS
+A simple MQTT version 3.1.1 client that will publish a single message on a topic and exit.
+More information: \[la]https://mosquitto.org/man/mosquitto_pub-1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Publish a temperature value of 32 on the topic \fB\fCsensors/temperature\fR to 192.168.1.1 (defaults to \fB\fClocalhost\fR) with Quality of Service (\fB\fCQoS\fR) set to 1:
+.RE
+.PP
+\fB\fCmosquitto_pub \-h {{192.168.1.1}} \-t {{sensors/temperature}} \-m {{32}} \-q {{1}}\fR
+.RS
+.IP \(bu 2
+Publish timestamp and temperature data on the topic \fB\fCsensors/temperature\fR to a remote host on a non\-standard port:
+.RE
+.PP
+\fB\fCmosquitto_pub \-h {{192.168.1.1}} \-p {{1885}} \-t {{sensors/temperature}} \-m "{{1266193804 32}}"\fR
+.RS
+.IP \(bu 2
+Publish light switch status and retain the message on the topic \fB\fCswitches/kitchen_lights/status\fR to a remote host because there may be a long period of time between light switch events:
+.RE
+.PP
+\fB\fCmosquitto_pub \-r \-h "{{iot.eclipse.org}}" \-t {{switches/kitchen_lights/status}} \-m "{{on}}"\fR
+.RS
+.IP \(bu 2
+Send the contents of a file (\fB\fCdata.txt\fR) as a message and publish it to \fB\fCsensors/temperature\fR topic:
+.RE
+.PP
+\fB\fCmosquitto_pub \-t {{sensors/temperature}} \-f {{data.txt}}\fR
+.RS
+.IP \(bu 2
+Send the contents of a file (\fB\fCdata.txt\fR), by reading from \fB\fCstdin\fR and send the entire input as a message and publish it to \fB\fCsensors/temperature\fR topic:
+.RE
+.PP
+\fB\fCmosquitto_pub \-t {{sensors/temperature}} \-s < {{data.txt}}\fR
+.RS
+.IP \(bu 2
+Read newline delimited data from \fB\fCstdin\fR as a message and publish it to \fB\fCsensors/temperature\fR topic:
+.RE
+.PP
+\fB\fC{{echo data.txt}} | mosquitto_pub \-t {{sensors/temperature}} \-l\fR

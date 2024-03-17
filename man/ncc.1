@@ -1,0 +1,43 @@
+.TH ncc
+.PP
+.RS
+Compile a Node.js application into a single file.
+Supports TypeScript, binary addons and dynamic requires.
+More information: \[la]https://github.com/vercel/ncc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bundle a Node.js application:
+.RE
+.PP
+\fB\fCncc build {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Bundle and minify a Node.js application:
+.RE
+.PP
+\fB\fCncc build \-\-minify {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Bundle and minify a Node.js application and generate source maps:
+.RE
+.PP
+\fB\fCncc build \-\-source\-map {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Automatically recompile on changes to source files:
+.RE
+.PP
+\fB\fCncc build \-\-watch {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Bundle a Node.js application into a temporary directory and run it for testing:
+.RE
+.PP
+\fB\fCncc run {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Clean the \fB\fCncc\fR cache:
+.RE
+.PP
+\fB\fCncc clean cache\fR

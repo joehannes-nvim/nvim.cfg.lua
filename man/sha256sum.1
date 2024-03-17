@@ -1,0 +1,42 @@
+.TH sha256sum
+.PP
+.RS
+Calculate SHA256 cryptographic checksums.
+More information: \[la]https://www.gnu.org/software/coreutils/manual/html_node/sha2-utilities.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate the SHA256 checksum for one or more files:
+.RE
+.PP
+\fB\fCsha256sum {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Calculate and save the list of SHA256 checksums to a file:
+.RE
+.PP
+\fB\fCsha256sum {{path/to/file1 path/to/file2 ...}} > {{path/to/file.sha256}}\fR
+.RS
+.IP \(bu 2
+Calculate a SHA256 checksum from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | sha256sum\fR
+.RS
+.IP \(bu 2
+Read a file of SHA256 sums and filenames and verify all files have matching checksums:
+.RE
+.PP
+\fB\fCsha256sum \-\-check {{path/to/file.sha256}}\fR
+.RS
+.IP \(bu 2
+Only show a message for missing files or when verification fails:
+.RE
+.PP
+\fB\fCsha256sum \-\-check \-\-quiet {{path/to/file.sha256}}\fR
+.RS
+.IP \(bu 2
+Only show a message when verification fails, ignoring missing files:
+.RE
+.PP
+\fB\fCsha256sum \-\-ignore\-missing \-\-check \-\-quiet {{path/to/file.sha256}}\fR

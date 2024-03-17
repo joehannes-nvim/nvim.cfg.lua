@@ -1,0 +1,42 @@
+.TH du
+.PP
+.RS
+Disk usage: estimate and summarize file and directory space usage.
+More information: \[la]https://www.gnu.org/software/coreutils/du\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the sizes of a directory and any subdirectories, in the given unit (B/KiB/MiB):
+.RE
+.PP
+\fB\fCdu \-{{b|k|m}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List the sizes of a directory and any subdirectories, in human\-readable form (i.e. auto\-selecting the appropriate unit for each size):
+.RE
+.PP
+\fB\fCdu \-h {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Show the size of a single directory, in human\-readable units:
+.RE
+.PP
+\fB\fCdu \-sh {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List the human\-readable sizes of a directory and of all the files and directories within it:
+.RE
+.PP
+\fB\fCdu \-ah {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List the human\-readable sizes of a directory and any subdirectories, up to N levels deep:
+.RE
+.PP
+\fB\fCdu \-h \-\-max\-depth=N {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+List the human\-readable size of all \fB\fC\&.jpg\fR files in subdirectories of the current directory, and show a cumulative total at the end:
+.RE
+.PP
+\fB\fCdu \-ch {{*/*.jpg}}\fR

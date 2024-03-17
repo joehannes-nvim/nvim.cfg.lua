@@ -1,0 +1,48 @@
+.TH docker network
+.PP
+.RS
+Create and manage docker networks.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/network/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available and configured networks on docker daemon:
+.RE
+.PP
+\fB\fCdocker network ls\fR
+.RS
+.IP \(bu 2
+Create a user\-defined network:
+.RE
+.PP
+\fB\fCdocker network create \-\-driver {{driver_name}} {{network_name}}\fR
+.RS
+.IP \(bu 2
+Display detailed information of a space\-separated list of networks:
+.RE
+.PP
+\fB\fCdocker network inspect {{network_name}}\fR
+.RS
+.IP \(bu 2
+Connect a container to a network using a name or ID:
+.RE
+.PP
+\fB\fCdocker network connect {{network_name}} {{container_name|ID}}\fR
+.RS
+.IP \(bu 2
+Disconnect a container from a network:
+.RE
+.PP
+\fB\fCdocker network disconnect {{network_name}} {{container_name|ID}}\fR
+.RS
+.IP \(bu 2
+Remove all unused (not referenced by any container) networks:
+.RE
+.PP
+\fB\fCdocker network prune\fR
+.RS
+.IP \(bu 2
+Remove a space\-separated list of unused networks:
+.RE
+.PP
+\fB\fCdocker network rm {{network_name}}\fR

@@ -1,0 +1,30 @@
+.TH phpunit
+.PP
+.RS
+PHPUnit command\-line test runner.
+More information: \[la]https://phpunit.de\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run tests in the current directory. Note: Expects you to have a 'phpunit.xml':
+.RE
+.PP
+\fB\fCphpunit\fR
+.RS
+.IP \(bu 2
+Run tests in a specific file:
+.RE
+.PP
+\fB\fCphpunit {{path/to/TestFile.php}}\fR
+.RS
+.IP \(bu 2
+Run tests annotated with the given group:
+.RE
+.PP
+\fB\fCphpunit \-\-group {{name}}\fR
+.RS
+.IP \(bu 2
+Run tests and generate a coverage report in HTML:
+.RE
+.PP
+\fB\fCphpunit \-\-coverage\-html {{path/to/directory}}\fR

@@ -1,0 +1,54 @@
+.TH tlmgr info
+.PP
+.RS
+Show information about TeX Live packages.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available TeX Live packages, prefexing installed ones with \fB\fCi\fR:
+.RE
+.PP
+\fB\fCtlmgr info\fR
+.RS
+.IP \(bu 2
+List all available collections:
+.RE
+.PP
+\fB\fCtlmgr info collections\fR
+.RS
+.IP \(bu 2
+List all available schemes:
+.RE
+.PP
+\fB\fCtlmgr info scheme\fR
+.RS
+.IP \(bu 2
+Show information about a specific package:
+.RE
+.PP
+\fB\fCtlmgr info {{package}}\fR
+.RS
+.IP \(bu 2
+List all files contained in a specific package:
+.RE
+.PP
+\fB\fCtlmgr info {{package}} \-\-list\fR
+.RS
+.IP \(bu 2
+List all installed packages:
+.RE
+.PP
+\fB\fCtlmgr info \-\-only\-installed\fR
+.RS
+.IP \(bu 2
+Show only specific information about a package:
+.RE
+.PP
+\fB\fCtlmgr info {{package}} \-\-data "{{name}},{{category}},{{installed}},{{size}},{{depends}},..."\fR
+.RS
+.IP \(bu 2
+Print all available packages as JSON encoded array:
+.RE
+.PP
+\fB\fCtlmgr info \-\-json\fR

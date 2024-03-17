@@ -1,0 +1,48 @@
+.TH cs java
+.PP
+.RS
+The java and java\-home commands fetch and install JVMs. The java command runs them too.
+More information: \[la]https://get-coursier.io/docs/cli-java\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Call the java version by using coursier:
+.RE
+.PP
+\fB\fCcs java \-version\fR
+.RS
+.IP \(bu 2
+Call a specific java version with custom properties using coursier:
+.RE
+.PP
+\fB\fCcs java \-\-jvm {{jvm_name}}:{{jvm_version}} \-Xmx32m \-X{{another_jvm_opt}} \-jar {{path/to/jar_name.jar}}\fR
+.RS
+.IP \(bu 2
+List all the available JVM in the coursier default index:
+.RE
+.PP
+\fB\fCcs java \-\-available\fR
+.RS
+.IP \(bu 2
+List all the installed JVM in the system with his own location:
+.RE
+.PP
+\fB\fCcs java \-\-installed\fR
+.RS
+.IP \(bu 2
+Set the a specific JVM as one\-off "default" for the shell instance:
+.RE
+.PP
+\fB\fCcs java \-\-jvm {{jvm_name}}:{{jvm_version}} \-\-env\fR
+.RS
+.IP \(bu 2
+Revert the changes for the default JVM settings:
+.RE
+.PP
+\fB\fCeval "$(cs java \-\-disable)"\fR
+.RS
+.IP \(bu 2
+Set a specific JVM as default for the whole system:
+.RE
+.PP
+\fB\fCcs java \-\-jvm {{jvm_name}}:{{jvm_version}} \-\-setup\fR

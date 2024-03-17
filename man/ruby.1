@@ -1,0 +1,43 @@
+.TH ruby
+.PP
+.RS
+Ruby programming language interpreter.
+See also: \fB\fCgem\fR, \fB\fCbundler\fR, \fB\fCrake\fR, \fB\fCirb\fR\&.
+More information: \[la]https://www.ruby-lang.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute a Ruby script:
+.RE
+.PP
+\fB\fCruby {{script.rb}}\fR
+.RS
+.IP \(bu 2
+Execute a single Ruby command in the command\-line:
+.RE
+.PP
+\fB\fCruby \-e {{command}}\fR
+.RS
+.IP \(bu 2
+Check for syntax errors on a given Ruby script:
+.RE
+.PP
+\fB\fCruby \-c {{script.rb}}\fR
+.RS
+.IP \(bu 2
+Start the built\-in HTTP server on port 8080 in the current directory:
+.RE
+.PP
+\fB\fCruby \-run \-e httpd\fR
+.RS
+.IP \(bu 2
+Locally execute a Ruby binary without installing the required library it depends on:
+.RE
+.PP
+\fB\fCruby \-I {{path/to/library_folder}} \-r {{library_require_name}} {{path/to/bin_folder/bin_name}}\fR
+.RS
+.IP \(bu 2
+Show the version of Ruby you are using:
+.RE
+.PP
+\fB\fCruby \-v\fR

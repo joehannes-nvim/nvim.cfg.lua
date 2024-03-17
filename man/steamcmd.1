@@ -1,0 +1,24 @@
+.TH steamcmd
+.PP
+.RS
+A command\-line version of the Steam client.
+More information: \[la]https://manned.org/steamcmd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install or update an application anonymously:
+.RE
+.PP
+\fB\fCsteamcmd +login {{anonymous}} +app_update {{appid}} +quit\fR
+.RS
+.IP \(bu 2
+Install or update an application using the specified credentials:
+.RE
+.PP
+\fB\fCsteamcmd +login {{username}} +app_update {{appid}} +quit\fR
+.RS
+.IP \(bu 2
+Install an application for a specific platform:
+.RE
+.PP
+\fB\fCsteamcmd +@sSteamCmdForcePlatformType {{windows}} +login {{anonymous}} +app_update {{appid}} validate +quit\fR

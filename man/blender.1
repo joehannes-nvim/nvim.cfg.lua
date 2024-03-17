@@ -1,0 +1,49 @@
+.TH blender
+.PP
+.RS
+Command\-line interface to the Blender 3D computer graphics application.
+Arguments are executed in the order they are given.
+More information: \[la]https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render all frames of an animation in the background, without loading the UI (output is saved to \fB\fC/tmp\fR):
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-render\-anim\fR
+.RS
+.IP \(bu 2
+Render an animation using a specific image naming pattern, in a path relative (\fB\fC//\fR) to the .blend file:
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-render\-output //{{render/frame_###.png}} \-\-render\-anim\fR
+.RS
+.IP \(bu 2
+Render the 10th frame of an animation as a single image, saved to an existing directory (absolute path):
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-render\-output {{/path/to/output_directory}} \-\-render\-frame {{10}}\fR
+.RS
+.IP \(bu 2
+Render the second last frame in an animation as a JPEG image, saved to an existing directory (relative path):
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-render\-output //{{output_directory}} \-\-render\-frame {{JPEG}} \-\-render\-frame {{\-2}}\fR
+.RS
+.IP \(bu 2
+Render the animation of a specific scene, starting at frame 10 and ending at frame 500:
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-scene {{scene_name}} \-\-frame\-start {{10}} \-e {{500}} \-\-render\-anim\fR
+.RS
+.IP \(bu 2
+Render an animation at a specific resolution, by passing a Python expression:
+.RE
+.PP
+\fB\fCblender \-\-background {{path/to/file}}.blend \-\-python\-expr '{{import bpy; bpy.data.scenes[0].render.resolution_percentage = 25}}' \-\-render\-anim\fR
+.RS
+.IP \(bu 2
+Start an interactive Blender session in the terminal with a python console (do \fB\fCimport bpy\fR after starting):
+.RE
+.PP
+\fB\fCblender \-\-background \-\-python\-console\fR

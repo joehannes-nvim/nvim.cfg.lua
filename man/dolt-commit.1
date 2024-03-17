@@ -1,0 +1,48 @@
+.TH dolt commit
+.PP
+.RS
+Commit staged changes to tables.
+More information: \[la]https://docs.dolthub.com/interfaces/cli#dolt-commit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Commit all staged changes, opening the editor specified by \fB\fC$EDITOR\fR to enter the commit message:
+.RE
+.PP
+\fB\fCdolt commit\fR
+.RS
+.IP \(bu 2
+Commit all staged changes with the specified message:
+.RE
+.PP
+\fB\fCdolt commit \-\-message "{{commit_message}}"\fR
+.RS
+.IP \(bu 2
+Stage all unstaged changes to tables before committing:
+.RE
+.PP
+\fB\fCdolt commit \-\-all\fR
+.RS
+.IP \(bu 2
+Use the specified ISO 8601 commit date (defaults to current date and time):
+.RE
+.PP
+\fB\fCdolt commit \-\-date "{{2021\-12\-31T00:00:00}}"\fR
+.RS
+.IP \(bu 2
+Use the specified author for the commit:
+.RE
+.PP
+\fB\fCdolt commit \-\-author "{{author_name}} <{{author_email}}>"\fR
+.RS
+.IP \(bu 2
+Allow creating an empty commit, with no changes:
+.RE
+.PP
+\fB\fCdolt commit \-\-allow\-empty\fR
+.RS
+.IP \(bu 2
+Ignore foreign key warnings:
+.RE
+.PP
+\fB\fCdolt commit \-\-force\fR

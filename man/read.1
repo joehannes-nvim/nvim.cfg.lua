@@ -1,0 +1,24 @@
+.TH read
+.PP
+.RS
+Shell builtin for retrieving data from \fB\fCstdin\fR\&.
+More information: \[la]https://manned.org/read.1p\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Store data that you type from the keyboard:
+.RE
+.PP
+\fB\fCread {{variable}}\fR
+.RS
+.IP \(bu 2
+Do not let backslash (\[rs]) act as an escape character:
+.RE
+.PP
+\fB\fCread \-r {{variable}}\fR
+.RS
+.IP \(bu 2
+Read \fB\fCstdin\fR and perform an action on every line:
+.RE
+.PP
+\fB\fCwhile read line; do echo "$line"; done\fR

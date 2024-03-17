@@ -1,0 +1,55 @@
+.TH gpg
+.PP
+.RS
+GNU Privacy Guard.
+See \fB\fCgpg2\fR for GNU Privacy Guard 2. Most operating systems symlink \fB\fCgpg\fR to \fB\fCgpg2\fR\&.
+More information: \[la]https://gnupg.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a GPG public and private key interactively:
+.RE
+.PP
+\fB\fCgpg \-\-full\-generate\-key\fR
+.RS
+.IP \(bu 2
+Sign \fB\fCdoc.txt\fR without encryption (writes output to \fB\fCdoc.txt.asc\fR):
+.RE
+.PP
+\fB\fCgpg \-\-clearsign {{doc.txt}}\fR
+.RS
+.IP \(bu 2
+Encrypt and sign \fB\fCdoc.txt\fR for \[la]alice@example.com\[ra] and \[la]bob@example.com\[ra] (output to \fB\fCdoc.txt.gpg\fR):
+.RE
+.PP
+\fB\fCgpg \-\-encrypt \-\-sign \-\-recipient {{alice@example.com}} \-\-recipient {{bob@example.com}} {{doc.txt}}\fR
+.RS
+.IP \(bu 2
+Encrypt \fB\fCdoc.txt\fR with only a passphrase (output to \fB\fCdoc.txt.gpg\fR):
+.RE
+.PP
+\fB\fCgpg \-\-symmetric {{doc.txt}}\fR
+.RS
+.IP \(bu 2
+Decrypt \fB\fCdoc.txt.gpg\fR (output to \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCgpg \-\-decrypt {{doc.txt.gpg}}\fR
+.RS
+.IP \(bu 2
+Import a public key:
+.RE
+.PP
+\fB\fCgpg \-\-import {{public.gpg}}\fR
+.RS
+.IP \(bu 2
+Export public key for \[la]alice@example.com\[ra] (output to \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCgpg \-\-export \-\-armor {{alice@example.com}}\fR
+.RS
+.IP \(bu 2
+Export private key for \[la]alice@example.com\[ra] (output to \fB\fCstdout\fR):
+.RE
+.PP
+\fB\fCgpg \-\-export\-secret\-keys \-\-armor {{alice@example.com}}\fR

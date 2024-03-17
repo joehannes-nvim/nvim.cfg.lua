@@ -1,0 +1,42 @@
+.TH kubectl create
+.PP
+.RS
+Create a resource from a file or from \fB\fCstdin\fR\&.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a resource using the resource definition file:
+.RE
+.PP
+\fB\fCkubectl create \-f {{path/to/file.yml}}\fR
+.RS
+.IP \(bu 2
+Create a resource from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCkubectl create \-f \-\fR
+.RS
+.IP \(bu 2
+Create a deployment:
+.RE
+.PP
+\fB\fCkubectl create deployment {{deployment_name}} \-\-image={{image}}\fR
+.RS
+.IP \(bu 2
+Create a deployment with replicas:
+.RE
+.PP
+\fB\fCkubectl create deployment {{deployment_name}} \-\-image={{image}} \-\-replicas={{number_of_replicas}}\fR
+.RS
+.IP \(bu 2
+Create a service:
+.RE
+.PP
+\fB\fCkubectl create service {{service_type}} {{service_name}} \-\-tcp={{port}}:{{target_port}}\fR
+.RS
+.IP \(bu 2
+Create a namespace:
+.RE
+.PP
+\fB\fCkubectl create namespace {{namespace_name}}\fR

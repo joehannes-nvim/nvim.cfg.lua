@@ -1,0 +1,31 @@
+.TH texcount
+.PP
+.RS
+Count words in TeX documents omitting macros.
+Note: if the TeX document uses \fB\fC\\include\fR or \fB\fC\\input\fR and you want to count the included files, \fB\fCtexcount\fR must be run in the directory of the root TeX file.
+More information: \[la]https://app.uio.no/ifi/texcount/howto.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Count words in a TeX file:
+.RE
+.PP
+\fB\fCtexcount {{path/to/file.tex}}\fR
+.RS
+.IP \(bu 2
+Count words in a document and subdocuments built with \fB\fC\\input\fR or \fB\fC\\include\fR:
+.RE
+.PP
+\fB\fCtexcount \-merge {{file.tex}}\fR
+.RS
+.IP \(bu 2
+Count words in a document and subdocuments, listing each file separately (and a total count):
+.RE
+.PP
+\fB\fCtexcount \-inc {{file.tex}}\fR
+.RS
+.IP \(bu 2
+Count words with verbose output:
+.RE
+.PP
+\fB\fCtexcount \-v {{path/to/file.tex}}\fR

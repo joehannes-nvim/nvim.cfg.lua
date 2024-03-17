@@ -1,0 +1,42 @@
+.TH aws batch
+.PP
+.RS
+Run batch computing workloads through the AWS Batch service.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/batch/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List running batch jobs:
+.RE
+.PP
+\fB\fCaws batch list\-jobs \-\-job\-queue {{queue_name}}\fR
+.RS
+.IP \(bu 2
+Create compute environment:
+.RE
+.PP
+\fB\fCaws batch create\-compute\-environment \-\-compute\-environment\-name {{compute_environment_name}} \-\-type {{type}}\fR
+.RS
+.IP \(bu 2
+Create batch job queue:
+.RE
+.PP
+\fB\fCaws batch create\-job\-queue \-\-job\-queue\-name {{queue_name}} \-\-priority {{priority}} \-\-compute\-environment\-order {{compute_environment}}\fR
+.RS
+.IP \(bu 2
+Submit job:
+.RE
+.PP
+\fB\fCaws batch submit\-job \-\-job\-name {{job_name}} \-\-job\-queue {{job_queue}} \-\-job\-definition {{job_definition}}\fR
+.RS
+.IP \(bu 2
+Describe the list of batch jobs:
+.RE
+.PP
+\fB\fCaws batch describe\-jobs \-\-jobs {{jobs}}\fR
+.RS
+.IP \(bu 2
+Cancel job:
+.RE
+.PP
+\fB\fCaws batch cancel\-job \-\-job\-id {{job_id}} \-\-reason {{reason}}\fR

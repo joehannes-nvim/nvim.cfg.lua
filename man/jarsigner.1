@@ -1,0 +1,24 @@
+.TH jarsigner
+.PP
+.RS
+Sign and verify Java archive (JAR) files.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/jarsigner.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sign a JAR file:
+.RE
+.PP
+\fB\fCjarsigner {{path/to/file.jar}} {{keystore_alias}}\fR
+.RS
+.IP \(bu 2
+Sign a JAR file with a specific algorithm:
+.RE
+.PP
+\fB\fCjarsigner \-sigalg {{algorithm}} {{path/to/file.jar}} {{keystore_alias}}\fR
+.RS
+.IP \(bu 2
+Verify the signature of a JAR file:
+.RE
+.PP
+\fB\fCjarsigner \-verify {{path/to/file.jar}}\fR

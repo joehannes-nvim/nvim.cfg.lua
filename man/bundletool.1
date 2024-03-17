@@ -1,0 +1,55 @@
+.TH bundletool
+.PP
+.RS
+Command\-line tool to manipulate Android Application Bundles.
+Some subcommands such as \fB\fCbundletool validate\fR have their own usage documentation.
+More information: \[la]https://developer.android.com/studio/command-line/bundletool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCbundletool help {{subcommand}}\fR
+.RS
+.IP \(bu 2
+Generate APKs from an application bundle (prompts for keystore password):
+.RE
+.PP
+\fB\fCbundletool build\-apks \-\-bundle={{path/to/bundle.aab}} \-\-ks={{path/to/key.keystore}} \-\-ks\-key\-alias={{key_alias}} \-\-output={{path/to/file.apks}}\fR
+.RS
+.IP \(bu 2
+Generate APKs from an application bundle giving the keystore password:
+.RE
+.PP
+\fB\fCbundletool build\-apks \-\-bundle={{path/to/bundle.aab}} \-\-ks={{path/to/key.keystore}} \-\-ks\-key\-alias={{key_alias}} –ks\-pass={{pass:the_password}} \-\-output={{path/to/file.apks}}\fR
+.RS
+.IP \(bu 2
+Generate APKs including only one single APK for universal usage:
+.RE
+.PP
+\fB\fCbundletool build\-apks \-\-bundle={{path/to/bundle.aab}} \-\-mode={{universal}} \-\-ks={{path/to/key.keystore}} \-\-ks\-key\-alias={{key_alias}} \-\-output={{path/to/file.apks}}\fR
+.RS
+.IP \(bu 2
+Install the right combination of APKs to an emulator or device:
+.RE
+.PP
+\fB\fCbundletool install\-apks \-\-apks={{path/to/file.apks}}\fR
+.RS
+.IP \(bu 2
+Estimate the download size of an application:
+.RE
+.PP
+\fB\fCbundletool get\-size total \-\-apks={{path/to/file.apks}}\fR
+.RS
+.IP \(bu 2
+Generate a device specification JSON file for an emulator or device:
+.RE
+.PP
+\fB\fCbundletool get\-device\-spec \-\-output={{path/to/file.json}}\fR
+.RS
+.IP \(bu 2
+Verify a bundle and display detailed information about it:
+.RE
+.PP
+\fB\fCbundletool validate \-\-bundle={{path/to/bundle.aab}}\fR

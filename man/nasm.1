@@ -1,0 +1,36 @@
+.TH nasm
+.PP
+.RS
+The Netwide Assembler, a portable 80x86 assembler.
+More information: \[la]https://nasm.us\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Assemble \fB\fCsource.asm\fR into a binary file \fB\fCsource\fR, in the (default) raw binary format:
+.RE
+.PP
+\fB\fCnasm {{source.asm}}\fR
+.RS
+.IP \(bu 2
+Assemble \fB\fCsource.asm\fR into a binary file \fB\fCoutput_file\fR, in the specified format:
+.RE
+.PP
+\fB\fCnasm \-f {{format}} {{source.asm}} \-o {{output_file}}\fR
+.RS
+.IP \(bu 2
+List valid output formats (along with basic nasm help):
+.RE
+.PP
+\fB\fCnasm \-hf\fR
+.RS
+.IP \(bu 2
+Assemble and generate an assembly listing file:
+.RE
+.PP
+\fB\fCnasm \-l {{list_file}} {{source.asm}}\fR
+.RS
+.IP \(bu 2
+Add a directory (must be written with trailing slash) to the include file search path before assembling:
+.RE
+.PP
+\fB\fCnasm \-i {{path/to/include_dir/}} {{source.asm}}\fR

@@ -1,0 +1,30 @@
+.TH fluxctl
+.PP
+.RS
+Command\-line tool for Flux v1.
+More information: \[la]https://fluxcd.io/legacy/flux/references/fluxctl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List workloads currently running in the cluster on specific namespace:
+.RE
+.PP
+\fB\fCfluxctl \-\-k8s\-fwd\-ns={{namespace}} list\-workloads\fR
+.RS
+.IP \(bu 2
+Show deployed and available images:
+.RE
+.PP
+\fB\fCfluxctl list\-images\fR
+.RS
+.IP \(bu 2
+Synchronize the cluster with the git repository:
+.RE
+.PP
+\fB\fCfluxctl sync\fR
+.RS
+.IP \(bu 2
+Turn on automatic deployment for a workload:
+.RE
+.PP
+\fB\fCfluxctl automate\fR

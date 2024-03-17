@@ -1,0 +1,30 @@
+.TH hostess
+.PP
+.RS
+Manage the \fB\fC/etc/hosts\fR file.
+More information: \[la]https://github.com/cbednarski/hostess\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List domains, target IP addresses and on/off status:
+.RE
+.PP
+\fB\fChostess list\fR
+.RS
+.IP \(bu 2
+Add a domain pointing to your machine to your hosts file:
+.RE
+.PP
+\fB\fChostess add {{local.example.com}} {{127.0.0.1}}\fR
+.RS
+.IP \(bu 2
+Remove a domain from your hosts file:
+.RE
+.PP
+\fB\fChostess del {{local.example.com}}\fR
+.RS
+.IP \(bu 2
+Disable a domain (but don't remove it):
+.RE
+.PP
+\fB\fChostess off {{local.example.com}}\fR

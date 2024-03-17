@@ -1,0 +1,48 @@
+.TH docker inspect
+.PP
+.RS
+Return low\-level information on Docker objects.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/inspect/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show help:
+.RE
+.PP
+\fB\fCdocker inspect\fR
+.RS
+.IP \(bu 2
+Display information about a container, image, or volume using a name or ID:
+.RE
+.PP
+\fB\fCdocker inspect {{container|image|ID}}\fR
+.RS
+.IP \(bu 2
+Display a container's IP address:
+.RE
+.PP
+\fB\fCdocker inspect \-\-format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' {{container}}\fR
+.RS
+.IP \(bu 2
+Display the path to the container's log file:
+.RE
+.PP
+\fB\fCdocker inspect \-\-format='{{.LogPath}}' {{container}}\fR
+.RS
+.IP \(bu 2
+Display the image name of the container:
+.RE
+.PP
+\fB\fCdocker inspect \-\-format='{{.Config.Image}}' {{container}}\fR
+.RS
+.IP \(bu 2
+Display the configuration information as JSON:
+.RE
+.PP
+\fB\fCdocker inspect \-\-format='{{json .Config}}' {{container}}\fR
+.RS
+.IP \(bu 2
+Display all port bindings:
+.RE
+.PP
+\fB\fCdocker inspect \-\-format='{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} \-> {{(index $conf 0).HostPort}} {{end}}' {{container}}\fR

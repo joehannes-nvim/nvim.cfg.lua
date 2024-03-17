@@ -1,0 +1,24 @@
+.TH oathtool
+.PP
+.RS
+OATH one\-time password tool.
+More information: \[la]https://www.nongnu.org/oath-toolkit/oathtool.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate TOTP token (behaves like Google Authenticator):
+.RE
+.PP
+\fB\fCoathtool \-\-totp \-\-base32 "{{secret}}"\fR
+.RS
+.IP \(bu 2
+Generate a TOTP token for a specific time:
+.RE
+.PP
+\fB\fCoathtool \-\-totp \-\-now "{{2004\-02\-29 16:21:42}}" \-\-base32 "{{secret}}"\fR
+.RS
+.IP \(bu 2
+Validate a TOTP token:
+.RE
+.PP
+\fB\fCoathtool \-\-totp \-\-base32 "{{secret}}" "{{token}}"\fR

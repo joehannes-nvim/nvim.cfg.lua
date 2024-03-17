@@ -1,0 +1,31 @@
+.TH docker image
+.PP
+.RS
+Manage Docker images.
+See also \fB\fCdocker build\fR, \fB\fCdocker import\fR, and \fB\fCdocker pull\fR\&.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/image/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List local Docker images:
+.RE
+.PP
+\fB\fCdocker image ls\fR
+.RS
+.IP \(bu 2
+Delete unused local Docker images:
+.RE
+.PP
+\fB\fCdocker image prune\fR
+.RS
+.IP \(bu 2
+Delete all unused images (not just those without a tag):
+.RE
+.PP
+\fB\fCdocker image prune \-\-all\fR
+.RS
+.IP \(bu 2
+Show the history of a local Docker image:
+.RE
+.PP
+\fB\fCdocker image history {{image}}\fR

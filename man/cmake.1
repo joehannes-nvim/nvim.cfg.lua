@@ -1,0 +1,54 @@
+.TH cmake
+.PP
+.RS
+Cross\-platform build automation system, that generates recipes for native build systems.
+More information: \[la]https://cmake.org/cmake/help/latest/manual/cmake.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a build recipe in the current directory with \fB\fCCMakeLists.txt\fR from a project directory:
+.RE
+.PP
+\fB\fCcmake {{path/to/project_directory}}\fR
+.RS
+.IP \(bu 2
+Generate a build recipe, with build type set to \fB\fCRelease\fR with CMake variable:
+.RE
+.PP
+\fB\fCcmake {{path/to/project_directory}} \-D {{CMAKE_BUILD_TYPE=Release}}\fR
+.RS
+.IP \(bu 2
+Generate a build recipe using \fB\fCgenerator_name\fR as the underlying build system:
+.RE
+.PP
+\fB\fCcmake \-G {{generator_name}} {{path/to/project_directory}}\fR
+.RS
+.IP \(bu 2
+Use a generated recipe in a given directory to build artifacts:
+.RE
+.PP
+\fB\fCcmake \-\-build {{path/to/build_directory}}\fR
+.RS
+.IP \(bu 2
+Install the build artifacts into \fB\fC/usr/local/\fR and strip debugging symbols:
+.RE
+.PP
+\fB\fCcmake \-\-install {{path/to/build_directory}} \-\-strip\fR
+.RS
+.IP \(bu 2
+Install the build artifacts using the custom prefix for paths:
+.RE
+.PP
+\fB\fCcmake \-\-install {{path/to/build_directory}} \-\-strip \-\-prefix {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Run a custom build target:
+.RE
+.PP
+\fB\fCcmake \-\-build {{path/to/build_directory}} \-\-target {{target_name}}\fR
+.RS
+.IP \(bu 2
+Display help, obtain a list of generators:
+.RE
+.PP
+\fB\fCcmake \-\-help\fR

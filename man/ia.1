@@ -1,0 +1,36 @@
+.TH ia
+.PP
+.RS
+Command\-line tool to interact with \fB\fCarchive.org\fR\&.
+More information: \[la]https://archive.org/services/docs/api/internetarchive/cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Configure \fB\fCia\fR with API keys (some functions won't work without this step):
+.RE
+.PP
+\fB\fCia configure\fR
+.RS
+.IP \(bu 2
+Upload one or more items to \fB\fCarchive.org\fR:
+.RE
+.PP
+\fB\fCia upload {{identifier}} {{path/to/file}} \-\-metadata="{{mediatype:data}}" \-\-metadata="{{title:example}}"\fR
+.RS
+.IP \(bu 2
+Download one or more items from \fB\fCarchive.org\fR:
+.RE
+.PP
+\fB\fCia download {{item}}\fR
+.RS
+.IP \(bu 2
+Delete one or more items from \fB\fCarchive.org\fR:
+.RE
+.PP
+\fB\fCia delete {{identifier}} {{file}}\fR
+.RS
+.IP \(bu 2
+Search on \fB\fCarchive.org\fR, returning results as JSON:
+.RE
+.PP
+\fB\fCia search '{{subject:"subject" collection:collection}}'\fR

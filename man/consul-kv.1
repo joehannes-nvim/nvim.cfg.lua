@@ -1,0 +1,24 @@
+.TH consul\-kv
+.PP
+.RS
+Distributed key\-value store with health checking and service discovery.
+More information: \[la]https://learn.hashicorp.com/consul/getting-started/kv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Read a value from the key\-value store:
+.RE
+.PP
+\fB\fCconsul kv get {{key}}\fR
+.RS
+.IP \(bu 2
+Store a new key\-value pair:
+.RE
+.PP
+\fB\fCconsul kv put {{key}} {{value}}\fR
+.RS
+.IP \(bu 2
+Delete a key\-value pair:
+.RE
+.PP
+\fB\fCconsul kv delete {{key}}\fR

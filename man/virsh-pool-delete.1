@@ -1,0 +1,13 @@
+.TH virsh pool\-delete
+.PP
+.RS
+Delete the underlying storage system of an inactive virtual machine storage pool.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-destroy\fR, \fB\fCvirsh\-pool\-undefine\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete the underlying storage system for the storage pool specified by name or UUID (determine using \fB\fCvirsh pool\-list\fR):
+.RE
+.PP
+\fB\fCvirsh pool\-delete \-\-pool {{name|uuid}}\fR

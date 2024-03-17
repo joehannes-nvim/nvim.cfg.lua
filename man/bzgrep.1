@@ -1,0 +1,48 @@
+.TH bzgrep
+.PP
+.RS
+Find patterns in bzip2 compressed files using grep.
+More information: \[la]https://manned.org/bzgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a compressed file:
+.RE
+.PP
+\fB\fCbzgrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use extended regular expressions (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR), in case\-insensitive mode:
+.RE
+.PP
+\fB\fCbzgrep \-\-extended\-regexp \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print 3 lines of context around, before, or after each match:
+.RE
+.PP
+\fB\fCbzgrep \-\-{{context|before\-context|after\-context}}={{3}} "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCbzgrep \-\-with\-filename \-\-line\-number "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCbzgrep \-\-only\-matching "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively search files in a bzip2 compressed tar archive for a pattern:
+.RE
+.PP
+\fB\fCbzgrep \-\-recursive "{{search_pattern}}" {{path/to/tar/file}}\fR
+.RS
+.IP \(bu 2
+Search \fB\fCstdin\fR for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCcat {{/path/to/bz/compressed/file}} | bzgrep \-\-invert\-match "{{search_pattern}}"\fR

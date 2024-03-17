@@ -1,0 +1,56 @@
+.TH vim
+.PP
+.RS
+Vim (Vi IMproved), a command\-line text editor, provides several modes for different kinds of text manipulation.
+Pressing \fB\fCi\fR in normal mode enters insert mode. Pressing \fB\fC<Esc>\fR goes back to normal mode, which enables the use of Vim commands.
+See also \fB\fCvimdiff\fR, \fB\fCvimtutor\fR, \fB\fCnvim\fR\&.
+More information: \[la]https://www.vim.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file:
+.RE
+.PP
+\fB\fCvim {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file at a specified line number:
+.RE
+.PP
+\fB\fCvim +{{line_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+View Vim's help manual:
+.RE
+.PP
+\fB\fC:help<Enter>\fR
+.RS
+.IP \(bu 2
+Save and quit the current buffer:
+.RE
+.PP
+\fB\fC:wq<Enter>\fR
+.RS
+.IP \(bu 2
+Enter normal mode and undo the last operation:
+.RE
+.PP
+\fB\fC<ESC>u\fR
+.RS
+.IP \(bu 2
+Search for a pattern in the file (press \fB\fCn\fR/\fB\fCN\fR to go to next/previous match):
+.RE
+.PP
+\fB\fC/{{search_pattern}}<Enter>\fR
+.RS
+.IP \(bu 2
+Perform a regular expression substitution in the whole file:
+.RE
+.PP
+\fB\fC:%s/{{regular_expression}}/{{replacement}}/g<Enter>\fR
+.RS
+.IP \(bu 2
+Display the line numbers:
+.RE
+.PP
+\fB\fC:set nu<Enter>\fR

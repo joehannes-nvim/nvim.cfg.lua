@@ -1,0 +1,36 @@
+.TH script
+.PP
+.RS
+Make a typescript file of a terminal session.
+More information: \[la]https://manned.org/script\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start recording in file named "typescript":
+.RE
+.PP
+\fB\fCscript\fR
+.RS
+.IP \(bu 2
+Stop recording:
+.RE
+.PP
+\fB\fCexit\fR
+.RS
+.IP \(bu 2
+Start recording in a given file:
+.RE
+.PP
+\fB\fCscript {{logfile.log}}\fR
+.RS
+.IP \(bu 2
+Append to an existing file:
+.RE
+.PP
+\fB\fCscript \-a {{logfile.log}}\fR
+.RS
+.IP \(bu 2
+Execute quietly without start and done messages:
+.RE
+.PP
+\fB\fCscript \-q {{logfile.log}}\fR

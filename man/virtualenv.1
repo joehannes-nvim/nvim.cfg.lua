@@ -1,0 +1,36 @@
+.TH virtualenv
+.PP
+.RS
+Create virtual isolated Python environments.
+More information: \[la]https://virtualenv.pypa.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new environment:
+.RE
+.PP
+\fB\fCvirtualenv {{path/to/venv}}\fR
+.RS
+.IP \(bu 2
+Customize the prompt prefix:
+.RE
+.PP
+\fB\fCvirtualenv \-\-prompt={{prompt_prefix}} {{path/to/venv}}\fR
+.RS
+.IP \(bu 2
+Use a different version of Python with virtualenv:
+.RE
+.PP
+\fB\fCvirtualenv \-\-python={{path/to/pythonbin}} {{path/to/venv}}\fR
+.RS
+.IP \(bu 2
+Start (select) the environment:
+.RE
+.PP
+\fB\fCsource {{path/to/venv}}/bin/activate\fR
+.RS
+.IP \(bu 2
+Stop the environment:
+.RE
+.PP
+\fB\fCdeactivate\fR

@@ -1,0 +1,49 @@
+.TH cargo rustdoc
+.PP
+.RS
+Build the documentation of Rust packages.
+Similar to \fB\fCcargo doc\fR, but you can pass options to \fB\fCrustdoc\fR\&. See \fB\fCrustdoc \-\-help\fR for all available options.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-rustdoc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pass options to \fB\fCrustdoc\fR:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\- {{rustdoc_options}}\fR
+.RS
+.IP \(bu 2
+Warn about a documentation lint:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\- \-\-warn rustdoc::{{lint_name}}\fR
+.RS
+.IP \(bu 2
+Ignore a documentation lint:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\- \-\-allow rustdoc::{{lint_name}}\fR
+.RS
+.IP \(bu 2
+Document the package's library:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\-lib\fR
+.RS
+.IP \(bu 2
+Document the specified binary:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\-bin {{name}}\fR
+.RS
+.IP \(bu 2
+Document the specified example:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\-example {{name}}\fR
+.RS
+.IP \(bu 2
+Document the specified integration test:
+.RE
+.PP
+\fB\fCcargo rustdoc \-\-test {{name}}\fR

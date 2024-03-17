@@ -1,0 +1,30 @@
+.TH license
+.PP
+.RS
+Create license files for open\-source projects.
+More information: \[la]https://nishanths.github.io/license\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a license to \fB\fCstdout\fR, using the defaults (auto\-detected author name, and current year):
+.RE
+.PP
+\fB\fClicense {{license_name}}\fR
+.RS
+.IP \(bu 2
+Generate a license and save it to a file:
+.RE
+.PP
+\fB\fClicense \-o {{path/to/file}} {{license_name}}\fR
+.RS
+.IP \(bu 2
+List all available licenses:
+.RE
+.PP
+\fB\fClicense ls\fR
+.RS
+.IP \(bu 2
+Generate a license with custom author name and year:
+.RE
+.PP
+\fB\fClicense \-\-name {{author}} \-\-year {{release_year}} {{license_name}}\fR

@@ -1,0 +1,24 @@
+.TH mycli
+.PP
+.RS
+A command\-line client for MySQL that can do auto\-completion and syntax highlighting.
+More information: \[la]https://mycli.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a local database on port 3306, using the current user's username:
+.RE
+.PP
+\fB\fCmycli {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a database (user will be prompted for a password):
+.RE
+.PP
+\fB\fCmycli \-u {{username}} {{database_name}}\fR
+.RS
+.IP \(bu 2
+Connect to a database on another host:
+.RE
+.PP
+\fB\fCmycli \-h {{database_host}} \-P {{port}} \-u {{username}} {{database_name}}\fR

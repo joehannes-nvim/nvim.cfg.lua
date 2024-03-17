@@ -1,0 +1,24 @@
+.TH latexdiff
+.PP
+.RS
+Determine differences between two LaTeX files.
+More information: \[la]https://ctan.org/pkg/latexdiff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Determine changes between different versions of a LaTeX file (the resulting LaTeX file can be compiled to show differences underlined):
+.RE
+.PP
+\fB\fClatexdiff {{old.tex}} {{new.tex}} > {{diff.tex}}\fR
+.RS
+.IP \(bu 2
+Determine changes between different versions of a LaTeX file by highlighting differences in boldface:
+.RE
+.PP
+\fB\fClatexdiff \-\-type=BOLD {{old.tex}} {{new.tex}} > {{diff.tex}}\fR
+.RS
+.IP \(bu 2
+Determine changes between different versions of a LaTeX file, and display minor changes in equations with both added and deleted graphics:
+.RE
+.PP
+\fB\fClatexdiff \-\-math\-markup=fine \-\-graphics\-markup=both {{old.tex}} {{new.tex}} > {{diff.tex}}\fR

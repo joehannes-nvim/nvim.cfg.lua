@@ -1,0 +1,37 @@
+.TH aws codeartifact
+.PP
+.RS
+CLI for AWS CodeArtifact.
+CodeArtifact allows you to store artifacts using popular package managers and build tools like Maven, Gradle, npm, Yarn, Twine, pip, NuGet, and SwiftPM.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/codeartifact/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available domains for your AWS account:
+.RE
+.PP
+\fB\fCaws codeartifact list\-domains\fR
+.RS
+.IP \(bu 2
+Generate credentials for a specific package manager (e.g.: npm, pip):
+.RE
+.PP
+\fB\fCaws codeartifact login \-\-tool {{package_manager}} \-\-domain {{your_domain}} \-\-repository {{repository_name}}\fR
+.RS
+.IP \(bu 2
+Get the endpoint URL of a CodeArtifact repository:
+.RE
+.PP
+\fB\fCaws codeartifact get\-repository\-endpoint \-\-domain {{your_domain}} \-\-repository {{repository_name}} \-\-format {{npm|pypi|maven|nuget|generic}}\fR
+.RS
+.IP \(bu 2
+Show list of all available CodeArtifact commands:
+.RE
+.PP
+\fB\fCaws codeartifact help\fR
+.RS
+.IP \(bu 2
+Show help for specific EC2 subcommand:
+.RE
+.PP
+\fB\fCaws ec2 {{subcommand}} help\fR

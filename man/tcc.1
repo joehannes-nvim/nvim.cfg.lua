@@ -1,0 +1,24 @@
+.TH tcc
+.PP
+.RS
+A tiny C compiler that can run C source files as scripts and otherwise has command\-line options similar to \fB\fCgcc\fR\&.
+More information: \[la]https://bellard.org/tcc/tcc-doc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile and link 2 source files to generate an executable:
+.RE
+.PP
+\fB\fCtcc \-o {{executable_name}} {{path/to/file1.c}} {{path/to/file2.c}}\fR
+.RS
+.IP \(bu 2
+Directly run an input file like a script and pass arguments to it:
+.RE
+.PP
+\fB\fCtcc \-run {{path/to/source_file.c}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Interpret C source files with a shebang inside the file:
+.RE
+.PP
+\fB\fC#!/full/path/to/tcc \-run\fR

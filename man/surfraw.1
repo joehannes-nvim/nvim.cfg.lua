@@ -1,0 +1,43 @@
+.TH surfraw
+.PP
+.RS
+Query a variety of web search engines.
+Consists of a collection of elvi, each of which knows how to search a specific website.
+More information: \[la]http://surfraw.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the list of supported website search scripts (elvi):
+.RE
+.PP
+\fB\fCsurfraw \-elvi\fR
+.RS
+.IP \(bu 2
+Open the elvi's results page for a specific search in the browser:
+.RE
+.PP
+\fB\fCsurfraw {{elvi}} "{{search_terms}}"\fR
+.RS
+.IP \(bu 2
+Display an elvi description and its specific options:
+.RE
+.PP
+\fB\fCsurfraw {{elvi}} \-local\-help\fR
+.RS
+.IP \(bu 2
+Search using an elvi with specific options and open the results page in the browser:
+.RE
+.PP
+\fB\fCsurfraw {{elvi}} {{elvi_options}} "{{search_terms}}"\fR
+.RS
+.IP \(bu 2
+Display the URL to the elvi's results page for a specific search:
+.RE
+.PP
+\fB\fCsurfraw \-print {{elvi}} "{{search_terms}}"\fR
+.RS
+.IP \(bu 2
+Search using the alias:
+.RE
+.PP
+\fB\fCsr {{elvi}} "{{search_terms}}"\fR

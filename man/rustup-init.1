@@ -1,0 +1,48 @@
+.TH rustup\-init.sh
+.PP
+.RS
+Script to install \fB\fCrustup\fR and the Rust toolchain.
+More information: \[la]https://forge.rust-lang.org/infra/other-installation-methods.html#rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download and run \fB\fCrustup\-init\fR to install \fB\fCrustup\fR and the default Rust toolchain:
+.RE
+.PP
+\fB\fCcurl https://sh.rustup.rs \-sSf | sh \-s\fR
+.RS
+.IP \(bu 2
+Download and run \fB\fCrustup\-init\fR and pass arguments to it:
+.RE
+.PP
+\fB\fCcurl https://sh.rustup.rs \-sSf | sh \-s \-\- {{arguments}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCrustup\-init\fR and specify additional components or targets to install:
+.RE
+.PP
+\fB\fCrustup\-init.sh \-\-target {{target}} \-\-component {{component}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCrustup\-init\fR and specify the default toolchain to install:
+.RE
+.PP
+\fB\fCrustup\-init.sh \-\-default\-toolchain {{toolchain}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCrustup\-init\fR and do not install any toolchain:
+.RE
+.PP
+\fB\fCrustup\-init.sh \-\-default\-toolchain {{none}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCrustup\-init\fR and specify an installation profile:
+.RE
+.PP
+\fB\fCrustup\-init.sh \-\-profile {{minimal|default|complete}}\fR
+.RS
+.IP \(bu 2
+Run \fB\fCrustup\-init\fR without asking for confirmation:
+.RE
+.PP
+\fB\fCrustup\-init.sh \-y\fR

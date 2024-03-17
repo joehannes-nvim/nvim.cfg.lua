@@ -1,0 +1,48 @@
+.TH webstorm
+.PP
+.RS
+The JetBrains JavaScript IDE.
+More information: \[la]https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the current directory in WebStorm:
+.RE
+.PP
+\fB\fCwebstorm\fR
+.RS
+.IP \(bu 2
+Open a specific directory in WebStorm:
+.RE
+.PP
+\fB\fCwebstorm {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Open specific files in the LightEdit mode﻿:
+.RE
+.PP
+\fB\fCwebstorm \-e {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Open and wait until done editing a specific file in the LightEdit mode:
+.RE
+.PP
+\fB\fCwebstorm \-\-wait \-e {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file with the cursor at the specific line:
+.RE
+.PP
+\fB\fCwebstorm \-\-line {{line_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open and compare files (supports up to 3 files):
+.RE
+.PP
+\fB\fCwebstorm diff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Open and perform a three\-way merge:
+.RE
+.PP
+\fB\fCwebstorm merge {{path/to/left_file}} {{path/to/right_file}} {{path/to/target_file}}\fR

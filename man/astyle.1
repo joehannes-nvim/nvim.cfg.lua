@@ -1,0 +1,37 @@
+.TH astyle
+.PP
+.RS
+Source code indenter, formatter, and beautifier for the C, C++, C# and Java programming languages.
+Upon running, a copy of the original file is created with an ".orig" appended to the original file name.
+More information: \[la]http://astyle.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply the default style of 4 spaces per indent and no formatting changes:
+.RE
+.PP
+\fB\fCastyle {{source_file}}\fR
+.RS
+.IP \(bu 2
+Apply the Java style with attached braces:
+.RE
+.PP
+\fB\fCastyle \-\-style=java {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply the allman style with broken braces:
+.RE
+.PP
+\fB\fCastyle \-\-style=allman {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply a custom indent using spaces. Choose between 2 and 20 spaces:
+.RE
+.PP
+\fB\fCastyle \-\-indent=spaces={{number_of_spaces}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply a custom indent using tabs. Choose between 2 and 20 tabs:
+.RE
+.PP
+\fB\fCastyle \-\-indent=tab={{number_of_tabs}} {{path/to/file}}\fR

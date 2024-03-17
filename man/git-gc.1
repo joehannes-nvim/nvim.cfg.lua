@@ -1,0 +1,36 @@
+.TH git gc
+.PP
+.RS
+Optimise the local repository by cleaning unnecessary files.
+More information: \[la]https://git-scm.com/docs/git-gc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Optimise the repository:
+.RE
+.PP
+\fB\fCgit gc\fR
+.RS
+.IP \(bu 2
+Aggressively optimise, takes more time:
+.RE
+.PP
+\fB\fCgit gc \-\-aggressive\fR
+.RS
+.IP \(bu 2
+Do not prune loose objects (prunes by default):
+.RE
+.PP
+\fB\fCgit gc \-\-no\-prune\fR
+.RS
+.IP \(bu 2
+Suppress all output:
+.RE
+.PP
+\fB\fCgit gc \-\-quiet\fR
+.RS
+.IP \(bu 2
+View full usage:
+.RE
+.PP
+\fB\fCgit gc \-\-help\fR

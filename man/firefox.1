@@ -1,0 +1,54 @@
+.TH firefox
+.PP
+.RS
+A free and open source web browser.
+More information: \[la]https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch Firefox and open a web page:
+.RE
+.PP
+\fB\fCfirefox {{https://www.duckduckgo.com}}\fR
+.RS
+.IP \(bu 2
+Open a new window:
+.RE
+.PP
+\fB\fCfirefox \-\-new\-window {{https://www.duckduckgo.com}}\fR
+.RS
+.IP \(bu 2
+Open a private (incognito) window:
+.RE
+.PP
+\fB\fCfirefox \-\-private\-window\fR
+.RS
+.IP \(bu 2
+Search for "wikipedia" using the default search engine:
+.RE
+.PP
+\fB\fCfirefox \-\-search "{{wikipedia}}"\fR
+.RS
+.IP \(bu 2
+Launch Firefox in safe mode, with all extensions disabled:
+.RE
+.PP
+\fB\fCfirefox \-\-safe\-mode\fR
+.RS
+.IP \(bu 2
+Take a screenshot of a web page in headless mode:
+.RE
+.PP
+\fB\fCfirefox \-\-headless \-\-screenshot {{path/to/output_file.png}} {{https://example.com/}}\fR
+.RS
+.IP \(bu 2
+Use a specific profile to allow multiple separate instances of Firefox to run at once:
+.RE
+.PP
+\fB\fCfirefox \-\-profile {{path/to/directory}} {{https://example.com/}}\fR
+.RS
+.IP \(bu 2
+Set Firefox as the default browser:
+.RE
+.PP
+\fB\fCfirefox \-\-setDefaultBrowser\fR

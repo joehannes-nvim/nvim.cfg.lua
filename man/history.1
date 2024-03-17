@@ -1,0 +1,36 @@
+.TH history
+.PP
+.RS
+Command\-line history.
+More information: \[la]https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the commands history list with line numbers:
+.RE
+.PP
+\fB\fChistory\fR
+.RS
+.IP \(bu 2
+Display the last 20 commands (in \fB\fCzsh\fR it displays all commands starting from the 20th):
+.RE
+.PP
+\fB\fChistory {{20}}\fR
+.RS
+.IP \(bu 2
+Clear the commands history list (only for current \fB\fCbash\fR shell):
+.RE
+.PP
+\fB\fChistory \-c\fR
+.RS
+.IP \(bu 2
+Overwrite history file with history of current \fB\fCbash\fR shell (often combined with \fB\fChistory \-c\fR to purge history):
+.RE
+.PP
+\fB\fChistory \-w\fR
+.RS
+.IP \(bu 2
+Delete the history entry at the specified offset:
+.RE
+.PP
+\fB\fChistory \-d {{offset}}\fR

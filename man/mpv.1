@@ -1,0 +1,54 @@
+.TH mpv
+.PP
+.RS
+A audio/video player based on MPlayer.
+More information: \[la]https://mpv.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Play a video or audio file:
+.RE
+.PP
+\fB\fCmpv {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Play a video or audio file from a URL:
+.RE
+.PP
+\fB\fCmpv '{{https://www.youtube.com/watch?v=dQw4w9WgXcQ}}'\fR
+.RS
+.IP \(bu 2
+Jump backward/forward 5 seconds:
+.RE
+.PP
+\fB\fCLEFT <or> RIGHT\fR
+.RS
+.IP \(bu 2
+Jump backward/forward 1 minute:
+.RE
+.PP
+\fB\fCDOWN <or> UP\fR
+.RS
+.IP \(bu 2
+Decrease or increase playback speed by 10%:
+.RE
+.PP
+\fB\fC[ <or> ]\fR
+.RS
+.IP \(bu 2
+Play a file at a specified speed (0.01 to 100, default 1):
+.RE
+.PP
+\fB\fCmpv \-\-speed {{speed}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Play a file using a profile defined in the \fB\fCmpv.conf\fR file:
+.RE
+.PP
+\fB\fCmpv \-\-profile {{profile_name}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display the output of webcam or other video input device:
+.RE
+.PP
+\fB\fCmpv /dev/{{video0}}\fR

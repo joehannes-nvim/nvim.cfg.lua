@@ -1,0 +1,36 @@
+.TH amass enum
+.PP
+.RS
+Find subdomains of a domain.
+More information: \[la]https://github.com/OWASP/Amass/blob/master/doc/user_guide.md#the-enum-subcommand\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Passively find subdomains of a domain:
+.RE
+.PP
+\fB\fCamass enum \-passive \-d {{domain_name}}\fR
+.RS
+.IP \(bu 2
+Find subdomains of a domain and actively verify them attempting to resolve the found subdomains:
+.RE
+.PP
+\fB\fCamass enum \-active \-d {{domain_name}} \-p {{80,443,8080}}\fR
+.RS
+.IP \(bu 2
+Do a brute force search for subdomains:
+.RE
+.PP
+\fB\fCamass enum \-brute \-d {{domain_name}}\fR
+.RS
+.IP \(bu 2
+Save the results to a text file:
+.RE
+.PP
+\fB\fCamass enum \-o {{output_file}} \-d {{domain_name}}\fR
+.RS
+.IP \(bu 2
+Save the results to a database:
+.RE
+.PP
+\fB\fCamass enum \-o {{output_file}} \-dir {{path/to/database_directory}}\fR

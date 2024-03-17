@@ -1,0 +1,36 @@
+.TH ffplay
+.PP
+.RS
+A simple and portable media player using the FFmpeg libraries and the SDL library.
+More information: \[la]https://ffmpeg.org/ffplay-all.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Play a media file:
+.RE
+.PP
+\fB\fCffplay {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Play audio from a media file without a GUI:
+.RE
+.PP
+\fB\fCffplay \-nodisp {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Play media passed by \fB\fCffmpeg\fR through \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCffmpeg \-i {{path/to/file}} \-c {{copy}} \-f {{media_format}} \- | ffplay \-\fR
+.RS
+.IP \(bu 2
+Play a video and show motion vectors in real time:
+.RE
+.PP
+\fB\fCffplay \-flags2 +export_mvs \-vf codecview=mv=pf+bf+bb {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show only video keyframes:
+.RE
+.PP
+\fB\fCffplay \-vf select="{{eq(pict_type\\,PICT_TYPE_I)}}" {{path/to/file}}\fR

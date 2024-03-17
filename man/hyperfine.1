@@ -1,0 +1,42 @@
+.TH hyperfine
+.PP
+.RS
+A command\-line benchmarking tool.
+More information: \[la]https://github.com/sharkdp/hyperfine/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a basic benchmark, performing at least 10 runs:
+.RE
+.PP
+\fB\fChyperfine '{{make}}'\fR
+.RS
+.IP \(bu 2
+Run a comparative benchmark:
+.RE
+.PP
+\fB\fChyperfine '{{make target1}}' '{{make target2}}'\fR
+.RS
+.IP \(bu 2
+Change minimum number of benchmarking runs:
+.RE
+.PP
+\fB\fChyperfine \-\-min\-runs {{7}} '{{make}}'\fR
+.RS
+.IP \(bu 2
+Perform benchmark with warmup:
+.RE
+.PP
+\fB\fChyperfine \-\-warmup {{5}} '{{make}}'\fR
+.RS
+.IP \(bu 2
+Run a command before each benchmark run (to clear caches, etc.):
+.RE
+.PP
+\fB\fChyperfine \-\-prepare '{{make clean}}' '{{make}}'\fR
+.RS
+.IP \(bu 2
+Run a benchmark where a single parameter changes for each run:
+.RE
+.PP
+\fB\fChyperfine \-\-prepare '{{make clean}}' \-\-parameter\-scan {{num_threads}} {{1}} {{10}} '{{make \-j {num_threads}}}'\fR

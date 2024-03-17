@@ -1,0 +1,37 @@
+.TH cargo tree
+.PP
+.RS
+Display a tree visualization of a dependency graph.
+Note: in the tree, dependencies of packages marked with \fB\fC(*)\fR have already been shown elsewhere in the graph, and so are not repeated.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-tree.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show a dependency tree of the current project:
+.RE
+.PP
+\fB\fCcargo tree\fR
+.RS
+.IP \(bu 2
+Only show dependencies up to the specified depth (e.g. when \fB\fCn\fR is 1, display only direct dependencies):
+.RE
+.PP
+\fB\fCcargo tree \-\-depth {{n}}\fR
+.RS
+.IP \(bu 2
+Do not display the given package (and its dependencies) in the tree:
+.RE
+.PP
+\fB\fCcargo tree \-\-prune {{package_spec}}\fR
+.RS
+.IP \(bu 2
+Show all occurrences of repeated dependencies:
+.RE
+.PP
+\fB\fCcargo tree \-\-no\-dedupe\fR
+.RS
+.IP \(bu 2
+Only show normal/build/development dependencies:
+.RE
+.PP
+\fB\fCcargo tree \-\-edges {{normal|build|dev}}\fR

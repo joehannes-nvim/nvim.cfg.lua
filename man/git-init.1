@@ -1,0 +1,30 @@
+.TH git init
+.PP
+.RS
+Initializes a new local Git repository.
+More information: \[la]https://git-scm.com/docs/git-init\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new local repository:
+.RE
+.PP
+\fB\fCgit init\fR
+.RS
+.IP \(bu 2
+Initialize a repository with the specified name for the initial branch:
+.RE
+.PP
+\fB\fCgit init \-\-initial\-branch={{branch_name}}\fR
+.RS
+.IP \(bu 2
+Initialize a repository using SHA256 for object hashes (requires Git version 2.29+):
+.RE
+.PP
+\fB\fCgit init \-\-object\-format={{sha256}}\fR
+.RS
+.IP \(bu 2
+Initialize a barebones repository, suitable for use as a remote over ssh:
+.RE
+.PP
+\fB\fCgit init \-\-bare\fR

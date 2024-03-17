@@ -1,0 +1,36 @@
+.TH git describe
+.PP
+.RS
+Give an object a human\-readable name based on an available ref.
+More information: \[la]https://git-scm.com/docs/git-describe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a unique name for the current commit (the name contains the most recent annotated tag, the number of additional commits, and the abbreviated commit hash):
+.RE
+.PP
+\fB\fCgit describe\fR
+.RS
+.IP \(bu 2
+Create a name with 4 digits for the abbreviated commit hash:
+.RE
+.PP
+\fB\fCgit describe \-\-abbrev={{4}}\fR
+.RS
+.IP \(bu 2
+Generate a name with the tag reference path:
+.RE
+.PP
+\fB\fCgit describe \-\-all\fR
+.RS
+.IP \(bu 2
+Describe a Git tag:
+.RE
+.PP
+\fB\fCgit describe {{v1.0.0}}\fR
+.RS
+.IP \(bu 2
+Create a name for the last commit of a given branch:
+.RE
+.PP
+\fB\fCgit describe {{branch_name}}\fR

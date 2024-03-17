@@ -1,0 +1,30 @@
+.TH cargo install
+.PP
+.RS
+Build and install a Rust binary.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-install.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package from \[la]https://crates.io\[ra] (the version is optional \- latest by default):
+.RE
+.PP
+\fB\fCcargo install {{package}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Install a package from the specified Git repository:
+.RE
+.PP
+\fB\fCcargo install \-\-git {{repo_url}}\fR
+.RS
+.IP \(bu 2
+Build from the specified branch/tag/commit when installing from a Git repository:
+.RE
+.PP
+\fB\fCcargo install \-\-git {{repo_url}} \-\-{{branch|tag|rev}} {{branch_name|tag|commit_hash}}\fR
+.RS
+.IP \(bu 2
+List all installed packages and their versions:
+.RE
+.PP
+\fB\fCcargo install \-\-list\fR

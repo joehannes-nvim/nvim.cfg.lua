@@ -1,0 +1,42 @@
+.TH whereis
+.PP
+.RS
+Locate the binary, source, and manual page files for a command.
+More information: \[la]https://manned.org/whereis\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Locate binary, source and man pages for ssh:
+.RE
+.PP
+\fB\fCwhereis {{ssh}}\fR
+.RS
+.IP \(bu 2
+Locate binary and man pages for ls:
+.RE
+.PP
+\fB\fCwhereis \-bm {{ls}}\fR
+.RS
+.IP \(bu 2
+Locate source of gcc and man pages for Git:
+.RE
+.PP
+\fB\fCwhereis \-s {{gcc}} \-m {{git}}\fR
+.RS
+.IP \(bu 2
+Locate binaries for gcc in \fB\fC/usr/bin/\fR only:
+.RE
+.PP
+\fB\fCwhereis \-b \-B {{/usr/bin/}} \-f {{gcc}}\fR
+.RS
+.IP \(bu 2
+Locate unusual binaries (those that have more or less than one binary on the system):
+.RE
+.PP
+\fB\fCwhereis \-u *\fR
+.RS
+.IP \(bu 2
+Locate binaries that have unusual manual entries (binaries that have more or less than one manual installed):
+.RE
+.PP
+\fB\fCwhereis \-u \-m *\fR

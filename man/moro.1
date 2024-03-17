@@ -1,0 +1,48 @@
+.TH moro
+.PP
+.RS
+Track work time.
+More information: \[la]https://moro.js.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Invoke \fB\fCmoro\fR without parameters, to set the current time as the start of the working day:
+.RE
+.PP
+\fB\fCmoro\fR
+.RS
+.IP \(bu 2
+Specify a custom time for the start of the working day:
+.RE
+.PP
+\fB\fCmoro hi {{09:30}}\fR
+.RS
+.IP \(bu 2
+Invoke \fB\fCmoro\fR without parameters a second time, to set the current time at the end of the working day:
+.RE
+.PP
+\fB\fCmoro\fR
+.RS
+.IP \(bu 2
+Specify a custom time for the end of the working day:
+.RE
+.PP
+\fB\fCmoro bye {{17:30}}\fR
+.RS
+.IP \(bu 2
+Add a note on the current working day:
+.RE
+.PP
+\fB\fCmoro note {{3 hours on project Foo}}\fR
+.RS
+.IP \(bu 2
+Show a report of time logs and notes for the current working day:
+.RE
+.PP
+\fB\fCmoro report\fR
+.RS
+.IP \(bu 2
+Show a report of time logs and notes for all working days on record:
+.RE
+.PP
+\fB\fCmoro report \-\-all\fR

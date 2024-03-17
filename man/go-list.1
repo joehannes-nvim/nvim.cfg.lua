@@ -1,0 +1,30 @@
+.TH go list
+.PP
+.RS
+List packages or modules.
+More information: \[la]https://golang.org/cmd/go/#hdr-List_packages_or_modules\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List packages:
+.RE
+.PP
+\fB\fCgo list ./...\fR
+.RS
+.IP \(bu 2
+List standard packages:
+.RE
+.PP
+\fB\fCgo list std\fR
+.RS
+.IP \(bu 2
+List packages in JSON format:
+.RE
+.PP
+\fB\fCgo list \-json time net/http\fR
+.RS
+.IP \(bu 2
+List module dependencies and available updates:
+.RE
+.PP
+\fB\fCgo list \-m \-u all\fR

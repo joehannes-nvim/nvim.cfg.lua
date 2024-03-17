@@ -1,0 +1,18 @@
+.TH timeout
+.PP
+.RS
+Run a command with a time limit.
+More information: \[la]https://www.gnu.org/software/coreutils/timeout\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run \fB\fCsleep 10\fR and terminate it, if it runs for more than 3 seconds:
+.RE
+.PP
+\fB\fCtimeout {{3s}} {{sleep 10}}\fR
+.RS
+.IP \(bu 2
+Specify the signal to be sent to the command after the time limit expires. (By default, TERM is sent):
+.RE
+.PP
+\fB\fCtimeout \-\-signal {{INT}} {{5s}} {{sleep 10}}\fR

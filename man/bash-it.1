@@ -1,0 +1,48 @@
+.TH bash\-it
+.PP
+.RS
+A collection of community contributed Bash commands and scripts for Bash 3.2+.
+More information: \[la]https://bash-it.readthedocs.io/en/latest/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update Bash\-it to the latest stable/development version:
+.RE
+.PP
+\fB\fCbash\-it update {{stable|dev}}\fR
+.RS
+.IP \(bu 2
+Reload Bash profile (set \fB\fCBASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE\fR to non\-empty value for an automatic reload):
+.RE
+.PP
+\fB\fCbash\-it reload\fR
+.RS
+.IP \(bu 2
+Restart Bash:
+.RE
+.PP
+\fB\fCbash\-it restart\fR
+.RS
+.IP \(bu 2
+Reload Bash profile with enabled error and warning logging:
+.RE
+.PP
+\fB\fCbash\-it doctor\fR
+.RS
+.IP \(bu 2
+Reload Bash profile with enabled error/warning/entire logging:
+.RE
+.PP
+\fB\fCbash\-it doctor {{errors|warnings|all}}\fR
+.RS
+.IP \(bu 2
+Search for Bash\-it aliases/plugins/completions:
+.RE
+.PP
+\fB\fCbash\-it search {{alias|plugin|completion}}\fR
+.RS
+.IP \(bu 2
+Search for Bash\-it aliases/plugins/completions and enable/disable all found items:
+.RE
+.PP
+\fB\fCbash\-it search \-\-{{enable|disable}} {{alias|plugin|completion}}\fR

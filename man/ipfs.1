@@ -1,0 +1,49 @@
+.TH ipfs
+.PP
+.RS
+Inter Planetary File System.
+A peer\-to\-peer hypermedia protocol. Aims to make the web more open.
+More information: \[la]https://ipfs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a file from local to the filesystem, pin it and print the relative hash:
+.RE
+.PP
+\fB\fCipfs add {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add a directory and its files recursively from local to the filesystem and print the relative hash:
+.RE
+.PP
+\fB\fCipfs add \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Save a remote file and give it a name but not pin it:
+.RE
+.PP
+\fB\fCipfs get {{hash}} \-o {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Pin a remote file locally:
+.RE
+.PP
+\fB\fCipfs pin add {{hash}}\fR
+.RS
+.IP \(bu 2
+Display pinned files:
+.RE
+.PP
+\fB\fCipfs pin ls\fR
+.RS
+.IP \(bu 2
+Unpin a file from the local storage:
+.RE
+.PP
+\fB\fCipfs pin rm {{hash}}\fR
+.RS
+.IP \(bu 2
+Remove unpinned files from local storage:
+.RE
+.PP
+\fB\fCipfs repo gc\fR

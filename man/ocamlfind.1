@@ -1,0 +1,25 @@
+.TH ocamlfind
+.PP
+.RS
+The findlib package manager for OCaml.
+Simplifies linking executables with external libraries.
+More information: \[la]http://projects.camlcity.org/projects/findlib.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a source file to a native binary and link with packages:
+.RE
+.PP
+\fB\fCocamlfind ocamlopt \-package {{package1}},{{package2}} \-linkpkg \-o {{path/to/executable}} {{path/to/source.ml}}\fR
+.RS
+.IP \(bu 2
+Compile a source file to a bytecode binary and link with packages:
+.RE
+.PP
+\fB\fCocamlfind ocamlc \-package {{package1}},{{package2}} \-linkpkg \-o {{path/to/executable}} {{path/to/source.ml}}\fR
+.RS
+.IP \(bu 2
+Cross\-compile for a different platform:
+.RE
+.PP
+\fB\fCocamlfind \-toolchain {{cross\-toolchain}} ocamlopt \-o {{path/to/executable}} {{path/to/source.ml}}\fR

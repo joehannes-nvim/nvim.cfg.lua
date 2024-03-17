@@ -1,0 +1,36 @@
+.TH direnv
+.PP
+.RS
+Shell extension to load and unload environment variables depending on the current directory.
+More information: \[la]https://github.com/direnv/direnv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Grant direnv permission to load the \fB\fC\&.envrc\fR present in the current directory:
+.RE
+.PP
+\fB\fCdirenv allow {{.}}\fR
+.RS
+.IP \(bu 2
+Revoke the authorization to load the \fB\fC\&.envrc\fR present in the current directory:
+.RE
+.PP
+\fB\fCdirenv deny {{.}}\fR
+.RS
+.IP \(bu 2
+Edit the \fB\fC\&.envrc\fR file in the default text editor and reload the environment on exit:
+.RE
+.PP
+\fB\fCdirenv edit {{.}}\fR
+.RS
+.IP \(bu 2
+Trigger a reload of the environment:
+.RE
+.PP
+\fB\fCdirenv reload\fR
+.RS
+.IP \(bu 2
+Print some debug status information:
+.RE
+.PP
+\fB\fCdirenv status\fR

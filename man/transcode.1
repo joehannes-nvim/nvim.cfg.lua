@@ -1,0 +1,24 @@
+.TH transcode
+.PP
+.RS
+Transcode video and audio codecs, and convert between media formats.
+More information: \[la]https://manned.org/transcode\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create stabilization file to be able to remove camera shakes:
+.RE
+.PP
+\fB\fCtranscode \-J stabilize \-i {{input_file}}\fR
+.RS
+.IP \(bu 2
+Remove camera shakes after creating stabilization file, transform video using XviD:
+.RE
+.PP
+\fB\fCtranscode \-J transform \-i {{input_file}} \-y xvid \-o {{output_file}}\fR
+.RS
+.IP \(bu 2
+Resize the video to 640x480 pixels and convert to MPEG4 codec using XviD:
+.RE
+.PP
+\fB\fCtranscode \-Z 640x480 \-i {{input_file}} \-y xvid \-o {{output_file}}\fR

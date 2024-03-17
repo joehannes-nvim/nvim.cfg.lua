@@ -1,0 +1,36 @@
+.TH gow
+.PP
+.RS
+Watches Go files and restarts the app on changes.
+More information: \[la]https://github.com/mitranim/gow\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start and watch the current directory:
+.RE
+.PP
+\fB\fCgow run .\fR
+.RS
+.IP \(bu 2
+Start the application with the specified arguments:
+.RE
+.PP
+\fB\fCgow run . {{argument1 argument2 ...}}\fR
+.RS
+.IP \(bu 2
+Watch subdirectories in verbose mode:
+.RE
+.PP
+\fB\fCgow \-v \-w={{path/to/directory1,path/to/directory2,...}} run .\fR
+.RS
+.IP \(bu 2
+Watch the specified file extensions:
+.RE
+.PP
+\fB\fCgow \-e={{go,html}} run .\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgow \-h\fR

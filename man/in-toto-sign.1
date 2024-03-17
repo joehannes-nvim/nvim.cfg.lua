@@ -1,0 +1,36 @@
+.TH in\-toto\-sign
+.PP
+.RS
+Sign in\-toto link or layout metadata or verify their signatures.
+More information: \[la]https://in-toto.readthedocs.io/en/latest/command-line-tools/in-toto-sign.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sign 'unsigned.layout' with two keys and write it to 'root.layout':
+.RE
+.PP
+\fB\fCin\-toto\-sign \-f {{unsigned.layout}} \-k {{priv_key1}} {{priv_key2}} \-o {{root.layout}}\fR
+.RS
+.IP \(bu 2
+Replace signature in link file and write to default filename:
+.RE
+.PP
+\fB\fCin\-toto\-sign \-f {{package.2f89b927.link}} \-k {{priv_key}}\fR
+.RS
+.IP \(bu 2
+Verify a layout signed with 3 keys:
+.RE
+.PP
+\fB\fCin\-toto\-sign \-f {{root.layout}} \-k {{pub_key0}} {{pub_key1}} {{pub_key2}} \-\-verify\fR
+.RS
+.IP \(bu 2
+Sign a layout with the default GPG key in default GPG keyring:
+.RE
+.PP
+\fB\fCin\-toto\-sign \-f {{root.layout}} \-\-gpg\fR
+.RS
+.IP \(bu 2
+Verify a layout with a GPG key identified by keyid '...439F3C2':
+.RE
+.PP
+\fB\fCin\-toto\-sign \-f {{root.layout}} \-\-verify \-\-gpg {{...439F3C2}}\fR

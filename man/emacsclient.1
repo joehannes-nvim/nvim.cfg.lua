@@ -1,0 +1,43 @@
+.TH emacsclient
+.PP
+.RS
+Open files in an existing Emacs server.
+See also \fB\fCemacs\fR\&.
+More information: \[la]https://www.emacswiki.org/emacs/EmacsClient\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file in an existing Emacs server (using GUI if available):
+.RE
+.PP
+\fB\fCemacsclient {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file in console mode (without an X window):
+.RE
+.PP
+\fB\fCemacsclient \-\-no\-window\-system {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a file in a new Emacs window:
+.RE
+.PP
+\fB\fCemacsclient \-\-create\-frame {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Evaluate a command, printing the output to \fB\fCstdout\fR, and then quit:
+.RE
+.PP
+\fB\fCemacsclient \-\-eval '({{command}})'\fR
+.RS
+.IP \(bu 2
+Specify an alternative editor in case no Emacs server is running:
+.RE
+.PP
+\fB\fCemacsclient \-\-alternate\-editor {{editor}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Stop a running Emacs server and all its instances, asking for confirmation on unsaved files:
+.RE
+.PP
+\fB\fCemacsclient \-\-eval '(save\-buffers\-kill\-emacs)'\fR

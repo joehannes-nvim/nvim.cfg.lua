@@ -1,0 +1,30 @@
+.TH promtool
+.PP
+.RS
+Tooling for the Prometheus monitoring system.
+More information: \[la]https://prometheus.io/docs/prometheus/latest/getting_started/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check if the config files are valid or not (if present report errors):
+.RE
+.PP
+\fB\fCpromtool check config {{config_file.yml}}\fR
+.RS
+.IP \(bu 2
+Check if the rule files are valid or not (if present report errors):
+.RE
+.PP
+\fB\fCpromtool check rules {{rules_file.yml}}\fR
+.RS
+.IP \(bu 2
+Pass Prometheus metrics over \fB\fCstdin\fR to check them for consistency and correctness:
+.RE
+.PP
+\fB\fCcurl \-\-silent {{http://example.com:9090/metrics/}} | promtool check metrics\fR
+.RS
+.IP \(bu 2
+Unit tests for rules config:
+.RE
+.PP
+\fB\fCpromtool test rules {{test_file.yml}}\fR

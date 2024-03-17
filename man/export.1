@@ -1,0 +1,30 @@
+.TH export
+.PP
+.RS
+Command to mark shell variables in the current environment to be exported with any newly forked child processes.
+More information: \[la]https://www.gnu.org/software/bash/manual/bash.html#index-export\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set a new environment variable:
+.RE
+.PP
+\fB\fCexport {{VARIABLE}}={{value}}\fR
+.RS
+.IP \(bu 2
+Remove an environment variable:
+.RE
+.PP
+\fB\fCexport \-n {{VARIABLE}}\fR
+.RS
+.IP \(bu 2
+Mark a shell function for export:
+.RE
+.PP
+\fB\fCexport \-f {{FUNCTION_NAME}}\fR
+.RS
+.IP \(bu 2
+Append something to the PATH variable:
+.RE
+.PP
+\fB\fCexport PATH=$PATH:{{path/to/append}}\fR

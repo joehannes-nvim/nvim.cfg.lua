@@ -1,0 +1,18 @@
+.TH tailscale ssh
+.PP
+.RS
+SSH to a Tailscale machine (Linux Only).
+More information: \[la]https://tailscale.com/kb/1193/tailscale-ssh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Advertise/Disable SSH on the host:
+.RE
+.PP
+\fB\fCsudo tailscale up \-\-ssh={{true|false}}\fR
+.RS
+.IP \(bu 2
+SSH to a specific host which has Tailscale\-SSH enabled:
+.RE
+.PP
+\fB\fCtailscale ssh {{username}}@{{host}}\fR

@@ -1,0 +1,36 @@
+.TH lpass
+.PP
+.RS
+Command\-line interface for the LastPass password manager.
+More information: \[la]https://github.com/lastpass/lastpass-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to your LastPass account, by entering your master password when prompted:
+.RE
+.PP
+\fB\fClpass login {{username}}\fR
+.RS
+.IP \(bu 2
+Show login status:
+.RE
+.PP
+\fB\fClpass status\fR
+.RS
+.IP \(bu 2
+List all sites grouped by category:
+.RE
+.PP
+\fB\fClpass ls\fR
+.RS
+.IP \(bu 2
+Generate a new password for gmail.com with the identifier \fB\fCmyinbox\fR and add to LastPass:
+.RE
+.PP
+\fB\fClpass generate \-\-username {{username}} \-\-url {{gmail.com}} {{myinbox}} {{password_length}}\fR
+.RS
+.IP \(bu 2
+Show password for a specified entry:
+.RE
+.PP
+\fB\fClpass show {{myinbox}} \-\-password\fR

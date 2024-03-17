@@ -1,0 +1,54 @@
+.TH eza
+.PP
+.RS
+Modern, maintained replacement for \fB\fCls\fR, built on \fB\fCexa\fR\&.
+More information: \[la]https://github.com/eza-community/eza\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List files one per line:
+.RE
+.PP
+\fB\fCeza \-\-oneline\fR
+.RS
+.IP \(bu 2
+List all files, including hidden files:
+.RE
+.PP
+\fB\fCeza \-\-all\fR
+.RS
+.IP \(bu 2
+Long format list (permissions, ownership, size and modification date) of all files:
+.RE
+.PP
+\fB\fCeza \-\-long \-\-all\fR
+.RS
+.IP \(bu 2
+List files with the largest at the top:
+.RE
+.PP
+\fB\fCeza \-\-reverse \-\-sort={{size}}\fR
+.RS
+.IP \(bu 2
+Display a tree of files, three levels deep:
+.RE
+.PP
+\fB\fCeza \-\-long \-\-tree \-\-level={{3}}\fR
+.RS
+.IP \(bu 2
+List files sorted by modification date (oldest first):
+.RE
+.PP
+\fB\fCeza \-\-long \-\-sort={{modified}}\fR
+.RS
+.IP \(bu 2
+List files with their headers, icons, and Git statuses:
+.RE
+.PP
+\fB\fCeza \-\-long \-\-header \-\-icons \-\-git\fR
+.RS
+.IP \(bu 2
+Don't list files mentioned in \fB\fC\&.gitignore\fR:
+.RE
+.PP
+\fB\fCeza \-\-git\-ignore\fR

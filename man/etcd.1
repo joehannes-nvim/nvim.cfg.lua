@@ -1,0 +1,30 @@
+.TH etcd
+.PP
+.RS
+A distributed, reliable key\-value store for the most critical data of a distributed system.
+More information: \[la]https://etcd.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a single\-node etcd cluster:
+.RE
+.PP
+\fB\fCetcd\fR
+.RS
+.IP \(bu 2
+Start a single\-node etcd cluster, listening for client requests on a custom URL:
+.RE
+.PP
+\fB\fCetcd \-\-advertise\-client\-urls {{http://127.0.0.1:1234}} \-\-listen\-client\-urls {{http://127.0.0.1:1234}}\fR
+.RS
+.IP \(bu 2
+Start a single\-node etcd cluster with a custom name:
+.RE
+.PP
+\fB\fCetcd \-\-name {{my_etcd_cluster}}\fR
+.RS
+.IP \(bu 2
+Start a single\-node etcd cluster with extensive metrics available at \[la]http://localhost:2379/debug/pprof/\[ra]:
+.RE
+.PP
+\fB\fCetcd \-\-enable\-pprof \-\-metrics extensive\fR

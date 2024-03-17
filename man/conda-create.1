@@ -1,0 +1,24 @@
+.TH conda create
+.PP
+.RS
+Create new conda environments.
+More information: \[la]https://docs.conda.io/projects/conda/en/latest/commands/create.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new environment named \fB\fCpy39\fR, and install Python 3.9 and NumPy v1.11 or above in it:
+.RE
+.PP
+\fB\fCconda create \-\-yes \-\-name {{py39}} python={{3.9}} "{{numpy>=1.11}}"\fR
+.RS
+.IP \(bu 2
+Make exact copy of an environment:
+.RE
+.PP
+\fB\fCconda create \-\-clone {{py39}} \-\-name {{py39\-copy}}\fR
+.RS
+.IP \(bu 2
+Create a new environment with a specified name and install a given package:
+.RE
+.PP
+\fB\fCconda create \-\-name {{env_name}} {{package}}\fR

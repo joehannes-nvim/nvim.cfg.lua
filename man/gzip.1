@@ -1,0 +1,42 @@
+.TH gzip
+.PP
+.RS
+Compress/uncompress files with gzip compression (LZ77).
+More information: \[la]https://www.gnu.org/software/gzip/manual/gzip.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file, replacing it with a gzipped compressed version:
+.RE
+.PP
+\fB\fCgzip {{file.ext}}\fR
+.RS
+.IP \(bu 2
+Decompress a file, replacing it with the original uncompressed version:
+.RE
+.PP
+\fB\fCgzip \-d {{file.ext}}.gz\fR
+.RS
+.IP \(bu 2
+Compress a file, keeping the original file:
+.RE
+.PP
+\fB\fCgzip \-\-keep {{file.ext}}\fR
+.RS
+.IP \(bu 2
+Compress a file specifying the output filename:
+.RE
+.PP
+\fB\fCgzip \-c {{file.ext}} > {{compressed_file.ext.gz}}\fR
+.RS
+.IP \(bu 2
+Decompress a gzipped file specifying the output filename:
+.RE
+.PP
+\fB\fCgzip \-c \-d {{file.ext}}.gz > {{uncompressed_file.ext}}\fR
+.RS
+.IP \(bu 2
+Specify the compression level. 1=Fastest (Worst), 9=Slowest (Best), Default level is 6:
+.RE
+.PP
+\fB\fCgzip \-9 \-c {{file.ext}} > {{compressed_file.ext.gz}}\fR

@@ -1,0 +1,25 @@
+.TH f3fix
+.PP
+.RS
+Edit the partition table of a fake flash drive.
+See also \fB\fCf3probe\fR, \fB\fCf3write\fR, \fB\fCf3read\fR\&.
+More information: \[la]http://oss.digirati.com.br/f3/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Fill a fake flash drive with a single partition that matches its real capacity:
+.RE
+.PP
+\fB\fCsudo f3fix {{/dev/device_name}}\fR
+.RS
+.IP \(bu 2
+Mark the partition as bootable:
+.RE
+.PP
+\fB\fCsudo f3fix \-\-boot {{/dev/device_name}}\fR
+.RS
+.IP \(bu 2
+Specify the filesystem:
+.RE
+.PP
+\fB\fCsudo f3fix \-\-fs\-type={{filesystem_type}} {{/dev/device_name}}\fR

@@ -1,0 +1,24 @@
+.TH silicon
+.PP
+.RS
+Create an image of source code.
+More information: \[la]https://github.com/Aloxaf/silicon\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an image from a specific source file:
+.RE
+.PP
+\fB\fCsilicon {{path/to/source_file}} \-\-output {{path/to/output_image}}\fR
+.RS
+.IP \(bu 2
+Generate an image from a source file with a specific programming language syntax highlighting (e.g. \fB\fCrust\fR, \fB\fCpy\fR, \fB\fCjs\fR, etc.):
+.RE
+.PP
+\fB\fCsilicon {{path/to/source_file}} \-\-output {{path/to/output_image}} \-\-language {{language|extension}}\fR
+.RS
+.IP \(bu 2
+Generate an image from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | silicon \-\-output {{path/to/output_image}}\fR

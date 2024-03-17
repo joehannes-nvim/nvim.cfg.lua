@@ -1,0 +1,54 @@
+.TH rmlint
+.PP
+.RS
+Find space waste and other broken things on your filesystem.
+More information: \[la]https://rmlint.readthedocs.io/en/latest/rmlint.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check directories for duplicated, empty and broken files:
+.RE
+.PP
+\fB\fCrmlint {{path/to/directory1 path/to/directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Check for space wasters, preferably keeping files in tagged directories (after the double slash):
+.RE
+.PP
+\fB\fCrmlint {{path/to/directory}} // {{path/to/original_directory}}\fR
+.RS
+.IP \(bu 2
+Check for space wasters, keeping everything in the untagged directories:
+.RE
+.PP
+\fB\fCrmlint \-\-keep\-all\-untagged {{path/to/directory}} // {{path/to/original_directory}}\fR
+.RS
+.IP \(bu 2
+Delete duplicate files found by an execution of \fB\fCrmlint\fR:
+.RE
+.PP
+\fB\fC\&./rmlint.sh\fR
+.RS
+.IP \(bu 2
+Find duplicate directory trees:
+.RE
+.PP
+\fB\fCrmlint \-\-merge\-directories {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Mark files at lower path [d]epth as originals, on tie choose shorter [l]ength:
+.RE
+.PP
+\fB\fCrmlint \-\-rank\-by={{dl}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Find only duplicates that have the same filename in addition to the same contents:
+.RE
+.PP
+\fB\fCrmlint \-\-match\-basename {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Find only duplicates that have the same extension in addition to the same contents:
+.RE
+.PP
+\fB\fCrmlint \-\-match\-extension {{path/to/directory}}\fR

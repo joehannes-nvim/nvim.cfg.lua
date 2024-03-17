@@ -1,0 +1,30 @@
+.TH kubectl rollout
+.PP
+.RS
+Manage the rollout of a Kubernetes resource (deployments, daemonsets, and statefulsets).
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a rolling restart of a resource:
+.RE
+.PP
+\fB\fCkubectl rollout restart {{resource_type}}/{{resource_name}}\fR
+.RS
+.IP \(bu 2
+Watch the rolling update status of a resource:
+.RE
+.PP
+\fB\fCkubectl rollout status {{resource_type}}/{{resource_name}}\fR
+.RS
+.IP \(bu 2
+Roll back a resource to the previous revision:
+.RE
+.PP
+\fB\fCkubectl rollout undo {{resource_type}}/{{resource_name}}\fR
+.RS
+.IP \(bu 2
+View the rollout history of a resource:
+.RE
+.PP
+\fB\fCkubectl rollout history {{resource_type}}/{{resource_name}}\fR

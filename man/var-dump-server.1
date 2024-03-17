@@ -1,0 +1,25 @@
+.TH var\-dump\-server
+.PP
+.RS
+Symfony dump server.
+Collects data dumped by the Symfony VarDumper component.
+More information: \[la]https://symfony.com/doc/current/components/var_dumper.html#the-dump-server\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the server:
+.RE
+.PP
+\fB\fCvar\-dump\-server\fR
+.RS
+.IP \(bu 2
+Dump the data in an HTML file:
+.RE
+.PP
+\fB\fCvar\-dump\-server \-\-format=html > {{path/to/file.html}}\fR
+.RS
+.IP \(bu 2
+Make the server listen on a specific address and port:
+.RE
+.PP
+\fB\fCvar\-dump\-server \-\-host {{127.0.0.1:9912}}\fR

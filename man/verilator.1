@@ -1,0 +1,30 @@
+.TH verilator
+.PP
+.RS
+Converts Verilog and SystemVerilog hardware description language (HDL) design into a C++ or SystemC model to be executed after compiling.
+More information: \[la]https://veripool.org/guide/latest/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a specific C project in the current directory:
+.RE
+.PP
+\fB\fCverilator \-\-binary \-\-build\-jobs 0 \-Wall {{path/to/source.v}}\fR
+.RS
+.IP \(bu 2
+Create a C++ executable in a specific folder:
+.RE
+.PP
+\fB\fCverilator \-\-cc \-\-exe \-\-build \-\-build\-jobs 0 \-Wall {{path/to/source.cpp}} {{path/to/output.v}}\fR
+.RS
+.IP \(bu 2
+Perform linting over a code in the current directory:
+.RE
+.PP
+\fB\fCverilator \-\-lint\-only \-Wall\fR
+.RS
+.IP \(bu 2
+Create XML output about the design (files, modules, instance hierarchy, logic and data types) to feed into other tools:
+.RE
+.PP
+\fB\fCverilator \-\-xml\-output \-Wall {{path/to/output.xml}}\fR

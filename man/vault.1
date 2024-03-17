@@ -1,0 +1,48 @@
+.TH vault
+.PP
+.RS
+Interact with HashiCorp Vault.
+More information: \[la]https://www.vaultproject.io/docs/commands\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a Vault server and initialize a new encrypted data store:
+.RE
+.PP
+\fB\fCvault init\fR
+.RS
+.IP \(bu 2
+Unseal (unlock) the vault, by providing one of the key shares needed to access the encrypted data store:
+.RE
+.PP
+\fB\fCvault unseal {{key\-share\-x}}\fR
+.RS
+.IP \(bu 2
+Authenticate the CLI client against the Vault server, using an authentication token:
+.RE
+.PP
+\fB\fCvault auth {{authentication_token}}\fR
+.RS
+.IP \(bu 2
+Store a new secret in the vault, using the generic back\-end called "secret":
+.RE
+.PP
+\fB\fCvault write secret/{{hello}} value={{world}}\fR
+.RS
+.IP \(bu 2
+Read a value from the vault, using the generic back\-end called "secret":
+.RE
+.PP
+\fB\fCvault read secret/{{hello}}\fR
+.RS
+.IP \(bu 2
+Read a specific field from the value:
+.RE
+.PP
+\fB\fCvault read \-field={{field_name}} secret/{{hello}}\fR
+.RS
+.IP \(bu 2
+Seal (lock) the Vault server, by removing the encryption key of the data store from memory:
+.RE
+.PP
+\fB\fCvault seal\fR

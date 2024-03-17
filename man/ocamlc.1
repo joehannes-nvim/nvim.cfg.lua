@@ -1,0 +1,25 @@
+.TH ocamlc
+.PP
+.RS
+The OCaml bytecode compiler.
+Produces executables runnable by the OCaml interpreter.
+More information: \[la]https://ocaml.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a binary from a source file:
+.RE
+.PP
+\fB\fCocamlc {{path/to/source_file.ml}}\fR
+.RS
+.IP \(bu 2
+Create a named binary from a source file:
+.RE
+.PP
+\fB\fCocamlc \-o {{path/to/binary}} {{path/to/source_file.ml}}\fR
+.RS
+.IP \(bu 2
+Automatically generate a module signature (interface) file:
+.RE
+.PP
+\fB\fCocamlc \-i {{path/to/source_file.ml}}\fR

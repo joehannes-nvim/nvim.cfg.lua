@@ -1,0 +1,43 @@
+.TH ansible\-doc
+.PP
+.RS
+Display information on modules installed in Ansible libraries.
+Display a terse listing of plugins and their short descriptions.
+More information: \[la]https://docs.ansible.com/ansible/latest/cli/ansible-doc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available action plugins (modules):
+.RE
+.PP
+\fB\fCansible\-doc \-\-list\fR
+.RS
+.IP \(bu 2
+List available plugins of a specific type:
+.RE
+.PP
+\fB\fCansible\-doc \-\-type {{become|cache|callback|cliconf|connection|...}} \-\-list\fR
+.RS
+.IP \(bu 2
+Show information about a specific action plugin (module):
+.RE
+.PP
+\fB\fCansible\-doc {{plugin_name}}\fR
+.RS
+.IP \(bu 2
+Show information about a plugin with a specific type:
+.RE
+.PP
+\fB\fCansible\-doc \-\-type {{become|cache|callback|cliconf|connection|...}} {{plugin_name}}\fR
+.RS
+.IP \(bu 2
+Show the playbook snippet for action plugin (modules):
+.RE
+.PP
+\fB\fCansible\-doc \-\-snippet {{plugin_name}}\fR
+.RS
+.IP \(bu 2
+Show information about an action plugin (module) as JSON:
+.RE
+.PP
+\fB\fCansible\-doc \-\-json {{plugin_name}}\fR

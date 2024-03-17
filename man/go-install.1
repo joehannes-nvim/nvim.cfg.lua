@@ -1,0 +1,30 @@
+.TH go install
+.PP
+.RS
+Compile and install packages named by the import paths.
+More information: \[la]https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile and install the current package:
+.RE
+.PP
+\fB\fCgo install\fR
+.RS
+.IP \(bu 2
+Compile and install a specific local package:
+.RE
+.PP
+\fB\fCgo install {{path/to/package}}\fR
+.RS
+.IP \(bu 2
+Install the latest version of a program, ignoring \fB\fCgo.mod\fR in the current directory:
+.RE
+.PP
+\fB\fCgo install {{golang.org/x/tools/gopls}}@{{latest}}\fR
+.RS
+.IP \(bu 2
+Install a program at the version selected by \fB\fCgo.mod\fR in the current directory:
+.RE
+.PP
+\fB\fCgo install {{golang.org/x/tools/gopls}}\fR

@@ -1,0 +1,54 @@
+.TH docker compose
+.PP
+.RS
+Run and manage multi container docker applications.
+More information: \[la]https://docs.docker.com/compose/reference/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all running containers:
+.RE
+.PP
+\fB\fCdocker compose ps\fR
+.RS
+.IP \(bu 2
+Create and start all containers in the background using a \fB\fCdocker\-compose.yml\fR file from the current directory:
+.RE
+.PP
+\fB\fCdocker compose up \-\-detach\fR
+.RS
+.IP \(bu 2
+Start all containers, rebuild if necessary:
+.RE
+.PP
+\fB\fCdocker compose up \-\-build\fR
+.RS
+.IP \(bu 2
+Start all containers by specifying a project name and using an alternate compose file:
+.RE
+.PP
+\fB\fCdocker compose \-p {{project_name}} \-\-file {{path/to/file}} up\fR
+.RS
+.IP \(bu 2
+Stop all running containers:
+.RE
+.PP
+\fB\fCdocker compose stop\fR
+.RS
+.IP \(bu 2
+Stop and remove all containers, networks, images, and volumes:
+.RE
+.PP
+\fB\fCdocker compose down \-\-rmi all \-\-volumes\fR
+.RS
+.IP \(bu 2
+Follow logs for all containers:
+.RE
+.PP
+\fB\fCdocker compose logs \-\-follow\fR
+.RS
+.IP \(bu 2
+Follow logs for a specific container:
+.RE
+.PP
+\fB\fCdocker compose logs \-\-follow {{container_name}}\fR

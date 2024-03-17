@@ -1,0 +1,19 @@
+.TH rage
+.PP
+.RS
+A simple, secure and modern file encryption tool (and Rust library) with small explicit keys, no config options, and UNIX\-style composability.
+Rust implementation of \fB\fCage\fR\&.
+More information: \[la]https://github.com/str4d/rage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encrypt a file for \fB\fCuser\fR and save it to \fB\fCmessage.age\fR:
+.RE
+.PP
+\fB\fCecho "{{Your secret message}}" | rage \-\-encrypt \-\-recipient {{user}} \-\-output {{path/to/message.age}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file with \fB\fCidentity_file\fR and save it to \fB\fCmessage\fR:
+.RE
+.PP
+\fB\fCrage \-\-decrypt \-\-identity {{path/to/identity_file}} \-\-output {{message}}\fR

@@ -1,0 +1,54 @@
+.TH skate
+.PP
+.RS
+Simple and powerful key\-value store.
+More information: \[la]https://github.com/charmbracelet/skate\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Store a key and a value on the default database:
+.RE
+.PP
+\fB\fCskate set "{{key}}" "{{value}}"\fR
+.RS
+.IP \(bu 2
+Show your keys saved on the default database:
+.RE
+.PP
+\fB\fCskate list\fR
+.RS
+.IP \(bu 2
+Delete key and value from the default database:
+.RE
+.PP
+\fB\fCskate delete "{{key}}"\fR
+.RS
+.IP \(bu 2
+Create a new key and value in a new database:
+.RE
+.PP
+\fB\fCskate set "{{key}}"@"{{database_name}}" "{{value}}"\fR
+.RS
+.IP \(bu 2
+Show your keys saved in a non default database:
+.RE
+.PP
+\fB\fCskate list @"{{database_name}}"\fR
+.RS
+.IP \(bu 2
+Delete key and value from a specific database:
+.RE
+.PP
+\fB\fCskate delete "{{key}}"@"{{database_name}}"\fR
+.RS
+.IP \(bu 2
+Show the databases available:
+.RE
+.PP
+\fB\fCskate list\-dbs\fR
+.RS
+.IP \(bu 2
+Delete local db and pull down fresh copy from Charm Cloud:
+.RE
+.PP
+\fB\fCskate reset @"{{database_name}}"\fR

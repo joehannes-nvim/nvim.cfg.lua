@@ -1,0 +1,31 @@
+.TH git am
+.PP
+.RS
+Apply patch files and create a commit. Useful when receiving commits via email.
+See also \fB\fCgit format\-patch\fR, which can generate patch files.
+More information: \[la]https://git-scm.com/docs/git-am\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply and commit changes following a local patch file:
+.RE
+.PP
+\fB\fCgit am {{path/to/file.patch}}\fR
+.RS
+.IP \(bu 2
+Apply and commit changes following a remote patch file:
+.RE
+.PP
+\fB\fCcurl \-L {{https://example.com/file.patch}} | git apply\fR
+.RS
+.IP \(bu 2
+Abort the process of applying a patch file:
+.RE
+.PP
+\fB\fCgit am \-\-abort\fR
+.RS
+.IP \(bu 2
+Apply as much of a patch file as possible, saving failed hunks to reject files:
+.RE
+.PP
+\fB\fCgit am \-\-reject {{path/to/file.patch}}\fR

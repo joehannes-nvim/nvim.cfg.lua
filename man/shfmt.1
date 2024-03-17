@@ -1,0 +1,30 @@
+.TH shfmt
+.PP
+.RS
+Shell parser, formatter and interpreter.
+More information: \[la]https://pkg.go.dev/mvdan.cc/sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a formatted version of a shell script:
+.RE
+.PP
+\fB\fCshfmt {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+List unformatted files:
+.RE
+.PP
+\fB\fCshfmt \-\-list {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Write the result to the file instead of printing it to the terminal:
+.RE
+.PP
+\fB\fCshfmt \-\-write {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Simplify the code, removing redundant pieces of syntax (i.e. removing "$" from vars in expressions):
+.RE
+.PP
+\fB\fCshfmt \-\-simplify {{path/to/file}}\fR

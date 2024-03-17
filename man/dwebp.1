@@ -1,0 +1,43 @@
+.TH dwebp
+.PP
+.RS
+\fB\fCdwebp\fR decompresses WebP files into PNG, PAM, PPM or PGM images.
+Animated WebP files are not supported.
+More information: \[la]https://developers.google.com/speed/webp/docs/dwebp/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file into a \fB\fCpng\fR file:
+.RE
+.PP
+\fB\fCdwebp {{path/to/input.webp}} \-o {{path/to/output.png}}\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file into a specific filetype:
+.RE
+.PP
+\fB\fCdwebp {{path/to/input.webp}} \-bmp|\-tiff|\-pam|\-ppm|\-pgm|\-yuv \-o {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file, using multi\-threading if possible:
+.RE
+.PP
+\fB\fCdwebp {{path/to/input.webp}} \-o {{path/to/output.png}} \-mt\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file, but also crop and scale at the same time:
+.RE
+.PP
+\fB\fCdwebp {{input.webp}} \-o {{output.png}} \-crop {{x_pos}} {{y_pos}} {{width}} {{height}} \-scale {{width}} {{height}}\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file and flip the output:
+.RE
+.PP
+\fB\fCdwebp {{path/to/input.webp}} \-o {{path/to/output.png}} \-flip\fR
+.RS
+.IP \(bu 2
+Convert a \fB\fCwebp\fR file and don't use in\-loop filtering to speed up the decoding process:
+.RE
+.PP
+\fB\fCdwebp {{path/to/input.webp}} \-o {{path/to/output.png}} \-nofilter\fR

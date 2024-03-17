@@ -1,0 +1,30 @@
+.TH opusenc
+.PP
+.RS
+Convert WAV or FLAC audio to Opus.
+More information: \[la]https://opus-codec.org/docs/opus-tools/opusenc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert WAV to Opus using default options:
+.RE
+.PP
+\fB\fCopusenc {{path/to/input.wav}} {{path/to/output}}.opus\fR
+.RS
+.IP \(bu 2
+Convert stereo audio at the highest quality level:
+.RE
+.PP
+\fB\fCopusenc \-\-bitrate {{512}} {{path/to/input.wav}} {{path/to/output}}.opus\fR
+.RS
+.IP \(bu 2
+Convert 5.1 surround sound audio at the highest quality level:
+.RE
+.PP
+\fB\fCopusenc \-\-bitrate {{1536}} {{path/to/input.flac}} {{path/to/output}}.opus\fR
+.RS
+.IP \(bu 2
+Convert speech audio at the lowest quality level:
+.RE
+.PP
+\fB\fCopusenc {{path/to/input.wav}} \-\-downmix\-mono \-\-bitrate {{6}} {{path/to/out}}.opus\fR

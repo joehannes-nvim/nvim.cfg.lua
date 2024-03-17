@@ -1,0 +1,30 @@
+.TH git submodule
+.PP
+.RS
+Inspects, updates and manages submodules.
+More information: \[la]https://git-scm.com/docs/git-submodule\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a repository's specified submodules:
+.RE
+.PP
+\fB\fCgit submodule update \-\-init \-\-recursive\fR
+.RS
+.IP \(bu 2
+Add a Git repository as a submodule:
+.RE
+.PP
+\fB\fCgit submodule add {{repository_url}}\fR
+.RS
+.IP \(bu 2
+Add a Git repository as a submodule at the specified directory:
+.RE
+.PP
+\fB\fCgit submodule add {{repository_url}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Update every submodule to its latest commit:
+.RE
+.PP
+\fB\fCgit submodule foreach git pull\fR

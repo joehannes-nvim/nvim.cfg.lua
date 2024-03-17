@@ -1,0 +1,37 @@
+.TH airdecap\-ng
+.PP
+.RS
+Decrypt a WEP, WPA or WPA2 encrypted capture file.
+Part of Aircrack\-ng network software suite.
+More information: \[la]https://www.aircrack-ng.org/doku.php?id=airdecap-ng\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove wireless headers from an open network capture file and use the access point's MAC address to filter:
+.RE
+.PP
+\fB\fCairdecap\-ng \-b {{ap_mac}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Decrypt a WEP encrypted capture file using the key in hex format:
+.RE
+.PP
+\fB\fCairdecap\-ng \-w {{hex_key}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Decrypt a WPA/WPA2 encrypted capture file using the access point's [e]ssid and [p]assword:
+.RE
+.PP
+\fB\fCairdecap\-ng \-e {{essid}} \-p {{password}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Decrypt a WPA/WPA2 encrypted capture file preserving the headers using the access point's [e]ssid and [p]assword:
+.RE
+.PP
+\fB\fCairdecap\-ng \-l \-e {{essid}} \-p {{password}} {{path/to/capture.cap}}\fR
+.RS
+.IP \(bu 2
+Decrypt a WPA/WPA2 encrypted capture file using the access point's [e]ssid and [p]assword and use its MAC address to filter:
+.RE
+.PP
+\fB\fCairdecap\-ng \-b {{ap_mac}} \-e {{essid}} \-p {{password}} {{path/to/capture.cap}}\fR

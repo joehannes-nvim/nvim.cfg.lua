@@ -1,0 +1,54 @@
+.TH fly
+.PP
+.RS
+Command\-line tool for concourse\-ci.
+More information: \[la]https://concourse-ci.org/fly.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authenticate with and save concourse target:
+.RE
+.PP
+\fB\fCfly \-\-target {{target_name}} login \-\-team\-name {{team_name}} \-c {{https://ci.example.com}}\fR
+.RS
+.IP \(bu 2
+List targets:
+.RE
+.PP
+\fB\fCfly targets\fR
+.RS
+.IP \(bu 2
+List pipelines:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} pipelines\fR
+.RS
+.IP \(bu 2
+Upload or update a pipeline:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} set\-pipeline \-\-config {{pipeline.yml}} \-\-pipeline {{pipeline_name}}\fR
+.RS
+.IP \(bu 2
+Unpause pipeline:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} unpause\-pipeline \-\-pipeline {{pipeline_name}}\fR
+.RS
+.IP \(bu 2
+Show pipeline configuration:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} get\-pipeline \-\-pipeline {{pipeline_name}}\fR
+.RS
+.IP \(bu 2
+Update local copy of fly:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} sync\fR
+.RS
+.IP \(bu 2
+Destroy pipeline:
+.RE
+.PP
+\fB\fCfly \-t {{target_name}} destroy\-pipeline \-\-pipeline {{pipeline_name}}\fR

@@ -1,0 +1,49 @@
+.TH gpg2
+.PP
+.RS
+GNU Privacy Guard 2.
+See \fB\fCgpg\fR for GNU Privacy Guard 1.
+More information: \[la]https://docs.releng.linuxfoundation.org/en/latest/gpg.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List imported keys:
+.RE
+.PP
+\fB\fCgpg2 \-\-list\-keys\fR
+.RS
+.IP \(bu 2
+Encrypt a specified file for a specified recipient, writing the output to a new file with \fB\fC\&.gpg\fR appended:
+.RE
+.PP
+\fB\fCgpg2 \-\-encrypt \-\-recipient {{alice@example.com}} {{path/to/doc.txt}}\fR
+.RS
+.IP \(bu 2
+Encrypt a specified file with only a passphrase, writing the output to a new file with \fB\fC\&.gpg\fR appended:
+.RE
+.PP
+\fB\fCgpg2 \-\-symmetric {{path/to/doc.txt}}\fR
+.RS
+.IP \(bu 2
+Decrypt a specified file, writing the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgpg2 \-\-decrypt {{path/to/doc.txt.gpg}}\fR
+.RS
+.IP \(bu 2
+Import a public key:
+.RE
+.PP
+\fB\fCgpg2 \-\-import {{path/to/public_key.gpg}}\fR
+.RS
+.IP \(bu 2
+Export the public key of a specified email address to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgpg2 \-\-export \-\-armor {{alice@example.com}}\fR
+.RS
+.IP \(bu 2
+Export the private key with a specified email address to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgpg2 \-\-export\-secret\-keys \-\-armor {{alice@example.com}}\fR

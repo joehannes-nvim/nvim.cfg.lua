@@ -1,0 +1,37 @@
+.TH idnits
+.PP
+.RS
+Check internet\-drafts for submission nits.
+Looks for violations of Section 2.1 and 2.2 of the requirements listed on \[la]https://www.ietf.org/id-info/checklist\[ra]\&.
+More information: \[la]https://tools.ietf.org/tools/idnits/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check a file for nits:
+.RE
+.PP
+\fB\fCidnits {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Count nits without displaying them:
+.RE
+.PP
+\fB\fCidnits \-\-nitcount {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Show extra information about offending lines:
+.RE
+.PP
+\fB\fCidnits \-\-verbose {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Expect the specified year in the boilerplate instead of the current year:
+.RE
+.PP
+\fB\fCidnits \-\-year {{2021}} {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Assume the document is of the specified status:
+.RE
+.PP
+\fB\fCidnits \-\-doctype {{standard|informational|experimental|bcp|ps|ds}} {{path/to/file.txt}}\fR

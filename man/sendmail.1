@@ -1,0 +1,24 @@
+.TH sendmail
+.PP
+.RS
+Send email.
+More information: \[la]https://manned.org/sendmail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a message with the content of \fB\fCmessage.txt\fR to the mail directory of local user \fB\fCusername\fR:
+.RE
+.PP
+\fB\fCsendmail {{username}} < {{message.txt}}\fR
+.RS
+.IP \(bu 2
+Send an email from \[la]you@yourdomain.com\[ra] (assuming the mail server is configured for this) to \[la]test@gmail.com\[ra] containing the message in \fB\fCmessage.txt\fR:
+.RE
+.PP
+\fB\fCsendmail \-f {{you@yourdomain.com}} {{test@gmail.com}} < {{message.txt}}\fR
+.RS
+.IP \(bu 2
+Send an email from \[la]you@yourdomain.com\[ra] (assuming the mail server is configured for this) to \[la]test@gmail.com\[ra] containing the file \fB\fCfile.zip\fR:
+.RE
+.PP
+\fB\fCsendmail \-f {{you@yourdomain.com}} {{test@gmail.com}} < {{file.zip}}\fR

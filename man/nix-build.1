@@ -1,0 +1,19 @@
+.TH nix\-build
+.PP
+.RS
+Build a Nix expression.
+See also: \fB\fCtldr nix3 build\fR\&.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/nix-build.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a Nix expression:
+.RE
+.PP
+\fB\fCnix\-build '<nixpkgs>' \-\-attr {{firefox}}\fR
+.RS
+.IP \(bu 2
+Build a sandboxed Nix expression (on non\-NixOS):
+.RE
+.PP
+\fB\fCnix\-build '<nixpkgs>' \-\-attr {{firefox}} \-\-option sandbox true\fR

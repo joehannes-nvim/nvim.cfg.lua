@@ -1,0 +1,37 @@
+.TH qemu
+.PP
+.RS
+Generic machine emulator and virtualizer.
+Supports a large variety of CPU architectures.
+More information: \[la]https://www.qemu.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Boot from image emulating i386 architecture:
+.RE
+.PP
+\fB\fCqemu\-system\-i386 \-hda {{image_name.img}}\fR
+.RS
+.IP \(bu 2
+Boot from image emulating x64 architecture:
+.RE
+.PP
+\fB\fCqemu\-system\-x86_64 \-hda {{image_name.img}}\fR
+.RS
+.IP \(bu 2
+Boot QEMU instance with a live ISO image:
+.RE
+.PP
+\fB\fCqemu\-system\-i386 \-hda {{image_name.img}} \-cdrom {{os_image.iso}} \-boot d\fR
+.RS
+.IP \(bu 2
+Specify amount of RAM for instance:
+.RE
+.PP
+\fB\fCqemu\-system\-i386 \-m 256 \-hda image_name.img \-cdrom os\-image.iso \-boot d\fR
+.RS
+.IP \(bu 2
+Boot from physical device (e.g. from USB to test bootable medium):
+.RE
+.PP
+\fB\fCqemu\-system\-i386 \-hda /dev/{{storage_device}}\fR

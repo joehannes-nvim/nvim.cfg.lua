@@ -1,0 +1,30 @@
+.TH pdfimages
+.PP
+.RS
+Utility for extracting images from PDFs.
+More information: \[la]https://manned.org/pdfimages\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract all images from a PDF file and save them as PNGs:
+.RE
+.PP
+\fB\fCpdfimages \-png {{path/to/file.pdf}} {{filename_prefix}}\fR
+.RS
+.IP \(bu 2
+Extract images from pages 3 to 5:
+.RE
+.PP
+\fB\fCpdfimages \-f {{3}} \-l {{5}} {{path/to/file.pdf}} {{filename_prefix}}\fR
+.RS
+.IP \(bu 2
+Extract images from a PDF file and include the page number in the output filenames:
+.RE
+.PP
+\fB\fCpdfimages \-p {{path/to/file.pdf}} {{filename_prefix}}\fR
+.RS
+.IP \(bu 2
+List information about all the images in a PDF file:
+.RE
+.PP
+\fB\fCpdfimages \-list {{path/to/file.pdf}}\fR

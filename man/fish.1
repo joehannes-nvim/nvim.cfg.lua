@@ -1,0 +1,54 @@
+.TH fish
+.PP
+.RS
+The Friendly Interactive SHell, a command\-line interpreter designed to be user friendly.
+More information: \[la]https://fishshell.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCfish\fR
+.RS
+.IP \(bu 2
+Start an interactive shell session without loading startup configs:
+.RE
+.PP
+\fB\fCfish \-\-no\-config\fR
+.RS
+.IP \(bu 2
+Execute specific commands:
+.RE
+.PP
+\fB\fCfish \-\-command "{{echo 'fish is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCfish {{path/to/script.fish}}\fR
+.RS
+.IP \(bu 2
+Check a specific script for syntax errors:
+.RE
+.PP
+\fB\fCfish \-\-no\-execute {{path/to/script.fish}}\fR
+.RS
+.IP \(bu 2
+Execute specific commands from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{echo "echo 'fish is executed'"}} | fish\fR
+.RS
+.IP \(bu 2
+Start an interactive shell session in private mode, where the shell does not access old history or save new history:
+.RE
+.PP
+\fB\fCfish \-\-private\fR
+.RS
+.IP \(bu 2
+Define and export an environmental variable that persists across shell restarts (builtin):
+.RE
+.PP
+\fB\fCset \-\-universal \-\-export {{variable_name}} {{variable_value}}\fR

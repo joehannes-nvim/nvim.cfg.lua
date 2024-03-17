@@ -1,0 +1,30 @@
+.TH ts
+.PP
+.RS
+Add timestamps to every line from \fB\fCstdin\fR\&.
+More information: \[la]https://joeyh.name/code/moreutils/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a timestamp to the beginning of each line:
+.RE
+.PP
+\fB\fC{{command}} | ts\fR
+.RS
+.IP \(bu 2
+Add timestamps with microsecond precision:
+.RE
+.PP
+\fB\fC{{command}} | ts "{{%b %d %H:%M:%.S}}"\fR
+.RS
+.IP \(bu 2
+Add [i]ncremental timestamps with microsecond precision, starting from zero:
+.RE
+.PP
+\fB\fC{{command}} | ts \-i "{{%H:%M:%.S}}"\fR
+.RS
+.IP \(bu 2
+Convert existing timestamps in a text file (eg. a log file) into [r]elative format:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | ts \-r\fR

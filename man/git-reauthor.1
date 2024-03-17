@@ -1,0 +1,25 @@
+.TH git reauthor
+.PP
+.RS
+Change details about an author identity. Since this command rewrites the Git history, \fB\fC\-\-force\fR will be needed when pushing next time.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-reauthor\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Change an author's email and name across the whole Git repository:
+.RE
+.PP
+\fB\fCgit reauthor \-\-old\-email {{old@example.com}} \-\-correct\-email {{new@example.com}} \-\-correct\-name "{{name}}"\fR
+.RS
+.IP \(bu 2
+Change the email and name to the ones defined in the Git config:
+.RE
+.PP
+\fB\fCgit reauthor \-\-old\-email {{old@example.com}} \-\-use\-config\fR
+.RS
+.IP \(bu 2
+Change the email and name of all commits, regardless of their original author:
+.RE
+.PP
+\fB\fCgit reauthor \-\-all \-\-correct\-email {{name@example.com}} \-\-correct\-name {{name}}\fR

@@ -1,0 +1,42 @@
+.TH pigz
+.PP
+.RS
+Multithreaded zlib compression utility.
+More information: \[la]https://github.com/madler/pigz\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file with default options:
+.RE
+.PP
+\fB\fCpigz {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compress a file using the best compression method:
+.RE
+.PP
+\fB\fCpigz \-9 {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compress a file using no compression and 4 processors:
+.RE
+.PP
+\fB\fCpigz \-0 \-p{{4}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compress a directory using tar:
+.RE
+.PP
+\fB\fCtar cf \- {{path/to/directory}} | pigz > {{path/to/file}}.tar.gz\fR
+.RS
+.IP \(bu 2
+Decompress a file:
+.RE
+.PP
+\fB\fCpigz \-d {{archive.gz}}\fR
+.RS
+.IP \(bu 2
+List the contents of an archive:
+.RE
+.PP
+\fB\fCpigz \-l {{archive.tar.gz}}\fR

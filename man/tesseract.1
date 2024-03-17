@@ -1,0 +1,36 @@
+.TH tesseract
+.PP
+.RS
+OCR (Optical Character Recognition) engine.
+More information: \[la]https://github.com/tesseract-ocr/tesseract\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recognize text in an image and save it to \fB\fCoutput.txt\fR (the \fB\fC\&.txt\fR extension is added automatically):
+.RE
+.PP
+\fB\fCtesseract {{image.png}} {{output}}\fR
+.RS
+.IP \(bu 2
+Specify a custom language (default is English) with an ISO 639\-2 code (e.g. deu = Deutsch = German):
+.RE
+.PP
+\fB\fCtesseract \-l deu {{image.png}} {{output}}\fR
+.RS
+.IP \(bu 2
+List the ISO 639\-2 codes of available languages:
+.RE
+.PP
+\fB\fCtesseract \-\-list\-langs\fR
+.RS
+.IP \(bu 2
+Specify a custom page segmentation mode (default is 3):
+.RE
+.PP
+\fB\fCtesseract \-psm {{0_to_10}} {{image.png}} {{output}}\fR
+.RS
+.IP \(bu 2
+List page segmentation modes and their descriptions:
+.RE
+.PP
+\fB\fCtesseract \-\-help\-psm\fR

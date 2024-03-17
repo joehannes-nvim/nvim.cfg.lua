@@ -1,0 +1,42 @@
+.TH pipx
+.PP
+.RS
+Install and run Python applications in isolated environments.
+More information: \[la]https://github.com/pypa/pipx\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run an app in a temporary virtual environment:
+.RE
+.PP
+\fB\fCpipx run {{pycowsay}} {{moo}}\fR
+.RS
+.IP \(bu 2
+Install a package in a virtual environment and add entry points to path:
+.RE
+.PP
+\fB\fCpipx install {{package}}\fR
+.RS
+.IP \(bu 2
+List installed packages:
+.RE
+.PP
+\fB\fCpipx list\fR
+.RS
+.IP \(bu 2
+Run an app in a temporary virtual environment with a package name different from the executable:
+.RE
+.PP
+\fB\fCpipx run \-\-spec {{httpx\-cli}} {{httpx}} {{http://www.github.com}}\fR
+.RS
+.IP \(bu 2
+Inject dependencies into an existing virtual environment:
+.RE
+.PP
+\fB\fCpipx inject {{package}} {{dependency1 dependency2 ...}}\fR
+.RS
+.IP \(bu 2
+Install a package in a virtual environment with pip arguments:
+.RE
+.PP
+\fB\fCpipx install \-\-pip\-args='{{pip\-args}}' {{package}}\fR

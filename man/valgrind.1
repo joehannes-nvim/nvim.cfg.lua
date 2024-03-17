@@ -1,0 +1,31 @@
+.TH valgrind
+.PP
+.RS
+Wrapper for a set of expert tools for profiling, optimizing and debugging programs.
+Commonly used tools include \fB\fCmemcheck\fR, \fB\fCcachegrind\fR, \fB\fCcallgrind\fR, \fB\fCmassif\fR, \fB\fChelgrind\fR, and \fB\fCdrd\fR\&.
+More information: \[la]http://www.valgrind.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use the (default) Memcheck tool to show a diagnostic of memory usage by \fB\fCprogram\fR:
+.RE
+.PP
+\fB\fCvalgrind {{program}}\fR
+.RS
+.IP \(bu 2
+Use Memcheck to report all possible memory leaks of \fB\fCprogram\fR in full detail:
+.RE
+.PP
+\fB\fCvalgrind \-\-leak\-check=full \-\-show\-leak\-kinds=all {{program}}\fR
+.RS
+.IP \(bu 2
+Use the Cachegrind tool to profile and log CPU cache operations of \fB\fCprogram\fR:
+.RE
+.PP
+\fB\fCvalgrind \-\-tool=cachegrind {{program}}\fR
+.RS
+.IP \(bu 2
+Use the Massif tool to profile and log heap memory and stack usage of \fB\fCprogram\fR:
+.RE
+.PP
+\fB\fCvalgrind \-\-tool=massif \-\-stacks=yes {{program}}\fR

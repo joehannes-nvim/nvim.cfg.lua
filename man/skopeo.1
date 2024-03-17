@@ -1,0 +1,43 @@
+.TH skopeo
+.PP
+.RS
+Container image management toolbox.
+Provides various utility commands to manage remote container images.
+More information: \[la]https://github.com/containers/skopeo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Inspect a remote image from a registry:
+.RE
+.PP
+\fB\fCskopeo inspect docker://{{registry_hostname}}/{{image:tag}}\fR
+.RS
+.IP \(bu 2
+List available tags for a remote image:
+.RE
+.PP
+\fB\fCskopeo list\-tags docker://{{registry_hostname}}/{{image}}\fR
+.RS
+.IP \(bu 2
+Download an image from a registry:
+.RE
+.PP
+\fB\fCskopeo copy docker://{{registry_hostname}}/{{image:tag}} dir:{{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Copy an image from one registry to another:
+.RE
+.PP
+\fB\fCskopeo copy docker://{{source_registry}}/{{image:tag}} docker://{{destination_registry}}/{{image:tag}}\fR
+.RS
+.IP \(bu 2
+Delete an image from a registry:
+.RE
+.PP
+\fB\fCskopeo delete docker://{{registry_hostname}}/{{image:tag}}\fR
+.RS
+.IP \(bu 2
+Log in to a registry:
+.RE
+.PP
+\fB\fCskopeo login \-\-username {{username}} {{registry_hostname}}\fR

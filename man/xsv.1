@@ -1,0 +1,42 @@
+.TH xsv
+.PP
+.RS
+A CSV command\-line toolkit written in Rust.
+More information: \[la]https://github.com/BurntSushi/xsv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Inspect the headers of a file:
+.RE
+.PP
+\fB\fCxsv headers {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Count the number of entries:
+.RE
+.PP
+\fB\fCxsv count {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Get an overview of the shape of entries:
+.RE
+.PP
+\fB\fCxsv stats {{path/to/file.csv}} | xsv table\fR
+.RS
+.IP \(bu 2
+Select a few columns:
+.RE
+.PP
+\fB\fCxsv select {{column_a,column_b}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Show 10 random entries:
+.RE
+.PP
+\fB\fCxsv sample {{10}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Join a column from one file to another:
+.RE
+.PP
+\fB\fCxsv join \-\-no\-case {{column_a}} {{path/to/file/a.csv}} {{column_b}} {{path/to/file/b.csv}} | xsv table\fR

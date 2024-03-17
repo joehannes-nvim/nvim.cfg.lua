@@ -1,0 +1,36 @@
+.TH chown
+.PP
+.RS
+Change user and group ownership of files and directories.
+More information: \[la]https://www.gnu.org/software/coreutils/chown\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Change the owner user of a file/directory:
+.RE
+.PP
+\fB\fCchown {{user}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Change the owner user and group of a file/directory:
+.RE
+.PP
+\fB\fCchown {{user}}:{{group}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Recursively change the owner of a directory and its contents:
+.RE
+.PP
+\fB\fCchown \-R {{user}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Change the owner of a symbolic link:
+.RE
+.PP
+\fB\fCchown \-h {{user}} {{path/to/symlink}}\fR
+.RS
+.IP \(bu 2
+Change the owner of a file/directory to match a reference file:
+.RE
+.PP
+\fB\fCchown \-\-reference={{path/to/reference_file}} {{path/to/file_or_directory}}\fR

@@ -1,0 +1,42 @@
+.TH aws kinesis
+.PP
+.RS
+Official AWS CLI for Amazon Kinesis streaming data services.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/kinesis/index.html#cli-aws-kinesis\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all streams in the account:
+.RE
+.PP
+\fB\fCaws kinesis list\-streams\fR
+.RS
+.IP \(bu 2
+Write one record to a Kinesis stream:
+.RE
+.PP
+\fB\fCaws kinesis put\-record \-\-stream\-name {{name}} \-\-partition\-key {{key}} \-\-data {{base64_encoded_message}}\fR
+.RS
+.IP \(bu 2
+Write a record to a Kinesis stream with inline base64 encoding:
+.RE
+.PP
+\fB\fCaws kinesis put\-record \-\-stream\-name {{name}} \-\-partition\-key {{key}} \-\-data "$( echo "{{my raw message}}" | base64 )"\fR
+.RS
+.IP \(bu 2
+List the shards available on a stream:
+.RE
+.PP
+\fB\fCaws kinesis list\-shards \-\-stream\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Get a shard iterator for reading from the oldest message in a stream's shard:
+.RE
+.PP
+\fB\fCaws kinesis get\-shard\-iterator \-\-shard\-iterator\-type TRIM_HORIZON \-\-stream\-name {{name}} \-\-shard\-id {{id}}\fR
+.RS
+.IP \(bu 2
+Read records from a shard, using a shard iterator:
+.RE
+.PP
+\fB\fCaws kinesis get\-records \-\-shard\-iterator {{iterator}}\fR

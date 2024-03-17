@@ -1,0 +1,30 @@
+.TH gnuplot
+.PP
+.RS
+A graph plotter that outputs in several formats.
+More information: \[la]http://www.gnuplot.info/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the interactive graph plotting shell:
+.RE
+.PP
+\fB\fCgnuplot\fR
+.RS
+.IP \(bu 2
+Plot the graph for the specified graph definition file:
+.RE
+.PP
+\fB\fCgnuplot {{path/to/definition.plt}}\fR
+.RS
+.IP \(bu 2
+Set the output format by executing a command before loading the definition file:
+.RE
+.PP
+\fB\fCgnuplot \-e "{{set output "path/to/filename.png" size 1024,768}}" {{path/to/definition.plt}}\fR
+.RS
+.IP \(bu 2
+Persist the graph plot preview window after gnuplot exits:
+.RE
+.PP
+\fB\fCgnuplot \-\-persist {{path/to/definition.plt}}\fR

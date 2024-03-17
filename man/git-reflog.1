@@ -1,0 +1,24 @@
+.TH git reflog
+.PP
+.RS
+Show a log of changes to local references like HEAD, branches or tags.
+More information: \[la]https://git-scm.com/docs/git-reflog\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the reflog for HEAD:
+.RE
+.PP
+\fB\fCgit reflog\fR
+.RS
+.IP \(bu 2
+Show the reflog for a given branch:
+.RE
+.PP
+\fB\fCgit reflog {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Show only the 5 latest entries in the reflog:
+.RE
+.PP
+\fB\fCgit reflog \-n {{5}}\fR

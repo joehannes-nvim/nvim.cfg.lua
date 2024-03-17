@@ -1,0 +1,30 @@
+.TH gallery\-dl
+.PP
+.RS
+Download image galleries and collections from several image hosting sites.
+More information: \[la]https://github.com/mikf/gallery-dl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download images from the specified URL:
+.RE
+.PP
+\fB\fCgallery\-dl "{{url}}"\fR
+.RS
+.IP \(bu 2
+Retrieve pre\-existing cookies from your web browser (useful for sites that require login):
+.RE
+.PP
+\fB\fCgallery\-dl \-\-cookies\-from\-browser {{browser}} "{{url}}"\fR
+.RS
+.IP \(bu 2
+Get the direct URL of an image from a site supporting authentication with username and password:
+.RE
+.PP
+\fB\fCgallery\-dl \-\-get\-urls \-\-username {{username}} \-\-password {{password}} "{{url}}"\fR
+.RS
+.IP \(bu 2
+Filter manga chapters by chapter number and language:
+.RE
+.PP
+\fB\fCgallery\-dl \-\-chapter\-filter "{{10 <= chapter < 20}}" \-\-option "lang={{language_code}}" "{{url}}"\fR

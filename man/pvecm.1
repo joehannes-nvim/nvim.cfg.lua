@@ -1,0 +1,48 @@
+.TH pvecm
+.PP
+.RS
+Proxmox VE Cluster Manager.
+More information: \[la]https://pve.proxmox.com/pve-docs/pvecm.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add the current node to an existing cluster:
+.RE
+.PP
+\fB\fCpvecm add {{hostname_or_ip}}\fR
+.RS
+.IP \(bu 2
+Add a node to the cluster configuration (internal use):
+.RE
+.PP
+\fB\fCpvecm addnode {{node}}\fR
+.RS
+.IP \(bu 2
+Return the version of the cluster join API available on this node:
+.RE
+.PP
+\fB\fCpvecm apiver\fR
+.RS
+.IP \(bu 2
+Generate new cluster configuration:
+.RE
+.PP
+\fB\fCpvecm create {{clustername}}\fR
+.RS
+.IP \(bu 2
+Remove a node from the cluster configuration:
+.RE
+.PP
+\fB\fCpvecm delnode {{node}}\fR
+.RS
+.IP \(bu 2
+Display the local view of the cluster nodes:
+.RE
+.PP
+\fB\fCpvecm nodes\fR
+.RS
+.IP \(bu 2
+Display the local view of the cluster status:
+.RE
+.PP
+\fB\fCpvecm status\fR

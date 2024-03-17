@@ -1,0 +1,24 @@
+.TH route
+.PP
+.RS
+Use route cmd to set the route table.
+More information: \[la]https://manned.org/route\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the information of route table:
+.RE
+.PP
+\fB\fCroute \-n\fR
+.RS
+.IP \(bu 2
+Add route rule:
+.RE
+.PP
+\fB\fCsudo route add \-net {{ip_address}} netmask {{netmask_address}} gw {{gw_address}}\fR
+.RS
+.IP \(bu 2
+Delete route rule:
+.RE
+.PP
+\fB\fCsudo route del \-net {{ip_address}} netmask {{netmask_address}} dev {{gw_address}}\fR

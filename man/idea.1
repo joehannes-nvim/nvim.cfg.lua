@@ -1,0 +1,36 @@
+.TH idea
+.PP
+.RS
+JetBrains Java and Kotlin IDE.
+More information: \[la]https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open the current directory in IntelliJ IDEA:
+.RE
+.PP
+\fB\fCidea {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Open a specific file or directory in IntelliJ IDEA:
+.RE
+.PP
+\fB\fCidea {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Open the diff viewer to compare up to 3 files:
+.RE
+.PP
+\fB\fCidea diff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Open the merge dialog to perform a two\-way file merge:
+.RE
+.PP
+\fB\fCidea merge {{path/to/file1}} {{path/to/file2}} {{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Run code inspections on a project:
+.RE
+.PP
+\fB\fCidea inspect {{path/to/project_directory}} {{path/to/inspection_profile}} {{path/to/output}}\fR

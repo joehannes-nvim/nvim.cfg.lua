@@ -1,0 +1,24 @@
+.TH gitwatch
+.PP
+.RS
+Automatically commit file or directory changes to a git repository.
+More information: \[la]https://github.com/gitwatch/gitwatch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Automatically commit any changes made to a file or directory:
+.RE
+.PP
+\fB\fCgitwatch {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Automatically commit changes and push them to a remote repository:
+.RE
+.PP
+\fB\fCgitwatch \-r {{remote_name}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Automatically commit changes and push them to a specific branch of a remote repository:
+.RE
+.PP
+\fB\fCgitwatch \-r {{remote_name}} \-b {{branch_name}} {{path/to/file_or_directory}}\fR

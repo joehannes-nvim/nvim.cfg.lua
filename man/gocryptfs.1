@@ -1,0 +1,36 @@
+.TH gocryptfs
+.PP
+.RS
+Encrypted overlay filesystem written in Go.
+More information: \[la]https://github.com/rfjakob/gocryptfs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize an encrypted filesystem:
+.RE
+.PP
+\fB\fCgocryptfs \-init {{path/to/cipher_dir}}\fR
+.RS
+.IP \(bu 2
+Mount an encrypted filesystem:
+.RE
+.PP
+\fB\fCgocryptfs {{path/to/cipher_dir}} {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Mount with the explicit master key instead of password:
+.RE
+.PP
+\fB\fCgocryptfs \-\-masterkey {{path/to/cipher_dir}} {{path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Change the password:
+.RE
+.PP
+\fB\fCgocryptfs \-\-passwd {{path/to/cipher_dir}}\fR
+.RS
+.IP \(bu 2
+Make an encrypted snapshot of a plain directory:
+.RE
+.PP
+\fB\fCgocryptfs \-\-reverse {{path/to/plain_dir}} {{path/to/cipher_dir}}\fR

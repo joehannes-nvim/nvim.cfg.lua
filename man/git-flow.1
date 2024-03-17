@@ -1,0 +1,36 @@
+.TH git flow
+.PP
+.RS
+A collection of Git extensions to provide high\-level repository operations.
+More information: \[la]https://github.com/nvie/gitflow\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize it inside an existing Git repository:
+.RE
+.PP
+\fB\fCgit flow init\fR
+.RS
+.IP \(bu 2
+Start developing on a feature branch based on \fB\fCdevelop\fR:
+.RE
+.PP
+\fB\fCgit flow feature start {{feature}}\fR
+.RS
+.IP \(bu 2
+Finish development on a feature branch, merging it into the \fB\fCdevelop\fR branch and deleting it:
+.RE
+.PP
+\fB\fCgit flow feature finish {{feature}}\fR
+.RS
+.IP \(bu 2
+Publish a feature to the remote server:
+.RE
+.PP
+\fB\fCgit flow feature publish {{feature}}\fR
+.RS
+.IP \(bu 2
+Get a feature published by another user:
+.RE
+.PP
+\fB\fCgit flow feature pull origin {{feature}}\fR

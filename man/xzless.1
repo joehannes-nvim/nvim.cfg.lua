@@ -1,0 +1,25 @@
+.TH xzless
+.PP
+.RS
+Display text from \fB\fCxz\fR and \fB\fClzma\fR compressed files.
+See also: \fB\fCless\fR\&.
+More information: \[la]https://manned.org/xzless\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View a compressed file:
+.RE
+.PP
+\fB\fCxzless {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+View a compressed file and display line numbers:
+.RE
+.PP
+\fB\fCxzless \-\-LINE\-NUMBERS {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+View a compressed file and quit if the entire file can be displayed on the first screen:
+.RE
+.PP
+\fB\fCxzless \-\-quit\-if\-one\-screen {{path/to/file}}\fR

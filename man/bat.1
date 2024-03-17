@@ -1,0 +1,43 @@
+.TH bat
+.PP
+.RS
+Print and concatenate files.
+A \fB\fCcat\fR clone with syntax highlighting and Git integration.
+More information: \[la]https://github.com/sharkdp/bat\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the contents of a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbat {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Concatenate several files into the target file:
+.RE
+.PP
+\fB\fCbat {{file1}} {{file2}} > {{target_file}}\fR
+.RS
+.IP \(bu 2
+Append several files into the target file:
+.RE
+.PP
+\fB\fCbat {{file1}} {{file2}} >> {{target_file}}\fR
+.RS
+.IP \(bu 2
+Number all output lines:
+.RE
+.PP
+\fB\fCbat \-\-number {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Syntax highlight a JSON file:
+.RE
+.PP
+\fB\fCbat \-\-language json {{file.json}}\fR
+.RS
+.IP \(bu 2
+Display all supported languages:
+.RE
+.PP
+\fB\fCbat \-\-list\-languages\fR

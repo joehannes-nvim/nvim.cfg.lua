@@ -1,0 +1,36 @@
+.TH you\-get
+.PP
+.RS
+Download media contents (videos, audios, images) from the Web.
+More information: \[la]https://you-get.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print media information about a specific media on the web:
+.RE
+.PP
+\fB\fCyou\-get \-\-info {{https://example.com/video?id=value}}\fR
+.RS
+.IP \(bu 2
+Download a media from a specific URL:
+.RE
+.PP
+\fB\fCyou\-get {{https://example.com/video?id=value}}\fR
+.RS
+.IP \(bu 2
+Search on Google Videos and download:
+.RE
+.PP
+\fB\fCyou\-get {{keywords}}\fR
+.RS
+.IP \(bu 2
+Download a media to a specific location:
+.RE
+.PP
+\fB\fCyou\-get \-\-output\-dir {{path/to/directory}} \-\-output\-filename {{filename}} {{https://example.com/watch?v=value}}\fR
+.RS
+.IP \(bu 2
+Download a media using a proxy:
+.RE
+.PP
+\fB\fCyou\-get \-\-http\-proxy {{proxy_server}} {{https://example.com/watch?v=value}}\fR

@@ -1,0 +1,42 @@
+.TH docker images
+.PP
+.RS
+Manage Docker images.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/images/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all Docker images:
+.RE
+.PP
+\fB\fCdocker images\fR
+.RS
+.IP \(bu 2
+List all Docker images including intermediates:
+.RE
+.PP
+\fB\fCdocker images \-\-all\fR
+.RS
+.IP \(bu 2
+List the output in quiet mode (only numeric IDs):
+.RE
+.PP
+\fB\fCdocker images \-\-quiet\fR
+.RS
+.IP \(bu 2
+List all Docker images not used by any container:
+.RE
+.PP
+\fB\fCdocker images \-\-filter dangling=true\fR
+.RS
+.IP \(bu 2
+List images that contain a substring in their name:
+.RE
+.PP
+\fB\fCdocker images "{{*name*}}"\fR
+.RS
+.IP \(bu 2
+Sort images by size:
+.RE
+.PP
+\fB\fCdocker images \-\-format "{{.ID}}\\t{{.Size}}\\t{{.Repository}}:{{.Tag}}" | sort \-k 2 \-h\fR

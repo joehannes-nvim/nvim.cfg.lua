@@ -1,0 +1,30 @@
+.TH pyinfra
+.PP
+.RS
+Automates infrastructure at a large scale.
+More information: \[la]https://docs.pyinfra.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute a command over SSH:
+.RE
+.PP
+\fB\fCpyinfra {{target_ip_address}} exec \-\- {{command_name_and_arguments}}\fR
+.RS
+.IP \(bu 2
+Execute contents of a deploy file on a list of targets:
+.RE
+.PP
+\fB\fCpyinfra {{path/to/target_list.py}} {{path/to/deploy.py}}\fR
+.RS
+.IP \(bu 2
+Execute commands on locally:
+.RE
+.PP
+\fB\fCpyinfra @local {{path/to/deploy.py}}\fR
+.RS
+.IP \(bu 2
+Execute commands over Docker:
+.RE
+.PP
+\fB\fCpyinfra @docker/{{container}} {{path/to/deploy.py}}\fR

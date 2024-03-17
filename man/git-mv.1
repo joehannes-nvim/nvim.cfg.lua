@@ -1,0 +1,24 @@
+.TH git mv
+.PP
+.RS
+Move or rename files and update the Git index.
+More information: \[la]https://git-scm.com/docs/git-mv\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Move a file inside the repo and add the movement to the next commit:
+.RE
+.PP
+\fB\fCgit mv {{path/to/file}} {{new/path/to/file}}\fR
+.RS
+.IP \(bu 2
+Rename a file or directory and add the renaming to the next commit:
+.RE
+.PP
+\fB\fCgit mv {{path/to/file_or_directory}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Overwrite the file or directory in the target path if it exists:
+.RE
+.PP
+\fB\fCgit mv \-\-force {{path/to/file_or_directory}} {{path/to/destination}}\fR

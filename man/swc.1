@@ -1,0 +1,42 @@
+.TH swc
+.PP
+.RS
+JavaScript and TypeScript compiler written in Rust.
+More information: \[la]https://swc.rs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transpile a specified input file and output to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCswc {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Transpile the input file every time it is changed:
+.RE
+.PP
+\fB\fCswc {{path/to/file}} \-\-watch\fR
+.RS
+.IP \(bu 2
+Transpile a specified input file and output to a specific file:
+.RE
+.PP
+\fB\fCswc {{path/to/input_file}} \-\-out\-file {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Transpile a specified input directory and output to a specific directory:
+.RE
+.PP
+\fB\fCswc {{path/to/input_directory}} \-\-out\-dir {{path/to/output_directory}}\fR
+.RS
+.IP \(bu 2
+Transpile a specified input directory using a specific configuration file:
+.RE
+.PP
+\fB\fCswc {{path/to/input_directory}} \-\-config\-file {{path/to/.swcrc}}\fR
+.RS
+.IP \(bu 2
+Ignore files in a directory specified using glob path:
+.RE
+.PP
+\fB\fCswc {{path/to/input_directory}} \-\-ignore {{ignored_files}}\fR

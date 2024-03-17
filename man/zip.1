@@ -1,0 +1,49 @@
+.TH zip
+.PP
+.RS
+Package and compress (archive) files into zip file.
+See also: \fB\fCunzip\fR\&.
+More information: \[la]https://manned.org/zip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add files/directories to a specific archive ([r]ecursively):
+.RE
+.PP
+\fB\fCzip \-r {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove files/directories from a specific archive ([d]elete):
+.RE
+.PP
+\fB\fCzip \-d {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Archive files/directories e[x]cluding specified ones:
+.RE
+.PP
+\fB\fCzip \-r {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}} \-x {{path/to/excluded_files_or_directories}}\fR
+.RS
+.IP \(bu 2
+Archive files/directories with a specific compression level (\fB\fC0\fR \- the lowest, \fB\fC9\fR \- the highest):
+.RE
+.PP
+\fB\fCzip \-r \-{{0\-9}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Create an [e]ncrypted archive with a specific password:
+.RE
+.PP
+\fB\fCzip \-r \-e {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Archive files/directories to a multi\-part [s]plit zip file (e.g. 3 GB parts):
+.RE
+.PP
+\fB\fCzip \-r \-s {{3g}} {{path/to/compressed.zip}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}\fR
+.RS
+.IP \(bu 2
+Print a specific archive contents:
+.RE
+.PP
+\fB\fCzip \-sf {{path/to/compressed.zip}}\fR

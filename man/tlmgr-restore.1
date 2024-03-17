@@ -1,0 +1,43 @@
+.TH tlmgr restore
+.PP
+.RS
+Restore package backups created with \fB\fCtlmgr backup\fR\&.
+The default backup directory is specified by the \fB\fCbackupdir\fR option, and can be obtained with \fB\fCtlmgr option\fR\&.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available backup revisions for all packages:
+.RE
+.PP
+\fB\fCtlmgr restore\fR
+.RS
+.IP \(bu 2
+List all available backup revisions for a specific package:
+.RE
+.PP
+\fB\fCtlmgr restore {{package}}\fR
+.RS
+.IP \(bu 2
+Restore a specific revision of a specific package:
+.RE
+.PP
+\fB\fCtlmgr restore {{package}} {{revision}}\fR
+.RS
+.IP \(bu 2
+Restore the latest revision of all backed\-up packages:
+.RE
+.PP
+\fB\fCtlmgr restore \-\-all\fR
+.RS
+.IP \(bu 2
+Restore a package from a custom backup directory:
+.RE
+.PP
+\fB\fCtlmgr restore {{package}} {{revision}} \-\-backupdir {{path/to/backup_directory}}\fR
+.RS
+.IP \(bu 2
+Perform a dry\-run and print all taken actions without making them:
+.RE
+.PP
+\fB\fCtlmgr restore \-\-dry\-run {{package}} {{revision}}\fR

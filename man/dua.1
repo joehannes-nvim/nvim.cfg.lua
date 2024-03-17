@@ -1,0 +1,48 @@
+.TH dua
+.PP
+.RS
+Dua (Disk Usage Analyzer) is a tool to conveniently learn about the usage of disk space of a given directory.
+More information: \[la]https://github.com/Byron/dua-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze specific directory:
+.RE
+.PP
+\fB\fCdua {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display apparent size instead of disk usage:
+.RE
+.PP
+\fB\fCdua \-\-apparent\-size\fR
+.RS
+.IP \(bu 2
+Count hard\-linked files each time they are seen:
+.RE
+.PP
+\fB\fCdua \-\-count\-hard\-links\fR
+.RS
+.IP \(bu 2
+Aggregate the consumed space of one or more directories or files:
+.RE
+.PP
+\fB\fCdua aggregate\fR
+.RS
+.IP \(bu 2
+Launch the terminal user interface:
+.RE
+.PP
+\fB\fCdua interactive\fR
+.RS
+.IP \(bu 2
+Format printing byte counts:
+.RE
+.PP
+\fB\fCdua \-\-format {{metric|binary|bytes|GB|GiB|MB|MiB}}\fR
+.RS
+.IP \(bu 2
+Set the number of threads to be used:
+.RE
+.PP
+\fB\fCdua \-\-threads {{count}}\fR

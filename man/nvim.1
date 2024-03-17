@@ -1,0 +1,56 @@
+.TH nvim
+.PP
+.RS
+Neovim, a programmer's text editor based on Vim, provides several modes for different kinds of text manipulation.
+Pressing \fB\fCi\fR in normal mode enters insert mode. \fB\fC<Esc>\fR goes back to normal mode, which doesn't allow regular text insertion.
+See also \fB\fCvim\fR, \fB\fCvimtutor\fR, \fB\fCvimdiff\fR\&.
+More information: \[la]https://neovim.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file:
+.RE
+.PP
+\fB\fCnvim {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Enter text editing mode (insert mode):
+.RE
+.PP
+\fB\fC<Esc>i\fR
+.RS
+.IP \(bu 2
+Copy ("yank") or cut ("delete") the current line (paste it with \fB\fCP\fR):
+.RE
+.PP
+\fB\fC<Esc>{{yy|dd}}\fR
+.RS
+.IP \(bu 2
+Enter normal mode and undo the last operation:
+.RE
+.PP
+\fB\fC<Esc>u\fR
+.RS
+.IP \(bu 2
+Search for a pattern in the file (press \fB\fCn\fR/\fB\fCN\fR to go to next/previous match):
+.RE
+.PP
+\fB\fC<Esc>/{{search_pattern}}<Enter>\fR
+.RS
+.IP \(bu 2
+Perform a regular expression substitution in the whole file:
+.RE
+.PP
+\fB\fC<Esc>:%s/{{regular_expression}}/{{replacement}}/g<Enter>\fR
+.RS
+.IP \(bu 2
+Enter normal mode and save (write) the file, and quit:
+.RE
+.PP
+\fB\fC<Esc>:wq<Enter>\fR
+.RS
+.IP \(bu 2
+Quit without saving:
+.RE
+.PP
+\fB\fC<Esc>:q!<Enter>\fR

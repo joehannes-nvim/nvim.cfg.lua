@@ -1,0 +1,24 @@
+.TH dvc checkout
+.PP
+.RS
+Checkout data files and directories from cache.
+More information: \[la]https://dvc.org/doc/command-reference/checkout\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Checkout the latest version of all target files and directories:
+.RE
+.PP
+\fB\fCdvc checkout\fR
+.RS
+.IP \(bu 2
+Checkout the latest version of a specified target:
+.RE
+.PP
+\fB\fCdvc checkout {{target}}\fR
+.RS
+.IP \(bu 2
+Checkout a specific version of a target from a different Git commit/tag/branch:
+.RE
+.PP
+\fB\fCgit checkout {{commit_hash|tag|branch}} {{target}} && dvc checkout {{target}}\fR

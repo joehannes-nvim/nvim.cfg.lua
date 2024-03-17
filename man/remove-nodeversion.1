@@ -1,0 +1,31 @@
+.TH Remove\-NodeVersion
+.PP
+.RS
+Uninstall Node.js runtime versions for \fB\fCps\-nvm\fR\&.
+This command is part of \fB\fCps\-nvm\fR and can only be run under PowerShell.
+More information: \[la]https://github.com/aaronpowell/ps-nvm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Uninstall a given Node.js version:
+.RE
+.PP
+\fB\fCRemove\-NodeVersion {{node_version}}\fR
+.RS
+.IP \(bu 2
+Uninstall multiple Node.js versions:
+.RE
+.PP
+\fB\fCRemove\-NodeVersion {{node_version1 , node_version2 , ...}}\fR
+.RS
+.IP \(bu 2
+Uninstall all currently\-installed versions of Node.js 20.x:
+.RE
+.PP
+\fB\fCGet\-NodeVersions \-Filter ">=20.0.0 <21.0.0" | Remove\-NodeVersion\fR
+.RS
+.IP \(bu 2
+Uninstall all currently\-installed versions of Node.js:
+.RE
+.PP
+\fB\fCGet\-NodeVersions | Remove\-NodeVersion\fR

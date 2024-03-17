@@ -1,0 +1,30 @@
+.TH cmp
+.PP
+.RS
+Compare two files byte by byte.
+More information: \[la]https://www.gnu.org/software/diffutils/manual/html_node/Invoking-cmp.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Output char and line number of the first difference between two files:
+.RE
+.PP
+\fB\fCcmp {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Output info of the first difference: char, line number, bytes, and values:
+.RE
+.PP
+\fB\fCcmp \-\-print\-bytes {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Output the byte numbers and values of every difference:
+.RE
+.PP
+\fB\fCcmp \-\-verbose {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare files but output nothing, yield only the exit status:
+.RE
+.PP
+\fB\fCcmp \-\-quiet {{path/to/file1}} {{path/to/file2}}\fR

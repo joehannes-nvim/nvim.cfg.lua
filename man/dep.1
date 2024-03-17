@@ -1,0 +1,49 @@
+.TH dep
+.PP
+.RS
+Deploy PHP applications.
+Note: The Go command \fB\fCdep\fR with the same name is deprecated and archived.
+More information: \[la]https://deployer.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively initialize deployer in the local path (use a framework template with \fB\fC\-\-template={{template}}\fR):
+.RE
+.PP
+\fB\fCdep init\fR
+.RS
+.IP \(bu 2
+Deploy an application to a remote host:
+.RE
+.PP
+\fB\fCdep deploy {{hostname}}\fR
+.RS
+.IP \(bu 2
+Rollback to the previous working release:
+.RE
+.PP
+\fB\fCdep rollback\fR
+.RS
+.IP \(bu 2
+Connect to a remote host via ssh:
+.RE
+.PP
+\fB\fCdep ssh {{hostname}}\fR
+.RS
+.IP \(bu 2
+List commands:
+.RE
+.PP
+\fB\fCdep list\fR
+.RS
+.IP \(bu 2
+Run any arbitrary command on the remote hosts:
+.RE
+.PP
+\fB\fCdep run "{{command}}"\fR
+.RS
+.IP \(bu 2
+Display help for a command:
+.RE
+.PP
+\fB\fCdep help {{command}}\fR

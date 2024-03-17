@@ -1,0 +1,19 @@
+.TH cargo search
+.PP
+.RS
+Search for packages on \[la]https://crates.io\[ra]\&.
+The crates are displayed along with descriptions in TOML format suitable for copying into \fB\fCCargo.toml\fR\&.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-search.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for packages:
+.RE
+.PP
+\fB\fCcargo search {{query}}\fR
+.RS
+.IP \(bu 2
+Show \fB\fCn\fR results (default: 10, max: 100):
+.RE
+.PP
+\fB\fCcargo search \-\-limit {{n}} {{query}}\fR

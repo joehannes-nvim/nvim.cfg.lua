@@ -1,0 +1,49 @@
+.TH xzgrep
+.PP
+.RS
+Search files possibly compressed with \fB\fCxz\fR, \fB\fClzma\fR, \fB\fCgzip\fR, \fB\fCbzip2\fR, \fB\fClzop\fR, or \fB\fCzstd\fR using regular expressions.
+See also: \fB\fCgrep\fR\&.
+More information: \[la]https://manned.org/xzgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a file:
+.RE
+.PP
+\fB\fCxzgrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for an exact string (disables regular expressions):
+.RE
+.PP
+\fB\fCxzgrep \-\-fixed\-strings "{{exact_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern in all files showing line numbers of matches:
+.RE
+.PP
+\fB\fCxzgrep \-\-line\-number "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Use extended regular expressions (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR), in case\-insensitive mode:
+.RE
+.PP
+\fB\fCxzgrep \-\-extended\-regexp \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print 3 lines of context around, before, or after each match:
+.RE
+.PP
+\fB\fCxzgrep \-\-{{context|before\-context|after\-context}}={{3}} "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match with color output:
+.RE
+.PP
+\fB\fCxzgrep \-\-with\-filename \-\-line\-number \-\-color=always "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCxzgrep \-\-only\-matching "{{search_pattern}}" {{path/to/file}}\fR

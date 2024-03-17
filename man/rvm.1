@@ -1,0 +1,54 @@
+.TH rvm
+.PP
+.RS
+A tool for easily installing, managing, and working with multiple ruby environments.
+More information: \[la]https://rvm.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install one or more space\-separated versions of Ruby:
+.RE
+.PP
+\fB\fCrvm install {{version(s)}}\fR
+.RS
+.IP \(bu 2
+Display a list of installed versions:
+.RE
+.PP
+\fB\fCrvm list\fR
+.RS
+.IP \(bu 2
+Use a specific version of Ruby:
+.RE
+.PP
+\fB\fCrvm use {{version}}\fR
+.RS
+.IP \(bu 2
+Set the default Ruby version:
+.RE
+.PP
+\fB\fCrvm \-\-default use {{version}}\fR
+.RS
+.IP \(bu 2
+Upgrade a version of Ruby to a new version:
+.RE
+.PP
+\fB\fCrvm upgrade {{current_version}} {{new_version}}\fR
+.RS
+.IP \(bu 2
+Uninstall a version of Ruby and keep its sources:
+.RE
+.PP
+\fB\fCrvm uninstall {{version}}\fR
+.RS
+.IP \(bu 2
+Remove a version of Ruby and its sources:
+.RE
+.PP
+\fB\fCrvm remove {{version}}\fR
+.RS
+.IP \(bu 2
+Show specific dependencies for your OS:
+.RE
+.PP
+\fB\fCrvm requirements\fR

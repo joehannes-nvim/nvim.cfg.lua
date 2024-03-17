@@ -1,0 +1,43 @@
+.TH git
+.PP
+.RS
+Distributed version control system.
+Some subcommands such as \fB\fCcommit\fR, \fB\fCadd\fR, \fB\fCbranch\fR, \fB\fCcheckout\fR, \fB\fCpush\fR, etc. have their own usage documentation.
+More information: \[la]https://git-scm.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the Git version:
+.RE
+.PP
+\fB\fCgit \-\-version\fR
+.RS
+.IP \(bu 2
+Show general help:
+.RE
+.PP
+\fB\fCgit \-\-help\fR
+.RS
+.IP \(bu 2
+Show help on a Git subcommand (like \fB\fCclone\fR, \fB\fCadd\fR, \fB\fCpush\fR, \fB\fClog\fR, etc.):
+.RE
+.PP
+\fB\fCgit help {{subcommand}}\fR
+.RS
+.IP \(bu 2
+Execute a Git subcommand:
+.RE
+.PP
+\fB\fCgit {{subcommand}}\fR
+.RS
+.IP \(bu 2
+Execute a Git subcommand on a custom repository root path:
+.RE
+.PP
+\fB\fCgit \-C {{path/to/repo}} {{subcommand}}\fR
+.RS
+.IP \(bu 2
+Execute a Git subcommand with a given configuration set:
+.RE
+.PP
+\fB\fCgit \-c '{{config.key}}={{value}}' {{subcommand}}\fR

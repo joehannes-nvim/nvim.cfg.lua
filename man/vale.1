@@ -1,0 +1,42 @@
+.TH vale
+.PP
+.RS
+Extensible style checker that supports multiple markup formats, such as Markdown and AsciiDoc.
+More information: \[la]https://vale.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the style of a file:
+.RE
+.PP
+\fB\fCvale {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Check the style of a file with a specified configuration:
+.RE
+.PP
+\fB\fCvale \-\-config='{{path/to/.vale.ini}}' {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Output the results in JSON format:
+.RE
+.PP
+\fB\fCvale \-\-output=JSON {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Check style issues at the specific severity and higher:
+.RE
+.PP
+\fB\fCvale \-\-minAlertLevel={{suggestion|warning|error}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Check the style from \fB\fCstdin\fR, specifying markup format:
+.RE
+.PP
+\fB\fCcat {{file.md}} | vale \-\-ext=.md\fR
+.RS
+.IP \(bu 2
+List the current configuration:
+.RE
+.PP
+\fB\fCvale ls\-config\fR

@@ -1,0 +1,25 @@
+.TH csvsql
+.PP
+.RS
+Generate SQL statements for a CSV file or execute those statements directly on a database.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/csvsql.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a \fB\fCCREATE TABLE\fR SQL statement for a CSV file:
+.RE
+.PP
+\fB\fCcsvsql {{path/to/data.csv}}\fR
+.RS
+.IP \(bu 2
+Import a CSV file into an SQL database:
+.RE
+.PP
+\fB\fCcsvsql \-\-insert \-\-db "{{mysql://user:password@host/database}}" {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Run an SQL query on a CSV file:
+.RE
+.PP
+\fB\fCcsvsql \-\-query "{{select * from 'data'}}" {{data.csv}}\fR

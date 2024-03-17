@@ -1,0 +1,30 @@
+.TH watch
+.PP
+.RS
+Execute a program periodically, showing output fullscreen.
+More information: \[la]https://manned.org/watch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Repeatedly run a command and show the result:
+.RE
+.PP
+\fB\fCwatch {{command}}\fR
+.RS
+.IP \(bu 2
+Re\-run a command every 60 seconds:
+.RE
+.PP
+\fB\fCwatch \-n {{60}} {{command}}\fR
+.RS
+.IP \(bu 2
+Monitor the contents of a directory, highlighting differences as they appear:
+.RE
+.PP
+\fB\fCwatch \-d {{ls \-l}}\fR
+.RS
+.IP \(bu 2
+Repeatedly run a pipeline and show the result:
+.RE
+.PP
+\fB\fCwatch '{{command_1}} | {{command_2}} | {{command_3}}'\fR

@@ -1,0 +1,42 @@
+.TH doctl kubernetes cluster
+.PP
+.RS
+Manage Kubernetes clusters and view configuration options relating to clusters.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/kubernetes/cluster/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a Kubernetes cluster:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster create \-\-count {{3}} \-\-region {{nyc1}} \-\-size {{s\-1vcpu\-2gb}} \-\-version {{latest}} {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+List all Kubernetes clusters:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster list\fR
+.RS
+.IP \(bu 2
+Fetch and save the kubeconfig:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster kubeconfig save {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Check for available upgrades:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster get\-upgrades {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Upgrade a cluster to a new Kubernetes version:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster upgrade {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Delete a cluster:
+.RE
+.PP
+\fB\fCdoctl kubernetes cluster delete {{cluster_name}}\fR

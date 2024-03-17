@@ -1,0 +1,37 @@
+.TH pueue pause
+.PP
+.RS
+Pause running tasks or groups.
+See also: \fB\fCpueue start\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Pause all tasks in the default group:
+.RE
+.PP
+\fB\fCpueue pause\fR
+.RS
+.IP \(bu 2
+Pause a running task:
+.RE
+.PP
+\fB\fCpueue pause {{task_id}}\fR
+.RS
+.IP \(bu 2
+Pause a running task and stop all its direct children:
+.RE
+.PP
+\fB\fCpueue pause \-\-children {{task_id}}\fR
+.RS
+.IP \(bu 2
+Pause all tasks in a group and prevent it from starting new tasks:
+.RE
+.PP
+\fB\fCpueue pause \-\-group {{group_name}}\fR
+.RS
+.IP \(bu 2
+Pause all tasks and prevent all groups from starting new tasks:
+.RE
+.PP
+\fB\fCpueue pause \-\-all\fR

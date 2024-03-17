@@ -1,0 +1,25 @@
+.TH write
+.PP
+.RS
+Write a message on the terminal of a specified logged in user (ctrl\-C to stop writing messages).
+Use the \fB\fCwho\fR command to find out all terminal_ids of all active users active on the system. See also \fB\fCmesg\fR\&.
+More information: \[la]https://manned.org/write\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send a message to a given user on a given terminal id:
+.RE
+.PP
+\fB\fCwrite {{username}} {{terminal_id}}\fR
+.RS
+.IP \(bu 2
+Send message to "testuser" on terminal \fB\fC/dev/tty/5\fR:
+.RE
+.PP
+\fB\fCwrite {{testuser}} {{tty/5}}\fR
+.RS
+.IP \(bu 2
+Send message to "johndoe" on pseudo terminal \fB\fC/dev/pts/5\fR:
+.RE
+.PP
+\fB\fCwrite {{johndoe}} {{pts/5}}\fR

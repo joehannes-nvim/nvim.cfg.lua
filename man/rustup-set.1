@@ -1,0 +1,24 @@
+.TH rustup set
+.PP
+.RS
+Alter \fB\fCrustup\fR settings.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set the default host triple:
+.RE
+.PP
+\fB\fCrustup set default\-host {{host_triple}}\fR
+.RS
+.IP \(bu 2
+Set the default profile (\fB\fCminimal\fR includes only \fB\fCrustc\fR, \fB\fCrust\-std\fR and \fB\fCcargo\fR, whereas \fB\fCdefault\fR adds \fB\fCrust\-docs\fR, \fB\fCrustfmt\fR and \fB\fCclippy\fR):
+.RE
+.PP
+\fB\fCrustup set profile {{minimal|default}}\fR
+.RS
+.IP \(bu 2
+Set whether \fB\fCrustup\fR should update itself when running \fB\fCrustup update\fR:
+.RE
+.PP
+\fB\fCrustup set auto\-self\-update {{enable|disable|check\-only}}\fR

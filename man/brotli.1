@@ -1,0 +1,36 @@
+.TH brotli
+.PP
+.RS
+Compress/uncompress files with Brotli compression.
+More information: \[la]https://github.com/google/brotli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a file, creating a compressed version next to the file:
+.RE
+.PP
+\fB\fCbrotli {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress a file, creating an uncompressed version next to the file:
+.RE
+.PP
+\fB\fCbrotli \-d {{path/to/file.br}}\fR
+.RS
+.IP \(bu 2
+Compress a file specifying the output filename:
+.RE
+.PP
+\fB\fCbrotli {{path/to/file}} \-o {{path/to/compressed_output_file.br}}\fR
+.RS
+.IP \(bu 2
+Decompress a Brotli file specifying the output filename:
+.RE
+.PP
+\fB\fCbrotli \-d {{path/to/compressed_file.br}} \-o {{path/to/output_file}}\fR
+.RS
+.IP \(bu 2
+Specify the compression level [1=Fastest (Worst), 11=Slowest (Best)]:
+.RE
+.PP
+\fB\fCbrotli \-q {{11}} {{path/to/file}} \-o {{path/to/compressed_output_file.br}}\fR

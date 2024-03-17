@@ -1,0 +1,36 @@
+.TH fselect
+.PP
+.RS
+Find files with SQL\-like queries.
+More information: \[la]https://github.com/jhspetersson/fselect\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Select full path and size from temporary or config files in a given directory:
+.RE
+.PP
+\fB\fCfselect size, path from {{path/to/directory}} where name = {{'*.cfg'}} or name = {{'*.tmp'}}\fR
+.RS
+.IP \(bu 2
+Find square images:
+.RE
+.PP
+\fB\fCfselect path from {{path/to/directory}} where width = height\fR
+.RS
+.IP \(bu 2
+Find old\-school rap 320kbps MP3 files:
+.RE
+.PP
+\fB\fCfselect path from {{path/to/directory}} where genre = {{Rap}} and bitrate = {{320}} and mp3_year lt {{2000}}\fR
+.RS
+.IP \(bu 2
+Select only the first 5 results and output as JSON:
+.RE
+.PP
+\fB\fCfselect size, path from {{path/to/directory}} limit {{5}} into json\fR
+.RS
+.IP \(bu 2
+Use SQL aggregate functions to calculate minimum, maximum and average size of files in a directory:
+.RE
+.PP
+\fB\fCfselect "{{MIN(size), MAX(size), AVG(size), SUM(size), COUNT(*)}} from {{path/to/directory}}"\fR

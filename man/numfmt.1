@@ -1,0 +1,24 @@
+.TH numfmt
+.PP
+.RS
+Convert numbers to and from human\-readable strings.
+More information: \[la]https://www.gnu.org/software/coreutils/numfmt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert 1.5K (SI Units) to 1500:
+.RE
+.PP
+\fB\fCnumfmt \-\-from={{si}} {{1.5K}}\fR
+.RS
+.IP \(bu 2
+Convert 5th field (1\-indexed) to IEC Units without converting header:
+.RE
+.PP
+\fB\fCls \-l | numfmt \-\-header={{1}} \-\-field={{5}} \-\-to={{iec}}\fR
+.RS
+.IP \(bu 2
+Convert to IEC units, pad with 5 characters, left aligned:
+.RE
+.PP
+\fB\fCdu \-s * | numfmt \-\-to={{iec}} \-\-format="{{%\-5f}}"\fR

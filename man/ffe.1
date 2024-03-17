@@ -1,0 +1,43 @@
+.TH ffe
+.PP
+.RS
+Extract fields from a flat database file and write to another format.
+A configuration file is required to interpret the input and format the output.
+More information: \[la]http://ff-extractor.sourceforge.net/ffe.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display all input data using the specified data configuration:
+.RE
+.PP
+\fB\fCffe \-\-configuration={{path/to/config.ffe}} {{path/to/input}}\fR
+.RS
+.IP \(bu 2
+Convert an input file to an output file in a new format:
+.RE
+.PP
+\fB\fCffe \-\-output={{path/to/output}} \-c {{path/to/config.ffe}} {{path/to/input}}\fR
+.RS
+.IP \(bu 2
+Select input structure and print format from definitions in \fB\fC~/.fferc\fR config file:
+.RE
+.PP
+\fB\fCffe \-\-structure={{structure}} \-\-print={{format}} {{path/to/input}}\fR
+.RS
+.IP \(bu 2
+Write only the selected fields:
+.RE
+.PP
+\fB\fCffe \-\-field\-list="{{FirstName,LastName,Age}}" \-c {{path/to/config.ffe}} {{path/to/input}}\fR
+.RS
+.IP \(bu 2
+Write only the records that match an expression:
+.RE
+.PP
+\fB\fCffe \-e "{{LastName=Smith}}" \-c {{path/to/config.ffe}} {{path/to/input}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCffe \-\-help\fR

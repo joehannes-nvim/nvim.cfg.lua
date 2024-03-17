@@ -1,0 +1,30 @@
+.TH beanstalkd
+.PP
+.RS
+A simple and generic work\-queue server.
+More information: \[la]https://beanstalkd.github.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Beanstalk, listening on port 11300:
+.RE
+.PP
+\fB\fCbeanstalkd\fR
+.RS
+.IP \(bu 2
+Start Beanstalk listening on a custom port and address:
+.RE
+.PP
+\fB\fCbeanstalkd \-l {{ip_address}} \-p {{port_number}}\fR
+.RS
+.IP \(bu 2
+Persist work queues by saving them to disk:
+.RE
+.PP
+\fB\fCbeanstalkd \-b {{path/to/persistence_directory}}\fR
+.RS
+.IP \(bu 2
+Sync to the persistence directory every 500 milliseconds:
+.RE
+.PP
+\fB\fCbeanstalkd \-b {{path/to/persistence_directory}} \-f {{500}}\fR

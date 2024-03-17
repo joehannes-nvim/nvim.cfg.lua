@@ -1,0 +1,30 @@
+.TH su
+.PP
+.RS
+Switch shell to another user.
+More information: \[la]https://manned.org/su\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Switch to superuser (requires the root password):
+.RE
+.PP
+\fB\fCsu\fR
+.RS
+.IP \(bu 2
+Switch to a given user (requires the user's password):
+.RE
+.PP
+\fB\fCsu {{username}}\fR
+.RS
+.IP \(bu 2
+Switch to a given user and simulate a full login shell:
+.RE
+.PP
+\fB\fCsu \- {{username}}\fR
+.RS
+.IP \(bu 2
+Execute a command as another user:
+.RE
+.PP
+\fB\fCsu \- {{username}} \-c "{{command}}"\fR

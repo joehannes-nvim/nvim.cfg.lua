@@ -1,0 +1,30 @@
+.TH popeye
+.PP
+.RS
+Utility that reports potential issues with Kubernetes deployment manifests.
+More information: \[la]https://github.com/derailed/popeye\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan the current Kubernetes cluster:
+.RE
+.PP
+\fB\fCpopeye\fR
+.RS
+.IP \(bu 2
+Scan a specific namespace:
+.RE
+.PP
+\fB\fCpopeye \-n {{namespace}}\fR
+.RS
+.IP \(bu 2
+Scan specific Kubernetes context:
+.RE
+.PP
+\fB\fCpopeye \-\-context={{context}}\fR
+.RS
+.IP \(bu 2
+Use a spinach configuration file for scanning:
+.RE
+.PP
+\fB\fCpopeye \-f {{spinach.yaml}}\fR

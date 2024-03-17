@@ -1,0 +1,30 @@
+.TH xev
+.PP
+.RS
+Print contents of X events.
+More information: \[la]https://gitlab.freedesktop.org/xorg/app/xev\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Monitor all occurring X events:
+.RE
+.PP
+\fB\fCxev\fR
+.RS
+.IP \(bu 2
+Monitor all X events of the root window instead of creating a new one:
+.RE
+.PP
+\fB\fCxev \-root\fR
+.RS
+.IP \(bu 2
+Monitor all X events of a particular window:
+.RE
+.PP
+\fB\fCxev \-id {{window_id}}\fR
+.RS
+.IP \(bu 2
+Monitor X events from a given category (can be specified multiple times):
+.RE
+.PP
+\fB\fCxev \-event {{event_category}}\fR

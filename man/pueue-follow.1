@@ -1,0 +1,19 @@
+.TH pueue follow
+.PP
+.RS
+Follow the output of a currently running task.
+See also: \fB\fCpueue log\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Follow the output of a task (\fB\fCstdout\fR + \fB\fCstderr\fR):
+.RE
+.PP
+\fB\fCpueue follow {{task_id}}\fR
+.RS
+.IP \(bu 2
+Follow \fB\fCstderr\fR of a task:
+.RE
+.PP
+\fB\fCpueue follow \-\-err {{task_id}}\fR

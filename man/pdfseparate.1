@@ -1,0 +1,24 @@
+.TH pdfseparate
+.PP
+.RS
+Portable Document Format (PDF) file page extractor.
+More information: \[la]https://manpages.debian.org/latest/poppler-utils/pdfseparate.1.en.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract pages from PDF file and make a separate PDF file for each page:
+.RE
+.PP
+\fB\fCpdfseparate {{path/to/source_filename.pdf}} {{path/to/destination_filename\-%d.pdf}}\fR
+.RS
+.IP \(bu 2
+Specify the first/start page for extraction:
+.RE
+.PP
+\fB\fCpdfseparate \-f {{3}} {{path/to/source_filename.pdf}} {{path/to/destination_filename\-%d.pdf}}\fR
+.RS
+.IP \(bu 2
+Specify the last page for extraction:
+.RE
+.PP
+\fB\fCpdfseparate \-l {{10}} {{path/to/source_filename.pdf}} {{path/to/destination_filename\-%d.pdf}}\fR

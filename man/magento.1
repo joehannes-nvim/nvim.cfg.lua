@@ -1,0 +1,54 @@
+.TH magento
+.PP
+.RS
+Manage the Magento PHP framework.
+More information: \[la]https://magento.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enable one or more space\-separated modules:
+.RE
+.PP
+\fB\fCmagento module:enable {{module(s)}}\fR
+.RS
+.IP \(bu 2
+Disable one or more space\-separated modules:
+.RE
+.PP
+\fB\fCmagento module:disable {{module(s)}}\fR
+.RS
+.IP \(bu 2
+Update the database after enabling modules:
+.RE
+.PP
+\fB\fCmagento setup:upgrade\fR
+.RS
+.IP \(bu 2
+Update code and dependency injection configuration:
+.RE
+.PP
+\fB\fCmagento setup:di:compile\fR
+.RS
+.IP \(bu 2
+Deploy static assets:
+.RE
+.PP
+\fB\fCmagento setup:static\-content:deploy\fR
+.RS
+.IP \(bu 2
+Enable maintenance mode:
+.RE
+.PP
+\fB\fCmagento maintenance:enable\fR
+.RS
+.IP \(bu 2
+Disable maintenance mode:
+.RE
+.PP
+\fB\fCmagento maintenance:disable\fR
+.RS
+.IP \(bu 2
+List all available commands:
+.RE
+.PP
+\fB\fCmagento list\fR

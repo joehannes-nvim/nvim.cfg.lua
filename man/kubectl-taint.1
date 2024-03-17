@@ -1,0 +1,24 @@
+.TH kubectl taint
+.PP
+.RS
+Update the taints on one or more nodes.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply taint to a node:
+.RE
+.PP
+\fB\fCkubectl taint nodes {{node_name}} {{label_key}}={{label_value}}:{{effect}}\fR
+.RS
+.IP \(bu 2
+Remove taint from a node:
+.RE
+.PP
+\fB\fCkubectl taint nodes {{node_name}} {{label_key}}:{{effect}}\-\fR
+.RS
+.IP \(bu 2
+Remove all taints from a node:
+.RE
+.PP
+\fB\fCkubectl taint nodes {{node_name}} {{label_key}}\-\fR

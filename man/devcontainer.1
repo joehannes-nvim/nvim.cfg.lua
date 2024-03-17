@@ -1,0 +1,42 @@
+.TH devcontainer
+.PP
+.RS
+Use a Docker container as a development environment.
+More information: \[la]https://containers.dev/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create and run a Dev Container:
+.RE
+.PP
+\fB\fCdevcontainer up\fR
+.RS
+.IP \(bu 2
+Apply a Dev Container Template to a workspace:
+.RE
+.PP
+\fB\fCdevcontainer templates apply \-\-template\-id {{template_id}} \-\-template\-args {{template_args}} \-\-workspace\-folder {{path/to/workspace}}\fR
+.RS
+.IP \(bu 2
+Execute a command on a running Dev Container in the current workspace:
+.RE
+.PP
+\fB\fCdevcontainer exec {{command}}\fR
+.RS
+.IP \(bu 2
+Build a Dev Container image from \fB\fCdevcontainer.json\fR:
+.RE
+.PP
+\fB\fCdevcontainer build {{path/to/workspace}}\fR
+.RS
+.IP \(bu 2
+Open a Dev Container in VS Code (the path is optional):
+.RE
+.PP
+\fB\fCdevcontainer open {{path/to/workspace}}\fR
+.RS
+.IP \(bu 2
+Read and print the configuration of a Dev Container from \fB\fCdevcontainer.json\fR:
+.RE
+.PP
+\fB\fCdevcontainer read\-configuration\fR

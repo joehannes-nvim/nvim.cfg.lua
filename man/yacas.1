@@ -1,0 +1,42 @@
+.TH yacas
+.PP
+.RS
+Yet Another Computer Algebra System.
+More information: \[la]http://www.yacas.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive \fB\fCyacas\fR session:
+.RE
+.PP
+\fB\fCyacas\fR
+.RS
+.IP \(bu 2
+While in a \fB\fCyacas\fR session, execute a statement:
+.RE
+.PP
+\fB\fC{{Integrate(x)Cos(x)}};\fR
+.RS
+.IP \(bu 2
+While in a \fB\fCyacas\fR session, display an example:
+.RE
+.PP
+\fB\fC{{Example()}};\fR
+.RS
+.IP \(bu 2
+Quit from a \fB\fCyacas\fR session:
+.RE
+.PP
+\fB\fC{{quit}}\fR
+.RS
+.IP \(bu 2
+Execute one or more \fB\fCyacas\fR scripts (without terminal or prompts), then exit:
+.RE
+.PP
+\fB\fCyacas \-p \-c {{path/to/script1}} {{path/to/script2}}\fR
+.RS
+.IP \(bu 2
+Execute and print the result of one statement, then exit:
+.RE
+.PP
+\fB\fCecho "{{Echo( Deriv(x)Cos(1/x) );}}" | yacas \-p \-c /dev/stdin\fR

@@ -1,0 +1,43 @@
+.TH cabal
+.PP
+.RS
+Command\-line interface to the Haskell package infrastructure (Cabal).
+Manage Haskell projects and Cabal packages from the Hackage package repository.
+More information: \[la]https://cabal.readthedocs.io/en/latest/intro.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search and list packages from Hackage:
+.RE
+.PP
+\fB\fCcabal list {{search_string}}\fR
+.RS
+.IP \(bu 2
+Show information about a package:
+.RE
+.PP
+\fB\fCcabal info {{package}}\fR
+.RS
+.IP \(bu 2
+Download and install a package:
+.RE
+.PP
+\fB\fCcabal install {{package}}\fR
+.RS
+.IP \(bu 2
+Create a new Haskell project in the current directory:
+.RE
+.PP
+\fB\fCcabal init\fR
+.RS
+.IP \(bu 2
+Build the project in the current directory:
+.RE
+.PP
+\fB\fCcabal build\fR
+.RS
+.IP \(bu 2
+Run tests of the project in the current directory:
+.RE
+.PP
+\fB\fCcabal test\fR

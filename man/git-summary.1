@@ -1,0 +1,31 @@
+.TH git summary
+.PP
+.RS
+Display information about a Git repository.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-summary\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display data about a Git repository:
+.RE
+.PP
+\fB\fCgit summary\fR
+.RS
+.IP \(bu 2
+Display data about a Git repository since a commit\-ish:
+.RE
+.PP
+\fB\fCgit summary {{commit|branch_name|tag_name}}\fR
+.RS
+.IP \(bu 2
+Display data about a Git repository, merging committers using different emails into 1 statistic for each author:
+.RE
+.PP
+\fB\fCgit summary \-\-dedup\-by\-email\fR
+.RS
+.IP \(bu 2
+Display data about a Git repository, showing the number of lines modified by each contributor:
+.RE
+.PP
+\fB\fCgit summary \-\-line\fR

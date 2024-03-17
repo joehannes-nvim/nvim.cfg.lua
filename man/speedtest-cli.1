@@ -1,0 +1,55 @@
+.TH speedtest\-cli
+.PP
+.RS
+Test internet bandwidth using \[la]https://speedtest.net\[ra]\&.
+See also \fB\fCspeedtest\fR for the official CLI.
+More information: \[la]https://github.com/sivel/speedtest-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a speed test:
+.RE
+.PP
+\fB\fCspeedtest\-cli\fR
+.RS
+.IP \(bu 2
+Run a speed test and display values in bytes, instead of bits:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-bytes\fR
+.RS
+.IP \(bu 2
+Run a speed test using \fB\fCHTTPS\fR, instead of \fB\fCHTTP\fR:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-secure\fR
+.RS
+.IP \(bu 2
+Run a speed test without performing download tests:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-no\-download\fR
+.RS
+.IP \(bu 2
+Run a speed test and generate an image of the results:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-share\fR
+.RS
+.IP \(bu 2
+List all \fB\fCspeedtest.net\fR servers, sorted by distance:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-list\fR
+.RS
+.IP \(bu 2
+Run a speed test to a specific speedtest.net server:
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-server {{server_id}}\fR
+.RS
+.IP \(bu 2
+Run a speed test and display the results as JSON (suppresses progress information):
+.RE
+.PP
+\fB\fCspeedtest\-cli \-\-json\fR

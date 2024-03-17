@@ -1,0 +1,37 @@
+.TH az storage
+.PP
+.RS
+Manage Azure Cloud Storage resources.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/storage\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a storage account:
+.RE
+.PP
+\fB\fCaz storage account create \-\-resource\-group {{group_name}} \-\-name {{account_name}} \-l {{location}} \-\-sku {{account_sku}}\fR
+.RS
+.IP \(bu 2
+List all storage accounts in a resource group:
+.RE
+.PP
+\fB\fCaz storage account list \-\-resource\-group {{group_name}}\fR
+.RS
+.IP \(bu 2
+List the access keys for a storage account:
+.RE
+.PP
+\fB\fCaz storage account keys list \-\-resource\-group {{group_name}} \-\-name {{account_name}}\fR
+.RS
+.IP \(bu 2
+Delete a storage account:
+.RE
+.PP
+\fB\fCaz storage account delete \-\-resource\-group {{group_name}} \-\-name {{account_name}}\fR
+.RS
+.IP \(bu 2
+Update the minimum tls version setting for a storage account:
+.RE
+.PP
+\fB\fCaz storage account update \-\-min\-tls\-version {{TLS1_0|TLS1_1|TLS1_2}} \-\-resource\-group {{group_name}} \-\-name {{account_name}}\fR

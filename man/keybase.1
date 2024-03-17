@@ -1,0 +1,48 @@
+.TH keybase
+.PP
+.RS
+Key directory that maps social media identities to encryption keys in a publicly auditable manner.
+More information: \[la]https://keybase.io/docs/command_line\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Follow another user:
+.RE
+.PP
+\fB\fCkeybase follow {{username}}\fR
+.RS
+.IP \(bu 2
+Add a new proof:
+.RE
+.PP
+\fB\fCkeybase prove {{service}} {{service_username}}\fR
+.RS
+.IP \(bu 2
+Sign a file:
+.RE
+.PP
+\fB\fCkeybase sign \-\-infile {{input_file}} \-\-outfile {{output_file}}\fR
+.RS
+.IP \(bu 2
+Verify a signed file:
+.RE
+.PP
+\fB\fCkeybase verify \-\-infile {{input_file}} \-\-outfile {{output_file}}\fR
+.RS
+.IP \(bu 2
+Encrypt a file:
+.RE
+.PP
+\fB\fCkeybase encrypt \-\-infile {{input_file}} \-\-outfile {{output_file}} {{receiver}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file:
+.RE
+.PP
+\fB\fCkeybase decrypt \-\-infile {{input_file}} \-\-outfile {{output_file}}\fR
+.RS
+.IP \(bu 2
+Revoke current device, log out, and delete local data:
+.RE
+.PP
+\fB\fCkeybase deprovision\fR

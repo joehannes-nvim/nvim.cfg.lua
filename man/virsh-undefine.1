@@ -1,0 +1,24 @@
+.TH virsh\-undefine
+.PP
+.RS
+Delete a virtual machine.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete only the virtual machine configuration file:
+.RE
+.PP
+\fB\fCvirsh undefine \-\-domain {{vm_name}}\fR
+.RS
+.IP \(bu 2
+Delete the configuration file and all associated storage volumes:
+.RE
+.PP
+\fB\fCvirsh undefine \-\-domain {{vm_name}} \-\-remove\-all\-storage\fR
+.RS
+.IP \(bu 2
+Delete the configuration file and the specified storage volumes using the target name or the source name (as obtained from the \fB\fCvirsh domblklist\fR command):
+.RE
+.PP
+\fB\fCvirsh undefine \-\-domain {{vm_name}} \-\-storage {{sda,path/to/source}}\fR

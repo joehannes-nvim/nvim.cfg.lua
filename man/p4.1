@@ -1,0 +1,54 @@
+.TH p4
+.PP
+.RS
+Perforce Version Control System.
+More information: \[la]https://www.perforce.com/manuals/cmdref\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to the Perforce service:
+.RE
+.PP
+\fB\fCp4 login \-a\fR
+.RS
+.IP \(bu 2
+Create a client:
+.RE
+.PP
+\fB\fCp4 client\fR
+.RS
+.IP \(bu 2
+Copy files from depot into the client workspace:
+.RE
+.PP
+\fB\fCp4 sync\fR
+.RS
+.IP \(bu 2
+Create or edit changelist description:
+.RE
+.PP
+\fB\fCp4 change\fR
+.RS
+.IP \(bu 2
+Open a file to edit:
+.RE
+.PP
+\fB\fCp4 edit \-c {{changelist_number}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a new file to add it to the depot:
+.RE
+.PP
+\fB\fCp4 add\fR
+.RS
+.IP \(bu 2
+Display list of files modified by changelist:
+.RE
+.PP
+\fB\fCp4 describe \-c {{changelist_number}}\fR
+.RS
+.IP \(bu 2
+Submit a changelist to the depot:
+.RE
+.PP
+\fB\fCp4 submit \-c {{changelist_number}}\fR

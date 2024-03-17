@@ -1,0 +1,24 @@
+.TH goreload
+.PP
+.RS
+Live reload utility for Go programs.
+More information: \[la]https://github.com/acoshift/goreload\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set the name of the binary file to watch (defaults to \fB\fC\&.goreload\fR):
+.RE
+.PP
+\fB\fCgoreload \-b {{path/to/binary}} {{path/to/file}}.go\fR
+.RS
+.IP \(bu 2
+Set a custom log prefix (defaults to \fB\fCgoreload\fR):
+.RE
+.PP
+\fB\fCgoreload \-\-logPrefix {{prefix}} {{path/to/file}}.go\fR
+.RS
+.IP \(bu 2
+Reload whenever any file changes:
+.RE
+.PP
+\fB\fCgoreload \-\-all\fR

@@ -1,0 +1,36 @@
+.TH peerflix
+.PP
+.RS
+Stream video\- or audio\-based torrents to a media player.
+More information: \[la]https://github.com/mafintosh/peerflix\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Stream the largest media file in a torrent:
+.RE
+.PP
+\fB\fCpeerflix "{{torrent_url|magnet_link}}"\fR
+.RS
+.IP \(bu 2
+List all streamable files contained in a torrent (given as a magnet link):
+.RE
+.PP
+\fB\fCpeerflix "{{magnet:?xt=urn:btih:0123456789abcdef0123456789abcdef01234567}}" \-\-list\fR
+.RS
+.IP \(bu 2
+Stream the largest file in a torrent, given as a torrent URL, to VLC:
+.RE
+.PP
+\fB\fCpeerflix "{{http://example.net/music.torrent}}" \-\-vlc\fR
+.RS
+.IP \(bu 2
+Stream the largest file in a torrent to MPlayer, with subtitles:
+.RE
+.PP
+\fB\fCpeerflix "{{torrent_url|magnet_link}}" \-\-mplayer \-\-subtitles {{subtitle\-file.srt}}\fR
+.RS
+.IP \(bu 2
+Stream all files from a torrent to Airplay:
+.RE
+.PP
+\fB\fCpeerflix "{{torrent_url|magnet_link}}" \-\-all \-\-airplay\fR

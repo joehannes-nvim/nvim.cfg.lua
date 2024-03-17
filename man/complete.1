@@ -1,0 +1,24 @@
+.TH complete
+.PP
+.RS
+Provides argument autocompletion to shell commands.
+More information: \[la]https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion-Builtins.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply a function that performs autocompletion to a command:
+.RE
+.PP
+\fB\fCcomplete \-F {{function}} {{command}}\fR
+.RS
+.IP \(bu 2
+Apply a command that performs autocompletion to another command:
+.RE
+.PP
+\fB\fCcomplete \-C {{autocomplete_command}} {{command}}\fR
+.RS
+.IP \(bu 2
+Apply autocompletion without appending a space to the completed word:
+.RE
+.PP
+\fB\fCcomplete \-o nospace \-F {{function}} {{command}}\fR

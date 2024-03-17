@@ -1,0 +1,37 @@
+.TH podman build
+.PP
+.RS
+Daemonless tool for building container images.
+Podman provides a Docker\-CLI comparable command\-line. Simply put: \fB\fCalias docker=podman\fR\&.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-build.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an image using a \fB\fCDockerfile\fR or \fB\fCContainerfile\fR in the specified directory:
+.RE
+.PP
+\fB\fCpodman build {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Create an image with a specified tag:
+.RE
+.PP
+\fB\fCpodman build \-\-tag {{image_name:version}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Create an image from a non\-standard file:
+.RE
+.PP
+\fB\fCpodman build \-\-file {{Containerfile.different}} .\fR
+.RS
+.IP \(bu 2
+Create an image without using any previously cached images:
+.RE
+.PP
+\fB\fCpodman build \-\-no\-cache {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Create an image suppressing all output:
+.RE
+.PP
+\fB\fCpodman build \-\-quiet {{path/to/directory}}\fR

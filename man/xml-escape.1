@@ -1,0 +1,24 @@
+.TH xml escape
+.PP
+.RS
+Escape special XML characters, e.g. \fB\fC<a1>\fR → \fB\fC&lt;a1&gt;\fR\&.
+More information: \[la]http://xmlstar.sourceforge.net/doc/xmlstarlet.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Escape special XML characters in a string:
+.RE
+.PP
+\fB\fCxml escape "{{<a1>}}"\fR
+.RS
+.IP \(bu 2
+Escape special XML characters from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho "{{<a1>}}" | xml escape\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCescape\fR subcommand:
+.RE
+.PP
+\fB\fCxml escape \-\-help\fR

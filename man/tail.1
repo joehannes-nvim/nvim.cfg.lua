@@ -1,0 +1,43 @@
+.TH tail
+.PP
+.RS
+Display the last part of a file.
+See also: \fB\fChead\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/tail\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show last 'count' lines in file:
+.RE
+.PP
+\fB\fCtail \-\-lines {{count}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print a file from a specific line number:
+.RE
+.PP
+\fB\fCtail \-\-lines +{{count}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print a specific count of bytes from the end of a given file:
+.RE
+.PP
+\fB\fCtail \-\-bytes {{count}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print the last lines of a given file and keep reading file until \fB\fCCtrl + C\fR:
+.RE
+.PP
+\fB\fCtail \-\-follow {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Keep reading file until \fB\fCCtrl + C\fR, even if the file is inaccessible:
+.RE
+.PP
+\fB\fCtail \-\-retry \-\-follow {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show last 'num' lines in 'file' and refresh every 'n' seconds:
+.RE
+.PP
+\fB\fCtail \-\-lines {{count}} \-\-sleep\-interval {{seconds}} \-\-follow {{path/to/file}}\fR

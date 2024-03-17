@@ -1,0 +1,18 @@
+.TH spfquery
+.PP
+.RS
+Query Sender Policy Framework records to validate e\-mail senders.
+More information: \[la]https://www.libspf2.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check if an IP address is allowed to send an e\-mail from the specified e\-mail address:
+.RE
+.PP
+\fB\fCspfquery \-ip {{8.8.8.8}} \-sender {{sender@example.com}}\fR
+.RS
+.IP \(bu 2
+Turn on debugging output:
+.RE
+.PP
+\fB\fCspfquery \-ip {{8.8.8.8}} \-sender {{sender@example.com}} \-\-debug\fR

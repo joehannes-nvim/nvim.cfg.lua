@@ -1,0 +1,30 @@
+.TH dvc gc
+.PP
+.RS
+Remove unused files and directories from the cache or remote storage.
+More information: \[la]https://dvc.org/doc/command-reference/gc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Garbage collect from the cache, keeping only versions referenced by the current workspace:
+.RE
+.PP
+\fB\fCdvc gc \-\-workspace\fR
+.RS
+.IP \(bu 2
+Garbage collect from the cache, keeping only versions referenced by branch, tags, and commits:
+.RE
+.PP
+\fB\fCdvc gc \-\-all\-branches \-\-all\-tags \-\-all\-commits\fR
+.RS
+.IP \(bu 2
+Garbage collect from the cache, including the default cloud remote storage (if set):
+.RE
+.PP
+\fB\fCdvc gc \-\-all\-commits \-\-cloud\fR
+.RS
+.IP \(bu 2
+Garbage collect from the cache, including a specific cloud remote storage:
+.RE
+.PP
+\fB\fCdvc gc \-\-all\-commits \-\-cloud \-\-remote {{remote_name}}\fR

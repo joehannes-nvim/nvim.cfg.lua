@@ -1,0 +1,30 @@
+.TH mongod
+.PP
+.RS
+The MongoDB database server.
+More information: \[la]https://docs.mongodb.com/manual/reference/program/mongod\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Specify the storage directory (default: \fB\fC/data/db\fR on Linux and MacOS, \fB\fCC:\\data\\db\fR on Windows):
+.RE
+.PP
+\fB\fCmongod \-\-dbpath {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Specify a config file:
+.RE
+.PP
+\fB\fCmongod \-\-config {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Specify the port to listen on (default: 27017):
+.RE
+.PP
+\fB\fCmongod \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Specify the database profiling level. 0 is off, 1 is only slow operations, 2 is all (default: 0):
+.RE
+.PP
+\fB\fCmongod \-\-profile {{0|1|2}}\fR

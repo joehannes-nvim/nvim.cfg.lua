@@ -1,0 +1,31 @@
+.TH flutter pub
+.PP
+.RS
+Flutter's package manager.
+Note: Packages are available on \[la]https://pub.dev\[ra]\&. See also: \fB\fCflutter\fR\&.
+More information: \[la]https://docs.flutter.dev/packages-and-plugins/using-packages\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download/Update all packages specified in \fB\fCpubspec.yaml\fR:
+.RE
+.PP
+\fB\fCflutter pub get\fR
+.RS
+.IP \(bu 2
+Add a package dependency to an app:
+.RE
+.PP
+\fB\fCflutter pub add {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove a package dependency from an app:
+.RE
+.PP
+\fB\fCflutter pub remove {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Upgrade to the highest version of a package that is allowed by \fB\fCpubspec.yaml\fR:
+.RE
+.PP
+\fB\fCflutter pub upgrade {{package}}\fR

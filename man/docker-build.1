@@ -1,0 +1,48 @@
+.TH docker build
+.PP
+.RS
+Build an image from a Dockerfile.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/build/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a docker image using the Dockerfile in the current directory:
+.RE
+.PP
+\fB\fCdocker build .\fR
+.RS
+.IP \(bu 2
+Build a docker image from a Dockerfile at a specified URL:
+.RE
+.PP
+\fB\fCdocker build {{github.com/creack/docker\-firefox}}\fR
+.RS
+.IP \(bu 2
+Build a docker image and tag it:
+.RE
+.PP
+\fB\fCdocker build \-\-tag {{name:tag}} .\fR
+.RS
+.IP \(bu 2
+Build a docker image with no build context:
+.RE
+.PP
+\fB\fCdocker build \-\-tag {{name:tag}} \- < {{Dockerfile}}\fR
+.RS
+.IP \(bu 2
+Do not use the cache when building the image:
+.RE
+.PP
+\fB\fCdocker build \-\-no\-cache \-\-tag {{name:tag}} .\fR
+.RS
+.IP \(bu 2
+Build a docker image using a specific Dockerfile:
+.RE
+.PP
+\fB\fCdocker build \-\-file {{Dockerfile}} .\fR
+.RS
+.IP \(bu 2
+Build with custom build\-time variables:
+.RE
+.PP
+\fB\fCdocker build \-\-build\-arg {{HTTP_PROXY=http://10.20.30.2:1234}} \-\-build\-arg {{FTP_PROXY=http://40.50.60.5:4567}} .\fR

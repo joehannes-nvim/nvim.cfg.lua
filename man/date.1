@@ -1,0 +1,54 @@
+.TH date
+.PP
+.RS
+Set or display the system date.
+More information: \[la]https://www.gnu.org/software/coreutils/date\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the current date using the default locale's format:
+.RE
+.PP
+\fB\fCdate +%c\fR
+.RS
+.IP \(bu 2
+Display the current date in UTC, using the ISO 8601 format:
+.RE
+.PP
+\fB\fCdate \-u +%Y\-%m\-%dT%H:%M:%S%Z\fR
+.RS
+.IP \(bu 2
+Display the current date as a Unix timestamp (seconds since the Unix epoch):
+.RE
+.PP
+\fB\fCdate +%s\fR
+.RS
+.IP \(bu 2
+Convert a date specified as a Unix timestamp to the default format:
+.RE
+.PP
+\fB\fCdate \-d @{{1473305798}}\fR
+.RS
+.IP \(bu 2
+Convert a given date to the Unix timestamp format:
+.RE
+.PP
+\fB\fCdate \-d "{{2018\-09\-01 00:00}}" +%s \-\-utc\fR
+.RS
+.IP \(bu 2
+Display the current date using the RFC\-3339 format (\fB\fCYYYY\-MM\-DD hh:mm:ss TZ\fR):
+.RE
+.PP
+\fB\fCdate \-\-rfc\-3339=s\fR
+.RS
+.IP \(bu 2
+Set the current date using the format \fB\fCMMDDhhmmYYYY.ss\fR (\fB\fCYYYY\fR and \fB\fC\&.ss\fR are optional):
+.RE
+.PP
+\fB\fCdate {{093023592021.59}}\fR
+.RS
+.IP \(bu 2
+Display the current ISO week number:
+.RE
+.PP
+\fB\fCdate +%V\fR

@@ -1,0 +1,43 @@
+.TH mcfly
+.PP
+.RS
+A smart command history search and management tool.
+Replaces your default shell history search (ctrl\-r) with an intelligent search engine providing context and relevance to the commands.
+More information: \[la]https://github.com/cantino/mcfly\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the mcfly integration code for the specified shell:
+.RE
+.PP
+\fB\fCmcfly init {{bash|fish|zsh}}\fR
+.RS
+.IP \(bu 2
+Search the history for a command, with 20 results:
+.RE
+.PP
+\fB\fCmcfly search \-\-results {{20}} "{{search_terms}}"\fR
+.RS
+.IP \(bu 2
+Add a new command to the history:
+.RE
+.PP
+\fB\fCmcfly add "{{command}}"\fR
+.RS
+.IP \(bu 2
+Record that a directory has moved and transfer the historical records from the old path to the new one:
+.RE
+.PP
+\fB\fCmcfly move "{{path/to/old_directory}}" "{{path/to/new_directory}}"\fR
+.RS
+.IP \(bu 2
+Train the suggestion engine (developer tool):
+.RE
+.PP
+\fB\fCmcfly train\fR
+.RS
+.IP \(bu 2
+Display help for a specific subcommand:
+.RE
+.PP
+\fB\fCmcfly help {{subcommand}}\fR

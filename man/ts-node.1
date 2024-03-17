@@ -1,0 +1,42 @@
+.TH ts\-node
+.PP
+.RS
+Run TypeScript code directly, without any compiling.
+More information: \[la]https://typestrong.org/ts-node\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute a TypeScript file without compiling (\fB\fCnode\fR + \fB\fCtsc\fR):
+.RE
+.PP
+\fB\fCts\-node {{path/to/file.ts}}\fR
+.RS
+.IP \(bu 2
+Execute a TypeScript file without loading \fB\fCtsconfig.json\fR:
+.RE
+.PP
+\fB\fCts\-node \-\-skip\-project {{path/to/file.ts}}\fR
+.RS
+.IP \(bu 2
+Evaluate TypeScript code passed as a literal:
+.RE
+.PP
+\fB\fCts\-node \-\-eval '{{console.log("Hello World")}}'\fR
+.RS
+.IP \(bu 2
+Execute a TypeScript file in script mode:
+.RE
+.PP
+\fB\fCts\-node \-\-script\-mode {{path/to/file.ts}}\fR
+.RS
+.IP \(bu 2
+Transpile a TypeScript file to JavaScript without executing it:
+.RE
+.PP
+\fB\fCts\-node \-\-transpile\-only {{path/to/file.ts}}\fR
+.RS
+.IP \(bu 2
+Display TS\-Node help:
+.RE
+.PP
+\fB\fCts\-node \-\-help\fR

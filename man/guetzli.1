@@ -1,0 +1,24 @@
+.TH guetzli
+.PP
+.RS
+JPEG image compression utility.
+More information: \[la]https://github.com/google/guetzli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a JPEG image:
+.RE
+.PP
+\fB\fCguetzli {{input.jpg}} {{output.jpg}}\fR
+.RS
+.IP \(bu 2
+Create a compressed JPEG from a PNG:
+.RE
+.PP
+\fB\fCguetzli {{input.png}} {{output.jpg}}\fR
+.RS
+.IP \(bu 2
+Compress a JPEG with the desired visual quality (84\-100):
+.RE
+.PP
+\fB\fCguetzli \-\-quality {{quality_value}} {{input.jpg}} {{output.jpg}}\fR

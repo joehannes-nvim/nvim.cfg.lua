@@ -1,0 +1,36 @@
+.TH airpaste
+.PP
+.RS
+Share messages and files on the same network using mDNS.
+More information: \[la]https://github.com/mafintosh/airpaste\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Wait for a message and display it when received:
+.RE
+.PP
+\fB\fCairpaste\fR
+.RS
+.IP \(bu 2
+Send text:
+.RE
+.PP
+\fB\fCecho {{text}} | airpaste\fR
+.RS
+.IP \(bu 2
+Send a file:
+.RE
+.PP
+\fB\fCairpaste < {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Receive a file:
+.RE
+.PP
+\fB\fCairpaste > {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create or join a channel:
+.RE
+.PP
+\fB\fCairpaste {{channel_name}}\fR

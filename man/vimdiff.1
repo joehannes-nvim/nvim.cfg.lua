@@ -1,0 +1,55 @@
+.TH vimdiff
+.PP
+.RS
+Open up two or more files in vim and show the differences between them.
+See also \fB\fCvim\fR, \fB\fCvimtutor\fR, \fB\fCnvim\fR\&.
+More information: \[la]https://www.vim.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open two files and show the differences:
+.RE
+.PP
+\fB\fCvimdiff {{file1}} {{file2}}\fR
+.RS
+.IP \(bu 2
+Move the cursor to the window on the left|right:
+.RE
+.PP
+\fB\fCCtrl + w {{h|l}}\fR
+.RS
+.IP \(bu 2
+Jump to the previous difference:
+.RE
+.PP
+\fB\fC[c\fR
+.RS
+.IP \(bu 2
+Jump to the next difference:
+.RE
+.PP
+\fB\fC]c\fR
+.RS
+.IP \(bu 2
+Copy the highlighted difference from the other window to the current window:
+.RE
+.PP
+\fB\fCdo\fR
+.RS
+.IP \(bu 2
+Copy the highlighted difference from the current window to the other window:
+.RE
+.PP
+\fB\fCdp\fR
+.RS
+.IP \(bu 2
+Update all highlights and folds:
+.RE
+.PP
+\fB\fC:diffupdate\fR
+.RS
+.IP \(bu 2
+Toggle the highlighted code fold:
+.RE
+.PP
+\fB\fCza\fR

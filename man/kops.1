@@ -1,0 +1,42 @@
+.TH kops
+.PP
+.RS
+Create, destroy, upgrade and maintain Kubernetes clusters.
+More information: \[la]https://github.com/kubernetes/kops/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a cluster from the configuration specification:
+.RE
+.PP
+\fB\fCkops create cluster \-f {{cluster_name.yaml}}\fR
+.RS
+.IP \(bu 2
+Create a new ssh public key:
+.RE
+.PP
+\fB\fCkops create secret sshpublickey {{key_name}} \-i {{~/.ssh/id_rsa.pub}}\fR
+.RS
+.IP \(bu 2
+Export the cluster configuration to the \fB\fC~/.kube/config\fR file:
+.RE
+.PP
+\fB\fCkops export kubecfg {{cluster_name}}\fR
+.RS
+.IP \(bu 2
+Get the cluster configuration as YAML:
+.RE
+.PP
+\fB\fCkops get cluster {{cluster_name}} \-o yaml\fR
+.RS
+.IP \(bu 2
+Delete a cluster:
+.RE
+.PP
+\fB\fCkops delete cluster {{cluster_name}} \-\-yes\fR
+.RS
+.IP \(bu 2
+Validate a cluster:
+.RE
+.PP
+\fB\fCkops validate cluster {{cluster_name}} \-\-wait {{wait_time_until_ready}} \-\-count {{num_required_validations}}\fR

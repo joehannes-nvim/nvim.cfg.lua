@@ -1,0 +1,19 @@
+.TH lsyncd
+.PP
+.RS
+Watch files and directories and run \fB\fCrsync\fR when they change.
+It is often used to keep two directories on separate systems in sync, ensuring that changes made in one directory are immediately mirrored to the other.
+More information: \[la]https://github.com/lsyncd/lsyncd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Watch the source for changes and run \fB\fCrsync\fR to synchronize files to the destination on every change:
+.RE
+.PP
+\fB\fClsyncd \-rsync {{path/to/source}} {{host::share_name}}\fR
+.RS
+.IP \(bu 2
+Use SSH instead of \fB\fCrsyncd\fR shares:
+.RE
+.PP
+\fB\fClsyncd \-rsyncssh {{path/to/source}} {{host}} {{path/to/destination}}\fR

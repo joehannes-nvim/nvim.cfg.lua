@@ -1,0 +1,36 @@
+.TH pactl
+.PP
+.RS
+Control a running PulseAudio sound server.
+More information: \[la]https://manned.org/pactl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all sinks (or other types \- sinks are outputs and sink\-inputs are active audio streams):
+.RE
+.PP
+\fB\fCpactl list {{sinks}} short\fR
+.RS
+.IP \(bu 2
+Change the default sink (output) to 1 (the number can be retrieved via the \fB\fClist\fR subcommand):
+.RE
+.PP
+\fB\fCpactl set\-default\-sink {{1}}\fR
+.RS
+.IP \(bu 2
+Move sink\-input 627 to sink 1:
+.RE
+.PP
+\fB\fCpactl move\-sink\-input {{627}} {{1}}\fR
+.RS
+.IP \(bu 2
+Set the volume of sink 1 to 75%:
+.RE
+.PP
+\fB\fCpactl set\-sink\-volume {{1}} {{0.75}}\fR
+.RS
+.IP \(bu 2
+Toggle mute on the default sink (using the special name \fB\fC@DEFAULT_SINK@\fR):
+.RE
+.PP
+\fB\fCpactl set\-sink\-mute {{@DEFAULT_SINK@}} toggle\fR

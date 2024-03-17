@@ -1,0 +1,36 @@
+.TH bup
+.PP
+.RS
+Backup system based on the Git packfile format, providing incremental saves and global deduplication.
+More information: \[la]https://github.com/bup/bup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a backup repository in the specified local directory:
+.RE
+.PP
+\fB\fCbup \-d {{path/to/repository}} init\fR
+.RS
+.IP \(bu 2
+Prepare a given directory before taking a backup:
+.RE
+.PP
+\fB\fCbup \-d {{path/to/repository}} index {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Backup a directory to the repository:
+.RE
+.PP
+\fB\fCbup \-d {{path/to/repository}} save \-n {{backup_name}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Show the backup snapshots currently stored in the repository:
+.RE
+.PP
+\fB\fCbup \-d {{path/to/repository}} ls\fR
+.RS
+.IP \(bu 2
+Restore a specific backup snapshot to a target directory:
+.RE
+.PP
+\fB\fCbup \-d {{path/to/repository}} restore \-C {{path/to/target_directory}} {{backup_name}}\fR

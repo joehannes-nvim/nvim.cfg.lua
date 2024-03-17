@@ -1,0 +1,36 @@
+.TH skaffold
+.PP
+.RS
+A tool that facilitates continuous development for Kubernetes applications.
+More information: \[la]https://skaffold.dev\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build the artifacts:
+.RE
+.PP
+\fB\fCskaffold build \-f {{skaffold.yaml}}\fR
+.RS
+.IP \(bu 2
+Build and deploy your app every time your code changes:
+.RE
+.PP
+\fB\fCskaffold dev \-f {{skaffold.yaml}}\fR
+.RS
+.IP \(bu 2
+Run a pipeline file:
+.RE
+.PP
+\fB\fCskaffold run \-f {{skaffold.yaml}}\fR
+.RS
+.IP \(bu 2
+Run a diagnostic on Skaffold:
+.RE
+.PP
+\fB\fCskaffold diagnose \-f {{skaffold.yaml}}\fR
+.RS
+.IP \(bu 2
+Deploy the artifacts:
+.RE
+.PP
+\fB\fCskaffold deploy \-f {{skaffold.yaml}}\fR

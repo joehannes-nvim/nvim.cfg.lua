@@ -1,0 +1,54 @@
+.TH nping
+.PP
+.RS
+Network packet generation tool/ping utility.
+More information: \[la]https://nmap.org/nping/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ping a specified host using ICMP if the user is allowed to, otherwise using TCP:
+.RE
+.PP
+\fB\fCnping {{example.com}}\fR
+.RS
+.IP \(bu 2
+Ping a specified host using ICMP assuming that the user is allowed to do so:
+.RE
+.PP
+\fB\fCnping \-\-icmp \-\-privileged {{example.com}}\fR
+.RS
+.IP \(bu 2
+Ping a specified host using UDP:
+.RE
+.PP
+\fB\fCnping \-\-udp {{example.com}}\fR
+.RS
+.IP \(bu 2
+Ping a specified host on a given port using TCP:
+.RE
+.PP
+\fB\fCnping \-\-tcp \-\-dest\-port {{443}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Ping a certain number of times:
+.RE
+.PP
+\fB\fCnping \-\-count {{10}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Wait a certain amount of time between each ping:
+.RE
+.PP
+\fB\fCnping \-\-delay {{5s}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Send the request over a specified interface:
+.RE
+.PP
+\fB\fCnping \-\-interface {{eth0}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Set the Reserved/Evil bit in sent packets:
+.RE
+.PP
+\fB\fCnping \-\-evil {{example.com}}\fR

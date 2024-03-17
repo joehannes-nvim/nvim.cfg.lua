@@ -1,0 +1,42 @@
+.TH zfs
+.PP
+.RS
+Manage ZFS filesystems.
+More information: \[la]https://manned.org/zfs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available zfs filesystems:
+.RE
+.PP
+\fB\fCzfs list\fR
+.RS
+.IP \(bu 2
+Create a new ZFS filesystem:
+.RE
+.PP
+\fB\fCzfs create {{pool_name/filesystem_name}}\fR
+.RS
+.IP \(bu 2
+Delete a ZFS filesystem:
+.RE
+.PP
+\fB\fCzfs destroy {{pool_name/filesystem_name}}\fR
+.RS
+.IP \(bu 2
+Create a Snapshot of a ZFS filesystem:
+.RE
+.PP
+\fB\fCzfs snapshot {{pool_name/filesystem_name}}@{{snapshot_name}}\fR
+.RS
+.IP \(bu 2
+Enable compression on a filesystem:
+.RE
+.PP
+\fB\fCzfs set compression=on {{pool_name/filesystem_name}}\fR
+.RS
+.IP \(bu 2
+Change mountpoint for a filesystem:
+.RE
+.PP
+\fB\fCzfs set mountpoint={{/my/mount/path}} {{pool_name/filesystem_name}}\fR

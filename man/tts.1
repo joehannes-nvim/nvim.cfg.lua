@@ -1,0 +1,42 @@
+.TH tts
+.PP
+.RS
+Synthesize speech.
+More information: \[la]https://github.com/coqui-ai/TTS#command-line-tts\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run text\-to\-speech with the default models, writing the output to "tts_output.wav":
+.RE
+.PP
+\fB\fCtts \-\-text "{{text}}"\fR
+.RS
+.IP \(bu 2
+List provided models:
+.RE
+.PP
+\fB\fCtts \-\-list_models\fR
+.RS
+.IP \(bu 2
+Query info for a model by idx:
+.RE
+.PP
+\fB\fCtts \-\-model_info_by_idx {{model_type/model_query_idx}}\fR
+.RS
+.IP \(bu 2
+Query info for a model by name:
+.RE
+.PP
+\fB\fCtts \-\-model_info_by_name {{model_type/language/dataset/model_name}}\fR
+.RS
+.IP \(bu 2
+Run a text\-to\-speech model with its default vocoder model:
+.RE
+.PP
+\fB\fCtts \-\-text "{{text}}" \-\-model_name {{model_type/language/dataset/model_name}}\fR
+.RS
+.IP \(bu 2
+Run your own text\-to\-speech model (using the Griffin\-Lim vocoder):
+.RE
+.PP
+\fB\fCtts \-\-text "{{text}}" \-\-model_path {{path/to/model.pth}} \-\-config_path {{path/to/config.json}} \-\-out_path {{path/to/file.wav}}\fR

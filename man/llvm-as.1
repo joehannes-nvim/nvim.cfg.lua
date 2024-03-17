@@ -1,0 +1,24 @@
+.TH llvm\-as
+.PP
+.RS
+LLVM Intermediate Representation (\fB\fC\&.ll\fR) to Bitcode (\fB\fC\&.bc\fR) assembler.
+More information: \[la]https://llvm.org/docs/CommandGuide/llvm-as.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Assemble an IR file:
+.RE
+.PP
+\fB\fCllvm\-as \-o {{path/to/out.bc}} {{path/to/source.ll}}\fR
+.RS
+.IP \(bu 2
+Assemble an IR file and include a module hash in the produced Bitcode file:
+.RE
+.PP
+\fB\fCllvm\-as \-\-module\-hash \-o {{path/to/out.bc}} {{path/to/source.ll}}\fR
+.RS
+.IP \(bu 2
+Read an IR file from \fB\fCstdin\fR and assemble it:
+.RE
+.PP
+\fB\fCcat {{path/to/source.ll}} | llvm\-as \-o {{path/to/out.bc}}\fR

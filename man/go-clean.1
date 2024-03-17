@@ -1,0 +1,30 @@
+.TH go clean
+.PP
+.RS
+Remove object files and cached files.
+More information: \[la]https://golang.org/cmd/go/#hdr-Remove_object_files_and_cached_files\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the remove commands instead of actually removing anything:
+.RE
+.PP
+\fB\fCgo clean \-n\fR
+.RS
+.IP \(bu 2
+Delete the build cache:
+.RE
+.PP
+\fB\fCgo clean \-cache\fR
+.RS
+.IP \(bu 2
+Delete all cached test results:
+.RE
+.PP
+\fB\fCgo clean \-testcache\fR
+.RS
+.IP \(bu 2
+Delete the module cache:
+.RE
+.PP
+\fB\fCgo clean \-modcache\fR

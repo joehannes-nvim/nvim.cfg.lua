@@ -1,0 +1,54 @@
+.TH python
+.PP
+.RS
+Python language interpreter.
+More information: \[la]https://www.python.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCpython\fR
+.RS
+.IP \(bu 2
+Execute a specific Python file:
+.RE
+.PP
+\fB\fCpython {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Execute a specific Python file and start a REPL:
+.RE
+.PP
+\fB\fCpython \-i {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Execute a Python expression:
+.RE
+.PP
+\fB\fCpython \-c "{{expression}}"\fR
+.RS
+.IP \(bu 2
+Run the script of the specified library module:
+.RE
+.PP
+\fB\fCpython \-m {{module}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Install a package using \fB\fCpip\fR:
+.RE
+.PP
+\fB\fCpython \-m pip install {{package}}\fR
+.RS
+.IP \(bu 2
+Interactively debug a Python script:
+.RE
+.PP
+\fB\fCpython \-m {{pdb}} {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Start the built\-in HTTP server on port 8000 in the current directory:
+.RE
+.PP
+\fB\fCpython \-m {{http.server}}\fR

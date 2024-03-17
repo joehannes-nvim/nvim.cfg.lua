@@ -1,0 +1,30 @@
+.TH liquidctl
+.PP
+.RS
+Control liquid coolers.
+More information: \[la]https://github.com/liquidctl/liquidctl\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available devices:
+.RE
+.PP
+\fB\fCliquidctl list\fR
+.RS
+.IP \(bu 2
+Initialize all supported devices:
+.RE
+.PP
+\fB\fCsudo liquidctl initialize all\fR
+.RS
+.IP \(bu 2
+Print the status of available liquid coolers:
+.RE
+.PP
+\fB\fCliquidctl status\fR
+.RS
+.IP \(bu 2
+Match a string in product name to pick a device and set its fan speed to 0% at 20°C, 50% at 50°C and 100% at 70°C:
+.RE
+.PP
+\fB\fCliquidctl \-\-match {{string}} set fan speed {{20 0 50 50 70 100}}\fR

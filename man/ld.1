@@ -1,0 +1,24 @@
+.TH ld
+.PP
+.RS
+Link object files together.
+More information: \[la]https://sourceware.org/binutils/docs-2.38/ld.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Link a specific object file with no dependencies into an executable:
+.RE
+.PP
+\fB\fCld {{path/to/file.o}} \-\-output {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Link two object files together:
+.RE
+.PP
+\fB\fCld {{path/to/file1.o}} {{path/to/file2.o}} \-\-output {{path/to/output_executable}}\fR
+.RS
+.IP \(bu 2
+Dynamically link an x86_64 program to glibc (file paths change depending on the system):
+.RE
+.PP
+\fB\fCld \-\-output {{path/to/output_executable}} \-\-dynamic\-linker /lib/ld\-linux\-x86\-64.so.2 /lib/crt1.o /lib/crti.o \-lc {{path/to/file.o}} /lib/crtn.o\fR

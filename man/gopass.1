@@ -1,0 +1,54 @@
+.TH gopass
+.PP
+.RS
+Standard Unix Password Manager for Teams. Written in Go.
+More information: \[la]https://www.gopass.pw\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize the configuration settings:
+.RE
+.PP
+\fB\fCgopass init\fR
+.RS
+.IP \(bu 2
+Create a new entry:
+.RE
+.PP
+\fB\fCgopass new\fR
+.RS
+.IP \(bu 2
+Show all stores:
+.RE
+.PP
+\fB\fCgopass mounts\fR
+.RS
+.IP \(bu 2
+Mount a shared Git store:
+.RE
+.PP
+\fB\fCgopass mounts add {{store_name}} {{git_repo_url}}\fR
+.RS
+.IP \(bu 2
+Search interactively using a keyword:
+.RE
+.PP
+\fB\fCgopass show {{keyword}}\fR
+.RS
+.IP \(bu 2
+Search using a keyword:
+.RE
+.PP
+\fB\fCgopass find {{keyword}}\fR
+.RS
+.IP \(bu 2
+Sync all mounted stores:
+.RE
+.PP
+\fB\fCgopass sync\fR
+.RS
+.IP \(bu 2
+Show a particular password entry:
+.RE
+.PP
+\fB\fCgopass {{store_name|path/to/directory|email@email.com}}\fR

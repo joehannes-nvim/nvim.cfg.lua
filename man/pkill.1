@@ -1,0 +1,37 @@
+.TH pkill
+.PP
+.RS
+Signal process by name.
+Mostly used for stopping processes.
+More information: \[la]https://www.man7.org/linux/man-pages/man1/pkill.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Kill all processes which match:
+.RE
+.PP
+\fB\fCpkill "{{process_name}}"\fR
+.RS
+.IP \(bu 2
+Kill all processes which match their full command instead of just the process name:
+.RE
+.PP
+\fB\fCpkill \-f "{{command_name}}"\fR
+.RS
+.IP \(bu 2
+Force kill matching processes (can't be blocked):
+.RE
+.PP
+\fB\fCpkill \-9 "{{process_name}}"\fR
+.RS
+.IP \(bu 2
+Send SIGUSR1 signal to processes which match:
+.RE
+.PP
+\fB\fCpkill \-USR1 "{{process_name}}"\fR
+.RS
+.IP \(bu 2
+Kill the main \fB\fCfirefox\fR process to close the browser:
+.RE
+.PP
+\fB\fCpkill \-\-oldest "{{firefox}}"\fR

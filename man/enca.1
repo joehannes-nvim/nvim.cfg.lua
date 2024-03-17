@@ -1,0 +1,36 @@
+.TH enca
+.PP
+.RS
+Detect and convert the encoding of text files.
+More information: \[la]https://github.com/nijel/enca\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Detect 
+.BR file (s) 
+encoding according to the system's locale:
+.RE
+.PP
+\fB\fCenca {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Detect 
+.BR file (s) 
+encoding specifying a language in the POSIX/C locale format (e.g. zh\fICN, en\fPUS):
+.RE
+.PP
+\fB\fCenca \-L {{language}} {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Convert 
+.BR file (s) 
+to a specific encoding:
+.RE
+.PP
+\fB\fCenca \-L {{language}} \-x {{to_encoding}} {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Create a copy of an existing file using a different encoding:
+.RE
+.PP
+\fB\fCenca \-L {{language}} \-x {{to_encoding}} < {{original_file}} > {{new_file}}\fR

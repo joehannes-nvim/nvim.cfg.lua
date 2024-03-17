@@ -1,0 +1,54 @@
+.TH cf
+.PP
+.RS
+Command\-line tool to manage apps and services on Cloud Foundry.
+More information: \[la]https://docs.cloudfoundry.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Log in to the Cloud Foundry API:
+.RE
+.PP
+\fB\fCcf login \-a {{api_url}}\fR
+.RS
+.IP \(bu 2
+Push an app using the default settings:
+.RE
+.PP
+\fB\fCcf push {{app_name}}\fR
+.RS
+.IP \(bu 2
+View the services available from your organization:
+.RE
+.PP
+\fB\fCcf marketplace\fR
+.RS
+.IP \(bu 2
+Create a service instance:
+.RE
+.PP
+\fB\fCcf create\-service {{service}} {{plan}} {{service_name}}\fR
+.RS
+.IP \(bu 2
+Connect an application to a service:
+.RE
+.PP
+\fB\fCcf bind\-service {{app_name}} {{service_name}}\fR
+.RS
+.IP \(bu 2
+Run a script whose code is included in the app, but runs independently:
+.RE
+.PP
+\fB\fCcf run\-task {{app_name}} "{{script_command}}" \-\-name {{task_name}}\fR
+.RS
+.IP \(bu 2
+Start an interactive SSH session with a VM hosting an app:
+.RE
+.PP
+\fB\fCcf ssh {{app_name}}\fR
+.RS
+.IP \(bu 2
+View a dump of recent app logs:
+.RE
+.PP
+\fB\fCcf logs {{app_name}} \-\-recent\fR

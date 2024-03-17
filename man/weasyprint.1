@@ -1,0 +1,36 @@
+.TH weasyprint
+.PP
+.RS
+Render HTML to PDF or PNG.
+More information: \[la]https://weasyprint.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Render an HTML file to PDF:
+.RE
+.PP
+\fB\fCweasyprint {{path/to/input.html}} {{path/to/output}}.pdf\fR
+.RS
+.IP \(bu 2
+Render an HTML file to PNG, including an additional user stylesheet:
+.RE
+.PP
+\fB\fCweasyprint {{path/to/input.html}} {{path/to/output}}.png \-\-stylesheet {{path/to/stylesheet.css}}\fR
+.RS
+.IP \(bu 2
+Output additional debugging information when rendering:
+.RE
+.PP
+\fB\fCweasyprint {{path/to/input.html}} {{path/to/output}}.pdf \-\-verbose\fR
+.RS
+.IP \(bu 2
+Specify a custom resolution when outputting to PNG:
+.RE
+.PP
+\fB\fCweasyprint {{path/to/input.html}} {{path/to/output}}.png \-\-resolution {{300}}\fR
+.RS
+.IP \(bu 2
+Specify a base URL for relative URLs in the input HTML file:
+.RE
+.PP
+\fB\fCweasyprint {{path/to/input.html}} {{path/to/output}}.png \-\-base\-url {{url_or_filename}}\fR

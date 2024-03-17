@@ -1,0 +1,48 @@
+.TH redis\-benchmark
+.PP
+.RS
+A tool to benchmark a Redis server.
+More information: \[la]https://redis.io/docs/reference/optimization/benchmarks/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run full benchmark:
+.RE
+.PP
+\fB\fCredis\-benchmark\fR
+.RS
+.IP \(bu 2
+Run benchmark on a specific Redis server:
+.RE
+.PP
+\fB\fCredis\-benchmark \-h {{host}} \-p {{port}} \-a {{password}}\fR
+.RS
+.IP \(bu 2
+Run a subset of tests with default 100000 requests:
+.RE
+.PP
+\fB\fCredis\-benchmark \-h {{host}} \-p {{port}} \-t {{set,lpush}} \-n {{100000}}\fR
+.RS
+.IP \(bu 2
+Run with a specific script:
+.RE
+.PP
+\fB\fCredis\-benchmark \-n {{100000}} script load "{{redis.call('set', 'foo', 'bar')}}"\fR
+.RS
+.IP \(bu 2
+Run benchmark by using 100000 [r]andom keys:
+.RE
+.PP
+\fB\fCredis\-benchmark \-t {{set}} \-r {{100000}}\fR
+.RS
+.IP \(bu 2
+Run benchmark by using a [P]ipelining of 16 commands:
+.RE
+.PP
+\fB\fCredis\-benchmark \-n {{1000000}} \-t {{set,get}} \-P {{16}}\fR
+.RS
+.IP \(bu 2
+Run benchmark [q]uietly and only show query per seconds result:
+.RE
+.PP
+\fB\fCredis\-benchmark \-q\fR

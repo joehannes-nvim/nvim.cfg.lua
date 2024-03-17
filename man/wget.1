@@ -1,0 +1,55 @@
+.TH wget
+.PP
+.RS
+Download files from the Web.
+Supports HTTP, HTTPS, and FTP.
+More information: \[la]https://www.gnu.org/software/wget\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Download the contents of a URL to a file (named "foo" in this case):
+.RE
+.PP
+\fB\fCwget {{https://example.com/foo}}\fR
+.RS
+.IP \(bu 2
+Download the contents of a URL to a file (named "bar" in this case):
+.RE
+.PP
+\fB\fCwget \-\-output\-document {{bar}} {{https://example.com/foo}}\fR
+.RS
+.IP \(bu 2
+Download a single web page and all its resources with 3\-second intervals between requests (scripts, stylesheets, images, etc.):
+.RE
+.PP
+\fB\fCwget \-\-page\-requisites \-\-convert\-links \-\-wait=3 {{https://example.com/somepage.html}}\fR
+.RS
+.IP \(bu 2
+Download all listed files within a directory and its sub\-directories (does not download embedded page elements):
+.RE
+.PP
+\fB\fCwget \-\-mirror \-\-no\-parent {{https://example.com/somepath/}}\fR
+.RS
+.IP \(bu 2
+Limit the download speed and the number of connection retries:
+.RE
+.PP
+\fB\fCwget \-\-limit\-rate={{300k}} \-\-tries={{100}} {{https://example.com/somepath/}}\fR
+.RS
+.IP \(bu 2
+Download a file from an HTTP server using Basic Auth (also works for FTP):
+.RE
+.PP
+\fB\fCwget \-\-user={{username}} \-\-password={{password}} {{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Continue an incomplete download:
+.RE
+.PP
+\fB\fCwget \-\-continue {{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Download all URLs stored in a text file to a specific directory:
+.RE
+.PP
+\fB\fCwget \-\-directory\-prefix {{path/to/directory}} \-\-input\-file {{URLs.txt}}\fR

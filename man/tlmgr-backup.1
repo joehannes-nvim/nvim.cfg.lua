@@ -1,0 +1,37 @@
+.TH tlmgr backup
+.PP
+.RS
+Manage backups of TeX Live packages.
+The default backup directory is specified by the \fB\fCbackupdir\fR option, and can be obtained with \fB\fCtlmgr option\fR\&.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Make a backup of one or more packages:
+.RE
+.PP
+\fB\fCtlmgr backup {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Make a backup of all packages:
+.RE
+.PP
+\fB\fCtlmgr backup \-\-all\fR
+.RS
+.IP \(bu 2
+Make a backup to a custom directory:
+.RE
+.PP
+\fB\fCtlmgr backup {{package}} \-\-backupdir {{path/to/backup_directory}}\fR
+.RS
+.IP \(bu 2
+Remove a backup of one or more packages:
+.RE
+.PP
+\fB\fCtlmgr backup clean {{package1 package2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove all backups:
+.RE
+.PP
+\fB\fCtlmgr backup clean \-\-all\fR

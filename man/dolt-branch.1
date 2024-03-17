@@ -1,0 +1,54 @@
+.TH dolt branch
+.PP
+.RS
+Manage Dolt branches.
+More information: \[la]https://github.com/dolthub/dolt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List local branches (current branch is highlighted by \fB\fC*\fR):
+.RE
+.PP
+\fB\fCdolt branch\fR
+.RS
+.IP \(bu 2
+List all local and remote branches:
+.RE
+.PP
+\fB\fCdolt branch \-\-all\fR
+.RS
+.IP \(bu 2
+Create a new branch based on the current branch:
+.RE
+.PP
+\fB\fCdolt branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a new branch with the specified commit as the latest:
+.RE
+.PP
+\fB\fCdolt branch {{branch_name}} {{commit}}\fR
+.RS
+.IP \(bu 2
+Rename a branch:
+.RE
+.PP
+\fB\fCdolt branch \-\-move {{branch_name1}} {{branch_name2}}\fR
+.RS
+.IP \(bu 2
+Duplicate a branch:
+.RE
+.PP
+\fB\fCdolt branch \-\-copy {{branch_name1}} {{branch_name2}}\fR
+.RS
+.IP \(bu 2
+Delete a branch:
+.RE
+.PP
+\fB\fCdolt branch \-\-delete {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Display the name of the current branch:
+.RE
+.PP
+\fB\fCdolt branch \-\-show\-current\fR

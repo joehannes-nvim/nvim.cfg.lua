@@ -1,0 +1,18 @@
+.TH dexter
+.PP
+.RS
+Tool for authenticating the kubectl users with OpenId Connect.
+More information: \[la]https://github.com/gini/dexter\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create and authenticate a user with Google OIDC:
+.RE
+.PP
+\fB\fCdexter auth \-i {{client_id}} \-s {{client_secret}}\fR
+.RS
+.IP \(bu 2
+Override the default kube config location:
+.RE
+.PP
+\fB\fCdexter auth \-i {{client_id}} \-s {{client_secret}} \-\-kube\-config {{sample/config}}\fR

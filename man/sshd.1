@@ -1,0 +1,31 @@
+.TH sshd
+.PP
+.RS
+Secure Shell Daemon \- allows remote machines to securely log in to the current machine.
+Remote machines can execute commands as it is executed at this machine.
+More information: \[la]https://man.openbsd.org/sshd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start daemon in the background:
+.RE
+.PP
+\fB\fCsshd\fR
+.RS
+.IP \(bu 2
+Run sshd in the foreground:
+.RE
+.PP
+\fB\fCsshd \-D\fR
+.RS
+.IP \(bu 2
+Run with verbose output (for debugging):
+.RE
+.PP
+\fB\fCsshd \-D \-d\fR
+.RS
+.IP \(bu 2
+Run on a specific port:
+.RE
+.PP
+\fB\fCsshd \-p {{port}}\fR

@@ -1,0 +1,24 @@
+.TH cotton
+.PP
+.RS
+Markdown test specification runner.
+More information: \[la]https://github.com/chonla/cotton\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use a specific base URL:
+.RE
+.PP
+\fB\fCcotton \-u {{base_url}} {{path/to/file}}.md\fR
+.RS
+.IP \(bu 2
+Disable certificate verification (insecure mode):
+.RE
+.PP
+\fB\fCcotton \-u {{base_url}} \-i {{path/to/file}}.md\fR
+.RS
+.IP \(bu 2
+Stop running when a test fails:
+.RE
+.PP
+\fB\fCcotton \-u {{base_url}} \-s {{path/to/file}}.md\fR

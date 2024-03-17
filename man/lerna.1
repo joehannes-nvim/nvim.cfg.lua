@@ -1,0 +1,36 @@
+.TH lerna
+.PP
+.RS
+A tool for managing JavaScript projects with multiple packages.
+More information: \[la]https://lerna.js.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize project files (\fB\fClerna.json\fR, \fB\fCpackage.json\fR, \fB\fC\&.git\fR, etc.):
+.RE
+.PP
+\fB\fClerna init\fR
+.RS
+.IP \(bu 2
+Install all external dependencies of each package and symlink together local dependencies:
+.RE
+.PP
+\fB\fClerna bootstrap\fR
+.RS
+.IP \(bu 2
+Run a specific script for every package that contains it in its \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fClerna run {{script}}\fR
+.RS
+.IP \(bu 2
+Execute an arbitrary shell command in every package:
+.RE
+.PP
+\fB\fClerna exec \-\- {{ls}}\fR
+.RS
+.IP \(bu 2
+Publish all packages that have changed since the last release:
+.RE
+.PP
+\fB\fClerna publish\fR

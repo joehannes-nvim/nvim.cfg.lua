@@ -1,0 +1,54 @@
+.TH keepassxc\-cli
+.PP
+.RS
+Command\-line interface for KeepassXC.
+More information: \[la]https://manned.org/keepassxc-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search entries:
+.RE
+.PP
+\fB\fCkeepassxc\-cli lookup {{path/to/database_file}} {{name}}\fR
+.RS
+.IP \(bu 2
+List the contents of a folder:
+.RE
+.PP
+\fB\fCkeepassxc\-cli ls {{path/to/database_file}} {{/path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Add an entry with an auto\-generated password:
+.RE
+.PP
+\fB\fCkeepassxc\-cli add \-\-generate {{path/to/database_file}} {{entry_name}}\fR
+.RS
+.IP \(bu 2
+Delete an entry:
+.RE
+.PP
+\fB\fCkeepassxc\-cli rm {{path/to/database_file}} {{entry_name}}\fR
+.RS
+.IP \(bu 2
+Copy an entry's password to the clipboard:
+.RE
+.PP
+\fB\fCkeepassxc\-cli clip {{path/to/database_file}} {{entry_name}}\fR
+.RS
+.IP \(bu 2
+Copy a TOTP code to the clipboard:
+.RE
+.PP
+\fB\fCkeepassxc\-cli clip \-\-totp {{path/to/database_file}} {{entry_name}}\fR
+.RS
+.IP \(bu 2
+Generate a passphrase with 7 words:
+.RE
+.PP
+\fB\fCkeepassxc\-cli diceware \-\-words {{7}}\fR
+.RS
+.IP \(bu 2
+Generate a password with 16 printable ASCII characters:
+.RE
+.PP
+\fB\fCkeepassxc\-cli generate \-\-lower \-\-upper \-\-numeric \-\-special \-\-length {{16}}\fR

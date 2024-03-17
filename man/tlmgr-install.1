@@ -1,0 +1,36 @@
+.TH tlmgr install
+.PP
+.RS
+Install TeX Live packages.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package and its dependencies:
+.RE
+.PP
+\fB\fCsudo tlmgr install {{package}}\fR
+.RS
+.IP \(bu 2
+Reinstall a package:
+.RE
+.PP
+\fB\fCsudo tlmgr install \-\-reinstall {{package}}\fR
+.RS
+.IP \(bu 2
+Simulate installing a package without making any changes:
+.RE
+.PP
+\fB\fCtlmgr install \-\-dry\-run {{package}}\fR
+.RS
+.IP \(bu 2
+Install a package without its dependencies:
+.RE
+.PP
+\fB\fCsudo tlmgr install \-\-no\-depends {{package}}\fR
+.RS
+.IP \(bu 2
+Install a package from a specific file:
+.RE
+.PP
+\fB\fCsudo tlmgr install \-\-file {{path/to/package}}\fR

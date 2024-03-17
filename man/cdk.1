@@ -1,0 +1,49 @@
+.TH cdk
+.PP
+.RS
+A CLI for AWS Cloud Development Kit (CDK).
+More information: \[la]https://docs.aws.amazon.com/cdk/latest/guide/cli.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the stacks in the app:
+.RE
+.PP
+\fB\fCcdk ls\fR
+.RS
+.IP \(bu 2
+Synthesize and print the CloudFormation template for the specified 
+.BR stack (s):
+.RE
+.PP
+\fB\fCcdk synth {{stack_name}}\fR
+.RS
+.IP \(bu 2
+Deploy a space\-separated list of stacks:
+.RE
+.PP
+\fB\fCcdk deploy {{stack_name}}\fR
+.RS
+.IP \(bu 2
+Destroy a space\-separated list of stacks:
+.RE
+.PP
+\fB\fCcdk destroy {{stack_name}}\fR
+.RS
+.IP \(bu 2
+Compare the specified stack with the deployed stack or a local CloudFormation template:
+.RE
+.PP
+\fB\fCcdk diff {{stack_name}}\fR
+.RS
+.IP \(bu 2
+Create a new CDK project in the current directory for a specified language:
+.RE
+.PP
+\fB\fCcdk init \-l {{language_name}}\fR
+.RS
+.IP \(bu 2
+Open the CDK API reference in your browser:
+.RE
+.PP
+\fB\fCcdk docs\fR

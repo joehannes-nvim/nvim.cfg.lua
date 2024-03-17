@@ -1,0 +1,30 @@
+.TH shuf
+.PP
+.RS
+Generate random permutations.
+More information: \[la]https://www.gnu.org/software/coreutils/shuf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Randomize the order of lines in a file and output the result:
+.RE
+.PP
+\fB\fCshuf {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Only output the first 5 entries of the result:
+.RE
+.PP
+\fB\fCshuf \-\-head\-count={{5}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Write the output to another file:
+.RE
+.PP
+\fB\fCshuf {{path/to/input}} \-\-output={{path/to/output}}\fR
+.RS
+.IP \(bu 2
+Generate 3 random numbers in the range 1\-10 (inclusive):
+.RE
+.PP
+\fB\fCshuf \-\-head\-count={{3}} \-\-input\-range={{1\-10}} \-\-repeat\fR

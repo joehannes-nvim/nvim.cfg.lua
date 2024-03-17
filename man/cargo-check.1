@@ -1,0 +1,36 @@
+.TH cargo check
+.PP
+.RS
+Check a local package and all of its dependencies for errors.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-check.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the current package:
+.RE
+.PP
+\fB\fCcargo check\fR
+.RS
+.IP \(bu 2
+Check all tests:
+.RE
+.PP
+\fB\fCcargo check \-\-tests\fR
+.RS
+.IP \(bu 2
+Check the integration tests in \fB\fCtests/integration_test1.rs\fR:
+.RE
+.PP
+\fB\fCcargo check \-\-test {{integration_test1}}\fR
+.RS
+.IP \(bu 2
+Check the current package with the features \fB\fCfeature1\fR and \fB\fCfeature2\fR:
+.RE
+.PP
+\fB\fCcargo check \-\-features {{feature1,feature2}}\fR
+.RS
+.IP \(bu 2
+Check the current package with default features disabled:
+.RE
+.PP
+\fB\fCcargo check \-\-no\-default\-features\fR

@@ -1,0 +1,30 @@
+.TH podman rmi
+.PP
+.RS
+Remove one or more Podman images.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-rmi.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove one or more images given their names:
+.RE
+.PP
+\fB\fCpodman rmi {{image:tag}} {{image2:tag}} {{...}}\fR
+.RS
+.IP \(bu 2
+Force remove an image:
+.RE
+.PP
+\fB\fCpodman rmi \-\-force {{image}}\fR
+.RS
+.IP \(bu 2
+Remove an image without deleting untagged parents:
+.RE
+.PP
+\fB\fCpodman rmi \-\-no\-prune {{image}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCpodman rmi\fR

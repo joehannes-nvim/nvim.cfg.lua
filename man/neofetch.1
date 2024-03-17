@@ -1,0 +1,30 @@
+.TH neofetch
+.PP
+.RS
+Display information about your operating system, software and hardware.
+More information: \[la]https://github.com/dylanaraps/neofetch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Return the default config, and create it if it's the first time the program runs:
+.RE
+.PP
+\fB\fCneofetch\fR
+.RS
+.IP \(bu 2
+Trigger an info line from appearing in the output, where 'infoname' is the function name in the config file, e.g. memory:
+.RE
+.PP
+\fB\fCneofetch \-\-{{enable|disable}} {{infoname}}\fR
+.RS
+.IP \(bu 2
+Hide/Show OS architecture:
+.RE
+.PP
+\fB\fCneofetch \-\-os_arch {{on|off}}\fR
+.RS
+.IP \(bu 2
+Enable/Disable CPU brand in output:
+.RE
+.PP
+\fB\fCneofetch \-\-cpu_brand {{on|off}}\fR

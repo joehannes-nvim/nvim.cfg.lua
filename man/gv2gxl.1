@@ -1,0 +1,25 @@
+.TH gv2gxl
+.PP
+.RS
+Convert a graph from \fB\fCgv\fR to \fB\fCgxl\fR format.
+Converters: \fB\fCgml2gv\fR, \fB\fCgv2gml\fR, \fB\fCgv2gxl\fR, \fB\fCgxl2gv\fR, \fB\fCgraphml2gv\fR & \fB\fCmm2gv\fR\&.
+More information: \[la]https://graphviz.org/pdf/gxl2gv.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a graph from \fB\fCgv\fR to \fB\fCgxl\fR format:
+.RE
+.PP
+\fB\fCgv2gxl \-o {{output.gxl}} {{input.gv}}\fR
+.RS
+.IP \(bu 2
+Convert a graph using \fB\fCstdin\fR and \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcat {{input.gv}} | gv2gxl > {{output.gxl}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgv2gxl \-?\fR

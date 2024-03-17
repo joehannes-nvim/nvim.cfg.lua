@@ -1,0 +1,48 @@
+.TH nodemon
+.PP
+.RS
+Watch files and automatically restart a node application when changes are detected.
+More information: \[la]https://nodemon.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Execute the specified file and watch a specific file for changes:
+.RE
+.PP
+\fB\fCnodemon {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Manually restart nodemon (note nodemon must already be active for this to work):
+.RE
+.PP
+\fB\fCrs\fR
+.RS
+.IP \(bu 2
+Ignore specific files:
+.RE
+.PP
+\fB\fCnodemon \-\-ignore {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Pass arguments to the node application:
+.RE
+.PP
+\fB\fCnodemon {{path/to/file.js}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Pass arguments to node itself if they're not nodemon arguments already (e.g. \fB\fC\-\-inspect\fR):
+.RE
+.PP
+\fB\fCnodemon {{arguments}} {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Run an arbitrary non\-node script:
+.RE
+.PP
+\fB\fCnodemon \-\-exec "{{command_to_run_script}} {{options}}" {{path/to/script}}\fR
+.RS
+.IP \(bu 2
+Run a Python script:
+.RE
+.PP
+\fB\fCnodemon \-\-exec "python {{options}}" {{path/to/file.py}}\fR

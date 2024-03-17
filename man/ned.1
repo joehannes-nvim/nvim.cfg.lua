@@ -1,0 +1,55 @@
+.TH ned
+.PP
+.RS
+Is like \fB\fCgrep\fR but with powerful replace capabilities.
+Unlike \fB\fCsed\fR, as it isn't restricted to line oriented editing.
+More information: \[la]https://github.com/nevdelap/ned\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively search starting in the current directory, ignoring case:
+.RE
+.PP
+\fB\fCned \-\-ignore\-case \-\-recursive '{{^[dl]og}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Search always showing colored output:
+.RE
+.PP
+\fB\fCned \-\-colors '{{^[dl]og}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Search never showing colored output:
+.RE
+.PP
+\fB\fCned \-\-colors=never '{{^[dl]og}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Search ignoring certain files:
+.RE
+.PP
+\fB\fCned \-\-recursive \-\-exclude '{{*.htm}}' '{{^[dl]og}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Simple replace:
+.RE
+.PP
+\fB\fCned '{{dog}}' \-\-replace '{{cat}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Replace using numbered group references:
+.RE
+.PP
+\fB\fCned '{{the ([a\-z]+) dog and the ([a\-z]+) dog}}' \-\-replace '{{the $2 dog and the $1 dog}}' {{.}}\fR
+.RS
+.IP \(bu 2
+Replace changing case:
+.RE
+.PP
+\fB\fCned '{{([a\-z]+) dog}}' \-\-case\-replacements \-\-replace '{{\\U$1\\E! dog}}' \-\-stdout {{.}}\fR
+.RS
+.IP \(bu 2
+Preview results of a find and replace without updating the target files:
+.RE
+.PP
+\fB\fCned '{{^[sb]ad}}' \-\-replace '{{happy}}' \-\-stdout {{.}}\fR

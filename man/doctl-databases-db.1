@@ -1,0 +1,36 @@
+.TH doctl databases db
+.PP
+.RS
+Manage specific databases that are served by a database cluster.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/db\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases db\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases db {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Retrieve the name of the given database hosted in the given database cluster:
+.RE
+.PP
+\fB\fCdoctl databases db get {{database_id}} {{database_name}}\fR
+.RS
+.IP \(bu 2
+List existing databases hosted within a given database cluster:
+.RE
+.PP
+\fB\fCdoctl databases db list {{database_id}}\fR
+.RS
+.IP \(bu 2
+Create a database with the given name in the given database cluster:
+.RE
+.PP
+\fB\fCdoctl databases db create {{database_id}} {{database_name}}\fR
+.RS
+.IP \(bu 2
+Delete the database with the given name in the given database cluster:
+.RE
+.PP
+\fB\fCdoctl databases db delete {{database_id}} {{database_name}}\fR

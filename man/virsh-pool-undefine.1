@@ -1,0 +1,13 @@
+.TH virsh pool\-undefine
+.PP
+.RS
+Delete the configuration file in \fB\fC/etc/libvirt/storage\fR for a stopped virtual machine storage pool.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-destroy\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete the configuration for the storage pool specified name or UUID (determine using \fB\fCvirsh pool\-list\fR):
+.RE
+.PP
+\fB\fCvirsh pool\-undefine \-\-pool {{name|uuid}}\fR

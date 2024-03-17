@@ -1,0 +1,30 @@
+.TH gh ssh\-key
+.PP
+.RS
+Manage GitHub SSH keys.
+More information: \[la]https://cli.github.com/manual/gh_ssh-key\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgh ssh\-key\fR
+.RS
+.IP \(bu 2
+List SSH keys for the currently authenticated user:
+.RE
+.PP
+\fB\fCgh ssh\-key list\fR
+.RS
+.IP \(bu 2
+Add an SSH key to the currently authenticated user's account:
+.RE
+.PP
+\fB\fCgh ssh\-key add {{path/to/key.pub}}\fR
+.RS
+.IP \(bu 2
+Add an SSH key to the currently authenticated user's account with a specific title:
+.RE
+.PP
+\fB\fCgh ssh\-key add \-\-title {{title}} {{path/to/key.pub}}\fR

@@ -1,0 +1,24 @@
+.TH protoc
+.PP
+.RS
+Parse Google Protobuf \fB\fC\&.proto\fR files and generate output in the specified language.
+More information: \[la]https://developers.google.com/protocol-buffers\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate Python code from a \fB\fC\&.proto\fR file:
+.RE
+.PP
+\fB\fCprotoc \-\-python_out={{path/to/output_directory}} {{input_file.proto}}\fR
+.RS
+.IP \(bu 2
+Generate Java code from a \fB\fC\&.proto\fR file that imports other \fB\fC\&.proto\fR files:
+.RE
+.PP
+\fB\fCprotoc \-\-java_out={{path/to/output_directory}} \-\-proto_path={{path/to/import_search_path}} {{input_file.proto}}\fR
+.RS
+.IP \(bu 2
+Generate code for multiple languages:
+.RE
+.PP
+\fB\fCprotoc \-\-csharp_out={{path/to/c#_output_directory}} \-\-js_out={{path/to/js_output_directory}} {{input_file.proto}}\fR

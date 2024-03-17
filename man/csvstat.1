@@ -1,0 +1,37 @@
+.TH csvstat
+.PP
+.RS
+Print descriptive statistics for all columns in a CSV file.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/csvstat.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all stats for all columns:
+.RE
+.PP
+\fB\fCcsvstat {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Show all stats for columns 2 and 4:
+.RE
+.PP
+\fB\fCcsvstat \-c {{2,4}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Show sums for all columns:
+.RE
+.PP
+\fB\fCcsvstat \-\-sum {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Show the max value length for column 3:
+.RE
+.PP
+\fB\fCcsvstat \-c {{3}} \-\-len {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Show the number of unique values in the "name" column:
+.RE
+.PP
+\fB\fCcsvstat \-c {{name}} \-\-unique {{data.csv}}\fR

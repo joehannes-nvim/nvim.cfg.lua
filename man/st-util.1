@@ -1,0 +1,24 @@
+.TH st\-util
+.PP
+.RS
+Run GDB (GNU Debugger) server to interact with STM32 ARM Cortex microcontoller.
+More information: \[la]https://github.com/texane/stlink\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run GDB server on port 4500:
+.RE
+.PP
+\fB\fCst\-util \-p {{4500}}\fR
+.RS
+.IP \(bu 2
+Connect to GDB server:
+.RE
+.PP
+\fB\fC(gdb) target extended\-remote {{localhost}}:{{4500}}\fR
+.RS
+.IP \(bu 2
+Write firmware to device:
+.RE
+.PP
+\fB\fC(gdb) load {{firmware.elf}}\fR

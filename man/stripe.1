@@ -1,0 +1,36 @@
+.TH stripe
+.PP
+.RS
+Interact with a Stripe account.
+More information: \[la]https://github.com/stripe/stripe-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Follow the logs of activity on the account:
+.RE
+.PP
+\fB\fCstripe logs tail\fR
+.RS
+.IP \(bu 2
+Listen for events, filtering on events with the name \fB\fCcharge.succeeded\fR and forwarding them to localhost:3000/events:
+.RE
+.PP
+\fB\fCstripe listen \-\-events="{{charge.succeeded}}" \-\-forward\-to="{{localhost:3000/events}}"\fR
+.RS
+.IP \(bu 2
+Send a test webhook event:
+.RE
+.PP
+\fB\fCstripe trigger {{charge.succeeded}}\fR
+.RS
+.IP \(bu 2
+Create a customer:
+.RE
+.PP
+\fB\fCstripe customers create \-\-email="{{test@example.com}}" \-\-name="{{Jenny Rosen}}"\fR
+.RS
+.IP \(bu 2
+Print to JSON:
+.RE
+.PP
+\fB\fCstripe listen \-\-print\-json\fR

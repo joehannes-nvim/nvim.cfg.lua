@@ -1,0 +1,49 @@
+.TH speedtest
+.PP
+.RS
+Official command\-line interface for testing internet bandwidth using \[la]https://speedtest.net\[ra]\&.
+Note: some platforms link \fB\fCspeedtest\fR to \fB\fCspeedtest\-cli\fR\&. If some of the examples in this page don't work, see \fB\fCspeedtest\-cli\fR\&.
+More information: \[la]https://www.speedtest.net/apps/cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a speed test:
+.RE
+.PP
+\fB\fCspeedtest\fR
+.RS
+.IP \(bu 2
+Run a speed test and specify the unit of the output:
+.RE
+.PP
+\fB\fCspeedtest \-\-unit={{auto\-decimal\-bits|auto\-decimal\-bytes|auto\-binary\-bits|auto\-binary\-bytes}}\fR
+.RS
+.IP \(bu 2
+Run a speed test and specify the output format:
+.RE
+.PP
+\fB\fCspeedtest \-\-format={{human\-readable|csv|tsv|json|jsonl|json\-pretty}}\fR
+.RS
+.IP \(bu 2
+Run a speed test and specify the number of decimal points to use (0 to 8, defaults to 2):
+.RE
+.PP
+\fB\fCspeedtest \-\-precision={{precision}}\fR
+.RS
+.IP \(bu 2
+Run a speed test and print its progress (only available for output format \fB\fChuman\-readable\fR and \fB\fCjson\fR):
+.RE
+.PP
+\fB\fCspeedtest \-\-progress={{yes|no}}\fR
+.RS
+.IP \(bu 2
+List all \fB\fCspeedtest.net\fR servers, sorted by distance:
+.RE
+.PP
+\fB\fCspeedtest \-\-servers\fR
+.RS
+.IP \(bu 2
+Run a speed test to a specific \fB\fCspeedtest.net\fR server:
+.RE
+.PP
+\fB\fCspeedtest \-\-server\-id={{server_id}}\fR

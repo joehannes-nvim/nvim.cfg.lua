@@ -1,0 +1,36 @@
+.TH alacritty
+.PP
+.RS
+Cross\-platform, GPU\-accelerated terminal emulator.
+More information: \[la]https://github.com/alacritty/alacritty\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a new Alacritty window:
+.RE
+.PP
+\fB\fCalacritty\fR
+.RS
+.IP \(bu 2
+Run in a specific directory:
+.RE
+.PP
+\fB\fCalacritty \-\-working\-directory {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Run a command in a new Alacritty window:
+.RE
+.PP
+\fB\fCalacritty \-e {{command}}\fR
+.RS
+.IP \(bu 2
+Specify alternative configuration file (defaults to \fB\fC$XDG_CONFIG_HOME/alacritty/alacritty.yml\fR):
+.RE
+.PP
+\fB\fCalacritty \-\-config\-file {{path/to/config.yml}}\fR
+.RS
+.IP \(bu 2
+Run with live config reload enabled (can also be enabled by default in \fB\fCalacritty.yml\fR):
+.RE
+.PP
+\fB\fCalacritty \-\-live\-config\-reload \-\-config\-file {{path/to/config.yml}}\fR

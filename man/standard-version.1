@@ -1,0 +1,54 @@
+.TH standard\-version
+.PP
+.RS
+Automate versioning and changelog generation, with SemVer and Conventional Commits.
+More information: \[la]https://github.com/conventional-changelog/standard-version\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update the changelog file and tag a release:
+.RE
+.PP
+\fB\fCstandard\-version\fR
+.RS
+.IP \(bu 2
+Tag a release without bumping the version:
+.RE
+.PP
+\fB\fCstandard\-version \-\-first\-release\fR
+.RS
+.IP \(bu 2
+Update the changelog and tag an alpha release:
+.RE
+.PP
+\fB\fCstandard\-version \-\-prerelease alpha\fR
+.RS
+.IP \(bu 2
+Update the changelog and tag a specific release type:
+.RE
+.PP
+\fB\fCstandard\-version \-\-release\-as {{major|minor|patch}}\fR
+.RS
+.IP \(bu 2
+Tag a release, preventing hooks from being verified during the commit step:
+.RE
+.PP
+\fB\fCstandard\-version \-\-no\-verify\fR
+.RS
+.IP \(bu 2
+Tag a release committing all staged changes, not just files affected by \fB\fCstandard\-version\fR:
+.RE
+.PP
+\fB\fCstandard\-version \-\-commit\-all\fR
+.RS
+.IP \(bu 2
+Update a specific changelog file and tag a release:
+.RE
+.PP
+\fB\fCstandard\-version \-\-infile {{path/to/file.md}}\fR
+.RS
+.IP \(bu 2
+Display the release that would be performed without performing them:
+.RE
+.PP
+\fB\fCstandard\-version \-\-dry\-run\fR

@@ -1,0 +1,36 @@
+.TH transcrypt
+.PP
+.RS
+Transparently encrypt files within a Git repository.
+More information: \[la]https://github.com/elasticdog/transcrypt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize an unconfigured repository:
+.RE
+.PP
+\fB\fCtranscrypt\fR
+.RS
+.IP \(bu 2
+List the currently encrypted files:
+.RE
+.PP
+\fB\fCgit ls\-crypt\fR
+.RS
+.IP \(bu 2
+Display the credentials of a configured repository:
+.RE
+.PP
+\fB\fCtranscrypt \-\-display\fR
+.RS
+.IP \(bu 2
+Initialize and decrypt a fresh clone of a configured repository:
+.RE
+.PP
+\fB\fCtranscrypt \-\-cipher={{cipher}}\fR
+.RS
+.IP \(bu 2
+Rekey to change the encryption cipher or password:
+.RE
+.PP
+\fB\fCtranscrypt \-\-rekey\fR

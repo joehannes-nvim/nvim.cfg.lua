@@ -1,0 +1,43 @@
+.TH az appconfig
+.PP
+.RS
+Manage App configurations on Azure.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/appconfig\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an App Configuration:
+.RE
+.PP
+\fB\fCaz appconfig create \-\-name {{name}} \-\-resource\-group {{group_name}} \-\-location {{location}}\fR
+.RS
+.IP \(bu 2
+Delete a specific App Configuration:
+.RE
+.PP
+\fB\fCaz appconfig delete \-\-resource\-group {{rg_name}} \-\-name {{appconfig_name}}\fR
+.RS
+.IP \(bu 2
+List all App Configurations under the current subscription:
+.RE
+.PP
+\fB\fCaz appconfig list\fR
+.RS
+.IP \(bu 2
+List all App Configurations under a specific resource group:
+.RE
+.PP
+\fB\fCaz appconfig list \-\-resource\-group {{rg_name}}\fR
+.RS
+.IP \(bu 2
+Show properties of an App Configuration:
+.RE
+.PP
+\fB\fCaz appconfig show \-\-name {{appconfig_name}}\fR
+.RS
+.IP \(bu 2
+Update a specific App Configuration:
+.RE
+.PP
+\fB\fCaz appconfig update \-\-resource\-group {{rg_name}} \-\-name {{appconfig_name}}\fR

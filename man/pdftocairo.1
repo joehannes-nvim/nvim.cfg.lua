@@ -1,0 +1,42 @@
+.TH pdftocairo
+.PP
+.RS
+Converts PDF files to PNG/JPEG/TIFF/PDF/PS/EPS/SVG using cairo.
+More information: \[la]https://poppler.freedesktop.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a PDF file to JPEG:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} \-jpeg\fR
+.RS
+.IP \(bu 2
+Convert to PDF expanding the output to fill the paper:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} {{output.pdf}} \-pdf \-expand\fR
+.RS
+.IP \(bu 2
+Convert to SVG specifying the first/last page to convert:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} {{output.svg}} \-svg \-f {{first_page}} \-l {{last_page}}\fR
+.RS
+.IP \(bu 2
+Convert to PNG with 200ppi resolution:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} {{output.png}} \-png \-r 200\fR
+.RS
+.IP \(bu 2
+Convert to grayscale TIFF setting paper size to A3:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} \-tiff \-gray \-paper A3\fR
+.RS
+.IP \(bu 2
+Convert to PNG cropping x and y pixels from the top\-left corner:
+.RE
+.PP
+\fB\fCpdftocairo {{path/to/file.pdf}} \-png \-x {{x_pixels}} \-y {{y_pixels}}\fR

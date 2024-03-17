@@ -1,0 +1,24 @@
+.TH git check\-ref\-format
+.PP
+.RS
+Checks if a given refname is acceptable, and exits with a non\-zero status if it is not.
+More information: \[la]https://git-scm.com/docs/git-check-ref-format\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the format of the specified refname:
+.RE
+.PP
+\fB\fCgit check\-ref\-format {{refs/head/refname}}\fR
+.RS
+.IP \(bu 2
+Print the name of the last branch checked out:
+.RE
+.PP
+\fB\fCgit check\-ref\-format \-\-branch @{\-1}\fR
+.RS
+.IP \(bu 2
+Normalize a refname:
+.RE
+.PP
+\fB\fCgit check\-ref\-format \-\-normalize {{refs/head/refname}}\fR

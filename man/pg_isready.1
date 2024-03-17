@@ -1,0 +1,24 @@
+.TH pg_isready
+.PP
+.RS
+Check the connection status of a PostgreSQL server.
+More information: \[la]https://www.postgresql.org/docs/current/app-pg-isready.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check connection:
+.RE
+.PP
+\fB\fCpg_isready\fR
+.RS
+.IP \(bu 2
+Check connection with a specific hostname and port:
+.RE
+.PP
+\fB\fCpg_isready \-\-host={{hostname}} \-\-port={{port}}\fR
+.RS
+.IP \(bu 2
+Check connection displaying a message only when the connection fails:
+.RE
+.PP
+\fB\fCpg_isready \-\-quiet\fR

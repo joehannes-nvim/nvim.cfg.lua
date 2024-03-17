@@ -1,0 +1,42 @@
+.TH prettier
+.PP
+.RS
+An opinionated code formatter for JavaScript, JSON, CSS, YAML, and more.
+More information: \[la]https://prettier.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Format a file and print the result to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCprettier {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Check if a specific file has been formatted:
+.RE
+.PP
+\fB\fCprettier \-\-check {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Run with a specific configuration file:
+.RE
+.PP
+\fB\fCprettier \-\-config {{path/to/config_file}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Format a file or directory, replacing the original:
+.RE
+.PP
+\fB\fCprettier \-\-write {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Format files or directories recursively using single quotes and no trailing commas:
+.RE
+.PP
+\fB\fCprettier \-\-single\-quote \-\-trailing\-comma {{none}} \-\-write {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Format JavaScript and TypeScript files recursively, replacing the original:
+.RE
+.PP
+\fB\fCprettier \-\-write "**/*.{js,jsx,ts,tsx}"\fR

@@ -1,0 +1,54 @@
+.TH hg log
+.PP
+.RS
+Display the revision history of the repository.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#log\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the entire revision history of the repository:
+.RE
+.PP
+\fB\fChg log\fR
+.RS
+.IP \(bu 2
+Display the revision history with an ASCII graph:
+.RE
+.PP
+\fB\fChg log \-\-graph\fR
+.RS
+.IP \(bu 2
+Display the revision history with file names matching a specified pattern:
+.RE
+.PP
+\fB\fChg log \-\-include {{pattern}}\fR
+.RS
+.IP \(bu 2
+Display the revision history, excluding file names that match a specified pattern:
+.RE
+.PP
+\fB\fChg log \-\-exclude {{pattern}}\fR
+.RS
+.IP \(bu 2
+Display the log information for a specific revision:
+.RE
+.PP
+\fB\fChg log \-\-rev {{revision}}\fR
+.RS
+.IP \(bu 2
+Display the revision history for a specific branch:
+.RE
+.PP
+\fB\fChg log \-\-branch {{branch}}\fR
+.RS
+.IP \(bu 2
+Display the revision history for a specific date:
+.RE
+.PP
+\fB\fChg log \-\-date {{date}}\fR
+.RS
+.IP \(bu 2
+Display revisions committed by a specific user:
+.RE
+.PP
+\fB\fChg log \-\-user {{user}}\fR

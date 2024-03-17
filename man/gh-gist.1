@@ -1,0 +1,36 @@
+.TH gh gist
+.PP
+.RS
+Work with GitHub Gists.
+More information: \[la]https://cli.github.com/manual/gh_gist\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Gist from a space\-separated list of files:
+.RE
+.PP
+\fB\fCgh gist create {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Create a new Gist with a specific [desc]ription:
+.RE
+.PP
+\fB\fCgh gist create {{path/to/file1 path/to/file2 ...}} \-\-desc "{{description}}"\fR
+.RS
+.IP \(bu 2
+Edit a Gist:
+.RE
+.PP
+\fB\fCgh gist edit {{id|url}}\fR
+.RS
+.IP \(bu 2
+List up to 42 Gists owned by the currently logged in user:
+.RE
+.PP
+\fB\fCgh gist list \-\-limit {{42}}\fR
+.RS
+.IP \(bu 2
+View a Gist in the default browser without rendering Markdown:
+.RE
+.PP
+\fB\fCgh gist view {{id|url}} \-\-web \-\-raw\fR

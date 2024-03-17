@@ -1,0 +1,48 @@
+.TH poetry
+.PP
+.RS
+Manage Python packages and dependencies.
+More information: \[la]https://python-poetry.org/docs/cli/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Poetry project in the directory with a specific name:
+.RE
+.PP
+\fB\fCpoetry new {{project_name}}\fR
+.RS
+.IP \(bu 2
+Install a dependency and its subdependencies:
+.RE
+.PP
+\fB\fCpoetry add {{dependency}}\fR
+.RS
+.IP \(bu 2
+Install a development dependency and its subdependencies:
+.RE
+.PP
+\fB\fCpoetry add \-\-group dev {{dependency}}\fR
+.RS
+.IP \(bu 2
+Interactively initialize the current directory as a new Poetry project:
+.RE
+.PP
+\fB\fCpoetry init\fR
+.RS
+.IP \(bu 2
+Get the latest version of all dependencies and update \fB\fCpoetry.lock\fR:
+.RE
+.PP
+\fB\fCpoetry update\fR
+.RS
+.IP \(bu 2
+Execute a command inside the project's virtual environment:
+.RE
+.PP
+\fB\fCpoetry run {{command}}\fR
+.RS
+.IP \(bu 2
+Bump the minor version of the project in \fB\fCpyproject.toml\fR:
+.RE
+.PP
+\fB\fCpoetry version minor\fR

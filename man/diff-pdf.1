@@ -1,0 +1,24 @@
+.TH diff\-pdf
+.PP
+.RS
+Tool for comparing two PDFs.
+More information: \[la]https://github.com/vslavik/diff-pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare PDFs, indicating changes using return codes (\fB\fC0\fR = no difference, \fB\fC1\fR = PDFs differ):
+.RE
+.PP
+\fB\fCdiff\-pdf {{path/to/a.pdf}} {{path/to/b.pdf}}\fR
+.RS
+.IP \(bu 2
+Compare PDFs, outputting a PDF with visually highlighted differences:
+.RE
+.PP
+\fB\fCdiff\-pdf \-\-output\-diff={{path/to/diff.pdf}} {{path/to/a.pdf}} {{path/to/b.pdf}}\fR
+.RS
+.IP \(bu 2
+Compare PDFs, viewing differences in a simple GUI:
+.RE
+.PP
+\fB\fCdiff\-pdf \-\-view {{path/to/a.pdf}} {{path/to/b.pdf}}\fR

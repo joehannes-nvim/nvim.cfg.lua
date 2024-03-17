@@ -1,0 +1,30 @@
+.TH llc
+.PP
+.RS
+Compiles LLVM Intermediate Representation or bitcode to target\-specific assembly language.
+More information: \[la]https://www.llvm.org/docs/CommandGuide/llc.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a bitcode or IR file to an assembly file with the same base name:
+.RE
+.PP
+\fB\fCllc {{path/to/file.ll}}\fR
+.RS
+.IP \(bu 2
+Enable all optimizations:
+.RE
+.PP
+\fB\fCllc \-O3 {{path/to/input.ll}}\fR
+.RS
+.IP \(bu 2
+Output assembly to a specific file:
+.RE
+.PP
+\fB\fCllc \-\-output {{path/to/output.s}}\fR
+.RS
+.IP \(bu 2
+Emit fully relocatable, position independent code:
+.RE
+.PP
+\fB\fCllc \-relocation\-model=pic {{path/to/input.ll}}\fR

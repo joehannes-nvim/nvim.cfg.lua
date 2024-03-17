@@ -1,0 +1,54 @@
+.TH podman ps
+.PP
+.RS
+List Podman containers.
+More information: \[la]https://docs.podman.io/en/latest/markdown/podman-ps.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List currently running podman containers:
+.RE
+.PP
+\fB\fCpodman ps\fR
+.RS
+.IP \(bu 2
+List all podman containers (running and stopped):
+.RE
+.PP
+\fB\fCpodman ps \-\-all\fR
+.RS
+.IP \(bu 2
+Show the latest created container (includes all states):
+.RE
+.PP
+\fB\fCpodman ps \-\-latest\fR
+.RS
+.IP \(bu 2
+Filter containers that contain a substring in their name:
+.RE
+.PP
+\fB\fCpodman ps \-\-filter "name={{name}}"\fR
+.RS
+.IP \(bu 2
+Filter containers that share a given image as an ancestor:
+.RE
+.PP
+\fB\fCpodman ps \-\-filter "ancestor={{image}}:{{tag}}"\fR
+.RS
+.IP \(bu 2
+Filter containers by exit status code:
+.RE
+.PP
+\fB\fCpodman ps \-\-all \-\-filter "exited={{code}}"\fR
+.RS
+.IP \(bu 2
+Filter containers by status (created, running, removing, paused, exited and dead):
+.RE
+.PP
+\fB\fCpodman ps \-\-filter "status={{status}}"\fR
+.RS
+.IP \(bu 2
+Filter containers that mount a specific volume or have a volume mounted in a specific path:
+.RE
+.PP
+\fB\fCpodman ps \-\-filter "volume={{path/to/directory}}" \-\-format "table {{.ID}}\\t{{.Image}}\\t{{.Names}}\\t{{.Mounts}}"\fR

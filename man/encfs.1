@@ -1,0 +1,31 @@
+.TH encfs
+.PP
+.RS
+Mounts or creates encrypted virtual filesystems.
+See also \fB\fCfusermount\fR, which can unmount filesystems mounted by this command.
+More information: \[la]https://github.com/vgough/encfs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize or mount an encrypted filesystem:
+.RE
+.PP
+\fB\fCencfs {{/path/to/cipher_dir}} {{/path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Initialize an encrypted filesystem with standard settings:
+.RE
+.PP
+\fB\fCencfs \-\-standard {{/path/to/cipher_dir}} {{/path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Run encfs in the foreground instead of spawning a daemon:
+.RE
+.PP
+\fB\fCencfs \-f {{/path/to/cipher_dir}} {{/path/to/mount_point}}\fR
+.RS
+.IP \(bu 2
+Mount an encrypted snapshot of a plain directory:
+.RE
+.PP
+\fB\fCencfs \-\-reverse {{path/to/plain_dir}} {{path/to/cipher_dir}}\fR

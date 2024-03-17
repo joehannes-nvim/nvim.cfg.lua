@@ -1,0 +1,30 @@
+.TH mongorestore
+.PP
+.RS
+Utility to import a collection or database from a binary dump into a MongoDB instance.
+More information: \[la]https://docs.mongodb.com/database-tools/mongorestore/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Import a BSON data dump from a directory to a MongoDB database:
+.RE
+.PP
+\fB\fCmongorestore \-\-db {{database_name}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Import a BSON data dump from a directory to a given database in a MongoDB server host, running at a given port, with user authentication (user will be prompted for password):
+.RE
+.PP
+\fB\fCmongorestore \-\-host {{database_host:port}} \-\-db {{database_name}} \-\-username {{username}} {{path/to/directory}} \-\-password\fR
+.RS
+.IP \(bu 2
+Import a collection from a BSON file to a MongoDB database:
+.RE
+.PP
+\fB\fCmongorestore \-\-db {{database_name}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Import a collection from a BSON file to a given database in a MongoDB server host, running at a given port, with user authentication (user will be prompted for password):
+.RE
+.PP
+\fB\fCmongorestore \-\-host {{database_host:port}} \-\-db {{database_name}} \-\-username {{username}} {{path/to/file}} \-\-password\fR

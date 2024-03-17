@@ -1,0 +1,48 @@
+.TH openttd
+.PP
+.RS
+Open source clone of the Microprose game "Transport Tycoon Deluxe".
+More information: \[la]https://www.openttd.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a new game:
+.RE
+.PP
+\fB\fCopenttd \-g\fR
+.RS
+.IP \(bu 2
+Load save game at start:
+.RE
+.PP
+\fB\fCopenttd \-g {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start with the specified window resolution:
+.RE
+.PP
+\fB\fCopenttd \-r {{1920x1080}}\fR
+.RS
+.IP \(bu 2
+Start with a custom configuration file:
+.RE
+.PP
+\fB\fCopenttd \-c {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start with selected video, sound, and music drivers:
+.RE
+.PP
+\fB\fCopenttd \-v {{video_driver}} \-s {{sound_driver}} \-m {{music_driver}}\fR
+.RS
+.IP \(bu 2
+Start a dedicated server, forked in the background:
+.RE
+.PP
+\fB\fCopenttd \-f \-D {{host}}:{{port}}\fR
+.RS
+.IP \(bu 2
+Join a server with a password:
+.RE
+.PP
+\fB\fCopenttd \-n {{host}}:{{port}}#{{player_name}} \-p {{password}}\fR

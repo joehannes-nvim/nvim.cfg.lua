@@ -1,0 +1,42 @@
+.TH bzegrep
+.PP
+.RS
+Find extended regular expression patterns in bzip2 compressed files using egrep.
+More information: \[la]https://manned.org/bzegrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for extended regular expressions (supporting \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR) in a compressed file (case\-sensitive):
+.RE
+.PP
+\fB\fCbzegrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for extended regular expressions (supporting \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR) in a compressed file (case\-insensitive):
+.RE
+.PP
+\fB\fCbzegrep \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCbzegrep \-\-invert\-match "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCbzegrep \-\-with\-filename \-\-line\-number "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCbzegrep \-\-only\-matching "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively search files in a bzip2 compressed tar archive for a pattern:
+.RE
+.PP
+\fB\fCbzegrep \-\-recursive "{{search_pattern}}" {{path/to/file}}\fR

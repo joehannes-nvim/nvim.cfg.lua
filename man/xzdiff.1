@@ -1,0 +1,37 @@
+.TH xzdiff
+.PP
+.RS
+Invokes \fB\fCdiff\fR on files compressed with \fB\fCxz\fR, \fB\fClzma\fR, \fB\fCgzip\fR, \fB\fCbzip2\fR, \fB\fClzop\fR, or \fB\fCzstd\fR\&.
+All options specified are passed directly to \fB\fCdiff\fR\&.
+More information: \[la]https://manned.org/xzdiff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare files:
+.RE
+.PP
+\fB\fCxzdiff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare files, showing the differences side by side:
+.RE
+.PP
+\fB\fCxzdiff \-\-side\-by\-side {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare files and report only that they differ (no details on what is different):
+.RE
+.PP
+\fB\fCxzdiff \-\-brief {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare files and report when the files are the same:
+.RE
+.PP
+\fB\fCxzdiff \-\-report\-identical\-files {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Compare files using paginated results:
+.RE
+.PP
+\fB\fCxzdiff \-\-paginate {{path/to/file1}} {{path/to/file2}}\fR

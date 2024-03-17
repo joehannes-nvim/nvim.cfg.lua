@@ -1,0 +1,25 @@
+.TH git fsck
+.PP
+.RS
+Verify the validity and connectivity of nodes in a Git repository index.
+Does not make any modifications. See \fB\fCgit gc\fR for cleaning up dangling blobs.
+More information: \[la]https://git-scm.com/docs/git-fsck\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check the current repository:
+.RE
+.PP
+\fB\fCgit fsck\fR
+.RS
+.IP \(bu 2
+List all tags found:
+.RE
+.PP
+\fB\fCgit fsck \-\-tags\fR
+.RS
+.IP \(bu 2
+List all root nodes found:
+.RE
+.PP
+\fB\fCgit fsck \-\-root\fR

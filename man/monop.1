@@ -1,0 +1,48 @@
+.TH monop
+.PP
+.RS
+Finds and displays signatures of Types and methods inside .NET assemblies.
+More information: \[la]https://manned.org/monop\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the structure of a Type built\-in of the .NET Framework:
+.RE
+.PP
+\fB\fCmonop {{System.String}}\fR
+.RS
+.IP \(bu 2
+List the types in an assembly:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.exe}}\fR
+.RS
+.IP \(bu 2
+Show the structure of a Type in a specific assembly:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.dll}} {{Namespace.Path.To.Type}}\fR
+.RS
+.IP \(bu 2
+Only show members defined in the specified Type:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.dll}} \-\-only\-declared {{Namespace.Path.To.Type}}\fR
+.RS
+.IP \(bu 2
+Show private members:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.dll}} \-\-private {{Namespace.Path.To.Type}}\fR
+.RS
+.IP \(bu 2
+Hide obsolete members:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.dll}} \-\-filter\-obsolete {{Namespace.Path.To.Type}}\fR
+.RS
+.IP \(bu 2
+List the other assemblies that a specified assembly references:
+.RE
+.PP
+\fB\fCmonop \-r:{{path/to/assembly.dll}} \-\-refs\fR

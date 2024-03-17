@@ -1,0 +1,37 @@
+.TH ncu
+.PP
+.RS
+Find newer versions of package dependencies and check outdated npm packages locally or globally.
+\fB\fCncu\fR only updates dependency versions in \fB\fCpackage.json\fR\&. To install the new versions, run \fB\fCnpm install\fR afterwards.
+More information: \[la]https://github.com/raineorshine/npm-check-updates\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List outdated dependencies in the current directory:
+.RE
+.PP
+\fB\fCncu\fR
+.RS
+.IP \(bu 2
+List outdated global npm packages:
+.RE
+.PP
+\fB\fCncu \-g\fR
+.RS
+.IP \(bu 2
+Upgrade all dependencies in the current directory:
+.RE
+.PP
+\fB\fCncu \-u\fR
+.RS
+.IP \(bu 2
+Interactively upgrade dependencies in the current directory:
+.RE
+.PP
+\fB\fCncu \-i\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCncu \-h\fR

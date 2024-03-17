@@ -1,0 +1,42 @@
+.TH monodevelop
+.PP
+.RS
+Cross platform IDE for C#, F# and more.
+More information: \[la]https://www.monodevelop.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start MonoDevelop:
+.RE
+.PP
+\fB\fCmonodevelop\fR
+.RS
+.IP \(bu 2
+Open a specific file:
+.RE
+.PP
+\fB\fCmonodevelop {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open a specific file with the caret at a specific position:
+.RE
+.PP
+\fB\fCmonodevelop {{path/to/file}};{{line_number}};{{column_number}}\fR
+.RS
+.IP \(bu 2
+Force opening a new window instead of switching to an existing one:
+.RE
+.PP
+\fB\fCmonodevelop \-\-new\-window\fR
+.RS
+.IP \(bu 2
+Disable redirection of \fB\fCstdout\fR and \fB\fCstderr\fR to a log file:
+.RE
+.PP
+\fB\fCmonodevelop \-\-no\-redirect\fR
+.RS
+.IP \(bu 2
+Enable performance monitoring:
+.RE
+.PP
+\fB\fCmonodevelop \-\-perf\-log\fR

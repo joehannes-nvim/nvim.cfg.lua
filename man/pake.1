@@ -1,0 +1,42 @@
+.TH pake
+.PP
+.RS
+Turn any webpage into a desktop app with Rust/Tauri.
+More information: \[la]https://github.com/tw93/Pake\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Package a web page:
+.RE
+.PP
+\fB\fCpake {{https://www.google.com/}}\fR
+.RS
+.IP \(bu 2
+Package a web page with a specific window size:
+.RE
+.PP
+\fB\fCpake \-\-width {{800}} \-\-height {{600}} {{https://www.google.com/}}\fR
+.RS
+.IP \(bu 2
+Package a web page with a custom application name and icon:
+.RE
+.PP
+\fB\fCpake \-\-name {{Google}} \-\-icon {{path/to/icon.ico}} {{https://www.google.com/}}\fR
+.RS
+.IP \(bu 2
+Package a web page with a non\-resizable window:
+.RE
+.PP
+\fB\fCpake \-\-no\-resizable {{https://www.google.com/}}\fR
+.RS
+.IP \(bu 2
+Package a web page with fullscreen mode:
+.RE
+.PP
+\fB\fCpake \-\-fullscreen {{https://www.google.com/}}\fR
+.RS
+.IP \(bu 2
+Package a web page with a transparent title bar:
+.RE
+.PP
+\fB\fCpake \-\-transparent {{https://www.google.com/}}\fR

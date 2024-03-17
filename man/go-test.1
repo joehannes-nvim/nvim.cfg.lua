@@ -1,0 +1,42 @@
+.TH go test
+.PP
+.RS
+Tests Go packages (files have to end with \fB\fC_test.go\fR).
+More information: \[la]https://golang.org/cmd/go/#hdr-Testing_flags\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test the package found in the current directory:
+.RE
+.PP
+\fB\fCgo test\fR
+.RS
+.IP \(bu 2
+[v]erbosely test the package in the current directory:
+.RE
+.PP
+\fB\fCgo test \-v\fR
+.RS
+.IP \(bu 2
+Test the packages in the current directory and all subdirectories (note the \fB\fC\&...\fR):
+.RE
+.PP
+\fB\fCgo test \-v ./...\fR
+.RS
+.IP \(bu 2
+Test the package in the current directory and run all benchmarks:
+.RE
+.PP
+\fB\fCgo test \-v \-bench .\fR
+.RS
+.IP \(bu 2
+Test the package in the current directory and run all benchmarks for 50 seconds:
+.RE
+.PP
+\fB\fCgo test \-v \-bench . \-benchtime {{50s}}\fR
+.RS
+.IP \(bu 2
+Test the package with coverage analysis:
+.RE
+.PP
+\fB\fCgo test \-cover\fR

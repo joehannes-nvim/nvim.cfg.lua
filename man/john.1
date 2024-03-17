@@ -1,0 +1,54 @@
+.TH john
+.PP
+.RS
+Password cracker.
+More information: \[la]https://www.openwall.com/john/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Crack password hashes:
+.RE
+.PP
+\fB\fCjohn {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+Show passwords cracked:
+.RE
+.PP
+\fB\fCjohn \-\-show {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+Display users' cracked passwords by user identifier from multiple files:
+.RE
+.PP
+\fB\fCjohn \-\-show \-\-users={{user_ids}} {{path/to/hashes*}} {{path/to/other/hashes*}}\fR
+.RS
+.IP \(bu 2
+Crack password hashes, using a custom wordlist:
+.RE
+.PP
+\fB\fCjohn \-\-wordlist={{path/to/wordlist.txt}} {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+List available hash formats:
+.RE
+.PP
+\fB\fCjohn \-\-list=formats\fR
+.RS
+.IP \(bu 2
+Crack password hashes, using a specific hash format:
+.RE
+.PP
+\fB\fCjohn \-\-format={{md5crypt}} {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+Crack password hashes, enabling word mangling rules:
+.RE
+.PP
+\fB\fCjohn \-\-rules {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+Restore an interrupted cracking session from a state file, e.g. \fB\fCmycrack.rec\fR:
+.RE
+.PP
+\fB\fCjohn \-\-restore={{path/to/mycrack.rec}}\fR

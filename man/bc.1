@@ -1,0 +1,43 @@
+.TH bc
+.PP
+.RS
+An arbitrary precision calculator language.
+See also: \fB\fCdc\fR\&.
+More information: \[la]https://manned.org/man/bc.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive session:
+.RE
+.PP
+\fB\fCbc\fR
+.RS
+.IP \(bu 2
+Start an interactive session with the standard math library enabled:
+.RE
+.PP
+\fB\fCbc \-\-mathlib\fR
+.RS
+.IP \(bu 2
+Calculate an expression:
+.RE
+.PP
+\fB\fCecho '{{5 / 3}}' | bc\fR
+.RS
+.IP \(bu 2
+Execute a script:
+.RE
+.PP
+\fB\fCbc {{path/to/script.bc}}\fR
+.RS
+.IP \(bu 2
+Calculate an expression with the specified scale:
+.RE
+.PP
+\fB\fCecho 'scale = {{10}}; {{5 / 3}}' | bc\fR
+.RS
+.IP \(bu 2
+Calculate a sine/cosine/arctangent/natural logarithm/exponential function using \fB\fCmathlib\fR:
+.RE
+.PP
+\fB\fCecho '{{s|c|a|l|e}}({{1}})' | bc \-\-mathlib\fR

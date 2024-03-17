@@ -1,0 +1,49 @@
+.TH vdir
+.PP
+.RS
+List directory contents.
+Drop\-in replacement for \fB\fCls \-l\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/vdir\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List files and directories in the current directory, one per line, with details:
+.RE
+.PP
+\fB\fCvdir\fR
+.RS
+.IP \(bu 2
+List with sizes displayed in human\-readable units (KB, MB, GB):
+.RE
+.PP
+\fB\fCvdir \-h\fR
+.RS
+.IP \(bu 2
+List including hidden files (starting with a dot):
+.RE
+.PP
+\fB\fCvdir \-a\fR
+.RS
+.IP \(bu 2
+List files and directories sorting entries by size (largest first):
+.RE
+.PP
+\fB\fCvdir \-S\fR
+.RS
+.IP \(bu 2
+List files and directories sorting entries by modification time (newest first):
+.RE
+.PP
+\fB\fCvdir \-t\fR
+.RS
+.IP \(bu 2
+List grouping directories first:
+.RE
+.PP
+\fB\fCvdir \-\-group\-directories\-first\fR
+.RS
+.IP \(bu 2
+Recursively list all files and directories in a specific directory:
+.RE
+.PP
+\fB\fCvdir \-\-recursive {{path/to/directory}}\fR

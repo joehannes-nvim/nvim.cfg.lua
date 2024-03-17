@@ -1,0 +1,19 @@
+.TH argocd
+.PP
+.RS
+Command\-line interface to control a Argo CD server.
+Some subcommands such as \fB\fCargocd app\fR have their own usage documentation.
+More information: \[la]https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Login to Argo CD server:
+.RE
+.PP
+\fB\fCargocd login \-\-insecure \-\-username {{user}} \-\-password {{password}} {{argocd_server:port}}\fR
+.RS
+.IP \(bu 2
+List applications:
+.RE
+.PP
+\fB\fCargocd app list\fR

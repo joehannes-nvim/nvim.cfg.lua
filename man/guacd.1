@@ -1,0 +1,31 @@
+.TH guacd
+.PP
+.RS
+Apache Guacamole proxy daemon.
+Support loader for client plugins to interface between the Guacamole protocol and any arbitrary remote desktop protocol (e.g. RDP, VNC, Other).
+More information: \[la]https://guacamole.apache.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Bind to a specific port on localhost:
+.RE
+.PP
+\fB\fCguacd \-b {{127.0.0.1}} \-l {{4823}}\fR
+.RS
+.IP \(bu 2
+Start in debug mode, keeping the process in the foreground:
+.RE
+.PP
+\fB\fCguacd \-f \-L {{debug}}\fR
+.RS
+.IP \(bu 2
+Start with TLS support:
+.RE
+.PP
+\fB\fCguacd \-C {{my\-cert.crt}} \-K {{my\-key.pem}}\fR
+.RS
+.IP \(bu 2
+Write the PID to a file:
+.RE
+.PP
+\fB\fCguacd \-p {{path/to/file.pid}}\fR

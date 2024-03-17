@@ -1,0 +1,42 @@
+.TH topydo
+.PP
+.RS
+A to\-do list application that uses the todo.txt format.
+More information: \[la]https://github.com/topydo/topydo\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a to\-do to a specific project with a given context:
+.RE
+.PP
+\fB\fCtopydo add "{{todo_message}} +{{project_name}} @{{context_name}}"\fR
+.RS
+.IP \(bu 2
+Add a to\-do with a due date of tomorrow with a priority of \fB\fCA\fR:
+.RE
+.PP
+\fB\fCtopydo add "(A) {{todo _message}} due:{{1d}}"\fR
+.RS
+.IP \(bu 2
+Add a to\-do with a due date of Friday:
+.RE
+.PP
+\fB\fCtopydo add "{{todo_message}} due:{{fri}}"\fR
+.RS
+.IP \(bu 2
+Add a non\-strict repeating to\-do (next due = now + rec):
+.RE
+.PP
+\fB\fCtopydo add "water flowers due:{{mon}} rec:{{1w}}"\fR
+.RS
+.IP \(bu 2
+Add a strict repeating to\-do (next due = current due + rec):
+.RE
+.PP
+\fB\fCtopydo add "{{todo_message}} due:{{2020\-01\-01}} rec:{{+1m}}"\fR
+.RS
+.IP \(bu 2
+Revert the last \fB\fCtopydo\fR command executed:
+.RE
+.PP
+\fB\fCtopydo revert\fR

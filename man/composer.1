@@ -1,0 +1,54 @@
+.TH composer
+.PP
+.RS
+A package\-based dependency manager for PHP projects.
+More information: \[la]https://getcomposer.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a \fB\fCcomposer.json\fR file:
+.RE
+.PP
+\fB\fCcomposer init\fR
+.RS
+.IP \(bu 2
+Add a package as a dependency for this project, adding an entry to \fB\fCcomposer.json\fR:
+.RE
+.PP
+\fB\fCcomposer require {{user/package}}\fR
+.RS
+.IP \(bu 2
+Install all the dependencies in this project's \fB\fCcomposer.json\fR and create \fB\fCcomposer.lock\fR:
+.RE
+.PP
+\fB\fCcomposer install\fR
+.RS
+.IP \(bu 2
+Uninstall a package from this project, removing it as a dependency from \fB\fCcomposer.json\fR and \fB\fCcomposer.lock\fR:
+.RE
+.PP
+\fB\fCcomposer remove {{user/package}}\fR
+.RS
+.IP \(bu 2
+Update all the dependencies in this project's \fB\fCcomposer.json\fR and note new versions in \fB\fCcomposer.lock\fR file:
+.RE
+.PP
+\fB\fCcomposer update\fR
+.RS
+.IP \(bu 2
+Update only \fB\fCcomposer.lock\fR after updating \fB\fCcomposer.json\fR manually:
+.RE
+.PP
+\fB\fCcomposer update \-\-lock\fR
+.RS
+.IP \(bu 2
+Learn more about why a dependency can't be installed:
+.RE
+.PP
+\fB\fCcomposer why\-not {{user/package}}\fR
+.RS
+.IP \(bu 2
+Update composer to its latest version:
+.RE
+.PP
+\fB\fCcomposer self\-update\fR

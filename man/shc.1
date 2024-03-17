@@ -1,0 +1,30 @@
+.TH shc
+.PP
+.RS
+Generic shell script compiler.
+More information: \[la]https://manned.org/shc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a shell script:
+.RE
+.PP
+\fB\fCshc \-f {{script}}\fR
+.RS
+.IP \(bu 2
+Compile a shell script and specify an output binary file:
+.RE
+.PP
+\fB\fCshc \-f {{script}} \-o {{binary}}\fR
+.RS
+.IP \(bu 2
+Compile a shell script and set an expiration date for the executable:
+.RE
+.PP
+\fB\fCshc \-f {{script}} \-e {{dd/mm/yyyy}}\fR
+.RS
+.IP \(bu 2
+Compile a shell script and set a message to display upon expiration:
+.RE
+.PP
+\fB\fCshc \-f {{script}} \-e {{dd/mm/yyyy}} \-m "{{Please contact your provider}}"\fR

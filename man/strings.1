@@ -1,0 +1,30 @@
+.TH strings
+.PP
+.RS
+Find printable strings in an object file or binary.
+More information: \[la]https://manned.org/strings\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print all strings in a binary:
+.RE
+.PP
+\fB\fCstrings {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Limit results to strings at least \fIlength\fP characters long:
+.RE
+.PP
+\fB\fCstrings \-n {{length}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Prefix each result with its offset within the file:
+.RE
+.PP
+\fB\fCstrings \-t d {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Prefix each result with its offset within the file in hexadecimal:
+.RE
+.PP
+\fB\fCstrings \-t x {{path/to/file}}\fR

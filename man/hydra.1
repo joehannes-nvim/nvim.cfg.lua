@@ -1,0 +1,57 @@
+.TH hydra
+.PP
+.RS
+Online password guessing tool.
+Protocols supported include FTP, 
+.BR HTTP (S), 
+SMTP, SNMP, XMPP, SSH, and more.
+More information: \[la]https://github.com/vanhauser-thc/thc-hydra\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Hydra's wizard:
+.RE
+.PP
+\fB\fChydra\-wizard\fR
+.RS
+.IP \(bu 2
+Guess SSH credentials using a given username and a list of passwords:
+.RE
+.PP
+\fB\fChydra \-l {{username}} \-P {{path/to/wordlist.txt}} {{host_ip}} {{ssh}}\fR
+.RS
+.IP \(bu 2
+Guess HTTPS webform credentials using two specific lists of usernames and passwords ("https\fIpost\fPrequest" can be like "username=
+.RE
+.PP
+\fB\fChydra \-L {{path/to/usernames.txt}} \-P {{path/to/wordlist.txt}} {{host_ip}} {{https\-post\-form}} "{{url_without_host}}:{{https_post_request}}:{{login_failed_string}}"\fR
+.RS
+.IP \(bu 2
+Guess FTP credentials using usernames and passwords lists, specifying the number of threads:
+.RE
+.PP
+\fB\fChydra \-L {{path/to/usernames.txt}} \-P {{path/to/wordlist.txt}} \-t {{n_tasks}} {{host_ip}} {{ftp}}\fR
+.RS
+.IP \(bu 2
+Guess MySQL credentials using a username and a passwords list, exiting when a username/password pair is found:
+.RE
+.PP
+\fB\fChydra \-l {{username}} \-P {{path/to/wordlist.txt}} \-f {{host_ip}} {{mysql}}\fR
+.RS
+.IP \(bu 2
+Guess RDP credentials using a username and a passwords list, showing each attempt:
+.RE
+.PP
+\fB\fChydra \-l {{username}} \-P {{path/to/wordlist.txt}} \-V {{rdp://host_ip}}\fR
+.RS
+.IP \(bu 2
+Guess IMAP credentials on a range of hosts using a list of colon\-separated username/password pairs:
+.RE
+.PP
+\fB\fChydra \-C {{path/to/username_password_pairs.txt}} {{imap://[host_range_cidr]}}\fR
+.RS
+.IP \(bu 2
+Guess POP3 credentials on a list of hosts using usernames and passwords lists, exiting when a username/password pair is found:
+.RE
+.PP
+\fB\fChydra \-L {{path/to/usernames.txt}} \-P {{path/to/wordlist.txt}} \-M {{path/to/hosts.txt}} \-F {{pop3}}\fR

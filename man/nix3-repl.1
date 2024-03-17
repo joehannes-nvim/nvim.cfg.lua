@@ -1,0 +1,37 @@
+.TH nix repl
+.PP
+.RS
+Start an interactive environment for evaluating Nix expressions.
+See \[la]https://nixos.org/manual/nix/stable/language/index.html\[ra] for a description of the Nix expression language.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-repl.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive environment for evaluating Nix expressions:
+.RE
+.PP
+\fB\fCnix repl\fR
+.RS
+.IP \(bu 2
+Load all packages from a flake (e.g. \fB\fCnixpkgs\fR) into scope:
+.RE
+.PP
+\fB\fC:lf {{nixpkgs}}\fR
+.RS
+.IP \(bu 2
+Build a package from an expression:
+.RE
+.PP
+\fB\fC:b {{expression}}\fR
+.RS
+.IP \(bu 2
+Start a shell with package from the expression available:
+.RE
+.PP
+\fB\fC:u {{expression}}\fR
+.RS
+.IP \(bu 2
+Start a shell with dependencies of the package from the expression available:
+.RE
+.PP
+\fB\fC:s {{expression}}\fR

@@ -1,0 +1,30 @@
+.TH macptopbm
+.PP
+.RS
+Read a MacPaint file as input and produce a PBM image as output.
+More information: \[la]https://netpbm.sourceforge.net/doc/macptopbm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a MacPaint file into a PGM image:
+.RE
+.PP
+\fB\fCmacptopbm {{path/to/file.mac}}\fR
+.RS
+.IP \(bu 2
+Skip over a specified number of bytes when reading the file:
+.RE
+.PP
+\fB\fCmacptopbm \-extraskip {{N}}\fR
+.RS
+.IP \(bu 2
+Suppress all informational messages:
+.RE
+.PP
+\fB\fCmacptopbm \-quiet\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fCmacptopbm \-version\fR

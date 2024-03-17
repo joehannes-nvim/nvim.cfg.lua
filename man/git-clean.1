@@ -1,0 +1,42 @@
+.TH git clean
+.PP
+.RS
+Remove untracked files from the working tree.
+More information: \[la]https://git-scm.com/docs/git-clean\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete files that are not tracked by Git:
+.RE
+.PP
+\fB\fCgit clean\fR
+.RS
+.IP \(bu 2
+Interactively delete files that are not tracked by Git:
+.RE
+.PP
+\fB\fCgit clean \-i\fR
+.RS
+.IP \(bu 2
+Show what files would be deleted without actually deleting them:
+.RE
+.PP
+\fB\fCgit clean \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Forcefully delete files that are not tracked by Git:
+.RE
+.PP
+\fB\fCgit clean \-f\fR
+.RS
+.IP \(bu 2
+Forcefully delete directories that are not tracked by Git:
+.RE
+.PP
+\fB\fCgit clean \-fd\fR
+.RS
+.IP \(bu 2
+Delete untracked files, including ignored files in \fB\fC\&.gitignore\fR and \fB\fC\&.git/info/exclude\fR:
+.RE
+.PP
+\fB\fCgit clean \-x\fR

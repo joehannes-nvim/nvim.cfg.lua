@@ -1,0 +1,25 @@
+.TH detox
+.PP
+.RS
+Renames files to make them easier to work with.
+It removes spaces and other such annoyances like duplicate underline characters.
+More information: \[la]https://github.com/dharple/detox\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove spaces and other undesirable characters from a file's name:
+.RE
+.PP
+\fB\fCdetox {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show how detox would rename all the files in a directory tree:
+.RE
+.PP
+\fB\fCdetox \-\-dry\-run \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Remove spaces and other undesirable characters from all files in a directory tree:
+.RE
+.PP
+\fB\fCdetox \-r {{path/to/directory}}\fR

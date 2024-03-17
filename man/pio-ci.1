@@ -1,0 +1,43 @@
+.TH pio ci
+.PP
+.RS
+Build PlatformIO projects with an arbitrary source code structure.
+This will create a new temporary project which the source code will be copied into.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/cmd_ci.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Build a PlatformIO project in the default system temporary directory and delete it afterwards:
+.RE
+.PP
+\fB\fCpio ci {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Build a PlatformIO project and specify specific libraries:
+.RE
+.PP
+\fB\fCpio ci \-\-lib {{path/to/library_directory}} {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Build a PlatformIO project and specify a specific board (\fB\fCpio boards\fR lists all of them):
+.RE
+.PP
+\fB\fCpio ci \-\-board {{board}} {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Build a PlatformIO project in a specific directory:
+.RE
+.PP
+\fB\fCpio ci \-\-build\-dir {{path/to/build_directory}} {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Build a PlatformIO project and don't delete the build directory:
+.RE
+.PP
+\fB\fCpio ci \-\-keep\-build\-dir {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Build a PlatformIO project using a specific configuration file:
+.RE
+.PP
+\fB\fCpio ci \-\-project\-conf {{path/to/platformio.ini}}\fR

@@ -1,0 +1,19 @@
+.TH sum
+.PP
+.RS
+Compute checksums and the number of blocks for a file.
+A predecessor to the more modern \fB\fCcksum\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/sum\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compute a checksum with BSD\-compatible algorithm and 1024\-byte blocks:
+.RE
+.PP
+\fB\fCsum {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Compute a checksum with System V\-compatible algorithm and 512\-byte blocks:
+.RE
+.PP
+\fB\fCsum \-\-sysv {{path/to/file}}\fR

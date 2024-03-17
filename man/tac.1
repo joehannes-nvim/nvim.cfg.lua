@@ -1,0 +1,37 @@
+.TH tac
+.PP
+.RS
+Display and concatenate files with lines in reversed order.
+See also: \fB\fCcat\fR\&.
+More information: \[la]https://www.gnu.org/software/coreutils/tac\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Concatenate specific files in reversed order:
+.RE
+.PP
+\fB\fCtac {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Display \fB\fCstdin\fR in reversed order:
+.RE
+.PP
+\fB\fC{{cat path/to/file}} | tac\fR
+.RS
+.IP \(bu 2
+Use a specific [s]eparator:
+.RE
+.PP
+\fB\fCtac \-s {{separator}} {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Use a specific [r]egex as a [s]eparator:
+.RE
+.PP
+\fB\fCtac \-r \-s {{separator}} {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Use a separator [b]efore each file:
+.RE
+.PP
+\fB\fCtac \-b {{path/to/file1 path/to/file2 ...}}\fR

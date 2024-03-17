@@ -1,0 +1,42 @@
+.TH pio system
+.PP
+.RS
+Miscellaneous system commands for PlatformIO.
+More information: \[la]https://docs.platformio.org/en/latest/core/userguide/system/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install shell completion for the current shell (supports Bash, Fish, Zsh and PowerShell):
+.RE
+.PP
+\fB\fCpio system completion install\fR
+.RS
+.IP \(bu 2
+Uninstall shell completion for the current shell:
+.RE
+.PP
+\fB\fCpio system completion uninstall\fR
+.RS
+.IP \(bu 2
+Display system\-wide PlatformIO information:
+.RE
+.PP
+\fB\fCpio system info\fR
+.RS
+.IP \(bu 2
+Remove unused PlatformIO data:
+.RE
+.PP
+\fB\fCpio system prune\fR
+.RS
+.IP \(bu 2
+Remove only cached data:
+.RE
+.PP
+\fB\fCpio system prune \-\-cache\fR
+.RS
+.IP \(bu 2
+List unused PlatformIO data that would be removed but do not actually remove it:
+.RE
+.PP
+\fB\fCpio system prune \-\-dry\-run\fR

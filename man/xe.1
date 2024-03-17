@@ -1,0 +1,36 @@
+.TH xe
+.PP
+.RS
+Execute a command once for each line piped from another command or file.
+More information: \[la]https://github.com/leahneukirchen/xe\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a command once for each line of input data as arguments:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xe {{command}}\fR
+.RS
+.IP \(bu 2
+Execute the commands, replacing any occurrence of the placeholder (marked as \fB\fC{}\fR) with the input line:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xe {{command}} {} {{optional_extra_arguments}}\fR
+.RS
+.IP \(bu 2
+Execute a shellscript, joining every \fB\fCN\fR lines into a single call:
+.RE
+.PP
+\fB\fCecho \-e 'a\\nb' | xe \-N{{2}} \-s 'echo $2 $1'\fR
+.RS
+.IP \(bu 2
+Delete all files with a \fB\fC\&.backup\fR extension:
+.RE
+.PP
+\fB\fCfind . \-name {{'*.backup'}} | xe rm \-v\fR
+.RS
+.IP \(bu 2
+Run up to \fB\fCmax\-jobs\fR processes in parallel; the default is 1. If \fB\fCmax\-jobs\fR is 0, xe will run as many processes as cpu cores:
+.RE
+.PP
+\fB\fC{{arguments_source}} | xe \-j {{max\-jobs}} {{command}}\fR

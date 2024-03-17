@@ -1,0 +1,36 @@
+.TH gitk
+.PP
+.RS
+A graphical Git repository browser.
+More information: \[la]https://git-scm.com/docs/gitk\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the repository browser for the current Git repository:
+.RE
+.PP
+\fB\fCgitk\fR
+.RS
+.IP \(bu 2
+Show repository browser for a specific file or directory:
+.RE
+.PP
+\fB\fCgitk {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Show commits made since 1 week ago:
+.RE
+.PP
+\fB\fCgitk \-\-since="{{1 week ago}}"\fR
+.RS
+.IP \(bu 2
+Show commits older than 1/1/2016:
+.RE
+.PP
+\fB\fCgitk \-\-until="{{1/1/2015}}"\fR
+.RS
+.IP \(bu 2
+Show at most 100 changes in all branches:
+.RE
+.PP
+\fB\fCgitk \-\-max\-count={{100}} \-\-all\fR

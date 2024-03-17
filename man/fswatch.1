@@ -1,0 +1,30 @@
+.TH fswatch
+.PP
+.RS
+A cross\-platform file change monitor.
+More information: \[la]https://emcrisostomo.github.io/fswatch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a Bash command on file creation, update or deletion:
+.RE
+.PP
+\fB\fCfswatch {{path/to/file}} | xargs \-n 1 {{bash_command}}\fR
+.RS
+.IP \(bu 2
+Watch one or more files and/or directories:
+.RE
+.PP
+\fB\fCfswatch {{path/to/file}} {{path/to/directory}} {{path/to/another_directory/**/*.js}} | xargs \-n 1 {{bash_command}}\fR
+.RS
+.IP \(bu 2
+Print the absolute paths of the changed files:
+.RE
+.PP
+\fB\fCfswatch {{path/to/directory}} | xargs \-n 1 \-I {} echo {}\fR
+.RS
+.IP \(bu 2
+Filter by event type:
+.RE
+.PP
+\fB\fCfswatch \-\-event {{Updated|Deleted|Created}} {{path/to/directory}} | xargs \-n 1 {{bash_command}}\fR

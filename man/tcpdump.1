@@ -1,0 +1,54 @@
+.TH tcpdump
+.PP
+.RS
+Dump traffic on a network.
+More information: \[la]https://www.tcpdump.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List available network interfaces:
+.RE
+.PP
+\fB\fCtcpdump \-D\fR
+.RS
+.IP \(bu 2
+Capture the traffic of a specific interface:
+.RE
+.PP
+\fB\fCtcpdump \-i {{eth0}}\fR
+.RS
+.IP \(bu 2
+Capture all TCP traffic showing contents (ASCII) in console:
+.RE
+.PP
+\fB\fCtcpdump \-A tcp\fR
+.RS
+.IP \(bu 2
+Capture the traffic from or to a host:
+.RE
+.PP
+\fB\fCtcpdump host {{www.example.com}}\fR
+.RS
+.IP \(bu 2
+Capture the traffic from a specific interface, source, destination and destination port:
+.RE
+.PP
+\fB\fCtcpdump \-i {{eth0}} src {{192.168.1.1}} and dst {{192.168.1.2}} and dst port {{80}}\fR
+.RS
+.IP \(bu 2
+Capture the traffic of a network:
+.RE
+.PP
+\fB\fCtcpdump net {{192.168.1.0/24}}\fR
+.RS
+.IP \(bu 2
+Capture all traffic except traffic over port 22 and save to a dump file:
+.RE
+.PP
+\fB\fCtcpdump \-w {{dumpfile.pcap}} port not {{22}}\fR
+.RS
+.IP \(bu 2
+Read from a given dump file:
+.RE
+.PP
+\fB\fCtcpdump \-r {{dumpfile.pcap}}\fR

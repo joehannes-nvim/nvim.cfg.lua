@@ -1,0 +1,25 @@
+.TH logstash
+.PP
+.RS
+An Elasticsearch ETL (extract, transform and load) tool.
+Commonly used to load data from various sources (such as databases and log files) into Elasticsearch.
+More information: \[la]https://www.elastic.co/products/logstash\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check validity of a Logstash configuration:
+.RE
+.PP
+\fB\fClogstash \-\-configtest \-\-config {{logstash_config.conf}}\fR
+.RS
+.IP \(bu 2
+Run Logstash using configuration:
+.RE
+.PP
+\fB\fCsudo logstash \-\-config {{logstash_config.conf}}\fR
+.RS
+.IP \(bu 2
+Run Logstash with the most basic inline configuration string:
+.RE
+.PP
+\fB\fCsudo logstash \-e 'input {} filter {} output {}'\fR

@@ -1,0 +1,30 @@
+.TH ouch
+.PP
+.RS
+Command\-line utility for compressing and decompressing files and directories.
+More information: \[la]https://crates.io/crates/ouch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Decompress a specific file:
+.RE
+.PP
+\fB\fCouch decompress {{path/to/archive.tar.xz}}\fR
+.RS
+.IP \(bu 2
+Decompress a file to a specific location:
+.RE
+.PP
+\fB\fCouch decompress {{path/to/archive.tar.xz}} \-\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Decompress multiple files:
+.RE
+.PP
+\fB\fCouch decompress {{path/to/archive1.tar path/to/archive2.tar.gz ...}}\fR
+.RS
+.IP \(bu 2
+Compress files:
+.RE
+.PP
+\fB\fCouch compress {{path/to/file1 path/to/file2 ...}} {{path/to/archive.zip}}\fR

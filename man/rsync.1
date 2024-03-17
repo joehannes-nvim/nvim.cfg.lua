@@ -1,0 +1,55 @@
+.TH rsync
+.PP
+.RS
+Transfer files either to or from a remote host (but not between two remote hosts), by default using SSH.
+To specify a remote path, use \fB\fChost:path/to/file_or_directory\fR\&.
+More information: \[la]https://download.samba.org/pub/rsync/rsync.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Transfer a file:
+.RE
+.PP
+\fB\fCrsync {{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Use archive mode (recursively copy directories, copy symlinks without resolving and preserve permissions, ownership and modification times):
+.RE
+.PP
+\fB\fCrsync \-\-archive {{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Compress the data as it is sent to the destination, display verbose and human\-readable progress, and keep partially transferred files if interrupted:
+.RE
+.PP
+\fB\fCrsync \-\-compress \-\-verbose \-\-human\-readable \-\-partial \-\-progress {{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Recursively copy directories:
+.RE
+.PP
+\fB\fCrsync \-\-recursive {{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Transfer directory contents, but not the directory itself:
+.RE
+.PP
+\fB\fCrsync \-\-recursive {{path/to/source}}/ {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Recursively copy directories, use archive mode, resolve symlinks and skip files that are newer on the destination:
+.RE
+.PP
+\fB\fCrsync \-\-recursive \-\-archive \-\-update \-\-copy\-links {{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Transfer a directory to a remote host running \fB\fCrsyncd\fR and delete files on the destination that do not exist on the source:
+.RE
+.PP
+\fB\fCrsync \-\-recursive \-\-delete rsync://{{host}}:{{path/to/source}} {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Transfer a file over SSH using a different port than the default (22) and show global progress:
+.RE
+.PP
+\fB\fCrsync \-\-rsh 'ssh \-p {{port}}' \-\-info=progress2 {{host}}:{{path/to/source}} {{path/to/destination}}\fR

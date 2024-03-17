@@ -1,0 +1,24 @@
+.TH ipaggmanip
+.PP
+.RS
+Manipulate aggregate statistics produced by \fB\fCipaggcreate\fR\&.
+More information: \[la]https://manned.org/ipaggmanip\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Combine labels equal in their high\-order bits:
+.RE
+.PP
+\fB\fCipaggmanip \-\-prefix {{16}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Remove labels with a count smaller than a given number of bytes and output a random sample of such labels:
+.RE
+.PP
+\fB\fCipaggmanip \-\-cut\-smaller {{100}} \-\-cull\-labels {{5}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Replace each label's count with 1 if it is non\-zero:
+.RE
+.PP
+\fB\fCipaggmanip \-\-posterize {{path/to/file}}\fR

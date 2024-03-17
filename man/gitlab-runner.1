@@ -1,0 +1,42 @@
+.TH gitlab\-runner
+.PP
+.RS
+Manage GitLab runners.
+More information: \[la]https://docs.gitlab.com/runner/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register a runner:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner register \-\-url {{https://gitlab.example.com}} \-\-registration\-token {{token}} \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Register a runner with a Docker executor:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner register \-\-url {{https://gitlab.example.com}} \-\-registration\-token {{token}} \-\-name {{name}} \-\-executor {{docker}}\fR
+.RS
+.IP \(bu 2
+Unregister a runner:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner unregister \-\-name {{name}}\fR
+.RS
+.IP \(bu 2
+Display the status of the runner service:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner status\fR
+.RS
+.IP \(bu 2
+Restart the runner service:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner restart\fR
+.RS
+.IP \(bu 2
+Check if the registered runners can connect to GitLab:
+.RE
+.PP
+\fB\fCsudo gitlab\-runner verify\fR

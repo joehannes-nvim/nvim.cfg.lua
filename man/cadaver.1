@@ -1,0 +1,24 @@
+.TH cadaver
+.PP
+.RS
+WebDAV client for Unix.
+More information: \[la]https://manned.org/cadaver\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to the server <dav.example.com>, open the root collection:
+.RE
+.PP
+\fB\fCcadaver {{http://dav.example.com/}}\fR
+.RS
+.IP \(bu 2
+Connect to a server using a specific port and open the collection \fB\fC/foo/bar/\fR:
+.RE
+.PP
+\fB\fCcadaver {{http://dav.example.com:8022/foo/bar/}}\fR
+.RS
+.IP \(bu 2
+Connect to a server using SSL:
+.RE
+.PP
+\fB\fCcadaver {{https://davs.example.com/}}\fR

@@ -1,0 +1,36 @@
+.TH b3sum
+.PP
+.RS
+Calculate BLAKE3 cryptographic checksums.
+More information: \[la]https://github.com/BLAKE3-team/BLAKE3/tree/master/b3sum\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate the BLAKE3 checksum for one or more files:
+.RE
+.PP
+\fB\fCb3sum {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Calculate and save the list of BLAKE3 checksums to a file:
+.RE
+.PP
+\fB\fCb3sum {{path/to/file1 path/to/file2 ...}} > {{path/to/file.b3}}\fR
+.RS
+.IP \(bu 2
+Calculate a BLAKE3 checksum from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | b3sum\fR
+.RS
+.IP \(bu 2
+Read a file of BLAKE3 sums and filenames and verify all files have matching checksums:
+.RE
+.PP
+\fB\fCb3sum \-\-check {{path/to/file.b3}}\fR
+.RS
+.IP \(bu 2
+Only show a message for missing files or when verification fails:
+.RE
+.PP
+\fB\fCb3sum \-\-check \-\-quiet {{path/to/file.b3}}\fR

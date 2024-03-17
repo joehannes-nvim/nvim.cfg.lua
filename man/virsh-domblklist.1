@@ -1,0 +1,19 @@
+.TH virsh\-domblklist
+.PP
+.RS
+List information about block devices associated with a virtual machine.
+See also: \fB\fCvirsh\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the target name and source path of the block devices:
+.RE
+.PP
+\fB\fCvirsh domblklist \-\-domain {{vm_name}}\fR
+.RS
+.IP \(bu 2
+List the disk type and device value as well as the target name and source path:
+.RE
+.PP
+\fB\fCvirsh domblklist \-\-domain {{vm_name}} \-\-details\fR

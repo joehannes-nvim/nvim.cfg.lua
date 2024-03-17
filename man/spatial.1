@@ -1,0 +1,54 @@
+.TH spatial
+.PP
+.RS
+A set of commands for managing and developing SpatialOS projects.
+More information: \[la]https://ims.improbable.io/products/spatialos\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run this when you use a project for the first time:
+.RE
+.PP
+\fB\fCspatial worker build\fR
+.RS
+.IP \(bu 2
+Build workers for local deployment on Unity on macOS:
+.RE
+.PP
+\fB\fCspatial worker build \-\-target=development \-\-target=Osx\fR
+.RS
+.IP \(bu 2
+Build workers for local deployment on Unreal on Windows:
+.RE
+.PP
+\fB\fCspatial worker build \-\-target=local \-\-target=Windows\fR
+.RS
+.IP \(bu 2
+Deploy locally:
+.RE
+.PP
+\fB\fCspatial local launch {{launch_config}} \-\-snapshot={{snapshot_file}}\fR
+.RS
+.IP \(bu 2
+Launch a local worker to connect to your local deployment:
+.RE
+.PP
+\fB\fCspatial local worker launch {{worker_type}} {{launch_config}}\fR
+.RS
+.IP \(bu 2
+Upload an assembly to use for cloud deployments:
+.RE
+.PP
+\fB\fCspatial cloud upload {{assembly_name}}\fR
+.RS
+.IP \(bu 2
+Launch a cloud deployment:
+.RE
+.PP
+\fB\fCspatial cloud launch {{assembly_name}} {{launch_config}} {{deployment_name}}\fR
+.RS
+.IP \(bu 2
+Clean worker directories:
+.RE
+.PP
+\fB\fCspatial worker clean\fR

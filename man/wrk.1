@@ -1,0 +1,24 @@
+.TH wrk
+.PP
+.RS
+HTTP benchmarking tool.
+More information: \[la]https://github.com/wg/wrk\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a benchmark for \fB\fC30\fR seconds, using \fB\fC12\fR threads, and keeping \fB\fC400\fR HTTP connections open:
+.RE
+.PP
+\fB\fCwrk \-t{{12}} \-c{{400}} \-d{{30s}} "{{http://127.0.0.1:8080/index.html}}"\fR
+.RS
+.IP \(bu 2
+Run a benchmark with a custom header:
+.RE
+.PP
+\fB\fCwrk \-t{{2}} \-c{{5}} \-d{{5s}} \-H "{{Host: example.com}}" "{{http://example.com/index.html}}"\fR
+.RS
+.IP \(bu 2
+Run a benchmark with a request timeout of \fB\fC2\fR seconds:
+.RE
+.PP
+\fB\fCwrk \-t{{2}} \-c{{5}} \-d{{5s}} \-\-timeout {{2s}} "{{http://example.com/index.html}}"\fR

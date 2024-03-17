@@ -1,0 +1,48 @@
+.TH bq
+.PP
+.RS
+The bq command\-line tool is a Python\-based command\-line tool for BigQuery.
+More information: \[la]https://cloud.google.com/bigquery/docs/reference/bq-cli-reference\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run query against a BigQuery table using standard SQL, add \fB\fC\-\-dry_run\fR flag to estimate the number of bytes read by the query:
+.RE
+.PP
+\fB\fCbq query \-\-nouse_legacy_sql 'SELECT COUNT(*) FROM {{DATASET_NAME}}.{{TABLE_NAME}}'\fR
+.RS
+.IP \(bu 2
+Run a parameterized query:
+.RE
+.PP
+\fB\fCbq query \-\-use_legacy_sql=false \-\-parameter='ts_value:TIMESTAMP:2016\-12\-07 08:00:00' 'SELECT TIMESTAMP_ADD(@ts_value, INTERVAL 1 HOUR)'\fR
+.RS
+.IP \(bu 2
+Create a new dataset or table in the US location:
+.RE
+.PP
+\fB\fCbq mk \-\-location=US {{dataset_name}}.{{table_name}}\fR
+.RS
+.IP \(bu 2
+List all datasets in a project:
+.RE
+.PP
+\fB\fCbq ls \-\-filter labels.{{key}}:{{value}} \-\-max_results {{integer}} \-\-format=prettyjson \-\-project_id {{project_id}}\fR
+.RS
+.IP \(bu 2
+Batch load data from a specific file in formats such as CSV, JSON, Parquet, and Avro to a table:
+.RE
+.PP
+\fB\fCbq load \-\-location={{location}} \-\-source_format={{CSV|JSON|PARQUET|AVRO}} {{dataset}}.{{table}} {{path_to_source}}\fR
+.RS
+.IP \(bu 2
+Copy one table to another:
+.RE
+.PP
+\fB\fCbq cp {{dataset}}.{{OLD_TABLE}} {{dataset}}.{{new_table}}\fR
+.RS
+.IP \(bu 2
+Print help:
+.RE
+.PP
+\fB\fCbq help\fR

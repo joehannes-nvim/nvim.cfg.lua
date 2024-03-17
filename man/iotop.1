@@ -1,0 +1,49 @@
+.TH iotop
+.PP
+.RS
+Display a table of current I/O usage by processes or threads.
+More information: \[la]https://manned.org/iotop\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start top\-like I/O monitor:
+.RE
+.PP
+\fB\fCsudo iotop\fR
+.RS
+.IP \(bu 2
+Show only processes or threads actually doing I/O:
+.RE
+.PP
+\fB\fCsudo iotop \-\-only\fR
+.RS
+.IP \(bu 2
+Show I/O usage in non\-interactive mode:
+.RE
+.PP
+\fB\fCsudo iotop \-\-batch\fR
+.RS
+.IP \(bu 2
+Show only I/O usage of processes (default is to show all threads):
+.RE
+.PP
+\fB\fCsudo iotop \-\-processes\fR
+.RS
+.IP \(bu 2
+Show I/O usage of given 
+.BR PID (s):
+.RE
+.PP
+\fB\fCsudo iotop \-\-pid={{PID}}\fR
+.RS
+.IP \(bu 2
+Show I/O usage of a given user:
+.RE
+.PP
+\fB\fCsudo iotop \-\-user={{user}}\fR
+.RS
+.IP \(bu 2
+Show accumulated I/O instead of bandwidth:
+.RE
+.PP
+\fB\fCsudo iotop \-\-accumulated\fR

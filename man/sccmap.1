@@ -1,0 +1,25 @@
+.TH sccmap
+.PP
+.RS
+Extract strongly connected components of directed graphs.
+Graphviz filters: \fB\fCacyclic\fR, \fB\fCbcomps\fR, \fB\fCcomps\fR, \fB\fCedgepaint\fR, \fB\fCgvcolor\fR, \fB\fCgvpack\fR, \fB\fCmingle\fR, \fB\fCnop\fR, \fB\fCsccmap\fR, \fB\fCtred\fR, & \fB\fCunflatten\fR\&.
+More information: \[la]https://www.graphviz.org/pdf/sccmap.1.pdf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract strongly connected components of one or more directed graphs:
+.RE
+.PP
+\fB\fCsccmap \-S {{path/to/input1.gv}} {{path/to/input2.gv ...}} > {{path/to/output.gv}}\fR
+.RS
+.IP \(bu 2
+Print statistics about a graph, producing no output graph:
+.RE
+.PP
+\fB\fCsccmap \-v \-s {{path/to/input1.gv}} {{path/to/input2.gv ...}}\fR
+.RS
+.IP \(bu 2
+Display help for \fB\fCsccmap\fR:
+.RE
+.PP
+\fB\fCsccmap \-?\fR

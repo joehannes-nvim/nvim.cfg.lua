@@ -1,0 +1,36 @@
+.TH kubectl run
+.PP
+.RS
+Run pods in Kubernetes. Specifies pod generator to avoid deprecation error in some K8S versions.
+More information: \[la]https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run an nginx pod and expose port 80:
+.RE
+.PP
+\fB\fCkubectl run {{nginx\-dev}} \-\-image=nginx \-\-port 80\fR
+.RS
+.IP \(bu 2
+Run an nginx pod, setting the TEST_VAR environment variable:
+.RE
+.PP
+\fB\fCkubectl run {{nginx\-dev}} \-\-image=nginx \-\-env="{{TEST_VAR}}={{testing}}"\fR
+.RS
+.IP \(bu 2
+Show API calls that would be made to create an nginx container:
+.RE
+.PP
+\fB\fCkubectl run {{nginx\-dev}} \-\-image=nginx \-\-dry\-run={{none|server|client}}\fR
+.RS
+.IP \(bu 2
+Run an Ubuntu pod interactively, never restart it, and remove it when it exits:
+.RE
+.PP
+\fB\fCkubectl run {{temp\-ubuntu}} \-\-image=ubuntu:22.04 \-\-restart=Never \-\-rm \-\- /bin/bash\fR
+.RS
+.IP \(bu 2
+Run an Ubuntu pod, overriding the default command with echo, and specifying custom arguments:
+.RE
+.PP
+\fB\fCkubectl run {{temp\-ubuntu}} \-\-image=ubuntu:22.04 \-\-command \-\- echo {{argument1 argument2 ...}}\fR

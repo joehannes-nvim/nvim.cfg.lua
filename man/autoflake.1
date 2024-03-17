@@ -1,0 +1,30 @@
+.TH autoflake
+.PP
+.RS
+A tool to remove unused imports and variables from Python code.
+More information: \[la]https://github.com/myint/autoflake\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove unused variables from a single file and display the diff:
+.RE
+.PP
+\fB\fCautoflake \-\-remove\-unused\-variables {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Remove unused imports from multiple files and display the diffs:
+.RE
+.PP
+\fB\fCautoflake \-\-remove\-all\-unused\-imports {{path/to/file1.py path/to/file2.py ...}}\fR
+.RS
+.IP \(bu 2
+Remove unused variables from a file, overwriting the file:
+.RE
+.PP
+\fB\fCautoflake \-\-remove\-unused\-variables \-\-in\-place {{path/to/file.py}}\fR
+.RS
+.IP \(bu 2
+Remove unused variables recursively from all files in a directory, overwriting each file:
+.RE
+.PP
+\fB\fCautoflake \-\-remove\-unused\-variables \-\-in\-place \-\-recursive {{path/to/directory}}\fR

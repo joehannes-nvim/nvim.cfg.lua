@@ -1,0 +1,30 @@
+.TH mosquitto
+.PP
+.RS
+An MQTT broker.
+More information: \[la]https://mosquitto.org/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Mosquitto:
+.RE
+.PP
+\fB\fCmosquitto\fR
+.RS
+.IP \(bu 2
+Specify a configuration file to use:
+.RE
+.PP
+\fB\fCmosquitto \-\-config\-file {{path/to/file.conf}}\fR
+.RS
+.IP \(bu 2
+Listen on a specific port:
+.RE
+.PP
+\fB\fCmosquitto \-\-port {{8883}}\fR
+.RS
+.IP \(bu 2
+Daemonize by forking into the background:
+.RE
+.PP
+\fB\fCmosquitto \-\-daemon\fR

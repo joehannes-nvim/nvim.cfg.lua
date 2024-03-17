@@ -1,0 +1,42 @@
+.TH hashid
+.PP
+.RS
+Python3 program that identifies data and password hashes.
+More information: \[la]https://github.com/psypanda/hashID\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Identify hashes from \fB\fCstdin\fR (through typing, copying and pasting, or piping the hash into the program):
+.RE
+.PP
+\fB\fChashid\fR
+.RS
+.IP \(bu 2
+Identify hashes passed as arguments (multiple hashes can be passed):
+.RE
+.PP
+\fB\fChashid {{hash}}\fR
+.RS
+.IP \(bu 2
+Identify hashes on a file (one hash per line):
+.RE
+.PP
+\fB\fChashid {{path/to/hashes.txt}}\fR
+.RS
+.IP \(bu 2
+Show all possible hash types (including salted hashes):
+.RE
+.PP
+\fB\fChashid \-\-extended {{hash}}\fR
+.RS
+.IP \(bu 2
+Show \fB\fChashcat\fR\&'s mode number and \fB\fCjohn\fR\&'s format string of the hash types:
+.RE
+.PP
+\fB\fChashid \-\-mode \-\-john {{hash}}\fR
+.RS
+.IP \(bu 2
+Save output to a file instead of printing to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fChashid \-\-outfile {{path/to/output.txt}} {{hash}}\fR

@@ -1,0 +1,37 @@
+.TH nix shell
+.PP
+.RS
+Start a shell in which the specified packages are available.
+See also: \fB\fCtldr nix\-shell\fR\&. See \fB\fCtldr nix3 flake\fR for information about flakes.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-shell.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell with some packages from \fB\fCnixpkgs\fR:
+.RE
+.PP
+\fB\fCnix shell {{nixpkgs#pkg1 nixpkgs#packageSet.pkg2 ...}}\fR
+.RS
+.IP \(bu 2
+Start a shell providing a package from an older version of \fB\fCnixpkgs\fR (21.05):
+.RE
+.PP
+\fB\fCnix shell {{nixpkgs/nixos\-21.05#pkg}}\fR
+.RS
+.IP \(bu 2
+Start a shell with the "default package" from a flake in the current directory, printing build logs if any builds happen:
+.RE
+.PP
+\fB\fCnix shell \-L\fR
+.RS
+.IP \(bu 2
+Start a shell with a package from a flake on GitHub:
+.RE
+.PP
+\fB\fCnix shell {{github:owner/repo#pkg}}\fR
+.RS
+.IP \(bu 2
+Run a command in a shell with a package:
+.RE
+.PP
+\fB\fCnix shell {{nixpkgs#pkg}} \-c {{some\-cmd \-\-someflag 'Some other arguments'}}\fR

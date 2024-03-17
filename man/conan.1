@@ -1,0 +1,43 @@
+.TH conan
+.PP
+.RS
+The open source, decentralized and cross\-platform package manager to create and share all your native binaries.
+Some subcommands such as \fB\fCconan frogarian\fR have their own usage documentation.
+More information: \[la]https://conan.io/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install packages based on \fB\fCconanfile.txt\fR:
+.RE
+.PP
+\fB\fCconan install {{.}}\fR
+.RS
+.IP \(bu 2
+Install packages and create configuration files for a specific generator:
+.RE
+.PP
+\fB\fCconan install \-g {{generator}}\fR
+.RS
+.IP \(bu 2
+Install packages, building from source:
+.RE
+.PP
+\fB\fCconan install {{.}} \-\-build\fR
+.RS
+.IP \(bu 2
+Search for locally installed packages:
+.RE
+.PP
+\fB\fCconan search {{package}}\fR
+.RS
+.IP \(bu 2
+Search for remote packages:
+.RE
+.PP
+\fB\fCconan search {{package}} \-r {{remote}}\fR
+.RS
+.IP \(bu 2
+List remotes:
+.RE
+.PP
+\fB\fCconan remote list\fR

@@ -1,0 +1,30 @@
+.TH ptargrep
+.PP
+.RS
+Find regular expression patterns in one or more tar archive files.
+More information: \[la]https://manned.org/ptargrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a tar file:
+.RE
+.PP
+\fB\fCptargrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern within multiple files:
+.RE
+.PP
+\fB\fCptargrep "{{search_pattern}}" {{path/to/file1}} {{path/to/file2}} {{path/to/file3}}\fR
+.RS
+.IP \(bu 2
+Extract to the current directory using the basename of the file from the archive:
+.RE
+.PP
+\fB\fCptargrep \-\-basename "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a case\-insensitive pattern matching within a tar file:
+.RE
+.PP
+\fB\fCptargrep \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR

@@ -1,0 +1,18 @@
+.TH gnucash\-cli
+.PP
+.RS
+A command\-line version of GnuCash.
+More information: \[la]https://gnucash.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get quotes for currencies and stocks specified in a file and print them:
+.RE
+.PP
+\fB\fCgnucash\-cli \-\-quotes get {{path/to/file.gnucash}}\fR
+.RS
+.IP \(bu 2
+Generate a financial report of a specific type, specified by \fB\fC\-\-name\fR:
+.RE
+.PP
+\fB\fCgnucash\-cli \-\-report run \-\-name "{{Balance Sheet}}" {{path/to/file.gnucash}}\fR

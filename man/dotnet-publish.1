@@ -1,0 +1,42 @@
+.TH dotnet publish
+.PP
+.RS
+Publish a .NET application and its dependencies to a directory for deployment to a hosting system.
+More information: \[la]https://learn.microsoft.com/dotnet/core/tools/dotnet-publish\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a .NET project in release mode:
+.RE
+.PP
+\fB\fCdotnet publish \-\-configuration Release {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Publish the .NET Core runtime with your application for the specified runtime:
+.RE
+.PP
+\fB\fCdotnet publish \-\-self\-contained true \-\-runtime {{runtime_identifier}} {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Package the application into a platform\-specific single\-file executable:
+.RE
+.PP
+\fB\fCdotnet publish \-\-runtime {{runtime_identifier}} \-p:PublishSingleFile=true {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Trim unused libraries to reduce the deployment size of an application:
+.RE
+.PP
+\fB\fCdotnet publish \-\-self\-contained true \-\-runtime {{runtime_identifier}} \-p:PublishTrimmed=true {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Compile a .NET project without restoring dependencies:
+.RE
+.PP
+\fB\fCdotnet publish \-\-no\-restore {{path/to/project_file}}\fR
+.RS
+.IP \(bu 2
+Specify the output directory:
+.RE
+.PP
+\fB\fCdotnet publish \-\-output {{path/to/directory}} {{path/to/project_file}}\fR

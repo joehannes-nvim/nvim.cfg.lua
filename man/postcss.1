@@ -1,0 +1,54 @@
+.TH postcss
+.PP
+.RS
+PostCSS is a tool for transforming styles with JS plugins.
+More information: \[la]https://postcss.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Parse and transform a CSS file:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Parse and transform a CSS file and output to a specific file:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-output {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Parse and transform a CSS file and output to a specific directory:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-dir {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Parse and transform a CSS file in\-place:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-replace\fR
+.RS
+.IP \(bu 2
+Specify a custom PostCSS parser:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-parser {{parser}}\fR
+.RS
+.IP \(bu 2
+Specify a custom PostCSS syntax:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-syntax {{syntax}}\fR
+.RS
+.IP \(bu 2
+Watch for changes to a CSS file:
+.RE
+.PP
+\fB\fCpostcss {{path/to/file}} \-\-watch\fR
+.RS
+.IP \(bu 2
+Display available options and examples:
+.RE
+.PP
+\fB\fCpostcss \-\-help\fR

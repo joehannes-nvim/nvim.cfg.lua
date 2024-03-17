@@ -1,0 +1,36 @@
+.TH jmap
+.PP
+.RS
+Java memory map tool.
+More information: \[la]https://docs.oracle.com/en/java/javase/20/docs/specs/man/jmap.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print shared object mappings for a Java process (output like pmap):
+.RE
+.PP
+\fB\fCjmap {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Print heap summary information:
+.RE
+.PP
+\fB\fCjmap \-heap {{filename.jar}} {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Print histogram of heap usage by type:
+.RE
+.PP
+\fB\fCjmap \-histo {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Dump contents of the heap into a binary file for analysis with jhat:
+.RE
+.PP
+\fB\fCjmap \-dump:format=b,file={{path/to/file}} {{java_pid}}\fR
+.RS
+.IP \(bu 2
+Dump live objects of the heap into a binary file for analysis with jhat:
+.RE
+.PP
+\fB\fCjmap \-dump:live,format=b,file={{path/to/file}} {{java_pid}}\fR

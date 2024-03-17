@@ -1,0 +1,48 @@
+.TH docker swarm
+.PP
+.RS
+A container orchestration tool.
+More information: \[la]https://docs.docker.com/engine/swarm/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a swarm cluster:
+.RE
+.PP
+\fB\fCdocker swarm init\fR
+.RS
+.IP \(bu 2
+Display the token to join a manager or a worker:
+.RE
+.PP
+\fB\fCdocker swarm join\-token {{worker|manager}}\fR
+.RS
+.IP \(bu 2
+Join a new node to the cluster:
+.RE
+.PP
+\fB\fCdocker swarm join \-\-token {{token}} {{manager_node_url:2377}}\fR
+.RS
+.IP \(bu 2
+Remove a worker from the swarm (run inside the worker node):
+.RE
+.PP
+\fB\fCdocker swarm leave\fR
+.RS
+.IP \(bu 2
+Display the current CA certificate in PEM format:
+.RE
+.PP
+\fB\fCdocker swarm ca\fR
+.RS
+.IP \(bu 2
+Rotate the current CA certificate and display the new certificate:
+.RE
+.PP
+\fB\fCdocker swarm ca \-\-rotate\fR
+.RS
+.IP \(bu 2
+Change the valid period for node certificates:
+.RE
+.PP
+\fB\fCdocker swarm update \-\-cert\-expiry {{hours}}h{{minutes}}m{{seconds}}s\fR

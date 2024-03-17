@@ -1,0 +1,30 @@
+.TH goimports
+.PP
+.RS
+Updates Go import lines, adding missing ones and removing unreferenced ones.
+More information: \[la]https://godoc.org/golang.org/x/tools/cmd/goimports\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the completed import source file:
+.RE
+.PP
+\fB\fCgoimports {{path/to/file}}.go\fR
+.RS
+.IP \(bu 2
+Write the result back to the source file instead of \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgoimports \-w {{path/to/file}}.go\fR
+.RS
+.IP \(bu 2
+Display diffs and write the result back to the source file:
+.RE
+.PP
+\fB\fCgoimports \-w \-d {{path/to/file}}.go\fR
+.RS
+.IP \(bu 2
+Set the import prefix string after 3rd\-party packages (comma\-separated list):
+.RE
+.PP
+\fB\fCgoimports \-local {{path/to/package}} {{path/to/file}}.go\fR

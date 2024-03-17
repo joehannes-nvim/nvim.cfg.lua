@@ -1,0 +1,48 @@
+.TH transmission\-remote
+.PP
+.RS
+Remote control utility for transmission\-daemon and transmission.
+More information: \[la]https://transmissionbt.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a torrent file or magnet link to Transmission and download to a specified directory:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-a {{torrent|url}} \-w {{/path/to/download_directory}}\fR
+.RS
+.IP \(bu 2
+Change the default download directory:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-w {{/path/to/download_directory}}\fR
+.RS
+.IP \(bu 2
+List all torrents:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-\-list\fR
+.RS
+.IP \(bu 2
+Start torrent 1 and 2, stop torrent 3:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-t "{{1,2}}" \-\-start \-t {{3}} \-\-stop\fR
+.RS
+.IP \(bu 2
+Remove torrent 1 and 2, and also delete local data for torrent 2:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-t {{1}} \-\-remove \-t {{2}} \-\-remove\-and\-delete\fR
+.RS
+.IP \(bu 2
+Stop all torrents:
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-t {{all}} \-\-stop\fR
+.RS
+.IP \(bu 2
+Move torrents 1\-10 and 15\-20 to a new directory (which will be created if it does not exist):
+.RE
+.PP
+\fB\fCtransmission\-remote {{hostname}} \-t "{{1\-10,15\-20}}" \-\-move {{/path/to/new_directory}}\fR

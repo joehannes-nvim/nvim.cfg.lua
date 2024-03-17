@@ -1,0 +1,37 @@
+.TH az provider
+.PP
+.RS
+Manage resource providers.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/provider\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Register a provider:
+.RE
+.PP
+\fB\fCaz provider register \-\-namespace {{Microsoft.PolicyInsights}}\fR
+.RS
+.IP \(bu 2
+Unregister a provider:
+.RE
+.PP
+\fB\fCaz provider unregister \-\-namespace {{Microsoft.Automation}}\fR
+.RS
+.IP \(bu 2
+List all providers for a subscription:
+.RE
+.PP
+\fB\fCaz provider list\fR
+.RS
+.IP \(bu 2
+Show information about a specific provider:
+.RE
+.PP
+\fB\fCaz provider show \-\-namespace {{Microsoft.Storage}}\fR
+.RS
+.IP \(bu 2
+List all resource types for a specific provider:
+.RE
+.PP
+\fB\fCaz provider list \-\-query "[?namespace=='{{Microsoft.Network}}'].resourceTypes[].resourceType"\fR

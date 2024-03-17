@@ -1,0 +1,43 @@
+.TH searchsploit
+.PP
+.RS
+Searchsploit searches exploit database's database for exploits, shellcodes and/or papers.
+If known version numbers are used as search terms, exploits for both the exact version and others whose version range covers the one specified are shown.
+More information: \[la]https://www.exploit-db.com/searchsploit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for an exploit, shellcode, or paper:
+.RE
+.PP
+\fB\fCsearchsploit {{search_terms}}\fR
+.RS
+.IP \(bu 2
+Search for a known specific version, e.g. sudo version 1.8.27:
+.RE
+.PP
+\fB\fCsearchsploit sudo 1.8.27\fR
+.RS
+.IP \(bu 2
+Show the exploit\-db link to the found resources:
+.RE
+.PP
+\fB\fCsearchsploit \-\-www {{search_terms}}\fR
+.RS
+.IP \(bu 2
+Make a copy of the resource to the current directory (requires the number of the exploit):
+.RE
+.PP
+\fB\fCsearchsploit \-\-mirror {{exploit_number}}\fR
+.RS
+.IP \(bu 2
+Open the resource to read with the pager defined in the \fB\fC$PAGER\fR environment variable:
+.RE
+.PP
+\fB\fCsearchsploit \-\-explore {{exploit_number}}\fR
+.RS
+.IP \(bu 2
+Update the local exploit database:
+.RE
+.PP
+\fB\fCsearchsploit \-\-update\fR

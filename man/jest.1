@@ -1,0 +1,54 @@
+.TH jest
+.PP
+.RS
+A zero\-configuration JavaScript testing platform.
+More information: \[la]https://jestjs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run all available tests:
+.RE
+.PP
+\fB\fCjest\fR
+.RS
+.IP \(bu 2
+Run the test suites from the given files:
+.RE
+.PP
+\fB\fCjest {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Run the test suites from files within the current and subdirectories, whose paths match the given regular expression:
+.RE
+.PP
+\fB\fCjest {{regular_expression1}} {{regular_expression2}}\fR
+.RS
+.IP \(bu 2
+Run the tests whose names match the given regular expression:
+.RE
+.PP
+\fB\fCjest \-\-testNamePattern {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Run test suites related to a given source file:
+.RE
+.PP
+\fB\fCjest \-\-findRelatedTests {{path/to/source_file.js}}\fR
+.RS
+.IP \(bu 2
+Run test suites related to all uncommitted files:
+.RE
+.PP
+\fB\fCjest \-\-onlyChanged\fR
+.RS
+.IP \(bu 2
+Watch files for changes and automatically re\-run related tests:
+.RE
+.PP
+\fB\fCjest \-\-watch\fR
+.RS
+.IP \(bu 2
+Show help:
+.RE
+.PP
+\fB\fCjest \-\-help\fR

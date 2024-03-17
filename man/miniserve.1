@@ -1,0 +1,24 @@
+.TH miniserve
+.PP
+.RS
+Simple HTTP file server.
+More information: \[la]https://github.com/svenstaro/miniserve\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Serve a directory:
+.RE
+.PP
+\fB\fCminiserve {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Serve a single file:
+.RE
+.PP
+\fB\fCminiserve {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Serve a directory using HTTP basic authentication:
+.RE
+.PP
+\fB\fCminiserve \-\-auth {{username}}:{{password}} {{path/to/directory}}\fR

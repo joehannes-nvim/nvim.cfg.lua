@@ -1,0 +1,30 @@
+.TH asar
+.PP
+.RS
+A file archiver for the Electron platform.
+More information: \[la]https://github.com/electron/asar\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Archive a file or directory:
+.RE
+.PP
+\fB\fCasar pack {{path/to/input_file_or_directory}} {{path/to/output_archive.asar}}\fR
+.RS
+.IP \(bu 2
+Extract an archive:
+.RE
+.PP
+\fB\fCasar extract {{path/to/archive.asar}}\fR
+.RS
+.IP \(bu 2
+Extract a specific file from an archive:
+.RE
+.PP
+\fB\fCasar extract\-file {{path/to/archive.asar}} {{file}}\fR
+.RS
+.IP \(bu 2
+List the contents of an archive file:
+.RE
+.PP
+\fB\fCasar list {{path/to/archive.asar}}\fR

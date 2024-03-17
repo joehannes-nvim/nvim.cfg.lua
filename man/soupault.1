@@ -1,0 +1,37 @@
+.TH soupault
+.PP
+.RS
+Soupault is a static website generator based on HTML element tree rewriting.
+It can also be used as an HTML post\-processor or metadata extractor.
+More information: \[la]https://soupault.app\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a minimal website project in the current working directory:
+.RE
+.PP
+\fB\fCsoupault \-\-init\fR
+.RS
+.IP \(bu 2
+Build a website:
+.RE
+.PP
+\fB\fCsoupault\fR
+.RS
+.IP \(bu 2
+Override default config file and directory locations:
+.RE
+.PP
+\fB\fCsoupault \-\-config {{config_path}} \-\-site\-dir {{input_dir}} \-\-build\-dir {{output_dir}}\fR
+.RS
+.IP \(bu 2
+Extract metadata into a JSON file without generating pages:
+.RE
+.PP
+\fB\fCsoupault \-\-index\-only \-\-dump\-index\-json {{path/to/file.json}}\fR
+.RS
+.IP \(bu 2
+Show the effective config (values from \fB\fCsoupault.toml\fR plus defaults):
+.RE
+.PP
+\fB\fCsoupault \-\-show\-effective\-config\fR

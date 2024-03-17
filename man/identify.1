@@ -1,0 +1,25 @@
+.TH identify
+.PP
+.RS
+Describe the format and characteristics of one or more image files.
+Part of ImageMagick.
+More information: \[la]https://imagemagick.org/script/identify.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Describe the format and basic characteristics of an image:
+.RE
+.PP
+\fB\fCidentify {{path/to/image}}\fR
+.RS
+.IP \(bu 2
+Describe the format and verbose characteristics of an image:
+.RE
+.PP
+\fB\fCidentify \-verbose {{path/to/image}}\fR
+.RS
+.IP \(bu 2
+Collect dimensions of all JPEG files in the current directory and save them into a CSV file:
+.RE
+.PP
+\fB\fCidentify \-format "{{%f,%w,%h\\n}}" {{*.jpg}} > {{path/to/filelist.csv}}\fR

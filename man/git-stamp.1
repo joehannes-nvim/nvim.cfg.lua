@@ -1,0 +1,25 @@
+.TH git stamp
+.PP
+.RS
+Stamp the last commit message, with the possibility to reference the issues numbers from your bug tracker or link to its review page.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-stamp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Stamp the last commit message referencing it with the issue number from your bug tracker:
+.RE
+.PP
+\fB\fCgit stamp {{issue_number}}\fR
+.RS
+.IP \(bu 2
+Stamp the last commit message linking it to its review page:
+.RE
+.PP
+\fB\fCgit stamp {{Review https://example.org/path/to/review}}\fR
+.RS
+.IP \(bu 2
+Stamp the last commit message replacing previous issues with a new one:
+.RE
+.PP
+\fB\fCgit stamp \-\-replace {{issue_number}}\fR

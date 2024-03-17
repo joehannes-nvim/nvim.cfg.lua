@@ -1,0 +1,36 @@
+.TH pip install
+.PP
+.RS
+Install Python packages.
+More information: \[la]https://pip.pypa.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package:
+.RE
+.PP
+\fB\fCpip install {{package}}\fR
+.RS
+.IP \(bu 2
+Install a specific version of a package:
+.RE
+.PP
+\fB\fCpip install {{package}}=={{version}}\fR
+.RS
+.IP \(bu 2
+Install packages listed in a file:
+.RE
+.PP
+\fB\fCpip install \-\-requirement {{path/to/requirements.txt}}\fR
+.RS
+.IP \(bu 2
+Install packages from an URL or local file archive (.tar.gz | .whl):
+.RE
+.PP
+\fB\fCpip install \-\-find\-links {{url|path/to/file}}\fR
+.RS
+.IP \(bu 2
+Install the local package in the current directory in develop (editable) mode:
+.RE
+.PP
+\fB\fCpip install \-\-editable {{.}}\fR

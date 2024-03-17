@@ -1,0 +1,37 @@
+.TH git ignore
+.PP
+.RS
+Show/update \fB\fC\&.gitignore\fR files.
+Part of \fB\fCgit\-extras\fR\&. See also \fB\fCgit ignore\-io\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the content of all global and local \fB\fC\&.gitignore\fR files:
+.RE
+.PP
+\fB\fCgit ignore\fR
+.RS
+.IP \(bu 2
+Ignore 
+.BR file (s) 
+privately, updating \fB\fC\&.git/info/exclude\fR file:
+.RE
+.PP
+\fB\fCgit ignore {{file_pattern}} \-\-private\fR
+.RS
+.IP \(bu 2
+Ignore 
+.BR file (s) 
+locally, updating local \fB\fC\&.gitignore\fR file:
+.RE
+.PP
+\fB\fCgit ignore {{file_pattern}}\fR
+.RS
+.IP \(bu 2
+Ignore 
+.BR file (s) 
+globally, updating global \fB\fC\&.gitignore\fR file:
+.RE
+.PP
+\fB\fCgit ignore {{file_pattern}} \-\-global\fR

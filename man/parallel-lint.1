@@ -1,0 +1,43 @@
+.TH parallel\-lint
+.PP
+.RS
+A tool to check the syntax of PHP files in parallel.
+More information: \[la]https://github.com/JakubOnderka/PHP-Parallel-Lint\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Lint a specific directory:
+.RE
+.PP
+\fB\fCparallel\-lint {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Lint a directory using the specified number of parallel processes:
+.RE
+.PP
+\fB\fCparallel\-lint \-j {{processes}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Lint a directory, excluding the specified directory:
+.RE
+.PP
+\fB\fCparallel\-lint \-\-exclude {{path/to/excluded_directory}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Lint a directory of files using a comma\-separated list of 
+.BR extension (s):
+.RE
+.PP
+\fB\fCparallel\-lint \-e {{php,html,phpt}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Lint a directory and output the results as JSON:
+.RE
+.PP
+\fB\fCparallel\-lint \-\-json {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Lint a directory and show Git Blame results for rows containing errors:
+.RE
+.PP
+\fB\fCparallel\-lint \-\-blame {{path/to/directory}}\fR

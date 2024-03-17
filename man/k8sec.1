@@ -1,0 +1,48 @@
+.TH k8sec
+.PP
+.RS
+Command\-line interface tool to manage Kubernetes secrets.
+More information: \[la]https://github.com/dtan4/k8sec\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all secrets:
+.RE
+.PP
+\fB\fCk8sec list\fR
+.RS
+.IP \(bu 2
+List a specific secret as a base64\-encoded string:
+.RE
+.PP
+\fB\fCk8sec list {{secret_name}} \-\-base64\fR
+.RS
+.IP \(bu 2
+Set a secret's value:
+.RE
+.PP
+\fB\fCk8sec set {{secret_name}} {{key=value}}\fR
+.RS
+.IP \(bu 2
+Set a base64\-encoded value:
+.RE
+.PP
+\fB\fCk8sec set \-\-base64 {{secret_name}} {{key=encoded_value}}\fR
+.RS
+.IP \(bu 2
+Unset a secret:
+.RE
+.PP
+\fB\fCk8sec unset {{secret_name}}\fR
+.RS
+.IP \(bu 2
+Load secrets from a file:
+.RE
+.PP
+\fB\fCk8sec load \-f {{path/to/file}} {{secret_name}}\fR
+.RS
+.IP \(bu 2
+Dump secrets to a file:
+.RE
+.PP
+\fB\fCk8sec dump \-f {{path/to/file}} {{secret_name}}\fR

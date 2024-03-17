@@ -1,0 +1,43 @@
+.TH fastmod
+.PP
+.RS
+A fast partial replacement for the codemod tool, replace and replace all in the whole codebase.
+Regexes are matched by Rust regex crate.
+More information: \[la]https://github.com/facebookincubator/fastmod\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Replace a regex pattern in all files of the current directory, ignoring files on .ignore and .gitignore:
+.RE
+.PP
+\fB\fCfastmod {{regex_pattern}} {{replacement}}\fR
+.RS
+.IP \(bu 2
+Replace a regex pattern in case\-insensitive mode in specific files or directories:
+.RE
+.PP
+\fB\fCfastmod \-\-ignore\-case {{regex_pattern}} {{replacement}} \-\- {{path/to/file path/to/directory ...}}\fR
+.RS
+.IP \(bu 2
+Replace a regex pattern in a specific directory in files filtered with a case\-insensitive glob pattern:
+.RE
+.PP
+\fB\fCfastmod {{regex}} {{replacement}} \-\-dir {{path/to/directory}} \-\-iglob {{'**/*.{js,json}'}}\fR
+.RS
+.IP \(bu 2
+Replace for an exact string in .js or .json files:
+.RE
+.PP
+\fB\fCfastmod \-\-fixed\-strings {{exact_string}} {{replacement}} \-\-extensions {{json,js}}\fR
+.RS
+.IP \(bu 2
+Replace for an exact string without prompt for a confirmation (disables regular expressions):
+.RE
+.PP
+\fB\fCfastmod \-\-accept\-all \-\-fixed\-strings {{exact_string}} {{replacement}}\fR
+.RS
+.IP \(bu 2
+Replace for an exact string without prompt for a confirmation, printing changed files:
+.RE
+.PP
+\fB\fCfastmod \-\-accept\-all \-\-print\-changed\-files \-\-fixed\-strings {{exact_string}} {{replacement}}\fR

@@ -1,0 +1,25 @@
+.TH git force\-clone
+.PP
+.RS
+Provides the basic functionality of \fB\fCgit clone\fR, but if the destination git repository already exists it will force\-reset it to resemble a clone of the remote.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-force-clone\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone a Git repository into a new directory:
+.RE
+.PP
+\fB\fCgit force\-clone {{remote_repository_location}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Clone a Git repository into a new directory, checking out an specific branch:
+.RE
+.PP
+\fB\fCgit force\-clone \-b {{branch_name}} {{remote_repository_location}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Clone a Git repository into an existing directory of a Git repository, performing a force\-reset to resemble it to the remote and checking out an specific branch:
+.RE
+.PP
+\fB\fCgit force\-clone \-b {{branch_name}} {{remote_repository_location}} {{path/to/directory}}\fR

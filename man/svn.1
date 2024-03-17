@@ -1,0 +1,42 @@
+.TH svn
+.PP
+.RS
+Subversion command\-line client tool.
+More information: \[la]https://subversion.apache.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Check out a working copy from a repository:
+.RE
+.PP
+\fB\fCsvn co {{url/to/repository}}\fR
+.RS
+.IP \(bu 2
+Bring changes from the repository into the working copy:
+.RE
+.PP
+\fB\fCsvn up\fR
+.RS
+.IP \(bu 2
+Put files and directories under version control, scheduling them for addition to repository. They will be added in next commit:
+.RE
+.PP
+\fB\fCsvn add {{PATH}}\fR
+.RS
+.IP \(bu 2
+Send changes from your working copy to the repository:
+.RE
+.PP
+\fB\fCsvn ci \-m {{commit_log_message}} [{{PATH}}]\fR
+.RS
+.IP \(bu 2
+Display changes from the last 10 revisions, showing modified files for each revision:
+.RE
+.PP
+\fB\fCsvn log \-vl {{10}}\fR
+.RS
+.IP \(bu 2
+Show detailed help:
+.RE
+.PP
+\fB\fCsvn help\fR

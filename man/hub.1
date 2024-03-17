@@ -1,0 +1,49 @@
+.TH hub
+.PP
+.RS
+A wrapper for Git that adds commands for working with GitHub\-based projects.
+If set up as instructed by \fB\fChub alias\fR, one can use \fB\fCgit\fR to run \fB\fChub\fR commands.
+More information: \[la]https://hub.github.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone a repository using its slug (owners can omit the username):
+.RE
+.PP
+\fB\fChub clone {{username}}/{{repo_name}}\fR
+.RS
+.IP \(bu 2
+Create a fork of the current repository (cloned from another user) under your GitHub profile:
+.RE
+.PP
+\fB\fChub fork\fR
+.RS
+.IP \(bu 2
+Push the current local branch to GitHub and create a PR for it in the original repository:
+.RE
+.PP
+\fB\fChub push {{remote_name}} && hub pull\-request\fR
+.RS
+.IP \(bu 2
+Create a PR of the current (already pushed) branch, reusing the message from the first commit:
+.RE
+.PP
+\fB\fChub pull\-request \-\-no\-edit\fR
+.RS
+.IP \(bu 2
+Create a new branch with the contents of a pull request and switch to it:
+.RE
+.PP
+\fB\fChub pr checkout {{pr_number}}\fR
+.RS
+.IP \(bu 2
+Upload the current (local\-only) repository to your GitHub account:
+.RE
+.PP
+\fB\fChub create\fR
+.RS
+.IP \(bu 2
+Fetch Git objects from upstream and update local branches:
+.RE
+.PP
+\fB\fChub sync\fR

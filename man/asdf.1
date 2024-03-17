@@ -1,0 +1,42 @@
+.TH asdf
+.PP
+.RS
+Command\-line interface for managing versions of different packages.
+More information: \[la]https://asdf-vm.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available plugins:
+.RE
+.PP
+\fB\fCasdf plugin list all\fR
+.RS
+.IP \(bu 2
+Install a plugin:
+.RE
+.PP
+\fB\fCasdf plugin add {{name}}\fR
+.RS
+.IP \(bu 2
+List all available versions for a package:
+.RE
+.PP
+\fB\fCasdf list all {{name}}\fR
+.RS
+.IP \(bu 2
+Install a specific version of a package:
+.RE
+.PP
+\fB\fCasdf install {{name}} {{version}}\fR
+.RS
+.IP \(bu 2
+Set global version for a package:
+.RE
+.PP
+\fB\fCasdf global {{name}} {{version}}\fR
+.RS
+.IP \(bu 2
+Set local version for a package:
+.RE
+.PP
+\fB\fCasdf local {{name}} {{version}}\fR

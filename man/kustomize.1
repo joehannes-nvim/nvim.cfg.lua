@@ -1,0 +1,30 @@
+.TH kustomize
+.PP
+.RS
+Kustomize is a tool to easily deploy resources for Kubernetes.
+More information: \[la]https://github.com/kubernetes-sigs/kustomize\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create kustomization file with resources and namespace:
+.RE
+.PP
+\fB\fCkustomize create \-\-resources {{deployment.yaml,service.yaml}} \-\-namespace {{staging}}\fR
+.RS
+.IP \(bu 2
+Build kustomization file and deploy it with \fB\fCkubectl\fR:
+.RE
+.PP
+\fB\fCkustomize build . | kubectl apply \-f \-\fR
+.RS
+.IP \(bu 2
+Set an image in the kustomization file:
+.RE
+.PP
+\fB\fCkustomize edit set image {{busybox=alpine:3.6}}\fR
+.RS
+.IP \(bu 2
+Search for Kubernetes resources in the current directory to be added to the kustomization file:
+.RE
+.PP
+\fB\fCkustomize create \-\-autodetect\fR

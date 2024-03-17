@@ -1,0 +1,30 @@
+.TH clang\-tidy
+.PP
+.RS
+An LLVM\-based C/C++ linter to find style violations, bugs and security flaws through static analysis.
+More information: \[la]https://clang.llvm.org/extra/clang-tidy/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run default checks on a source file:
+.RE
+.PP
+\fB\fCclang\-tidy {{path/to/file.cpp}}\fR
+.RS
+.IP \(bu 2
+Don't run any checks other than the \fB\fCcppcoreguidelines\fR checks on a file:
+.RE
+.PP
+\fB\fCclang\-tidy {{path/to/file.cpp}} \-checks={{\-*,cppcoreguidelines\-*}}\fR
+.RS
+.IP \(bu 2
+List all available checks:
+.RE
+.PP
+\fB\fCclang\-tidy \-checks={{*}} \-list\-checks\fR
+.RS
+.IP \(bu 2
+Specify defines and includes as compilation options (after \fB\fC\-\-\fR):
+.RE
+.PP
+\fB\fCclang\-tidy {{path/to/file.cpp}} \-\- \-I{{my_project/include}} \-D{{definitions}}\fR

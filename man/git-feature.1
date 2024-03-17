@@ -1,0 +1,31 @@
+.TH git feature
+.PP
+.RS
+Create or merge feature branches.
+Feature branches obey the format feature/<name>.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-feature\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create and switch to a new feature branch:
+.RE
+.PP
+\fB\fCgit feature {{feature_branch}}\fR
+.RS
+.IP \(bu 2
+Merge a feature branch into the current branch creating a merge commit:
+.RE
+.PP
+\fB\fCgit feature finish {{feature_branch}}\fR
+.RS
+.IP \(bu 2
+Merge a feature branch into the current branch squashing the changes into one commit:
+.RE
+.PP
+\fB\fCgit feature finish \-\-squash {{feature_branch}}\fR
+.RS
+.IP \(bu 2
+Send changes from a specific feature branch to its remote counterpart:
+.RE
+.PP
+\fB\fCgit feature {{feature_branch}} \-\-remote {{remote_name}}\fR

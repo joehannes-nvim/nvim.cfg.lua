@@ -1,0 +1,48 @@
+.TH ansible\-galaxy
+.PP
+.RS
+Create and manage Ansible roles.
+More information: \[la]https://docs.ansible.com/ansible/latest/cli/ansible-galaxy.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a role:
+.RE
+.PP
+\fB\fCansible\-galaxy install {{username}}.{{role_name}}\fR
+.RS
+.IP \(bu 2
+Remove a role:
+.RE
+.PP
+\fB\fCansible\-galaxy remove {{username}}.{{role_name}}\fR
+.RS
+.IP \(bu 2
+List installed roles:
+.RE
+.PP
+\fB\fCansible\-galaxy list\fR
+.RS
+.IP \(bu 2
+Search for a given role:
+.RE
+.PP
+\fB\fCansible\-galaxy search {{role_name}}\fR
+.RS
+.IP \(bu 2
+Create a new role:
+.RE
+.PP
+\fB\fCansible\-galaxy init {{role_name}}\fR
+.RS
+.IP \(bu 2
+Get information about a user role:
+.RE
+.PP
+\fB\fCansible\-galaxy role info {{username}}.{{role_name}}\fR
+.RS
+.IP \(bu 2
+Get information about a collection:
+.RE
+.PP
+\fB\fCansible\-galaxy collection info {{username}}.{{collection_name}}\fR

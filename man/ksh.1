@@ -1,0 +1,37 @@
+.TH ksh
+.PP
+.RS
+Korn Shell, a Bash\-compatible command\-line interpreter.
+See also: \fB\fChistexpand\fR\&.
+More information: \[la]http://kornshell.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCksh\fR
+.RS
+.IP \(bu 2
+Execute specific [c]ommands:
+.RE
+.PP
+\fB\fCksh \-c "{{echo 'ksh is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCksh {{path/to/script.ksh}}\fR
+.RS
+.IP \(bu 2
+Check a specific script for syntax errors without executing it:
+.RE
+.PP
+\fB\fCksh \-n {{path/to/script.ksh}}\fR
+.RS
+.IP \(bu 2
+Execute a specific script, printing each command in the script before executing it:
+.RE
+.PP
+\fB\fCksh \-x {{path/to/script.ksh}}\fR

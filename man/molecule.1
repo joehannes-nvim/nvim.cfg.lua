@@ -1,0 +1,42 @@
+.TH molecule
+.PP
+.RS
+Molecule helps testing Ansible roles.
+More information: \[la]https://molecule.readthedocs.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Ansible role:
+.RE
+.PP
+\fB\fCmolecule init role \-\-role\-name {{role_name}}\fR
+.RS
+.IP \(bu 2
+Run tests:
+.RE
+.PP
+\fB\fCmolecule test\fR
+.RS
+.IP \(bu 2
+Start the instance:
+.RE
+.PP
+\fB\fCmolecule create\fR
+.RS
+.IP \(bu 2
+Configure the instance:
+.RE
+.PP
+\fB\fCmolecule converge\fR
+.RS
+.IP \(bu 2
+List scenarios of the instance:
+.RE
+.PP
+\fB\fCmolecule matrix converge\fR
+.RS
+.IP \(bu 2
+Log in into the instance:
+.RE
+.PP
+\fB\fCmolecule login\fR

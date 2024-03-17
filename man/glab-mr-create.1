@@ -1,0 +1,36 @@
+.TH glab mr create
+.PP
+.RS
+Manage GitLab merge requests.
+More information: \[la]https://glab.readthedocs.io/en/latest/mr/create.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively create a merge request:
+.RE
+.PP
+\fB\fCglab mr create\fR
+.RS
+.IP \(bu 2
+Create a merge request, determining the title and description from the commit messages of the current branch:
+.RE
+.PP
+\fB\fCglab mr create \-\-fill\fR
+.RS
+.IP \(bu 2
+Create a draft merge request:
+.RE
+.PP
+\fB\fCglab mr create \-\-draft\fR
+.RS
+.IP \(bu 2
+Create a merge request specifying the target branch, title, and description:
+.RE
+.PP
+\fB\fCglab mr create \-\-target\-branch {{target_branch}} \-\-title "{{title}}" \-\-description "{{description}}"\fR
+.RS
+.IP \(bu 2
+Start opening a merge request in the default web browser:
+.RE
+.PP
+\fB\fCglab mr create \-\-web\fR

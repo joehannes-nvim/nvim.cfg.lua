@@ -1,0 +1,54 @@
+.TH doctl apps
+.PP
+.RS
+Used to manage digitalocean apps.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/apps\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an app:
+.RE
+.PP
+\fB\fCdoctl apps create\fR
+.RS
+.IP \(bu 2
+Create a deployment for a specific app:
+.RE
+.PP
+\fB\fCdoctl apps create\-deployment {{app_id}}\fR
+.RS
+.IP \(bu 2
+Delete an app interactively:
+.RE
+.PP
+\fB\fCdoctl apps delete {{app_id}}\fR
+.RS
+.IP \(bu 2
+Get an app:
+.RE
+.PP
+\fB\fCdoctl apps get\fR
+.RS
+.IP \(bu 2
+List all apps:
+.RE
+.PP
+\fB\fCdoctl apps list\fR
+.RS
+.IP \(bu 2
+List all deployments from a specific app:
+.RE
+.PP
+\fB\fCdoctl apps list\-deployments {{app_id}}\fR
+.RS
+.IP \(bu 2
+Get logs from a specific app:
+.RE
+.PP
+\fB\fCdoctl apps logs {{app_id}}\fR
+.RS
+.IP \(bu 2
+Update a specific app with a given app spec:
+.RE
+.PP
+\fB\fCdoctl apps update {{app_id}} \-\-spec {{path/to/spec.yml}}\fR

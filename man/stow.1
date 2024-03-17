@@ -1,0 +1,37 @@
+.TH stow
+.PP
+.RS
+Symlink manager.
+Often used to manage dotfiles.
+More information: \[la]https://www.gnu.org/software/stow\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Symlink all files recursively to a given directory:
+.RE
+.PP
+\fB\fCstow \-\-target={{path/to/target_directory}} {{file1 directory1 file2 directory2}}\fR
+.RS
+.IP \(bu 2
+Delete symlinks recursively from a given directory:
+.RE
+.PP
+\fB\fCstow \-\-delete \-\-target={{path/to/target_directory}} {{file1 directory1 file2 directory2}}\fR
+.RS
+.IP \(bu 2
+Simulate to see what the result would be like:
+.RE
+.PP
+\fB\fCstow \-\-simulate \-\-target={{path/to/target_directory}} {{file1 directory1 file2 directory2}}\fR
+.RS
+.IP \(bu 2
+Delete and resymlink:
+.RE
+.PP
+\fB\fCstow \-\-restow \-\-target={{path/to/target_directory}} {{file1 directory1 file2 directory2}}\fR
+.RS
+.IP \(bu 2
+Exclude files matching a regular expression:
+.RE
+.PP
+\fB\fCstow \-\-ignore={{regular_expression}} \-\-target={{path/to/target_directory}} {{file1 directory1 file2 directory2}}\fR

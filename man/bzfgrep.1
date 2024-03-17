@@ -1,0 +1,42 @@
+.TH bzfgrep
+.PP
+.RS
+Find any fixed strings separated by new lines in bzip2 compressed files using fgrep.
+More information: \[la]https://manned.org/bzfgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for lines matching the list of search strings separated by new lines in a compressed file (case\-sensitive):
+.RE
+.PP
+\fB\fCbzfgrep "{{search_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching the list of search strings separated by new lines in a compressed file (case\-insensitive):
+.RE
+.PP
+\fB\fCbzfgrep \-\-ignore\-case "{{search_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines that do not match the list of search strings separated by new lines in a compressed file:
+.RE
+.PP
+\fB\fCbzfgrep \-\-invert\-match "{{search_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match:
+.RE
+.PP
+\fB\fCbzfgrep \-\-with\-filename \-\-line\-number "{{search_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCbzfgrep \-\-only\-matching "{{search_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Recursively search files in a bzip2 compressed tar archive for the given list of strings:
+.RE
+.PP
+\fB\fCbzfgrep \-\-recursive "{{search_string}}" {{path/to/file}}\fR

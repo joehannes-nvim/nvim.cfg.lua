@@ -1,0 +1,30 @@
+.TH jc
+.PP
+.RS
+A utility to convert the output of multiple commands to JSON.
+More information: \[la]https://github.com/kellyjonbrazil/jc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert command output to JSON via pipe:
+.RE
+.PP
+\fB\fC{{ifconfig}} | jc {{\-\-ifconfig}}\fR
+.RS
+.IP \(bu 2
+Convert command output to JSON via magic syntax:
+.RE
+.PP
+\fB\fCjc {{ifconfig}}\fR
+.RS
+.IP \(bu 2
+Output pretty JSON via pipe:
+.RE
+.PP
+\fB\fC{{ifconfig}} | jc {{\-\-ifconfig}} \-p\fR
+.RS
+.IP \(bu 2
+Output pretty JSON via magic syntax:
+.RE
+.PP
+\fB\fCjc \-p {{ifconfig}}\fR

@@ -1,0 +1,24 @@
+.TH ssh\-copy\-id
+.PP
+.RS
+Install your public key in a remote machine's authorized_keys.
+More information: \[la]https://manned.org/ssh-copy-id\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy your keys to the remote machine:
+.RE
+.PP
+\fB\fCssh\-copy\-id {{username@remote_host}}\fR
+.RS
+.IP \(bu 2
+Copy the given public key to the remote:
+.RE
+.PP
+\fB\fCssh\-copy\-id \-i {{path/to/certificate}} {{username}}@{{remote_host}}\fR
+.RS
+.IP \(bu 2
+Copy the given public key to the remote with specific port:
+.RE
+.PP
+\fB\fCssh\-copy\-id \-i {{path/to/certificate}} \-p {{port}} {{username}}@{{remote_host}}\fR

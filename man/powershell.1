@@ -1,0 +1,55 @@
+.TH powershell
+.PP
+.RS
+Command\-line shell and scripting language designed especially for system administration.
+See also: \fB\fCpwsh\fR\&.
+More information: \[la]https://learn.microsoft.com/windows-server/administration/windows-commands/powershell\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCpowershell\fR
+.RS
+.IP \(bu 2
+Start an interactive shell session without loading startup configs:
+.RE
+.PP
+\fB\fCpowershell \-NoProfile\fR
+.RS
+.IP \(bu 2
+Execute specific commands:
+.RE
+.PP
+\fB\fCpowershell \-Command "{{echo 'powershell is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCpowershell \-File {{path/to/script.ps1}}\fR
+.RS
+.IP \(bu 2
+Start a session with a specific version of PowerShell:
+.RE
+.PP
+\fB\fCpowershell \-Version {{version}}\fR
+.RS
+.IP \(bu 2
+Prevent a shell from exit after running startup commands:
+.RE
+.PP
+\fB\fCpowershell \-NoExit\fR
+.RS
+.IP \(bu 2
+Describe the format of data sent to PowerShell:
+.RE
+.PP
+\fB\fCpowershell \-InputFormat {{Text|XML}}\fR
+.RS
+.IP \(bu 2
+Determine how an output from PowerShell is formatted:
+.RE
+.PP
+\fB\fCpowershell \-OutputFormat {{Text|XML}}\fR

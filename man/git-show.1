@@ -1,0 +1,54 @@
+.TH git show
+.PP
+.RS
+Show various types of Git objects (commits, tags, etc.).
+More information: \[la]https://git-scm.com/docs/git-show\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show information about the latest commit (hash, message, changes, and other metadata):
+.RE
+.PP
+\fB\fCgit show\fR
+.RS
+.IP \(bu 2
+Show information about a given commit:
+.RE
+.PP
+\fB\fCgit show {{commit}}\fR
+.RS
+.IP \(bu 2
+Show information about the commit associated with a given tag:
+.RE
+.PP
+\fB\fCgit show {{tag}}\fR
+.RS
+.IP \(bu 2
+Show information about the 3rd commit from the HEAD of a branch:
+.RE
+.PP
+\fB\fCgit show {{branch}}~{{3}}\fR
+.RS
+.IP \(bu 2
+Show a commit's message in a single line, suppressing the diff output:
+.RE
+.PP
+\fB\fCgit show \-\-oneline \-s {{commit}}\fR
+.RS
+.IP \(bu 2
+Show only statistics (added/removed characters) about the changed files:
+.RE
+.PP
+\fB\fCgit show \-\-stat {{commit}}\fR
+.RS
+.IP \(bu 2
+Show only the list of added, renamed or deleted files:
+.RE
+.PP
+\fB\fCgit show \-\-summary {{commit}}\fR
+.RS
+.IP \(bu 2
+Show the contents of a file as it was at a given revision (e.g. branch, tag or commit):
+.RE
+.PP
+\fB\fCgit show {{revision}}:{{path/to/file}}\fR

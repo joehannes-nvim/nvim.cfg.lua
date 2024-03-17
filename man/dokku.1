@@ -1,0 +1,37 @@
+.TH dokku
+.PP
+.RS
+Docker powered mini\-Heroku (PaaS).
+Easily deploy multiple apps to your server in different languages using a single \fB\fCgit\-push\fR command.
+More information: \[la]https://github.com/dokku/dokku\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List running apps:
+.RE
+.PP
+\fB\fCdokku apps\fR
+.RS
+.IP \(bu 2
+Create an app:
+.RE
+.PP
+\fB\fCdokku apps:create {{app_name}}\fR
+.RS
+.IP \(bu 2
+Remove an app:
+.RE
+.PP
+\fB\fCdokku apps:destroy {{app_name}}\fR
+.RS
+.IP \(bu 2
+Install plugin:
+.RE
+.PP
+\fB\fCdokku plugin:install {{full_repo_url}}\fR
+.RS
+.IP \(bu 2
+Link database to an app:
+.RE
+.PP
+\fB\fCdokku {{db}}:link {{db_name}} {{app_name}}\fR

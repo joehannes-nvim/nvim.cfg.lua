@@ -1,0 +1,31 @@
+.TH nu
+.PP
+.RS
+Nushell ("a new type of shell") takes a modern, structured approach to your command\-line.
+See also: \fB\fCelvish\fR\&.
+More information: \[la]https://www.nushell.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start an interactive shell session:
+.RE
+.PP
+\fB\fCnu\fR
+.RS
+.IP \(bu 2
+Execute specific commands:
+.RE
+.PP
+\fB\fCnu \-\-commands "{{echo 'nu is executed'}}"\fR
+.RS
+.IP \(bu 2
+Execute a specific script:
+.RE
+.PP
+\fB\fCnu {{path/to/script.nu}}\fR
+.RS
+.IP \(bu 2
+Execute a specific script with logging:
+.RE
+.PP
+\fB\fCnu \-\-log\-level {{error|warn|info|debug|trace}} {{path/to/script.nu}}\fR

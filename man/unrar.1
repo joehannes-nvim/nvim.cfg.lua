@@ -1,0 +1,36 @@
+.TH unrar
+.PP
+.RS
+Extract RAR archives.
+More information: \[la]https://manned.org/unrar\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract files with original directory structure:
+.RE
+.PP
+\fB\fCunrar x {{compressed.rar}}\fR
+.RS
+.IP \(bu 2
+Extract files to a specified path with the original directory structure:
+.RE
+.PP
+\fB\fCunrar x {{compressed.rar}} {{path/to/extract}}\fR
+.RS
+.IP \(bu 2
+Extract files into current directory, losing directory structure in the archive:
+.RE
+.PP
+\fB\fCunrar e {{compressed.rar}}\fR
+.RS
+.IP \(bu 2
+Test integrity of each file inside the archive file:
+.RE
+.PP
+\fB\fCunrar t {{compressed.rar}}\fR
+.RS
+.IP \(bu 2
+List files inside the archive file without decompressing it:
+.RE
+.PP
+\fB\fCunrar l {{compressed.rar}}\fR

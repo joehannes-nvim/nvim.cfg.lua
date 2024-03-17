@@ -1,0 +1,36 @@
+.TH git subtree
+.PP
+.RS
+Tool to manage project dependencies as subprojects.
+More information: \[la]https://manned.org/git-subtree.1\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a Git repository as a subtree:
+.RE
+.PP
+\fB\fCgit subtree add \-\-prefix={{path/to/directory/}} \-\-squash {{repository_url}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Update subtree repository to its latest commit:
+.RE
+.PP
+\fB\fCgit subtree pull \-\-prefix={{path/to/directory/}} {{repository_url}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Merge recent changes up to the latest subtree commit into the subtree:
+.RE
+.PP
+\fB\fCgit subtree merge \-\-prefix={{path/to/directory/}} \-\-squash {{repository_url}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Push commits to a subtree repository:
+.RE
+.PP
+\fB\fCgit subtree push \-\-prefix={{path/to/directory/}} {{repository_url}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Extract a new project history from the history of a subtree:
+.RE
+.PP
+\fB\fCgit subtree split \-\-prefix={{path/to/directory/}} {{repository_url}} \-b {{branch_name}}\fR

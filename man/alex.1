@@ -1,0 +1,31 @@
+.TH alex
+.PP
+.RS
+A tool that catches insensitive, inconsiderate writing.
+It helps you find gender favouring, polarising, race related, religion inconsiderate, or other unequal phrasing in text.
+More information: \[la]https://github.com/get-alex/alex\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze text from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho {{His network looks good}} | alex \-\-stdin\fR
+.RS
+.IP \(bu 2
+Analyze all files in the current directory:
+.RE
+.PP
+\fB\fCalex\fR
+.RS
+.IP \(bu 2
+Analyze a specific file:
+.RE
+.PP
+\fB\fCalex {{textfile.md}}\fR
+.RS
+.IP \(bu 2
+Analyze all Markdown files except \fB\fCexample.md\fR:
+.RE
+.PP
+\fB\fCalex *.md !{{example.md}}\fR

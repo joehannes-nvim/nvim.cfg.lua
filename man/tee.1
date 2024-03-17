@@ -1,0 +1,30 @@
+.TH tee
+.PP
+.RS
+Read from \fB\fCstdin\fR and write to \fB\fCstdout\fR and files (or commands).
+More information: \[la]https://www.gnu.org/software/coreutils/tee\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy \fB\fCstdin\fR to each file, and also to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCecho "example" | tee {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Append to the given files, do not overwrite:
+.RE
+.PP
+\fB\fCecho "example" | tee \-a {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print \fB\fCstdin\fR to the terminal, and also pipe it into another program for further processing:
+.RE
+.PP
+\fB\fCecho "example" | tee {{/dev/tty}} | {{xargs printf "[%s]"}}\fR
+.RS
+.IP \(bu 2
+Create a directory called "example", count the number of characters in "example" and write "example" to the terminal:
+.RE
+.PP
+\fB\fCecho "example" | tee >(xargs mkdir) >(wc \-c)\fR

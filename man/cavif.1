@@ -1,0 +1,30 @@
+.TH cavif
+.PP
+.RS
+PNG/JPEG to AVIF converter.
+More information: \[la]https://github.com/kornelski/cavif-rs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a JPEG file to AVIF:
+.RE
+.PP
+\fB\fCcavif {{path/to/file.jpg}}\fR
+.RS
+.IP \(bu 2
+Adjust the image quality (1\-100) and convert a PNG file to AVIF:
+.RE
+.PP
+\fB\fCcavif \-\-quality {{60}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Set the output location explicitly:
+.RE
+.PP
+\fB\fCcavif {{path/to/file.jpg}} \-\-output {{path/to/file.avif}}\fR
+.RS
+.IP \(bu 2
+Overwrite the destination file if it already exists:
+.RE
+.PP
+\fB\fCcavif \-\-overwrite {{path/to/file.jpg}}\fR

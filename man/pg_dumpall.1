@@ -1,0 +1,42 @@
+.TH pg_dumpall
+.PP
+.RS
+Extract a PostgreSQL database cluster into a script file or other archive file.
+More information: \[la]https://www.postgresql.org/docs/current/app-pg-dumpall.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Dump all databases:
+.RE
+.PP
+\fB\fCpg_dumpall > {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Dump all databases using a specific username:
+.RE
+.PP
+\fB\fCpg_dumpall \-\-username={{username}} > {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Same as above, customize host and port:
+.RE
+.PP
+\fB\fCpg_dumpall \-h {{host}} \-p {{port}} > {{output_file.sql}}\fR
+.RS
+.IP \(bu 2
+Dump all databases into a custom\-format archive file with moderate compression:
+.RE
+.PP
+\fB\fCpg_dumpall \-Fc > {{output_file.dump}}\fR
+.RS
+.IP \(bu 2
+Dump only database data into an SQL\-script file:
+.RE
+.PP
+\fB\fCpg_dumpall \-\-data\-only > {{path/to/file.sql}}\fR
+.RS
+.IP \(bu 2
+Dump only schema (data definitions) into an SQL\-script file:
+.RE
+.PP
+\fB\fCpg_dumpall \-s > {{output_file.sql}}\fR

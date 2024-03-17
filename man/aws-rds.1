@@ -1,0 +1,55 @@
+.TH aws rds
+.PP
+.RS
+CLI for AWS Relational Database Service.
+Create and manage relational databases.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show help for specific RDS subcommand:
+.RE
+.PP
+\fB\fCaws rds {{subcommand}} help\fR
+.RS
+.IP \(bu 2
+Stop instance:
+.RE
+.PP
+\fB\fCaws rds stop\-db\-instance \-\-db\-instance\-identifier {{instance_identifier}}\fR
+.RS
+.IP \(bu 2
+Start instance:
+.RE
+.PP
+\fB\fCaws rds start\-db\-instance \-\-db\-instance\-identifier {{instance_identifier}}\fR
+.RS
+.IP \(bu 2
+Modify an RDS instance:
+.RE
+.PP
+\fB\fCaws rds modify\-db\-instance \-\-db\-instance\-identifier {{instance_identifier}} {{parameters}} \-\-apply\-immediately\fR
+.RS
+.IP \(bu 2
+Apply updates to an RDS instance:
+.RE
+.PP
+\fB\fCaws rds apply\-pending\-maintenance\-action \-\-resource\-identifier {{database_arn}} \-\-apply\-action {{system\-update}} \-\-opt\-in\-type {{immediate}}\fR
+.RS
+.IP \(bu 2
+Change an instance identifier:
+.RE
+.PP
+\fB\fCaws rds modify\-db\-instance \-\-db\-instance\-identifier {{old_instance_identifier}} \-\-new\-db\-instance\-identifier {{new_instance_identifier}}\fR
+.RS
+.IP \(bu 2
+Reboot an instance:
+.RE
+.PP
+\fB\fCaws rds reboot\-db\-instance \-\-db\-instance\-identifier {{instance_identifier}}\fR
+.RS
+.IP \(bu 2
+Delete an instance:
+.RE
+.PP
+\fB\fCaws rds delete\-db\-instance \-\-db\-instance\-identifier {{instance_identifier}} \-\-final\-db\-snapshot\-identifier {{snapshot_identifier}} \-\-delete\-automated\-backups\fR

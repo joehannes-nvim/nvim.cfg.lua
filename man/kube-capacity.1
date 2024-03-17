@@ -1,0 +1,25 @@
+.TH kube\-capacity
+.PP
+.RS
+Provide an overview of resource requests, limits, and utilization in a Kubernetes cluster.
+Combine the best parts of \fB\fCkubectl top\fR and \fB\fCkubectl describe\fR into a CLI focused on cluster resources.
+More information: \[la]https://github.com/robscott/kube-capacity\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Output a list of nodes with the total CPU and Memory resource requests and limits:
+.RE
+.PP
+\fB\fCkube\-capacity\fR
+.RS
+.IP \(bu 2
+Include pods:
+.RE
+.PP
+\fB\fCkube\-capacity \-p\fR
+.RS
+.IP \(bu 2
+Include utilization:
+.RE
+.PP
+\fB\fCkube\-capacity \-u\fR

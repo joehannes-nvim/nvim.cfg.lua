@@ -1,0 +1,36 @@
+.TH csvtool
+.PP
+.RS
+Utility to filter and extract data from CSV formatted sources.
+More information: \[la]https://github.com/maroofi/csvtool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract the second column from a CSV file:
+.RE
+.PP
+\fB\fCcsvtool \-\-column {{2}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Extract the second and fourth columns from a CSV file:
+.RE
+.PP
+\fB\fCcsvtool \-\-column {{2,4}} {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Extract lines from a CSV file where the second column exactly matches 'Foo':
+.RE
+.PP
+\fB\fCcsvtool \-\-column {{2}} \-\-search '{{^Foo$}}' {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Extract lines from a CSV file where the second column starts with 'Bar':
+.RE
+.PP
+\fB\fCcsvtool \-\-column {{2}} \-\-search '{{^Bar}}' {{path/to/file.csv}}\fR
+.RS
+.IP \(bu 2
+Find lines in a CSV file where the second column ends with 'Baz' and then extract the third and sixth columns:
+.RE
+.PP
+\fB\fCcsvtool \-\-column {{2}} \-\-search '{{Baz$}}' {{path/to/file.csv}} | csvtool \-\-no\-header \-\-column {{3,6}}\fR

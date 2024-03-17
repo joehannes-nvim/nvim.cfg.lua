@@ -1,0 +1,42 @@
+.TH vzdump
+.PP
+.RS
+Backup Utility for virtual machines and containers.
+More information: \[la]https://pve.proxmox.com/pve-docs/vzdump.1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Dump a guest virtual machine into the default dump directory (usually \fB\fC/var/lib/vz/dump/\fR), excluding snapshots:
+.RE
+.PP
+\fB\fCvzdump {{vm_id}}\fR
+.RS
+.IP \(bu 2
+Back up the guest virtual machines with the IDs 101, 102, and 103:
+.RE
+.PP
+\fB\fCvzdump {{101 102 103}}\fR
+.RS
+.IP \(bu 2
+Dump a guest virtual machine using a specific mode:
+.RE
+.PP
+\fB\fCvzdump {{vm_id}} \-\-mode {{suspend|snapshot}}\fR
+.RS
+.IP \(bu 2
+Back up all guest systems and send an notification email to the root and admin users:
+.RE
+.PP
+\fB\fCvzdump \-\-all \-\-mode {{suspend}} \-\-mailto {{root}} \-\-mailto {{admin}}\fR
+.RS
+.IP \(bu 2
+Use snapshot mode (no downtime required) and a non\-default dump directory:
+.RE
+.PP
+\fB\fCvzdump {{vm_id}} \-\-dumpdir {{path/to/directory}} \-\-mode {{snapshot}}\fR
+.RS
+.IP \(bu 2
+Back up all guest virtual machines excluding the IDs 101 and 102:
+.RE
+.PP
+\fB\fCvzdump \-\-mode {{suspend}} \-\-exclude {{101, 102}}\fR

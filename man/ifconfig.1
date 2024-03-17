@@ -1,0 +1,36 @@
+.TH ifconfig
+.PP
+.RS
+Network Interface Configurator.
+More information: \[la]https://net-tools.sourceforge.io/man/ifconfig.8.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View network settings of an Ethernet adapter:
+.RE
+.PP
+\fB\fCifconfig eth0\fR
+.RS
+.IP \(bu 2
+Display details of all interfaces, including disabled interfaces:
+.RE
+.PP
+\fB\fCifconfig \-a\fR
+.RS
+.IP \(bu 2
+Disable eth0 interface:
+.RE
+.PP
+\fB\fCifconfig eth0 down\fR
+.RS
+.IP \(bu 2
+Enable eth0 interface:
+.RE
+.PP
+\fB\fCifconfig eth0 up\fR
+.RS
+.IP \(bu 2
+Assign IP address to eth0 interface:
+.RE
+.PP
+\fB\fCifconfig eth0 {{ip_address}}\fR

@@ -1,0 +1,36 @@
+.TH jrnl
+.PP
+.RS
+A simple journal application for your command\-line.
+More information: \[la]http://jrnl.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Insert a new entry with your editor:
+.RE
+.PP
+\fB\fCjrnl\fR
+.RS
+.IP \(bu 2
+Quickly insert a new entry:
+.RE
+.PP
+\fB\fCjrnl {{today at 3am}}: {{title}}. {{content}}\fR
+.RS
+.IP \(bu 2
+View the last ten entries:
+.RE
+.PP
+\fB\fCjrnl \-n {{10}}\fR
+.RS
+.IP \(bu 2
+View everything that happened from the start of last year to the start of last march:
+.RE
+.PP
+\fB\fCjrnl \-from "{{last year}}" \-until {{march}}\fR
+.RS
+.IP \(bu 2
+Edit all entries tagged with "texas" and "history":
+.RE
+.PP
+\fB\fCjrnl {{@texas}} \-and {{@history}} \-\-edit\fR

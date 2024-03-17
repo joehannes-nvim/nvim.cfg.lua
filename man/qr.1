@@ -1,0 +1,18 @@
+.TH qr
+.PP
+.RS
+Generate QR codes in the terminal with ANSI VT\-100 escape codes.
+More information: \[la]https://github.com/lincolnloop/python-qrcode/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a QR code:
+.RE
+.PP
+\fB\fCecho "{{data}}" | qr\fR
+.RS
+.IP \(bu 2
+Specify the error correction level (defaults to M):
+.RE
+.PP
+\fB\fCecho "{{data}}" | qr \-\-error\-correction={{L|M|Q|H}}\fR

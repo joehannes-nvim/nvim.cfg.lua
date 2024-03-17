@@ -1,0 +1,49 @@
+.TH flutter
+.PP
+.RS
+Google's free, open source, and cross\-platform mobile app SDK.
+Some subcommands such as \fB\fCflutter pub\fR have their own usage documentation.
+More information: \[la]https://github.com/flutter/flutter/wiki/The-flutter-tool\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a new Flutter project in a directory of the same name:
+.RE
+.PP
+\fB\fCflutter create {{project_name}}\fR
+.RS
+.IP \(bu 2
+Check if all external tools are correctly installed:
+.RE
+.PP
+\fB\fCflutter doctor\fR
+.RS
+.IP \(bu 2
+List or change Flutter channel:
+.RE
+.PP
+\fB\fCflutter channel {{stable|beta|dev|master}}\fR
+.RS
+.IP \(bu 2
+Run Flutter on all started emulators and connected devices:
+.RE
+.PP
+\fB\fCflutter run \-d all\fR
+.RS
+.IP \(bu 2
+Run tests in a terminal from the root of the project:
+.RE
+.PP
+\fB\fCflutter test {{test/example_test.dart}}\fR
+.RS
+.IP \(bu 2
+Build a release APK targeting most modern smartphones:
+.RE
+.PP
+\fB\fCflutter build apk \-\-target\-platform {{android\-arm}},{{android\-arm64}}\fR
+.RS
+.IP \(bu 2
+Display help about a specific command:
+.RE
+.PP
+\fB\fCflutter help {{command}}\fR

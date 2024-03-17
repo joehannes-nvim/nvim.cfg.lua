@@ -1,0 +1,31 @@
+.TH odps func
+.PP
+.RS
+Manage functions in ODPS (Open Data Processing Service).
+See also \fB\fCodps\fR\&.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show functions in the current project:
+.RE
+.PP
+\fB\fClist functions;\fR
+.RS
+.IP \(bu 2
+Create a Java function using a \fB\fC\&.jar\fR resource:
+.RE
+.PP
+\fB\fCcreate function {{func_name}} as {{path.to.package.Func}} using '{{package.jar}}';\fR
+.RS
+.IP \(bu 2
+Create a Python function using a \fB\fC\&.py\fR resource:
+.RE
+.PP
+\fB\fCcreate function {{func_name}} as {{script.Func}} using '{{script.py}}';\fR
+.RS
+.IP \(bu 2
+Delete a function:
+.RE
+.PP
+\fB\fCdrop function {{func_name}};\fR

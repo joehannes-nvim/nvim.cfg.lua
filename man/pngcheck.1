@@ -1,0 +1,42 @@
+.TH pngcheck
+.PP
+.RS
+Print detailed information about and verify PNG, JNG, and MNG files.
+More information: \[la]http://www.libpng.org/pub/png/apps/pngcheck.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a summary for an image (width, height, and color depth):
+.RE
+.PP
+\fB\fCpngcheck {{image.png}}\fR
+.RS
+.IP \(bu 2
+Print information for an image with [c]olorized output:
+.RE
+.PP
+\fB\fCpngcheck \-c {{image.png}}\fR
+.RS
+.IP \(bu 2
+Print [v]erbose information for an image:
+.RE
+.PP
+\fB\fCpngcheck \-cvt {{image.png}}\fR
+.RS
+.IP \(bu 2
+Receive an image from \fB\fCstdin\fR and display detailed information:
+.RE
+.PP
+\fB\fCcat {{path/to/image.png}} | pngcheck \-cvt\fR
+.RS
+.IP \(bu 2
+[s]earch for PNGs within a specific file and display information about them:
+.RE
+.PP
+\fB\fCpngcheck \-s {{image.png}}\fR
+.RS
+.IP \(bu 2
+Search for PNGs within another file and e[x]tract them:
+.RE
+.PP
+\fB\fCpngcheck \-x {{image.png}}\fR

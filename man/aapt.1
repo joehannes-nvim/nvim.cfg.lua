@@ -1,0 +1,25 @@
+.TH aapt
+.PP
+.RS
+Android Asset Packaging Tool.
+Compile and package an Android app's resources.
+More information: \[la]https://elinux.org/Android_aapt\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List files contained in an APK archive:
+.RE
+.PP
+\fB\fCaapt list {{path/to/app.apk}}\fR
+.RS
+.IP \(bu 2
+Display an app's metadata (version, permissions, etc.):
+.RE
+.PP
+\fB\fCaapt dump badging {{path/to/app.apk}}\fR
+.RS
+.IP \(bu 2
+Create a new APK archive with files from the specified directory:
+.RE
+.PP
+\fB\fCaapt package \-F {{path/to/app.apk}} {{path/to/directory}}\fR

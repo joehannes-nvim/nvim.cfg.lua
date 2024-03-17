@@ -1,0 +1,54 @@
+.TH corepack
+.PP
+.RS
+Zero\-runtime\-dependency package acting as bridge between Node projects and their package managers.
+More information: \[la]https://github.com/nodejs/corepack\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add the Corepack shims to the Node.js installation directory to make them available as global commands:
+.RE
+.PP
+\fB\fCcorepack enable\fR
+.RS
+.IP \(bu 2
+Add the Corepack shims to a specific directory:
+.RE
+.PP
+\fB\fCcorepack enable \-\-install\-directory {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Remove the Corepack shims from the Node.js installation directory:
+.RE
+.PP
+\fB\fCcorepack disable\fR
+.RS
+.IP \(bu 2
+Prepare a specific package manager:
+.RE
+.PP
+\fB\fCcorepack prepare {{package_manager}}@{{version}} \-\-activate\fR
+.RS
+.IP \(bu 2
+Prepare the package manager configured for the project in the current path:
+.RE
+.PP
+\fB\fCcorepack prepare\fR
+.RS
+.IP \(bu 2
+Use a package manager without installing it as a global command:
+.RE
+.PP
+\fB\fCcorepack {{npm|pnpm|yarn}} {{package_manager_arguments}}\fR
+.RS
+.IP \(bu 2
+Install a package manager from the specified archive:
+.RE
+.PP
+\fB\fCcorepack hydrate {{path/to/corepack.tgz}}\fR
+.RS
+.IP \(bu 2
+Display help for a subcommand:
+.RE
+.PP
+\fB\fCcorepack {{subcommand}} \-\-help\fR

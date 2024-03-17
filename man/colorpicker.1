@@ -1,0 +1,37 @@
+.TH colorpicker
+.PP
+.RS
+A minimalist X11 colorpicker.
+Any mouse gesture except left click will exit the program.
+More information: \[la]https://github.com/ym1234/colorpicker\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch colorpicker and print the hexadecimal and RGB value of each clicked pixel to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCcolorpicker\fR
+.RS
+.IP \(bu 2
+Only print the color of one clicked pixel and then exit:
+.RE
+.PP
+\fB\fCcolorpicker \-\-one\-shot\fR
+.RS
+.IP \(bu 2
+Print the color of each clicked pixel and quit when a key is pressed:
+.RE
+.PP
+\fB\fCcolorpicker \-\-quit\-on\-keypress\fR
+.RS
+.IP \(bu 2
+Only print the RGB value:
+.RE
+.PP
+\fB\fCcolorpicker \-\-rgb\fR
+.RS
+.IP \(bu 2
+Only print the hexadecimal value:
+.RE
+.PP
+\fB\fCcolorpicker \-\-hex\fR

@@ -1,0 +1,49 @@
+.TH rustup
+.PP
+.RS
+Install, manage, and update Rust toolchains.
+Some subcommands, such as \fB\fCtoolchain\fR, \fB\fCtarget\fR, \fB\fCupdate\fR, etc. have their own usage documentation.
+More information: \[la]https://rust-lang.github.io/rustup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install the nightly toolchain for your system:
+.RE
+.PP
+\fB\fCrustup install nightly\fR
+.RS
+.IP \(bu 2
+Switch the default toolchain to nightly so that the \fB\fCcargo\fR and \fB\fCrustc\fR commands will use it:
+.RE
+.PP
+\fB\fCrustup default nightly\fR
+.RS
+.IP \(bu 2
+Use the nightly toolchain when inside the current project but leave global settings unchanged:
+.RE
+.PP
+\fB\fCrustup override set nightly\fR
+.RS
+.IP \(bu 2
+Update all toolchains:
+.RE
+.PP
+\fB\fCrustup update\fR
+.RS
+.IP \(bu 2
+List installed toolchains:
+.RE
+.PP
+\fB\fCrustup show\fR
+.RS
+.IP \(bu 2
+Run \fB\fCcargo build\fR with a certain toolchain:
+.RE
+.PP
+\fB\fCrustup run {{toolchain}} cargo build\fR
+.RS
+.IP \(bu 2
+Open the local Rust documentation in the default web browser:
+.RE
+.PP
+\fB\fCrustup doc\fR

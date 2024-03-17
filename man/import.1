@@ -1,0 +1,25 @@
+.TH import
+.PP
+.RS
+Capture some or all of an X server screen, and save the image to a file.
+Part of ImageMagick.
+More information: \[la]https://imagemagick.org/script/import.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Capture the entire X server screen into a PostScript file:
+.RE
+.PP
+\fB\fCimport \-window root {{path/to/output.ps}}\fR
+.RS
+.IP \(bu 2
+Capture contents of a remote X server screen into a PNG image:
+.RE
+.PP
+\fB\fCimport \-window root \-display {{remote_host}}:{{screen}}.{{display}} {{path/to/output.png}}\fR
+.RS
+.IP \(bu 2
+Capture a specific window given its ID as displayed by \fB\fCxwininfo\fR into a JPEG image:
+.RE
+.PP
+\fB\fCimport \-window {{window_id}} {{path/to/output.jpg}}\fR

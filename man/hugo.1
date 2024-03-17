@@ -1,0 +1,54 @@
+.TH hugo
+.PP
+.RS
+Template\-based static site generator. Uses modules, components, and themes.
+More information: \[la]https://gohugo.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Hugo site:
+.RE
+.PP
+\fB\fChugo new site {{path/to/site}}\fR
+.RS
+.IP \(bu 2
+Create a new Hugo theme (themes may also be downloaded from \[la]https://themes.gohugo.io/\[ra]):
+.RE
+.PP
+\fB\fChugo new theme {{theme_name}}\fR
+.RS
+.IP \(bu 2
+Create a new page:
+.RE
+.PP
+\fB\fChugo new {{section_name}}/{{page_name}}\fR
+.RS
+.IP \(bu 2
+Build a site to the \fB\fC\&./public/\fR directory:
+.RE
+.PP
+\fB\fChugo\fR
+.RS
+.IP \(bu 2
+Build a site including pages that are marked as a "draft":
+.RE
+.PP
+\fB\fChugo \-\-buildDrafts\fR
+.RS
+.IP \(bu 2
+Build a site on your local IP:
+.RE
+.PP
+\fB\fChugo server \-\-bind {{local\-ip}} \-\-baseURL {{http://local\-ip}}\fR
+.RS
+.IP \(bu 2
+Build a site to a given directory:
+.RE
+.PP
+\fB\fChugo \-\-destination {{path/to/destination}}\fR
+.RS
+.IP \(bu 2
+Build a site, start up a webserver to serve it, and automatically reload when pages are edited:
+.RE
+.PP
+\fB\fChugo server\fR

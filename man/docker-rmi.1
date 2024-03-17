@@ -1,0 +1,30 @@
+.TH docker rmi
+.PP
+.RS
+Remove one or more Docker images.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/rmi/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show help:
+.RE
+.PP
+\fB\fCdocker rmi\fR
+.RS
+.IP \(bu 2
+Remove one or more images given their names:
+.RE
+.PP
+\fB\fCdocker rmi {{image1 image2 ...}}\fR
+.RS
+.IP \(bu 2
+Force remove an image:
+.RE
+.PP
+\fB\fCdocker rmi \-\-force {{image}}\fR
+.RS
+.IP \(bu 2
+Remove an image without deleting untagged parents:
+.RE
+.PP
+\fB\fCdocker rmi \-\-no\-prune {{image}}\fR

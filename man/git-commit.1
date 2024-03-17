@@ -1,0 +1,48 @@
+.TH git commit
+.PP
+.RS
+Commit files to the repository.
+More information: \[la]https://git-scm.com/docs/git-commit\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Commit staged files to the repository with a message:
+.RE
+.PP
+\fB\fCgit commit \-\-message "{{message}}"\fR
+.RS
+.IP \(bu 2
+Commit staged files with a message read from a file:
+.RE
+.PP
+\fB\fCgit commit \-\-file {{path/to/commit_message_file}}\fR
+.RS
+.IP \(bu 2
+Auto stage all modified and deleted files and commit with a message:
+.RE
+.PP
+\fB\fCgit commit \-\-all \-\-message "{{message}}"\fR
+.RS
+.IP \(bu 2
+Commit staged files and sign them with the specified GPG key (or the one defined in the config file if no argument is specified):
+.RE
+.PP
+\fB\fCgit commit \-\-gpg\-sign {{key_id}} \-\-message "{{message}}"\fR
+.RS
+.IP \(bu 2
+Update the last commit by adding the currently staged changes, changing the commit's hash:
+.RE
+.PP
+\fB\fCgit commit \-\-amend\fR
+.RS
+.IP \(bu 2
+Commit only specific (already staged) files:
+.RE
+.PP
+\fB\fCgit commit {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Create a commit, even if there are no staged files:
+.RE
+.PP
+\fB\fCgit commit \-\-message "{{message}}" \-\-allow\-empty\fR

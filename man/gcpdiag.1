@@ -1,0 +1,37 @@
+.TH gcpdiag
+.PP
+.RS
+Google Cloud Platform troubleshooting and diagnostics tool.
+Run in a docker container or in GCP Cloudshell.
+More information: \[la]https://github.com/GoogleCloudPlatform/gcpdiag\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run \fB\fCgcpdiag\fR on your project, returning all rules:
+.RE
+.PP
+\fB\fCgcpdiag lint \-\-project={{gcp_project_id}}\fR
+.RS
+.IP \(bu 2
+Hide rules that are ok:
+.RE
+.PP
+\fB\fCgcpdiag lint \-\-project={{gcp_project_id}} \-\-hide\-ok\fR
+.RS
+.IP \(bu 2
+Authenticate using a service account private key file:
+.RE
+.PP
+\fB\fCgcpdiag lint \-\-project={{gcp_project_id}} \-\-auth\-key {{path/to/private_key}}\fR
+.RS
+.IP \(bu 2
+Search logs and metrics from a number of days back (default: 3 days):
+.RE
+.PP
+\fB\fCgcpdiag lint \-\-project={{gcp_project_id}} \-\-within\-days {{number}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgcpdiag lint \-\-help\fR

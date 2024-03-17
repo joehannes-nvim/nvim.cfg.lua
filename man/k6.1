@@ -1,0 +1,54 @@
+.TH k6
+.PP
+.RS
+Open source load testing tool and SaaS for engineering teams.
+More information: \[la]https://k6.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run load test locally:
+.RE
+.PP
+\fB\fCk6 run {{script.js}}\fR
+.RS
+.IP \(bu 2
+Run load test locally with a given number of virtual users and duration:
+.RE
+.PP
+\fB\fCk6 run \-\-vus {{10}} \-\-duration {{30s}} {{script.js}}\fR
+.RS
+.IP \(bu 2
+Run load test locally with a given environment variable:
+.RE
+.PP
+\fB\fCk6 run \-e {{HOSTNAME=example.com}} {{script.js}}\fR
+.RS
+.IP \(bu 2
+Run load test locally using InfluxDB to store results:
+.RE
+.PP
+\fB\fCk6 run \-\-out influxdb={{http://localhost:8086/k6db}} {{script.js}}\fR
+.RS
+.IP \(bu 2
+Run load test locally and discard response bodies (significantly faster):
+.RE
+.PP
+\fB\fCk6 run \-\-discard\-response\-bodies {{script.js}}\fR
+.RS
+.IP \(bu 2
+Run load test locally using the base JavaScript compatibility mode (significantly faster):
+.RE
+.PP
+\fB\fCk6 run \-\-compatibility\-mode=base {{script.js}}\fR
+.RS
+.IP \(bu 2
+Log in to cloud service using secret token:
+.RE
+.PP
+\fB\fCk6 login cloud \-\-token {{secret}}\fR
+.RS
+.IP \(bu 2
+Run load test on cloud infrastructure:
+.RE
+.PP
+\fB\fCk6 cloud {{script.js}}\fR

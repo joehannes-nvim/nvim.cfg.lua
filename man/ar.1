@@ -1,0 +1,37 @@
+.TH ar
+.PP
+.RS
+Create, modify, and extract from Unix archives. Typically used for static libraries (\fB\fC\&.a\fR) and Debian packages (\fB\fC\&.deb\fR).
+See also: \fB\fCtar\fR\&.
+More information: \[la]https://manned.org/ar\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+E[x]tract all members from an archive:
+.RE
+.PP
+\fB\fCar x {{path/to/file.a}}\fR
+.RS
+.IP \(bu 2
+Lis[t] contents in a specific archive:
+.RE
+.PP
+\fB\fCar t {{path/to/file.ar}}\fR
+.RS
+.IP \(bu 2
+[r]eplace or add specific files to an archive:
+.RE
+.PP
+\fB\fCar r {{path/to/file.deb}} {{path/to/debian\-binary path/to/control.tar.gz path/to/data.tar.xz ...}}\fR
+.RS
+.IP \(bu 2
+In[s]ert an object file index (equivalent to using \fB\fCranlib\fR):
+.RE
+.PP
+\fB\fCar s {{path/to/file.a}}\fR
+.RS
+.IP \(bu 2
+Create an archive with specific files and an accompanying object file index:
+.RE
+.PP
+\fB\fCar rs {{path/to/file.a}} {{path/to/file1.o path/to/file2.o ...}}\fR

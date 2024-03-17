@@ -1,0 +1,36 @@
+.TH babeld
+.PP
+.RS
+Routing daemon for Babel which uses firewall\-style filters.
+More information: \[la]https://www.irif.fr/~jch/software/babel/babeld.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCbabeld\fR with a specific configuration file:
+.RE
+.PP
+\fB\fCbabeld \-c {{path/to/babeld.conf}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCbabeld\fR with multiple configuration files (read in order):
+.RE
+.PP
+\fB\fCbabeld \-c {{path/to/ports.conf}} \-c {{path/to/filters.conf}} \-c {{path/to/interfaces.conf}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCbabeld\fR and daemonise afterwards:
+.RE
+.PP
+\fB\fCbabeld \-D\fR
+.RS
+.IP \(bu 2
+Start \fB\fCbabeld\fR and pass a configuration command:
+.RE
+.PP
+\fB\fCbabeld \-C {{'redistribute metric 256'}}\fR
+.RS
+.IP \(bu 2
+Start \fB\fCbabeld\fR and specify on which interfaces to operate:
+.RE
+.PP
+\fB\fCbabeld {{eth0}} {{eth1}} {{wlan0}}\fR

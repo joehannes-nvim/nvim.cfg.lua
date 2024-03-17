@@ -1,0 +1,30 @@
+.TH rdfind
+.PP
+.RS
+Find files with duplicate content and get rid of them.
+More information: \[la]https://rdfind.pauldreik.se\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Identify all duplicates in a given directory and output a summary:
+.RE
+.PP
+\fB\fCrdfind \-dryrun true {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Replace all duplicates with hardlinks:
+.RE
+.PP
+\fB\fCrdfind \-makehardlinks true {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Replace all duplicates with symlinks/soft links:
+.RE
+.PP
+\fB\fCrdfind \-makesymlinks true {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Delete all duplicates and do not ignore empty files:
+.RE
+.PP
+\fB\fCrdfind \-deleteduplicates true \-ignoreempty false {{path/to/directory}}\fR

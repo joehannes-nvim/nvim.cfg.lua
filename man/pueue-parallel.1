@@ -1,0 +1,18 @@
+.TH pueue parallel
+.PP
+.RS
+Set the amount of allowed parallel tasks.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Set the maximum number of tasks allowed to run in parallel, in the default group:
+.RE
+.PP
+\fB\fCpueue parallel {{max_number_of_parallel_tasks}}\fR
+.RS
+.IP \(bu 2
+Set the maximum number of tasks allowed to run in parallel, in a specific group:
+.RE
+.PP
+\fB\fCpueue parallel \-\-group {{group_name}} {{maximum_number_of_parallel_tasks}}\fR

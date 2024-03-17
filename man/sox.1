@@ -1,0 +1,43 @@
+.TH sox
+.PP
+.RS
+Sound eXchange: play, record and convert audio files.
+Audio formats are identified by the extension.
+More information: \[la]http://sox.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Merge two audio files into one:
+.RE
+.PP
+\fB\fCsox \-m {{input_audiofile1}} {{input_audiofile2}} {{output_audiofile}}\fR
+.RS
+.IP \(bu 2
+Trim an audio file to the specified times:
+.RE
+.PP
+\fB\fCsox {{input_audiofile}} {{output_audiofile}} trim {{start}} {{end}}\fR
+.RS
+.IP \(bu 2
+Normalize an audio file (adjust volume to the maximum peak level, without clipping):
+.RE
+.PP
+\fB\fCsox \-\-norm {{input_audiofile}} {{output_audiofile}}\fR
+.RS
+.IP \(bu 2
+Reverse and save an audio file:
+.RE
+.PP
+\fB\fCsox {{input_audiofile}} {{output_audiofile}} reverse\fR
+.RS
+.IP \(bu 2
+Print statistical data of an audio file:
+.RE
+.PP
+\fB\fCsox {{input_audiofile}} \-n stat\fR
+.RS
+.IP \(bu 2
+Increase the volume of an audio file by 2x:
+.RE
+.PP
+\fB\fCsox \-v 2.0 {{input_audiofile}} {{output_audiofile}}\fR

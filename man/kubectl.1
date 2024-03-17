@@ -1,0 +1,55 @@
+.TH kubectl
+.PP
+.RS
+Command\-line interface for running commands against Kubernetes clusters.
+Some subcommands such as \fB\fCkubectl run\fR have their own usage documentation.
+More information: \[la]https://kubernetes.io/docs/reference/kubectl/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List information about a resource with more details:
+.RE
+.PP
+\fB\fCkubectl get {{pod|service|deployment|ingress|...}} \-o wide\fR
+.RS
+.IP \(bu 2
+Update specified pod with the label 'unhealthy' and the value 'true':
+.RE
+.PP
+\fB\fCkubectl label pods {{name}} unhealthy=true\fR
+.RS
+.IP \(bu 2
+List all resources with different types:
+.RE
+.PP
+\fB\fCkubectl get all\fR
+.RS
+.IP \(bu 2
+Display resource (CPU/Memory/Storage) usage of nodes or pods:
+.RE
+.PP
+\fB\fCkubectl top {{pod|node}}\fR
+.RS
+.IP \(bu 2
+Print the address of the master and cluster services:
+.RE
+.PP
+\fB\fCkubectl cluster\-info\fR
+.RS
+.IP \(bu 2
+Display an explanation of a specific field:
+.RE
+.PP
+\fB\fCkubectl explain {{pods.spec.containers}}\fR
+.RS
+.IP \(bu 2
+Print the logs for a container in a pod or specified resource:
+.RE
+.PP
+\fB\fCkubectl logs {{pod_name}}\fR
+.RS
+.IP \(bu 2
+Run command in an existing pod:
+.RE
+.PP
+\fB\fCkubectl exec {{pod_name}} \-\- {{ls /}}\fR

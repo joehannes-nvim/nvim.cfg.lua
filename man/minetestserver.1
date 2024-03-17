@@ -1,0 +1,55 @@
+.TH minetestserver
+.PP
+.RS
+Multiplayer infinite\-world block sandbox server.
+See also \fB\fCminetest\fR, the graphical client.
+More information: \[la]https://wiki.minetest.net/Setting_up_a_server\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the server:
+.RE
+.PP
+\fB\fCminetestserver\fR
+.RS
+.IP \(bu 2
+List available worlds:
+.RE
+.PP
+\fB\fCminetestserver \-\-world list\fR
+.RS
+.IP \(bu 2
+Specify the world name to load:
+.RE
+.PP
+\fB\fCminetestserver \-\-world {{world_name}}\fR
+.RS
+.IP \(bu 2
+List the available game IDs:
+.RE
+.PP
+\fB\fCminetestserver \-\-gameid list\fR
+.RS
+.IP \(bu 2
+Specify a game to use:
+.RE
+.PP
+\fB\fCminetestserver \-\-gameid {{game_id}}\fR
+.RS
+.IP \(bu 2
+Listen on a specific port:
+.RE
+.PP
+\fB\fCminetestserver \-\-port {{34567}}\fR
+.RS
+.IP \(bu 2
+Migrate to a different data backend:
+.RE
+.PP
+\fB\fCminetestserver \-\-migrate {{sqlite3|leveldb|redis}}\fR
+.RS
+.IP \(bu 2
+Start an interactive terminal after starting the server:
+.RE
+.PP
+\fB\fCminetestserver \-\-terminal\fR

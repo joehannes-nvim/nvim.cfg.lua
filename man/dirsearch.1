@@ -1,0 +1,42 @@
+.TH dirsearch
+.PP
+.RS
+Web path scanner.
+More information: \[la]https://github.com/maurosoria/dirsearch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a web server for common paths with common extensions:
+.RE
+.PP
+\fB\fCdirsearch \-\-url {{url}} \-\-extensions\-list\fR
+.RS
+.IP \(bu 2
+Scan a list of web servers for common paths with the \fB\fC\&.php\fR extension:
+.RE
+.PP
+\fB\fCdirsearch \-\-url\-list {{path/to/url\-list.txt}} \-\-extensions {{php}}\fR
+.RS
+.IP \(bu 2
+Scan a web server for user\-defined paths with common extensions:
+.RE
+.PP
+\fB\fCdirsearch \-\-url {{url}} \-\-extensions\-list \-\-wordlist {{path/to/url\-paths.txt}}\fR
+.RS
+.IP \(bu 2
+Scan a web server using a cookie:
+.RE
+.PP
+\fB\fCdirsearch \-\-url {{url}} \-\-extensions {{php}} \-\-cookie {{cookie}}\fR
+.RS
+.IP \(bu 2
+Scan a web server using the \fB\fCHEAD\fR HTTP method:
+.RE
+.PP
+\fB\fCdirsearch \-\-url {{url}} \-\-extensions {{php}} \-\-http\-method {{HEAD}}\fR
+.RS
+.IP \(bu 2
+Scan a web server, saving the results to a \fB\fC\&.json\fR file:
+.RE
+.PP
+\fB\fCdirsearch \-\-url {{url}} \-\-extensions {{php}} \-\-json\-report {{path/to/report.json}}\fR

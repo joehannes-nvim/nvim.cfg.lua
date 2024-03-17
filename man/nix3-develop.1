@@ -1,0 +1,24 @@
+.TH nix develop
+.PP
+.RS
+Run a bash shell that provides the build environment of a derivation.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-develop.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a shell with all dependencies of a package from nixpkgs available:
+.RE
+.PP
+\fB\fCnix develop {{nixpkgs#pkg}}\fR
+.RS
+.IP \(bu 2
+Start a development shell for the default package in a flake in the current directory:
+.RE
+.PP
+\fB\fCnix develop\fR
+.RS
+.IP \(bu 2
+In that shell, configure and build the sources:
+.RE
+.PP
+\fB\fCconfigurePhase; buildPhase\fR

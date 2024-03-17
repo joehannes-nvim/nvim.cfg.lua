@@ -1,0 +1,42 @@
+.TH stat
+.PP
+.RS
+Display file and filesystem information.
+More information: \[la]https://www.gnu.org/software/coreutils/manual/html_node/stat-invocation.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display properties about a specific file such as size, permissions, creation and access dates among others:
+.RE
+.PP
+\fB\fCstat {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display properties about a specific file such as size, permissions, creation and access dates among others without labels:
+.RE
+.PP
+\fB\fCstat \-\-terse {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display information about the filesystem where a specific file is located:
+.RE
+.PP
+\fB\fCstat \-\-file\-system {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show only octal file permissions:
+.RE
+.PP
+\fB\fCstat \-\-format="%a %n" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show the owner and group of a specific file:
+.RE
+.PP
+\fB\fCstat \-\-format="%U %G" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show the size of a specific file in bytes:
+.RE
+.PP
+\fB\fCstat \-\-format="%s %n" {{path/to/file}}\fR

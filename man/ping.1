@@ -1,0 +1,42 @@
+.TH ping
+.PP
+.RS
+Send ICMP ECHO_REQUEST packets to network hosts.
+More information: \[la]https://manned.org/ping\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Ping host:
+.RE
+.PP
+\fB\fCping {{host}}\fR
+.RS
+.IP \(bu 2
+Ping a host only a specific number of times:
+.RE
+.PP
+\fB\fCping \-c {{count}} {{host}}\fR
+.RS
+.IP \(bu 2
+Ping host, specifying the interval in seconds between requests (default is 1 second):
+.RE
+.PP
+\fB\fCping \-i {{seconds}} {{host}}\fR
+.RS
+.IP \(bu 2
+Ping host without trying to lookup symbolic names for addresses:
+.RE
+.PP
+\fB\fCping \-n {{host}}\fR
+.RS
+.IP \(bu 2
+Ping host and ring the bell when a packet is received (if your terminal supports it):
+.RE
+.PP
+\fB\fCping \-a {{host}}\fR
+.RS
+.IP \(bu 2
+Also display a message if no response was received:
+.RE
+.PP
+\fB\fCping \-O {{host}}\fR

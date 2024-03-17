@@ -1,0 +1,42 @@
+.TH q
+.PP
+.RS
+Execute SQL\-like queries on .csv and .tsv files.
+More information: \[la]https://harelba.github.io/q\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Query \fB\fC\&.csv\fR file by specifying the delimiter as ',':
+.RE
+.PP
+\fB\fCq \-d',' "SELECT * from {{path/to/file}}"\fR
+.RS
+.IP \(bu 2
+Query \fB\fC\&.tsv\fR file:
+.RE
+.PP
+\fB\fCq \-t "SELECT * from {{path/to/file}}"\fR
+.RS
+.IP \(bu 2
+Query file with header row:
+.RE
+.PP
+\fB\fCq \-d{{delimiter}} \-H "SELECT * from {{path/to/file}}"\fR
+.RS
+.IP \(bu 2
+Read data from \fB\fCstdin\fR; '\-' in the query represents the data from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{output}} | q "select * from \-"\fR
+.RS
+.IP \(bu 2
+Join two files (aliased as \fB\fCf1\fR and \fB\fCf2\fR in the example) on column \fB\fCc1\fR, a common column:
+.RE
+.PP
+\fB\fCq "SELECT * FROM {{path/to/file}} f1 JOIN {{path/to/other_file}} f2 ON (f1.c1 = f2.c1)"\fR
+.RS
+.IP \(bu 2
+Format output using an output delimiter with an output header line (note: command will output column names based on the input file header or the column aliases overridden in the query):
+.RE
+.PP
+\fB\fCq \-D{{delimiter}} \-O "SELECT {{column}} as {{alias}} from {{path/to/file}}"\fR

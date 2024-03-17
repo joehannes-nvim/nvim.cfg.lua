@@ -1,0 +1,24 @@
+.TH gpgv
+.PP
+.RS
+Verify OpenPGP signatures.
+More information: \[la]https://www.gnupg.org/documentation/manuals/gnupg/gpgv.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Verify a signed file:
+.RE
+.PP
+\fB\fCgpgv {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Verify a signed file using a detached signature:
+.RE
+.PP
+\fB\fCgpgv {{path/to/signature}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Add a file to the list of keyrings (a single exported key also counts as a keyring):
+.RE
+.PP
+\fB\fCgpgv \-\-keyring {{./alice.keyring}} {{path/to/signature}} {{path/to/file}}\fR

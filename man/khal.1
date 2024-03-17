@@ -1,0 +1,36 @@
+.TH khal
+.PP
+.RS
+A text\-based calendar and scheduling application for the command\-line.
+More information: \[la]https://lostpackets.de/khal\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Khal on interactive mode:
+.RE
+.PP
+\fB\fCikhal\fR
+.RS
+.IP \(bu 2
+Print all events scheduled in personal calendar for the next seven days:
+.RE
+.PP
+\fB\fCkhal list \-a {{personal}} {{today}} {{7d}}\fR
+.RS
+.IP \(bu 2
+Print all events scheduled not in personal calendar for tomorrow at 10:00:
+.RE
+.PP
+\fB\fCkhal at \-d {{personal}} {{tomorrow}} {{10:00}}\fR
+.RS
+.IP \(bu 2
+Print a calendar with a list of events for the next three months:
+.RE
+.PP
+\fB\fCkhal calendar\fR
+.RS
+.IP \(bu 2
+Add new event to personal calendar:
+.RE
+.PP
+\fB\fCkhal new \-a {{personal}} {{2020\-09\-08}} {{18:00}} {{18:30}} "{{Dentist appointment}}"\fR

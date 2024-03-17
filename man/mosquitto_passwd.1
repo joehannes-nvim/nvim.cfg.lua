@@ -1,0 +1,31 @@
+.TH mosquitto_passwd
+.PP
+.RS
+Manage password files for mosquitto.
+See also \fB\fCmosquitto\fR, the MQTT server that this manages.
+More information: \[la]https://mosquitto.org/man/mosquitto_passwd-1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a new user to a password file (will prompt to enter the password):
+.RE
+.PP
+\fB\fCmosquitto_passwd {{path/to/password_file}} {{username}}\fR
+.RS
+.IP \(bu 2
+Create the password file if it doesn't already exist:
+.RE
+.PP
+\fB\fCmosquitto_passwd \-c {{path/to/password_file}} {{username}}\fR
+.RS
+.IP \(bu 2
+Delete the specified username instead:
+.RE
+.PP
+\fB\fCmosquitto_passwd \-D {{path/to/password_file}} {{username}}\fR
+.RS
+.IP \(bu 2
+Upgrade an old plain\-text password file to a hashed password file:
+.RE
+.PP
+\fB\fCmosquitto_passwd \-U {{path/to/password_file}}\fR

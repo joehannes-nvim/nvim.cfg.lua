@@ -1,0 +1,49 @@
+.TH ghcup
+.PP
+.RS
+Haskell toolchain installer.
+Install, manage, and update Haskell toolchains.
+More information: \[la]https://gitlab.haskell.org/haskell/ghcup-hs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the interactive TUI:
+.RE
+.PP
+\fB\fCghcup tui\fR
+.RS
+.IP \(bu 2
+List available GHC/cabal versions:
+.RE
+.PP
+\fB\fCghcup list\fR
+.RS
+.IP \(bu 2
+Install the recommended GHC version:
+.RE
+.PP
+\fB\fCghcup install ghc\fR
+.RS
+.IP \(bu 2
+Install a specific GHC version:
+.RE
+.PP
+\fB\fCghcup install ghc {{version}}\fR
+.RS
+.IP \(bu 2
+Set the currently "active" GHC version:
+.RE
+.PP
+\fB\fCghcup set ghc {{version}}\fR
+.RS
+.IP \(bu 2
+Install cabal\-install:
+.RE
+.PP
+\fB\fCghcup install cabal\fR
+.RS
+.IP \(bu 2
+Update \fB\fCghcup\fR itself:
+.RE
+.PP
+\fB\fCghcup upgrade\fR

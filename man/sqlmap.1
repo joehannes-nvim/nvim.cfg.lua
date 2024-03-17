@@ -1,0 +1,36 @@
+.TH sqlmap
+.PP
+.RS
+Detect and exploit SQL injection flaws.
+More information: \[la]https://sqlmap.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run sqlmap against a single target URL:
+.RE
+.PP
+\fB\fCpython sqlmap.py \-u "{{http://www.target.com/vuln.php?id=1}}"\fR
+.RS
+.IP \(bu 2
+Send data in a POST request (\fB\fC\-\-data\fR implies POST request):
+.RE
+.PP
+\fB\fCpython sqlmap.py \-u "{{http://www.target.com/vuln.php}}" \-\-data="{{id=1}}"\fR
+.RS
+.IP \(bu 2
+Change the parameter delimiter (& is the default):
+.RE
+.PP
+\fB\fCpython sqlmap.py \-u "{{http://www.target.com/vuln.php}}" \-\-data="{{query=foobar;id=1}}" \-\-param\-del="{{;}}"\fR
+.RS
+.IP \(bu 2
+Select a random \fB\fCUser\-Agent\fR from \fB\fC\&./txt/user\-agents.txt\fR and use it:
+.RE
+.PP
+\fB\fCpython sqlmap.py \-u "{{http://www.target.com/vuln.php}}" \-\-random\-agent\fR
+.RS
+.IP \(bu 2
+Provide user credentials for HTTP protocol authentication:
+.RE
+.PP
+\fB\fCpython sqlmap.py \-u "{{http://www.target.com/vuln.php}}" \-\-auth\-type {{Basic}} \-\-auth\-cred "{{testuser:testpass}}"\fR

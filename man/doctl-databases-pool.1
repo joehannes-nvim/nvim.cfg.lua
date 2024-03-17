@@ -1,0 +1,36 @@
+.TH doctl databases pool
+.PP
+.RS
+Manage connection pools for your database cluster.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/pool/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases pool\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases pool {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Retrieve information about a database connection pool:
+.RE
+.PP
+\fB\fCdoctl databases pool get {{database_id}} {{pool_name}}\fR
+.RS
+.IP \(bu 2
+List connection pools for a database cluster:
+.RE
+.PP
+\fB\fCdoctl databases pool list {{database_id}}\fR
+.RS
+.IP \(bu 2
+Create a connection pool for a database:
+.RE
+.PP
+\fB\fCdoctl databases pool create {{database_id}} {{pool_name}} \-\-db {{new_pool_name}} \-\-size {{pool_size}}\fR
+.RS
+.IP \(bu 2
+Delete a connection pool for a database:
+.RE
+.PP
+\fB\fCdoctl databases pool create {{database_id}} {{pool_name}}\fR

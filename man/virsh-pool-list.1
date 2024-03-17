@@ -1,0 +1,43 @@
+.TH virsh pool\-list
+.PP
+.RS
+List information about virtual machine storage pools.
+See also: \fB\fCvirsh\fR, \fB\fCvirsh\-pool\-autostart\fR, \fB\fCvirsh\-pool\-define\-as\fR\&.
+More information: \[la]https://manned.org/virsh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the name, state, and whether autostart is enabled or disabled for active storage pools:
+.RE
+.PP
+\fB\fCvirsh pool\-list\fR
+.RS
+.IP \(bu 2
+List information for active and inactive or just inactive storage pools:
+.RE
+.PP
+\fB\fCvirsh pool\-list \-\-{{all|inactive}}\fR
+.RS
+.IP \(bu 2
+List extended information about persistence, capacity, allocation, and available space for active storage pools:
+.RE
+.PP
+\fB\fCvirsh pool\-list \-\-details\fR
+.RS
+.IP \(bu 2
+List information for active storage pools with either autostart enabled or disabled:
+.RE
+.PP
+\fB\fCvirsh pool\-list \-\-{{autostart|no\-autostart}}\fR
+.RS
+.IP \(bu 2
+List information for active storage pools that are either persistent or transient:
+.RE
+.PP
+\fB\fCvirsh pool\-list \-\-{{persistent|transient}}\fR
+.RS
+.IP \(bu 2
+List the name and UUID of active storage pools:
+.RE
+.PP
+\fB\fCvirsh pool\-list \-\-name \-\-uuid\fR

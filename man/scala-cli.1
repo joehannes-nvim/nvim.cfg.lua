@@ -1,0 +1,36 @@
+.TH scala\-cli
+.PP
+.RS
+Tool to interact with the Scala programming language.
+More information: \[la]https://scala-cli.virtuslab.org/docs/overview/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell) using a specific Scala and JVM version:
+.RE
+.PP
+\fB\fCscala\-cli \-\-scala {{3.1.0}} \-\-jvm {{temurin:17}}\fR
+.RS
+.IP \(bu 2
+Compile and run a Scala script:
+.RE
+.PP
+\fB\fCscala\-cli run {{path/to/script.scala}}\fR
+.RS
+.IP \(bu 2
+Compile and test a Scala script:
+.RE
+.PP
+\fB\fCscala\-cli test {{path/to/script.scala}}\fR
+.RS
+.IP \(bu 2
+Format a Scala script, updating the file in\-place:
+.RE
+.PP
+\fB\fCscala\-cli fmt {{path/to/script.scala}}\fR
+.RS
+.IP \(bu 2
+Generate files for IDE (VSCode and IntelliJ) support:
+.RE
+.PP
+\fB\fCscala\-cli setup\-ide {{path/to/script.scala}}\fR

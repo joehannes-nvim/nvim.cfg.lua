@@ -1,0 +1,31 @@
+.TH csvsort
+.PP
+.RS
+Sorts CSV files.
+Included in csvkit.
+More information: \[la]https://csvkit.readthedocs.io/en/latest/scripts/csvsort.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Sort a CSV file by column 9:
+.RE
+.PP
+\fB\fCcsvsort \-c {{9}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Sort a CSV file by the "name" column in descending order:
+.RE
+.PP
+\fB\fCcsvsort \-r \-c {{name}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Sort a CSV file by column 2, then by column 4:
+.RE
+.PP
+\fB\fCcsvsort \-c {{2,4}} {{data.csv}}\fR
+.RS
+.IP \(bu 2
+Sort a CSV file without inferring data types:
+.RE
+.PP
+\fB\fCcsvsort \-\-no\-inference \-c {{columns}} {{data.csv}}\fR

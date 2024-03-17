@@ -1,0 +1,18 @@
+.TH gnatprep
+.PP
+.RS
+Preprocessor for Ada source code files (part of the GNAT toolchain).
+More information: \[la]https://gcc.gnu.org/onlinedocs/gnat_ugn/Preprocessing-with-gnatprep.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use symbol definitions from a file:
+.RE
+.PP
+\fB\fCgnatprep {{source_file}} {{target_file}} {{definitions_file}}\fR
+.RS
+.IP \(bu 2
+Specify symbol values in the command\-line:
+.RE
+.PP
+\fB\fCgnatprep \-D{{name}}={{value}} {{source_file}} {{target_file}}\fR

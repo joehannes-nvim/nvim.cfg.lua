@@ -1,0 +1,30 @@
+.TH asciidoctor
+.PP
+.RS
+A processor that converts AsciiDoc files to a publishable format.
+More information: \[la]https://docs.asciidoctor.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a specific \fB\fC\&.adoc\fR file to HTML (the default output format):
+.RE
+.PP
+\fB\fCasciidoctor {{path/to/file.adoc}}\fR
+.RS
+.IP \(bu 2
+Convert a specific \fB\fC\&.adoc\fR file to HTML and link a CSS stylesheet:
+.RE
+.PP
+\fB\fCasciidoctor \-a stylesheet={{path/to/stylesheet.css}} {{path/to/file.adoc}}\fR
+.RS
+.IP \(bu 2
+Convert a specific \fB\fC\&.adoc\fR file to embeddable HTML, removing everything except the body:
+.RE
+.PP
+\fB\fCasciidoctor \-\-embedded {{path/to/file.adoc}}\fR
+.RS
+.IP \(bu 2
+Convert a specific \fB\fC\&.adoc\fR file to a PDF using the \fB\fCasciidoctor\-pdf\fR library:
+.RE
+.PP
+\fB\fCasciidoctor \-\-backend={{pdf}} \-\-require={{asciidoctor\-pdf}} {{path/to/file.adoc}}\fR

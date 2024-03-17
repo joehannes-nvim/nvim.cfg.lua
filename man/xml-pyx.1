@@ -1,0 +1,24 @@
+.TH xml pyx
+.PP
+.RS
+Convert an XML document to PYX (ESIS \- ISO 8879) format.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an XML document to PYX format:
+.RE
+.PP
+\fB\fCxml pyx {{path/to/input.xml|URI}} > {{path/to/output.pyx}}\fR
+.RS
+.IP \(bu 2
+Convert an XML document from \fB\fCstdin\fR to PYX format:
+.RE
+.PP
+\fB\fCcat {{path/to/input.xml}} | xml pyx > {{path/to/output.pyx}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCpyx\fR subcommand:
+.RE
+.PP
+\fB\fCxml pyx \-\-help\fR

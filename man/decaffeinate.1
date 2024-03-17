@@ -1,0 +1,30 @@
+.TH decaffeinate
+.PP
+.RS
+Move your CoffeeScript source to modern JavaScript.
+More information: \[la]https://decaffeinate-project.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a CoffeeScript file to JavaScript:
+.RE
+.PP
+\fB\fCdecaffeinate {{path/to/file.coffee}}\fR
+.RS
+.IP \(bu 2
+Convert a CoffeeScript v2 file to JavaScript:
+.RE
+.PP
+\fB\fCdecaffeinate \-\-use\-cs2 {{path/to/file.coffee}}\fR
+.RS
+.IP \(bu 2
+Convert require and \fB\fCmodule.exports\fR to import and export:
+.RE
+.PP
+\fB\fCdecaffeinate \-\-use\-js\-modules {{path/to/file.coffee}}\fR
+.RS
+.IP \(bu 2
+Convert a CoffeeScript, allowing named exports:
+.RE
+.PP
+\fB\fCdecaffeinate \-\-loose\-js\-modules {{path/to/file.coffee}}\fR

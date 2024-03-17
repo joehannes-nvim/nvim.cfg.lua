@@ -1,0 +1,54 @@
+.TH docker ps
+.PP
+.RS
+List Docker containers.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/ps/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List currently running docker containers:
+.RE
+.PP
+\fB\fCdocker ps\fR
+.RS
+.IP \(bu 2
+List all docker containers (running and stopped):
+.RE
+.PP
+\fB\fCdocker ps \-\-all\fR
+.RS
+.IP \(bu 2
+Show the latest created container (includes all states):
+.RE
+.PP
+\fB\fCdocker ps \-\-latest\fR
+.RS
+.IP \(bu 2
+Filter containers that contain a substring in their name:
+.RE
+.PP
+\fB\fCdocker ps \-\-filter="name={{name}}"\fR
+.RS
+.IP \(bu 2
+Filter containers that share a given image as an ancestor:
+.RE
+.PP
+\fB\fCdocker ps \-\-filter "ancestor={{image}}:{{tag}}"\fR
+.RS
+.IP \(bu 2
+Filter containers by exit status code:
+.RE
+.PP
+\fB\fCdocker ps \-\-all \-\-filter="exited={{code}}"\fR
+.RS
+.IP \(bu 2
+Filter containers by status (created, running, removing, paused, exited and dead):
+.RE
+.PP
+\fB\fCdocker ps \-\-filter="status={{status}}"\fR
+.RS
+.IP \(bu 2
+Filter containers that mount a specific volume or have a volume mounted in a specific path:
+.RE
+.PP
+\fB\fCdocker ps \-\-filter="volume={{path/to/directory}}" \-\-format "table {{.ID}}\\t{{.Image}}\\t{{.Names}}\\t{{.Mounts}}"\fR

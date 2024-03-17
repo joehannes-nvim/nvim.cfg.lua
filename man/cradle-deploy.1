@@ -1,0 +1,30 @@
+.TH cradle deploy
+.PP
+.RS
+Manage Cradle deployments.
+More information: \[la]https://cradlephp.github.io/docs/3.B.-Reference-Command-Line-Tools.html#deploy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Deploy Cradle to a server:
+.RE
+.PP
+\fB\fCcradle deploy production\fR
+.RS
+.IP \(bu 2
+Deploy static assets to Amazon S3:
+.RE
+.PP
+\fB\fCcradle deploy s3\fR
+.RS
+.IP \(bu 2
+Deploy static assets including the Yarn "components" directory:
+.RE
+.PP
+\fB\fCcradle deploy s3 \-\-include\-yarn\fR
+.RS
+.IP \(bu 2
+Deploy static assets including the "upload" directory:
+.RE
+.PP
+\fB\fCcradle deploy s3 \-\-include\-upload\fR

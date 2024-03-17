@@ -1,0 +1,24 @@
+.TH strip\-nondeterminism
+.PP
+.RS
+A tool to remove non\-deterministic information (e.g. timestamps) from files.
+More information: \[la]https://salsa.debian.org/reproducible-builds/strip-nondeterminism\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Strip nondeterministic information from a file:
+.RE
+.PP
+\fB\fCstrip\-nondeterminism {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Strip nondeterministic information from a file manually specifying the filetype:
+.RE
+.PP
+\fB\fCstrip\-nondeterminism \-\-type {{filetype}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Strip nondeterministic information from a file; instead of removing timestamps set them to the specified UNIX timestamp:
+.RE
+.PP
+\fB\fCstrip\-nondeterminism \-\-timestamp {{unix_timestamp}} {{path/to/file}}\fR

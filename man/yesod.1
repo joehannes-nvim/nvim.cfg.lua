@@ -1,0 +1,37 @@
+.TH yesod
+.PP
+.RS
+Helper tool for Yesod, a Haskell\-based web framework.
+All Yesod commands are invoked through the \fB\fCstack\fR project manager.
+More information: \[la]https://github.com/yesodweb/yesod\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new scaffolded site, with SQLite as backend, in the \fB\fCmy\-project\fR directory:
+.RE
+.PP
+\fB\fCstack new {{my\-project}} {{yesod\-sqlite}}\fR
+.RS
+.IP \(bu 2
+Install the Yesod CLI tool within a Yesod scaffolded site:
+.RE
+.PP
+\fB\fCstack build yesod\-bin cabal\-install \-\-install\-ghc\fR
+.RS
+.IP \(bu 2
+Start development server:
+.RE
+.PP
+\fB\fCstack exec \-\- yesod devel\fR
+.RS
+.IP \(bu 2
+Touch files with altered Template Haskell dependencies:
+.RE
+.PP
+\fB\fCstack exec \-\- yesod touch\fR
+.RS
+.IP \(bu 2
+Deploy application using Keter (Yesod's deployment manager):
+.RE
+.PP
+\fB\fCstack exec \-\- yesod keter\fR

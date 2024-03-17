@@ -1,0 +1,37 @@
+.TH az account
+.PP
+.RS
+Manage Azure subscription information.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/account\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a list of subscriptions for the logged in account:
+.RE
+.PP
+\fB\fCaz account list\fR
+.RS
+.IP \(bu 2
+Set a \fB\fCsubscription\fR to be the currently active subscription:
+.RE
+.PP
+\fB\fCaz account set \-\-subscription {{subscription_id}}\fR
+.RS
+.IP \(bu 2
+List supported regions for the currently active subscription:
+.RE
+.PP
+\fB\fCaz account list\-locations\fR
+.RS
+.IP \(bu 2
+Print an access token to be used with \fB\fCMS Graph API\fR:
+.RE
+.PP
+\fB\fCaz account get\-access\-token \-\-resource\-type {{ms\-graph}}\fR
+.RS
+.IP \(bu 2
+Print details of the currently active subscription in a specific format:
+.RE
+.PP
+\fB\fCaz account show \-\-output {{json|tsv|table|yaml}}\fR

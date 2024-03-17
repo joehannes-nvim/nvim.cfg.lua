@@ -1,0 +1,36 @@
+.TH ngrok
+.PP
+.RS
+Reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service.
+More information: \[la]https://ngrok.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Expose a local HTTP service on a given port:
+.RE
+.PP
+\fB\fCngrok http {{80}}\fR
+.RS
+.IP \(bu 2
+Expose a local HTTP service on a specific host:
+.RE
+.PP
+\fB\fCngrok http {{foo.dev}}:{{80}}\fR
+.RS
+.IP \(bu 2
+Expose a local HTTPS server:
+.RE
+.PP
+\fB\fCngrok http https://localhost\fR
+.RS
+.IP \(bu 2
+Expose TCP traffic on a given port:
+.RE
+.PP
+\fB\fCngrok tcp {{22}}\fR
+.RS
+.IP \(bu 2
+Expose TLS traffic for a specific host and port:
+.RE
+.PP
+\fB\fCngrok tls \-hostname={{foo.com}} {{443}}\fR

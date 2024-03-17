@@ -1,0 +1,30 @@
+.TH docker rm
+.PP
+.RS
+Remove one or more containers.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/rm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Remove containers:
+.RE
+.PP
+\fB\fCdocker rm {{container1 container2 ...}}\fR
+.RS
+.IP \(bu 2
+Force remove a container:
+.RE
+.PP
+\fB\fCdocker rm \-\-force {{container1 container2 ...}}\fR
+.RS
+.IP \(bu 2
+Remove a container and its volumes:
+.RE
+.PP
+\fB\fCdocker rm \-\-volumes {{container}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCdocker rm\fR

@@ -1,0 +1,36 @@
+.TH gh alias
+.PP
+.RS
+Manage GitHub CLI command aliases.
+More information: \[la]https://cli.github.com/manual/gh_alias\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the subcommand help:
+.RE
+.PP
+\fB\fCgh alias\fR
+.RS
+.IP \(bu 2
+List all the aliases \fB\fCgh\fR is configured to use:
+.RE
+.PP
+\fB\fCgh alias list\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCgh\fR subcommand alias:
+.RE
+.PP
+\fB\fCgh alias set {{pv}} '{{pr view}}'\fR
+.RS
+.IP \(bu 2
+Set a shell command as a \fB\fCgh\fR subcommand:
+.RE
+.PP
+\fB\fCgh alias set \-\-shell {{alias_name}} {{command}}\fR
+.RS
+.IP \(bu 2
+Delete a command shortcut:
+.RE
+.PP
+\fB\fCgh alias delete {{alias_name}}\fR

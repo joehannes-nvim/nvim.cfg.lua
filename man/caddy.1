@@ -1,0 +1,42 @@
+.TH caddy
+.PP
+.RS
+An enterprise\-ready open source web server with automatic HTTPS, written in Go.
+More information: \[la]https://caddyserver.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start Caddy in the foreground:
+.RE
+.PP
+\fB\fCcaddy run\fR
+.RS
+.IP \(bu 2
+Start Caddy with the specified Caddyfile:
+.RE
+.PP
+\fB\fCcaddy run \-\-config {{path/to/Caddyfile}}\fR
+.RS
+.IP \(bu 2
+Start Caddy in the background:
+.RE
+.PP
+\fB\fCcaddy start\fR
+.RS
+.IP \(bu 2
+Stop a background Caddy process:
+.RE
+.PP
+\fB\fCcaddy stop\fR
+.RS
+.IP \(bu 2
+Run a simple file server on the specified port with a browsable interface:
+.RE
+.PP
+\fB\fCcaddy file\-server \-\-listen :{{8000}} \-\-browse\fR
+.RS
+.IP \(bu 2
+Run a reverse proxy server:
+.RE
+.PP
+\fB\fCcaddy reverse\-proxy \-\-from :{{80}} \-\-to localhost:{{8000}}\fR

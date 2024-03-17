@@ -1,0 +1,19 @@
+.TH pic
+.PP
+.RS
+Picture preprocessor for the groff (GNU Troff) document formatting system.
+See also \fB\fCgroff\fR and \fB\fCtroff\fR\&.
+More information: \[la]https://manned.org/pic\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Process input with pictures, saving the output for future typesetting with groff to PostScript:
+.RE
+.PP
+\fB\fCpic {{path/to/input.pic}} > {{path/to/output.roff}}\fR
+.RS
+.IP \(bu 2
+Typeset input with pictures to PDF using the [me] macro package:
+.RE
+.PP
+\fB\fCpic \-T {{pdf}} {{path/to/input.pic}} | groff \-{{me}} \-T {{pdf}} > {{path/to/output.pdf}}\fR

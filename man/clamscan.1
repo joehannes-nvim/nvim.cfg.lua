@@ -1,0 +1,54 @@
+.TH clamscan
+.PP
+.RS
+A command\-line virus scanner.
+More information: \[la]https://docs.clamav.net/manual/Usage/Scanning.html#clamscan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Scan a file for vulnerabilities:
+.RE
+.PP
+\fB\fCclamscan {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Scan all files recursively in a specific directory:
+.RE
+.PP
+\fB\fCclamscan \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Scan data from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | clamscan \-\fR
+.RS
+.IP \(bu 2
+Specify a virus database file or directory of files:
+.RE
+.PP
+\fB\fCclamscan \-\-database {{path/to/database_file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Scan the current directory and output only infected files:
+.RE
+.PP
+\fB\fCclamscan \-\-infected\fR
+.RS
+.IP \(bu 2
+Output the scan report to a log file:
+.RE
+.PP
+\fB\fCclamscan \-\-log {{path/to/log_file}}\fR
+.RS
+.IP \(bu 2
+Move infected files to a specific directory:
+.RE
+.PP
+\fB\fCclamscan \-\-move {{path/to/quarantine_directory}}\fR
+.RS
+.IP \(bu 2
+Remove infected files:
+.RE
+.PP
+\fB\fCclamscan \-\-remove yes\fR

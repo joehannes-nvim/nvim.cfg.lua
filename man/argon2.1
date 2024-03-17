@@ -1,0 +1,30 @@
+.TH argon2
+.PP
+.RS
+Calculate Argon2 cryptographic hashes.
+More information: \[la]https://github.com/P-H-C/phc-winner-argon2#command-line-utility\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate a hash with a password and a salt with the default parameters:
+.RE
+.PP
+\fB\fCecho "{{password}}" | argon2 "{{salt_text}}"\fR
+.RS
+.IP \(bu 2
+Calculate a hash with the specified algorithm:
+.RE
+.PP
+\fB\fCecho "{{password}}" | argon2 "{{salt_text}}" \-{{d|i|id}}\fR
+.RS
+.IP \(bu 2
+Display the output hash without additional information:
+.RE
+.PP
+\fB\fCecho "{{password}}" | argon2 "{{salt_text}}" \-e\fR
+.RS
+.IP \(bu 2
+Calculate a hash with given iteration [t]imes, [m]emory usage, and [p]arallelism parameters:
+.RE
+.PP
+\fB\fCecho "{{password}}" | argon2 "{{salt_text}}" \-t {{5}} \-m {{20}} \-p {{7}}\fR

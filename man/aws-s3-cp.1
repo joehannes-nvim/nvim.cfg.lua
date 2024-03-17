@@ -1,0 +1,36 @@
+.TH aws s3 cp
+.PP
+.RS
+Copy local files or S3 objects to another location locally or in S3.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/cp.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy a file from local to a specific bucket:
+.RE
+.PP
+\fB\fCaws s3 cp {{path/to/file}} s3://{{bucket_name}}/{{path/to/remote_file}}\fR
+.RS
+.IP \(bu 2
+Copy a specific S3 object into another bucket:
+.RE
+.PP
+\fB\fCaws s3 cp s3://{{bucket_name1}}/{{path/to/file}} s3://{{bucket_name2}}/{{path/to/target}}\fR
+.RS
+.IP \(bu 2
+Copy a specific S3 object into another bucket keeping the original name:
+.RE
+.PP
+\fB\fCaws s3 cp s3://{{bucket_name1}}/{{path/to/file}} s3://{{bucket_name2}}\fR
+.RS
+.IP \(bu 2
+Copy S3 objects to a local directory recursively:
+.RE
+.PP
+\fB\fCaws s3 cp s3://{{bucket_name}} . \-\-recursive\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCaws s3 cp help\fR

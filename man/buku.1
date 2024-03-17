@@ -1,0 +1,36 @@
+.TH buku
+.PP
+.RS
+Command\-line browser\-independent bookmark manager.
+More information: \[la]https://github.com/jarun/Buku\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display all bookmarks matching "keyword" and with "privacy" tag:
+.RE
+.PP
+\fB\fCbuku {{keyword}} \-\-stag {{privacy}}\fR
+.RS
+.IP \(bu 2
+Add bookmark with tags "search engine" and "privacy":
+.RE
+.PP
+\fB\fCbuku \-\-add {{https://example.com}} {{search engine}}, {{privacy}}\fR
+.RS
+.IP \(bu 2
+Delete a bookmark:
+.RE
+.PP
+\fB\fCbuku \-\-delete {{bookmark_id}}\fR
+.RS
+.IP \(bu 2
+Open editor to edit a bookmark:
+.RE
+.PP
+\fB\fCbuku \-\-write {{bookmark_id}}\fR
+.RS
+.IP \(bu 2
+Remove "search engine" tag from a bookmark:
+.RE
+.PP
+\fB\fCbuku \-\-update {{bookmark_id}} \-\-tag {{\-}} {{search engine}}\fR

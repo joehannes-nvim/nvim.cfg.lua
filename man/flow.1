@@ -1,0 +1,30 @@
+.TH flow
+.PP
+.RS
+A static type checker for JavaScript.
+More information: \[la]https://flow.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a flow check:
+.RE
+.PP
+\fB\fCflow\fR
+.RS
+.IP \(bu 2
+Check which files are being checked by flow:
+.RE
+.PP
+\fB\fCflow ls\fR
+.RS
+.IP \(bu 2
+Run a type coverage check on all files in a directory:
+.RE
+.PP
+\fB\fCflow batch\-coverage \-\-show\-all \-\-strip\-root {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Display line\-by\-line type coverage stats:
+.RE
+.PP
+\fB\fCflow coverage \-\-color {{path/to/file.jsx}}\fR

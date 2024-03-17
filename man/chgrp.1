@@ -1,0 +1,30 @@
+.TH chgrp
+.PP
+.RS
+Change group ownership of files and directories.
+More information: \[la]https://www.gnu.org/software/coreutils/chgrp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Change the owner group of a file/directory:
+.RE
+.PP
+\fB\fCchgrp {{group}} {{path/to/file_or_directory}}\fR
+.RS
+.IP \(bu 2
+Recursively change the owner group of a directory and its contents:
+.RE
+.PP
+\fB\fCchgrp \-R {{group}} {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Change the owner group of a symbolic link:
+.RE
+.PP
+\fB\fCchgrp \-h {{group}} {{path/to/symlink}}\fR
+.RS
+.IP \(bu 2
+Change the owner group of a file/directory to match a reference file:
+.RE
+.PP
+\fB\fCchgrp \-\-reference={{path/to/reference_file}} {{path/to/file_or_directory}}\fR

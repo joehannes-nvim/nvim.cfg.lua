@@ -1,0 +1,24 @@
+.TH qcp
+.PP
+.RS
+Copy files using the default text editor to define the filenames.
+More information: \[la]https://www.nongnu.org/renameutils/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Copy a single file (open an editor with the source filename on the left and the target filename on the right):
+.RE
+.PP
+\fB\fCqcp {{source_file}}\fR
+.RS
+.IP \(bu 2
+Copy multiple JPG files:
+.RE
+.PP
+\fB\fCqcp {{*.jpg}}\fR
+.RS
+.IP \(bu 2
+Copy files, but swap the positions of the source and the target filenames in the editor:
+.RE
+.PP
+\fB\fCqcp \-\-option swap {{*.jpg}}\fR

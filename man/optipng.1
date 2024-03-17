@@ -1,0 +1,42 @@
+.TH optipng
+.PP
+.RS
+PNG file optimization utility.
+More information: \[la]http://optipng.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compress a PNG with default settings:
+.RE
+.PP
+\fB\fCoptipng {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a PNG with the best compression:
+.RE
+.PP
+\fB\fCoptipng \-o{{7}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a PNG with the fastest compression:
+.RE
+.PP
+\fB\fCoptipng \-o{{0}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a PNG and add interlacing:
+.RE
+.PP
+\fB\fCoptipng \-i {{1}} {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a PNG and preserve all metadata (including file timestamps):
+.RE
+.PP
+\fB\fCoptipng \-preserve {{path/to/file.png}}\fR
+.RS
+.IP \(bu 2
+Compress a PNG and remove all metadata:
+.RE
+.PP
+\fB\fCoptipng \-strip all {{path/to/file.png}}\fR

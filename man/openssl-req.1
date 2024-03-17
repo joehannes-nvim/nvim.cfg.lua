@@ -1,0 +1,18 @@
+.TH openssl req
+.PP
+.RS
+OpenSSL command to manage PKCS#10 Certificate Signing Requests.
+More information: \[la]https://www.openssl.org/docs/manmaster/man1/openssl-req.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a certificate signing request to be sent to a certificate authority:
+.RE
+.PP
+\fB\fCopenssl req \-new \-sha256 \-key {{filename.key}} \-out {{filename.csr}}\fR
+.RS
+.IP \(bu 2
+Generate a self\-signed certificate and a corresponding key\-pair, storing both in a file:
+.RE
+.PP
+\fB\fCopenssl req \-new \-x509 \-newkey {{rsa}}:{{4096}} \-keyout {{filename.key}} \-out {{filename.cert}} \-subj "{{/C=XX/CN=foobar}}" \-days {{365}}\fR

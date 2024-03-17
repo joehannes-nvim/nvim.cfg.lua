@@ -1,0 +1,54 @@
+.TH hg status
+.PP
+.RS
+Show files that have changed in the working directory.
+More information: \[la]https://www.mercurial-scm.org/doc/hg.1.html#status\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the status of changed files:
+.RE
+.PP
+\fB\fChg status\fR
+.RS
+.IP \(bu 2
+Display only modified files:
+.RE
+.PP
+\fB\fChg status \-\-modified\fR
+.RS
+.IP \(bu 2
+Display only added files:
+.RE
+.PP
+\fB\fChg status \-\-added\fR
+.RS
+.IP \(bu 2
+Display only removed files:
+.RE
+.PP
+\fB\fChg status \-\-removed\fR
+.RS
+.IP \(bu 2
+Display only deleted (but tracked) files:
+.RE
+.PP
+\fB\fChg status \-\-deleted\fR
+.RS
+.IP \(bu 2
+Display changes in the working directory compared to a specified changeset:
+.RE
+.PP
+\fB\fChg status \-\-rev {{revision}}\fR
+.RS
+.IP \(bu 2
+Display only files matching a specified glob pattern:
+.RE
+.PP
+\fB\fChg status \-\-include {{pattern}}\fR
+.RS
+.IP \(bu 2
+Display files, excluding those that match a specified glob pattern:
+.RE
+.PP
+\fB\fChg status \-\-exclude {{pattern}}\fR

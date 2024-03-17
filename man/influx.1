@@ -1,0 +1,42 @@
+.TH influx
+.PP
+.RS
+InfluxDB command\-line client.
+More information: \[la]https://docs.influxdata.com/influxdb/v1.7/tools/shell/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to an InfluxDB running on localhost with no credentials:
+.RE
+.PP
+\fB\fCinflux\fR
+.RS
+.IP \(bu 2
+Connect with a specific username (will prompt for a password):
+.RE
+.PP
+\fB\fCinflux \-username {{username}} \-password ""\fR
+.RS
+.IP \(bu 2
+Connect to a specific host:
+.RE
+.PP
+\fB\fCinflux \-host {{hostname}}\fR
+.RS
+.IP \(bu 2
+Use a specific database:
+.RE
+.PP
+\fB\fCinflux \-database {{database_name}}\fR
+.RS
+.IP \(bu 2
+Execute a given command:
+.RE
+.PP
+\fB\fCinflux \-execute "{{influxql_command}}"\fR
+.RS
+.IP \(bu 2
+Return output in a specific format:
+.RE
+.PP
+\fB\fCinflux \-execute "{{influxql_command}}" \-format {{json|csv|column}}\fR

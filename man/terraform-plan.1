@@ -1,0 +1,48 @@
+.TH terraform plan
+.PP
+.RS
+Generate and show Terraform execution plans.
+More information: \[la]https://www.terraform.io/docs/cli/commands/plan.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate and show the execution plan in the currently directory:
+.RE
+.PP
+\fB\fCterraform plan\fR
+.RS
+.IP \(bu 2
+Show a plan to destroy all remote objects that currently exist:
+.RE
+.PP
+\fB\fCterraform plan \-destroy\fR
+.RS
+.IP \(bu 2
+Show a plan to update the Terraform state and output values:
+.RE
+.PP
+\fB\fCterraform plan \-refresh\-only\fR
+.RS
+.IP \(bu 2
+Specify values for input variables:
+.RE
+.PP
+\fB\fCterraform plan \-var '{{name1}}={{value1}}' \-var '{{name2}}={{value2}}'\fR
+.RS
+.IP \(bu 2
+Focus Terraform's attention on only a subset of resources:
+.RE
+.PP
+\fB\fCterraform plan \-target {{resource_type.resource_name[instance index]}}\fR
+.RS
+.IP \(bu 2
+Output a plan as JSON:
+.RE
+.PP
+\fB\fCterraform plan \-json\fR
+.RS
+.IP \(bu 2
+Write a plan to a specific file:
+.RE
+.PP
+\fB\fCterraform plan \-no\-color > {{path/to/file}}\fR

@@ -1,0 +1,25 @@
+.TH hipstopgm
+.PP
+.RS
+Read a HIPS file as input and return a PGM image as output.
+If the HIPS file contains more than one frame in sequence, \fB\fChipstopgm\fR will concatenate all the frames vertically.
+More information: \[la]https://netpbm.sourceforge.net/doc/hipstopgm.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert a HIPS file into a PGM image:
+.RE
+.PP
+\fB\fChipstopgm {{path/to/file.hips}}\fR
+.RS
+.IP \(bu 2
+Suppress all informational messages:
+.RE
+.PP
+\fB\fChipstopgm \-quiet\fR
+.RS
+.IP \(bu 2
+Display version:
+.RE
+.PP
+\fB\fChipstopgm \-version\fR

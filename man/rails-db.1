@@ -1,0 +1,54 @@
+.TH rails db
+.PP
+.RS
+Various database\-related subcommands for Ruby on Rails.
+More information: \[la]https://guides.rubyonrails.org/command_line.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create databases, load the schema, and initialize with seed data:
+.RE
+.PP
+\fB\fCrails db:setup\fR
+.RS
+.IP \(bu 2
+Access the database console:
+.RE
+.PP
+\fB\fCrails db\fR
+.RS
+.IP \(bu 2
+Create the databases defined in the current environment:
+.RE
+.PP
+\fB\fCrails db:create\fR
+.RS
+.IP \(bu 2
+Destroy the databases defined in the current environment:
+.RE
+.PP
+\fB\fCrails db:drop\fR
+.RS
+.IP \(bu 2
+Run pending migrations:
+.RE
+.PP
+\fB\fCrails db:migrate\fR
+.RS
+.IP \(bu 2
+View the status of each migration file:
+.RE
+.PP
+\fB\fCrails db:migrate:status\fR
+.RS
+.IP \(bu 2
+Rollback the last migration:
+.RE
+.PP
+\fB\fCrails db:rollback\fR
+.RS
+.IP \(bu 2
+Fill the current database with data defined in \fB\fCdb/seeds.rb\fR:
+.RE
+.PP
+\fB\fCrails db:seed\fR

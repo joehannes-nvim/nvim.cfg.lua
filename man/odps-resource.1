@@ -1,0 +1,43 @@
+.TH odps resource
+.PP
+.RS
+Manage resources in ODPS (Open Data Processing Service).
+See also \fB\fCodps\fR\&.
+More information: \[la]https://www.alibabacloud.com/help/doc-detail/27971.htm\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show resources in the current project:
+.RE
+.PP
+\fB\fClist resources;\fR
+.RS
+.IP \(bu 2
+Add file resource:
+.RE
+.PP
+\fB\fCadd file {{filename}} as {{alias}};\fR
+.RS
+.IP \(bu 2
+Add archive resource:
+.RE
+.PP
+\fB\fCadd archive {{archive.tar.gz}} as {{alias}};\fR
+.RS
+.IP \(bu 2
+Add .jar resource:
+.RE
+.PP
+\fB\fCadd jar {{package.jar}};\fR
+.RS
+.IP \(bu 2
+Add .py resource:
+.RE
+.PP
+\fB\fCadd py {{script.py}};\fR
+.RS
+.IP \(bu 2
+Delete resource:
+.RE
+.PP
+\fB\fCdrop resource {{resource_name}};\fR

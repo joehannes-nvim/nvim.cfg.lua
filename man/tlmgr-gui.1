@@ -1,0 +1,43 @@
+.TH tlmgr gui
+.PP
+.RS
+Start a graphical user interface for \fB\fCtlmgr\fR\&.
+\fB\fCtlmgr gui\fR depends on the package \fB\fCperl\-tk\fR, which has to be installed manually.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a GUI for \fB\fCtlmgr\fR:
+.RE
+.PP
+\fB\fCsudo tlmgr gui\fR
+.RS
+.IP \(bu 2
+Start a GUI specifying the background color:
+.RE
+.PP
+\fB\fCsudo tlmgr gui \-background "{{#f39bc3}}"\fR
+.RS
+.IP \(bu 2
+Start a GUI specifying the foreground color:
+.RE
+.PP
+\fB\fCsudo tlmgr gui \-foreground "{{#0ef3bd}}"\fR
+.RS
+.IP \(bu 2
+Start a GUI specifying the font and font size:
+.RE
+.PP
+\fB\fCsudo tlmgr gui \-font "{{helvetica 18}}"\fR
+.RS
+.IP \(bu 2
+Start a GUI setting a specific geometry:
+.RE
+.PP
+\fB\fCsudo tlmgr gui \-geometry {{width}}x{{height}}\-{{xpos}}+{{ypos}}\fR
+.RS
+.IP \(bu 2
+Start a GUI passing an arbitrary X resource string:
+.RE
+.PP
+\fB\fCsudo tlmgr gui \-xrm {{xresource}}\fR

@@ -1,0 +1,49 @@
+.TH micro
+.PP
+.RS
+Micro is a modern and intuitive terminal\-based text editor.
+You can use your keyboard, but also your mouse to navigate and/or select text.
+More information: \[la]https://micro-editor.github.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file:
+.RE
+.PP
+\fB\fCmicro {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Save a file:
+.RE
+.PP
+\fB\fCCtrl + S\fR
+.RS
+.IP \(bu 2
+Cut the entire line:
+.RE
+.PP
+\fB\fCCtrl + K\fR
+.RS
+.IP \(bu 2
+Search for a pattern in the file (press \fB\fCCtrl + N\fR/\fB\fCCtrl + P\fR to go to next/previous match):
+.RE
+.PP
+\fB\fCCtrl + F "{{pattern}}" <Enter>\fR
+.RS
+.IP \(bu 2
+Execute a command:
+.RE
+.PP
+\fB\fCCtrl + E {{command}} <Enter>\fR
+.RS
+.IP \(bu 2
+Perform a substitution in the whole file:
+.RE
+.PP
+\fB\fCCtrl + E replaceall "{{pattern}}" "{{replacement}}" <Enter>\fR
+.RS
+.IP \(bu 2
+Quit:
+.RE
+.PP
+\fB\fCCtrl + Q\fR

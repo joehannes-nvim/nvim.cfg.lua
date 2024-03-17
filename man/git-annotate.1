@@ -1,0 +1,26 @@
+.TH git annotate
+.PP
+.RS
+Show commit hash and last author on each line of a file.
+See \fB\fCgit blame\fR, which is preferred over \fB\fCgit annotate\fR\&.
+\fB\fCgit annotate\fR is provided for those familiar with other version control systems.
+More information: \[la]https://git-scm.com/docs/git-annotate\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print a file with the author name and commit hash prepended to each line:
+.RE
+.PP
+\fB\fCgit annotate {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print a file with the author email and commit hash prepended to each line:
+.RE
+.PP
+\fB\fCgit annotate \-e {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print only rows that match a regular expression:
+.RE
+.PP
+\fB\fCgit annotate \-L :{{regexp}} {{path/to/file}}\fR

@@ -1,0 +1,36 @@
+.TH stl2gts
+.PP
+.RS
+Convert STL files into the GTS (GNU triangulated surface library) file format.
+More information: \[la]https://manned.org/stl2gts\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert an STL file to a GTS file:
+.RE
+.PP
+\fB\fCstl2gts < {{path/to/file.stl}} > {{path/to/file.gts}}\fR
+.RS
+.IP \(bu 2
+Convert an STL file to a GTS file and revert face normals:
+.RE
+.PP
+\fB\fCstl2gts \-\-revert < {{path/to/file.stl}} > {{path/to/file.gts}}\fR
+.RS
+.IP \(bu 2
+Convert an STL file to a GTS file and do not merge vertices:
+.RE
+.PP
+\fB\fCstl2gts \-\-nomerge < {{path/to/file.stl}} > {{path/to/file.gts}}\fR
+.RS
+.IP \(bu 2
+Convert an STL file to a GTS file and display surface statistics:
+.RE
+.PP
+\fB\fCstl2gts \-\-verbose < {{path/to/file.stl}} > {{path/to/file.gts}}\fR
+.RS
+.IP \(bu 2
+Print help for \fB\fCstl2gts\fR:
+.RE
+.PP
+\fB\fCstl2gts \-\-help\fR

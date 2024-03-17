@@ -1,0 +1,54 @@
+.TH blackfire
+.PP
+.RS
+A command\-line profiling tool for PHP.
+More information: \[la]https://blackfire.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize and configure the Blackfire client:
+.RE
+.PP
+\fB\fCblackfire config\fR
+.RS
+.IP \(bu 2
+Launch the Blackfire agent:
+.RE
+.PP
+\fB\fCblackfire agent\fR
+.RS
+.IP \(bu 2
+Launch the Blackfire agent on a specific socket:
+.RE
+.PP
+\fB\fCblackfire agent \-\-socket="{{tcp://127.0.0.1:8307}}"\fR
+.RS
+.IP \(bu 2
+Run the profiler on a specific program:
+.RE
+.PP
+\fB\fCblackfire run {{php path/to/file.php}}\fR
+.RS
+.IP \(bu 2
+Run the profiler and collect 10 samples:
+.RE
+.PP
+\fB\fCblackfire \-\-samples={{10}} run {{php path/to/file.php}}\fR
+.RS
+.IP \(bu 2
+Run the profiler and output results as JSON:
+.RE
+.PP
+\fB\fCblackfire \-\-json run {{php path/to/file.php}}\fR
+.RS
+.IP \(bu 2
+Upload a profiler file to the Blackfire web service:
+.RE
+.PP
+\fB\fCblackfire upload {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+View the status of profiles on the Blackfire web service:
+.RE
+.PP
+\fB\fCblackfire status\fR

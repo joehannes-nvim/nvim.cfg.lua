@@ -1,0 +1,37 @@
+.TH x11docker
+.PP
+.RS
+Securely run GUI applications and desktop UIs in Docker containers.
+See also \fB\fCxephyr\fR\&.
+More information: \[la]https://github.com/mviereck/x11docker\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Launch VLC in a container:
+.RE
+.PP
+\fB\fCx11docker \-\-pulseaudio \-\-share={{$HOME/Videos}} {{jess/vlc}}\fR
+.RS
+.IP \(bu 2
+Launch Xfce in a window:
+.RE
+.PP
+\fB\fCx11docker \-\-desktop {{x11docker/xfce}}\fR
+.RS
+.IP \(bu 2
+Launch GNOME in a window:
+.RE
+.PP
+\fB\fCx11docker \-\-desktop \-\-gpu \-\-init={{systemd}} {{x11docker/gnome}}\fR
+.RS
+.IP \(bu 2
+Launch KDE Plasma in a window:
+.RE
+.PP
+\fB\fCx11docker \-\-desktop \-\-gpu \-\-init={{systemd}} {{x11docker/kde\-plasma}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCx11docker \-\-help\fR

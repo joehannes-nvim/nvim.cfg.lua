@@ -1,0 +1,54 @@
+.TH mount
+.PP
+.RS
+Provides access to an entire filesystem in one directory.
+More information: \[la]https://manned.org/mount.8\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show all mounted filesystems:
+.RE
+.PP
+\fB\fCmount\fR
+.RS
+.IP \(bu 2
+Mount a device to a directory:
+.RE
+.PP
+\fB\fCmount \-t {{filesystem_type}} {{path/to/device_file}} {{path/to/target_directory}}\fR
+.RS
+.IP \(bu 2
+Create a specific directory if it does not exist and mount a device to it:
+.RE
+.PP
+\fB\fCmount \-\-mkdir {{path/to/device_file}} {{path/to/target_directory}}\fR
+.RS
+.IP \(bu 2
+Mount a device to a directory for a specific user:
+.RE
+.PP
+\fB\fCmount \-o uid={{user_id}},gid={{group_id}} {{path/to/device_file}} {{path/to/target_directory}}\fR
+.RS
+.IP \(bu 2
+Mount a CD\-ROM device (with the filetype ISO9660) to \fB\fC/cdrom\fR (readonly):
+.RE
+.PP
+\fB\fCmount \-t {{iso9660}} \-o ro {{/dev/cdrom}} {{/cdrom}}\fR
+.RS
+.IP \(bu 2
+Mount all the filesystem defined in \fB\fC/etc/fstab\fR:
+.RE
+.PP
+\fB\fCmount \-a\fR
+.RS
+.IP \(bu 2
+Mount a specific filesystem described in \fB\fC/etc/fstab\fR (e.g. \fB\fC/dev/sda1 /my_drive ext2 defaults 0 2\fR):
+.RE
+.PP
+\fB\fCmount {{/my_drive}}\fR
+.RS
+.IP \(bu 2
+Mount a directory to another directory:
+.RE
+.PP
+\fB\fCmount \-\-bind {{path/to/old_dir}} {{path/to/new_dir}}\fR

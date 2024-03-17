@@ -1,0 +1,30 @@
+.TH cargo owner
+.PP
+.RS
+Manage the owners of a crate on the registry.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-owner.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Invite the given user or team as an owner:
+.RE
+.PP
+\fB\fCcargo owner \-\-add {{username|github:org_name:team_name}} {{crate}}\fR
+.RS
+.IP \(bu 2
+Remove the given user or team as an owner:
+.RE
+.PP
+\fB\fCcargo owner \-\-remove {{username|github:org_name:team_name}} {{crate}}\fR
+.RS
+.IP \(bu 2
+List owners of a crate:
+.RE
+.PP
+\fB\fCcargo owner \-\-list {{crate}}\fR
+.RS
+.IP \(bu 2
+Specify the name of the registry to use (registry names can be defined in the config \- the default is \[la]https://crates.io\[ra]):
+.RE
+.PP
+\fB\fCcargo owner \-\-registry {{name}}\fR

@@ -1,0 +1,49 @@
+.TH helix
+.PP
+.RS
+Helix, A post\-modern text editor, provides several modes for different kinds of text manipulation.
+Pressing \fB\fCi\fR enters insert mode. \fB\fC<Esc>\fR enters normal mode, which enables the use of Helix commands.
+More information: \[la]https://helix-editor.com\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file:
+.RE
+.PP
+\fB\fChelix {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Change the Helix theme:
+.RE
+.PP
+\fB\fC:theme {{theme_name}}\fR
+.RS
+.IP \(bu 2
+Save and Quit:
+.RE
+.PP
+\fB\fC:wq<Enter>\fR
+.RS
+.IP \(bu 2
+Force\-quit without saving:
+.RE
+.PP
+\fB\fC:q!<Enter>\fR
+.RS
+.IP \(bu 2
+Undo the last operation:
+.RE
+.PP
+\fB\fCu\fR
+.RS
+.IP \(bu 2
+Search for a pattern in the file (press \fB\fCn\fR/\fB\fCN\fR to go to next/previous match):
+.RE
+.PP
+\fB\fC/{{search_pattern}}<Enter>\fR
+.RS
+.IP \(bu 2
+Format the file:
+.RE
+.PP
+\fB\fC:format\fR

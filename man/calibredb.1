@@ -1,0 +1,43 @@
+.TH calibredb
+.PP
+.RS
+Tool to manipulate the your e\-book database.
+Part of the Calibre e\-book library.
+More information: \[la]https://manual.calibre-ebook.com/generated/en/calibredb.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List e\-books in the library with additional information:
+.RE
+.PP
+\fB\fCcalibredb list\fR
+.RS
+.IP \(bu 2
+Search for e\-books displaying additional information:
+.RE
+.PP
+\fB\fCcalibredb list \-\-search {{search_term}}\fR
+.RS
+.IP \(bu 2
+Search for just ids of e\-books:
+.RE
+.PP
+\fB\fCcalibredb search {{search_term}}\fR
+.RS
+.IP \(bu 2
+Add one or more e\-books to the library:
+.RE
+.PP
+\fB\fCcalibredb add {{file1 file2 …}}\fR
+.RS
+.IP \(bu 2
+Recursively add all e\-books under a directory to the library:
+.RE
+.PP
+\fB\fCcalibredb add \-r {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Remove one or more e\-books from the library. You need the e\-book IDs (see above):
+.RE
+.PP
+\fB\fCcalibredb remove {{id1 id2 …}}\fR

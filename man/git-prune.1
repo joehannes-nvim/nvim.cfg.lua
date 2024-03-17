@@ -1,0 +1,25 @@
+.TH git prune
+.PP
+.RS
+Git command for pruning all unreachable objects from the object database.
+This command is often not used directly but as an internal command that is used by Git gc.
+More information: \[la]https://git-scm.com/docs/git-prune\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Report what would be removed by Git prune without removing it:
+.RE
+.PP
+\fB\fCgit prune \-\-dry\-run\fR
+.RS
+.IP \(bu 2
+Prune unreachable objects and display what has been pruned to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgit prune \-\-verbose\fR
+.RS
+.IP \(bu 2
+Prune unreachable objects while showing progress:
+.RE
+.PP
+\fB\fCgit prune \-\-progress\fR

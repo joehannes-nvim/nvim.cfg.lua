@@ -1,0 +1,31 @@
+.TH az sshkey
+.PP
+.RS
+Manage ssh public keys with virtual machines.
+Part of \fB\fCazure\-cli\fR (also known as \fB\fCaz\fR).
+More information: \[la]https://learn.microsoft.com/cli/azure/sshkey\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new SSH key:
+.RE
+.PP
+\fB\fCaz sshkey create \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR
+.RS
+.IP \(bu 2
+Upload an existing SSH key:
+.RE
+.PP
+\fB\fCaz sshkey create \-\-name {{name}} \-\-resource\-group {{resource_group}} \-\-public\-key "{{@path/to/key.pub}}"\fR
+.RS
+.IP \(bu 2
+List all SSH public keys:
+.RE
+.PP
+\fB\fCaz sshkey list\fR
+.RS
+.IP \(bu 2
+Show information about an SSH public key:
+.RE
+.PP
+\fB\fCaz sshkey show \-\-name {{name}} \-\-resource\-group {{resource_group}}\fR

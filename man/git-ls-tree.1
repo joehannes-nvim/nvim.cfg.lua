@@ -1,0 +1,30 @@
+.TH git ls\-tree
+.PP
+.RS
+List the contents of a tree object.
+More information: \[la]https://git-scm.com/docs/git-ls-tree\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List the contents of the tree on a branch:
+.RE
+.PP
+\fB\fCgit ls\-tree {{branch_name}}\fR
+.RS
+.IP \(bu 2
+List the contents of the tree on a commit, recursing into subtrees:
+.RE
+.PP
+\fB\fCgit ls\-tree \-r {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+List only the filenames of the tree on a commit:
+.RE
+.PP
+\fB\fCgit ls\-tree \-\-name\-only {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+Print the filenames of the current branch head in a tree structure (Note: \fB\fCtree \-\-fromfile\fR is not supported on Windows):
+.RE
+.PP
+\fB\fCgit ls\-tree \-r \-\-name\-only HEAD | tree \-\-fromfile\fR

@@ -1,0 +1,54 @@
+.TH infection
+.PP
+.RS
+A mutation testing framework for PHP.
+More information: \[la]https://infection.github.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze code using the configuration file (or create one if it does not exist):
+.RE
+.PP
+\fB\fCinfection\fR
+.RS
+.IP \(bu 2
+Use a specific number of threads:
+.RE
+.PP
+\fB\fCinfection \-\-threads {{number_of_threads}}\fR
+.RS
+.IP \(bu 2
+Specify a minimum Mutation Score Indicator (MSI):
+.RE
+.PP
+\fB\fCinfection \-\-min\-msi {{percentage}}\fR
+.RS
+.IP \(bu 2
+Specify a minimum covered code MSI:
+.RE
+.PP
+\fB\fCinfection \-\-min\-covered\-msi {{percentage}}\fR
+.RS
+.IP \(bu 2
+Use a specific test framework (defaults to PHPUnit):
+.RE
+.PP
+\fB\fCinfection \-\-test\-framework {{phpunit|phpspec}}\fR
+.RS
+.IP \(bu 2
+Only mutate lines of code that are covered by tests:
+.RE
+.PP
+\fB\fCinfection \-\-only\-covered\fR
+.RS
+.IP \(bu 2
+Display the mutation code that has been applied:
+.RE
+.PP
+\fB\fCinfection \-\-show\-mutations\fR
+.RS
+.IP \(bu 2
+Specify the log verbosity:
+.RE
+.PP
+\fB\fCinfection \-\-log\-verbosity {{default|all|none}}\fR

@@ -1,0 +1,43 @@
+.TH fgrep
+.PP
+.RS
+Matches fixed strings in files.
+Equivalent to \fB\fCgrep \-F\fR\&.
+More information: \[la]https://www.gnu.org/software/grep/manual/grep.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for an exact string in a file:
+.RE
+.PP
+\fB\fCfgrep {{search_string}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search only lines that match entirely in files:
+.RE
+.PP
+\fB\fCfgrep \-x {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Count the number of lines that match the given string in a file:
+.RE
+.PP
+\fB\fCfgrep \-c {{search_string}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Show the line number in the file along with the line matched:
+.RE
+.PP
+\fB\fCfgrep \-n {{search_string}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display all lines except those that contain the search string:
+.RE
+.PP
+\fB\fCfgrep \-v {{search_string}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Display filenames whose content matches the search string at least once:
+.RE
+.PP
+\fB\fCfgrep \-l {{search_string}} {{path/to/file1}} {{path/to/file2}}\fR

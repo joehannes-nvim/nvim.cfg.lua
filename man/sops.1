@@ -1,0 +1,43 @@
+.TH sops
+.PP
+.RS
+SOPS: Secrets OPerationS.
+Tool for managing secrets.
+More information: \[la]https://github.com/mozilla/sops\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Encrypt a file:
+.RE
+.PP
+\fB\fCsops \-e {{path/to/myfile.json}} > {{path/to/myfile.enc.json}}\fR
+.RS
+.IP \(bu 2
+Decrypt a file to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCsops \-d {{path/to/myfile.enc.json}}\fR
+.RS
+.IP \(bu 2
+Rotate data keys for a sops file:
+.RE
+.PP
+\fB\fCsops \-r {{path/to/myfile.enc.yaml}}\fR
+.RS
+.IP \(bu 2
+Change the extension of the file once encrypted:
+.RE
+.PP
+\fB\fCsops \-d \-\-input\-type json {{path/to/myfile.enc.json}}\fR
+.RS
+.IP \(bu 2
+Extract keys by naming them, and array elements by numbering them:
+.RE
+.PP
+\fB\fCsops \-d \-\-extract '["an_array"][1]' {{path/to/myfile.enc.json}}\fR
+.RS
+.IP \(bu 2
+Show the difference between two sops files:
+.RE
+.PP
+\fB\fCdiff <(sops \-d {{path/to/secret1.enc.yaml}}) <(sops \-d {{path/to/secret2.enc.yaml}})\fR

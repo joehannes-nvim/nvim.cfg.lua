@@ -1,0 +1,24 @@
+.TH openssl genrsa
+.PP
+.RS
+OpenSSL command to generate RSA private keys.
+More information: \[la]https://www.openssl.org/docs/manmaster/man1/openssl-genrsa.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate an RSA private key of 2048 bits to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCopenssl genrsa\fR
+.RS
+.IP \(bu 2
+Save an RSA private key of an arbitrary number of bits to the output file:
+.RE
+.PP
+\fB\fCopenssl genrsa \-out {{output_file.key}} {{1234}}\fR
+.RS
+.IP \(bu 2
+Generate an RSA private key and encrypt it with AES256 (you will be prompted for a passphrase):
+.RE
+.PP
+\fB\fCopenssl genrsa {{\-aes256}}\fR

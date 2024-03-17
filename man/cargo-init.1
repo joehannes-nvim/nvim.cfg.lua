@@ -1,0 +1,37 @@
+.TH cargo init
+.PP
+.RS
+Create a new Cargo package.
+Equivalent of \fB\fCcargo new\fR, but specifiying a directory is optional.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-init.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Initialize a Rust project with a binary target in the current directory:
+.RE
+.PP
+\fB\fCcargo init\fR
+.RS
+.IP \(bu 2
+Initialize a Rust project with a binary target in the specified directory:
+.RE
+.PP
+\fB\fCcargo init {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Initialize a Rust project with a library target in the current directory:
+.RE
+.PP
+\fB\fCcargo init \-\-lib\fR
+.RS
+.IP \(bu 2
+Initialize a version control system repository in the project directory (default: \fB\fCgit\fR):
+.RE
+.PP
+\fB\fCcargo init \-\-vcs {{git|hg|pijul|fossil|none}}\fR
+.RS
+.IP \(bu 2
+Set the package name (default: directory name):
+.RE
+.PP
+\fB\fCcargo init \-\-name {{name}}\fR

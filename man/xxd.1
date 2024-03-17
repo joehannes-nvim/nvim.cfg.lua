@@ -1,0 +1,48 @@
+.TH xxd
+.PP
+.RS
+Create a hexadecimal representation (hexdump) from a binary file, or vice\-versa.
+More information: \[la]https://manned.org/xxd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a hexdump from a binary file and display the output:
+.RE
+.PP
+\fB\fCxxd {{input_file}}\fR
+.RS
+.IP \(bu 2
+Generate a hexdump from a binary file and save it as a text file:
+.RE
+.PP
+\fB\fCxxd {{input_file}} {{output_file}}\fR
+.RS
+.IP \(bu 2
+Display a more compact output, replacing consecutive zeros (if any) with a star:
+.RE
+.PP
+\fB\fCxxd \-a {{input_file}}\fR
+.RS
+.IP \(bu 2
+Display the output with 10 columns of one octet (byte) each:
+.RE
+.PP
+\fB\fCxxd \-c {{10}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+Display output only up to a length of 32 bytes:
+.RE
+.PP
+\fB\fCxxd \-l {{32}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+Display the output in plain mode, without any gaps between the columns:
+.RE
+.PP
+\fB\fCxxd \-p {{input_file}}\fR
+.RS
+.IP \(bu 2
+Revert a plaintext hexdump back into binary, and save it as a binary file:
+.RE
+.PP
+\fB\fCxxd \-r \-p {{input_file}} {{output_file}}\fR

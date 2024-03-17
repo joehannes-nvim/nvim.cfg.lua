@@ -1,0 +1,25 @@
+.TH sshpass
+.PP
+.RS
+An ssh password provider.
+It works by creating a TTY, feeding the password into it, and then redirecting \fB\fCstdin\fR to the ssh session.
+More information: \[la]https://manned.org/sshpass\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to a remote server using a password supplied on a file descriptor (in this case, \fB\fCstdin\fR):
+.RE
+.PP
+\fB\fCsshpass \-d {{0}} ssh {{user}}@{{hostname}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server with the password supplied as an option, and automatically accept unknown ssh keys:
+.RE
+.PP
+\fB\fCsshpass \-p {{password}} ssh \-o StrictHostKeyChecking=no {{user}}@{{hostname}}\fR
+.RS
+.IP \(bu 2
+Connect to a remote server using the first line of a file as the password, automatically accept unknown ssh keys, and launch a command:
+.RE
+.PP
+\fB\fCsshpass \-f {{path/to/file}} ssh \-o StrictHostKeyChecking=no {{user}}@{{hostname}} "{{command}}"\fR

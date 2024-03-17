@@ -1,0 +1,36 @@
+.TH shiori
+.PP
+.RS
+Simple bookmark manager built with Go.
+More information: \[la]https://github.com/go-shiori/shiori\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Import bookmarks from HTML Netscape bookmark format file:
+.RE
+.PP
+\fB\fCshiori import {{path/to/bookmarks.html}}\fR
+.RS
+.IP \(bu 2
+Save the specified URL as bookmark:
+.RE
+.PP
+\fB\fCshiori add {{url}}\fR
+.RS
+.IP \(bu 2
+List the saved bookmarks:
+.RE
+.PP
+\fB\fCshiori print\fR
+.RS
+.IP \(bu 2
+Open the saved bookmark in a browser:
+.RE
+.PP
+\fB\fCshiori open {{bookmark_id}}\fR
+.RS
+.IP \(bu 2
+Start the web interface for managing bookmarks at port 8181:
+.RE
+.PP
+\fB\fCshiori serve \-\-port {{8181}}\fR

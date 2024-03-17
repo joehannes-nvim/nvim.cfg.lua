@@ -1,0 +1,48 @@
+.TH gt
+.PP
+.RS
+Create and manage sequences of dependent code changes (stacks) for Git and GitHub.
+More information: \[la]https://docs.graphite.dev\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Authenticate the CLI with Graphite's API:
+.RE
+.PP
+\fB\fCgt auth \-\-token {{graphite_cli_auth_token}}\fR
+.RS
+.IP \(bu 2
+Initialise \fB\fCgt\fR for the repository in the current directory:
+.RE
+.PP
+\fB\fCgt repo init\fR
+.RS
+.IP \(bu 2
+Create a new branch stacked on top of the current branch and commit staged changes:
+.RE
+.PP
+\fB\fCgt branch create {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a new commit and fix upstack branches:
+.RE
+.PP
+\fB\fCgt commit create \-m {{commit_message}}\fR
+.RS
+.IP \(bu 2
+Force push all branches in the current stack to GitHub and create or update PRs:
+.RE
+.PP
+\fB\fCgt stack submit\fR
+.RS
+.IP \(bu 2
+Log all tracked stacks:
+.RE
+.PP
+\fB\fCgt log short\fR
+.RS
+.IP \(bu 2
+Print help for a specified subcommand:
+.RE
+.PP
+\fB\fCgt {{subcommand}} \-\-help\fR

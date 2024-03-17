@@ -1,0 +1,42 @@
+.TH phpstan
+.PP
+.RS
+A PHP static analysis tool to discover bugs in code.
+More information: \[la]https://github.com/phpstan/phpstan\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display available options for analysis:
+.RE
+.PP
+\fB\fCphpstan analyse \-\-help\fR
+.RS
+.IP \(bu 2
+Analyze the specified space\-separated directories:
+.RE
+.PP
+\fB\fCphpstan analyse {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Analyze a directory using a configuration file:
+.RE
+.PP
+\fB\fCphpstan analyse {{path/to/directory}} \-\-configuration {{path/to/config}}\fR
+.RS
+.IP \(bu 2
+Analyze using a specific rule level (0\-7, higher is stricter):
+.RE
+.PP
+\fB\fCphpstan analyse {{path/to/directory}} \-\-level {{level}}\fR
+.RS
+.IP \(bu 2
+Specify an autoload file to load before analyzing:
+.RE
+.PP
+\fB\fCphpstan analyse {{path/to/directory}} \-\-autoload\-file {{path/to/autoload_file}}\fR
+.RS
+.IP \(bu 2
+Specify a memory limit during analysis:
+.RE
+.PP
+\fB\fCphpstan analyse {{path/to/directory}} \-\-memory\-limit {{memory_limit}}\fR

@@ -1,0 +1,54 @@
+.TH bosh
+.PP
+.RS
+Command\-line tool to deploy and manage the bosh director.
+More information: \[la]https://bosh.io/docs/cli-v2/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create local alias for director:
+.RE
+.PP
+\fB\fCbosh alias\-env {{environment_name}} \-e {{ip_address|url}} \-\-ca\-cert {{ca_certificate}}\fR
+.RS
+.IP \(bu 2
+List environments:
+.RE
+.PP
+\fB\fCbosh environments\fR
+.RS
+.IP \(bu 2
+Log in to the director:
+.RE
+.PP
+\fB\fCbosh login \-e {{environment}}\fR
+.RS
+.IP \(bu 2
+List deployments:
+.RE
+.PP
+\fB\fCbosh \-e {{environment}} deployments\fR
+.RS
+.IP \(bu 2
+List environment virtual machines:
+.RE
+.PP
+\fB\fCbosh \-e {{environment}} vms \-d {{deployment}}\fR
+.RS
+.IP \(bu 2
+Ssh into virtual machine:
+.RE
+.PP
+\fB\fCbosh \-e {{environment}} ssh {{virtual_machine}} \-d {{deployment}}\fR
+.RS
+.IP \(bu 2
+Upload stemcell:
+.RE
+.PP
+\fB\fCbosh \-e {{environment}} upload\-stemcell {{stemcell_file|url}}\fR
+.RS
+.IP \(bu 2
+Show current cloud config:
+.RE
+.PP
+\fB\fCbosh \-e {{environment}} cloud\-config\fR

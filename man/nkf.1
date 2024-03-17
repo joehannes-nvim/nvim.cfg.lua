@@ -1,0 +1,43 @@
+.TH nkf
+.PP
+.RS
+Network kanji filter.
+Converts kanji code from one encoding to another.
+More information: \[la]https://manned.org/nkf\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Convert to UTF\-8 encoding:
+.RE
+.PP
+\fB\fCnkf \-w {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Convert to SHIFT_JIS encoding:
+.RE
+.PP
+\fB\fCnkf \-s {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Convert to UTF\-8 encoding and overwrite the file:
+.RE
+.PP
+\fB\fCnkf \-w \-\-overwrite {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Set new line code to LF and overwrite (UNIX type):
+.RE
+.PP
+\fB\fCnkf \-d \-\-overwrite {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Set new line code to CRLF and overwrite (windows type):
+.RE
+.PP
+\fB\fCnkf \-c \-\-overwrite {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Decrypt mime file and overwrite:
+.RE
+.PP
+\fB\fCnkf \-m \-\-overwrite {{path/to/file.txt}}\fR

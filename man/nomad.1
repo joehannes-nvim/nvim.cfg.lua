@@ -1,0 +1,54 @@
+.TH nomad
+.PP
+.RS
+Distributed, highly available, datacenter\-aware scheduler.
+More information: \[la]https://www.nomadproject.io/docs/commands/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the status of nodes in the cluster:
+.RE
+.PP
+\fB\fCnomad node status\fR
+.RS
+.IP \(bu 2
+Validate a job file:
+.RE
+.PP
+\fB\fCnomad job validate {{path/to/file.nomad}}\fR
+.RS
+.IP \(bu 2
+Plan a job for execution on the cluster:
+.RE
+.PP
+\fB\fCnomad job plan {{path/to/file.nomad}}\fR
+.RS
+.IP \(bu 2
+Run a job on the cluster:
+.RE
+.PP
+\fB\fCnomad job run {{path/to/file.nomad}}\fR
+.RS
+.IP \(bu 2
+Show the status of jobs currently running on the cluster:
+.RE
+.PP
+\fB\fCnomad job status\fR
+.RS
+.IP \(bu 2
+Show the detailed status information about a specific job:
+.RE
+.PP
+\fB\fCnomad job status {{job_name}}\fR
+.RS
+.IP \(bu 2
+Follow the logs of a specific allocation:
+.RE
+.PP
+\fB\fCnomad alloc logs {{alloc_id}}\fR
+.RS
+.IP \(bu 2
+Show the status of storage volumes:
+.RE
+.PP
+\fB\fCnomad volume status\fR

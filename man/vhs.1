@@ -1,0 +1,42 @@
+.TH vhs
+.PP
+.RS
+Generate terminal gifs from a tape file.
+More information: \[la]https://github.com/charmbracelet/vhs\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a tape file (add commands to the tape file using an editor):
+.RE
+.PP
+\fB\fCvhs new {{path/to/file.tape}}\fR
+.RS
+.IP \(bu 2
+Record inputs to a tape file (once done, exit the shell to create the tape):
+.RE
+.PP
+\fB\fCvhs record > {{path/to/file.tape}}\fR
+.RS
+.IP \(bu 2
+Record inputs to a tape file using a specific shell:
+.RE
+.PP
+\fB\fCvhs record \-\-shell {{shell}} > {{path/to/file.tape}}\fR
+.RS
+.IP \(bu 2
+Validate the syntax of a tape file:
+.RE
+.PP
+\fB\fCvhs validate {{path/to/file.tape}}\fR
+.RS
+.IP \(bu 2
+Create a gif from a tape file:
+.RE
+.PP
+\fB\fCvhs < {{path/to/file.tape}}\fR
+.RS
+.IP \(bu 2
+Publish a gif to \[la]https://vhs.charm.sh\[ra] and get a shareable URL:
+.RE
+.PP
+\fB\fCvhs publish {{path/to/file.gif}}\fR

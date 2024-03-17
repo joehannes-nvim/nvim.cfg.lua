@@ -1,0 +1,36 @@
+.TH rails destroy
+.PP
+.RS
+Destroy Rails resources.
+More information: \[la]https://guides.rubyonrails.org/command_line.html#bin-rails-destroy\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all available generators to destroy:
+.RE
+.PP
+\fB\fCrails destroy\fR
+.RS
+.IP \(bu 2
+Destroy a model named Post:
+.RE
+.PP
+\fB\fCrails destroy model {{Post}}\fR
+.RS
+.IP \(bu 2
+Destroy a controller named Posts:
+.RE
+.PP
+\fB\fCrails destroy controller {{Posts}}\fR
+.RS
+.IP \(bu 2
+Destroy a migration that creates Posts:
+.RE
+.PP
+\fB\fCrails destroy migration {{CreatePosts}}\fR
+.RS
+.IP \(bu 2
+Destroy a scaffold for a model named Post:
+.RE
+.PP
+\fB\fCrails destroy scaffold {{Post}}\fR

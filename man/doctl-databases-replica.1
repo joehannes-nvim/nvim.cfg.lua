@@ -1,0 +1,36 @@
+.TH doctl databases replica
+.PP
+.RS
+Manage read\-only replicas associated with a database cluster.
+More information: \[la]https://docs.digitalocean.com/reference/doctl/reference/databases/replica/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a \fB\fCdoctl databases replica\fR command with an access token:
+.RE
+.PP
+\fB\fCdoctl databases pool {{command}} \-\-access\-token {{access_token}}\fR
+.RS
+.IP \(bu 2
+Retrieve information about a read\-only database replica:
+.RE
+.PP
+\fB\fCdoctl databases replica get {{database_id}} {{replica_name}}\fR
+.RS
+.IP \(bu 2
+Retrieve list of read\-only database replicas:
+.RE
+.PP
+\fB\fCdoctl databases replica list {{database_id}}\fR
+.RS
+.IP \(bu 2
+Create a read\-only database replica:
+.RE
+.PP
+\fB\fCdoctl databases replica create {{database_id}} {{replica_name}}\fR
+.RS
+.IP \(bu 2
+Delete a read\-only database replica:
+.RE
+.PP
+\fB\fCdoctl databases replica delete {{database_id}} {{replica_name}}\fR

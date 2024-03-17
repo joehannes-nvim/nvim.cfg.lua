@@ -1,0 +1,31 @@
+.TH cargo metadata
+.PP
+.RS
+Output the workspace members and resolved dependencies of current package as JSON.
+Note: The output format is subject to change in future versions of Cargo.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-metadata.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print the workspace members and resolved dependencies of the current package:
+.RE
+.PP
+\fB\fCcargo metadata\fR
+.RS
+.IP \(bu 2
+Print only the workspace members and do not fetch dependencies:
+.RE
+.PP
+\fB\fCcargo metadata \-\-no\-deps\fR
+.RS
+.IP \(bu 2
+Print metadata in a specific format based on the specified version:
+.RE
+.PP
+\fB\fCcargo metadata \-\-format\-version {{version}}\fR
+.RS
+.IP \(bu 2
+Print metadata with the \fB\fCresolve\fR field including dependencies only for the given target triple (Note: the \fB\fCpackages\fR array will still include the dependencies for all targets):
+.RE
+.PP
+\fB\fCcargo metadata \-\-filter\-platform {{target_triple}}\fR

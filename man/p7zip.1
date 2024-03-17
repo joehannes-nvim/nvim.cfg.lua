@@ -1,0 +1,37 @@
+.TH p7zip
+.PP
+.RS
+Wrapper of 7\-Zip file archiver with high compression ratio.
+Internally executes either 7za or 7zr command.
+More information: \[la]http://p7zip.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Archive a file, replacing it with a 7zipped compressed version:
+.RE
+.PP
+\fB\fCp7zip {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Archive a file keeping the input file:
+.RE
+.PP
+\fB\fCp7zip \-k {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Decompress a file, replacing it with the original uncompressed version:
+.RE
+.PP
+\fB\fCp7zip \-d {{compressed.ext}}.7z\fR
+.RS
+.IP \(bu 2
+Decompress a file keeping the input file:
+.RE
+.PP
+\fB\fCp7zip \-d \-k {{compressed.ext}}.7z\fR
+.RS
+.IP \(bu 2
+Skip some checks and force compression or decompression:
+.RE
+.PP
+\fB\fCp7zip \-f {{path/to/file}}\fR

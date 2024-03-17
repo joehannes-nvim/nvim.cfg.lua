@@ -1,0 +1,30 @@
+.TH espeak
+.PP
+.RS
+Uses text\-to\-speech to speak through the default sound device.
+More information: \[la]http://espeak.sourceforge.net\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Speak a phrase aloud:
+.RE
+.PP
+\fB\fCespeak "I like to ride my bike."\fR
+.RS
+.IP \(bu 2
+Speak a file aloud:
+.RE
+.PP
+\fB\fCespeak \-f {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Save output to a WAV audio file, rather than speaking it directly:
+.RE
+.PP
+\fB\fCespeak \-w {{filename.wav}} "It's GNU plus Linux"\fR
+.RS
+.IP \(bu 2
+Use a different voice:
+.RE
+.PP
+\fB\fCespeak \-v {{voice}}\fR

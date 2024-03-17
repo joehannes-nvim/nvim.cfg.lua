@@ -1,0 +1,54 @@
+.TH history expansion
+.PP
+.RS
+Reuse and expand the shell history in \fB\fCsh\fR, \fB\fCbash\fR, \fB\fCzsh\fR, \fB\fCrbash\fR and \fB\fCksh\fR\&.
+More information: \[la]https://www.gnu.org/software/bash/manual/html_node/History-Interaction\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run the previous command as root (\fB\fC!!\fR is replaced by the previous command):
+.RE
+.PP
+\fB\fCsudo !!\fR
+.RS
+.IP \(bu 2
+Run a command with the last argument of the previous command:
+.RE
+.PP
+\fB\fC{{command}} !$\fR
+.RS
+.IP \(bu 2
+Run a command with the first argument of the previous command:
+.RE
+.PP
+\fB\fC{{command}} !^\fR
+.RS
+.IP \(bu 2
+Run the Nth command of the history:
+.RE
+.PP
+\fB\fC!{{n}}\fR
+.RS
+.IP \(bu 2
+Run the command \fB\fCn\fR lines back in the history:
+.RE
+.PP
+\fB\fC!\-{{n}}\fR
+.RS
+.IP \(bu 2
+Run the most recent command containing \fB\fCstring\fR:
+.RE
+.PP
+\fB\fC!?{{string}}?\fR
+.RS
+.IP \(bu 2
+Run the previous command, replacing \fB\fCstring1\fR with \fB\fCstring2\fR:
+.RE
+.PP
+\fB\fC^{{string1}}^{{string2}}^\fR
+.RS
+.IP \(bu 2
+Perform a history expansion, but print the command that would be run instead of actually running it:
+.RE
+.PP
+\fB\fC{{!\-n}}:p\fR

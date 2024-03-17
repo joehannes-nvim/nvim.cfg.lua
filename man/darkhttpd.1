@@ -1,0 +1,24 @@
+.TH darkhttpd
+.PP
+.RS
+Darkhttpd web server.
+More information: \[la]https://unix4lyfe.org/darkhttpd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start server serving the specified document root:
+.RE
+.PP
+\fB\fCdarkhttpd {{path/to/docroot}}\fR
+.RS
+.IP \(bu 2
+Start server on specified port (port 8080 by default if running as non\-root user):
+.RE
+.PP
+\fB\fCdarkhttpd {{path/to/docroot}} \-\-port {{port}}\fR
+.RS
+.IP \(bu 2
+Listen only on specified IP address (by default, the server listens on all interfaces):
+.RE
+.PP
+\fB\fCdarkhttpd {{path/to/docroot}} \-\-addr {{ip_address}}\fR

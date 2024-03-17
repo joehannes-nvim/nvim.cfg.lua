@@ -1,0 +1,42 @@
+.TH git archive
+.PP
+.RS
+Create an archive of files from a named tree.
+More information: \[la]https://git-scm.com/docs/git-archive\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a tar archive from the contents of the current HEAD and print it to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgit archive \-\-verbose HEAD\fR
+.RS
+.IP \(bu 2
+Create a zip archive from the current HEAD and print it to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCgit archive \-\-verbose \-\-format=zip HEAD\fR
+.RS
+.IP \(bu 2
+Same as above, but write the zip archive to file:
+.RE
+.PP
+\fB\fCgit archive \-\-verbose \-\-output={{path/to/file.zip}} HEAD\fR
+.RS
+.IP \(bu 2
+Create a tar archive from the contents of the latest commit on a specific branch:
+.RE
+.PP
+\fB\fCgit archive \-\-output={{path/to/file.tar}} {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create a tar archive from the contents of a specific directory:
+.RE
+.PP
+\fB\fCgit archive \-\-output={{path/to/file.tar}} HEAD:{{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Prepend a path to each file to archive it inside a specific directory:
+.RE
+.PP
+\fB\fCgit archive \-\-output={{path/to/file.tar}} \-\-prefix={{path/to/prepend}}/ HEAD\fR

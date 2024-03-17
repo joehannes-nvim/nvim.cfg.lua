@@ -1,0 +1,30 @@
+.TH nms
+.PP
+.RS
+Command\-line tool that recreates the famous data decryption effect seen in the 1992 movie Sneakers from \fB\fCstdin\fR\&.
+More information: \[la]https://github.com/bartobri/no-more-secrets\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Decrypt text after a keystroke:
+.RE
+.PP
+\fB\fCecho "{{Hello, World!}}" | nms\fR
+.RS
+.IP \(bu 2
+Decrypt output immediately, without waiting for a keystroke:
+.RE
+.PP
+\fB\fC{{ls \-la}} | nms \-a\fR
+.RS
+.IP \(bu 2
+Decrypt the content of a file, with a custom output color:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | nms \-a \-f {{blue|white|yellow|black|magenta|green|red}}\fR
+.RS
+.IP \(bu 2
+Clear the screen before decrypting:
+.RE
+.PP
+\fB\fC{{command}} | nms \-a \-c\fR

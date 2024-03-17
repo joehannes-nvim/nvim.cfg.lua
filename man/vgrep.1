@@ -1,0 +1,49 @@
+.TH vgrep
+.PP
+.RS
+A user friendly pager for grep.
+See also: \fB\fCugrep\fR, \fB\fCrg\fR\&.
+More information: \[la]https://github.com/vrothberg/vgrep\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively search the current directory for a pattern and cache it:
+.RE
+.PP
+\fB\fCvgrep {{search_pattern}}\fR
+.RS
+.IP \(bu 2
+Display the contents of the cache:
+.RE
+.PP
+\fB\fCvgrep\fR
+.RS
+.IP \(bu 2
+Open the "4th" match from the cache in the default editor:
+.RE
+.PP
+\fB\fCvgrep \-\-show {{4}}\fR
+.RS
+.IP \(bu 2
+Display a context of "3" lines for each match in the cache:
+.RE
+.PP
+\fB\fCvgrep \-\-show=context{{3}}\fR
+.RS
+.IP \(bu 2
+Display the number of matches for each directory in the tree:
+.RE
+.PP
+\fB\fCvgrep \-\-show=tree\fR
+.RS
+.IP \(bu 2
+Display the number of matches for each file in the tree:
+.RE
+.PP
+\fB\fCvgrep \-\-show=files\fR
+.RS
+.IP \(bu 2
+Start an interactive shell with cached matches:
+.RE
+.PP
+\fB\fCvgrep \-\-interactive\fR

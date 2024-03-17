@@ -1,0 +1,49 @@
+.TH acme.sh
+.PP
+.RS
+Shell script implementing ACME client protocol, an alternative to certbot.
+See also \fB\fCacme.sh dns\fR\&.
+More information: \[la]https://github.com/acmesh-official/acme.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Issue a certificate using webroot mode:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-domain {{example.com}} \-\-webroot {{/path/to/webroot}}\fR
+.RS
+.IP \(bu 2
+Issue a certificate for multiple domains using standalone mode using port 80:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-standalone \-\-domain {{example.com}} \-\-domain {{www.example.com}}\fR
+.RS
+.IP \(bu 2
+Issue a certificate using standalone TLS mode using port 443:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-alpn \-\-domain {{example.com}}\fR
+.RS
+.IP \(bu 2
+Issue a certificate using a working Nginx configuration:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-nginx \-\-domain {{example.com}}\fR
+.RS
+.IP \(bu 2
+Issue a certificate using a working Apache configuration:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-apache \-\-domain {{example.com}}\fR
+.RS
+.IP \(bu 2
+Issue a wildcard (*) certificate using an automatic DNS API mode:
+.RE
+.PP
+\fB\fCacme.sh \-\-issue \-\-dns {{dns_cf}} \-\-domain {{*.example.com}}\fR
+.RS
+.IP \(bu 2
+Install certificate files into the specified locations (useful for automatic certificate renewal):
+.RE
+.PP
+\fB\fCacme.sh \-\-install\-cert \-d {{example.com}} \-\-key\-file {{/path/to/example.com.key}} \-\-fullchain\-file {{/path/to/example.com.cer}} \-\-reloadcmd {{"systemctl force\-reload nginx"}}\fR

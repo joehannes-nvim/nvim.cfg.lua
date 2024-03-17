@@ -1,0 +1,42 @@
+.TH sgpt
+.PP
+.RS
+Command\-line productivity tool powered by OpenAI's GPT models.
+More information: \[la]https://github.com/TheR1D/shell_gpt#readme\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use it as a search engine, asking for the mass of the sun:
+.RE
+.PP
+\fB\fCsgpt "{{mass of the sun}}"\fR
+.RS
+.IP \(bu 2
+Execute Shell commands, and apply \fB\fCchmod 444\fR to all files in the current directory:
+.RE
+.PP
+\fB\fCsgpt \-\-shell "{{make all files in current directory read only}}"\fR
+.RS
+.IP \(bu 2
+Generate code, solving classic fizz buzz problem:
+.RE
+.PP
+\fB\fCsgpt \-\-code "{{solve fizz buzz problem using Python}}"\fR
+.RS
+.IP \(bu 2
+Start a chat session with a unique session name:
+.RE
+.PP
+\fB\fCsgpt \-\-chat {{session_name}} "{{please remember my favorite number: 4}}"\fR
+.RS
+.IP \(bu 2
+Start a \fB\fCREPL\fR (Read–eval–print loop) session:
+.RE
+.PP
+\fB\fCsgpt \-\-repl {{command}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCsgpt \-\-help\fR

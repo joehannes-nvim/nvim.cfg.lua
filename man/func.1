@@ -1,0 +1,43 @@
+.TH func
+.PP
+.RS
+Azure Functions Core Tools: Develop and test Azure Functions locally.
+Local functions can connect to live Azure services, and can deploy a function app to an Azure subscription.
+More information: \[la]https://learn.microsoft.com/azure/azure-functions/functions-run-local\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new functions project:
+.RE
+.PP
+\fB\fCfunc init {{project}}\fR
+.RS
+.IP \(bu 2
+Create a new function:
+.RE
+.PP
+\fB\fCfunc new\fR
+.RS
+.IP \(bu 2
+Run functions locally:
+.RE
+.PP
+\fB\fCfunc start\fR
+.RS
+.IP \(bu 2
+Publish your code to a function app in Azure:
+.RE
+.PP
+\fB\fCfunc azure functionapp publish {{function}}\fR
+.RS
+.IP \(bu 2
+Download all settings from an existing function app:
+.RE
+.PP
+\fB\fCfunc azure functionapp fetch\-app\-settings {{function}}\fR
+.RS
+.IP \(bu 2
+Get the connection string for a specific storage account:
+.RE
+.PP
+\fB\fCfunc azure storage fetch\-connection\-string {{storage_account}}\fR

@@ -1,0 +1,36 @@
+.TH mysqlbinlog
+.PP
+.RS
+Utility for processing MySQL binary log files.
+More information: \[la]https://dev.mysql.com/doc/refman/8.0/en/mysqlbinlog.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show events from a specific binary log file:
+.RE
+.PP
+\fB\fCmysqlbinlog {{path/to/binlog}}\fR
+.RS
+.IP \(bu 2
+Show entries from a binary log for a specific database:
+.RE
+.PP
+\fB\fCmysqlbinlog \-\-database {{database_name}} {{path/to/binlog}}\fR
+.RS
+.IP \(bu 2
+Show events from a binary log between specific dates:
+.RE
+.PP
+\fB\fCmysqlbinlog \-\-start\-datetime='{{2022\-01\-01 01:00:00}}' \-\-stop\-datetime='{{2022\-02\-01 01:00:00}}' {{path/to/binlog}}\fR
+.RS
+.IP \(bu 2
+Show events from a binary log between specific positions:
+.RE
+.PP
+\fB\fCmysqlbinlog \-\-start\-position={{100}} \-\-stop\-position={{200}} {{path/to/binlog}}\fR
+.RS
+.IP \(bu 2
+Show binary log from a MySQL server on the given host:
+.RE
+.PP
+\fB\fCmysqlbinlog \-\-host={{hostname}} {{path/to/binlog}}\fR

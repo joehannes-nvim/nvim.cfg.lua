@@ -1,0 +1,48 @@
+.TH pip3
+.PP
+.RS
+Python package manager.
+More information: \[la]https://pip.pypa.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Install a package:
+.RE
+.PP
+\fB\fCpip3 install {{package}}\fR
+.RS
+.IP \(bu 2
+Install a specific version of a package:
+.RE
+.PP
+\fB\fCpip3 install {{package}}=={{version}}\fR
+.RS
+.IP \(bu 2
+Upgrade a package:
+.RE
+.PP
+\fB\fCpip3 install \-\-upgrade {{package}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package:
+.RE
+.PP
+\fB\fCpip3 uninstall {{package}}\fR
+.RS
+.IP \(bu 2
+Save the list of installed packages to a file:
+.RE
+.PP
+\fB\fCpip3 freeze > {{requirements.txt}}\fR
+.RS
+.IP \(bu 2
+Install packages from a file:
+.RE
+.PP
+\fB\fCpip3 install \-\-requirement {{requirements.txt}}\fR
+.RS
+.IP \(bu 2
+Show installed package info:
+.RE
+.PP
+\fB\fCpip3 show {{package}}\fR

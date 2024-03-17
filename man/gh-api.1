@@ -1,0 +1,54 @@
+.TH gh api
+.PP
+.RS
+Makes authenticated HTTP requests to the GitHub API and prints the response.
+More information: \[la]https://cli.github.com/manual/gh_api\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the subcommand help:
+.RE
+.PP
+\fB\fCgh api \-\-help\fR
+.RS
+.IP \(bu 2
+Display the releases for the current repository in JSON format:
+.RE
+.PP
+\fB\fCgh api repos/:owner/:repo/releases\fR
+.RS
+.IP \(bu 2
+Create a reaction for a specific issue:
+.RE
+.PP
+\fB\fCgh api \-\-header {{Accept:application/vnd.github.squirrel\-girl\-preview+json}} \-\-raw\-field '{{content=+1}}' {{repos/:owner/:repo/issues/123/reactions}}\fR
+.RS
+.IP \(bu 2
+Display the result of a GraphQL query in JSON format:
+.RE
+.PP
+\fB\fCgh api graphql \-\-field {{name=':repo'}} \-\-raw\-field '{{query}}'\fR
+.RS
+.IP \(bu 2
+Send a request using a custom HTTP method:
+.RE
+.PP
+\fB\fCgh api \-\-method {{POST}} {{endpoint}}\fR
+.RS
+.IP \(bu 2
+Include the HTTP response headers in the output:
+.RE
+.PP
+\fB\fCgh api \-\-include {{endpoint}}\fR
+.RS
+.IP \(bu 2
+Do not print the response body:
+.RE
+.PP
+\fB\fCgh api \-\-silent {{endpoint}}\fR
+.RS
+.IP \(bu 2
+Send a request to a specific GitHub Enterprise Server:
+.RE
+.PP
+\fB\fCgh api \-\-hostname {{github.example.com}} {{endpoint}}\fR

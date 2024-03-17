@@ -1,0 +1,43 @@
+.TH pueue enqueue
+.PP
+.RS
+Enqueue stashed tasks.
+See also: \fB\fCpueue stash\fR\&.
+More information: \[la]https://github.com/Nukesor/pueue\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Enqueue multiple stashed tasks at once:
+.RE
+.PP
+\fB\fCpueue enqueue {{task_id}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Enqueue a stashed task after 60 seconds:
+.RE
+.PP
+\fB\fCpueue enqueue \-\-delay {{60}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Enqueue a stashed task next Wednesday:
+.RE
+.PP
+\fB\fCpueue enqueue \-\-delay {{wednesday}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+Enqueue a stashed task after four months:
+.RE
+.PP
+\fB\fCpueue enqueue \-\-delay "4 months" {{task_id}}\fR
+.RS
+.IP \(bu 2
+Enqueue a stashed task on 2021\-02\-19:
+.RE
+.PP
+\fB\fCpueue enqueue \-\-delay {{2021\-02\-19}} {{task_id}}\fR
+.RS
+.IP \(bu 2
+List all available date/time formats:
+.RE
+.PP
+\fB\fCpueue enqueue \-\-help\fR

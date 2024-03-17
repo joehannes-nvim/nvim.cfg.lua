@@ -1,0 +1,18 @@
+.TH in\-toto\-record
+.PP
+.RS
+Create a signed link metadata file to provide evidence for supply chain steps.
+More information: \[la]https://in-toto.readthedocs.io/en/latest/command-line-tools/in-toto-record.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start the record (creates a preliminary link file):
+.RE
+.PP
+\fB\fCin\-toto\-record start \-n {{edit\-files}} \-k {{path/to/key_file}} \-m {{.}}\fR
+.RS
+.IP \(bu 2
+Stop the record (expects a preliminary link file):
+.RE
+.PP
+\fB\fCin\-toto\-record stop \-n {{edit\-files}} \-k {{path/to/key_file}} \-p {{.}}\fR

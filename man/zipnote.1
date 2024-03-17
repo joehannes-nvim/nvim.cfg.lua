@@ -1,0 +1,25 @@
+.TH zipnote
+.PP
+.RS
+View, add, or edit a zip archive's comments.
+Files can also be renamed in the zip archive.
+More information: \[la]https://manned.org/zipnote\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+View the comments on a zip archive:
+.RE
+.PP
+\fB\fCzipnote {{path/to/file.zip}}\fR
+.RS
+.IP \(bu 2
+Extract the comments on a zip archive to a file:
+.RE
+.PP
+\fB\fCzipnote {{path/to/file.zip}} > {{path/to/file.txt}}\fR
+.RS
+.IP \(bu 2
+Add/Update comments in a zip archive from a file:
+.RE
+.PP
+\fB\fCzipnote \-w {{path/to/file.zip}} < {{path/to/file.txt}}\fR

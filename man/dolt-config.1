@@ -1,0 +1,42 @@
+.TH dolt config
+.PP
+.RS
+Read and write local (per repository) and global (per user) Dolt configuration variables.
+More information: \[la]https://docs.dolthub.com/interfaces/cli#dolt-config\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all local and global configuration options and their values:
+.RE
+.PP
+\fB\fCdolt config \-\-list\fR
+.RS
+.IP \(bu 2
+Display the value of a local or global configuration variable:
+.RE
+.PP
+\fB\fCdolt config \-\-get {{name}}\fR
+.RS
+.IP \(bu 2
+Modify the value of a local configuration variable, creating it if it doesn't exist:
+.RE
+.PP
+\fB\fCdolt config \-\-add {{name}} {{value}}\fR
+.RS
+.IP \(bu 2
+Modify the value of a global configuration variable, creating it if it doesn't exist:
+.RE
+.PP
+\fB\fCdolt config \-\-global \-\-add {{name}} {{value}}\fR
+.RS
+.IP \(bu 2
+Delete a local configuration variable:
+.RE
+.PP
+\fB\fCdolt config \-\-unset {{name}}\fR
+.RS
+.IP \(bu 2
+Delete a global configuration variable:
+.RE
+.PP
+\fB\fCdolt config \-\-global \-\-unset {{name}}\fR

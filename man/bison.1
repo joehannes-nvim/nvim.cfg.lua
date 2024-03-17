@@ -1,0 +1,30 @@
+.TH bison
+.PP
+.RS
+GNU parser generator.
+More information: \[la]https://www.gnu.org/software/bison/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile a bison definition file:
+.RE
+.PP
+\fB\fCbison {{path/to/file.y}}\fR
+.RS
+.IP \(bu 2
+Compile in debug mode, which causes the resulting parser to write additional information to \fB\fCstdout\fR:
+.RE
+.PP
+\fB\fCbison \-\-debug {{path/to/file.y}}\fR
+.RS
+.IP \(bu 2
+Specify the output filename:
+.RE
+.PP
+\fB\fCbison \-\-output {{path/to/output.c}} {{path/to/file.y}}\fR
+.RS
+.IP \(bu 2
+Be verbose when compiling:
+.RE
+.PP
+\fB\fCbison \-\-verbose\fR

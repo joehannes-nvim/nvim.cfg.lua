@@ -1,0 +1,43 @@
+.TH fd
+.PP
+.RS
+An alternative to \fB\fCfind\fR\&.
+Aims to be faster and easier to use than \fB\fCfind\fR\&.
+More information: \[la]https://github.com/sharkdp/fd\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively find files matching a specific pattern in the current directory:
+.RE
+.PP
+\fB\fCfd "{{string|regex}}"\fR
+.RS
+.IP \(bu 2
+Find files that begin with \fB\fCfoo\fR:
+.RE
+.PP
+\fB\fCfd "^foo"\fR
+.RS
+.IP \(bu 2
+Find files with a specific extension:
+.RE
+.PP
+\fB\fCfd \-\-extension txt\fR
+.RS
+.IP \(bu 2
+Find files in a specific directory:
+.RE
+.PP
+\fB\fCfd "{{string|regex}}" {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Include ignored and hidden files in the search:
+.RE
+.PP
+\fB\fCfd \-\-hidden \-\-no\-ignore "{{string|regex}}"\fR
+.RS
+.IP \(bu 2
+Execute a command on each search result returned:
+.RE
+.PP
+\fB\fCfd "{{string|regex}}" \-\-exec {{command}}\fR

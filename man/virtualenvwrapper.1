@@ -1,0 +1,48 @@
+.TH virtualenvwrapper
+.PP
+.RS
+Group of simple wrapper commands for Python's \fB\fCvirtualenv\fR tool.
+More information: \[la]http://virtualenvwrapper.readthedocs.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Python \fB\fCvirtualenv\fR in \fB\fC$WORKON_HOME\fR:
+.RE
+.PP
+\fB\fCmkvirtualenv {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Create a \fB\fCvirtualenv\fR for a specific Python version:
+.RE
+.PP
+\fB\fCmkvirtualenv \-\-python {{/usr/local/bin/python3.8}} {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Activate or use a different \fB\fCvirtualenv\fR:
+.RE
+.PP
+\fB\fCworkon {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Stop the \fB\fCvirtualenv\fR:
+.RE
+.PP
+\fB\fCdeactivate\fR
+.RS
+.IP \(bu 2
+List all virtual environments:
+.RE
+.PP
+\fB\fClsvirtualenv\fR
+.RS
+.IP \(bu 2
+Remove a \fB\fCvirtualenv\fR:
+.RE
+.PP
+\fB\fCrmvirtualenv {{virtualenv_name}}\fR
+.RS
+.IP \(bu 2
+Get summary of all virtualenvwrapper commands:
+.RE
+.PP
+\fB\fCvirtualenvwrapper\fR

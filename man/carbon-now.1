@@ -1,0 +1,54 @@
+.TH carbon\-now
+.PP
+.RS
+Create beautiful images of code.
+More information: \[la]https://github.com/mixn/carbon-now-cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create an image from a file using default settings:
+.RE
+.PP
+\fB\fCcarbon\-now {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create an image from a text in clipboard using default settings:
+.RE
+.PP
+\fB\fCcarbon\-now \-\-from\-clipboard\fR
+.RS
+.IP \(bu 2
+Create an image from \fB\fCstdin\fR using default settings:
+.RE
+.PP
+\fB\fC{{input}} | carbon\-now\fR
+.RS
+.IP \(bu 2
+Create images interactively for custom settings and optionally save a preset:
+.RE
+.PP
+\fB\fCcarbon\-now \-i {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Create images from previously saved preset:
+.RE
+.PP
+\fB\fCcarbon\-now \-p {{preset}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Start at a specified line of text:
+.RE
+.PP
+\fB\fCcarbon\-now \-s {{line}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+End at a specific line of text:
+.RE
+.PP
+\fB\fCcarbon\-now \-e {{line}} {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Open image in a browser instead of saving:
+.RE
+.PP
+\fB\fCcarbon\-now \-\-open {{path/to/file}}\fR

@@ -1,0 +1,54 @@
+.TH vercel
+.PP
+.RS
+Deploy and manage your Vercel deployments.
+More information: \[la]https://vercel.com/docs/cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Deploy the current directory:
+.RE
+.PP
+\fB\fCvercel\fR
+.RS
+.IP \(bu 2
+Deploy the current directory to production:
+.RE
+.PP
+\fB\fCvercel \-\-prod\fR
+.RS
+.IP \(bu 2
+Deploy a directory:
+.RE
+.PP
+\fB\fCvercel {{path/to/project}}\fR
+.RS
+.IP \(bu 2
+Initialize an example project:
+.RE
+.PP
+\fB\fCvercel init\fR
+.RS
+.IP \(bu 2
+Deploy with Environment Variables:
+.RE
+.PP
+\fB\fCvercel \-\-env {{ENV}}={{var}}\fR
+.RS
+.IP \(bu 2
+Build with Environment Variables:
+.RE
+.PP
+\fB\fCvercel \-\-build\-env {{ENV}}={{var}}\fR
+.RS
+.IP \(bu 2
+Set default regions to enable the deployment on:
+.RE
+.PP
+\fB\fCvercel \-\-regions {{region_id}}\fR
+.RS
+.IP \(bu 2
+Remove a deployment:
+.RE
+.PP
+\fB\fCvercel remove {{project_name}}\fR

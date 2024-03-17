@@ -1,0 +1,55 @@
+.TH pnpm
+.PP
+.RS
+Fast, disk space efficient package manager for Node.js.
+Manage Node.js projects and their module dependencies.
+More information: \[la]https://pnpm.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a \fB\fCpackage.json\fR file:
+.RE
+.PP
+\fB\fCpnpm init\fR
+.RS
+.IP \(bu 2
+Download all the packages listed as dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCpnpm install\fR
+.RS
+.IP \(bu 2
+Download a specific version of a package and add it to the list of dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCpnpm add {{module_name}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Download a package and add it to the list of [D]ev dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCpnpm add \-D {{module_name}}\fR
+.RS
+.IP \(bu 2
+Download a package and install it [g]lobally:
+.RE
+.PP
+\fB\fCpnpm add \-g {{module_name}}\fR
+.RS
+.IP \(bu 2
+Uninstall a package and remove it from the list of dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCpnpm remove {{module_name}}\fR
+.RS
+.IP \(bu 2
+Print a tree of locally installed modules:
+.RE
+.PP
+\fB\fCpnpm list\fR
+.RS
+.IP \(bu 2
+List top\-level [g]lobally installed modules:
+.RE
+.PP
+\fB\fCpnpm list \-g \-\-depth={{0}}\fR

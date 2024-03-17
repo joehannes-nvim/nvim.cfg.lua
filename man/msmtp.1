@@ -1,0 +1,25 @@
+.TH msmtp
+.PP
+.RS
+An SMTP client.
+It reads text from \fB\fCstdin\fR and sends it to an SMTP server.
+More information: \[la]https://marlam.de/msmtp\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Send an email using the default account configured in \fB\fC~/.msmtprc\fR:
+.RE
+.PP
+\fB\fCecho "{{Hello world}}" | msmtp {{to@example.org}}\fR
+.RS
+.IP \(bu 2
+Send an email using a specific account configured in \fB\fC~/.msmtprc\fR:
+.RE
+.PP
+\fB\fCecho "{{Hello world}}" | msmtp \-\-account={{account_name}} {{to@example.org}}\fR
+.RS
+.IP \(bu 2
+Send an email without a configured account. The password should be specified in the \fB\fC~/.msmtprc\fR file:
+.RE
+.PP
+\fB\fCecho "{{Hello world}}" | msmtp \-\-host={{localhost}} \-\-port={{999}} \-\-from={{from@example.org}} {{to@example.org}}\fR

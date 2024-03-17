@@ -1,0 +1,55 @@
+.TH aws ec2
+.PP
+.RS
+CLI for AWS EC2.
+Provides secure and resizable computing capacity in the AWS cloud to enable faster development and deployment of applications.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display information about a specific instance:
+.RE
+.PP
+\fB\fCaws ec2 describe\-instances \-\-instance\-ids {{instance_id}}\fR
+.RS
+.IP \(bu 2
+Display information about all instances:
+.RE
+.PP
+\fB\fCaws ec2 describe\-instances\fR
+.RS
+.IP \(bu 2
+Display information about all EC2 volumes:
+.RE
+.PP
+\fB\fCaws ec2 describe\-volumes\fR
+.RS
+.IP \(bu 2
+Delete an EC2 volume:
+.RE
+.PP
+\fB\fCaws ec2 delete\-volume \-\-volume\-id {{volume_id}}\fR
+.RS
+.IP \(bu 2
+Create a snapshot from an EC2 volume:
+.RE
+.PP
+\fB\fCaws ec2 create\-snapshot \-\-volume\-id {{volume_id}}\fR
+.RS
+.IP \(bu 2
+List available AMIs (Amazon Machine Images):
+.RE
+.PP
+\fB\fCaws ec2 describe\-images\fR
+.RS
+.IP \(bu 2
+Show list of all available EC2 commands:
+.RE
+.PP
+\fB\fCaws ec2 help\fR
+.RS
+.IP \(bu 2
+Show help for specific EC2 subcommand:
+.RE
+.PP
+\fB\fCaws ec2 {{subcommand}} help\fR

@@ -1,0 +1,54 @@
+.TH git branch
+.PP
+.RS
+Main Git command for working with branches.
+More information: \[la]https://git-scm.com/docs/git-branch\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all branches (local and remote; the current branch is highlighted by \fB\fC*\fR):
+.RE
+.PP
+\fB\fCgit branch \-\-all\fR
+.RS
+.IP \(bu 2
+List which branches include a specific Git commit in their history:
+.RE
+.PP
+\fB\fCgit branch \-\-all \-\-contains {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+Show the name of the current branch:
+.RE
+.PP
+\fB\fCgit branch \-\-show\-current\fR
+.RS
+.IP \(bu 2
+Create new branch based on the current commit:
+.RE
+.PP
+\fB\fCgit branch {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Create new branch based on a specific commit:
+.RE
+.PP
+\fB\fCgit branch {{branch_name}} {{commit_hash}}\fR
+.RS
+.IP \(bu 2
+Rename a branch (must not have it checked out to do this):
+.RE
+.PP
+\fB\fCgit branch \-m {{old_branch_name}} {{new_branch_name}}\fR
+.RS
+.IP \(bu 2
+Delete a local branch (must not have it checked out to do this):
+.RE
+.PP
+\fB\fCgit branch \-d {{branch_name}}\fR
+.RS
+.IP \(bu 2
+Delete a remote branch:
+.RE
+.PP
+\fB\fCgit push {{remote_name}} \-\-delete {{remote_branch_name}}\fR

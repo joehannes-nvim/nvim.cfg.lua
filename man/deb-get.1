@@ -1,0 +1,49 @@
+.TH deb\-get
+.PP
+.RS
+\fB\fCapt\-get\fR functionality for \fB\fC\&.deb\fR packages published in third party repositories or via direct download.
+Works with Linux distributions which use \fB\fCapt\-get\fR\&.
+More information: \[la]https://github.com/wimpysworld/deb-get\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Update the list of available packages and versions:
+.RE
+.PP
+\fB\fCsudo deb\-get update\fR
+.RS
+.IP \(bu 2
+Search for a given package:
+.RE
+.PP
+\fB\fCsudo deb\-get search {{package}}\fR
+.RS
+.IP \(bu 2
+Show information about a package:
+.RE
+.PP
+\fB\fCsudo deb\-get show {{package}}\fR
+.RS
+.IP \(bu 2
+Install a package, or update it to the latest available version:
+.RE
+.PP
+\fB\fCsudo deb\-get install {{package}}\fR
+.RS
+.IP \(bu 2
+Remove a package (using \fB\fCpurge\fR instead also removes its configuration files):
+.RE
+.PP
+\fB\fCsudo deb\-get remove {{package}}\fR
+.RS
+.IP \(bu 2
+Upgrade all installed packages to their newest available versions:
+.RE
+.PP
+\fB\fCsudo deb\-get upgrade\fR
+.RS
+.IP \(bu 2
+List all available packages:
+.RE
+.PP
+\fB\fCdeb\-get list\fR

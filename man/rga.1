@@ -1,0 +1,36 @@
+.TH rga
+.PP
+.RS
+Ripgrep wrapper with rich file type searching capabilities.
+More information: \[la]https://github.com/phiresky/ripgrep-all\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search recursively for a pattern in all files in the current directory:
+.RE
+.PP
+\fB\fCrga {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+List available adapters:
+.RE
+.PP
+\fB\fCrga \-\-rga\-list\-adapters\fR
+.RS
+.IP \(bu 2
+Change which adapters to use (e.g. ffmpeg, pandoc, poppler etc.):
+.RE
+.PP
+\fB\fCrga \-\-rga\-adapters={{adapter1,adapter2}} {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern using the mime type instead of the file extension (slower):
+.RE
+.PP
+\fB\fCrga \-\-rga\-accurate {{regular_expression}}\fR
+.RS
+.IP \(bu 2
+Display detailed help:
+.RE
+.PP
+\fB\fCrga \-\-help\fR

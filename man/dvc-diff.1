@@ -1,0 +1,36 @@
+.TH dvc diff
+.PP
+.RS
+Show changes in DVC tracked file and directories.
+More information: \[la]https://dvc.org/doc/command-reference/diff\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compare DVC tracked files from different Git commits, tags, and branches w.r.t the current workspace:
+.RE
+.PP
+\fB\fCdvc diff {{commit_hash/tag/branch}}\fR
+.RS
+.IP \(bu 2
+Compare the changes in DVC tracked files from 1 Git commit to another:
+.RE
+.PP
+\fB\fCdvc diff {{revision_b}} {{revision_a}}\fR
+.RS
+.IP \(bu 2
+Compare DVC tracked files, along with their latest hash:
+.RE
+.PP
+\fB\fCdvc diff \-\-show\-hash {{commit}}\fR
+.RS
+.IP \(bu 2
+Compare DVC tracked files, displaying the output as JSON:
+.RE
+.PP
+\fB\fCdvc diff \-\-show\-json \-\-show\-hash {{commit}}\fR
+.RS
+.IP \(bu 2
+Compare DVC tracked files, displaying the output as Markdown:
+.RE
+.PP
+\fB\fCdvc diff \-\-show\-md \-\-show\-hash {{commit}}\fR

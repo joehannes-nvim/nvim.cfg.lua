@@ -1,0 +1,43 @@
+.TH git apply
+.PP
+.RS
+Apply a patch to files and/or to the index without creating a commit.
+See also \fB\fCgit am\fR, which applies a patch and also creates a commit.
+More information: \[la]https://git-scm.com/docs/git-apply\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Print messages about the patched files:
+.RE
+.PP
+\fB\fCgit apply \-\-verbose {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply and add the patched files to the index:
+.RE
+.PP
+\fB\fCgit apply \-\-index {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply a remote patch file:
+.RE
+.PP
+\fB\fCcurl \-L {{https://example.com/file.patch}} | git apply\fR
+.RS
+.IP \(bu 2
+Output diffstat for the input and apply the patch:
+.RE
+.PP
+\fB\fCgit apply \-\-stat \-\-apply {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Apply the patch in reverse:
+.RE
+.PP
+\fB\fCgit apply \-\-reverse {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Store the patch result in the index without modifying the working tree:
+.RE
+.PP
+\fB\fCgit apply \-\-cache {{path/to/file}}\fR

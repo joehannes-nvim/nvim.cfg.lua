@@ -1,0 +1,25 @@
+.TH cargo yank
+.PP
+.RS
+Remove a pushed crate from the index. This should only be used when you accidentally release a significantly broken crate.
+Note: this does not remove any data. The crate is still present after a yank \- this just prevents new projects from using it.
+More information: \[la]https://doc.rust-lang.org/cargo/commands/cargo-yank.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Yank the specified version of a crate:
+.RE
+.PP
+\fB\fCcargo yank {{crate}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Undo a yank (i.e. allow downloading it again):
+.RE
+.PP
+\fB\fCcargo yank \-\-undo {{crate}}@{{version}}\fR
+.RS
+.IP \(bu 2
+Specify the name of the registry to use (registry names can be defined in the config \- the default is \[la]https://crates.io\[ra]):
+.RE
+.PP
+\fB\fCcargo yank \-\-registry {{name}} {{crate}}@{{version}}\fR

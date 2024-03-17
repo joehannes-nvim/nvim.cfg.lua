@@ -1,0 +1,42 @@
+.TH kool
+.PP
+.RS
+Build software development environments.
+More information: \[la]https://kool.dev/docs/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a project using a specific preset:
+.RE
+.PP
+\fB\fCkool create {{preset}} {{project_name}}\fR
+.RS
+.IP \(bu 2
+Run a specific script defined in the \fB\fCkool.yml\fR file in the current directory:
+.RE
+.PP
+\fB\fCkool run {{script}}\fR
+.RS
+.IP \(bu 2
+Start/stop services in the current directory:
+.RE
+.PP
+\fB\fCkool {{start|stop}}\fR
+.RS
+.IP \(bu 2
+Display status of the services in the current directory:
+.RE
+.PP
+\fB\fCkool status\fR
+.RS
+.IP \(bu 2
+Update to the latest version:
+.RE
+.PP
+\fB\fCkool self\-update\fR
+.RS
+.IP \(bu 2
+Print the completion script for the specified shell:
+.RE
+.PP
+\fB\fCkool completion {{bash|fish|powershell|zsh}}\fR

@@ -1,0 +1,42 @@
+.TH aws cognito\-idp
+.PP
+.RS
+Manage Amazon Cognito user pool and its users and groups using the CLI.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cognito-idp/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new Cognito user pool:
+.RE
+.PP
+\fB\fCaws cognito\-idp create\-user\-pool \-\-pool\-name {{name}}\fR
+.RS
+.IP \(bu 2
+List all user pools:
+.RE
+.PP
+\fB\fCaws cognito\-idp list\-user\-pools \-\-max\-results {{10}}\fR
+.RS
+.IP \(bu 2
+Delete a specific user pool:
+.RE
+.PP
+\fB\fCaws cognito\-idp delete\-user\-pool \-\-user\-pool\-id {{user_pool_id}}\fR
+.RS
+.IP \(bu 2
+Create a user in a specific pool:
+.RE
+.PP
+\fB\fCaws cognito\-idp admin\-create\-user \-\-username {{username}} \-\-user\-pool\-id {{user_pool_id}}\fR
+.RS
+.IP \(bu 2
+List the users of a specific pool:
+.RE
+.PP
+\fB\fCaws cognito\-idp list\-users \-\-user\-pool\-id {{user_pool_id}}\fR
+.RS
+.IP \(bu 2
+Delete a user from a specific pool:
+.RE
+.PP
+\fB\fCaws cognito\-idp admin\-delete\-user \-\-username {{username}} \-\-user\-pool\-id {{user_pool_id}}\fR

@@ -1,0 +1,24 @@
+.TH go get
+.PP
+.RS
+Add a dependency package, or download packages in legacy GOPATH mode.
+More information: \[la]https://pkg.go.dev/cmd/go#hdr-Add_dependencies_to_current_module_and_install_them\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Add a specified package to \fB\fCgo.mod\fR in module\-mode or install the package in GOPATH\-mode:
+.RE
+.PP
+\fB\fCgo get {{example.com/pkg}}\fR
+.RS
+.IP \(bu 2
+Modify the package with a given version in module\-aware mode:
+.RE
+.PP
+\fB\fCgo get {{example.com/pkg}}@{{v1.2.3}}\fR
+.RS
+.IP \(bu 2
+Remove a specified package:
+.RE
+.PP
+\fB\fCgo get {{example.com/pkg}}@{{none}}\fR

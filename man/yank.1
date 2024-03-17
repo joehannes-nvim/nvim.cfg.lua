@@ -1,0 +1,30 @@
+.TH yank
+.PP
+.RS
+Read input from \fB\fCstdin\fR and display a selection interface that allows a field to be selected and copied to the clipboard.
+More information: \[la]https://manned.org/yank\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Yank using the default delimiters (\[rs]f, \[rs]n, \[rs]r, \[rs]s, \[rs]t):
+.RE
+.PP
+\fB\fC{{sudo dmesg}} | yank\fR
+.RS
+.IP \(bu 2
+Yank an entire line:
+.RE
+.PP
+\fB\fC{{sudo dmesg}} | yank \-l\fR
+.RS
+.IP \(bu 2
+Yank using a specific delimiter:
+.RE
+.PP
+\fB\fC{{echo hello=world}} | yank \-d {{=}}\fR
+.RS
+.IP \(bu 2
+Only yank fields matching a specific pattern:
+.RE
+.PP
+\fB\fC{{ps ux}} | yank \-g "{{[0\-9]+}}"\fR

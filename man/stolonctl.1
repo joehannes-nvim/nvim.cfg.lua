@@ -1,0 +1,30 @@
+.TH stolonctl
+.PP
+.RS
+CLI for Stolon, a cloud native PostgreSQL manager for PostgreSQL high availability.
+More information: \[la]https://github.com/sorintlab/stolon\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Get cluster status:
+.RE
+.PP
+\fB\fCstolonctl \-\-cluster\-name {{cluster_name}} \-\-store\-backend {{store_backend}} \-\-store\-endpoints {{store_endpoints}} status\fR
+.RS
+.IP \(bu 2
+Get cluster data:
+.RE
+.PP
+\fB\fCstolonctl \-\-cluster\-name {{cluster_name}} \-\-store\-backend {{store_backend}} \-\-store\-endpoints {{store_endpoints}} clusterdata\fR
+.RS
+.IP \(bu 2
+Get cluster specification:
+.RE
+.PP
+\fB\fCstolonctl \-\-cluster\-name {{cluster_name}} \-\-store\-backend {{store_backend}} \-\-store\-endpoints {{store_endpoints}} spec\fR
+.RS
+.IP \(bu 2
+Update cluster specification with a patch in JSON format:
+.RE
+.PP
+\fB\fCstolonctl \-\-cluster\-name {{cluster_name}} \-\-store\-backend {{store_backend}} \-\-store\-endpoints {{store_endpoints}} update \-\-patch '{{cluster_spec}}'\fR

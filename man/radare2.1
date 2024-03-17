@@ -1,0 +1,42 @@
+.TH radare2
+.PP
+.RS
+A set of reverse engineering tools.
+More information: \[la]https://radare.gitbooks.io/radare2book/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Open a file in write mode without parsing the file format headers:
+.RE
+.PP
+\fB\fCradare2 \-nw {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Debug a program:
+.RE
+.PP
+\fB\fCradare2 \-d {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Run a script before entering the interactive CLI:
+.RE
+.PP
+\fB\fCradare2 \-i {{path/to/script.r2}} {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Show help text for any command in the interactive CLI:
+.RE
+.PP
+\fB\fC> {{radare2_command}}?\fR
+.RS
+.IP \(bu 2
+Run a shell command from the interactive CLI:
+.RE
+.PP
+\fB\fC> !{{shell_command}}\fR
+.RS
+.IP \(bu 2
+Dump raw bytes of current block to a file:
+.RE
+.PP
+\fB\fC> pr > {{path/to/file.bin}}\fR

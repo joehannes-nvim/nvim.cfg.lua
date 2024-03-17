@@ -1,0 +1,43 @@
+.TH duplicity
+.PP
+.RS
+Creates incremental, compressed, encrypted and versioned backups.
+Can also upload the backups to a variety of backend services.
+More information: \[la]http://duplicity.nongnu.org\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Backup a directory via FTPS to a remote machine, encrypting it with a password:
+.RE
+.PP
+\fB\fCFTP_PASSWORD={{ftp_login_password}} PASSPHRASE={{encryption_password}} duplicity {{path/to/source/directory}} {{ftps://user@hostname/target/directory/path/}}\fR
+.RS
+.IP \(bu 2
+Backup a directory to Amazon S3, doing a full backup every month:
+.RE
+.PP
+\fB\fCduplicity \-\-full\-if\-older\-than {{1M}} \-\-use\-new\-style s3://{{bucket_name[/prefix]}}\fR
+.RS
+.IP \(bu 2
+Delete versions older than 1 year from a backup stored on a WebDAV share:
+.RE
+.PP
+\fB\fCFTP_PASSWORD={{webdav_login_password}} duplicity remove\-older\-than {{1Y}} \-\-force {{webdav[s]://user@hostname[:port]/some_dir}}\fR
+.RS
+.IP \(bu 2
+List the available backups:
+.RE
+.PP
+\fB\fCduplicity collection\-status "file://{{absolute/path/to/backup/directory}}"\fR
+.RS
+.IP \(bu 2
+List the files in a backup stored on a remote machine, via ssh:
+.RE
+.PP
+\fB\fCduplicity list\-current\-files \-\-time {{YYYY\-MM\-DD}} scp://{{user@hostname}}/path/to/backup/dir\fR
+.RS
+.IP \(bu 2
+Restore a subdirectory from a GnuPG\-encrypted local backup to a given location:
+.RE
+.PP
+\fB\fCPASSPHRASE={{gpg_key_password}} duplicity restore \-\-encrypt\-key {{gpg_key_id}} \-\-file\-to\-restore {{relative/path/restoredirectory}} file://{{absolute/path/to/backup/directory}} {{path/to/directory/to/restore/to}}\fR

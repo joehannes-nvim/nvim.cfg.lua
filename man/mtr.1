@@ -1,0 +1,48 @@
+.TH mtr
+.PP
+.RS
+Matt's Traceroute: combined traceroute and ping tool.
+More information: \[la]https://www.bitwizard.nl/mtr/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Traceroute to a host and continuously ping all intermediary hops:
+.RE
+.PP
+\fB\fCmtr {{example.com}}\fR
+.RS
+.IP \(bu 2
+Disable IP address and host name mapping:
+.RE
+.PP
+\fB\fCmtr \-\-no\-dns {{example.com}}\fR
+.RS
+.IP \(bu 2
+Generate output after pinging each hop 10 times:
+.RE
+.PP
+\fB\fCmtr \-\-report\-wide {{example.com}}\fR
+.RS
+.IP \(bu 2
+Force IP IPv4 or IPV6:
+.RE
+.PP
+\fB\fCmtr \-4 {{example.com}}\fR
+.RS
+.IP \(bu 2
+Wait for a given time (in seconds) before sending another packet to the same hop:
+.RE
+.PP
+\fB\fCmtr \-\-interval {{10}} {{example.com}}\fR
+.RS
+.IP \(bu 2
+Display the Autonomous System Number (ASN) for each hop:
+.RE
+.PP
+\fB\fCmtr \-\-aslookup {{example.com}}\fR
+.RS
+.IP \(bu 2
+Display both IP address and reverse DNS name:
+.RE
+.PP
+\fB\fCmtr \-\-show\-ips {{example.com}}\fR

@@ -1,0 +1,42 @@
+.TH xml elements
+.PP
+.RS
+Extract elements and display the structure of an XML document.
+More information: \[la]http://xmlstar.sourceforge.net/docs.php\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Extract elements from an XML document (producing XPATH expressions):
+.RE
+.PP
+\fB\fCxml elements {{path/to/input.xml|URI}} > {{path/to/elements.xpath}}\fR
+.RS
+.IP \(bu 2
+Extract elements and their attributes from an XML document:
+.RE
+.PP
+\fB\fCxml elements \-a {{path/to/input.xml|URI}} > {{path/to/elements.xpath}}\fR
+.RS
+.IP \(bu 2
+Extract elements and their attributes and values from an XML document:
+.RE
+.PP
+\fB\fCxml elements \-v {{path/to/input.xml|URI}} > {{path/to/elements.xpath}}\fR
+.RS
+.IP \(bu 2
+Print sorted unique elements from an XML document to see its structure:
+.RE
+.PP
+\fB\fCxml elements \-u {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Print sorted unique elements from an XML document up to a depth of 3:
+.RE
+.PP
+\fB\fCxml elements \-d{{3}} {{path/to/input.xml|URI}}\fR
+.RS
+.IP \(bu 2
+Display help for the \fB\fCelements\fR subcommand:
+.RE
+.PP
+\fB\fCxml elements \-\-help\fR

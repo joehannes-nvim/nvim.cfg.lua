@@ -1,0 +1,54 @@
+.TH aws iam
+.PP
+.RS
+CLI for AWS IAM.
+More information: \[la]https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/index.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show \fB\fCaws iam\fR help page (including all available iam commands):
+.RE
+.PP
+\fB\fCaws iam help\fR
+.RS
+.IP \(bu 2
+List users:
+.RE
+.PP
+\fB\fCaws iam list\-users\fR
+.RS
+.IP \(bu 2
+List policies:
+.RE
+.PP
+\fB\fCaws iam list\-policies\fR
+.RS
+.IP \(bu 2
+List groups:
+.RE
+.PP
+\fB\fCaws iam list\-groups\fR
+.RS
+.IP \(bu 2
+Get users in a group:
+.RE
+.PP
+\fB\fCaws iam get\-group \-\-group\-name {{group_name}}\fR
+.RS
+.IP \(bu 2
+Describe an IAM policy:
+.RE
+.PP
+\fB\fCaws iam get\-policy \-\-policy\-arn arn:aws:iam::aws:policy/{{policy_name}}\fR
+.RS
+.IP \(bu 2
+List access keys:
+.RE
+.PP
+\fB\fCaws iam list\-access\-keys\fR
+.RS
+.IP \(bu 2
+List access keys for a specific user:
+.RE
+.PP
+\fB\fCaws iam list\-access\-keys \-\-user\-name {{user_name}}\fR

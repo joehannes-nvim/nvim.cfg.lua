@@ -1,0 +1,42 @@
+.TH sha224sum
+.PP
+.RS
+Calculate SHA224 cryptographic checksums.
+More information: \[la]https://www.gnu.org/software/coreutils/manual/html_node/sha2-utilities.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Calculate the SHA224 checksum for one or more files:
+.RE
+.PP
+\fB\fCsha224sum {{path/to/file1 path/to/file2 ...}}\fR
+.RS
+.IP \(bu 2
+Calculate and save the list of SHA224 checksums to a file:
+.RE
+.PP
+\fB\fCsha224sum {{path/to/file1 path/to/file2 ...}} > {{path/to/file.sha224}}\fR
+.RS
+.IP \(bu 2
+Calculate a SHA224 checksum from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fC{{command}} | sha224sum\fR
+.RS
+.IP \(bu 2
+Read a file of SHA224 sums and filenames and verify all files have matching checksums:
+.RE
+.PP
+\fB\fCsha224sum \-\-check {{path/to/file.sha224}}\fR
+.RS
+.IP \(bu 2
+Only show a message for missing files or when verification fails:
+.RE
+.PP
+\fB\fCsha224sum \-\-check \-\-quiet {{path/to/file.sha224}}\fR
+.RS
+.IP \(bu 2
+Only show a message when verification fails, ignoring missing files:
+.RE
+.PP
+\fB\fCsha224sum \-\-ignore\-missing \-\-check \-\-quiet {{path/to/file.sha224}}\fR

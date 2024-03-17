@@ -1,0 +1,18 @@
+.TH openssl prime
+.PP
+.RS
+OpenSSL command to compute prime numbers.
+More information: \[la]https://www.openssl.org/docs/manmaster/man1/openssl-prime.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate a 2048bit prime number and display it in hexadecimal:
+.RE
+.PP
+\fB\fCopenssl prime \-generate \-bits 2048 \-hex\fR
+.RS
+.IP \(bu 2
+Check if a given number is prime:
+.RE
+.PP
+\fB\fCopenssl prime {{number}}\fR

@@ -1,0 +1,55 @@
+.TH bun
+.PP
+.RS
+JavaScript runtime and toolkit.
+Includes a bundler, a test runner, and a package manager.
+More information: \[la]https://bun.sh\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a JavaScript file or a \fB\fCpackage.json\fR script:
+.RE
+.PP
+\fB\fCbun run {{path/to/file|script_name}}\fR
+.RS
+.IP \(bu 2
+Run unit tests:
+.RE
+.PP
+\fB\fCbun test\fR
+.RS
+.IP \(bu 2
+Download and install all the packages listed as dependencies in \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCbun install\fR
+.RS
+.IP \(bu 2
+Add a dependency to \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCbun add {{module_name}}\fR
+.RS
+.IP \(bu 2
+Remove a dependency from \fB\fCpackage.json\fR:
+.RE
+.PP
+\fB\fCbun remove {{module_name}}\fR
+.RS
+.IP \(bu 2
+Create a new Bun project in the current directory:
+.RE
+.PP
+\fB\fCbun init\fR
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCbun repl\fR
+.RS
+.IP \(bu 2
+Upgrade Bun to the latest version:
+.RE
+.PP
+\fB\fCbun upgrade\fR

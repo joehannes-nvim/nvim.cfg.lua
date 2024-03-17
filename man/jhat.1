@@ -1,0 +1,24 @@
+.TH jhat
+.PP
+.RS
+Java heap analysis tool.
+More information: \[la]https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jhat.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Analyze a heap dump (from \fB\fCjmap\fR), view via HTTP on port 7000:
+.RE
+.PP
+\fB\fCjhat {{dump_file.bin}}\fR
+.RS
+.IP \(bu 2
+Analyze a heap dump, specifying an alternate port for the http server:
+.RE
+.PP
+\fB\fCjhat \-p {{port}} {{dump_file.bin}}\fR
+.RS
+.IP \(bu 2
+Analyze a dump letting \fB\fCjhat\fR use up to 8 GB RAM (2\-4x dump size recommended):
+.RE
+.PP
+\fB\fCjhat \-J\-mx8G {{dump_file.bin}}\fR

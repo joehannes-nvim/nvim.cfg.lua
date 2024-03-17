@@ -1,0 +1,36 @@
+.TH tlmgr search
+.PP
+.RS
+Search for TeX Live packages using (Perl) regular expressions.
+More information: \[la]https://www.tug.org/texlive/tlmgr.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a package name and descriptions of all locally installed packages from a specific regular expression:
+.RE
+.PP
+\fB\fCtlmgr search "{{regular_expression}}"\fR
+.RS
+.IP \(bu 2
+Search for all file names of all locally installed packages from a regular expression:
+.RE
+.PP
+\fB\fCtlmgr search \-\-file "{{regular_expression}}"\fR
+.RS
+.IP \(bu 2
+Search for all file names, package names, and descriptions of all locally installed packages from a regular expression:
+.RE
+.PP
+\fB\fCtlmgr search \-\-all "{{regular_expression}}"\fR
+.RS
+.IP \(bu 2
+Search the TeX Live database, instead of the local installation:
+.RE
+.PP
+\fB\fCtlmgr search \-\-global "{{regular_expression}}"\fR
+.RS
+.IP \(bu 2
+Restrict the matches for package names and descriptions (but not for file names) to whole words:
+.RE
+.PP
+\fB\fCtlmgr search \-\-all \-\-word "{{regular_expression}}"\fR

@@ -1,0 +1,30 @@
+.TH dumpcap
+.PP
+.RS
+A network traffic dump tool.
+More information: \[la]https://www.wireshark.org/docs/man-pages/dumpcap.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display available interfaces:
+.RE
+.PP
+\fB\fCdumpcap \-\-list\-interfaces\fR
+.RS
+.IP \(bu 2
+Capture packets on a specific interface:
+.RE
+.PP
+\fB\fCdumpcap \-\-interface {{1}}\fR
+.RS
+.IP \(bu 2
+Capture packets to a specific location:
+.RE
+.PP
+\fB\fCdumpcap \-\-interface {{1}} \-w {{path/to/output_file.pcapng}}\fR
+.RS
+.IP \(bu 2
+Write to a ring buffer with a specific max file limit of a specific size:
+.RE
+.PP
+\fB\fCdumpcap \-\-interface {{1}} \-w {{path/to/output_file.pcapng}} \-\-ring\-buffer filesize:{{500000}} \-\-ring\-buffer files:{{10}}\fR

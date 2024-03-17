@@ -1,0 +1,36 @@
+.TH scheme
+.PP
+.RS
+MIT Scheme language interpreter and REPL (interactive shell).
+More information: \[la]https://www.gnu.org/software/mit-scheme\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCscheme\fR
+.RS
+.IP \(bu 2
+Run a scheme program (with no REPL output):
+.RE
+.PP
+\fB\fCscheme \-\-quiet < {{script.scm}}\fR
+.RS
+.IP \(bu 2
+Load a scheme program into the REPL:
+.RE
+.PP
+\fB\fCscheme \-\-load {{script.scm}}\fR
+.RS
+.IP \(bu 2
+Load scheme expressions into the REPL:
+.RE
+.PP
+\fB\fCscheme \-\-eval "{{(define foo 'x)}}"\fR
+.RS
+.IP \(bu 2
+Open the REPL in quiet mode:
+.RE
+.PP
+\fB\fCscheme \-\-quiet\fR

@@ -1,0 +1,37 @@
+.TH rgrep
+.PP
+.RS
+Recursively find patterns in files using regular expressions.
+Equivalent to \fB\fCgrep \-r\fR\&.
+More information: \[la]https://www.gnu.org/software/grep/manual/grep.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Recursively search for a pattern in the current working directory:
+.RE
+.PP
+\fB\fCrgrep "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Recursively search for a case\-insensitive pattern in the current working directory:
+.RE
+.PP
+\fB\fCrgrep \-\-ignore\-case "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Recursively search for an extended regular expression pattern (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR) in the current working directory:
+.RE
+.PP
+\fB\fCrgrep \-\-extended\-regexp "{{search_pattern}}"\fR
+.RS
+.IP \(bu 2
+Recursively search for an exact string (disables regular expressions) in the current working directory:
+.RE
+.PP
+\fB\fCrgrep \-\-fixed\-strings "{{exact_string}}"\fR
+.RS
+.IP \(bu 2
+Recursively search for a pattern in a specified directory (or file):
+.RE
+.PP
+\fB\fCrgrep "{{search_pattern}}" {{path/to/file_or_directory}}\fR

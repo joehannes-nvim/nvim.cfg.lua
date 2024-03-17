@@ -1,0 +1,31 @@
+.TH gdrive
+.PP
+.RS
+Command\-line tool to interact with Google Drive.
+Folder/file ID can be obtained from the Google Drive folder or ID URL.
+More information: \[la]https://github.com/gdrive-org/gdrive\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Upload a local path to the parent folder with the specified ID:
+.RE
+.PP
+\fB\fCgdrive upload \-p {{id}} {{path/to/file_or_folder}}\fR
+.RS
+.IP \(bu 2
+Download file or directory by ID to current directory:
+.RE
+.PP
+\fB\fCgdrive download {{id}}\fR
+.RS
+.IP \(bu 2
+Download to a given local path by its ID:
+.RE
+.PP
+\fB\fCgdrive download \-\-path {{path/to/folder}} {{id}}\fR
+.RS
+.IP \(bu 2
+Create a new revision of an ID using a given file or folder:
+.RE
+.PP
+\fB\fCgdrive update {{id}} {{path/to/file_or_folder}}\fR

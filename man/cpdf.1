@@ -1,0 +1,54 @@
+.TH cpdf
+.PP
+.RS
+Manipulate PDF files.
+More information: \[la]https://www.coherentpdf.com/cpdfmanual/cpdfmanual.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Select pages 1, 2, 3 and 6 from a source document and write those to a destination document:
+.RE
+.PP
+\fB\fCcpdf {{path/to/source_document.pdf}} {{1\-3,6}} \-o {{path/to/destination_document.pdf}}\fR
+.RS
+.IP \(bu 2
+Merge two documents into a new one:
+.RE
+.PP
+\fB\fCcpdf \-merge {{path/to/source_document_one.pdf}} {{path/to/source_document_two.pdf}} \-o {{path/to/destination_document.pdf}}\fR
+.RS
+.IP \(bu 2
+Show the bookmarks of a document:
+.RE
+.PP
+\fB\fCcpdf \-list\-bookmarks {{path/to/document.pdf}}\fR
+.RS
+.IP \(bu 2
+Split a document into ten\-page chunks, writing them to \fB\fCchunk001.pdf\fR, \fB\fCchunk002.pdf\fR, etc:
+.RE
+.PP
+\fB\fCcpdf \-split {{path/to/document.pdf}} \-o {{path/to/chunk%%%.pdf}} \-chunk {{10}}\fR
+.RS
+.IP \(bu 2
+Encrypt a document using 128bit encryption, providing \fB\fCfred\fR as owner password and \fB\fCjoe\fR as user password:
+.RE
+.PP
+\fB\fCcpdf \-encrypt {{128bit}} {{fred}} {{joe}} {{path/to/source_document.pdf}} \-o {{path/to/encrypted_document.pdf}}\fR
+.RS
+.IP \(bu 2
+Decrypt a document using the owner password \fB\fCfred\fR:
+.RE
+.PP
+\fB\fCcpdf \-decrypt {{path/to/encrypted_document.pdf}} owner={{fred}} \-o {{path/to/decrypted_document.pdf}}\fR
+.RS
+.IP \(bu 2
+Show the annotations of a document:
+.RE
+.PP
+\fB\fCcpdf \-list\-annotations {{path/to/document.pdf}}\fR
+.RS
+.IP \(bu 2
+Create a new document from an existing one with additional metadata:
+.RE
+.PP
+\fB\fCcpdf \-set\-metadata {{path/to/metadata.xml}} {{path/to/source_document.pdf}} \-o {{path/to/destination_document.pdf}}\fR

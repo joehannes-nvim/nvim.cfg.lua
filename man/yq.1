@@ -1,0 +1,54 @@
+.TH yq
+.PP
+.RS
+A lightweight and portable command\-line YAML processor.
+More information: \[la]https://mikefarah.gitbook.io/yq/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Output a YAML file, in pretty\-print format (v4+):
+.RE
+.PP
+\fB\fCyq eval {{path/to/file.yaml}}\fR
+.RS
+.IP \(bu 2
+Output a YAML file, in pretty\-print format (v3):
+.RE
+.PP
+\fB\fCyq read {{path/to/file.yaml}} \-\-colors\fR
+.RS
+.IP \(bu 2
+Output the first element in a YAML file that contains only an array (v4+):
+.RE
+.PP
+\fB\fCyq eval '.[0]' {{path/to/file.yaml}}\fR
+.RS
+.IP \(bu 2
+Output the first element in a YAML file that contains only an array (v3):
+.RE
+.PP
+\fB\fCyq read {{path/to/file.yaml}} '[0]'\fR
+.RS
+.IP \(bu 2
+Set (or overwrite) a key to a value in a file (v4+):
+.RE
+.PP
+\fB\fCyq eval '.{{key}} = "{{value}}"' \-\-inplace {{path/to/file.yaml}}\fR
+.RS
+.IP \(bu 2
+Set (or overwrite) a key to a value in a file (v3):
+.RE
+.PP
+\fB\fCyq write \-\-inplace {{path/to/file.yaml}} '{{key}}' '{{value}}'\fR
+.RS
+.IP \(bu 2
+Merge two files and print to \fB\fCstdout\fR (v4+):
+.RE
+.PP
+\fB\fCyq eval\-all 'select(filename == "{{path/to/file1.yaml}}") * select(filename == "{{path/to/file2.yaml}}")' {{path/to/file1.yaml}} {{path/to/file2.yaml}}\fR
+.RS
+.IP \(bu 2
+Merge two files and print to \fB\fCstdout\fR (v3):
+.RE
+.PP
+\fB\fCyq merge {{path/to/file1.yaml}} {{path/to/file2.yaml}} \-\-colors\fR

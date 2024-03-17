@@ -1,0 +1,18 @@
+.TH aws s3 rb
+.PP
+.RS
+Delete an empty S3 bucket.
+More information: \[la]https://docs.aws.amazon.com/cli/latest/reference/s3/rb.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Delete an empty S3 bucket:
+.RE
+.PP
+\fB\fCaws s3 rb s3://{{bucket_name}}\fR
+.RS
+.IP \(bu 2
+Force delete an S3 bucket and its non\-versioned objects (will crash if versioned objects are present):
+.RE
+.PP
+\fB\fCaws s3 rb s3://{{bucket_name}} \-\-force\fR

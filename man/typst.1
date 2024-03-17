@@ -1,0 +1,25 @@
+.TH typst
+.PP
+.RS
+Compile a Typst file to PDF.
+Note: Specifying the output location is optional.
+More information: \[la]https://github.com/typst/typst\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+List all discoverable fonts in the system and the given directory:
+.RE
+.PP
+\fB\fCtypst \-\-font\-path {{path/to/fonts_directory}} fonts\fR
+.RS
+.IP \(bu 2
+Compile a Typst file:
+.RE
+.PP
+\fB\fCtypst compile {{path/to/source.typ}} {{path/to/output.pdf}}\fR
+.RS
+.IP \(bu 2
+Watch a Typst file and recompile on changes:
+.RE
+.PP
+\fB\fCtypst watch {{path/to/source.typ}} {{path/to/output.pdf}}\fR

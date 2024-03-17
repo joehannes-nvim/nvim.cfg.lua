@@ -1,0 +1,30 @@
+.TH gh completion
+.PP
+.RS
+Generate shell completion scripts for GitHub CLI commands.
+More information: \[la]https://cli.github.com/manual/gh_completion\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display the subcommand help:
+.RE
+.PP
+\fB\fCgh completion\fR
+.RS
+.IP \(bu 2
+Print a completion script:
+.RE
+.PP
+\fB\fCgh completion \-\-shell {{bash|zsh|fish|powershell}}\fR
+.RS
+.IP \(bu 2
+Append the \fB\fCgh\fR completion script to \fB\fC~/.bashrc\fR:
+.RE
+.PP
+\fB\fCgh completion \-\-shell {{bash}} >> {{~/.bashrc}}\fR
+.RS
+.IP \(bu 2
+Append the \fB\fCgh\fR completion script to \fB\fC~/.zshrc\fR:
+.RE
+.PP
+\fB\fCgh completion \-\-shell {{zsh}} >> {{~/.zshrc}}\fR

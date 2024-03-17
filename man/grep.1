@@ -1,0 +1,54 @@
+.TH grep
+.PP
+.RS
+Find patterns in files using regular expressions.
+More information: \[la]https://www.gnu.org/software/grep/manual/grep.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Search for a pattern within a file:
+.RE
+.PP
+\fB\fCgrep "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for an exact string (disables regular expressions):
+.RE
+.PP
+\fB\fCgrep \-\-fixed\-strings "{{exact_string}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:
+.RE
+.PP
+\fB\fCgrep \-\-recursive \-\-line\-number \-\-binary\-files={{without\-match}} "{{search_pattern}}" {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Use extended regular expressions (supports \fB\fC?\fR, \fB\fC+\fR, \fB\fC{}\fR, \fB\fC()\fR and \fB\fC|\fR), in case\-insensitive mode:
+.RE
+.PP
+\fB\fCgrep \-\-extended\-regexp \-\-ignore\-case "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print 3 lines of context around, before, or after each match:
+.RE
+.PP
+\fB\fCgrep \-\-{{context|before\-context|after\-context}}={{3}} "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Print file name and line number for each match with color output:
+.RE
+.PP
+\fB\fCgrep \-\-with\-filename \-\-line\-number \-\-color=always "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search for lines matching a pattern, printing only the matched text:
+.RE
+.PP
+\fB\fCgrep \-\-only\-matching "{{search_pattern}}" {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Search \fB\fCstdin\fR for lines that do not match a pattern:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | grep \-\-invert\-match "{{search_pattern}}"\fR

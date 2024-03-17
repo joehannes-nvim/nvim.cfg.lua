@@ -1,0 +1,54 @@
+.TH calc
+.PP
+.RS
+An interactive arbitrary\-precision calculator in the terminal.
+More information: \[la]https://github.com/lcn2/calc\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Start \fB\fCcalc\fR in interactive mode:
+.RE
+.PP
+\fB\fCcalc\fR
+.RS
+.IP \(bu 2
+Perform a calculation in non\-interactive mode:
+.RE
+.PP
+\fB\fCcalc '{{85 * (36 / 4)}}'\fR
+.RS
+.IP \(bu 2
+Perform a calculation without any output formatting (for use with pipes):
+.RE
+.PP
+\fB\fCcalc \-p '{{4/3 * pi() * 5^3}}'\fR
+.RS
+.IP \(bu 2
+Perform a calculation and then switch to [i]nteractive mode:
+.RE
+.PP
+\fB\fCcalc \-i '{{sqrt(2)}}'\fR
+.RS
+.IP \(bu 2
+Start \fB\fCcalc\fR in a specific permission [m]ode (0 to 7, defaults to 7):
+.RE
+.PP
+\fB\fCcalc \-m {{mode}}\fR
+.RS
+.IP \(bu 2
+View an introduction to \fB\fCcalc\fR:
+.RE
+.PP
+\fB\fCcalc help intro\fR
+.RS
+.IP \(bu 2
+View an overview of \fB\fCcalc\fR:
+.RE
+.PP
+\fB\fCcalc help overview\fR
+.RS
+.IP \(bu 2
+Open the \fB\fCcalc\fR manual:
+.RE
+.PP
+\fB\fCcalc help\fR

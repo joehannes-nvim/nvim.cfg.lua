@@ -1,0 +1,31 @@
+.TH git cherry\-pick
+.PP
+.RS
+Apply the changes introduced by existing commits to the current branch.
+To apply changes to another branch, first use \fB\fCgit checkout\fR to switch to the desired branch.
+More information: \[la]https://git-scm.com/docs/git-cherry-pick\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Apply a commit to the current branch:
+.RE
+.PP
+\fB\fCgit cherry\-pick {{commit}}\fR
+.RS
+.IP \(bu 2
+Apply a range of commits to the current branch (see also \fB\fCgit rebase \-\-onto\fR):
+.RE
+.PP
+\fB\fCgit cherry\-pick {{start_commit}}~..{{end_commit}}\fR
+.RS
+.IP \(bu 2
+Apply multiple (non\-sequential) commits to the current branch:
+.RE
+.PP
+\fB\fCgit cherry\-pick {{commit_1}} {{commit_2}}\fR
+.RS
+.IP \(bu 2
+Add the changes of a commit to the working directory, without creating a commit:
+.RE
+.PP
+\fB\fCgit cherry\-pick \-\-no\-commit {{commit}}\fR

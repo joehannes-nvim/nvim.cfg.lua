@@ -1,0 +1,42 @@
+.TH siege
+.PP
+.RS
+HTTP loadtesting and benchmarking tool.
+More information: \[la]https://www.joedog.org/siege-manual/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Test a URL with default settings:
+.RE
+.PP
+\fB\fCsiege {{https://example.com}}\fR
+.RS
+.IP \(bu 2
+Test a list of URLs:
+.RE
+.PP
+\fB\fCsiege \-\-file {{path/to/url_list.txt}}\fR
+.RS
+.IP \(bu 2
+Test list of URLs in a random order (Simulates internet traffic):
+.RE
+.PP
+\fB\fCsiege \-\-internet \-\-file {{path/to/url_list.txt}}\fR
+.RS
+.IP \(bu 2
+Benchmark a list of URLs (without waiting between requests):
+.RE
+.PP
+\fB\fCsiege \-\-benchmark \-\-file {{path/to/url_list.txt}}\fR
+.RS
+.IP \(bu 2
+Set the amount of concurrent connections:
+.RE
+.PP
+\fB\fCsiege \-\-concurrent={{50}} \-\-file {{path/to/url_list.txt}}\fR
+.RS
+.IP \(bu 2
+Set how long for the siege to run for:
+.RE
+.PP
+\fB\fCsiege \-\-time={{30s}} \-\-file {{path/to/url_list.txt}}\fR

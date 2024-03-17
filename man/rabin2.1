@@ -1,0 +1,37 @@
+.TH rabin2
+.PP
+.RS
+Get information about binary files (ELF, PE, Java CLASS, Mach\-O) \- symbols, sections, linked libraries, etc.
+Comes bundled with \fB\fCradare2\fR\&.
+More information: \[la]https://manned.org/rabin2\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Display general information about a binary (architecture, type, endianness):
+.RE
+.PP
+\fB\fCrabin2 \-I {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Display linked libraries:
+.RE
+.PP
+\fB\fCrabin2 \-l {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Display symbols imported from libraries:
+.RE
+.PP
+\fB\fCrabin2 \-i {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Display strings contained in the binary:
+.RE
+.PP
+\fB\fCrabin2 \-z {{path/to/binary}}\fR
+.RS
+.IP \(bu 2
+Display the output in JSON:
+.RE
+.PP
+\fB\fCrabin2 \-j \-I {{path/to/binary}}\fR

@@ -1,0 +1,36 @@
+.TH psql
+.PP
+.RS
+PostgreSQL command\-line client.
+More information: \[la]https://www.postgresql.org/docs/current/app-psql.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Connect to the database. By default, it connects to the local socket using port 5432 with the currently logged in user:
+.RE
+.PP
+\fB\fCpsql {{database}}\fR
+.RS
+.IP \(bu 2
+Connect to the database on given server host running on given port with given username, without a password prompt:
+.RE
+.PP
+\fB\fCpsql \-h {{host}} \-p {{port}} \-U {{username}} {{database}}\fR
+.RS
+.IP \(bu 2
+Connect to the database; user will be prompted for password:
+.RE
+.PP
+\fB\fCpsql \-h {{host}} \-p {{port}} \-U {{username}} \-W {{database}}\fR
+.RS
+.IP \(bu 2
+Execute a single SQL query or PostgreSQL command on the given database (useful in shell scripts):
+.RE
+.PP
+\fB\fCpsql \-c '{{query}}' {{database}}\fR
+.RS
+.IP \(bu 2
+Execute commands from a file on the given database:
+.RE
+.PP
+\fB\fCpsql {{database}} \-f {{file.sql}}\fR

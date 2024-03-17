@@ -1,0 +1,42 @@
+.TH ansible\-vault
+.PP
+.RS
+Encrypts & decrypts values, data structures and files within Ansible projects.
+More information: \[la]https://docs.ansible.com/ansible/latest/user_guide/vault.html#id17\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Create a new encrypted vault file with a prompt for a password:
+.RE
+.PP
+\fB\fCansible\-vault create {{vault_file}}\fR
+.RS
+.IP \(bu 2
+Create a new encrypted vault file using a vault key file to encrypt it:
+.RE
+.PP
+\fB\fCansible\-vault create \-\-vault\-password\-file={{password_file}} {{vault_file}}\fR
+.RS
+.IP \(bu 2
+Encrypt an existing file using an optional password file:
+.RE
+.PP
+\fB\fCansible\-vault encrypt \-\-vault\-password\-file={{password_file}} {{vault_file}}\fR
+.RS
+.IP \(bu 2
+Encrypt a string using Ansible's encrypted string format, displaying interactive prompts:
+.RE
+.PP
+\fB\fCansible\-vault encrypt_string\fR
+.RS
+.IP \(bu 2
+View an encrypted file, using a password file to decrypt:
+.RE
+.PP
+\fB\fCansible\-vault view \-\-vault\-password\-file={{password_file}} {{vault_file}}\fR
+.RS
+.IP \(bu 2
+Re\-key already encrypted vault file with a new password file:
+.RE
+.PP
+\fB\fCansible\-vault rekey \-\-vault\-password\-file={{old_password_file}} \-\-new\-vault\-password\-file={{new_password_file}} {{vault_file}}\fR

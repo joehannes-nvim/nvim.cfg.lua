@@ -1,0 +1,55 @@
+.TH lsof
+.PP
+.RS
+Lists open files and the corresponding processes.
+Note: Root privileges (or sudo) is required to list files opened by others.
+More information: \[la]https://manned.org/lsof\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Find the processes that have a given file open:
+.RE
+.PP
+\fB\fClsof {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+Find the process that opened a local internet port:
+.RE
+.PP
+\fB\fClsof \-i :{{port}}\fR
+.RS
+.IP \(bu 2
+Only output the process ID (PID):
+.RE
+.PP
+\fB\fClsof \-t {{path/to/file}}\fR
+.RS
+.IP \(bu 2
+List files opened by the given user:
+.RE
+.PP
+\fB\fClsof \-u {{username}}\fR
+.RS
+.IP \(bu 2
+List files opened by the given command or process:
+.RE
+.PP
+\fB\fClsof \-c {{process_or_command_name}}\fR
+.RS
+.IP \(bu 2
+List files opened by a specific process, given its PID:
+.RE
+.PP
+\fB\fClsof \-p {{PID}}\fR
+.RS
+.IP \(bu 2
+List open files in a directory:
+.RE
+.PP
+\fB\fClsof +D {{path/to/directory}}\fR
+.RS
+.IP \(bu 2
+Find the process that is listening on a local IPv6 TCP port and don't convert network or port numbers:
+.RE
+.PP
+\fB\fClsof \-i6TCP:{{port}} \-sTCP:LISTEN \-n \-P\fR

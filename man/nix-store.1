@@ -1,0 +1,43 @@
+.TH nix\-store
+.PP
+.RS
+Manipulate or query the Nix store.
+See also: \fB\fCtldr nix3 store\fR\&.
+More information: \[la]https://nixos.org/manual/nix/stable/command-ref/nix-store.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Collect garbage, such as removing unused paths:
+.RE
+.PP
+\fB\fCnix\-store \-\-gc\fR
+.RS
+.IP \(bu 2
+Hard\-link identical files together to reduce space usage:
+.RE
+.PP
+\fB\fCnix\-store \-\-optimise\fR
+.RS
+.IP \(bu 2
+Delete a specific store path (must be unused):
+.RE
+.PP
+\fB\fCnix\-store \-\-delete {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+Show all dependencies of a store path (package), in a tree format:
+.RE
+.PP
+\fB\fCnix\-store \-\-query \-\-tree {{/nix/store/...}}\fR
+.RS
+.IP \(bu 2
+Calculate the total size of a certain store path with all the dependencies:
+.RE
+.PP
+\fB\fCdu \-cLsh $(nix\-store \-\-query \-\-references {{/nix/store/...}})\fR
+.RS
+.IP \(bu 2
+Show all dependents of a particular store path:
+.RE
+.PP
+\fB\fCnix\-store \-\-query \-\-referrers {{/nix/store/...}}\fR

@@ -1,0 +1,55 @@
+.TH gh
+.PP
+.RS
+Work seamlessly with GitHub.
+Some subcommands such as \fB\fCgh config\fR have their own usage documentation.
+More information: \[la]https://cli.github.com/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Clone a GitHub repository locally:
+.RE
+.PP
+\fB\fCgh repo clone {{owner}}/{{repository}}\fR
+.RS
+.IP \(bu 2
+Create a new issue:
+.RE
+.PP
+\fB\fCgh issue create\fR
+.RS
+.IP \(bu 2
+View and filter the open issues of the current repository:
+.RE
+.PP
+\fB\fCgh issue list\fR
+.RS
+.IP \(bu 2
+View an issue in the default web browser:
+.RE
+.PP
+\fB\fCgh issue view \-\-web {{issue_number}}\fR
+.RS
+.IP \(bu 2
+Create a pull request:
+.RE
+.PP
+\fB\fCgh pr create\fR
+.RS
+.IP \(bu 2
+View a pull request in the default web browser:
+.RE
+.PP
+\fB\fCgh pr view \-\-web {{pr_number}}\fR
+.RS
+.IP \(bu 2
+Check out a specific pull request locally:
+.RE
+.PP
+\fB\fCgh pr checkout {{pr_number}}\fR
+.RS
+.IP \(bu 2
+Check the status of a repository's pull requests:
+.RE
+.PP
+\fB\fCgh pr status\fR

@@ -1,0 +1,30 @@
+.TH docker save
+.PP
+.RS
+Export one or more docker images to archive.
+More information: \[la]https://docs.docker.com/engine/reference/commandline/save/\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Save an image by redirecting \fB\fCstdout\fR to a tar archive:
+.RE
+.PP
+\fB\fCdocker save {{image}}:{{tag}} > {{path/to/file.tar}}\fR
+.RS
+.IP \(bu 2
+Save an image to a tar archive:
+.RE
+.PP
+\fB\fCdocker save \-\-output {{path/to/file.tar}} {{image}}:{{tag}}\fR
+.RS
+.IP \(bu 2
+Save all tags of the image:
+.RE
+.PP
+\fB\fCdocker save \-\-output {{path/to/file.tar}} {{image_name}}\fR
+.RS
+.IP \(bu 2
+Cherry\-pick particular tags of an image to save:
+.RE
+.PP
+\fB\fCdocker save \-\-output {{path/to/file.tar}} {{image_name:tag1 image_name:tag2 ...}}\fR

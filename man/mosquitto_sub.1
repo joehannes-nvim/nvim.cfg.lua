@@ -1,0 +1,24 @@
+.TH mosquitto_sub
+.PP
+.RS
+A simple MQTT version 3.1.1 client that will subscribe to topics and print the messages that it receives.
+More information: \[la]https://mosquitto.org/man/mosquitto_sub-1.html\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Subscribe to the topic \fB\fCsensors/temperature\fR information with Quality of Service (\fB\fCQoS\fR) set to 1. (The default hostname is \fB\fClocalhost\fR and port 1883):
+.RE
+.PP
+\fB\fCmosquitto_sub \-t {{sensors/temperature}} \-q {{1}}\fR
+.RS
+.IP \(bu 2
+Subscribe to all broker status messages publishing on \fB\fCiot.eclipse.org\fR port 1885 and print published messages verbosely:
+.RE
+.PP
+\fB\fCmosquitto_sub \-v \-h "iot.eclipse.org" \-p 1885 \-t {{\\$SYS/#}}\fR
+.RS
+.IP \(bu 2
+Subscribe to multiple topics matching a given pattern. (+ takes any metric name):
+.RE
+.PP
+\fB\fCmosquitto_sub \-t {{sensors/machines/+/temperature/+}}\fR

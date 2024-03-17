@@ -1,0 +1,48 @@
+.TH musescore
+.PP
+.RS
+MuseScore 3 sheet music editor.
+More information: \[la]https://musescore.org/en/handbook/3/command-line-options\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Use a specific audio driver:
+.RE
+.PP
+\fB\fCmusescore \-\-audio\-driver {{jack|alsa|portaudio|pulse}}\fR
+.RS
+.IP \(bu 2
+Set the MP3 output bitrate in kbit/s:
+.RE
+.PP
+\fB\fCmusescore \-\-bitrate {{bitrate}}\fR
+.RS
+.IP \(bu 2
+Start MuseScore in debug mode:
+.RE
+.PP
+\fB\fCmusescore \-\-debug\fR
+.RS
+.IP \(bu 2
+Enable experimental features, such as layers:
+.RE
+.PP
+\fB\fCmusescore \-\-experimental\fR
+.RS
+.IP \(bu 2
+Export the given file to the specified output file. The file type depends on the given extension:
+.RE
+.PP
+\fB\fCmusescore \-\-export\-to {{output_file}} {{input_file}}\fR
+.RS
+.IP \(bu 2
+Print a diff between the given scores:
+.RE
+.PP
+\fB\fCmusescore \-\-diff {{path/to/file1}} {{path/to/file2}}\fR
+.RS
+.IP \(bu 2
+Specify a MIDI import operations file:
+.RE
+.PP
+\fB\fCmusescore \-\-midi\-operations {{path/to/file}}\fR

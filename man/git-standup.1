@@ -1,0 +1,31 @@
+.TH git standup
+.PP
+.RS
+See commits from a specified user.
+Part of \fB\fCgit\-extras\fR\&.
+More information: \[la]https://github.com/tj/git-extras/blob/master/Commands.md#git-standup\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show a given author's commits from the last 10 days:
+.RE
+.PP
+\fB\fCgit standup \-a {{name|email}} \-d {{10}}\fR
+.RS
+.IP \(bu 2
+Show a given author's commits from the last 10 days and whether they are GPG signed:
+.RE
+.PP
+\fB\fCgit standup \-a {[name|email}} \-d {{10}} \-g\fR
+.RS
+.IP \(bu 2
+Show all the commits from all contributors for the last 10 days:
+.RE
+.PP
+\fB\fCgit standup \-a all \-d {{10}}\fR
+.RS
+.IP \(bu 2
+Display help:
+.RE
+.PP
+\fB\fCgit standup \-h\fR

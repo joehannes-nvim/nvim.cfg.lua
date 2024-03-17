@@ -1,0 +1,24 @@
+.TH atq
+.PP
+.RS
+Show jobs scheduled by \fB\fCat\fR or \fB\fCbatch\fR commands.
+More information: \[la]https://manned.org/atq\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Show the current user's scheduled jobs:
+.RE
+.PP
+\fB\fCatq\fR
+.RS
+.IP \(bu 2
+Show jobs from queue named 'a' (queues have single\-character names):
+.RE
+.PP
+\fB\fCatq \-q {{a}}\fR
+.RS
+.IP \(bu 2
+Show jobs of all users (run as superuser):
+.RE
+.PP
+\fB\fCsudo atq\fR

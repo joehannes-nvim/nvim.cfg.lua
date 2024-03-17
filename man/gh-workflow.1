@@ -1,0 +1,54 @@
+.TH gh workflow
+.PP
+.RS
+List, view, and run GitHub Actions workflows.
+More information: \[la]https://cli.github.com/manual/gh_workflow\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Interactively select a workflow to view the latest jobs for:
+.RE
+.PP
+\fB\fCgh workflow view\fR
+.RS
+.IP \(bu 2
+View a specific workflow in the default browser:
+.RE
+.PP
+\fB\fCgh workflow view {{id|workflow_name|filename.yml}} \-\-web\fR
+.RS
+.IP \(bu 2
+Display the YAML definition of a specific workflow:
+.RE
+.PP
+\fB\fCgh workflow view {{id|workflow_name|filename.yml}} \-\-yaml\fR
+.RS
+.IP \(bu 2
+Display the YAML definition for a specific Git branch or tag:
+.RE
+.PP
+\fB\fCgh workflow view {{id|workflow_name|filename.yml}} \-\-ref {{branch|tag_name}} \-\-yaml\fR
+.RS
+.IP \(bu 2
+List workflow files (use \fB\fC\-\-all\fR to include disabled workflows):
+.RE
+.PP
+\fB\fCgh workflow list\fR
+.RS
+.IP \(bu 2
+Run a manual workflow with parameters:
+.RE
+.PP
+\fB\fCgh workflow run {{id|workflow_name|filename.yml}} {{\-\-raw\-field param1=value1 \-\-raw\-field param2=value2 ...}}\fR
+.RS
+.IP \(bu 2
+Run a manual workflow using a specific branch or tag with JSON parameters from \fB\fCstdin\fR:
+.RE
+.PP
+\fB\fCecho '{{{"param1": "value1", "param2": "value2", ...}}}' | gh workflow run {{id|workflow_name|filename.yml}} \-\-ref {{branch|tag_name}}\fR
+.RS
+.IP \(bu 2
+Enable or disable a specific workflow:
+.RE
+.PP
+\fB\fCgh workflow {{enable|disable}} {{id|workflow_name|filename.yml}}\fR

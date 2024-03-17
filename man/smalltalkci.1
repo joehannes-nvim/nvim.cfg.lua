@@ -1,0 +1,42 @@
+.TH smalltalkci
+.PP
+.RS
+Framework for testing Smalltalk projects with GitHub Actions, Travis CI, AppVeyor, GitLab CI, and others.
+More information: \[la]https://github.com/hpi-swa/smalltalkCI\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run tests for a configuration file:
+.RE
+.PP
+\fB\fCsmalltalkci {{path/to/.smalltalk.ston}}\fR
+.RS
+.IP \(bu 2
+Run tests for the \fB\fC\&.smalltalk.ston\fR configuration in the current directory:
+.RE
+.PP
+\fB\fCsmalltalkci\fR
+.RS
+.IP \(bu 2
+Debug tests in headful mode (show VM window):
+.RE
+.PP
+\fB\fCsmalltalkci \-\-headful\fR
+.RS
+.IP \(bu 2
+Download and prepare a well\-known smalltalk image for the tests:
+.RE
+.PP
+\fB\fCsmalltalkci \-\-smalltalk {{Squeak64\-Trunk}}\fR
+.RS
+.IP \(bu 2
+Specify a custom Smalltalk image and VM:
+.RE
+.PP
+\fB\fCsmalltalkci \-\-image {{path/to/Smalltalk.image}} \-\-vm {{path/to/vm}}\fR
+.RS
+.IP \(bu 2
+Clean up caches and delete builds:
+.RE
+.PP
+\fB\fCsmalltalkci \-\-clean\fR

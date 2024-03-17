@@ -1,0 +1,31 @@
+.TH kitex
+.PP
+.RS
+Code generation tool provided by the Go RPC framework Kitex.
+Kitex accepts both thrift and protobuf IDLs, and supports generating a skeleton of a server side project.
+More information: \[la]https://www.cloudwego.io\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Generate client codes when a project is in \fB\fC$GOPATH\fR:
+.RE
+.PP
+\fB\fCkitex {{path/to/IDL_file.thrift}}\fR
+.RS
+.IP \(bu 2
+Generate client codes when a project is not in \fB\fC$GOPATH\fR:
+.RE
+.PP
+\fB\fCkitex \-module {{github.com/xx\-org/xx\-name}} {{path/to/IDL_file.thrift}}\fR
+.RS
+.IP \(bu 2
+Generate client codes with protobuf IDL:
+.RE
+.PP
+\fB\fCkitex \-type protobuf {{path/to/IDL_file.proto}}\fR
+.RS
+.IP \(bu 2
+Generate server codes:
+.RE
+.PP
+\fB\fCkitex \-service {{svc_name}} {{path/to/IDL_file.thrift}}\fR

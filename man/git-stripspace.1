@@ -1,0 +1,24 @@
+.TH git stripspace
+.PP
+.RS
+Read text (e.g. commit messages, notes, tags, and branch descriptions) from \fB\fCstdin\fR and clean it into the manner used by Git.
+More information: \[la]https://git-scm.com/docs/git-stripspace\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Trim whitespace from a file:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | git stripspace\fR
+.RS
+.IP \(bu 2
+Trim whitespace and Git comments from a file:
+.RE
+.PP
+\fB\fCcat {{path/to/file}} | git stripspace \-\-strip\-comments\fR
+.RS
+.IP \(bu 2
+Convert all lines in a file into Git comments:
+.RE
+.PP
+\fB\fCgit stripspace \-\-comment\-lines < {{path/to/file}}\fR

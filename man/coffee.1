@@ -1,0 +1,36 @@
+.TH coffee
+.PP
+.RS
+Executes CoffeeScript scripts or compiles them into JavaScript.
+More information: \[la]https://coffeescript.org#cli\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Run a script:
+.RE
+.PP
+\fB\fCcoffee {{path/to/file.coffee}}\fR
+.RS
+.IP \(bu 2
+Compile to JavaScript and save to a file with the same name:
+.RE
+.PP
+\fB\fCcoffee \-\-compile {{path/to/file.coffee}}\fR
+.RS
+.IP \(bu 2
+Compile to JavaScript and save to a given output file:
+.RE
+.PP
+\fB\fCcoffee \-\-compile {{path/to/file.coffee}} \-\-output {{path/to/file.js}}\fR
+.RS
+.IP \(bu 2
+Start a REPL (interactive shell):
+.RE
+.PP
+\fB\fCcoffee \-\-interactive\fR
+.RS
+.IP \(bu 2
+Watch script for changes and re\-run script:
+.RE
+.PP
+\fB\fCcoffee \-\-watch {{path/to/file.coffee}}\fR

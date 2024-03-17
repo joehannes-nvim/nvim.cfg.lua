@@ -1,0 +1,42 @@
+.TH dlv
+.PP
+.RS
+Debugger for the Go programming language.
+More information: \[la]https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv.md\[ra]\&.
+.RE
+.RS
+.IP \(bu 2
+Compile and begin debugging the main package in the current directory (by default, with no arguments):
+.RE
+.PP
+\fB\fCdlv debug\fR
+.RS
+.IP \(bu 2
+Compile and begin debugging a specific package:
+.RE
+.PP
+\fB\fCdlv debug {{package}} {{arguments}}\fR
+.RS
+.IP \(bu 2
+Compile a test binary and begin debugging the compiled program:
+.RE
+.PP
+\fB\fCdlv test\fR
+.RS
+.IP \(bu 2
+Connect to a headless debug server:
+.RE
+.PP
+\fB\fCdlv connect {{ip_address}}\fR
+.RS
+.IP \(bu 2
+Attach to a running process and begin debugging:
+.RE
+.PP
+\fB\fCdiv attach {{pid}}\fR
+.RS
+.IP \(bu 2
+Compile and begin tracing a program:
+.RE
+.PP
+\fB\fCdlv trace {{package}} \-\-regexp '{{regular_expression}}'\fR
