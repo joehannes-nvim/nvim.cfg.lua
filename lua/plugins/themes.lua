@@ -1,262 +1,72 @@
-return {
-  {
-    "themercorp/themer.lua",
-    config = function() require("plugins.config.themer").setup() end,
-  },
-  {
-    "ray-x/starry.nvim",
-    config = function() require("plugins.config.starry").setup() end,
-  },
-  { "savq/melange" },
-  {
-    "joehannes-ux/lush-jsx.nvim",
-    config = function()
-      vim.g.lush_jsx_contrast_dark = "hard"
-      vim.g.lush_jsx_contrast_light = "hard"
-
-      require("lush_jsx").setup({
-        plugins = {
-          "cmp", -- nvim-cmp
-          "gitsigns",
-          "lsp",
-          "lspsaga",
-          "neogit",
-          "telescope",
-          "treesitter",
-        },
-        langs = {
-          "clojure",
-          "css",
-          "html",
-          "js",
-          "json",
-          "jsx",
-          "lua",
-          "markdown",
-          "python",
-          "typescript",
-          "viml",
-          "xml",
-        },
-      })
-    end
-  },
-  { "akai54/2077.nvim" },
-  { 'shaeinst/roshnivim-cs' },
-  { "olimorris/onedarkpro.nvim" },
-  { "pineapplegiant/spaceduck" },
-  {
-    dir = "https://gitlab.com/__tpb/monokai-pro.nvim",
-    as = "monokaipro",
-    config = function()
-      vim.g.monokaipro_filter = "spectrum"
-      vim.g.monokaipro_italic_functions = true
-      vim.g.monokaipro_sidebars = { "aerial" }
-      vim.g.monokaipro_flat_term = true
-    end,
-  },
-  { 'pappasam/papercolor-theme-slim' },
-  { "catppuccin/nvim",               as = "catppuccin" },
-  { "joehannes-ux/kat.nvim" },
-  {
-    "meijieru/edge.nvim",
-    dependencies = { "rktjmp/lush.nvim" },
-  },
-  { "folke/tokyonight.nvim" },
-  { "B4mbus/oxocarbon-lua.nvim" },
-  {
-    'f-person/auto-dark-mode.nvim',
-    config = function()
-      local auto_dark_mode = require('auto-dark-mode')
-
-      auto_dark_mode.setup({
-        update_interval = 1000,
-        set_dark_mode = function()
-          vim.api.nvim_set_option('background', 'dark')
-        end,
-        set_light_mode = function()
-          vim.api.nvim_set_option('background', 'light')
-        end,
-      })
-      vim.schedule(auto_dark_mode.init)
-    end
-  },
-  {
-    "cpea2506/one_monokai.nvim",
-    config = function()
-      require("one_monokai").setup({
-        transparent = true,
-        colors = {
-          green = my.color.my.green,
-          blue = my.color.my.aqua,
-          roman = my.color.my.magenta,
-          lmao = my.color.util.darken(my.color.util.desaturate(my.color.my.purple, 50),
-            vim.opt.background:get() == "light" and 0 or 90),
-          pink = my.color.util.desaturate(my.color.my.magenta, 50)
-        },
-        themes = function(colors)
-          return {
-            Normal = { bg = colors.lmao },
-            Comment = { fg = colors.pink, italic = true },
-            ErrorMsg = { fg = "black", bg = my.color.my.red, standout = true },
-            NormalFloat = { link = my.color.my.lmao },
-          }
-        end,
-      })
-    end
-  },
-  { "theniceboy/nvim-deus" },
-  {
-    "shaunsingh/moonlight.nvim",
-    config = function()
-      vim.g.moonlight_italic_comments = true
-      vim.g.moonlight_italic_keywords = true
-      vim.g.moonlight_italic_functions = true
-      vim.g.moonlight_italic_variables = false
-      vim.g.moonlight_contrast = true
-      vim.g.moonlight_borders = false
-      vim.g.moonlight_disable_background = false
-    end,
-  },
-  {
-    "yorik1984/newpaper.nvim",
-    config = true,
-  },
-  {
-    "ofirgall/ofirkai.nvim",
-    config = function()
-      require('ofirkai').setup {}
-    end
-  },
-  {
-    "yashguptaz/calvera-dark.nvim",
-    config = function()
-      vim.g.calvera_italic_keywords = true
-      vim.g.calvera_borders = true
-      vim.g.calvera_contrast = true
-      vim.g.calvera_hide_eob = true
-      vim.g.calvera_custom_colors = { contrast = "#0f111a" }
-      vim.g.calvera_borders = false
-      vim.g.calvera_disable_background = false
-      vim.g.transparent_bg = true
-    end
-  },
-  {
-    'marko-cerovac/material.nvim',
-    config = function()
-      require('material').setup({
-
-        contrast = {
-          terminal = true,            -- Enable contrast for the built-in terminal
-          sidebars = true,            -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-          floating_windows = true,    -- Enable contrast for floating windows
-          cursor_line = true,         -- Enable darker background for the cursor line
-          non_current_windows = true, -- Enable darker background for non-current windows
-          filetypes = {},             -- Specify which filetypes get the contrasted (darker) background
-        },
-
-        styles = { -- Give comments style such as bold, italic, underline etc.
-          comments = { italic = true --[[ italic = true ]] },
-          strings = { --[[ bold = true ]] },
-          keywords = { bold = true --[[ underline = true ]] },
-          functions = { bold = true, italic = true --[[ bold = true, undercurl = true ]] },
-          variables = { italic = true },
-          operators = { bold = true },
-          types = { italic = true },
-        },
-
-        plugins = { -- Uncomment the plugins that you use to highlight them
-          -- Available plugins:
-          "dap",
-          -- "dashboard",
-          "gitsigns",
-          "hop",
-          "indent-blankline",
-          -- "lspsaga",
-          -- "mini",
-          "neogit",
-          "nvim-cmp",
-          "nvim-navic",
-          -- "nvim-tree",
-          "nvim-web-devicons",
-          -- "sneak",
-          "telescope",
-          "trouble",
-          "which-key",
-        },
-
-        disable = {
-          colored_cursor = false, -- Disable the colored cursor
-          borders = false,        -- Disable borders between verticaly split windows
-          background = false,     -- Prevent the theme from setting the background (NeoVim then uses your terminal background)
-          term_colors = false,    -- Prevent the theme from setting terminal colors
-          eob_lines = false       -- Hide the end-of-buffer lines
-        },
-
-        high_visibility = {
-          lighter = true, -- Enable higher contrast text for lighter style
-          darker = true   -- Enable higher contrast text for darker style
-        },
-
-        lualine_style = "default", -- Lualine style ( can be 'stealth' or 'default' )
-
-        async_loading = true,      -- Load parts of the theme asyncronously for faster startup (turned on by default)
-
-        custom_colors = nil,       -- If you want to everride the default colors, set this to a function
-
-        custom_highlights = {},    -- Overwrite highlights with your own
-      })
-    end
-  },
-  { "sainnhe/sonokai" },
-  {
-    "NLKNguyen/papercolor-theme",
-    config = function()
-      vim.cmd([[
-        let g:PaperColor_Theme_Options = {
-          \   'theme': {
-          \     'default': {
-          \       'allow_bold': 1,
-          \       'allow_italic': 1
-          \     }
-          \   }
-          \ }
-      ]])
-    end
-  },
-  {
-    'maxmx03/fluoromachine.nvim',
-    config = function()
-      local fm = require 'fluoromachine'
-
-      fm.setup {
-        glow = true,
-        brightness = 0.2,
-        theme = 'retrowave',
-        transparent = false,
-        overrides = {
-          ['@type'] = { italic = true, bold = false },
-          ['@function'] = { italic = true, bold = true },
-          ['@comment'] = { italic = true },
-          ['@keyword'] = { italic = false, bold = true },
-          ['@constant'] = { italic = false, bold = true },
-          ['@variable'] = { italic = true },
-          ['@field'] = { italic = true },
-          ['@parameter'] = { italic = true },
-        },
-        colors = function(_, d)
-          return {
-            bg = my.color.my[vim.opt.background:get()],
-            alt_bg = d(my.color.my.vimode[vim.fn.mode()], 75),
-            cyan = my.color.my.aqua,
-            red = my.color.my.red,
-            yellow = my.color.my.yellow,
-            orange = my.color.my.orange,
-            pink = my.color.my.magenta,
-            purple = my.color.my.purple,
-          }
-        end,
-      }
-    end
-  }
-}
+-- [nfnl] Compiled from fnl/plugins/themes.fnl by https://github.com/Olical/nfnl, do not edit.
+local my = _G.my
+local function _1_()
+  return (require("plugins.config.themer")).setup()
+end
+local function _2_()
+  vim.g.lush_jsx_contrast_dark = "hard"
+  vim.g.lush_jsx_contrast_light = "hard"
+  return (require("lush_jsx")).setup({langs = {"clojure", "css", "html", "js", "json", "jsx", "lua", "markdown", "python", "typescript", "viml", "xml"}, plugins = {"cmp", "gitsigns", "lsp", "lspsaga", "neogit", "telescope", "treesitter"}})
+end
+local function _3_()
+  vim.g.monokaipro_filter = "spectrum"
+  vim.g.monokaipro_italic_functions = true
+  vim.g.monokaipro_sidebars = {"aerial"}
+  vim.g.monokaipro_flat_term = true
+  return nil
+end
+local function _4_()
+  local auto_dark_mode = require("auto-dark-mode")
+  local function _5_()
+    return vim.api.nvim_set_option("background", "dark")
+  end
+  local function _6_()
+    return vim.api.nvim_set_option("background", "light")
+  end
+  auto_dark_mode.setup({set_dark_mode = _5_, set_light_mode = _6_, update_interval = 1000})
+  return vim.schedule(auto_dark_mode.init)
+end
+local function _7_()
+  local function _8_(colors)
+    return {Comment = {fg = colors.pink, italic = true}, ErrorMsg = {bg = my.color.my.red, fg = "black", standout = true}, Normal = {bg = colors.lmao}, NormalFloat = {link = my.color.my.lmao}}
+  end
+  return (require("one_monokai")).setup({colors = {blue = my.color.my.aqua, green = my.color.my.green, lmao = my.color.util.darken(my.color.util.desaturate(my.color.my.purple, 50), ((((vim.opt.background):get() == "light") and 0) or 90)), pink = my.color.util.desaturate(my.color.my.magenta, 50), roman = my.color.my.magenta}, themes = _8_, transparent = true})
+end
+local function _9_()
+  vim.g.moonlight_italic_comments = true
+  vim.g.moonlight_italic_keywords = true
+  vim.g.moonlight_italic_functions = true
+  vim.g.moonlight_italic_variables = false
+  vim.g.moonlight_contrast = true
+  vim.g.moonlight_borders = false
+  vim.g.moonlight_disable_background = false
+  return nil
+end
+local function _10_()
+  return (require("ofirkai")).setup({})
+end
+local function _11_()
+  vim.g.calvera_italic_keywords = true
+  vim.g.calvera_borders = true
+  vim.g.calvera_contrast = true
+  vim.g.calvera_hide_eob = true
+  vim.g.calvera_custom_colors = {contrast = "#0f111a"}
+  vim.g.calvera_borders = false
+  vim.g.calvera_disable_background = false
+  vim.g.transparent_bg = true
+  return nil
+end
+local function _12_()
+  return (require("material")).setup({async_loading = true, contrast = {cursor_line = true, filetypes = {}, floating_windows = true, non_current_windows = true, sidebars = true, terminal = true}, custom_colors = nil, custom_highlights = {}, disable = {term_colors = false, borders = false, eob_lines = false, background = false, colored_cursor = false}, high_visibility = {darker = true, lighter = true}, lualine_style = "default", plugins = {"dap", "gitsigns", "hop", "indent-blankline", "neogit", "nvim-cmp", "nvim-navic", "nvim-web-devicons", "telescope", "trouble", "which-key"}, styles = {comments = {italic = true}, functions = {bold = true, italic = true}, keywords = {bold = true}, operators = {bold = true}, strings = {}, types = {italic = true}, variables = {italic = true}}})
+end
+local function _13_()
+  return vim.cmd("        let g:PaperColor_Theme_Options = {\n          \\   'theme': {\n          \\     'default': {\n          \\       'allow_bold': 1,\n          \\       'allow_italic': 1\n          \\     }\n          \\   }\n          \\ }\n      ")
+end
+local function _14_()
+  local fm = require("fluoromachine")
+  local function _15_(_, d)
+    return {alt_bg = d(my.color.my.vimode[vim.fn.mode()], 75), bg = my.color.my[(vim.opt.background):get()], cyan = my.color.my.aqua, orange = my.color.my.orange, pink = my.color.my.magenta, purple = my.color.my.purple, red = my.color.my.red, yellow = my.color.my.yellow}
+  end
+  return fm.setup({brightness = 0.2, colors = _15_, glow = true, overrides = {["@comment"] = {italic = true}, ["@constant"] = {bold = true, italic = false}, ["@field"] = {italic = true}, ["@function"] = {bold = true, italic = true}, ["@keyword"] = {bold = true, italic = false}, ["@parameter"] = {italic = true}, ["@type"] = {italic = true, bold = false}, ["@variable"] = {italic = true}}, theme = "retrowave", transparent = false})
+end
+return {{"themercorp/themer.lua", config = _1_}, {"savq/melange"}, {"joehannes-ux/lush-jsx.nvim", config = _2_}, {"akai54/2077.nvim"}, {"Abstract-IDE/Abstract-cs"}, {"olimorris/onedarkpro.nvim"}, {"pineapplegiant/spaceduck"}, {as = "monokaipro", config = _3_, dir = "https://gitlab.com/__tpb/monokai-pro.nvim"}, {"pappasam/papercolor-theme-slim"}, {"catppuccin/nvim", as = "catppuccin"}, {"joehannes-ux/kat.nvim"}, {"meijieru/edge.nvim", dependencies = {"rktjmp/lush.nvim"}}, {"folke/tokyonight.nvim"}, {"B4mbus/oxocarbon-lua.nvim"}, {"f-person/auto-dark-mode.nvim", config = _4_}, {"cpea2506/one_monokai.nvim", config = _7_}, {"theniceboy/nvim-deus"}, {"shaunsingh/moonlight.nvim", config = _9_}, {"yorik1984/newpaper.nvim", config = true}, {"ofirgall/ofirkai.nvim", config = _10_}, {"yashguptaz/calvera-dark.nvim", config = _11_}, {"marko-cerovac/material.nvim", config = _12_}, {"sainnhe/sonokai"}, {"NLKNguyen/papercolor-theme", config = _13_}, {"maxmx03/fluoromachine.nvim", config = _14_}}

@@ -1,21 +1,21 @@
 --@diagnostic disable:undefined-global
 vim.cmd([[
-  set shell=/opt/homebrew/bin/zsh
+  set shell=/usr/bin/zsh
 ]])
-
-require("utils")
 
 vim.api.nvim_set_var("mapleader", " ")
 vim.api.nvim_set_var("maplocalleader", ";")
 
-require("settings")
+require("utils")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath })
   vim.fn.system({ "git", "-C", lazypath, "checkout", "tags/stable" }) -- last stable release
 end
-vim.opt.rtp:prepend(lazypath)
+
+-- As per lazy's install instructions, but insert hotpots path at the front
+vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup({
   root = vim.fn.stdpath("data") .. "/lazy",
@@ -23,7 +23,6 @@ require("lazy").setup({
     import = "plugins",
   },
   defaults = { lazy = false, version = "*" },
-  install = { colorscheme = { "habamax" } },
   checker = { enabled = false },
   diff = {
     cmd = "git",
@@ -47,8 +46,7 @@ require("lazy").setup({
   debug = false,
 })
 
+require("settings")
 require("lang")
 require("keymappings")
 require("colorschemes")
-
--- vim.cmd("colo lush_jsx")

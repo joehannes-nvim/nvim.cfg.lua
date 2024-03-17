@@ -1,12 +1,6 @@
+-- [nfnl] Compiled from fnl/plugins/config/colorizer.fnl by https://github.com/Olical/nfnl, do not edit.
 local config = {}
-
-function config.setup()
-	require("colorizer").setup({
-		"*", -- Highlight all files, but customize some others.
-		javascript = { css = true },
-		html = { css = true },
-		css = { css = true },
-	})
+config.setup = function()
+  return (require("colorizer")).setup({"*", css = {css = true}, html = {css = true}, javascript = {css = true}})
 end
-
 return config

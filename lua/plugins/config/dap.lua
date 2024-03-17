@@ -1,174 +1,29 @@
----@diagnostic disable: undefined-global
-
+-- [nfnl] Compiled from fnl/plugins/config/dap.fnl by https://github.com/Olical/nfnl, do not edit.
+local my = _G.my
 local M = {}
-function M.setup()
+M.setup = function()
   local dap, dapui = require("dap"), require("dapui")
-  local firefoxBin = '/opt/homebrew/Caskroom/firefox-developer-edition/latest/Firefox Developer Edition.app/Contents/MacOS/firefox'
-
-  require("dap-vscode-js").setup({
-    -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
-    debugger_path = my.fs.dir.data .. "/site/pack/packer/opt/vscode-js-debug", -- Path to vscode-js-debug installation.
-    -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
-    adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }, -- which adapters to register in nvim-dap
-    -- log_file_path = "(stdpath cache)/dap_vscode_js.log" -- Path for file logging
-    -- log_file_level = false -- Logging level for output to file. Set to false to disable file logging.
-    -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
-  })
-
-  dap.adapters.chrome = {
-    type = "executable",
-    command = "node",
-    args = { my.fs.dir.data .. "/site/pack/packer/opt/vscode-chrome-debug/out/src/chromeDebug.js" } -- TODO adjust
-  }
-
-  dap.adapters.firefox = {
-    type = 'executable',
-    command = 'node',
-    args = { my.fs.dir.data .. '/site/pack/packer/opt/vscode-firefox-debug/dist/adapter.bundle.js' },
-  }
-
-  dap.configurations.javascript = {
-    name = 'Debug JS with Firefox',
-    type = 'firefox',
-    request = 'launch',
-    reAttach = true,
-    url = 'http://localhost:3000',
-    webRoot = '${workspaceFolder}',
-    firefoxExecutable = firefoxBin
-  }
-  dap.configurations.javascriptreact = {
-    {
-      name = 'Debug JSX with Firefox',
-      type = 'firefox',
-      request = 'launch',
-      reAttach = true,
-      url = 'http://localhost:3000',
-      webRoot = '${workspaceFolder}',
-      firefoxExecutable = firefoxBin
-    },
-    {
-      name = 'Debug JSX with Chrome',
-      type = "chrome",
-      request = "attach",
-      program = "${file}",
-      cwd = vim.fn.getcwd(),
-      sourceMaps = true,
-      protocol = "inspector",
-      port = 9222,
-      webRoot = "${workspaceFolder}"
-    }
-  }
-  dap.configurations.typescript = {
-    name = 'Debug TS with Firefox',
-    type = 'firefox',
-    request = 'launch',
-    reAttach = true,
-    url = 'http://localhost:3000',
-    webRoot = '${workspaceFolder}',
-    firefoxExecutable = firefoxBin
-  }
-  dap.configurations.typescriptreact = {
-    {
-      name = 'Debug TSX with Firefox',
-      type = 'firefox',
-      request = 'launch',
-      reAttach = true,
-      url = 'http://localhost:3000',
-      webRoot = '${workspaceFolder}',
-      firefoxExecutable = firefoxBin
-    },
-    {
-      name = 'Debug TSX with Chrome',
-      type = "chrome",
-      request = "attach",
-      program = "${file}",
-      cwd = vim.fn.getcwd(),
-      sourceMaps = true,
-      protocol = "inspector",
-      port = 9222,
-      webRoot = "${workspaceFolder}"
-    },
-    {
-      name = "Debug TSX: launch pwa-node",
-      type = "pwa-node",
-      request = "launch",
-      program = "${file}",
-      cwd = "${workspaceFolder}",
-    },
-    {
-      name = "Debug TSX: attach pwa-node",
-      type = "pwa-node",
-      request = "attach",
-      processId = require 'dap.utils'.pick_process,
-      cwd = "${workspaceFolder}",
-    },
-    {
-      name = "Debug TSX: launch pwa-chrome",
-      type = "pwa-chrome",
-      request = "launch",
-      program = "${file}",
-      cwd = "${workspaceFolder}",
-    },
-    {
-      name = "Debug TSX: attach pwa-chrome",
-      type = "pwa-chrome",
-      request = "attach",
-      processId = require 'dap.utils'.pick_process,
-      cwd = "${workspaceFolder}",
-      url = "localhost:3000",
-    }
-  }
-
-  dapui.setup({
-    icons = { expanded = "▾", collapsed = "▸" },
-    mappings = {
-      -- Use a table to apply multiple mappings
-      expand = { "<CR>", "<2-LeftMouse>" },
-      open = "o",
-      remove = "d",
-      edit = "e",
-      repl = "r",
-    },
-    layouts = {
-      {
-        elements = {
-          'scopes',
-          'breakpoints',
-          'stacks',
-          'watches',
-        },
-        size = 40,
-        position = 'left',
-      },
-      {
-        elements = {
-          'repl',
-          'console',
-        },
-        size = 10,
-        position = 'bottom',
-      },
-    },
-    floating = {
-      max_height = 1, -- These can be integers or a float between 0 and 1.
-      max_width = 1, -- Floats will be treated as percentage of your screen.
-      mappings = {
-        close = { "q", "<Esc>" },
-      },
-    },
-    windows = { indent = 1 }
-  })
-
-  dap.listeners.after.event_initialized["dapui_config"] = function()
-    dapui.open()
+  local firefox_bin = "/opt/homebrew/Caskroom/firefox-developer-edition/latest/Firefox Developer Edition.app/Contents/MacOS/firefox"
+  do end (require("dap-vscode-js")).setup({adapters = {"pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost"}, debugger_path = (my.fs.dir.data .. "/site/pack/packer/opt/vscode-js-debug")})
+  dap.adapters.chrome = {args = {(my.fs.dir.data .. "/site/pack/packer/opt/vscode-chrome-debug/out/src/chromeDebug.js")}, command = "node", type = "executable"}
+  dap.adapters.firefox = {args = {(my.fs.dir.data .. "/site/pack/packer/opt/vscode-firefox-debug/dist/adapter.bundle.js")}, command = "node", type = "executable"}
+  dap.configurations.javascript = {firefoxExecutable = firefox_bin, name = "Debug JS with Firefox", reAttach = true, request = "launch", type = "firefox", url = "http://localhost:3000", webRoot = "${workspaceFolder}"}
+  dap.configurations.javascriptreact = {{firefoxExecutable = firefox_bin, name = "Debug JSX with Firefox", reAttach = true, request = "launch", type = "firefox", url = "http://localhost:3000", webRoot = "${workspaceFolder}"}, {cwd = vim.fn.getcwd(), name = "Debug JSX with Chrome", port = 9222, program = "${file}", protocol = "inspector", request = "attach", sourceMaps = true, type = "chrome", webRoot = "${workspaceFolder}"}}
+  dap.configurations.typescript = {firefoxExecutable = firefox_bin, name = "Debug TS with Firefox", reAttach = true, request = "launch", type = "firefox", url = "http://localhost:3000", webRoot = "${workspaceFolder}"}
+  dap.configurations.typescriptreact = {{firefoxExecutable = firefox_bin, name = "Debug TSX with Firefox", reAttach = true, request = "launch", type = "firefox", url = "http://localhost:3000", webRoot = "${workspaceFolder}"}, {cwd = vim.fn.getcwd(), name = "Debug TSX with Chrome", port = 9222, program = "${file}", protocol = "inspector", request = "attach", sourceMaps = true, type = "chrome", webRoot = "${workspaceFolder}"}, {cwd = "${workspaceFolder}", name = "Debug TSX: launch pwa-node", program = "${file}", request = "launch", type = "pwa-node"}, {cwd = "${workspaceFolder}", name = "Debug TSX: attach pwa-node", processId = (require("dap.utils")).pick_process, request = "attach", type = "pwa-node"}, {cwd = "${workspaceFolder}", name = "Debug TSX: launch pwa-chrome", program = "${file}", request = "launch", type = "pwa-chrome"}, {cwd = "${workspaceFolder}", name = "Debug TSX: attach pwa-chrome", processId = (require("dap.utils")).pick_process, request = "attach", type = "pwa-chrome", url = "localhost:3000"}}
+  dapui.setup({floating = {mappings = {close = {"q", "<Esc>"}}, max_height = 1, max_width = 1}, icons = {collapsed = "\226\150\184", expanded = "\226\150\190"}, layouts = {{elements = {"scopes", "breakpoints", "stacks", "watches"}, position = "left", size = 40}, {elements = {"repl", "console"}, position = "bottom", size = 10}}, mappings = {edit = "e", expand = {"<CR>", "<2-LeftMouse>"}, open = "o", remove = "d", repl = "r"}, windows = {indent = 1}})
+  local function _1_()
+    return dapui.open()
   end
-  dap.listeners.before.event_terminated["dapui_config"] = function()
-    dapui.close()
+  dap.listeners.after.event_initialized["dapui_config"] = _1_
+  local function _2_()
+    return dapui.close()
   end
-  dap.listeners.before.event_exited["dapui_config"] = function()
-    dapui.close()
+  dap.listeners.before.event_terminated["dapui_config"] = _2_
+  local function _3_()
+    return dapui.close()
   end
-
+  dap.listeners.before.event_exited["dapui_config"] = _3_
+  return nil
 end
-
 return M

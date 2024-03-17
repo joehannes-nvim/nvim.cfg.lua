@@ -1,56 +1,7 @@
+-- [nfnl] Compiled from fnl/plugins/config/scrollbar.fnl by https://github.com/Olical/nfnl, do not edit.
+local my = _G.my
 local M = {}
-
-function M.setup()
-  require("scrollbar").setup({
-    show = true,
-    handle = {
-      text = " ",
-      color = my.color.my.vimode[vim.fn.mode()],
-      hide_if_all_visible = true, -- Hides handle if all lines are visible
-    },
-    marks = {
-      Search = { text = { "-", "=" }, priority = 0, color = "orange" },
-      Error = { text = { "-", "=" }, priority = 1, color = "red" },
-      Warn = { text = { "-", "=" }, priority = 2, color = "yellow" },
-      Info = { text = { "-", "=" }, priority = 3, color = "blue" },
-      Hint = { text = { "-", "=" }, priority = 4, color = "green" },
-      Misc = { text = { "-", "=" }, priority = 5, color = "purple" },
-    },
-    excluded_buftypes = {
-      "terminal",
-    },
-    excluded_filetypes = {
-      "",
-      "prompt",
-      "TelescopePrompt",
-      "-MINIMAP-",
-      "MINIMAP",
-      "minimap",
-    },
-    autocmd = {
-      render = {
-        "BufWinEnter",
-        "TabEnter",
-        "TermEnter",
-        "WinEnter",
-        "CmdwinLeave",
-        "TextChanged",
-        "VimResized",
-        "WinScrolled",
-      },
-      clear = {
-        "BufWinLeave",
-        "TabLeave",
-        "TermLeave",
-        "WinLeave",
-      },
-    },
-    handlers = {
-      diagnostic = true,
-      search = true, -- Requires hlslens to be loaded
-    },
-  })
-  -- require("scrollbar.handlers.search").setup()
+M.setup = function()
+  return (require("scrollbar")).setup({autocmd = {clear = {"BufWinLeave", "TabLeave", "TermLeave", "WinLeave"}, render = {"BufWinEnter", "TabEnter", "TermEnter", "WinEnter", "CmdwinLeave", "TextChanged", "VimResized", "WinScrolled"}}, excluded_buftypes = {"terminal"}, excluded_filetypes = {"", "prompt", "TelescopePrompt", "-MINIMAP-", "MINIMAP", "minimap"}, handle = {color = my.color.my.vimode[vim.fn.mode()], hide_if_all_visible = true, text = " "}, handlers = {diagnostic = true, search = true}, marks = {Error = {color = "red", priority = 1, text = {"-", "="}}, Hint = {color = "green", priority = 4, text = {"-", "="}}, Info = {color = "blue", priority = 3, text = {"-", "="}}, Misc = {color = "purple", priority = 5, text = {"-", "="}}, Search = {color = "orange", priority = 0, text = {"-", "="}}, Warn = {color = "yellow", priority = 2, text = {"-", "="}}}, show = true})
 end
-
 return M

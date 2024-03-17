@@ -1,15 +1,7 @@
+-- [nfnl] Compiled from fnl/plugins/config/codicons.fnl by https://github.com/Olical/nfnl, do not edit.
 local config = {}
-
-function config.setup()
-	local codicons = require("codicons")
-
-	codicons.setup({
-		-- Override by mapping name to icon
-		-- ["account"] = "",
-		-- Or by name to hexadecimal/decimal value
-		-- ["comment"] = 0xEA6B, -- hexadecimal
-		-- ["archive"] = 60056, -- decimal
-	})
+config.setup = function()
+  local codicons = require("codicons")
+  return codicons.setup({})
 end
-
 return config

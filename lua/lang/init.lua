@@ -1,57 +1,37 @@
----@diagnostic disable: undefined-global
-require("nvim-lsp-installer").setup({ automatic_installation = true })
+-- [nfnl] Compiled from fnl/lang/init.fnl by https://github.com/Olical/nfnl, do not edit.
 local lspconfig = require("lspconfig")
+do end (require("mason")).setup()
+do end (require("mason-lspconfig")).setup({automatic_installation = true})
 local cfg = require("lang/setup")
-
-local my_servers = {
-  typescript = "tsserver",
-  json = "jsonls",
-  css = "cssls",
-  cssmodules = "cssmodules_ls",
-  -- dart = "dartls",
-  lua = "sumneko_lua",
-  efm = "efm",
-  html = "html",
-  graphql = "graphql",
-  python = "pyright",
-  tailwind = "tailwindcss",
-  clojure = "clojure_lsp",
-  sourcekit = "sourcekit",
-  rust = "rust_analyzer"
-}
-
---Some Diagnostic Icons
-vim.fn.sign_define("LspDiagnosticsSignError", { text = "✘", numhl = "LspDiagnosticsDefaultError" })
-vim.fn.sign_define("LspDiagnosticsSignWarning", { text = "", numhl = "LspDiagnosticsDefaultWarning" })
-vim.fn.sign_define("LspDiagnosticsSignInformation", { text = "", numhl = "LspDiagnosticsDefaultInformation" })
-vim.fn.sign_define("LspDiagnosticsSignHint", { text = "", numhl = "LspDiagnosticsDefaultHint" })
-vim.fn.sign_define("DiagnosticSignError", { text = "✘", numhl = "LspDiagnosticsDefaultError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = "", numhl = "LspDiagnosticsDefaultWarning" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = "", numhl = "LspDiagnosticsDefaultInformation" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "", numhl = "LspDiagnosticsDefaultHint" })
-
+local my_servers = {clojure = "clojure_lsp", fennel = "fennel_language_server", css = "cssls", cssmodules = "cssmodules_ls", efm = "efm", graphql = "graphql", html = "html", json = "jsonls", lua = "lua_ls", python = "pyright", rust = "rust_analyzer", sourcekit = "sourcekit", tailwind = "tailwindcss", typescript = "tsserver"}
+vim.fn.sign_define("LspDiagnosticsSignError", {numhl = "LspDiagnosticsDefaultError", text = "\226\156\152"})
+vim.fn.sign_define("LspDiagnosticsSignWarning", {numhl = "LspDiagnosticsDefaultWarning", text = "\239\129\177"})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {numhl = "LspDiagnosticsDefaultInformation", text = "\239\132\169"})
+vim.fn.sign_define("LspDiagnosticsSignHint", {numhl = "LspDiagnosticsDefaultHint", text = "\239\129\156"})
+vim.fn.sign_define("DiagnosticSignError", {numhl = "LspDiagnosticsDefaultError", text = "\226\156\152"})
+vim.fn.sign_define("DiagnosticSignWarn", {numhl = "LspDiagnosticsDefaultWarning", text = "\239\129\177"})
+vim.fn.sign_define("DiagnosticSignInfo", {numhl = "LspDiagnosticsDefaultInformation", text = "\239\132\169"})
+vim.fn.sign_define("DiagnosticSignHint", {numhl = "LspDiagnosticsDefaultHint", text = "\239\129\156"})
 for server, name in pairs(my_servers) do
-  if server == "json"
-      or server == "css"
-      or server == "cssmodules"
-      or server == "lua"
-      or server == "python"
-      or server == "clojure"
-      or server == "efm"
-  -- dart is automatically setup by the flutter plugin
-  -- or server == "diagnosticls"
-  -- or server == "eslint"
-  then
+  if (server == "fennel") then
+    cfg[server]()
+    lspconfig[name].setup({})
+  else
+  end
+  local _2_
+  do
+    local truthy = false
+    for _, s in ipairs({"json", "css", "cssmodules", "lua", "python", "clojure", "efm"}) do
+      truthy = (truthy or (server == s))
+    end
+    _2_ = truthy
+  end
+  if _2_ then
     lspconfig[name].setup(cfg[server]())
-  elseif server == "typescript" then
-    require("typescript").setup({
-      disable_commands = false, -- prevent the plugin from creating Vim commands
-      debug = false,            -- enable debug logging for commands
-      server = cfg[server](),
-    })
+  elseif (server == "typescript") then
+    do end (require("typescript")).setup({server = cfg[server](), debug = false, disable_commands = false})
   else
     lspconfig[name].setup(cfg.generic())
   end
 end
-
-vim.cmd([[do User LspAttachBuffers]])
+return vim.cmd("do User LspAttachBuffers")

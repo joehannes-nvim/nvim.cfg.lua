@@ -1,34 +1,4 @@
+-- [nfnl] Compiled from fnl/settings/options.fnl by https://github.com/Olical/nfnl, do not edit.
 local indent = 2
-
-local M = {
-  qftf = "{info -> v:lua.my.ui.qftf(info)}",
-  termguicolors = true,
-  hidden = true,
-  ignorecase = true,
-  scrolloff = 7,
-  splitbelow = true,
-  splitright = true,
-  clipboard = "unnamed,unnamedplus",
-  timeoutlen = 200,
-  updatetime = 300,
-  inccommand = "split",
-  sessionoptions = "blank,globals,resize,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
-  undofile = true,
-  foldenable = true,
-  foldlevel = 99,
-  foldlevelstart = 99,
-  foldcolumn = '1',
-  number = true,
-  relativenumber = true,
-  cursorline = true,
-  signcolumn = "auto:3",
-  shiftwidth = indent,
-  tabstop = indent,
-  softtabstop = indent,
-  expandtab = true,
-  list = true,
-  virtualedit = "all",
-  exrc = true,
-}
-
+local M = {clipboard = "unnamed,unnamedplus", cursorline = true, cursorcolumn = true, expandtab = true, exrc = true, foldcolumn = "1", foldenable = true, foldlevel = 99, foldlevelstart = 99, foldmethod = "expr", grepprg = "rg --vimgrep", grepformat = "%f:%l:%c:%m", hidden = true, ignorecase = true, inccommand = "split", list = true, number = true, qftf = "{info -> v:lua.my.ui.qftf(info)}", relativenumber = true, scrolloff = 7, sessionoptions = "blank,globals,resize,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal", shiftwidth = indent, signcolumn = "auto:1", softtabstop = indent, splitbelow = true, splitright = true, tabstop = indent, termguicolors = true, timeoutlen = 200, undofile = true, updatetime = 300, virtualedit = "all", mousemoveevent = true}
 return M

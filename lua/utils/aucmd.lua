@@ -1,48 +1,48 @@
+-- [nfnl] Compiled from fnl/utils/aucmd.fnl by https://github.com/Olical/nfnl, do not edit.
 local M = {}
-
-function M.onAfterBoot(opts)
+M.onAfterBoot = function(opts)
+  my.ui.tint()
+  return my.ui.updateHighlights()
+end
+M.onColorScheme = function()
   my.ui.updateHighlights()
   my.ui.tint()
-  -- vim.cmd([[
-  --   WindowsEnableAutowidth
-  -- ]])
+  vim.cmd("set cursorline")
+  return vim.cmd("set cursorcolumn")
 end
-
-function M.onColorscheme()
-  my.ui.updateHighlights()
+M.onModeChanged = function()
   my.ui.tint()
-  vim.api.nvim_set_var("neovide_background_color", my.color.my.vimode[vim.fn.mode()] .. my.color.fn.transparentizeColor())
+  return my.ui.updateHighlights()
 end
-
-function M.onModeChanged()
+M.grepAndOpen = function()
+  local function _1_(pattern)
+    if (pattern ~= nil) then
+      vim.cmd(("silent grep! " .. pattern))
+      return vim.cmd("Trouble quickfix")
+    else
+      return nil
+    end
+  end
+  return vim.ui.input({prompt = "Enter pattern: "}, _1_)
+end
+M.toggle_bg_mode = function(force)
+  local current = (vim.opt.background):get()
+  local other = (((current == "light") and "dark") or "light")
+  vim.api.nvim_set_option("background", ((force and current) or other))
   my.ui.updateHighlights()
-  my.ui.tint()
+  return my.ui.tint()
 end
-
-function M.toggle_bg_mode(force)
-  local current = vim.opt.background:get()
-  local other = current == "light" and "dark" or "light"
-
-  vim.api.nvim_set_option("background", force and current or other)
-
-  my.ui.updateHighlights()
-  my.ui.tint()
-end
-
-function M.applyWinSeparatorNCHighlight()
+M.applyWinSeparatorNCHighlight = function()
   local ns_winsep = vim.api.nvim_create_namespace("CurrentBuffer")
   vim.api.nvim_set_hl_ns(ns_winsep)
-  vim.api.nvim_set_hl(0, "WinSeparator", { fg = my.color.my.aqua, bg = "bg", nocombine = false })
+  return vim.api.nvim_set_hl(0, "WinSeparator", {bg = "bg", fg = my.color.my.aqua, nocombine = false})
 end
-
-function M.activate_current_win_sep()
+M.activate_current_win_sep = function()
   local ns_winsep = vim.api.nvim_create_namespace("CurrentBuffer")
-  vim.api.nvim_set_hl(ns_winsep, "WinSeparator", { fg = my.color.my.aqua, bg = my.color.my.magenta })
+  return vim.api.nvim_set_hl(ns_winsep, "WinSeparator", {bg = my.color.my.magenta, fg = my.color.my.aqua})
 end
-
-function M.clear_current_win_sep()
+M.clear_current_win_sep = function()
   local ns_winsep = vim.api.nvim_create_namespace("CurrentBuffer")
-  vim.api.nvim_buf_clear_namespace(0, ns_winsep, 0, -1) -- not working, why?
+  return vim.api.nvim_buf_clear_namespace(0, ns_winsep, 0, ( - 1))
 end
-
 return M

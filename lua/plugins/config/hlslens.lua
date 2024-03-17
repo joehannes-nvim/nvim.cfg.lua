@@ -1,24 +1,7 @@
+-- [nfnl] Compiled from fnl/plugins/config/hlslens.fnl by https://github.com/Olical/nfnl, do not edit.
 local M = {}
-
-function M.setup()
-	require("hlslens").setup({
-		auto_enable = true,
-		enable_incsearch = true,
-		calm_down = false,
-		nearest_only = false,
-		nearest_float_when = "auto",
-		float_shadow_blend = 50,
-		virt_priority = 100,
-		build_position_cb = nil,
-		override_lens = nil,
-	})
-
-	vim.cmd([[
-    hi default link HlSearchNear IncSearch
-    hi default link HlSearchLens WildMenu
-    hi default link HlSearchLensNear IncSearch
-    hi default link HlSearchFloat IncSearch
-  ]])
+M.setup = function()
+  do end (require("hlslens")).setup({auto_enable = true, build_position_cb = nil, enable_incsearch = true, float_shadow_blend = 50, nearest_float_when = "auto", override_lens = nil, virt_priority = 100, nearest_only = false, calm_down = false})
+  return vim.cmd("    hi default link HlSearchNear IncSearch\n    hi default link HlSearchLens WildMenu\n    hi default link HlSearchLensNear IncSearch\n    hi default link HlSearchFloat IncSearch\n  ")
 end
-
 return M

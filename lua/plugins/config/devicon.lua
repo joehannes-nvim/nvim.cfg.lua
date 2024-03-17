@@ -1,11 +1,6 @@
+-- [nfnl] Compiled from fnl/plugins/config/devicon.fnl by https://github.com/Olical/nfnl, do not edit.
 local M = {}
-
-function M.setup()
-  require("nvim-web-devicons").setup({
-    -- globally enable default icons (default to false)
-    -- will get overriden by `get_icons` option
-    default = true,
-  })
+M.setup = function()
+  return (require("nvim-web-devicons")).setup({default = true})
 end
-
 return M

@@ -1,68 +1,7 @@
+-- [nfnl] Compiled from fnl/plugins/config/symbols_outline.fnl by https://github.com/Olical/nfnl, do not edit.
 local M = {}
-
-function M.setup()
-  local opts = {
-    highlight_hovered_item = true,
-    show_guides = true,
-    auto_preview = true,
-    position = 'right',
-    relative_width = true,
-    width = 15,
-    auto_close = false,
-    show_numbers = false,
-    show_relative_numbers = false,
-    show_symbol_details = false,
-    preview_bg_highlight = 'Pmenu',
-    autofold_depth = 2,
-    auto_unfold_hover = true,
-    fold_markers = { '', '' },
-    keymaps = { -- These keymaps can be a string or a table for multiple keys
-      close = { "<Esc>", "q" },
-      goto_location = "<Cr>",
-      focus_location = "o",
-      hover_symbol = "<C-space>",
-      toggle_preview = "K",
-      rename_symbol = "r",
-      code_actions = "a",
-      fold = "c",
-      unfold = "o",
-      fold_all = "C",
-      unfold_all = "O",
-      fold_reset = "R",
-    },
-    lsp_blacklist = {},
-    symbol_blacklist = {},
-    symbols = {
-      File = { icon = "", hl = "TSURI" },
-      Module = { icon = "", hl = "TSNamespace" },
-      Namespace = { icon = "", hl = "TSNamespace" },
-      Package = { icon = "", hl = "TSNamespace" },
-      Class = { icon = "𝓒", hl = "TSType" },
-      Method = { icon = "ƒ", hl = "TSMethod" },
-      Property = { icon = "", hl = "TSMethod" },
-      Field = { icon = "", hl = "TSField" },
-      Constructor = { icon = "", hl = "TSConstructor" },
-      Enum = { icon = "ℰ", hl = "TSType" },
-      Interface = { icon = "ﰮ", hl = "TSType" },
-      Function = { icon = "", hl = "TSFunction" },
-      Variable = { icon = "", hl = "TSConstant" },
-      Constant = { icon = "", hl = "TSConstant" },
-      String = { icon = "𝓐", hl = "TSString" },
-      Number = { icon = "#", hl = "TSNumber" },
-      Boolean = { icon = "⊨", hl = "TSBoolean" },
-      Array = { icon = "", hl = "TSConstant" },
-      Object = { icon = "⦿", hl = "TSType" },
-      Key = { icon = "🔐", hl = "TSType" },
-      Null = { icon = "NULL", hl = "TSType" },
-      EnumMember = { icon = "", hl = "TSField" },
-      Struct = { icon = "𝓢", hl = "TSType" },
-      Event = { icon = "🗲", hl = "TSType" },
-      Operator = { icon = "+", hl = "TSOperator" },
-      TypeParameter = { icon = "𝙏", hl = "TSParameter" }
-    }
-  }
-
-  require("symbols-outline").setup(opts)
+M.setup = function()
+  local opts = {auto_preview = true, auto_unfold_hover = true, autofold_depth = 2, fold_markers = {"\239\145\160", "\239\145\188"}, highlight_hovered_item = true, keymaps = {close = {"<Esc>", "q"}, code_actions = "a", focus_location = "o", fold = "c", fold_all = "C", fold_reset = "R", goto_location = "<Cr>", hover_symbol = "<C-space>", rename_symbol = "r", toggle_preview = "K", unfold = "o", unfold_all = "O"}, lsp_blacklist = {}, position = "right", preview_bg_highlight = "Pmenu", relative_width = true, show_guides = true, symbol_blacklist = {}, symbols = {Array = {hl = "TSConstant", icon = "\239\153\169"}, Boolean = {hl = "TSBoolean", icon = "\226\138\168"}, Class = {hl = "TSType", icon = "\240\157\147\146"}, Constant = {hl = "TSConstant", icon = "\238\136\172"}, Constructor = {hl = "TSConstructor", icon = "\238\136\143"}, Enum = {hl = "TSType", icon = "\226\132\176"}, EnumMember = {hl = "TSField", icon = "\239\133\157"}, Event = {hl = "TSType", icon = "\240\159\151\178"}, Field = {hl = "TSField", icon = "\239\154\167"}, File = {hl = "TSURI", icon = "\239\156\147"}, Function = {hl = "TSFunction", icon = "\239\130\154"}, Interface = {hl = "TSType", icon = "\239\176\174"}, Key = {hl = "TSType", icon = "\240\159\148\144"}, Method = {hl = "TSMethod", icon = "\198\146"}, Module = {hl = "TSNamespace", icon = "\239\154\166"}, Namespace = {hl = "TSNamespace", icon = "\239\153\169"}, Null = {hl = "TSType", icon = "NULL"}, Number = {hl = "TSNumber", icon = "#"}, Object = {hl = "TSType", icon = "\226\166\191"}, Operator = {hl = "TSOperator", icon = "+"}, Package = {hl = "TSNamespace", icon = "\239\163\150"}, Property = {hl = "TSMethod", icon = "\238\152\164"}, String = {hl = "TSString", icon = "\240\157\147\144"}, Struct = {hl = "TSType", icon = "\240\157\147\162"}, TypeParameter = {hl = "TSParameter", icon = "\240\157\153\143"}, Variable = {hl = "TSConstant", icon = "\238\158\155"}}, width = 15, auto_close = false, show_symbol_details = false, show_relative_numbers = false, show_numbers = false}
+  return (require("symbols-outline")).setup(opts)
 end
-
 return M
