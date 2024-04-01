@@ -18,7 +18,9 @@
   :dependencies ["MunifTanjim/nui.nvim"
                  "nvim-lua/plenary.nvim"
                  "nvim-telescope/telescope.nvim"]}
- [:subnut/nvim-ghost.nvim]
+ {1 :glacambre/firenvim
+  :lazy (not vim.g.started_by_firenvim)
+  :build #((. vim.fn "firenvim#install") 0)}
  {1 :nvim-treesitter/nvim-treesitter
   :branch :master
   :build ":TSUpdate"
@@ -82,5 +84,14 @@
                                                       :after_open (fn [] (vim.api.nvim_buf_set_keymap 0 "n" "<Esc>" ":close<CR>" {}))}))}
  [:sheerun/vim-polyglot]
  [:othree/es.next.syntax.vim]
- [:othree/javascript-libraries-syntax.vim]]
+ [:othree/javascript-libraries-syntax.vim]
+ {1 :MaximilianLloyd/tw-values.nvim
+  :opts {:border :rounded
+         :copy_register ""
+         :focus_preview true
+         :keymaps {:copy :<C-y>}
+         :show_unknown_classes true}}
+ {1 :luckasRanarison/tailwind-tools.nvim
+  :opts {}}]
+
 

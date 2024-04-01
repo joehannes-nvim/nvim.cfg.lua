@@ -15,7 +15,7 @@ M.signcolumn = function(opts)
   return status_utils.stylize("%s", opts)
 end
 M.numbercolumn = function(opts)
-  opts = extend_tbl({culright = true, thousands = false, escape = false}, opts)
+  opts = extend_tbl({culright = true, escape = false, thousands = false}, opts)
   local function _1_(self)
     local lnum, rnum, virtnum = vim.v.lnum, vim.v.relnum, vim.v.virtnum
     local num, relnum = (vim.opt.number):get(), (vim.opt.relativenumber):get()

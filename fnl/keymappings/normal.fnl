@@ -47,8 +47,8 @@
              :notifications]]
            (.. my.icon.ui.Check " " :dismiss)]
           ["["
-           [[:b :<Cmd>BufferLineCyclePrev<CR> "buf to left"]
-            [:B :<Cmd>bprevious<CR> "buf to left"]
+           [[:b :<Cmd>bprevious<CR> "buf to left"]
+            [:B :<Cmd>BufMRUPrev<CR> "buf mru prev"]
             [:d "<cmd>lua vim.diagnostic.goto_prev()<CR>" :diag]
             [:e "<Plug>(ultest-prev-fail)" "failed test"]
             [:h "<cmd>Gitsigns prev_hunk<CR>" :hunk]
@@ -86,8 +86,8 @@
             [:w :<Cmd>tabprevious<CR> :tab/winLayout]]
            (.. my.icon.ui.BoldArrowLeft " " :Prev...)]
           ["]"
-           [[:b :<Cmd>BufferLineCycleNext<CR> "next buf"]
-            [:B :<Cmd>bnext<CR> "next buf"]
+           [[:b :<Cmd>bnext<CR> "next buf"]
+            [:B :<Cmd>BufMRUNext<CR> "buf mru next"]
             [:d "<cmd>lua vim.diagnostic.goto_next()<CR>" :diag]
             [:e "<Plug>(ultest-next-fail)" "failed test"]
             [:h "<cmd>Gitsigns next_hunk<CR>" :hunk]
@@ -154,6 +154,9 @@
               [:I
                :<cmd>TypescriptOrganizeImports<CR>
                "typescript organize imports"]
+              [:K
+               :<cmd>TWValues<CR>
+               "TailwindCSSValues"]
               [:r ":IncRename " "symbol refactor/rename"]
               [:R
                :<cmd>TypescriptRenameFile<CR>
@@ -260,7 +263,7 @@
             [">"
              [
               [:s :<Cmd>SessionSave<CR> (.. my.icon.ui.SignOut " Session")]
-              [:x :<Cmd>FnlCompile<CR> (.. my.icon.ui.Code " FnlCompile")]]
+              [:x "<Cmd>lua require('nfnl.api')['compile-all-files']()<CR>" (.. my.icon.ui.Code " FnlCompile")]]
              (.. my.icon.ui.SignOut " Out...")]
             [:b
              [[:q ":bp|bd #<CR>" "quit current buffer"]
@@ -333,9 +336,8 @@
                (.. my.icon.kind.Module " Symbols...")]
               [:a "<Cmd>Telescope lsp_code_actions<CR>" "code actions"]
               [:b
-               [["*" "<Cmd>Telescope scope buffers<CR>" "GlobalBuffers"]
-                ["." "<Cmd>Telescope buffers<CR>" "LocalBuffers"]]
-               (.. my.icon.ui.Telescope my.icon.ui.Files " OpenBuffers...")]
+               "<Cmd>Telescope buffers<CR>"
+               (.. my.icon.ui.Telescope my.icon.ui.Files " OpenedBuffers")]
               [:d "<Cmd>Telescope lsp_definitions<CR>" :definitions]
               [:i "<Cmd>Telescope lsp_implementations<CR>" :implementations]
               [:r "<Cmd>Telescope lsp_references<CR>" :references]

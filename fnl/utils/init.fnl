@@ -13,4 +13,3 @@
             :struc (require :utils.table)
             :ui (require :utils.ui)})
 
-(require :astro.bootstrap)

@@ -11,8 +11,8 @@ M.onColorScheme = function()
   return vim.cmd("set cursorcolumn")
 end
 M.onModeChanged = function()
-  my.ui.tint()
-  return my.ui.updateHighlights()
+  my.ui.updateHighlights()
+  return my.ui.tint()
 end
 M.grepAndOpen = function()
   local function _1_(pattern)

@@ -41,20 +41,14 @@
     (my.color.fn.background_blend (vimode-color) 70))
   (fn tertiary-vimode-color [] (my.color.fn.background_blend (vimode-color) 21))
   (local (ok tint) (pcall require :tint))
-  (local (ok-bufferline _) (pcall require :bufferline))
-  (local bufferline (require :plugins.config.bufferline))
   (local lines (require :heirline))
   (local heirline (require :plugins.config.heirline))
-  (tint.refresh)
   (when ok
+    (tint.refresh)
     (heirline.update)
-    (heirline.setup false))
+    (heirline.setup false)))
   ; (vim.api.nvim_set_hl 0 :Normal
   ;                        {:bg (my.color.fn.background_blend (. my.color.my.vimode (vim.fn.mode)) 10)})
-  (when ok-bufferline
-    (bufferline.setup)
-    (vim.cmd.redrawtabline)))
-      ; (vim.schedule vim.cmd.redrawtabline)))
 
 (fn M.updateHighlights []
   (let [mode-color (. my.color.my.vimode (vim.fn.mode))]
@@ -62,23 +56,23 @@
 
     (fn tertiary-vimode-color [] (my.color.fn.background_blend mode-color 21))
 
-    (each [def-color git-signs-hl (pairs {my.color.my.theme.bold-retro.flow :GitSignsAdd
-                                          my.color.my.theme.bold-retro.normal :GitSignsChange
-                                          my.color.my.theme.bold-retro.attention :GitSignsDelete})]
+    (each [def-color git-signs-hl (pairs {(. (my.color.theme my.color.my.current-theme) :flow) :GitSignsAdd
+                                          (. (my.color.theme my.color.my.current-theme) :normal) :GitSignsChange
+                                          (. (my.color.theme my.color.my.current-theme) :attention) :GitSignsDelete})]
       ; (my.color.fn.highlight_blend_bg git-signs-hl 21 def-color)
       (my.color.fn.highlight_blend_bg (.. git-signs-hl :Nr) 50 def-color)
       (my.color.fn.highlight_blend_bg (.. git-signs-hl :Ln) 70 def-color))
-    (my.color.fn.highlight_blend_bg :CursorLine 73 my.color.my.theme.bold-retro.primary)
-    (my.color.fn.highlight_blend_bg :CursorColumn 73 my.color.my.theme.bold-retro.primary)
-    (my.color.fn.highlight_blend_bg :Visual 37 my.color.my.theme.bold-retro.primary)
-    (my.color.fn.highlight_blend_bg :TSCurrentScope 10 mode-color)
-    (my.color.fn.highlight_blend_bg :TreesitterContext 21 mode-color)
-    (vim.api.nvim_set_hl 0 :TreesitterContextBottom
-                         {:fg my.color.my.theme.bold-retro.primary
-                          :sp my.color.my.theme.bold-retro.attention
-                          :underdouble true
-                          :underline true})
-    (vim.api.nvim_set_hl 0 :ScrollbarHandle {:bg mode-color})))
+    (my.color.fn.highlight_blend_bg :CursorLine 37 mode-color)
+    (my.color.fn.highlight_blend_bg :CursorColumn 37 mode-color)
+    (my.color.fn.highlight_blend_bg :Visual 37 (. (my.color.theme my.color.my.current-theme) :primary)
+        (my.color.fn.highlight_blend_bg :TSCurrentScope 10 mode-color)
+        (my.color.fn.highlight_blend_bg :TreesitterContext 21 mode-color)
+        (vim.api.nvim_set_hl 0 :TreesitterContextBottom
+                             {:fg (. (my.color.theme my.color.my.current-theme) :primary)
+                              :sp (. (my.color.theme my.color.my.current-theme) :attention)
+                              :underdouble true
+                              :underline true})
+        (vim.api.nvim_set_hl 0 :ScrollbarHandle {:bg mode-color}))))
 
 (fn M.tablinePickBuffer []
   (let [tabline (. (require :heirline) :tabline)

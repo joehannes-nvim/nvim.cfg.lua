@@ -14,11 +14,11 @@
   ;                           (my.color.fn.transparentizeColor))))
 
 (fn M.onModeChanged []
-  (my.ui.tint)
-  (my.ui.updateHighlights))
+  (my.ui.updateHighlights)
+  (my.ui.tint))
   ; (vim.api.nvim_set_hl 0
   ;                      :TabLineSel
-  ;                      {:bg (. my.color.my.vimode (vim.fn.mode)) :fg my.color.my.theme.bold-retro.primary :nocombine false})
+  ;                      {:bg (. my.color.my.vimode (vim.fn.mode)) :fg (. (my.color.theme my.color.my.current-theme) :primary) :nocombine false})
 
 (fn M.grepAndOpen []
   (vim.ui.input {:prompt "Enter pattern: "}

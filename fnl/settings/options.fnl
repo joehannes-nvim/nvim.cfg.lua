@@ -27,7 +27,7 @@
           :splitbelow true
           :splitright true
           :tabstop indent
-          :termguicolors false
+          :termguicolors true
           :timeoutlen 200
           :undofile true
           :updatetime 300

@@ -62,21 +62,21 @@
   :dependencies [:nvim-cmp :nvim-treesitter]}
  [:smitajit/bufutils.vim]
  [:arithran/vim-delete-hidden-buffers]
- {1 :kazhala/close-buffers.nvim
-  :config (fn []
-            ((. (require :close_buffers) :setup) {:file_glob_ignore [:src/**/*]
-                                                  :filetype_ignore [:qf]
-                                                  :next_buffer_cmd (fn [windows]
-                                                                     ((. (require :bufferline)
-                                                                         :cycle) 1)
-                                                                     (local bufnr
-                                                                            (vim.api.nvim_get_current_buf))
-                                                                     (each [_ window (ipairs windows)]
-                                                                       (vim.api.nvim_win_set_buf window
-                                                                                                 bufnr)))
-                                                  :preserve_window_layout [:this
-                                                                           :nameless]}))
-  :dependencies [:akinsho/bufferline.nvim]}
+ ; {1 :kazhala/close-buffers.nvim
+ ;  :config (fn []
+ ;            ((. (require :close_buffers) :setup) {:file_glob_ignore [:src/**/*]
+ ;                                                  :filetype_ignore [:qf]
+ ;                                                  :next_buffer_cmd (fn [windows]
+ ;                                                                     ((. (require :bufferline)
+ ;                                                                         :cycle) 1)
+ ;                                                                     (local bufnr
+ ;                                                                            (vim.api.nvim_get_current_buf))
+ ;                                                                     (each [_ window (ipairs windows)]
+ ;                                                                       (vim.api.nvim_win_set_buf window
+ ;                                                                                                 bufnr)))
+ ;                                                  :preserve_window_layout [:this
+ ;                                                                           :nameless]}))
+ ;  :dependencies [:akinsho/bufferline.nvim]}
  {1 :Krafi2/jeskape.nvim
   :config (fn []
             ((. (require :jeskape) :setup) {:mappings {:<Esc> :<cmd>stopinsert<cr>

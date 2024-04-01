@@ -17,6 +17,6 @@ M.setup = function()
     end
     return vim.defer_fn(_4_, 100)
   end
-  return (require("zen-mode")).setup({on_close = _1_, on_open = _3_, plugins = {gitsigns = {enabled = false}, kitty = {enabled = true, font = "+2"}, options = {showcmd = false, ruler = false, enabled = false}, tmux = {enabled = true}, twilight = {enabled = true}}, window = {backdrop = 0.5, height = 0.98, options = {cursorcolumn = true, cursorline = true, foldcolumn = "1", list = true, number = true, relativenumber = true, signcolumn = "auto:3"}, width = 130}})
+  return (require("zen-mode")).setup({on_close = _1_, on_open = _3_, plugins = {gitsigns = {enabled = false}, kitty = {enabled = true, font = "+2"}, options = {enabled = false, showcmd = false, ruler = false}, tmux = {enabled = true}, twilight = {enabled = true}}, window = {backdrop = 0.5, height = 0.98, options = {cursorcolumn = true, cursorline = true, foldcolumn = "1", list = true, number = true, relativenumber = true, signcolumn = "auto:3"}, width = 130}})
 end
 return M

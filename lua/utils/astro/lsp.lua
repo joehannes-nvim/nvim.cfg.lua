@@ -16,7 +16,7 @@ setup_handlers = user_opts("lsp.setup_handlers", {_1_})
 M.diagnostics = {{}, {}, {}, [0] = {}}
 local function _2_(signs)
   local default_diagnostics = _G.my.astro.user_opts("diagnostics", {float = {border = "rounded", header = "", prefix = "", source = "always", style = "minimal", focused = false}, severity_sort = true, signs = {active = signs}, underline = true, update_in_insert = true, virtual_text = true})
-  M.diagnostics = {extend_tbl(default_diagnostics, {signs = false, virtual_text = false}), extend_tbl(default_diagnostics, {virtual_text = false}), default_diagnostics, [0] = extend_tbl(default_diagnostics, {virtual_text = false, underline = false, signs = false, update_in_insert = false})}
+  M.diagnostics = {extend_tbl(default_diagnostics, {signs = false, virtual_text = false}), extend_tbl(default_diagnostics, {virtual_text = false}), default_diagnostics, [0] = extend_tbl(default_diagnostics, {signs = false, virtual_text = false, update_in_insert = false, underline = false})}
   return vim.diagnostic.config(M.diagnostics[vim.g.diagnostics_mode])
 end
 M.setup_diagnostics = _2_

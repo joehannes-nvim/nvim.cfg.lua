@@ -1,5 +1,9 @@
 -- [nfnl] Compiled from fnl/utils/color.fnl by https://github.com/Olical/nfnl, do not edit.
-local M
+local M = {}
+M.theme = function(t)
+  local t_21 = (t or M.my["current-theme"])
+  return M.my.theme[t_21]
+end
 local function _1_(...)
   return (require("lush.vivid.rgb.convert")).hex_to_rgb(...)
 end
@@ -15,8 +19,8 @@ end
 local function _5_(...)
   return (require("lush.vivid.rgb.convert")).rgb_to_hex(...)
 end
-M = {fn = {}, hex_to_rgb = _1_, hsl = _2_, hsluv = _3_, int_to_hex = _4_, my = {aqua = "#00DFFF", blue = "#0000FF", dark = "#100710", green = "#00FF80", light = "#F0FFFD", magenta = "#F634B1", orange = "#FFAF00", purple = "#A000FF", red = "#FF0080", yellow = "#FFDF00", theme = {["bold-retro"] = {primary = "#F7DE81", secondary = "#595959", normal = "#00FFEF", attention = "#C71585", command = "#800080", flow = "#00FA9A"}}}, rgb_to_hex = _5_}
-M.my.vimode = {["\19"] = M.my.theme["bold-retro"].primary, ["\22"] = M.my.theme["bold-retro"].primary, ["!"] = M.my.theme["bold-retro"].command, R = M.my.theme["bold-retro"].attention, Rv = M.my.theme["bold-retro"].attention, S = M.my.theme["bold-retro"].attention, V = M.my.theme["bold-retro"].primary, c = M.my.theme["bold-retro"].command, ce = M.my.theme["bold-retro"].command, cv = M.my.theme["bold-retro"].command, i = M.my.theme["bold-retro"].flow, ic = M.my.theme["bold-retro"].flow, n = M.my.theme["bold-retro"].secondary, no = M.my.theme["bold-retro"].command, r = M.my.theme["bold-retro"].attention, ["r?"] = M.my.theme["bold-retro"].attention, rm = M.my.theme["bold-retro"].attention, s = M.my.theme["bold-retro"].attention, t = M.my.theme["bold-retro"].command, v = M.my.theme["bold-retro"].primary}
+M = vim.tbl_extend("keep", M, {fn = {}, hex_to_rgb = _1_, hsl = _2_, hsluv = _3_, int_to_hex = _4_, my = {aqua = "#00DFFF", blue = "#0000FF", dark = "#100710", green = "#00FF80", light = "#F0FFFD", magenta = "#F634B1", orange = "#FFAF00", purple = "#A000FF", red = "#FF0080", yellow = "#FFDF00", ["current-theme"] = "lush", theme = {["bold-retro"] = {primary = "#F7DE81", secondary = "#595959", normal = "#00FFEF", attention = "#C71585", command = "#800080", flow = "#00FA9A"}, lush = {primary = "#500050", secondary = "#D7BE51", normal = "#A000FF", attention = "#FF0080", command = "#D7BE81", flow = "#00FF80"}}}, rgb_to_hex = _5_})
+M.my.vimode = {["\19"] = (M.theme(M["current-theme"])).normal, ["\22"] = (M.theme(M["current-theme"])).normal, ["!"] = (M.theme(M["current-theme"])).command, R = (M.theme(M["current-theme"])).attention, Rv = (M.theme(M["current-theme"])).attention, S = (M.theme(M["current-theme"])).attention, V = (M.theme(M["current-theme"])).primary, c = (M.theme(M["current-theme"])).command, ce = (M.theme(M["current-theme"])).command, cv = (M.theme(M["current-theme"])).command, i = (M.theme(M["current-theme"])).flow, ic = (M.theme(M["current-theme"])).flow, n = (M.theme(M["current-theme"])).secondary, no = (M.theme(M["current-theme"])).command, r = (M.theme(M["current-theme"])).attention, ["r?"] = (M.theme(M["current-theme"])).attention, rm = (M.theme(M["current-theme"])).attention, s = (M.theme(M["current-theme"])).attention, t = (M.theme(M["current-theme"])).command, v = (M.theme(M["current-theme"])).normal}
 M.fn.background_blend = function(color, strength, hl)
   __fnl_global__Bg_2dcolor = nil
   local status, hl_cfg = nil, nil

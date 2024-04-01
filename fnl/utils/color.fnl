@@ -1,51 +1,60 @@
-(local M
-       {:fn {}
-        :hex_to_rgb (fn [...]
-                      ((. (require :lush.vivid.rgb.convert) :hex_to_rgb) ...))
-        :hsl (fn [color]
-               ((. (require :lush) :hsl) color))
-        :hsluv (fn [color]
-                 ((. (require :lush) :hsluv) color))
-        :int_to_hex (fn [color] (.. "#" (string.format "%06x" color)))
-        :my {:aqua "#00DFFF"
-             :blue "#0000FF"
-             :dark "#100710"
-             :green "#00FF80"
-             :light "#F0FFFD"
-             :magenta "#F634B1"
-             :orange "#FFAF00"
-             :purple "#A000FF"
-             :red "#FF0080"
-             :yellow "#FFDF00"
-             :theme {:bold-retro {:primary  "#F7DE81" ; orange-toned gold
-                                  :secondary "#595959"  ; dark, vintage silver
-                                  :normal "#00FFEF" ;electric aqua
-                                  :attention "#C71585" ;neon-tinged crimson
-                                  :command "#800080" ;true, vibrant purple
-                                  :flow "#00FA9A"}}} ;medium spring green
-        :rgb_to_hex (fn [...]
-                      ((. (require :lush.vivid.rgb.convert) :rgb_to_hex) ...))})
+(var M {})
+(fn M.theme [t]
+  (let [t! (or t M.my.current-theme)]
+    (. M.my.theme t!)))
+(set M (vim.tbl_extend "keep" M
+                              {:fn {}
+                               :hex_to_rgb (fn [...]
+                                             ((. (require :lush.vivid.rgb.convert) :hex_to_rgb) ...))
+                               :hsl (fn [color] ((. (require :lush) :hsl) color))
+                               :hsluv (fn [color] ((. (require :lush) :hsluv) color))
+                               :int_to_hex (fn [color] (.. "#" (string.format "%06x" color)))
+                               :my {:aqua "#00DFFF"
+                                    :blue "#0000FF"
+                                    :dark "#100710"
+                                    :green "#00FF80"
+                                    :light "#F0FFFD"
+                                    :magenta "#F634B1"
+                                    :orange "#FFAF00"
+                                    :purple "#A000FF"
+                                    :red "#FF0080"
+                                    :yellow "#FFDF00"
+                                    :current-theme "lush"
+                                    :theme {:bold-retro {:primary  "#F7DE81" ; orange-toned gold
+                                                         :secondary "#595959"  ; dark, vintage silver
+                                                         :normal "#00FFEF" ;electric aqua
+                                                         :attention "#C71585" ;neon-tinged crimson
+                                                         :command "#800080" ;true, vibrant purple
+                                                         :flow "#00FA9A"}
+                                            :lush {:primary "#500050"
+                                                   :secondary "#D7BE51"
+                                                   :normal "#A000FF"
+                                                   :attention "#FF0080"
+                                                   :command "#D7BE81" ;medium spring green
+                                                   :flow "#00FF80"}}}
+                               :rgb_to_hex (fn [...]
+                                             ((. (require :lush.vivid.rgb.convert) :rgb_to_hex) ...))}))
 
-(set M.my.vimode {"\019" M.my.theme.bold-retro.primary
-                  "\022" M.my.theme.bold-retro.primary
-                  :! M.my.theme.bold-retro.command
-                  :R M.my.theme.bold-retro.attention
-                  :Rv M.my.theme.bold-retro.attention
-                  :S M.my.theme.bold-retro.attention
-                  :V M.my.theme.bold-retro.primary
-                  :c M.my.theme.bold-retro.command
-                  :ce M.my.theme.bold-retro.command
-                  :cv M.my.theme.bold-retro.command
-                  :i M.my.theme.bold-retro.flow
-                  :ic M.my.theme.bold-retro.flow
-                  :n M.my.theme.bold-retro.secondary
-                  :no M.my.theme.bold-retro.command
-                  :r M.my.theme.bold-retro.attention
-                  :r? M.my.theme.bold-retro.attention
-                  :rm M.my.theme.bold-retro.attention
-                  :s M.my.theme.bold-retro.attention
-                  :t M.my.theme.bold-retro.command
-                  :v M.my.theme.bold-retro.primary})
+(set M.my.vimode {"\019" (. (M.theme M.current-theme) :normal)
+                  "\022" (. (M.theme M.current-theme) :normal)
+                  :! (. (M.theme M.current-theme) :command)
+                  :R (. (M.theme M.current-theme) :attention)
+                  :Rv (. (M.theme M.current-theme) :attention)
+                  :S (. (M.theme M.current-theme) :attention)
+                  :V (. (M.theme M.current-theme) :primary)
+                  :c (. (M.theme M.current-theme) :command)
+                  :ce (. (M.theme M.current-theme) :command)
+                  :cv (. (M.theme M.current-theme) :command)
+                  :i (. (M.theme M.current-theme) :flow)
+                  :ic (. (M.theme M.current-theme) :flow)
+                  :n (. (M.theme M.current-theme) :secondary)
+                  :no (. (M.theme M.current-theme) :command)
+                  :r (. (M.theme M.current-theme) :attention)
+                  :r? (. (M.theme M.current-theme) :attention)
+                  :rm (. (M.theme M.current-theme) :attention)
+                  :s (. (M.theme M.current-theme) :attention)
+                  :t (. (M.theme M.current-theme) :command)
+                  :v (. (M.theme M.current-theme) :normal)})
 
 (fn M.fn.background_blend [color strength hl]
   (global Bg-color nil)

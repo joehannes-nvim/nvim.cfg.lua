@@ -65,7 +65,7 @@ M.mode = function(opts)
   local function _11_()
     return vim.cmd.redrawstatus()
   end
-  opts = extend_tbl({hl = hl.get_attributes("mode"), surround = {color = hl.mode_bg, separator = "left"}, update = {"ModeChanged", callback = vim.schedule_wrap(_11_), pattern = "*:*"}, paste = false, mode_text = false, spell = false}, opts)
+  opts = extend_tbl({hl = hl.get_attributes("mode"), surround = {color = hl.mode_bg, separator = "left"}, update = {"ModeChanged", callback = vim.schedule_wrap(_11_), pattern = "*:*"}, spell = false, mode_text = false, paste = false}, opts)
   if not opts.mode_text then
     opts.str = {str = " "}
   else

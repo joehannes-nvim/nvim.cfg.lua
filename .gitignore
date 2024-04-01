@@ -4,3 +4,4 @@ node_modules/
 sessions/*
 bookmarks
 .lazy-lock.json
+verbose.log

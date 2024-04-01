@@ -56,19 +56,12 @@ M.tint = function()
     return my.color.fn.background_blend(vimode_color(), 21)
   end
   local ok, tint = pcall(require, "tint")
-  local ok_bufferline, _ = pcall(require, "bufferline")
-  local bufferline = require("plugins.config.bufferline")
   local lines = require("heirline")
   local heirline = require("plugins.config.heirline")
-  tint.refresh()
   if ok then
+    tint.refresh()
     heirline.update()
-    heirline.setup(false)
-  else
-  end
-  if ok_bufferline then
-    bufferline.setup()
-    return vim.cmd.redrawtabline()
+    return heirline.setup(false)
   else
     return nil
   end
@@ -81,17 +74,13 @@ M.updateHighlights = function()
   local function tertiary_vimode_color()
     return my.color.fn.background_blend(mode_color, 21)
   end
-  for def_color, git_signs_hl in pairs({[my.color.my.theme["bold-retro"].flow] = "GitSignsAdd", [my.color.my.theme["bold-retro"].normal] = "GitSignsChange", [my.color.my.theme["bold-retro"].attention] = "GitSignsDelete"}) do
+  for def_color, git_signs_hl in pairs({[(my.color.theme(my.color.my["current-theme"])).flow] = "GitSignsAdd", [(my.color.theme(my.color.my["current-theme"])).normal] = "GitSignsChange", [(my.color.theme(my.color.my["current-theme"])).attention] = "GitSignsDelete"}) do
     my.color.fn.highlight_blend_bg((git_signs_hl .. "Nr"), 50, def_color)
     my.color.fn.highlight_blend_bg((git_signs_hl .. "Ln"), 70, def_color)
   end
-  my.color.fn.highlight_blend_bg("CursorLine", 73, my.color.my.theme["bold-retro"].primary)
-  my.color.fn.highlight_blend_bg("CursorColumn", 73, my.color.my.theme["bold-retro"].primary)
-  my.color.fn.highlight_blend_bg("Visual", 37, my.color.my.theme["bold-retro"].primary)
-  my.color.fn.highlight_blend_bg("TSCurrentScope", 10, mode_color)
-  my.color.fn.highlight_blend_bg("TreesitterContext", 21, mode_color)
-  vim.api.nvim_set_hl(0, "TreesitterContextBottom", {fg = my.color.my.theme["bold-retro"].primary, sp = my.color.my.theme["bold-retro"].attention, underdouble = true, underline = true})
-  return vim.api.nvim_set_hl(0, "ScrollbarHandle", {bg = mode_color})
+  my.color.fn.highlight_blend_bg("CursorLine", 37, mode_color)
+  my.color.fn.highlight_blend_bg("CursorColumn", 37, mode_color)
+  return my.color.fn.highlight_blend_bg("Visual", 37, (my.color.theme(my.color.my["current-theme"])).primary, my.color.fn.highlight_blend_bg("TSCurrentScope", 10, mode_color), my.color.fn.highlight_blend_bg("TreesitterContext", 21, mode_color), vim.api.nvim_set_hl(0, "TreesitterContextBottom", {fg = (my.color.theme(my.color.my["current-theme"])).primary, sp = (my.color.theme(my.color.my["current-theme"])).attention, underdouble = true, underline = true}), vim.api.nvim_set_hl(0, "ScrollbarHandle", {bg = mode_color}))
 end
 M.tablinePickBuffer = function()
   local tabline = (require("heirline")).tabline

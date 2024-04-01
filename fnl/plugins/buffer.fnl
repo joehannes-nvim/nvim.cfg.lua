@@ -1,8 +1,9 @@
 (local my _G.my)
 
-[{1 :tiagovla/scope.nvim
-  :config (fn []
-            ((. (require :scope) :setup)))}
+[; {1 :tiagovla/scope.nvim
+ ; :config (fn []
+ ;           ((. (require :scope) :setup))
+ [:mildred/vim-bufmru]
  {1 :kwkarlwang/bufresize.nvim
   :config (fn []
             (local opts {:noremap true :silent true})

@@ -1,5 +1,5 @@
-(local dropbar _G.dropbar)
-(local conditions (require :heirline.conditions))
+  (local dropbar _G.dropbar)
+  (local conditions (require :heirline.conditions))
 
 (local utils (require :heirline.utils))
 
@@ -8,44 +8,50 @@
 
 (fn setup-colors []
   (let [dark-mode (= (vim.opt.background:get) :dark)]
-    {:aqua my.color.my.theme.bold-retro.normal
+    {:primary (. (my.color.theme my.color.my.current-theme) :primary)
+     :secondary (. (my.color.theme my.color.my.current-theme) :secondary)
+     :normal (. (my.color.theme my.color.my.current-theme) :normal)
+     :attention (. (my.color.theme my.color.my.current-theme) :attention)
+     :flow (. (my.color.theme my.color.my.current-theme) :flow)
+     :command (. (my.color.theme my.color.my.current-theme) :command)
+     :aqua (. (my.color.theme my.color.my.current-theme) :normal)
      :blue my.color.my.blue
      :current_bg (or (and dark-mode my.color.my.dark) my.color.my.light)
      :current_fg (or (and dark-mode my.color.my.light) my.color.my.dark)
      :dark my.color.my.dark
-     :diag_error my.color.my.theme.bold-retro.attention
-     :diag_hint my.color.my.theme.bold-retro.secondary
-     :diag_info my.color.my.theme.bold-retro.normal
+     :diag_error (. (my.color.theme my.color.my.current-theme) :attention)
+     :diag_hint (. (my.color.theme my.color.my.current-theme) :secondary)
+     :diag_info (. (my.color.theme my.color.my.current-theme) :normal)
      :diag_warn my.color.my.orange
-     :git_add my.color.my.theme.bold-retro.flow
-     :git_change my.color.my.theme.bold-retro.secondary
-     :git_del my.color.my.theme.bold-retro.attention
+     :git_add (. (my.color.theme my.color.my.current-theme) :flow)
+     :git_change (. (my.color.theme my.color.my.current-theme) :secondary)
+     :git_del (. (my.color.theme my.color.my.current-theme) :attention)
      :gray (. (utils.get_highlight :NonText) :fg)
-     :green my.color.my.theme.bold-retro.flow
+     :green (. (my.color.theme my.color.my.current-theme) :flow)
      :light my.color.my.light
-     :magenta my.color.my.theme.bold-retro.primary
+     :magenta (. (my.color.theme my.color.my.current-theme) :primary)
      :orange my.color.my.orange
-     :purple my.color.my.theme.bold-retro.command
-     :red my.color.my.theme.bold-retro.attention
+     :purple (. (my.color.theme my.color.my.current-theme) :command)
+     :red (. (my.color.theme my.color.my.current-theme) :attention)
      :vimode (vimode-color)
-     :yellow my.color.my.theme.bold-retro.secondary}))
+     :yellow (. (my.color.theme my.color.my.current-theme) :secondary)}))
 
-(local Arrow-left-left {:hl (fn [self]
-                              {:bg (vimode-color) :fg my.color.my.theme.bold-retro.primary})
+(local Arrow-left-left {:hl (fn [_self]
+                              {:bg (vimode-color) :fg (. (my.color.theme my.color.my.current-theme) :primary)})
                         :provider ""})
 
 (local Arrow-right-left {1 Arrow-left-left
-                         :hl (fn [self]
-                               {:bg my.color.my.theme.bold-retro.primary
+                         :hl (fn [_self]
+                               {:bg (. (my.color.theme my.color.my.current-theme) :primary)
                                 :fg (vimode-color)
                                 :force true})})
 
-(local Arrow-right-right {:hl {:bg :vimode :fg my.color.my.theme.bold-retro.primary}
+(local Arrow-right-right {:hl {:bg :vimode :fg (. (my.color.theme my.color.my.current-theme) :primary)}
                           :provider ""})
 
 (local Arrow-left-right {1 Arrow-right-right
-                         :hl (fn [self]
-                               {:bg my.color.my.theme.bold-retro.primary
+                         :hl (fn [_self]
+                               {:bg (. (my.color.theme my.color.my.current-theme) :primary)
                                 :fg (vimode-color)
                                 :force true})})
 
@@ -110,8 +116,6 @@
                                                                        {:default true})))
         :provider (fn [self] (and self.icon (.. self.icon " ")))})
 
-(global File-icon {1 {:hl {:bg :magenta :fg :dark}}})
-
 (local File-name
        {1 {:hl {:bg :magenta :fg :dark} :provider (fn [self] self.lfilename)}
         :init (fn [self]
@@ -122,8 +126,7 @@
                                                            0.27))
                   (set self.lfilename (vim.fn.pathshorten self.lfilename))
                   (set self.shortened true)))
-        :on_click {:callback (fn []
-                               ((. (require :ranger-nvim) :open) true))
+        :on_click {:callback #((. (require :tfm) :open))
                    :name :heirline_filename_ranger_current}})
 
 (local File-flags [{:hl {:fg :green}
@@ -137,15 +140,16 @@
 (local File-name-modifer
        {:hl (fn []
               (when vim.bo.modified
-                {:bold true :fg my.color.my.theme.bold-retro.normal :force true}))})
+                {:bold true :fg (. (my.color.theme my.color.my.current-theme) :normal) :force true}))})
 
-(set File-name-block (utils.insert File-name-block {:provider " "} File-icon
+(set File-name-block (utils.insert File-name-block {:provider " "} {1 {:hl {:bg :magenta :fg :dark}}}
                                    (utils.insert File-name-modifer File-name)
                                    (unpack File-flags)))
 
 (local File-type
-       {:hl {:fg :dark} :provider (fn [] (string.upper vim.bo.filetype))})
-
+       {:hl {:fg :dark} :provider (fn [] (string.upper vim.bo.filetype))
+        :on_click {:callback #(vim.schedule #(vim.cmd :LspInfo))
+                   :name :heirline_ft_lsp}})
 (local File-encoding
        {:provider (fn []
                     (local enc (or (and (not= vim.bo.fenc "") vim.bo.fenc)
@@ -179,7 +183,7 @@
 
 (local Ruler {:provider "%7(%l/%3L%):%2c %P"})
 
-(local Scroll-bar {:hl {:bg :current_bg :fg :magenta}
+(local Scroll-bar {:hl {:fg :aqua :bg :magenta}
                    :provider (fn [self]
                                (local curr-line
                                       (. (vim.api.nvim_win_get_cursor 0) 1))
@@ -215,7 +219,7 @@
                                        (vim.api.nvim_get_current_buf)
                                        (vim.api.nvim_get_current_win)))
                      self.data)
-        :hl {:bg my.color.my.theme.bold-retro.primary :fg my.color.my.dark :force true}
+        :hl {:bg (. (my.color.theme my.color.my.current-theme) :primary) :fg my.color.my.dark :force true}
         :init (fn [self]
                 (local components self.data.components)
                 (local children {})
@@ -345,7 +349,7 @@
         :update [:DiagnosticChanged :BufEnter :BufWinEnter]})
 
 (local Buffer-diagnostics
-       {1 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.attention 33)}
+       {1 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :attention) 33)}
            :provider (fn [self]
                        (and (> self.errors 0)
                             (.. (or self.error_icon "  ") self.errors " ")))}
@@ -353,11 +357,11 @@
            :provider (fn [self]
                        (and (> self.warnings 0)
                             (.. (or self.warn_icon "  ") self.warnings " ")))}
-        3 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.normal 33)}
+        3 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :normal) 33)}
            :provider (fn [self]
                        (and (> self.info 0)
                             (.. (or self.info_icon "  ") self.info " ")))}
-        4 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.flow 33)}
+        4 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :flow) 33)}
            :provider (fn [self]
                        (and (> self.hints 0)
                             (.. (or self.hint_icon " ☉ ") self.hints)))}
@@ -388,7 +392,7 @@
                                :text)}
         :update [:DiagnosticChanged :BufWinEnter :BufEnter]})
 
-(local Diagnostics {1 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.attention 33)}
+(local Diagnostics {1 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :attention) 33)}
                        :provider (fn [self]
                                    (and (> self.errors 0)
                                         (.. (or self.error_icon "  ")
@@ -398,12 +402,12 @@
                                    (and (> self.warnings 0)
                                         (.. (or self.warn_icon "  ")
                                             self.warnings " ")))}
-                    3 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.normal 33)}
+                    3 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :normal) 33)}
                        :provider (fn [self]
                                    (and (> self.info 0)
                                         (.. (or self.info_icon "  ") self.info
                                             " ")))}
-                    4 {:hl {:fg (my.color.util.darken my.color.my.theme.bold-retro.flow 33)}
+                    4 {:hl {:fg (my.color.util.darken (. (my.color.theme my.color.my.current-theme) :flow) 33)}
                        :provider (fn [self]
                                    (and (> self.hints 0)
                                         (.. (or self.hint_icon " ☉ ")
@@ -436,23 +440,31 @@
                     :update [:DiagnosticChanged :TabEnter]})
 
 (local Git {1 Space
-            2 {:hl {:bold true}
-               :provider (fn [self] (.. " " self.status_dict.head))}
+            2 {:hl {:bold true :fg :secondary}
+               :provider (fn [self] (.. " " self.status_dict.head))
+               :on_click {:callback (fn [self minwid nclicks button]
+                                      (vim.cmd "Telescope git_branches"))
+                          :name :heirline_git}}
             3 Space
-            4 {:condition (fn [self] self.has_changes) :provider "["}
-            5 {:hl {:fg :green}
-               :provider (fn [self] (local count (or self.status_dict.added 0))
-                           (and (> count 0) (.. "+" count)))}
-            6 {:hl {:fg :red}
-               :provider (fn [self]
-                           (local count (or self.status_dict.removed 0))
-                           (and (> count 0) (.. "-" count)))}
-            7 {:hl {:fg :orange}
-               :provider (fn [self]
-                           (local count (or self.status_dict.changed 0))
-                           (and (> count 0) (.. "~" count)))}
-            8 {:condition (fn [self] self.has_changes) :provider "]"}
-            9 Space
+            4 {1 {:condition (fn [self] self.has_changes) :provider "["
+                  :hl {:fg :secondary}}
+               2 {:hl {:fg :green}
+                  :provider (fn [self] (local count (or self.status_dict.added 0))
+                             (and (> count 0) (.. "+" count)))}
+               3 {:hl {:fg :red}
+                  :provider (fn [self]
+                             (local count (or self.status_dict.removed 0))
+                             (and (> count 0) (.. "-" count)))}
+               4 {:hl {:fg :orange}
+                  :provider (fn [self]
+                              (local count (or self.status_dict.changed 0))
+                              (and (> count 0) (.. "~" count)))}
+               5 {:condition (fn [self] self.has_changes) :provider "]"
+                  :hl {:fg :secondary}}
+               :on_click {:callback (fn [self minwid nclicks button]
+                                     (vim.cmd "Neogit"))
+                          :name :heirline_neogit}}
+            5 Space
             :condition conditions.is_git_repo
             :hl {:bg :magenta :fg :dark}
             :init (fn [self]
@@ -460,11 +472,7 @@
                     (set self.has_changes
                          (or (or (not= self.status_dict.added 0)
                                  (not= self.status_dict.removed 0))
-                             (not= self.status_dict.changed 0))))
-            :on_click {:callback (fn [self minwid nclicks button]
-                                   (vim.cmd :Neogit))
-                       :name :heirline_git
-                       :update false}})
+                             (not= self.status_dict.changed 0))))})
 
 (local Snippets {:condition (fn [] (vim.tbl_contains [:s :i] (vim.fn.mode)))
                  :hl {:bold true :fg :red}
@@ -490,8 +498,7 @@
                        (.. self.icon (self.cwd:gsub "~/.local/git" "") trail
                            " "))}
         :hl {:bold true :fg :dark}
-        :on_click {:callback (fn []
-                               ((. (require :ranger-nvim) :open) false))
+        :on_click {:callback #((. (require :tfm) :open) ".")
                    :name :heirline_workdir}
         :provider (fn [self]
                     (set self.icon
@@ -529,57 +536,65 @@
 (local Align {:provider "%="})
 
 (local Default-statusline
-       {1 Vi-mode
+       {1 {1 Vi-mode
+           :hl {:fg :vimode :bg :magenta :force true}}
         2 Arrow-right-right
         3 Space
         4 Spell
         5 {1 {1 Arrow-right-right
               :hl (fn [self]
-                    {:bg my.color.my.theme.bold-retro.primary :fg (vimode-color) :force true})}
+                    {:bg :primary :fg (vimode-color) :force true})}
            2 Space
-           3 Work-dir
+           3 {1 Work-dir
+              :hl {:fg :secondary :force true}}
            4 Arrow-right-right
            :hl {:bg :magenta}}
         6 Space
-        7 {1 Arrow-left-right 2 Git 3 Arrow-right-right :hl {:bg :magenta}}
+        7 {1 Arrow-left-right
+           2 Git
+           3 Arrow-right-right
+           :hl {:bg :magenta}}
         8 Space
-        9 {1 {1 Arrow-left-left
-              :hl (fn [self]
-                    {:bg (vimode-color) :fg my.color.my.theme.bold-retro.attention :force true})
+        9 {1 {1 Arrow-left-right
+              :hl {:fg :vimode :bg :current_fg :force true}
               :update :ModeChanged}
-           2 Space
-           3 Diagnostics
-           4 Space
-           5 {1 Arrow-right-right
-              :hl (fn [self]
-                    {:bg (vimode-color) :fg my.color.my.theme.bold-retro.attention :force true})
+           2 Diagnostics
+           3 Space
+           4 {1 Arrow-right-right
+              :hl {:bg :vimode :fg :current_fg :force true}
               :update :ModeChanged}
            :condition conditions.has_diagnostics
-           :hl {:bg my.color.my.theme.bold-retro.attention :bold true}
+           :hl {:bg :current_fg :bold true}
            :update :ModeChanged}
         10 Align
-        11 Arrow-left-left
-        12 {1 Space 2 LSPActive 3 Space :hl {:bg :magenta :force true}}
-        13 Arrow-right-left
+        ; 11 Arrow-left-left
+        ; 12 {1 Space 2 LSPActive 3 Space :hl {:bg :magenta :force true}}
+        ; 13 Arrow-right-left
+        11 Space
+        12 {1 Arrow-left-left
+            2 {1 Space
+               2 File-type
+               3 Space
+               :hl {:fg :secondary :bold true :bg :primary :italic true :force true}}
+            3 Arrow-right-left}
+        13 Space
+              ; 17 {1 Arrow-left-left
+              ;     2 Space
+              ;     3 File-encoding
+              ;     4 File-last-modified
+              ;     5 Space
+              ;     6 Arrow-right-left
+              ;     :hl {:bg :magenta}}
         14 Space
         15 {1 Arrow-left-left
             2 Space
-            3 File-type
+            3 Ruler :hl {:bg :magenta :fg :secondary}
             4 Space
-            5 Arrow-right-left
-            :hl {:bg :magenta}}
+            5 Arrow-right-left}
         16 Space
-        17 {1 Arrow-left-left
-            2 Space
-            3 File-encoding
-            4 File-last-modified
-            5 Space
-            6 Arrow-right-left
-            :hl {:bg :magenta}}
-        18 Space
-        19 {1 Arrow-left-left 2 Space 3 Ruler :hl {:bg :magenta}}
-        20 Scroll-bar
-        :update [:VimEnter :ModeChanged]})
+        17 Scroll-bar
+        :update [:VimEnter :ModeChanged]
+        :hl {:bg :vimode}})
 
 (local Inactive-statusline
        {1 {1 Work-dir :hl {:fg :gray :force true}}
@@ -610,7 +625,7 @@
         4 Space
         5 Align
         :condition (fn []
-                     (conditions.buffer_matches {:filetype [:^git.* :fugitive]}))})
+                     (conditions.buffer_matches {:filetype [:^git.* :fugitive :neogit :NeogitStatus]}))})
 
 (local Terminal-statusline {1 {1 Vi-mode
                                2 Space
@@ -619,7 +634,7 @@
                             3 Space
                             4 Align
                             :condition (fn []
-                                         (conditions.buffer_matches {:buftype [:terminal]}))
+                                         (conditions.buffer_matches {:buftype [:terminal :toggleterm]}))
                             :hl {:bg :magenta}})
 
 (local Status-lines {1 Git-statusline
@@ -627,10 +642,10 @@
                      3 Terminal-statusline
                      4 Inactive-statusline
                      5 Default-statusline
-                     :fallthrough true
+                     :fallthrough false
                      :hl (fn []
                            (if (conditions.is_active) {:bg (vimode-color)}
-                               {:bg my.color.my.theme.bold-retro.primary}))
+                               {:bg (. (my.color.theme my.color.my.current-theme) :primary)}))
                      :static {:mode_color (fn [self]
                                             (local mode
                                                    (or (and (conditions.is_active)
@@ -675,14 +690,14 @@
 (local Tabline-file-flags [{:condition (fn [self]
                                          (vim.api.nvim_buf_get_option self.bufnr
                                                                       :modified))
-                            :hl {:fg my.color.my.theme.bold-retro.secondary}
+                            :hl {:fg (. (my.color.theme my.color.my.current-theme) :secondary)}
                             :provider "[+]"}
                            {:condition (fn [self]
                                          (or (not (vim.api.nvim_buf_get_option self.bufnr
                                                                                :modifiable))
                                              (vim.api.nvim_buf_get_option self.bufnr
                                                                           :readonly)))
-                            :hl {:bg my.color.my.black :fg my.color.my.theme.bold-retro.secondary}
+                            :hl {:bg my.color.my.black :fg (. (my.color.theme my.color.my.current-theme) :secondary)}
                             :provider (fn [self]
                                         (if (= (vim.api.nvim_buf_get_option self.bufnr
                                                                             :buftype)
@@ -694,14 +709,14 @@
        {1 Tabline-bufnr
         2 {1 File-icon-bare
            :hl (fn [self]
-                 (or (or (and self.is_active {:fg my.color.my.theme.bold-retro.primary})
+                 (or (or (and self.is_active {:fg (. (my.color.theme my.color.my.current-theme) :primary)})
                          (and self.is_visible {:fg my.color.my.dark}))
                      {:fg (my.color.util.darken my.color.my.light 50)}))}
         3 Tabline-file-name
         4 Tabline-file-flags
         :hl (fn [self]
-              (if (or self.is_active self.is_visible) {:fg my.color.my.theme.bold-retro.secondary}
-                  (not (vim.api.nvim_buf_is_loaded self.bufnr)) {:fg :gray}
+              (if (or self.is_active self.is_visible) {:fg (. (my.color.theme my.color.my.current-theme) :primary)}
+                  (not (vim.api.nvim_buf_is_loaded self.bufnr)) {:fg (. (my.color.theme my.color.my.current-theme) :primary)}
                   {}))
         :init (fn [self]
                 (set self.filename (vim.api.nvim_buf_get_name self.bufnr)))
@@ -828,7 +843,7 @@
 (local Tab-line {1 Tab-line-offset
                  2 Buffer-line
                  3 Tab-pages
-                 :hl {:bg my.color.my.theme.bold-retro.primary}
+                 :hl {:bg (. (my.color.theme my.color.my.current-theme) :primary)}
                  :init (fn [self] (set self.bufferline Buffer-line))
                  :update [:DirChanged
                           :BufLeave
@@ -841,10 +856,15 @@
                           :WinNew]})
 
 (local Win-bar {1 {1 Space
-                   2 File-name-block
+                   2 {1 File-name-block
+                      :hl (fn [self] {:fg (. (my.color.theme my.color.my.current-theme) :secondary)
+                                      :bold true
+                                      :italic vim.bo.modified
+                                      :force true})}
+
                    3 Space
-                   4 {:hl {:bold true :fg my.color.my.theme.bold-retro.normal} :provider ""}
-                   :hl (fn [] {:bg my.color.my.theme.bold-retro.primary :fg my.color.my.dark})}
+                   4 {:hl {:bold true :fg (. (my.color.theme my.color.my.current-theme) :normal)} :provider ""}
+                   :hl (fn [] {:bg (. (my.color.theme my.color.my.current-theme) :primary) :fg my.color.my.dark})}
                 2 {5 Space
                    6 {1 Navic
                       :condition (fn []
@@ -857,7 +877,7 @@
                                       (let [___antifnl_rtn_1___ (> data-len 0)]
                                         (lua "return ___antifnl_rtn_1___")))
                                     false)
-                      :hl (fn [] {:bg my.color.my.theme.bold-retro.primary :fg my.color.my.dark})}
+                      :hl (fn [] {:bg (. (my.color.theme my.color.my.current-theme) :primary) :fg my.color.my.dark})}
                    7 {1 Dropbar
                       :condition (fn []
                                     (when ((. (require :nvim-navic) :is_available) (vim.api.nvim_get_current_buf))
@@ -866,42 +886,42 @@
                                       (each [_ _ (pairs (or data {}))]
                                         (lua "return false")))
                                     true)
-                      :hl (fn [] {:bg my.color.my.theme.bold-retro.primary :fg my.color.my.dark})}}
+                      :hl (fn [] {:bg (. (my.color.theme my.color.my.current-theme) :primary) :fg my.color.my.dark})}}
                 3 {:hl (fn [self]
                          {:bg (vimode-color)
-                          :fg my.color.my.theme.bold-retro.primary
+                          :fg (. (my.color.theme my.color.my.current-theme) :primary)
                           :force true})
                    :provider ""}
                 4 Align
                 5 {1 {:provider (fn [self] "")
                       :hl (fn [self]
                             {:bg (vimode-color)
-                             :fg my.color.my.theme.bold-retro.secondary
+                             :fg (. (my.color.theme my.color.my.current-theme) :secondary)
                              :force true})}
                    2 {1 Buffer-local-diagnostics
                       2 Space
-                      :hl {:fg my.color.my.theme.bold-retro.primary :bg my.color.my.theme.bold-retro.secondary :force true}}
+                      :hl {:fg (. (my.color.theme my.color.my.current-theme) :primary) :bg (. (my.color.theme my.color.my.current-theme) :secondary) :force true}}
                    3 {:hl (fn [self]
                             {:bg (vimode-color)
-                             :fg my.color.my.theme.bold-retro.secondary
+                             :fg (. (my.color.theme my.color.my.current-theme) :secondary)
                              :force true})
                       :provider (fn [self] "")}
                    :condition conditions.has_diagnostics
                    :hl (fn [self]
                          (when (not (conditions.is_active))
-                           (let [___antifnl_rtn_1___ {:bg my.color.my.theme.bold-retro.attention
+                           (let [___antifnl_rtn_1___ {:bg (. (my.color.theme my.color.my.current-theme) :attention)
                                                       :fg my.color.my.light
                                                       :force true}]
                              (lua "return ___antifnl_rtn_1___")))
-                         {:bg my.color.my.theme.bold-retro.secondary :fg my.color.my.theme.bold-retro.primary :bold true})
+                         {:bg (. (my.color.theme my.color.my.current-theme) :secondary) :fg (. (my.color.theme my.color.my.current-theme) :primary) :bold true})
                    :update [:CursorMoved :ModeChanged :BufEnter :BufWinEnter]}
                 6 Space
-                7 {:hl {:bg :vimode :fg my.color.my.theme.bold-retro.primary :force true}
+                7 {:hl {:bg :vimode :fg (. (my.color.theme my.color.my.current-theme) :primary) :force true}
                    :provider ""
                    :update [:ModeChanged]}
-                8 {:hl {:bg my.color.my.theme.bold-retro.primary :fg my.color.my.dark :force true}
+                8 {:hl {:bg (. (my.color.theme my.color.my.current-theme) :primary) :fg my.color.my.dark :force true}
                    :provider (fn [self] (.. " #" self.winnr))}
-                :hl {:bg :vimode :fg my.color.my.theme.bold-retro.primary}
+                :hl {:bg :vimode :fg (. (my.color.theme my.color.my.current-theme) :primary)}
                 :update [:CursorMoved :ModeChanged]})
 
 (local Win-bars {1 {:condition (fn []
@@ -1002,18 +1022,19 @@
 
 (fn M.setup [my-aucmds]
   ((. (require :heirline) :load_colors) (setup-colors))
-  ; (vim.api.nvim_set_hl 0 :TabLine {:bg my.color.my.theme.bold-retro.primary})
-  ; (vim.api.nvim_set_hl 0 :TabLineSel {:bg (. my.color.my.vimode (vim.fn.mode))})
-  ; (vim.api.nvim_set_hl 0 :TabLineFill {:bg my.color.my.theme.bold-retro.primary})
+  (vim.api.nvim_set_hl 0 :TabLine {:bg (. (my.color.theme my.color.my.current-theme) :secondary) :fg (. (my.color.theme my.color.my.current-theme) :primary)}
+   (vim.api.nvim_set_hl 0 :TabLineSel {:bg (. my.color.my.vimode (vim.fn.mode)) :fg my.color.my.dark}))
+  (vim.api.nvim_set_hl 0 :TabLineFill {:bg (. (my.color.theme my.color.my.current-theme) :primary)})
   (vim.api.nvim_set_hl 0 :StatusLine {:bg (vimode-color)})
   (vim.api.nvim_set_hl 0 :WinBar {:bg (vimode-color)})
-  ((. (require :heirline) :setup) {:statusline Status-lines :winbar Win-bars}) ; :tabline Tab-line})
+  ((. (require :heirline) :setup) {:statusline Status-lines :winbar Win-bars :tabline Tab-line})
   (when (= my-aucmds true)
     (vim.cmd "au FileType * if index(['wipe', 'delete'], &bufhidden) >= 0 | set nobuflisted | endif")
     (M.aucmds)))
 
+
 (set M.StatusLines Status-lines)
-; (set M.TabLines Tab-line)
+(set M.TabLines Tab-line)
 (set M.WinBars Win-bars)
 
 M
